@@ -9,7 +9,7 @@ const config = {
   title: 'Serverless September',
   tagline: 'From Code to Containers - to Cloud',
   url: 'https://azure.github.io',
-  baseUrl: '/cloud-native/',
+  baseUrl: '/Cloud-Native/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'azure', // Usually your GitHub org/user name.
-  projectName: 'cloud-native', // Usually your repo name.
+  projectName: 'Cloud-Native', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   // Even if you don't use internalization, you can use this field to set useful
