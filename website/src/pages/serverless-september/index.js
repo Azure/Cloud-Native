@@ -9,7 +9,7 @@ const CampaignFeatures = [
   {
     title: '#30DaysOfServerless',
     Svg: require('@site/static/img/campaign_30Days.svg').default,
-    link: "serverless-september/30DaysOfServerless",
+    link: "30DaysOfServerless",
     description: (
       <>
       Join us on a #30Day journey covering Azure Functions, Container Apps, Dapr, Event Grid, Logic Apps & more.
@@ -19,7 +19,7 @@ const CampaignFeatures = [
   {
     title: 'Zero To Hero',
     Svg: require('@site/static/img/campaign_hero.svg').default,
-    link: "serverless-september/ZeroToHero",
+    link: "ZeroToHero",
     description: (
       <>
       Get the latest updates on Serverless On Azure products and features - directly from product teams!
@@ -29,7 +29,7 @@ const CampaignFeatures = [
   {
     title: 'Serverless Hacks',
     Svg: require('@site/static/img/team.svg').default,
-    link: "serverless-september/ServerlessHacks",
+    link: "ServerlessHacks",
     description: (
       <>
       Join us for weekly events at Microsoft Reactor, as we work through hands-on challenges in Serverless!
@@ -39,7 +39,7 @@ const CampaignFeatures = [
   {
     title: 'Cloud Skills',
     Svg: require('@site/static/img/campaign_skills.svg').default,
-    link: "serverless-september/ServerlessHacks",
+    link: "ServerlessHacks",
     description: (
       <>
       Skill up on key cloud technologies with these free, self-guided learning courses - and make the leaderboard!
@@ -49,7 +49,7 @@ const CampaignFeatures = [
   {
     title: 'Community Buzz',
     Svg: require('@site/static/img/campaign_buzz.svg').default,
-    link: "serverless-september/ServerlessHacks",
+    link: "CommunityBuzz",
     description: (
       <>
       Build interesting demos or wrote helpful articles? Contribute your feedback and content for a chance to be featured!
@@ -59,7 +59,7 @@ const CampaignFeatures = [
   {
     title: 'Ask Me Anything',
     Svg: require('@site/static/img/campaign_ama.svg').default,
-    link: "serverless-september/ServerlessHacks",
+    link: "serverless-september/CommunityBuzz",
     description: (
       <>
       Join us for online conversations with the product teams - submit questions ahead of time or ask them live!
