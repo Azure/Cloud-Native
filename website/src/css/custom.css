@@ -4,7 +4,15 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */:root {
+/*
+ Color Palette: 
+ 50E6FF (blue), 8661c5 (dark violet), 
+ ffb900 (orange), 9747ff (light violet)
+*/
+
+
+/* Default Mode *
+:root {
   --ifm-color-primary: #552f99;
   --ifm-color-primary-dark: #4d2a8a;
   --ifm-color-primary-darker: #482882;
@@ -13,8 +21,30 @@
   --ifm-color-primary-lighter: #6236b0;
   --ifm-color-primary-lightest: #6f40c4;
 }
+*/
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+:root {
+  --ifm-color-primary: #8661c5;
+  --ifm-color-primary-dark: #764bbd;
+  --ifm-color-primary-darker: #6e43b7;
+  --ifm-color-primary-darkest: #5b3797;
+  --ifm-color-primary-light: #9677cd;
+  --ifm-color-primary-lighter: #9f81d1;
+  --ifm-color-primary-lightest: #b7a2dd;
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #ffb900;
+  --ifm-color-primary-dark: #e6a600;
+  --ifm-color-primary-darker: #d99d00;
+  --ifm-color-primary-darkest: #b38100;
+  --ifm-color-primary-light: #ffc01a;
+  --ifm-color-primary-lighter: #ffc326;
+  --ifm-color-primary-lightest: #ffce4d;
+}
+
+/*
 [data-theme='dark'] {
   --ifm-color-primary: #50e6ff;
   --ifm-color-primary-dark: #2fe1ff;
@@ -24,6 +54,7 @@
   --ifm-color-primary-lighter: #82edff;
   --ifm-color-primary-lightest: #b4f4ff;
 }
+*/
 
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);

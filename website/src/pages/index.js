@@ -7,18 +7,19 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
+// Cloud Native Home Page Header
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p>{siteConfig.customFields.description}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            🐝 Community Buzz - Call For Contributions!
+            to="/serverless-september">
+            Join us for #ServerlessSeptember ⚡️⚡️
           </Link>
         </div>
       </div>
@@ -26,12 +27,13 @@ function HomepageHeader() {
   );
 }
 
+// Cloud Native Home Page
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description={`${siteConfig.customFields.description}`} >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
