@@ -251,7 +251,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b>Found this project helpful? Give us a star on <a href="https://github/com/azure/cloud-native"><b>GitHub</b></a></b> 🙏🏽',
+          '<b>Found this project helpful? Give us a star on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b> 🙏🏽',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,

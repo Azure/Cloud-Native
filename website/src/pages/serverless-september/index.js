@@ -8,8 +8,8 @@ import styles from './../index.module.css';
 const CampaignFeatures = [
   {
     title: '#30DaysOfServerless',
-    Svg: require('@site/static/img/azure-functions.svg').default,
-    link: "30DaysOfServerless",
+    Svg: require('@site/static/img/campaign-30days.svg').default,
+    link: "/serverless-september/30DaysOfServerless",
     description: (
       <>
       Join us on a #30Day journey covering Azure Functions, Container Apps, Dapr, Event Grid, Logic Apps & more.
@@ -19,7 +19,7 @@ const CampaignFeatures = [
   {
     title: 'Zero To Hero',
     Svg: require('@site/static/img/campaign_hero.svg').default,
-    link: "ZeroToHero",
+    link: "/Cloud-Native/serverless-september/ZeroToHero",
     description: (
       <>
       Get the latest updates on Serverless On Azure products and features - directly from product teams!
@@ -29,7 +29,7 @@ const CampaignFeatures = [
   {
     title: 'Serverless Hacks',
     Svg: require('@site/static/img/team.svg').default,
-    link: "ServerlessHacks",
+    link: "./ServerlessHacks",
     description: (
       <>
       Join us for weekly events at Microsoft Reactor, as we work through hands-on challenges in Serverless!
