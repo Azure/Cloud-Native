@@ -16,7 +16,6 @@ const CampaignFeatures = [
       </>
     ),
   },
-  /*
   {
     title: 'Zero To Hero',
     Svg: require('@site/static/img/campaign_hero.svg').default,
@@ -67,7 +66,6 @@ const CampaignFeatures = [
       </>
     ),
   },
-  */
 ];
 
 function Feature({Svg, title, description, link}) {
