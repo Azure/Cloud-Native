@@ -8,7 +8,7 @@ import styles from './../index.module.css';
 const CampaignFeatures = [
   {
     title: '#30DaysOfServerless',
-    Svg: require('@site/static/img/campaign_30Days.svg').default,
+    Svg: require('@site/static/img/azure-functions.svg').default,
     link: "30DaysOfServerless",
     description: (
       <>
@@ -16,6 +16,7 @@ const CampaignFeatures = [
       </>
     ),
   },
+  /*
   {
     title: 'Zero To Hero',
     Svg: require('@site/static/img/campaign_hero.svg').default,
@@ -66,6 +67,7 @@ const CampaignFeatures = [
       </>
     ),
   },
+  */
 ];
 
 function Feature({Svg, title, description, link}) {
