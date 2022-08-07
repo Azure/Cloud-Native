@@ -2,7 +2,7 @@
 
 >Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then join us September 1, 2022 as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native journey.
 
-# <a href="http://aka.ms/azure/cloud-native/serverless-september" target="_blank">https://aka.ms/serverless-september</a>
+# [https://aka.ms/serverless-september](http://aka.ms/azure/cloud-native/serverless-september)
 
 ## Contributing
 
