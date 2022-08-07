@@ -1,14 +1,9 @@
-# Serverless September
+![Serverless September](./Resources/Serverless-September_Light.png)
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+>Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then join us September 1, 2022 as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native journey.
 
-As the maintainer of this project, please make a few updates:
+# [https://aka.ms/serverless-september](http://aka.ms/azure/cloud-native/serverless-september)
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
 
 ## Contributing
 
