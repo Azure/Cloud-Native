@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./Resources/Serverless-September_Dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./Resources/Serverless-September_Light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="./Assets/Serverless-September_Dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./Assets/Serverless-September_Light.png">
   <img alt="Serverless September" src="./Resources/Serverless-September_Light.png">
 </picture>
 
