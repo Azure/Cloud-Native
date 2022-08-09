@@ -1,1 +1,1 @@
-This folder contains the official Microsoft branding resources.
+This folder contains the official reporsitory branding resources.
