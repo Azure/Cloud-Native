@@ -47,22 +47,22 @@ const CampaignFeatures = [
     ),
   },
   {
+    title: 'Ask The Expert',
+    Svg: require('@site/static/img/svg/campaign_ama.svg').default,
+    link: "/Cloud-Native/serverless-september/CommunityBuzz",
+    description: (
+      <>
+      Join us for online conversations with the product teams - submit questions ahead of time or ask them live!
+      </>
+    ),
+  },
+  {
     title: 'Community Buzz',
     Svg: require('@site/static/img/svg/campaign_buzz.svg').default,
     link: "/Cloud-Native/serverless-september/CommunityBuzz",
     description: (
       <>
       Build interesting demos or wrote helpful articles? Contribute your feedback and content for a chance to be featured!
-      </>
-    ),
-  },
-  {
-    title: 'Ask Me Anything',
-    Svg: require('@site/static/img/svg/campaign_ama.svg').default,
-    link: "/Cloud-Native/serverless-september/CommunityBuzz",
-    description: (
-      <>
-      Join us for online conversations with the product teams - submit questions ahead of time or ask them live!
       </>
     ),
   },

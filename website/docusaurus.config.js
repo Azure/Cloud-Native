@@ -52,7 +52,7 @@ const config = {
           blogTitle: 'Learn in #30DaysOfServerless',
           blogDescription: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud Native Applications at scale!',
           blogSidebarCount: 'ALL',
-          blogSidebarTitle: '#30Days Of Serverless',
+          blogSidebarTitle: 'Recent Articles',
           tagsBasePath: 'tags',
           archiveBasePath: 'archive',
           postsPerPage: 1,
@@ -230,7 +230,7 @@ const config = {
         },
         {
           name: 'twitter:image', 
-          content: 'https://azure.github.io/Cloud-Native/img/banners/b-end-to-end.png'
+          content: 'https://azure.github.io/Cloud-Native/img/banners/site-card.png'
         },
         {
           name: 'twitter:card', 

@@ -44,7 +44,6 @@ const ServiceFeatures = [
       </>
     ),
   },
-  */
   {
     title: 'Azure Event Grid',
     Svg: require('@site/static/img/svg/azure-event-grid.svg').default,
@@ -65,6 +64,7 @@ const ServiceFeatures = [
       </>
     ),
   },
+  */
   {
     title: 'Azure Static Web Apps',
     Svg: require('@site/static/img/svg/azure-swa.svg').default,
