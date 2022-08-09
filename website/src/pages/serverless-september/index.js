@@ -8,7 +8,7 @@ import styles from './../index.module.css';
 const CampaignFeatures = [
   {
     title: '#30DaysOfServerless',
-    Svg: require('@site/static/img/campaign-30days.svg').default,
+    Svg: require('@site/static/img/svg/campaign-30days.svg').default,
     link: "/Cloud-Native/serverless-september/30DaysOfServerless",
     description: (
       <>
@@ -18,7 +18,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Zero To Hero',
-    Svg: require('@site/static/img/campaign_hero.svg').default,
+    Svg: require('@site/static/img/svg/campaign_hero.svg').default,
     link: "/Cloud-Native/serverless-september/ZeroToHero",
     description: (
       <>
@@ -28,7 +28,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Serverless Hacks',
-    Svg: require('@site/static/img/team.svg').default,
+    Svg: require('@site/static/img/svg/team.svg').default,
     link: "/Cloud-Native/serverless-september/ServerlessHacks",
     description: (
       <>
@@ -38,7 +38,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Cloud Skills',
-    Svg: require('@site/static/img/campaign_skills.svg').default,
+    Svg: require('@site/static/img/svg/campaign_skills.svg').default,
     link: "/Cloud-Native/serverless-september/ServerlessHacks",
     description: (
       <>
@@ -48,7 +48,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Community Buzz',
-    Svg: require('@site/static/img/campaign_buzz.svg').default,
+    Svg: require('@site/static/img/svg/campaign_buzz.svg').default,
     link: "/Cloud-Native/serverless-september/CommunityBuzz",
     description: (
       <>
@@ -58,7 +58,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Ask Me Anything',
-    Svg: require('@site/static/img/campaign_ama.svg').default,
+    Svg: require('@site/static/img/svg/campaign_ama.svg').default,
     link: "/Cloud-Native/serverless-september/CommunityBuzz",
     description: (
       <>

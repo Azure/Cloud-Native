@@ -109,23 +109,23 @@ const config = {
             position: 'right',
             items: [
               {
-                label: 'Cloud Native',
+                label: 'For Cloud Native',
                 href: '/docs/intro',
               },
               {
-                label: 'Technologies',
-                href: '/docs/category/tutorial---basics',
+                label: 'For Serverless',
+                href: '/docs/serverless',
               },
               {
-                label: 'Developer Tools',
-                href: '/docs/category/tutorial---extras',
+                label: 'For DevTools',
+                href: '/docs/devtools',
               },
               {
-                label: 'Languages',
-                href: '/docs/category/tutorial---extras',
+                label: 'For Languages',
+                href: '/docs/languages',
               },
               {
-                label: 'Articles',
+                label: 'Blog Articles',
                 href: '/blog',
               },
             ],
@@ -230,7 +230,7 @@ const config = {
         },
         {
           name: 'twitter:image', 
-          content: 'https://www.azurestaticwebapps.dev/assets/images/series-people-13a2856edd7022e82a252ed05dffbabc.png'
+          content: 'https://github.com/Azure/Cloud-Native/raw/main/Assets/Serverless-September_Light.png'
         },
         {
           name: 'twitter:card', 

@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const ServiceFeatures = [
   {
     title: 'Azure Functions',
-    Svg: require('@site/static/img/azure-functions.svg').default,
+    Svg: require('@site/static/img/svg/azure-functions.svg').default,
     link: "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview",
     description: (
       <>
@@ -15,7 +15,7 @@ const ServiceFeatures = [
   },
   {
     title: 'Azure Container Apps',
-    Svg: require('@site/static/img/azure-container-apps.svg').default,
+    Svg: require('@site/static/img/svg/azure-container-apps.svg').default,
     link: "https://docs.microsoft.com/en-us/azure/container-apps/overview",
     description: (
       <>
@@ -25,7 +25,7 @@ const ServiceFeatures = [
   },
   {
     title: 'Distributed App Runtime',
-    Svg: require('@site/static/img/dapr_logo.svg').default,
+    Svg: require('@site/static/img/svg/dapr_logo.svg').default,
     link: "https://dapr.io/",
     description: (
       <>
@@ -35,7 +35,7 @@ const ServiceFeatures = [
   },
   {
     title: 'Azure Event Grid',
-    Svg: require('@site/static/img/azure-event-grid.svg').default,
+    Svg: require('@site/static/img/svg/azure-event-grid.svg').default,
     link: "https://docs.microsoft.com/en-us/azure/event-grid/",
     description: (
       <>
@@ -45,7 +45,7 @@ const ServiceFeatures = [
   },
   {
     title: 'Azure Logic Apps',
-    Svg: require('@site/static/img/azure-logic-apps.svg').default,
+    Svg: require('@site/static/img/svg/azure-logic-apps.svg').default,
     link: "https://docs.microsoft.com/en-us/azure/logic-apps/",
     description: (
       <>
@@ -55,7 +55,7 @@ const ServiceFeatures = [
   },
   {
     title: 'Azure Static Web Apps',
-    Svg: require('@site/static/img/azure-swa.svg').default,
+    Svg: require('@site/static/img/svg/azure-swa.svg').default,
     link: "https://docs.microsoft.com/en-us/azure/static-web-apps/",
     description: (
       <>
