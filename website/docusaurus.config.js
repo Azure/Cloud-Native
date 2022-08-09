@@ -207,7 +207,7 @@ const config = {
           },
           */
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Microsoft - Built with <a href="https://docusaurus.io"> Docusaurus </a> - By <a href="https://twitter.com/azureadvocates"> @azureadvocates </a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Microsoft - Built with <a href="https://docusaurus.io"> Docusaurus </a> and <a href="https://iconcloud.design/"> IconCloud.Design</a>`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -230,7 +230,7 @@ const config = {
         },
         {
           name: 'twitter:image', 
-          content: 'https://github.com/Azure/Cloud-Native/raw/main/Assets/Serverless-September_Light.png'
+          content: 'https://azure.github.io/Cloud-Native/img/banners/b-end-to-end.png'
         },
         {
           name: 'twitter:card', 

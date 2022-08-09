@@ -29,8 +29,9 @@
   width: 100%;
 }
 
+/* Fills icon */
 .featureSvg {
   height: 200px;
   width: 200px;
-  fill: #9747ff; /* #ffb900 */
+  fill: #9747ff; /* #ffb900 #9747ff*/
 }

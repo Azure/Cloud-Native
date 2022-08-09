@@ -4,12 +4,12 @@ import styles from './styles.module.css';
 
 const ServiceFeatures = [
   {
-    title: 'Azure Functions',
-    Svg: require('@site/static/img/svg/azure-functions.svg').default,
-    link: "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview",
+    title: 'Azure Kubernetes Service',
+    Svg: require('@site/static/img/svg/azure-kubernetes.svg').default,
+    link: "https://docs.microsoft.com/en-us/azure/aks/",
     description: (
       <>
-       Build event-driven serverless solutions with less code and infrastructure maintenance costs.
+        Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster in Azure by offloading the operational overhead to Azure. 
       </>
     ),
   },
@@ -24,6 +24,17 @@ const ServiceFeatures = [
     ),
   },
   {
+    title: 'Azure Functions',
+    Svg: require('@site/static/img/svg/azure-functions.svg').default,
+    link: "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview",
+    description: (
+      <>
+       Build event-driven serverless solutions with less code and infrastructure maintenance costs.
+      </>
+    ),
+  },
+  /*
+  {
     title: 'Distributed App Runtime',
     Svg: require('@site/static/img/svg/dapr_logo.svg').default,
     link: "https://dapr.io/",
@@ -33,6 +44,7 @@ const ServiceFeatures = [
       </>
     ),
   },
+  */
   {
     title: 'Azure Event Grid',
     Svg: require('@site/static/img/svg/azure-event-grid.svg').default,

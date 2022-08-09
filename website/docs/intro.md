@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Cloud Native Apps
 
-[Cloud Native Applications](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/) are built from the ground up and optimized for cloud scale and performance. They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
+> **Cloud Native Apps are built from the ground up and optimized for cloud scale and performance.**
+
+They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. Learn how to [build cloud-native apps on Azure!](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/)
 
 |![Azure Microservices](../static/img/svg/azure-microservices.svg) <br/> [**Microservices**](https://azure.microsoft.com/en-us/solutions/microservice-applications/) |![Azure Serverless Icon](../static/img/svg/azure-serverless.svg) <br/> [**Serverless**](https://azure.microsoft.com/en-us/solutions/serverless/)  | ![Azure Containers Icon](../static/img/svg/azure-containers.svg) <br/> [**Containers**](https://azure.microsoft.com/en-us/overview/containers/) |
 |:---:|:---:|:---:|
