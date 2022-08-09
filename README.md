@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./Assets/Serverless-September_Dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./Assets/Serverless-September_Light.png">
-  <img alt="Serverless September" src="./Resources/Serverless-September_Light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/Serverless-September_Dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/Serverless-September_Light.png">
+  <img alt="Serverless September" src="./assets/Serverless-September_Light.png">
 </picture>
 
 >Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then join us September 1, 2022 as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native journey.
