@@ -4,38 +4,58 @@
         <title>Building Cloud Native Apps Blog</title>
         <link>https://azure.github.io/Cloud-Native/blog</link>
         <description>Building Cloud Native Apps Blog</description>
-        <lastBuildDate>Mon, 29 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 27 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
+            <title><![CDATA[Try Serverless Hacks]]></title>
+            <link>https://azure.github.io/Cloud-Native/blog/serverless-hacks</link>
+            <guid>serverless-hacks</guid>
+            <pubDate>Sat, 27 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[TODO: About Serverless Hacks]]></description>
+            <content:encoded><![CDATA[<p><code>TODO: About Serverless Hacks</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
+            <category>hacks</category>
+            <category>serverless-september</category>
+        </item>
+        <item>
             <title><![CDATA[Cloud Skills Challenge]]></title>
             <link>https://azure.github.io/Cloud-Native/blog/cloud-skills</link>
             <guid>cloud-skills</guid>
-            <pubDate>Mon, 29 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Skill up & Get Certified!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="skill-up--get-certified">Skill up &amp; Get Certified!<a class="hash-link" href="#skill-up--get-certified" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content:encoded>
+            <pubDate>Sun, 28 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[TODO: About the Challenge]]></description>
+            <content:encoded><![CDATA[<p><code>TODO: About the Challenge</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
             <category>cloud-skills</category>
             <category>serverless-september</category>
         </item>
         <item>
-            <title><![CDATA[Zero To Hero Series]]></title>
+            <title><![CDATA[From Zero To Hero]]></title>
             <link>https://azure.github.io/Cloud-Native/blog/zero-to-hero</link>
             <guid>zero-to-hero</guid>
-            <pubDate>Tue, 30 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Jumpstart Your Journey!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="jumpstart-your-journey">Jumpstart Your Journey!<a class="hash-link" href="#jumpstart-your-journey" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content:encoded>
+            <pubDate>Mon, 29 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[TODO: Zero To Hero]]></description>
+            <content:encoded><![CDATA[<p><code>TODO: Zero To Hero</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
             <category>zero-to-hero</category>
             <category>serverless-september</category>
         </item>
         <item>
-            <title><![CDATA[Serverless Hacks]]></title>
-            <link>https://azure.github.io/Cloud-Native/blog/serverless-hacks</link>
-            <guid>serverless-hacks</guid>
+            <title><![CDATA[Ask The Experts]]></title>
+            <link>https://azure.github.io/Cloud-Native/blog/ask-the-experts</link>
+            <guid>ask-the-experts</guid>
+            <pubDate>Tue, 30 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[TODO: Ask The Experts]]></description>
+            <content:encoded><![CDATA[<p><code>TODO: Ask The Experts</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
+            <category>ask-the-experts</category>
+            <category>serverless-september</category>
+        </item>
+        <item>
+            <title><![CDATA[Community Buzz]]></title>
+            <link>https://azure.github.io/Cloud-Native/blog/community-buzz</link>
+            <guid>community-buzz</guid>
             <pubDate>Wed, 31 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Hack Challenges & Office Hours!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hack-challenges--office-hours">Hack Challenges &amp; Office Hours!<a class="hash-link" href="#hack-challenges--office-hours" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content:encoded>
-            <category>hacks</category>
+            <description><![CDATA[TODO: Community Buzz]]></description>
+            <content:encoded><![CDATA[<p><code>TODO: Community Buzz</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
+            <category>community-buzz</category>
             <category>serverless-september</category>
         </item>
         <item>
@@ -43,8 +63,8 @@
             <link>https://azure.github.io/Cloud-Native/blog/kickoff</link>
             <guid>kickoff</guid>
             <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Kickoff 30 Days Of Learning!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kickoff-30-days-of-learning">Kickoff 30 Days Of Learning!<a class="hash-link" href="#kickoff-30-days-of-learning" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content:encoded>
+            <description><![CDATA[TODO: About #30DaysOfServerless]]></description>
+            <content:encoded><![CDATA[<p><code>TODO: About #30DaysOfServerless</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
             <category>hello</category>
             <category>serverless-september</category>
         </item>

@@ -2,46 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/blog</id>
     <title>Building Cloud Native Apps Blog</title>
-    <updated>2022-08-29T00:00:00.000Z</updated>
+    <updated>2022-08-27T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/blog"/>
     <subtitle>Building Cloud Native Apps Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Cloud Skills Challenge]]></title>
-        <id>cloud-skills</id>
-        <link href="https://azure.github.io/Cloud-Native/blog/cloud-skills"/>
-        <updated>2022-08-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Skill up & Get Certified!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="skill-up--get-certified">Skill up &amp; Get Certified!<a class="hash-link" href="#skill-up--get-certified" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>Devanshi Joshi</name>
-            <uri>https://github.com/devanshidiaries</uri>
-        </author>
-        <category label="cloud-skills" term="cloud-skills"/>
-        <category label="serverless-september" term="serverless-september"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Zero To Hero Series]]></title>
-        <id>zero-to-hero</id>
-        <link href="https://azure.github.io/Cloud-Native/blog/zero-to-hero"/>
-        <updated>2022-08-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Jumpstart Your Journey!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="jumpstart-your-journey">Jumpstart Your Journey!<a class="hash-link" href="#jumpstart-your-journey" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>Devanshi Joshi</name>
-            <uri>https://github.com/devanshidiaries</uri>
-        </author>
-        <category label="zero-to-hero" term="zero-to-hero"/>
-        <category label="serverless-september" term="serverless-september"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Serverless Hacks]]></title>
+        <title type="html"><![CDATA[Try Serverless Hacks]]></title>
         <id>serverless-hacks</id>
         <link href="https://azure.github.io/Cloud-Native/blog/serverless-hacks"/>
-        <updated>2022-08-31T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Hack Challenges & Office Hours!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hack-challenges--office-hours">Hack Challenges &amp; Office Hours!<a class="hash-link" href="#hack-challenges--office-hours" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content>
+        <updated>2022-08-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TODO: About Serverless Hacks]]></summary>
+        <content type="html"><![CDATA[<p><code>TODO: About Serverless Hacks</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content>
         <author>
             <name>Gwyneth Peña-Siguenza</name>
             <uri>https://github.com/madebygps</uri>
@@ -50,12 +22,76 @@
         <category label="serverless-september" term="serverless-september"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Cloud Skills Challenge]]></title>
+        <id>cloud-skills</id>
+        <link href="https://azure.github.io/Cloud-Native/blog/cloud-skills"/>
+        <updated>2022-08-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TODO: About the Challenge]]></summary>
+        <content type="html"><![CDATA[<p><code>TODO: About the Challenge</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content>
+        <author>
+            <name>Devanshi Joshi</name>
+            <uri>https://github.com/devanshidiaries</uri>
+        </author>
+        <category label="cloud-skills" term="cloud-skills"/>
+        <category label="serverless-september" term="serverless-september"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[From Zero To Hero]]></title>
+        <id>zero-to-hero</id>
+        <link href="https://azure.github.io/Cloud-Native/blog/zero-to-hero"/>
+        <updated>2022-08-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TODO: Zero To Hero]]></summary>
+        <content type="html"><![CDATA[<p><code>TODO: Zero To Hero</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content>
+        <author>
+            <name>Devanshi Joshi</name>
+            <uri>https://github.com/devanshidiaries</uri>
+        </author>
+        <category label="zero-to-hero" term="zero-to-hero"/>
+        <category label="serverless-september" term="serverless-september"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ask The Experts]]></title>
+        <id>ask-the-experts</id>
+        <link href="https://azure.github.io/Cloud-Native/blog/ask-the-experts"/>
+        <updated>2022-08-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TODO: Ask The Experts]]></summary>
+        <content type="html"><![CDATA[<p><code>TODO: Ask The Experts</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content>
+        <author>
+            <name>Devanshi Joshi</name>
+            <uri>https://github.com/devanshidiaries</uri>
+        </author>
+        <category label="ask-the-experts" term="ask-the-experts"/>
+        <category label="serverless-september" term="serverless-september"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Community Buzz]]></title>
+        <id>community-buzz</id>
+        <link href="https://azure.github.io/Cloud-Native/blog/community-buzz"/>
+        <updated>2022-08-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TODO: Community Buzz]]></summary>
+        <content type="html"><![CDATA[<p><code>TODO: Community Buzz</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content>
+        <author>
+            <name>Devanshi Joshi</name>
+            <uri>https://github.com/devanshidiaries</uri>
+        </author>
+        <author>
+            <name>Nitya Narasimhan</name>
+            <uri>https://github.com/nitya</uri>
+        </author>
+        <author>
+            <name>Gwyneth Peña-Siguenza</name>
+            <uri>https://github.com/madebygps</uri>
+        </author>
+        <category label="community-buzz" term="community-buzz"/>
+        <category label="serverless-september" term="serverless-september"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[30 Days Of Serverless]]></title>
         <id>kickoff</id>
         <link href="https://azure.github.io/Cloud-Native/blog/kickoff"/>
         <updated>2022-09-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Kickoff 30 Days Of Learning!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kickoff-30-days-of-learning">Kickoff 30 Days Of Learning!<a class="hash-link" href="#kickoff-30-days-of-learning" title="Direct link to heading">​</a></h2><hr><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/campaign_banner-55814faaca25d2f765907ca99114634a.png" width="2190" height="1146" class="img_ev3q"></p>]]></content>
+        <summary type="html"><![CDATA[TODO: About #30DaysOfServerless]]></summary>
+        <content type="html"><![CDATA[<p><code>TODO: About #30DaysOfServerless</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content>
         <author>
             <name>Nitya Narasimhan</name>
             <uri>https://github.com/nitya</uri>
