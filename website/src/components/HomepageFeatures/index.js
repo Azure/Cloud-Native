@@ -3,17 +3,17 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const ServiceFeatures = [
-  {
-    title: 'Azure Kubernetes Service',
-    Svg: require('@site/static/img/svg/azure-kubernetes.svg').default,
-    link: "https://docs.microsoft.com/en-us/azure/aks/",
+  { 
+    title: 'Azure Functions',
+    Svg: require('@site/static/img/svg/azure-functions.svg').default,
+    link: "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview",
     description: (
       <>
-        Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster in Azure by offloading the operational overhead to Azure. 
+       Build event-driven serverless solutions with less code and infrastructure maintenance costs.
       </>
     ),
   },
-  {
+  { 
     title: 'Azure Container Apps',
     Svg: require('@site/static/img/svg/azure-container-apps.svg').default,
     link: "https://docs.microsoft.com/en-us/azure/container-apps/overview",
@@ -23,13 +23,13 @@ const ServiceFeatures = [
       </>
     ),
   },
-  {
-    title: 'Azure Functions',
-    Svg: require('@site/static/img/svg/azure-functions.svg').default,
-    link: "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview",
+  { 
+    title: 'Azure Kubernetes Service',
+    Svg: require('@site/static/img/svg/azure-kubernetes.svg').default,
+    link: "https://docs.microsoft.com/en-us/azure/aks/",
     description: (
       <>
-       Build event-driven serverless solutions with less code and infrastructure maintenance costs.
+        Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster in Azure by offloading the operational overhead to Azure. 
       </>
     ),
   },
@@ -79,10 +79,10 @@ const ServiceFeatures = [
 
 function Feature({Svg, title, description, link}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--3')}>
       <a href={link} target="_blank">
         <div className="text--center">
-          <Svg className={styles.featureSvg} role="img" />
+          <Svg className={styles.featureSvg} role="img"/>
         </div>
       </a>
       <div className="text--center padding-horiz--md">
@@ -93,6 +93,8 @@ function Feature({Svg, title, description, link}) {
   );
 }
 
+// TO-DO: Debug why SVG fill colors change 
+// based on order in which svgs are added!
 
 export default function HomepageFeatures() {
   return (

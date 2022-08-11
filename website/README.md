@@ -25,4 +25,6 @@ Bookmark this page, then join us September 1, 2022 as we kickstart multiple comm
 
 ## About This Site
 
-This website is built using [Docusaurus 2](https://docusaurus.io/) - a modern static website generator from Meta. The site is hosted on [GitHub Pages](https://aka.ms/azure/cloud-native) and auto-deployed with a [GitHub Actions](https://github.com/features/actions) workflow.
+ * This website is built using [Docusaurus 2](https://docusaurus.io/) - a modern static website generator from Meta. 
+ * The site is hosted on [GitHub Pages](https://aka.ms/azure/cloud-native) and auto-deployed with a [GitHub Actions](https://github.com/features/actions) workflow.
+ * It uses the [docusaurus-plugin-clarity](https://www.npmjs.com/package/docusaurus-plugin-clarity) to configure [Clarity](https://clarity.microsoft.com/) - future version may configure this directly in [docusaurus.config.js](https://docusaurus.io/docs/api/docusaurus-config#scripts)

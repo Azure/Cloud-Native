@@ -7,33 +7,35 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 
-  // Configure: Custom Fields
+  // --- CONFIG-30DAYS #1: Add Custom Fields (accessible globally)
   customFields: {
     description: 'Cloud Native technologies and techniques enable loosely coupled systems that are resilient, manageable, and observable. Use containers, microservices, APIs and more to build and run scalable applications in modern hybrid cloud environments.',
   },
 
-  // Configure: Reused in landing pages
+  // --- CONFIG-30DAYS #2: Config Landing Pages metadata
   title: 'Building Cloud Native Apps',
   tagline: 'From Code - To Containers - To Cloud!',
 
-  // Configure: For GitHub Pages
+
+  // --- CONFIG-30DAYS #3: Config GitHub Pages
   url: 'https://azure.github.io',
   baseUrl: '/Cloud-Native/',
   favicon: 'img/favicon.ico',
-  organizationName: 'azure', // Usually your GitHub org/user name.
-  projectName: 'Cloud-Native', // Usually your repo name.
+  organizationName: 'azure', 
+  projectName: 'Cloud-Native', 
   deploymentBranch: 'gh-pages',
 
-  // Configure: For Early Fixes
+  // --- CONFIG-30DAYS #4: Config for early detection of issues
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Configure: For Localization
+  // --- CONFIG-30DAYS #5: Config For localization
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
+  // --- CONFIG-30DAYS #6: Configure presets for theme, plugins
   presets: [
     [
       'classic',
@@ -59,6 +61,9 @@ const config = {
           showReadingTime: true,
           sortPosts: 'ascending'
         },
+
+        // Configure: Theme (classic)
+        // https://docusaurus.io/docs/api/themes/@docusaurus/theme-classic
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -66,9 +71,17 @@ const config = {
     ],
   ],
 
+
+  // --- CONFIG-30DAYS #6: Theme Config = default mode, respect Prefers Colors
+  // https://docusaurus.io/docs/api/themes/configuration
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         title: 'Cloud Native',
         logo: {
@@ -257,8 +270,16 @@ const config = {
         isCloseable: false,
       },
 
+      /* Clarity Config */
+      clarity: {
+        ID: "d61n997vq9", // Instructions below
+      }
+
     }),
 
+
+  // --- CONFIG-30DAYS #7: Activate and configure plugins here
+  // Follow plugin instructions to configure themeConfig settings
   plugins: [
     [
       '@docusaurus/plugin-ideal-image',
@@ -270,7 +291,13 @@ const config = {
         disableInDev: false,
       },
     ],
+    [
+      'docusaurus-plugin-clarity',
+      {
+      }
+    ],
   ],
+
 
 };
 

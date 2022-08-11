@@ -28,11 +28,11 @@ _Welcome to our September Serverless kickoff!!_ Our Serverless September officia
 
 :::success SERVERLESS SEPTEMBER INITIATIVES
  * [**30DaysOfServerless**](/blog/kickoff) - daily blog posts on this site and [dev.to/azure](https://dev.to/azure)
- * [**Serverless Hacks**](/blog/serverless-hack) - weekly hack sessions at [Microsoft Reactor](https://developer.microsoft.com/en-us/reactor/)
- * [**Zero To Hero**](/blog/serverless-hack) - 4-part blog from Product Engineering teams on [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog)
- * [**Cloud Skills Challenge**](/blog/cloud-skills) - Interactive skilling [competition](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c) that can help with certification.
- * [**Ask The Expert**](/blog/ask-the-expert) - Live 30 minute broadcast to [get questions answered](https://docs.microsoft.com/en-us/shows/ask-the-expert/) by product experts 
- * [**Community Buzz**](/blog/community-buzz) - A chance for *you* to showcase your posts or apps on this site.
+ * [**Serverless Hacks**](blog/) - weekly hack sessions at [Microsoft Reactor](https://developer.microsoft.com/en-us/reactor/)
+ * [**Zero To Hero**](blog/) - 4-part blog from Product Engineering teams on [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog)
+ * [**Cloud Skills Challenge**](blog/) - Interactive skilling [competition](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c) that can help with certification.
+ * [**Ask The Expert**](/blog) - Live 30 minute broadcast to [get questions answered](https://docs.microsoft.com/en-us/shows/ask-the-expert/) by product experts 
+ * [**Community Buzz**](/blog) - A chance for *you* to showcase your posts or apps on this site.
  
 :::
 
@@ -46,13 +46,13 @@ _Welcome to the Week 1 of your learning journey into Serverless technologies. Le
 ![Azure Functions](../../../static/img/banners/functions.png)
 
 :::info WEEK 1 - AZURE FUNCTIONS
- * Sep 02 - [Learn Core Concepts](blog/functions-concepts)
- * Sep 03 - [Build Your First Function](blog/functions-quickstart)
- * Sep 04 - [Functions for Java Developers](blog/functions-java)
- * Sep 05 - [Functions for JavaScript Developers](blog/functions-javascript)
- * Sep 06 - [Functions for .NET Developers](blog/functions-dotnet)
- *  Sep 07 - [Functions for Python Developers](blog/functions-python)
- * Sep 08 - [Functions + Serverless On Azure](blog/functions-serverless)
+ * Sep 02 - [Learn Core Concepts](blog/)
+ * Sep 03 - [Build Your First Function](blog/)
+ * Sep 04 - [Functions for Java Developers](blog/)
+ * Sep 05 - [Functions for JavaScript Developers](blog/)
+ * Sep 06 - [Functions for .NET Developers](blog/)
+ *  Sep 07 - [Functions for Python Developers](blog/)
+ * Sep 08 - [Functions + Serverless On Azure](blog/)
 :::
 
 ---
@@ -64,13 +64,13 @@ _Welcome to Week 2. You've learnt how to build event-driven serverless backends 
 ![Azure Container Apps and Dapr](../../../static/img/banners/container-apps.png)
 
 :::info WEEK 2 - AZURE CONTAINER APPS & DAPR
- *  Sep 09 - [Learn Core Concepts](blog/aca-concepts)
- *  Sep 10 - [Build an ACA (with/out Dapr)](blog/aca-dapr)
- *  Sep 11 - [Learn About: Communication](blog/aca-communication)
- *  Sep 12 - [Learn About: State Management](blog/aca-state)
- *  Sep 13 - [Learn About: Observability](blog/aca-observability)
- *  Sep 14 - [Learn About: Secure Access](blog/aca-secure)
- *  Sep 15 - [ACA + Serverless On Azure](blog/aca-serverless)
+ *  Sep 09 - [Learn Core Concepts](blog/)
+ *  Sep 10 - [Build an ACA (with/out Dapr)](blog/)
+ *  Sep 11 - [Learn About: Communication](blog/)
+ *  Sep 12 - [Learn About: State Management](blog/)
+ *  Sep 13 - [Learn About: Observability](blog/)
+ *  Sep 14 - [Learn About: Secure Access](blog/)
+ *  Sep 15 - [ACA + Serverless On Azure](blog/)
 :::
 
 ---
@@ -84,13 +84,13 @@ _Welcome to Week 3 - you've learned to build serverless applications using funct
 ![Week 3 Roadmap](../../../static/img/banners/logic-apps.png)
 
 :::info WEEK 3 - AZURE EVENT GRID & AZURE LOGIC APPS
- *  Sep 16 - [Logic Apps: Core Concepts](blog/logicapps-concepts)
- *  Sep 17 - [Logic Apps: Quickstart](blog/logicapps-quickstart)
- *  Sep 18 - [Logic Apps: Best Practices](blog/logicapps-practices)
- *  Sep 19 - [Event Grid: Core Concepts](blog/eventgrid-concepts)
- *  Sep 20 - [Event Grid: Quickstart](blog/eventgrid-quickstart)
- *  Sep 21 - [Event Grid: Best Practices](blog/eventgrid-practices)
- *  Sep 22 - [Integrations + Serverless On Azure](blog/aca-serverless)
+ *  Sep 16 - [Logic Apps: Core Concepts](blog/)
+ *  Sep 17 - [Logic Apps: Quickstart](blog/)
+ *  Sep 18 - [Logic Apps: Best Practices](blog/)
+ *  Sep 19 - [Event Grid: Core Concepts](blog/)
+ *  Sep 20 - [Event Grid: Quickstart](blog/)
+ *  Sep 21 - [Event Grid: Best Practices](blog/)
+ *  Sep 22 - [Integrations + Serverless On Azure](blog/)
 :::
 
 ---
@@ -100,17 +100,16 @@ _Welcome to Week 3 - you've learned to build serverless applications using funct
 _It's the final week of Serverless September! So far we've talked about various components of a Serverless solution on Azure. Now let's explore various end-to-end examples and learn how we can make these components work together._
 
 :::info Week 4 ARTICLES
- *  Sep 23 -  [TBD](blog/e2e)
- *  Sep 24 -  [TBD](blog/e2e)
- *  Sep 25 -  [TBD](blog/e2e)
- *  Sep 26 -  [TBD](blog/e2e)
- *  Sep 27 -  [TBD](blog/e2e)
- *  Sep 28 -  [TBD](blog/e2e)
- *  Sep 29 -  [TBD](blog/e2e)
+ *  Sep 23 -  [TBD](blog/)
+ *  Sep 24 -  [TBD](blog/)
+ *  Sep 25 -  [TBD](blog/)
+ *  Sep 26 -  [TBD](blog/)
+ *  Sep 27 -  [TBD](blog/)
+ *  Sep 28 -  [TBD](blog/)
+ *  Sep 29 -  [TBD](blog/)
 :::
 
 ![Week 4 Roadmap](../../../static/img/banners/end-to-end.png)
-
 
 ---
 
@@ -124,7 +123,6 @@ Thank you for staying the course with us. In the final two posts of this series 
 We appreciate your time and attention and we hope you found this curated tour valuable. Feedback and suggestions are always welcome. From our entire team, we wish you **good luck with the learning journey - now go build some apps and share your knowledge!** 🎉
 :::
 
-
-![Kickoff](../../../static/img/banners/site-card.png)
+![Thank You](../../../static/img/banners/empty.png)
 
 ---
