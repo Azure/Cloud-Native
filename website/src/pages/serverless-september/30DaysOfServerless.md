@@ -24,7 +24,7 @@ Want to help us improve the content or roadmap? Have specific topics or features
 
 _Welcome to our September Serverless kickoff!!_ Our Serverless September officially kicks off on September 1, 2022. However, we'll be sharing a few posts ahead of time, to share more information about the many awesome initiatives we are planning for you.
 
-![Kickoff](../../../static/img/banners/empty.png)
+![Kickoff](../../../static/img/banners/post-kickoff.png)
 
 :::success SERVERLESS SEPTEMBER INITIATIVES
  * [**30DaysOfServerless**](/blog/kickoff) - daily blog posts on this site and [dev.to/azure](https://dev.to/azure)

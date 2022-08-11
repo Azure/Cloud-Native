@@ -95,24 +95,32 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'Overview',
+                label: 'Serverless On Azure',
                 href: '/serverless-september/',
               },
               {
-                label: '#30DaysOfServerless',
-                href: '/serverless-september/30DaysOfServerless',
+                label: '1. Serverless Hacks',
+                href: '/blog/serverless-hacks',
               },
               {
-                label: 'Zero To Hero',
-                href: '/serverless-september/ZeroToHero',
+                label: '2. Cloud Skills Challenge',
+                href: '/blog/cloud-skills',
               },
               {
-                label: 'Serverless Hacks',
-                href: '/serverless-september/ServerlessHacks',
+                label: '3. Zero To Hero',
+                href: '/blog/zero-to-hero',
               },
               {
-                label: 'Cloud Skills Challenge',
-                href: '/serverless-september/CloudSkills',
+                label: '4. Ask The Experts',
+                href: '/blog/ask-the-experts',
+              },
+              {
+                label: '5. Community Buzz',
+                href: '/blog/community-buzz',
+              },
+              {
+                label: '6. #30DaysOfServerless',
+                href: '/blog/serverless-hacks',
               },
             ],
           },
@@ -264,7 +272,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b>Found this project helpful? Give us a star on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b> 🙏🏽',
+          '<b> Build 💻 <a href="https://azure.microsoft.com/en-us/solutions/cloud-native-apps/"><b>Cloud Native Apps On Azure</b></a></b> | <b>Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b> 🙏🏽',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,
@@ -297,8 +305,6 @@ const config = {
       }
     ],
   ],
-
-
 };
 
 module.exports = config;
