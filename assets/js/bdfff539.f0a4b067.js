@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9505],{1550:l=>{l.exports=JSON.parse('{"label":"cloud-skills","permalink":"/Cloud-Native/blog/tags/cloud-skills","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);
