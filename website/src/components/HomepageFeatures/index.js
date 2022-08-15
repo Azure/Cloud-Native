@@ -77,12 +77,12 @@ const ServiceFeatures = [
   },
 ];
 
-function Feature({Svg, title, description, link}) {
+function Feature({Svg, title, description, link, fillColor}) {
   return (
     <div className={clsx('col col--3')}>
       <a href={link} target="_blank">
         <div className="text--center">
-          <Svg className={styles.featureSvg} role="img"/>
+          <Svg height="150px" width="150px" />
         </div>
       </a>
       <div className="text--center padding-horiz--md">

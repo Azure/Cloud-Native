@@ -9,6 +9,7 @@ const CampaignFeatures = [
   {
     title: '#30DaysOfServerless',
     Svg: require('@site/static/img/svg/campaign-30days.svg').default,
+    fillColor: "#f25022",
     link: "/Cloud-Native/serverless-september/30DaysOfServerless",
     description: (
       <>
@@ -19,6 +20,7 @@ const CampaignFeatures = [
   {
     title: 'Zero To Hero',
     Svg: require('@site/static/img/svg/campaign_hero.svg').default,
+    fillColor: "#7fba00",
     link: "/Cloud-Native/serverless-september/ZeroToHero",
     description: (
       <>
@@ -29,6 +31,7 @@ const CampaignFeatures = [
   {
     title: 'Serverless Hacks',
     Svg: require('@site/static/img/svg/team.svg').default,
+    fillColor: "#00a4ef",
     link: "/Cloud-Native/serverless-september/ServerlessHacks",
     description: (
       <>
@@ -39,6 +42,7 @@ const CampaignFeatures = [
   {
     title: 'Cloud Skills',
     Svg: require('@site/static/img/svg/campaign_skills.svg').default,
+    fillColor: "#ffb900",
     link: "/Cloud-Native/serverless-september/ServerlessHacks",
     description: (
       <>
@@ -49,6 +53,7 @@ const CampaignFeatures = [
   {
     title: 'Ask The Expert',
     Svg: require('@site/static/img/svg/campaign_ama.svg').default,
+    fillColor: "#b66dff",
     link: "/Cloud-Native/serverless-september/CommunityBuzz",
     description: (
       <>
@@ -60,6 +65,7 @@ const CampaignFeatures = [
     title: 'Community Buzz',
     Svg: require('@site/static/img/svg/campaign_buzz.svg').default,
     link: "/Cloud-Native/serverless-september/CommunityBuzz",
+    fillColor: "#fe6db6",
     description: (
       <>
       Build interesting demos or wrote helpful articles? Contribute your feedback and content for a chance to be featured!
@@ -68,15 +74,15 @@ const CampaignFeatures = [
   },
 ];
 
-function Feature({Svg, title, description, link}) {
+function Feature({Svg, title, description, link, fillColor}) {
   return (
     <div className={clsx('col col--4')}>
       <a href={link} target="_blank">
         <div className="text--center">
-          <Svg className={styles.featureSvg} role="img" />
+          <Svg height="150px" width="150px" fill={fillColor} role="img" />
         </div>
       </a>
-      <div className="text--center padding-horiz--md">
+      <div fill="#00ff00" className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -88,9 +94,9 @@ function CampaignHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h2>
-          Welcome to Serverless September
-        </h2>
+        <h1>
+          It's Serverless September!
+        </h1>
         <p>
           Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then join us <b>September 1, 2022</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native journey.
         </p>

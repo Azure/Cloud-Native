@@ -272,7 +272,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b> Build 💻 <a href="https://azure.microsoft.com/en-us/solutions/cloud-native-apps/"><b>Cloud Native Apps On Azure</b></a></b> | <b>Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b> 🙏🏽',
+          '<b> Explore 🧭 <a href="https://azure.microsoft.com/en-us/solutions/cloud-native-apps/"><b>Serverless On Azure</b></a></b> -- <b>Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b>',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,
