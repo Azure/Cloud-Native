@@ -100,27 +100,27 @@ const config = {
               },
               {
                 label: '1. Serverless Hacks',
-                href: '/blog/serverless-hacks',
+                href: '/serverless-september/ServerlessHacks',
               },
               {
                 label: '2. Cloud Skills Challenge',
-                href: '/blog/cloud-skills',
+                href: '/serverless-september/CloudSkills',
               },
               {
                 label: '3. Zero To Hero',
-                href: '/blog/zero-to-hero',
+                href: '/serverless-september/ZeroToHero',
               },
               {
-                label: '4. Ask The Experts',
-                href: '/blog/ask-the-experts',
+                label: '4. Ask The Expert',
+                href: '/serverless-september/AskTheExpert',
               },
               {
                 label: '5. Community Buzz',
-                href: '/blog/community-buzz',
+                href: '/serverless-september/CommunityBuzz',
               },
               {
                 label: '6. #30DaysOfServerless',
-                href: '/blog/serverless-hacks',
+                href: '/serverless-september/30DaysOfServerless',
               },
             ],
           },
