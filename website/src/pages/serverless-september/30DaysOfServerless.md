@@ -27,12 +27,12 @@ _Welcome to our September Serverless kickoff!!_ Our Serverless September officia
 ![Kickoff](../../../static/img/banners/post-kickoff.png)
 
 :::success SERVERLESS SEPTEMBER INITIATIVES
- * [**30DaysOfServerless**](/blog/kickoff) - daily blog posts on this site and [dev.to/azure](https://dev.to/azure)
- * [**Serverless Hacks**](blog/) - weekly hack sessions at [Microsoft Reactor](https://developer.microsoft.com/en-us/reactor/)
- * [**Zero To Hero**](blog/) - 4-part blog from Product Engineering teams on [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog)
- * [**Cloud Skills Challenge**](blog/) - Interactive skilling [competition](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c) that can help with certification.
- * [**Ask The Expert**](/blog) - Live 30 minute broadcast to [get questions answered](https://docs.microsoft.com/en-us/shows/ask-the-expert/) by product experts 
- * [**Community Buzz**](/blog) - A chance for *you* to showcase your posts or apps on this site.
+ * [**30DaysOfServerless**](/serverless-september/30DaysOfServerless) - daily blog posts on this site and [dev.to/azure](https://dev.to/azure)
+ * [**Serverless Hacks**](/serverless-september/ServerlessHacks) - weekly hack sessions at [Microsoft Reactor](https://developer.microsoft.com/en-us/reactor/)
+ * [**Zero To Hero**](/serverless-september/ZeroToHero) - 4-part blog from Product Engineering teams on [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog)
+ * [**Cloud Skills Challenge**](/serverless-september/CloudSkills) - Interactive skilling [competition](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c) that can help with certification.
+ * [**Ask The Expert**](/serverless-september/AskTheExpert) - Live 30 minute broadcast to [get questions answered](https://docs.microsoft.com/en-us/shows/ask-the-expert/) by product experts 
+ * [**Community Buzz**](/serverless-september/CommunityBuzz) - A chance for *you* to showcase your posts or apps on this site.
  
 :::
 
