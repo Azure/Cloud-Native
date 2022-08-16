@@ -4,67 +4,17 @@
         <title>Building Cloud Native Apps Blog</title>
         <link>https://azure.github.io/Cloud-Native/blog</link>
         <description>Building Cloud Native Apps Blog</description>
-        <lastBuildDate>Sat, 27 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 15 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Try Serverless Hacks]]></title>
-            <link>https://azure.github.io/Cloud-Native/blog/serverless-hacks</link>
-            <guid>serverless-hacks</guid>
-            <pubDate>Sat, 27 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[TODO: About Serverless Hacks]]></description>
-            <content:encoded><![CDATA[<p><code>TODO: About Serverless Hacks</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
-            <category>hacks</category>
-            <category>serverless-september</category>
-        </item>
-        <item>
-            <title><![CDATA[Cloud Skills Challenge]]></title>
-            <link>https://azure.github.io/Cloud-Native/blog/cloud-skills</link>
-            <guid>cloud-skills</guid>
-            <pubDate>Sun, 28 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[TODO: About the Challenge]]></description>
-            <content:encoded><![CDATA[<p><code>TODO: About the Challenge</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
-            <category>cloud-skills</category>
-            <category>serverless-september</category>
-        </item>
-        <item>
-            <title><![CDATA[From Zero To Hero]]></title>
-            <link>https://azure.github.io/Cloud-Native/blog/zero-to-hero</link>
-            <guid>zero-to-hero</guid>
-            <pubDate>Mon, 29 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[TODO: Zero To Hero]]></description>
-            <content:encoded><![CDATA[<p><code>TODO: Zero To Hero</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
-            <category>zero-to-hero</category>
-            <category>serverless-september</category>
-        </item>
-        <item>
-            <title><![CDATA[Ask The Experts]]></title>
-            <link>https://azure.github.io/Cloud-Native/blog/ask-the-experts</link>
-            <guid>ask-the-experts</guid>
-            <pubDate>Tue, 30 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[TODO: Ask The Experts]]></description>
-            <content:encoded><![CDATA[<p><code>TODO: Ask The Experts</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
-            <category>ask-the-experts</category>
-            <category>serverless-september</category>
-        </item>
-        <item>
-            <title><![CDATA[Community Buzz]]></title>
-            <link>https://azure.github.io/Cloud-Native/blog/community-buzz</link>
-            <guid>community-buzz</guid>
-            <pubDate>Wed, 31 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[TODO: Community Buzz]]></description>
-            <content:encoded><![CDATA[<p><code>TODO: Community Buzz</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
-            <category>community-buzz</category>
-            <category>serverless-september</category>
-        </item>
-        <item>
-            <title><![CDATA[30 Days Of Serverless]]></title>
-            <link>https://azure.github.io/Cloud-Native/blog/kickoff</link>
-            <guid>kickoff</guid>
-            <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[TODO: About #30DaysOfServerless]]></description>
-            <content:encoded><![CDATA[<p><code>TODO: About #30DaysOfServerless</code></p><br><blockquote><p>⚡️ <strong>Serveless September Kicks Off Sep 1, 2022</strong></p></blockquote><p><img loading="lazy" alt="Campaign" src="/Cloud-Native/assets/images/post-kickoff-b8ea688e43ccee228ffd075f036351a2.png" width="1500" height="630" class="img_ev3q"></p><hr>]]></content:encoded>
+            <title><![CDATA[Welcome Learners!!]]></title>
+            <link>https://azure.github.io/Cloud-Native/blog/welcome</link>
+            <guid>welcome</guid>
+            <pubDate>Mon, 15 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[🍂 September is Coming!!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-september-is-coming">🍂 September is Coming!!<a class="hash-link" href="#-september-is-coming" title="Direct link to heading">​</a></h2><p>And we all know what that means! It's almost time for <strong>#Serverless September</strong>  - described as:</p><blockquote><p>"a month of content-driven learning where experts and practitioners share their insights and tutorials on how to use serverless technologies effectively in today's ecosystems"</p></blockquote><p>Why does that sound familiar? </p><p>Because I wrote those words <a href="https://dev.to/azure/serverlessseptember-just-5-things-you-need-to-know-3p9e" target="_blank" rel="noopener noreferrer">2 years ago</a> when we were just kickstarting the 2020 edition of the series. You might even recall <em>this</em> visual from that series.</p><p><img loading="lazy" src="https://res.cloudinary.com/practicaldev/image/fetch/s--0AMrkhpO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/4gknn2g6qd6b5q6uzwa4.png" class="img_ev3q"></p><p>You can still browse the <a href="https://dev.to/azure/serverlessseptember-2020-content-collection-443k" target="_blank" rel="noopener noreferrer">2020 Content Collection</a> to find great talks, articles and code samples to get started using Serverless on Azure.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="-so---whats-new-in-2022">🧐 So - What's New In 2022?<a class="hash-link" href="#-so---whats-new-in-2022" title="Direct link to heading">​</a></h2><p>Quite a few things actually! </p><blockquote><p>Hosted Content Website </p></blockquote><p>We created this awesome website as a <em>permanent (canonical) home</em> for the content in 2022 and beyond. Content will still be syndicated to dev.to, but this gives us the ability to also share <em>other</em> resources to help you continue your learning journey beyond September.</p><blockquote><p>Beyond Content Collections</p></blockquote><p>In previous years, we curated and shared content collections that focused on serverless usage. This year, we wanted to do a little bit more to provide a <em>structured</em> learning experience that would be beginner-friendly, but with signature activities to <em>skill up</em> for experienced developers. </p><p>In fact, here's a sneak peek at #ServerlessSeptember this year - you'll go from Code to Containers to Cloud!</p><p><img loading="lazy" src="/Cloud-Native/assets/images/post-kickoff-4a04995b44f0cc4a784fb4ab5e29cf7c.png" width="1500" height="630" class="img_ev3q"></p><p>This has been a labor of love from multiple teams at Microsoft! We can't wait to share all the resources that we hope will help <em>you</em> skill up on all things Serverless this September! </p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="join-us-️">Join us! ⚡️<a class="hash-link" href="#join-us-️" title="Direct link to heading">​</a></h2><p><strong><a href="https://azure.github.io/Cloud-Native/blog/rss.xml" target="_blank" rel="noopener noreferrer">Subscribe to this blog</a></strong> to be notified of updates - or check back on this site regularly as we begin counting down to Sep 1, 2022!</p>]]></content:encoded>
             <category>hello</category>
             <category>serverless-september</category>
         </item>
