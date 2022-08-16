@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Dev Tools for Azure
+# DevTools & Automation
 
 Visit the [Azure Developer Center](https://docs.microsoft.com/en-us/azure/developer/) to get the latest updates and resources to enhance your developer environment and simplify your workflow.
 

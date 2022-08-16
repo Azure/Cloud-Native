@@ -10,7 +10,7 @@ const CampaignFeatures = [
     title: '#30DaysOfServerless',
     Svg: require('@site/static/img/svg/campaign-30days.svg').default,
     fillColor: "#f25022",
-    link: "/Cloud-Native/serverless-september/30DaysOfServerless",
+    link: "/Cloud-Native/blog",
     description: (
       <>
       Join us on a #30Day journey covering Azure Functions, Container Apps, Dapr, Event Grid, Logic Apps & more.
@@ -43,7 +43,7 @@ const CampaignFeatures = [
     title: 'Cloud Skills',
     Svg: require('@site/static/img/svg/campaign_skills.svg').default,
     fillColor: "#ffb900",
-    link: "/Cloud-Native/serverless-september/ServerlessHacks",
+    link: "/Cloud-Native/serverless-september/CloudSkills",
     description: (
       <>
       Skill up on key cloud technologies with these free, self-guided learning courses - and make the leaderboard!
@@ -54,7 +54,7 @@ const CampaignFeatures = [
     title: 'Ask The Expert',
     Svg: require('@site/static/img/svg/campaign_ama.svg').default,
     fillColor: "#b66dff",
-    link: "/Cloud-Native/serverless-september/CommunityBuzz",
+    link: "/Cloud-Native/serverless-september/AskTheExpert",
     description: (
       <>
       Join us for online conversations with the product teams - submit questions ahead of time or ask them live!

@@ -59,7 +59,7 @@ const config = {
           archiveBasePath: 'archive',
           postsPerPage: 1,
           showReadingTime: true,
-          sortPosts: 'ascending'
+          sortPosts: 'descending'
         },
 
         // Configure: Theme (classic)
@@ -90,14 +90,14 @@ const config = {
         },
         items: [
           {
+            to: '/serverless-september/', 
+            label: 'Serverless September', position: 'left'
+          },
+          {
             type: 'dropdown',
-            label: 'Serverless September',
-            position: 'left',
+            label: 'Sitemap',
+            position: 'right',
             items: [
-              {
-                label: 'Serverless On Azure',
-                href: '/serverless-september/',
-              },
               {
                 label: '1. Serverless Hacks',
                 href: '/serverless-september/ServerlessHacks',
@@ -120,34 +120,30 @@ const config = {
               },
               {
                 label: '6. #30DaysOfServerless',
+                href: '/blog',
+              },
+              {
+                label: '#30Days Roadmap',
                 href: '/serverless-september/30DaysOfServerless',
+              },
+              {
+                label: 'Resources',
+                href: '/docs/intro',
               },
             ],
           },
           {
             type: 'dropdown',
-            label: 'Resources',
+            label: 'Archives',
             position: 'right',
             items: [
               {
-                label: 'For Cloud Native',
-                href: '/docs/intro',
+                label: '2020 Content',
+                href: 'https://dev.to/azure/serverlessseptember-2020-content-collection-443k',
               },
               {
-                label: 'For Serverless',
-                href: '/docs/serverless',
-              },
-              {
-                label: 'For DevTools',
-                href: '/docs/devtools',
-              },
-              {
-                label: 'For Languages',
-                href: '/docs/languages',
-              },
-              {
-                label: 'Blog Articles',
-                href: '/blog',
+                label: '2019 Content',
+                href: 'https://dev.to/azure/serverless-september-content-collection-2fhb',
               },
             ],
           },

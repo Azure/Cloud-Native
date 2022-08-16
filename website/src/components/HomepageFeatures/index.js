@@ -2,10 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-const ServiceFeatures = [
+
+const CoreServices = [
   { 
     title: 'Azure Functions',
-    Svg: require('@site/static/img/svg/azure-functions.svg').default,
+    svgpath: 'img/svg/azure-functions.svg',
     link: "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview",
     description: (
       <>
@@ -15,7 +16,7 @@ const ServiceFeatures = [
   },
   { 
     title: 'Azure Container Apps',
-    Svg: require('@site/static/img/svg/azure-container-apps.svg').default,
+    svgpath: 'img/svg/azure-container-apps.svg',
     link: "https://docs.microsoft.com/en-us/azure/container-apps/overview",
     description: (
       <>
@@ -25,7 +26,7 @@ const ServiceFeatures = [
   },
   { 
     title: 'Azure Kubernetes Service',
-    Svg: require('@site/static/img/svg/azure-kubernetes.svg').default,
+    svgpath: 'img/svg/azure-kubernetes.svg',
     link: "https://docs.microsoft.com/en-us/azure/aks/",
     description: (
       <>
@@ -33,41 +34,9 @@ const ServiceFeatures = [
       </>
     ),
   },
-  /*
-  {
-    title: 'Distributed App Runtime',
-    Svg: require('@site/static/img/svg/dapr_logo.svg').default,
-    link: "https://dapr.io/",
-    description: (
-      <>
-        Dapr provides APIs for building portable and reliable microservices, using industry best practices.
-      </>
-    ),
-  },
-  {
-    title: 'Azure Event Grid',
-    Svg: require('@site/static/img/svg/azure-event-grid.svg').default,
-    link: "https://docs.microsoft.com/en-us/azure/event-grid/",
-    description: (
-      <>
-        Event Grid is a highly scalable, serverless event broker that you can use to integrate applications using events..
-      </>
-    ),
-  },
-  {
-    title: 'Azure Logic Apps',
-    Svg: require('@site/static/img/svg/azure-logic-apps.svg').default,
-    link: "https://docs.microsoft.com/en-us/azure/logic-apps/",
-    description: (
-      <>
-        Build automated scalable workflows to integrate your apps and data across cloud services and on-premises systems
-      </>
-    ),
-  },
-  */
   {
     title: 'Azure Static Web Apps',
-    Svg: require('@site/static/img/svg/azure-swa.svg').default,
+    svgpath: 'img/svg/azure-swa.svg',
     link: "https://docs.microsoft.com/en-us/azure/static-web-apps/",
     description: (
       <>
@@ -77,12 +46,56 @@ const ServiceFeatures = [
   },
 ];
 
-function Feature({Svg, title, description, link, fillColor}) {
+const MoreServices = [
+  {
+    title: 'Distributed App Runtime',
+    svgpath: 'img/svg/dapr_logo.svg',
+    link: "https://dapr.io/",
+    description: (
+      <>
+        Dapr provides APIs for building portable and reliable microservices, using industry best practices.
+      </>
+    ),
+  },
+  {
+    title: 'Azure Event Grid',
+    svgpath: 'img/svg/azure-event-grid.svg',
+    link: "https://docs.microsoft.com/en-us/azure/event-grid/",
+    description: (
+      <>
+        Event Grid is a highly scalable, serverless event broker that you can use to integrate applications using events..
+      </>
+    ),
+  },
+  {
+    title: 'Azure Logic Apps',
+    svgpath: 'img/svg/azure-logic-apps.svg',
+    link: "https://docs.microsoft.com/en-us/azure/logic-apps/",
+    description: (
+      <>
+        Build automated scalable workflows to integrate your apps and data across cloud services and on-premises systems
+      </>
+    ),
+  },
+  {
+    title: 'Azure App Insights',
+    svgpath: 'img/svg/azure-app-insights.svg',
+    link: "https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+    description: (
+      <>
+        A feature of Azure Monitor that provides extensible application performance management (APM) and monitoring for live web apps. 
+      </>
+    ),
+  },
+];
+
+
+function Feature({svgpath, title, description, link}) {
   return (
     <div className={clsx('col col--3')}>
       <a href={link} target="_blank">
         <div className="text--center">
-          <Svg height="150px" width="150px" />
+          <img width="150px" height="150px" src={svgpath} alt={title} />
         </div>
       </a>
       <div className="text--center padding-horiz--md">
@@ -93,15 +106,24 @@ function Feature({Svg, title, description, link, fillColor}) {
   );
 }
 
-// TO-DO: Debug why SVG fill colors change 
-// based on order in which svgs are added!
+// FIXME:
+// When using SVG elements, the
+// icon colors change based on 
+// order. Using img for now - debug
+// issue (look at url(#a...) paths)
 
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {ServiceFeatures.map((props, idx) => (
+          {CoreServices.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+        <hr/>
+        <div className="row">
+          {MoreServices.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>

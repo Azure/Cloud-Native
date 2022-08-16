@@ -11,8 +11,5 @@ Choose from a range of serverless execution environments, fully managed services
  * Learn about [Azure Serverless Technologies](https://azure.microsoft.com/en-us/solutions/serverless/)
  * Explore [Azure Serverless Solution Architectures](https://azure.microsoft.com/en-us/solutions/serverless/#solution-architectures) 
  * Subscribe to the [Azure Serverless Blog](https://azure.microsoft.com/en-us/blog/topics/serverless/)
-
  
 ---
-
-![](../static/img/campaign_banner.png) 
