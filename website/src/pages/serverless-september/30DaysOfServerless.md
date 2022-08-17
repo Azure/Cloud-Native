@@ -2,9 +2,12 @@
 title: 30 Days Of Serverless
 ---
 
-# 30 Days Of Serverless: Roadmap
+# Roadmap for #30Days
 
-Welcome to **#30DaysOfServerless** - a month-long beginner-friendly journey into building serverless solutions on Azure! Over the next 4 weeks we'll share daily blog posts, authored by serverless experts and practitioners from diverse teams, to guide you on a journey across the Serverless landscape on Azure. We've organized the journey into 4 stages:
+
+## Welcome! 
+
+This is a tentative roadmap for #30DaysOfServerless, a daily content series planned for the upcoming **Serverless September** project. It's a month-long celebration of [Serverless On Azure](https://azure.microsoft.com/en-us/solutions/serverless/) with a curated journey that takes you from understanding core technologies to developing solutions for end-to-end scenarios - organized into 4 stages:
 
  * **Go Serverless** with Azure Functions
  * **Deploy Microservices** with Azure Container Apps
@@ -14,9 +17,9 @@ Welcome to **#30DaysOfServerless** - a month-long beginner-friendly journey into
 
 :::danger TENTATIVE ROADMAP
 This page shows our planned roadmap for the month (Sep 1-30, 2022). However, we may modify the content or sequence of posts as we go, in response to _your_ requests and feedback. 
-::: 
 
-Want to help us improve the content or roadmap? Have specific topics or features you want to see more (or less) coverage on? Comment on our [Discussions](https://github.com/Azure/Cloud-Native/discussions) board or tweet us using `#ServerlessSeptember`.
+Visit our [Discussions](https://github.com/Azure/Cloud-Native/discussions) board and leave us feedback or requests under the #30DaysOfServerless topic!
+::: 
 
 ---
 
