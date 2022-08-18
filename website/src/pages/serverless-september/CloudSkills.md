@@ -4,7 +4,6 @@ title: Cloud Skills
 
 # Cloud Skills Challenge
 
-
 :::info 🚨 [**REGISTER NOW!**](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c) 🚨
 
 Use the link above to register for the Cloud Skills Challenge today! You will get an automatical email notification when the challenge kicks off, ensuring you don't waste any time! The challenge runs for 30 days (Sep 1 - Sep 30) so **an early start helps**!
