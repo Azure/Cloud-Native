@@ -3,3 +3,71 @@ title: Serverless Hacks
 ---
 
 # Serverless Hacks
+
+:::info 🚨 [**SUBMIT YOUR HACKS TO OUR HALL OF FAME!**](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=&template=---serverless-hacks--share-your-hack-.md&title=%5BServerless+Hacks%5D) 🚨
+
+ 1. Open a [New Issue](https://github.com/Azure/Cloud-Native/issues/new/choose) on the repo.
+ 2. Click [Get Started](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=&template=---serverless-hacks--share-your-hack-.md&title=%5BServerless+Hacks%5D) on the **🎯 My Serverless Hacks !** template.
+ 3. Fill in the details and submit!
+
+We'll review submissions on a rolling basis, to verify that the submitted hacks are complete. Accepted submissions will be added to the [🏆 Hall Of Fame](#-hall-of-fame) here as a permanent record of your accomplishment!
+:::
+
+You can submit multiple entries - but each _must_ be associated with a unique GitHub repo and showcase **something new or different you did** beyond the default. Read on for examples of how you can [Extend the Hack](#-extend-the-hack).
+
+---
+
+## 🌩 Join The Hack!
+
+:::tip 🚨 [**REGISTER FOR THE KICKOFF!**](https://aka.ms/ServerlessHacks)
+
+Visit the [Serverless September At The Reactor](https://aka.ms/ServerlessHacks) page and register to attend weekly online sessions with Cloud Advocate [Gwyneth Peña-Siguenza](https://twitter.com/madebygps) and special guests! Hear real-world serverless stories, ask questions and get insights to help you progress in your challenge.
+
+ * **Sep 7** |  How to get into Tech And Serverless - with Linda Nichols. [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16946)
+ * **Sep 14** |  How to DevOps and Serverless the Right Way. [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16958)
+ * **Sep 21** |  The Serverless Project that Got Me Promoted! [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16959)
+ * **Sep 28** | So you want to migrate your project to Serverless? [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16960)
+
+:::
+
+She will host weekly office hours where they discuss Serverless topics, take questions and provide guidance to help you walk through the mini-challenges in this year's [What The Hack: Serverless Challenge](https://microsoft.github.io/WhatTheHack/015-Serverless/) described below. **Plus, she'll share her own solution** in a series of video walkthroughs that can guide you in your own challenge journey!
+
+![](../../../static/img/banners/serverless-hacks.png)
+
+---
+
+## 🎯 Complete The Hack!
+
+Your challenge this year comes from [What The Hack](https://microsoft.github.io/WhatTheHack/), part of a collection of challenge-based hackathons that you can complete - or in a team of 3-5 people as a  **collaborative learning** experience in-person or online. The goal is to learn from each other and share your insights with the broader community in a way that helps you build and retain expertise, while also contributing back.
+
+![](https://microsoft.github.io/WhatTheHack/015-Serverless/images/preferred-solution.png)
+
+The figure above shows the specific challenge you will work on: [Azure Serverless](https://microsoft.github.io/WhatTheHack/015-Serverless/) in the category of **Application Modernization**. In this challenge, you will build a Tollbooth application using a serverless architecture involving multiple Azure services. 
+ * Understand the [Solution Architecture](https://microsoft.github.io/WhatTheHack/015-Serverless/#solution-architecture) proposed.
+ * Learn the [Technologies](https://microsoft.github.io/WhatTheHack/015-Serverless/#technologies) used.
+ * Work through the [8 Challenges](https://microsoft.github.io/WhatTheHack/015-Serverless/#challenges) in order.
+
+Don't forget to join the weekly office hour sessions if you have questions or need help. And make sure you [**submit your solution to our Hall Of Fame**](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=&template=---serverless-hacks--share-your-hack-.md&title=%5BServerless+Hacks%5D) when you are done!
+
+---
+
+## 💡 Extend The Hack!
+
+The 8-challenge hack provides the default path for working on a solution. But you have options to go beyond this, or do something new or different!
+
+ * Check out the [Optional Challenges](https://microsoft.github.io/WhatTheHack/015-Serverless/#optional-challenges) identified in the Hack page.
+ * Implement your solution in different languages (Java, JS, C#/.NET, Python)
+ * Extend the scenario to add another Azure Service (e.g., Azure Container Apps)
+ * Explore new developer tools or workflows (e.g., Azure Developer CLI)
+
+---
+
+## 🏆 Hall Of Fame
+
+:::note WELCOME TO THE SERVERLESS HACKS HALL OF FAME!
+
+This section will list the GitHub profile of participants who [submit an accepted solution](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=&template=---serverless-hacks--share-your-hack-.md&title=%5BServerless+Hacks%5D) - along with a link to their GitHub repository with code. Participants can submit more than one entry provided each entry has its own repo, and provides a new solution or enhancement.
+
+_The goal is to celebrate community accomplishments and make the repos available as a learning resource for others_ We can't wait to see what you build!
+
+:::

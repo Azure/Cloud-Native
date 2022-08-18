@@ -230,24 +230,24 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      image: 'img/logo.png',
+      image: 'img/banners/post-kickoff.png',
 
       metadata: [
         {
           name: 'twitter:url', 
-          content: 'https://aka.ms/30DaysOfServerless'
+          content: 'https://aka.ms/serverless-september'
         },
         {
           name: 'twitter:title', 
-          content: 'Serverless September: From Code To Containers To Cloud!'
+          content: 'Serverless September: Code to Containers to Cloud!'
         },
         {
           name: 'twitter:description', 
-          content: 'Learn how to build Serverless Solutions on Azure - from core concepts to best practices! https://aka.ms/30DaysOfServerless'
+          content: 'Learn to build Serverless Solutions on Azure - from core concepts to best practices! https://aka.ms/serverless-september'
         },
         {
           name: 'twitter:image', 
-          content: 'https://azure.github.io/Cloud-Native/img/banners/site-card.png'
+          content: 'img/banners/post-kickoff.png'
         },
         {
           name: 'twitter:card', 

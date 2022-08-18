@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/serverless-september">
-            Join us for #ServerlessSeptember ⚡️⚡️
+            Explore #ServerlessSeptember ⚡️⚡️
           </Link>
         </div>
       </div>
