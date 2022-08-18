@@ -21,6 +21,10 @@ This page shows our planned roadmap for the month (Sep 1-30, 2022). However, we 
 Visit our [Discussions](https://github.com/Azure/Cloud-Native/discussions) board and leave us feedback or requests under the #30DaysOfServerless topic!
 ::: 
 
+Check out the 
+[official Serverless September collection](https://docs.microsoft.com/en-us/users/leannturpin-6614/collections/kjqpsnzg4opdo2) of learning modules and don't forget to register for the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c) to complete them.
+
+
 ---
 
 ## Sep 1: Kickoff 
