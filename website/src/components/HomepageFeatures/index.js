@@ -58,6 +58,27 @@ const MoreServices = [
     ),
   },
   {
+    title: 'Kubernetes Event-Drive Autoscaling',
+    svgpath: 'img/svg/azure-keda.svg',
+    link: "https://docs.microsoft.com/en-us/azure/aks/keda-about",
+    description: (
+      <>
+        A lightweight component for event-driven autoscaling of applications in a sustainable, cost-efficient manner.
+      </>
+    ),
+  },
+  {
+    title: 'Azure Monitor',
+    svgpath: 'img/svg/azure-monitor.svg',
+    link: "https://docs.microsoft.com/en-us/azure/azure-monitor/overview",
+    description: (
+      <>
+        Delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.. 
+      </>
+    ),
+  },
+  /*
+  {
     title: 'Azure Event Grid',
     svgpath: 'img/svg/azure-event-grid.svg',
     link: "https://docs.microsoft.com/en-us/azure/event-grid/",
@@ -87,6 +108,7 @@ const MoreServices = [
       </>
     ),
   },
+  */
 ];
 
 
