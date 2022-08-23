@@ -36,7 +36,7 @@ She will host weekly office hours where they discuss Serverless topics, take que
 
 ---
 
-## 🎯 Complete The Hack!
+## 🎯 Complete Hacks
 
 Your challenge this year comes from [What The Hack](https://microsoft.github.io/WhatTheHack/), part of a collection of challenge-based hackathons that you can complete - or in a team of 3-5 people as a  **collaborative learning** experience in-person or online. The goal is to learn from each other and share your insights with the broader community in a way that helps you build and retain expertise, while also contributing back.
 
@@ -51,7 +51,7 @@ Don't forget to join the weekly office hour sessions if you have questions or ne
 
 ---
 
-## 💡 Extend The Hack!
+## 💡 Extend Hacks
 
 The 8-challenge hack provides the default path for working on a solution. But you have options to go beyond this, or do something new or different!
 
@@ -64,10 +64,9 @@ The 8-challenge hack provides the default path for working on a solution. But yo
 
 ## 🏆 Hall Of Fame
 
-:::note WELCOME TO THE SERVERLESS HACKS HALL OF FAME!
+:::info THE SERVERLESS HACKS HALL OF FAME!
 
-This section will list the GitHub profile of participants who [submit an accepted solution](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=&template=---serverless-hacks--share-your-hack-.md&title=%5BServerless+Hacks%5D) - along with a link to their GitHub repository with code. Participants can submit more than one entry provided each entry has its own repo, and provides a new solution or enhancement.
+This section lists participants who [submitted a valid hack solution](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=&template=---serverless-hacks--share-your-hack-.md&title=%5BServerless+Hacks%5D), with a link to the repository containing their code. We wanted to celebrate your accomplishments publicly, and amplify your work as a learning resource for others!
 
-_The goal is to celebrate community accomplishments and make the repos available as a learning resource for others_ We can't wait to see what you build!
-
+_We can't wait to see what you build!_
 :::

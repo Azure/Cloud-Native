@@ -167,15 +167,15 @@ const config = {
             to: 'https://azure.microsoft.com/en-us/solutions/serverless/'
           },
           {
-            label: 'Blog',
-            to: '/blog',
+            label: '#30Days Hub',
+            to: 'https://aka.ms/30DaysOf',
           },
           {
             label: 'Discussions',
             to: 'https://github.com/Azure/Cloud-Native/discussions',
           },
           {
-            label: 'Privacy Statement',
+            label: 'Privacy Statement ',
             to: 'https://privacy.microsoft.com/en-us/privacystatement',
           },
 
@@ -230,7 +230,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b>Like these initiatives? Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b>',
+          '<b> Found #ServerlessSeptember helpful? Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b>',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,
