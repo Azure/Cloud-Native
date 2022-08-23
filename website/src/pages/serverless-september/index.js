@@ -94,7 +94,8 @@ function CampaignHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1>
+
+        <h1 className="hero__title">
           It's Serverless September!
         </h1>
         <p>
