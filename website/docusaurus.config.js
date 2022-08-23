@@ -158,73 +158,35 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          /*
           {
-            title: 'Technologies',
-            items: [
-              {
-                label: 'Azure Functions',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Azure Container Apps',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Azure Logic Apps',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Azure Event Grid',
-                to: '/docs/intro',
-              },
-            ],
+            label: `Cloud Native Apps`,
+            to: 'https://azure.microsoft.com/en-us/solutions/cloud-native-apps/'
           },
           {
-            title: 'Languages',
-            items: [
-              {
-                label: 'Java On Azure',
-                to: '/docs/intro',
-              },
-              {
-                label: 'JavaScript on Azure',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Python On Azure',
-                to: '/docs/intro',
-              },
-              {
-                label: '.NET On Azure',
-                to: '/docs/intro',
-              },
-            ],
+            label: `Serverless On Azure`,
+            to: 'https://azure.microsoft.com/en-us/solutions/serverless/'
           },
           {
-            title: 'Initiatives',
-            items: [
-              {
-                label: '#30DaysOfServerless',
-                to: '/blog',
-              },
-              {
-                label: 'Zero To Hero',
-                to: '/blog',
-              },
-              {
-                label: 'Serverless Hacks',
-                to: '/blog',
-              },
-              {
-                label: 'Community Buzz',
-                to: '/blog',
-              },
-            ],
+            label: 'Blog',
+            to: '/blog',
           },
-          */
+          {
+            label: 'Discussions',
+            to: 'https://github.com/Azure/Cloud-Native/discussions',
+          },
+          {
+            label: 'Privacy Statement',
+            to: 'https://privacy.microsoft.com/en-us/privacystatement',
+          },
+
+          { 
+           label: `Copyright © ${new Date().getFullYear()} Microsoft`,
+           to: 'https://microsoft.com'
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Microsoft - Built with <a href="https://docusaurus.io"> Docusaurus </a> and <a href="https://iconcloud.design/"> IconCloud.Design</a>`,
+        /*
+        copyright: `Copyright © ${new Date().getFullYear()} Microsoft - Built with <a href="https://docusaurus.io"> Docusaurus </a> - Using <a href="https://iconcloud.design/"> IconCloud.Design</a>`,
+        */
       },
       prism: {
         theme: lightCodeTheme,
@@ -268,7 +230,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b> Explore 🧭 <a href="https://azure.microsoft.com/en-us/solutions/cloud-native-apps/"><b>Serverless On Azure</b></a></b> -- <b>Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b>',
+          '<b>Like these initiatives? Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b>',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,
