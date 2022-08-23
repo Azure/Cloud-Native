@@ -30,17 +30,17 @@ const CoreServices = [
     link: "https://docs.microsoft.com/en-us/azure/aks/",
     description: (
       <>
-        Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster in Azure by offloading the operational overhead to Azure. 
+        Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster by offloading the operational overhead to Azure. 
       </>
     ),
   },
   {
-    title: 'Azure Static Web Apps',
-    svgpath: 'img/svg/azure-swa.svg',
-    link: "https://docs.microsoft.com/en-us/azure/static-web-apps/",
+    title: 'Azure RedHat Open Shift',
+    svgpath: 'img/svg/azure-openshift.svg',
+    link: "https://azure.microsoft.com/en-us/services/openshift/",
     description: (
       <>
-        Azure Static Web Apps allows you to build modern web applications that automatically publish to the web as your code changes.
+        Use highly available, fully managed OpenShift clusters on demand - monitored and operated jointly by Microsoft and Red Hat
       </>
     ),
   },
@@ -74,6 +74,16 @@ const MoreServices = [
     description: (
       <>
         Delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.. 
+      </>
+    ),
+  },
+  {
+    title: 'Azure Static Web Apps',
+    svgpath: 'img/svg/azure-swa.svg',
+    link: "https://docs.microsoft.com/en-us/azure/static-web-apps/",
+    description: (
+      <>
+        Azure Static Web Apps allows you to build modern web applications that automatically publish to the web as your code changes.
       </>
     ),
   },
