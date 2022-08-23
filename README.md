@@ -15,6 +15,9 @@ Join us for a month-long celebration of serverless computing - from core concept
 
 ## [https://aka.ms/serverless-september](http://aka.ms/azure/cloud-native/serverless-september)
 
+---
+
+[![Deploy to GitHub Pages](https://github.com/Azure/Cloud-Native/actions/workflows/deploy-ghpages.yml/badge.svg)](https://github.com/Azure/Cloud-Native/actions/workflows/deploy-ghpages.yml)
 
 <!--
 <picture>
