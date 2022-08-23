@@ -1,5 +1,10 @@
 # Building Cloud Native Apps
 
+
+[![Deploy to GitHub Pages](https://github.com/Azure/Cloud-Native/actions/workflows/deploy-ghpages.yml/badge.svg)](https://github.com/Azure/Cloud-Native/actions/workflows/deploy-ghpages.yml)
+
+---
+
 Welcome to the Cloud Native on Azure website, a central location for hosting content, news and resources related to various **Serverless on Azure** initiatives across the Azure organization, starting with [**Serverless September**](https://aka.ms/serverless-september) in 2022.
 
 
