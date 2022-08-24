@@ -91,7 +91,11 @@ const config = {
         items: [
           {
             to: '/serverless-september/', 
-            label: 'Serverless September', position: 'left'
+            label: '🍂 #ServerlessSeptember', position: 'left'
+          },
+          {
+            to: '/calendar/', 
+            label: '🗓 Calendar', position: 'left'
           },
           {
             type: 'dropdown',
