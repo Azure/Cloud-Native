@@ -134,11 +134,11 @@ const config = {
               },
               {
                 label: '6. #30DaysOfServerless',
-                href: '/blog',
+                href: '/serverless-september/30DaysOfServerless',
               },
               {
-                label: '#30Days Roadmap',
-                href: '/serverless-september/30DaysOfServerless',
+                label: 'Blog',
+                href: '/blog',
               },
               {
                 label: 'Resources',
