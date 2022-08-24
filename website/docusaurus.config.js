@@ -83,7 +83,7 @@ const config = {
         { name: 'twitter:url', content: 'https://aka.ms/serverless-september'},
         { name: 'twitter:title', content: '#ServerlessSeptember is here!'},
         { name: 'twitter:description', content: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud Native Applications at scale!'},
-        { name: 'twitter:image', content: 'img/banners/post-kickoff.png'}, 
+        { name: 'twitter:image', content: 'https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png'}, 
         { name: 'twitter:creator', content: '@nitya'},
         { name: 'twitter:site', content: '@AzureAdvocates'},
       ],
