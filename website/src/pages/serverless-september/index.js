@@ -64,7 +64,7 @@ const CampaignFeatures = [
   {
     title: 'Community Buzz',
     Svg: require('@site/static/img/svg/campaign_buzz.svg').default,
-    link: "/Cloud-Native/serverless-september/CommunityBuzz",
+    link: "https://github.com/Azure/Cloud-Native/issues/new/choose",
     fillColor: "#fe6db6",
     description: (
       <>

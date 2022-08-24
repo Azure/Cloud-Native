@@ -77,6 +77,16 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/banners/post-kickoff.png',
+      metadata: [
+        { name: 'twitter:card', content: 'summary_large_image'},
+        { name: 'twitter:url', content: 'https://aka.ms/serverless-september'},
+        { name: 'twitter:title', content: '#ServerlessSeptember is here!'},
+        { name: 'twitter:description', content: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud Native Applications at scale!'},
+        { name: 'twitter:image', content: 'img/banners/post-kickoff.png'}, 
+        { name: 'twitter:creator', content: '@nitya'},
+        { name: 'twitter:site', content: '@AzureAdvocates'},
+      ],
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -161,6 +171,15 @@ const config = {
       },
       footer: {
         style: 'dark',
+        /*
+        logo: {
+          alt: 'Serverless September Logo',
+          src: 'img/campaign_banner.png',
+          href: 'https://aka.ms/serverless-september',
+          width: 280,
+          height: 100,
+        },
+        */
         links: [
           {
             label: `Cloud Native Apps`,
@@ -182,7 +201,6 @@ const config = {
             label: 'Privacy Statement ',
             to: 'https://privacy.microsoft.com/en-us/privacystatement',
           },
-
           { 
            label: `Copyright © ${new Date().getFullYear()} Microsoft`,
            to: 'https://microsoft.com'
@@ -196,7 +214,6 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      image: 'img/banners/post-kickoff.png',
 
       metadata: [
         {
