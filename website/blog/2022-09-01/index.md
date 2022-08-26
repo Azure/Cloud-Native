@@ -12,6 +12,5 @@ tags: [hello, serverless-september]
 
 > ⚡️ **Serveless September Kicks Off Sep 1, 2022**
 
-![Campaign](../static/img/banners/post-kickoff.png)
-
+![Kickoff Banner](../../static/img/banners/post-kickoff.png)
 ---
