@@ -105,11 +105,15 @@ const config = {
           },
           {
             to: '/calendar/', 
-            label: '🗓 Calendar', position: 'left'
+            label: 'Events', position: 'left'
           },
           {
             to: 'https://aka.ms/serverless-september/videos', 
-            label: '▶️ Videos', position: 'left'
+            label: 'Videos', position: 'left'
+          },
+          {
+            to: '/blog', 
+            label: 'Blog', position: 'left'
           },
           {
             type: 'dropdown',
@@ -141,12 +145,16 @@ const config = {
                 href: '/serverless-september/30DaysOfServerless',
               },
               {
-                label: 'Blog',
+                label: '7. Blog',
                 href: '/blog',
               },
               {
-                label: 'Resources',
-                href: '/docs/intro',
+                label: '8. Videos',
+                href: '/docs/videos/intro',
+              },
+              {
+                label: '9. Resources',
+                href: '/docs/resources/intro',
               },
             ],
           },

@@ -1,0 +1,12 @@
+{
+    "label": "Videos",
+    "position": 2,
+    "link": {
+      "type": "generated-index",        
+      "title": "Serverless Playlists",
+      "slug": "/category/videos",
+      "keywords": ["playlists","serverless hacks","serverless","videos","youtube"],
+      "image": "/img/serverless-hacks.png",
+      "description": "Go from zero to hero on Serverless Development with these video series"
+    }
+  }

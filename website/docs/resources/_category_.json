@@ -1,0 +1,12 @@
+{
+    "label": "Resources",
+    "position": 1,
+    "link": {
+      "type": "generated-index",        
+      "title": "Serverless Resources",
+      "slug": "/category/resources",
+      "keywords": ["playlists","cloud native","serverless","resources","documentation"],
+      "image": "/img/post-kickoff.png",
+      "description": "Explore Serverless Solutions End-to-End with these self-guided learning resources."
+    }
+  }
