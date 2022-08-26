@@ -108,6 +108,10 @@ const config = {
             label: '🗓 Calendar', position: 'left'
           },
           {
+            to: 'https://aka.ms/serverless-september/videos', 
+            label: '▶️ Videos', position: 'left'
+          },
+          {
             type: 'dropdown',
             label: 'Sitemap',
             position: 'right',
