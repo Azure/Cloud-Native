@@ -21,3 +21,51 @@ sara:
   title: Next Gen Experiences Advocate @Microsoft
   url: https://github.com/saragibby
   image_url: https://github.com/saragibby.png
+
+paul:
+  name: Paul Yu
+  title: Cloud Native Advocate @Microsoft
+  url: https://github.com/pauldotyu
+  image_url: https://github.com/pauldotyu.png
+
+rory:
+  name: Rory Preddy
+  title: Principal Cloud Advocate @Microsoft
+  url: https://github.com/roryp
+  image_url: https://github.com/roryp.png
+
+mike:
+  name: Mike James
+  title: Cloud Advocate @Microsoft
+  url: https://github.com/MikeCodesDotNet
+  image_url: https://github.com/MikeCodesDotNet.png
+
+jay:
+  name: Jay Miller
+  title: Senior Cloud Advocate @Microsoft
+  url: https://github.com/kjaymiller
+  image_url: https://github.com/kjaymiller.png
+
+glaucia:
+  name: Glaucia Llemos
+  title: Cloud Advocate @Microsoft
+  url: https://github.com/glaucia86
+  image_url: https://github.com/glaucia86.png
+
+anthony:
+  name: Anthony Chu
+  title: Senior PM @Microsoft
+  url: https://github.com/anthonychu
+  image_url: https://github.com/anthonychu.png
+
+dina:
+  name: Dina Berry
+  title: Senior Content Developer @Microsoft
+  url: https://github.com/diberry
+  image_url: https://github.com/diberry.png
+
+yönet:
+  name: Ayşegül Yönet
+  title: Senior Developer Advocate @Microsoft
+  url: https://github.com/Yonet
+  image_url: https://github.com/Yonet.png

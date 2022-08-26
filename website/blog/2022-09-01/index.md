@@ -1,7 +1,7 @@
 ---
 slug: kickoff
 title: It's 30DaysOfServerless!
-authors: [nitya]
+authors: [nitya, devanshi, gwyn, sara, paul, rory, mike, jay]
 draft: true
 tags: [hello, serverless-september]
 ---
