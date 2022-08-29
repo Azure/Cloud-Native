@@ -49,15 +49,119 @@ The theme for this week is Azure Functions. We'll talk about ...
 
 ---
 
+## Detecting Wildfires Around the World?
 
-## Section 1
+I live in California which is known for lots of wildfires. I wanted to create a proof of concept for developing an application that could let me know if there was a wildfire detected near my home. 
 
-## Section 2
+NASA has a few satelites orbiting the Earth that can detect wildfires. These satelites take scans of the radiative heat in and use that to determine the likelihood of a wildfire. NASA updates their information about every 30 minutes and it can take about four hours for to scan and process information. 
 
-## Section 3
+![Fire Point Near Austin, TX](img/Fire%20Point%20in%20Austin,%20TX.png)
 
-## Section 4
+I want to get the information but I don't want to ping NASA or another service every time I check.
+
+What if I occaisionally download all the data I need? Then I can ping that as much as I like.
+
+I can create a script that does just that. Any time I say _I can create a script_ that is a verbal queue for me to consider using an Azure function. With the function being ran in the cloud, I can ensure the script runs even when I'm not at my computer. 
+## How the Timer Trigger Works
+
+This function will utilize the Timer Trigger. This means Azure will call this function to run at a scheduled interval. This isn't the only way to keep the data in sync, but we know that arcgis, the service that we're using says that data is only updated every 30 minutes or so.
+
+To learn more about the TimerTrigger as a concept, check out the [Azure Functions documentation around Timers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-python).
+
+When we create the function we tell it a few things like where the script will live (in our case in `__init__.py`) the type and direction and notably _often it should run_. We specify the timer using `schedule": <The CRON INTERVAL>`. For us we're using `0 0,30 * * *` which means every 30 minutes at the hour and half-hour.
+
+```json
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "reqTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0,30 * * * *"
+    }
+  ]
+}
+```
+
+Next, we create the code that runs when the function is called.
+
+## Connecting to the Database and our Source
+
+> Disclaimer: The data that we're pulling is for educational purposes only. This is not meant to be a production level application. You're welcome play with this project but ensure that you're using the data [in compliance with Esri](https://www.esri.com/en-us/legal/overview).
+
+
+Our function does two important things. 
+
+1. It pulls data from ArcGIS that meets the parameters
+2. It stores that pulled data into our database
+
+If you want to check out the code in its entirety, check out the [GitHub repository](https://github.com/kjaymiller/fire-map).
+
+Pulling the data from ArcGIS is easy. We can use the [ArcGIS Python API](https://developers.arcgis.com/python/). Then, we need to load the service layer. Finally we query that layer for the specific data.
+
+```python
+def write_new_file_data(gis_id:str, layer:int=0) -> FeatureSet:
+    """Returns a JSON String of the Dataframe"""
+    fire_data = g.content.get(gis_id) 
+    feature = fire_data.layers[layer] # Loading Featured Layer from ArcGIS
+    q = feature.query(
+        where="confidence >= 65 AND hours_old  <= 4", #The filter for the query
+        return_distince_values=True,
+        out_fields="confidence, hours_old", # The data we want to store with our points
+        out_sr=4326, # The spatial reference of the data
+    )
+    return q   
+```
+
+Then we need to store the data in our database.
+
+We're using [Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) for this. COSMOSDB is a NoSQL database, which means that the data looks a lot like a python dictionary as it's JSON. This means that we don't need to worry about converting the data into a format that can be stored in a relational database.
+
+The second reason is that Cosmos DB is tied into the Azure ecosystem so that if we want to create functions Azure events around it, we can.
+
+Our script grabs the information that we pulled from ArcGIS and stores it in our database. 
+
+```python
+async with CosmosClient.from_connection_string(COSMOS_CONNECTION_STRING) as client:
+    container = database.get_container_client(container=CONTAINER)
+    for record in data:
+        await container.create_item(
+            record,
+            enable_automatic_id_generation=True,
+        )
+```
+
+In our code each of these functions live in their own space. So in the main function we focus solely on what azure functions will be doing. The script that gets called is `__init__.py`. There we'll have the function call the other functions running.
+
+We created another function called `load_and_write` that does all the work outlined above. `__init__.py` will call that.
+
+```python
+async def main(reqTimer: func.TimerRequest) -> None:
+    database=database
+    container=container
+    await update_db.load_and_write(gis_id=GIS_LAYER_ID, database=database, container=container)
+```
+
+Then we deploy the function to Azure. I like to use VS Code's Azure Extension but you can also deploy it [a few other ways](https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-technologies).
+
+![Deploying the function via VS Code](img/Deploy%20to%20Function%20App%20using%20VS%20Code.png)
+
+Once the function is deployed we can load the Azure portal and see a ping whenever the function is called.
+![The pings correspond to the Function being ran](img/Function%20Execution%20Count.png)
+
+We can also see the data now living in the datastore.
+![Document in Cosmos DB](img/Data%20Explorer.png)
+
+## It's in the Database, Now What?
+Now the real fun begins. We just loaded the last bit of fire data into a database. We can now query that data and serve it to others. 
+
+As I mentioned before, our Cosmos DB data is also stored in Azure, which means that we can deploy Azure Functions [to trigger when new data is added](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2?tabs=in-process%2Cfunctionsv2&pivots=programming-language-python). Perhaps you can use this to check for fires near you and use a [Logic App](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview) to send an alert to your phone or email.
+
+Another option is to create a web application that talks to the database and displays the data. I've created an example of this using FastAPI – <https://jm-func-us-fire-notify.azurewebsites.net>.
+
+![Website that Checks for Fires](img/Check%20for%20Fires.gif)
 
 ## Exercise
 
-## Resources
+I encourage you to fork [the repository](https://github.com/kjaymiller/fire-map). There you can see the TimerTrigger and a HTTPTrigger building the website. Perhaps if wildfires are a big thing in your area, you can use some of the data available in [Planetary Computer](https://planetarycomputer.microsoft.com) to check out some other datasets.
