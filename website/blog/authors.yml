@@ -28,6 +28,12 @@ paul:
   url: https://github.com/pauldotyu
   image_url: https://github.com/pauldotyu.png
 
+aaron:
+  name: Aaron Powell
+  title: Principal Cloud Advocate @Microsoft
+  url: https://github.com/aaronpowell
+  image_url: https://github.com/aaronpowell.png
+
 rory:
   name: Rory Preddy
   title: Principal Cloud Advocate @Microsoft

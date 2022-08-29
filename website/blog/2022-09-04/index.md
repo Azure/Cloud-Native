@@ -1,7 +1,7 @@
 ---
-slug: 02-functions-intro
-title: 02. Hello, Azure Functions!
-authors: [nitya]
+slug: 04-functions-java
+title: 04. Functions For Java Devs 
+authors: [rory]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
@@ -26,14 +26,14 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/02-functions-intro" />
+    href="https://azure.github.io/Cloud-Native/blog/04-functions-java" />
 </head>
 
 ---
 
-Welcome to `Day 2` of #30DaysOfServerless!
+Welcome to `Day 4` of #30DaysOfServerless!
 
-The theme for this week is Azure Functions. We'll talk about what Functions is, and how to get started building your first Functions example in different languages. And we'll look at how Functions-as-a-Service helps build End-to-End Serverless Solutions
+The theme for this week is Azure Functions. We'll talk about ...
 
 ---
 
