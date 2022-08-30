@@ -35,6 +35,7 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 23 | 🚀 Building stateful applications with Azure durable functions | [ Madhura Bharadwaj](https://twitter.com/madhura0110)|
 | Sep 23 | ✍🏽 Week 4: Serverless End-to-End | [Roadmap 🚏   ](/serverless-september/30DaysOfServerless#serverless-end-to-end) |
 | Sep 26 | 🚀 End-to-End solution development with code | [Kendall Roden](https://twitter.com/KendallRoden) |
+| Sep 28 |  **Webinar:** Java Azure Functions with Kafka (Speaker: [Ramya Oruganti](https://twitter.com/ramyaoncloud)) | [🌟 Register Now](https://info.microsoft.com/ww-landing-build-serverless-apis-with-azure-functions-kafka-extension.html?lcid=en-us) |
 | Sep 28 | 🏆 **Hacks** + So you want to migrate your project to Serverless?  | [🌟 Register Now](https://developer.microsoft.com/reactor/events/16960) |
 | Sep 29 | 🎤 **ATE: Azure Container Apps** Live Q&A with Product Team | [🌟 Register Here](https://reactor.microsoft.com/en-us/reactor/events/17000/) |
 | Sep 30 | 🎯 **Cloud Skills Challenge**: Final Day| [Challenge Collection](https://docs.microsoft.com/en-us/users/leannturpin-6614/collections/kjqpsnzg4opdo2) |
