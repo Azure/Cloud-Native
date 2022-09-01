@@ -56,7 +56,7 @@ Ensure you have Node.js 18 installed, a text editor (I'll use VS Code in this po
 
 ## Creating an Azure Function
 
-To create our Azure Function, we're going to use the [Azure Functions CLI](), which we can install using npm:
+To create our Azure Function, we're going to use the [Azure Functions CLI](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash), which we can install using npm:
 
 ```bash
 npm install --global azure-function-core-tools
@@ -175,7 +175,7 @@ The you'll get some commit messages:
 
 ## Exercise - Support searching
 
-The GitHub Serach API allows you to provide search parameters via the `q` query string. In this sample, we hard-coded it to be `language:javascript`, but as a follow on exercise, expand the Function to allow the caller to provide the search terms as a query string to the Azure Function, which is passed to the GitHub API. Hint - have a look at the `req` argument.
+The GitHub Serach API allows you to provide search parameters via the `q` query string. In this sample, we hard-coded it to be `language:javascript`, but as a follow-on exercise, expand the Function to allow the caller to provide the search terms as a query string to the Azure Function, which is passed to the GitHub Search API. Hint - have a look at the `req` argument.
 
 ## Resources
 
