@@ -77,16 +77,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/banners/post-kickoff.png',
-      metadata: [
-        { name: 'twitter:card', content: 'summary_large_image'},
-        { name: 'twitter:url', content: 'https://aka.ms/serverless-september'},
-        { name: 'twitter:title', content: '#ServerlessSeptember is here!'},
-        { name: 'twitter:description', content: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud Native Applications at scale!'},
-        { name: 'twitter:image', content: 'https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png'}, 
-        { name: 'twitter:creator', content: '@nitya'},
-        { name: 'twitter:site', content: '@AzureAdvocates'},
-      ],
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -181,6 +171,7 @@ const config = {
           },
         ],
       },
+
       footer: {
         style: 'dark',
         /*
@@ -222,48 +213,50 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Microsoft - Built with <a href="https://docusaurus.io"> Docusaurus </a> - Using <a href="https://iconcloud.design/"> IconCloud.Design</a>`,
         */
       },
+
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
 
+      image: 'img/banners/post-kickoff.png',
+
       metadata: [
-        {
+        { 
           name: 'twitter:url', 
           content: 'https://aka.ms/serverless-september'
         },
-        {
+        { 
           name: 'twitter:title', 
-          content: 'Serverless September: Code to Containers to Cloud!'
+          content: '#ServerlessSeptember is here!'
         },
-        {
+        { 
           name: 'twitter:description', 
-          content: 'Learn to build Serverless Solutions on Azure - from core concepts to best practices! https://aka.ms/serverless-september'
+          content: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud Native Applications at scale!'
         },
-        {
+        { 
           name: 'twitter:image', 
-          content: 'img/banners/post-kickoff.png'
+          content: 'https://azure.github.io/Cloud-Native/assets/images/post-kickoff-4a04995b44f0cc4a784fb4ab5e29cf7c.png'
         },
-        {
+        { 
           name: 'twitter:card', 
           content: 'summary_large_image'
         },
-        {
+        { 
           name: 'twitter:creator', 
           content: '@nitya'
         },
-        {
+        { 
           name: 'twitter:site', 
           content: '@AzureAdvocates'
         },
-
       ],
 
       /* Banner Announcements */
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b> Found #ServerlessSeptember helpful? Give us a ⭐️ on <a href="https://github.com/azure/cloud-native"><b>GitHub</b></a></b>',
+          '<b> Take the <a href="https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b>',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,

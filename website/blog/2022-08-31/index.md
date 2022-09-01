@@ -2,7 +2,7 @@
 slug: students
 title: Welcome Students! 
 authors: [sara]
-draft: true
+draft: false
 tags: [students, serverless-september]
 ---
 
