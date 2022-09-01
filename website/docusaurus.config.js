@@ -77,11 +77,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
+      
       navbar: {
         title: 'Cloud Native',
         logo: {
@@ -186,11 +188,11 @@ const config = {
         links: [
           {
             label: `Cloud Native Apps`,
-            to: 'https://azure.microsoft.com/en-us/solutions/cloud-native-apps/'
+            to: 'https://azure.microsoft.com/en-us/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
             label: `Serverless On Azure`,
-            to: 'https://azure.microsoft.com/en-us/solutions/serverless/'
+            to: 'https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
             label: '#30Days Hub',
@@ -219,7 +221,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
 
-      image: 'img/banners/post-kickoff.png',
+      image: 'img/ogImage.png',
 
       metadata: [
         { 
@@ -256,7 +258,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b> Take the <a href="https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b>',
+          '<b> Take the <a href="https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,

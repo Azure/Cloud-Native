@@ -1,7 +1,7 @@
 ---
 slug: 01-kickoff
 title: 01. It's 30DaysOfServerless!
-authors: [nitya]
+authors: [nitya, devanshi]
 draft: false
 tags: [hello, serverless-september]
 hide_table_of_contents: false
@@ -60,8 +60,8 @@ What are 3 things you can do today, to jumpstart your learning journey?
  * **Register** for live Q&A sessions (free, online)
     - Sep 15 - [Ask The Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/events/17000/)
     - Sep 29 - [Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/17000/)
-  * **Register** for the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c) - 30 days to complete it!
- * **Register** for the [Serverless Hacks Challenge](https://docs.microsoft.com/en-us/events/learn-events/reactor-serverlessseptember/?wt.mc_id=eventspg_16946_webpage_reactor) office hours (weekly)
+  * **Register** for the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) - 30 days to complete it!
+ * **Register** for the [Serverless Hacks Challenge](https://docs.microsoft.com/en-us/events/learn-events/reactor-serverlessseptember/?wt.mc_id=eventspg_16946_webpage_reactor&WT.mc_id=javascript-74010-ninarasi) office hours (weekly)
 
 ![Serverless Hacks](../../static/img/banners/serverless-hacks.png)
 
@@ -71,11 +71,11 @@ What are 3 things you can do today, to jumpstart your learning journey?
 
 [#30DaysOfServerless](/serverless-september/30DaysOfServerless) is a month-long series of daily blog posts grouped into 4 themed weeks - taking you from core concepts to end-to-end solution examples in 30 days. Each article will be short (5-8 mins reading time) and provide exercises and resources to help you reinforce learnings and take next steps.
 
-This series focuses on the [Serverless On Azure](https://azure.microsoft.com/en-us/solutions/serverless/) learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
- * **Week 1:** Get started with serverless using [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) 
- * **Week 2:** Build & deploy microservices with [Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/overview) and [Dapr](https://dapr.io/).
- * **Week 3:** Streamline integrations using [Azure Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/) and [Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/overview)
- * **Week 4:** Develop End-to-End solutions with [Serverless on Azure](https://azure.microsoft.com/en-us/solutions/serverless/)
+This series focuses on the [Serverless On Azure](https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi) learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
+ * **Week 1:** Get started with serverless using [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview?WT.mc_id=javascript-74010-ninarasi) 
+ * **Week 2:** Build & deploy microservices with [Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/overview?WT.mc_id=javascript-74010-ninarasi) and [Dapr](https://dapr.io/?WT.mc_id=javascript-74010-ninarasi).
+ * **Week 3:** Streamline integrations using [Azure Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/?WT.mc_id=javascript-74010-ninarasi) and [Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/overview?WT.mc_id=javascript-74010-ninarasi)
+ * **Week 4:** Develop End-to-End solutions with [Serverless on Azure](https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi)
 
 ![](./img/banner.png)
 
@@ -118,7 +118,7 @@ Here's the list of custom issues currently defined.
 
 ## Let's Get Started!
 
-Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/blog/rss.xml) for updates in your favorite feed reader! **And look out for our first Azure Functions post tomorrow!**
+Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/blog/rss.xml?WT.mc_id=javascript-74010-ninarasi) for updates in your favorite feed reader! **And look out for our first Azure Functions post tomorrow!**
 
 
 ---
