@@ -108,6 +108,11 @@ const config = {
             label: 'Blog', position: 'left'
           },
           {
+            label: 'Discussions',
+            to: 'https://github.com/Azure/Cloud-Native/discussions',
+             position: 'left'
+          },
+          {
             type: 'dropdown',
             label: 'Sitemap',
             position: 'right',
@@ -187,20 +192,32 @@ const config = {
         */
         links: [
           {
-            label: `Cloud Native Apps`,
+            label: `Cloud Native`,
             to: 'https://azure.microsoft.com/en-us/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
-            label: `Serverless On Azure`,
+            label: `Serverless`,
             to: 'https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
-            label: '#30Days Hub',
+            label: '#30DaysOf',
             to: 'https://aka.ms/30DaysOf',
           },
           {
-            label: 'Discussions',
-            to: 'https://github.com/Azure/Cloud-Native/discussions',
+            label: 'Java',
+            to: 'https://developer.microsoft.com/en-us/java/',
+          },
+          {
+            label: 'JavaScript',
+            to: 'https://aka.ms/javascript',
+          },
+          {
+            label: '.NET',
+            to: 'https://dotnet.microsoft.com/en-us/',
+          },
+          {
+            label: 'Python',
+            to: 'https://docs.microsoft.com/en-us/azure/developer/python/',
           },
           {
             label: 'Privacy Statement ',

@@ -40,9 +40,12 @@ _Welcome to our September Serverless kickoff!!_ Our Serverless September officia
  * [**Cloud Skills Challenge**](/serverless-september/CloudSkills) - Interactive skilling [competition](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) that can help with certification.
  * [**Ask The Expert**](/serverless-september/AskTheExpert) - Live 30 minute broadcast to [get questions answered](https://docs.microsoft.com/en-us/shows/ask-the-expert/?WT.mc_id=javascript-74010-ninarasi) by product experts 
  * [**Community Buzz**](/serverless-september/CommunityBuzz) - A chance for *you* to showcase your posts or apps on this site.
- 
+
 :::
 
+:::warning LINKS TO POSTS
+Posts will be published nightly on our main [blog](/blog) page. Once the post is published, we will update the corresponding items in the sections below with direct links. You can [subscribe](https://azure.github.io/Cloud-Native/blog/rss.xml) to the blog to get updates delivered directly to your feed reader.
+:::
 
 ---
 
@@ -53,13 +56,14 @@ _Welcome to the Week 1 of your learning journey into Serverless technologies. Le
 ![Azure Functions](../../../static/img/banners/functions.png)
 
 :::info WEEK 1 - AZURE FUNCTIONS
- * Sep 02 - [Learn Core Concepts](blog/)
- * Sep 03 - [Build Your First Function](blog/)
- * Sep 04 - [Functions for Java Developers](blog/)
- * Sep 05 - [Functions for JavaScript Developers](blog/)
- * Sep 06 - [Functions for .NET Developers](blog/)
- *  Sep 07 - [Functions for Python Developers](blog/)
- * Sep 08 - [Functions + Serverless On Azure](blog/)
+_Posts will be linked here once published._
+ * Sep 02 - Learn Core Concepts
+ * Sep 03 - Build Your First Function
+ * Sep 04 - Functions for Java Developers
+ * Sep 05 - Functions for JavaScript Developers
+ * Sep 06 - Functions for .NET Developers
+ * Sep 07 - Functions for Python Developers
+ * Sep 08 - Functions + Serverless On Azure
 :::
 
 ---
@@ -71,13 +75,14 @@ _Welcome to Week 2. You've learnt how to build event-driven serverless backends 
 ![Azure Container Apps and Dapr](../../../static/img/banners/container-apps.png)
 
 :::info WEEK 2 - AZURE CONTAINER APPS & DAPR
- *  Sep 09 - [Learn Core Concepts](blog/)
- *  Sep 10 - [Build an ACA (with/out Dapr)](blog/)
- *  Sep 11 - [Learn About: Communication](blog/)
- *  Sep 12 - [Learn About: State Management](blog/)
- *  Sep 13 - [Learn About: Observability](blog/)
- *  Sep 14 - [Learn About: Secure Access](blog/)
- *  Sep 15 - [ACA + Serverless On Azure](blog/)
+_Posts will be linked here once published._
+ *  Sep 09 - Learn Core Concepts
+ *  Sep 10 - Build an ACA (with/out Dapr)
+ *  Sep 11 - Learn About: Communication
+ *  Sep 12 - Learn About: State Management
+ *  Sep 13 - Learn About: Observability
+ *  Sep 14 - Learn About: Secure Access
+ *  Sep 15 - ACA + Serverless On Azure
 :::
 
 ---
@@ -90,14 +95,15 @@ _Welcome to Week 3 - you've learned to build serverless applications using funct
 ![Week 3 Roadmap](../../../static/img/banners/event-grid.png)
 ![Week 3 Roadmap](../../../static/img/banners/logic-apps.png)
 
-:::info WEEK 3 - AZURE EVENT GRID & AZURE LOGIC APPS
- *  Sep 16 - [Logic Apps: Core Concepts](blog/)
- *  Sep 17 - [Logic Apps: Quickstart](blog/)
- *  Sep 18 - [Logic Apps: Best Practices](blog/)
- *  Sep 19 - [Event Grid: Core Concepts](blog/)
- *  Sep 20 - [Event Grid: Quickstart](blog/)
- *  Sep 21 - [Event Grid: Best Practices](blog/)
- *  Sep 22 - [Integrations + Serverless On Azure](blog/)
+:::info WEEK 3 - AZURE EVENT GRID & AZURE LOGIC APP
+_Posts will be linked here once published._
+ *  Sep 16 - Logic Apps: Core Concepts
+ *  Sep 17 - Logic Apps: Quickstart
+ *  Sep 18 - Logic Apps: Best Practices
+ *  Sep 19 - Event Grid: Core Concepts
+ *  Sep 20 - Event Grid: Quickstart
+ *  Sep 21 - Event Grid: Best Practices
+ *  Sep 22 - Integrations + Serverless On Azure
 :::
 
 ---
@@ -107,13 +113,14 @@ _Welcome to Week 3 - you've learned to build serverless applications using funct
 _It's the final week of Serverless September! So far we've talked about various components of a Serverless solution on Azure. Now let's explore various end-to-end examples and learn how we can make these components work together._
 
 :::info Week 4 ARTICLES
- *  Sep 23 -  [TBD](blog/)
- *  Sep 24 -  [TBD](blog/)
- *  Sep 25 -  [TBD](blog/)
- *  Sep 26 -  [TBD](blog/)
- *  Sep 27 -  [TBD](blog/)
- *  Sep 28 -  [TBD](blog/)
- *  Sep 29 -  [TBD](blog/)
+_Posts will be linked here once published._
+ *  Sep 23 -  TBA
+ *  Sep 24 -  TBA
+ *  Sep 25 -  TBA
+ *  Sep 26 -  TBA
+ *  Sep 27 -  TBA
+ *  Sep 28 -  TBA
+ *  Sep 29 -  TBA
 :::
 
 ![Week 4 Roadmap](../../../static/img/banners/end-to-end.png)
