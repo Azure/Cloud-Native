@@ -56,7 +56,7 @@ Today, we kickstart our journey into serveless on Azure with a look at _Function
 Faas stands for [Functions As a Service (FaaS)](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-74010-ninarasi ). But what does that mean for us as application developers? We know that 
 building and deploying modern applications **at scale** can get _complicated_ and it starts with us needing to take decisions on _Compute_. In other words, we need to answer this question: "**where should I host my application given my resource dependencies and scaling requirements?**" 
 
-![this useful flowchart](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/images/compute-choices.png?WT.mc_id=javascript-74010-ninarasi )
+![this useful flowchart](./img/compute-choices.png )
 
 Azure has [this useful flowchart](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-74010-ninarasi ) (shown below) to guide your decision-making. You'll see that hosting options generally fall into three categories:
  * **Infrastructure as a Service (IaaS)** - where you provision and manage Virtual Machines yourself (cloud provider manages infra).
@@ -81,9 +81,9 @@ Azure Functions can be programmed in many popular languages (C#, F#, Java, JavaS
 * Or we wanted to use a different runtime for a supported language? 
 :::
 
-**[Custom Handlers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-ninarasi )** have you covered! These are lightweight webservers that can receive and process input events from the Functions host - and return responses that can be delivered to any output targets. By this definition, custom handlers can be implemented by _any language that supports receiving HTTP events_. Check out [this example](https://docs.microsoft.com/en-us/azure/azure-functions/media/functions-custom-handlers/azure-functions-custom-handlers-overview.png?WT.mc_id=javascript-74010-ninarasi ) for a custom handler in Go.
+**[Custom Handlers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-ninarasi )** have you covered! These are lightweight webservers that can receive and process input events from the Functions host - and return responses that can be delivered to any output targets. By this definition, custom handlers can be implemented by _any language that supports receiving HTTP events_. Check out [this example](https://docs.microsoft.com/en-us/azure/azure-functions/media/functions-custom-handlers?WT.mc_id=javascript-74010-ninarasi ) for a custom handler in Go.
 
-![Custom Handlers](https://docs.microsoft.com/en-us/azure/azure-functions/media/functions-custom-handlers/azure-functions-custom-handlers-overview.png?WT.mc_id=javascript-74010-ninarasi )
+![Custom Handlers](./img/azure-functions-custom-handlers-overview.png)
 
 
 :::tip Concept: Trigger and Bindings
@@ -95,6 +95,11 @@ This is where **triggers** and **bindings** come in.
 
  * `Triggers` define how a function is invoked and what associated data it will provide. _A function must have exactly one trigger_.
  * `Bindings` _declaratively_ define how a resource is connected to the function. The resource or binding can be of type input, output, or both. _Bindings are optional. A Function can have multiple input, output bindings_.
+
+Azure Functions comes with a number of [supported bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp#supported-bindings&WT.mc_id=javascript-74010-ninarasi) that can be used to integrate relevant services to power a specific scenario. For instance:
+ * [HTTP Triggers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook?tabs=in-process%2Cfunctionsv2&pivots=programming-language-javascript&WT.mc_id=javascript-74010-ninarasi) - invokes the function in response to an `HTTP request`. Use this to implement serverless APIs for your application.
+ * [Event Grid Triggers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-grid?tabs=in-process%2Cextensionv3&pivots=programming-language-javascript&WT.mc_id=javascript-74010-ninarasi) invokes the function on receiving events from an Event Grid. Use this to process events reactively, and potentially publish responses back to custom Event Grid topics.
+ * [SignalR Service Trigger](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-signalr-service-trigger?tabs=in-process&pivots=programming-language-javascript&WT.mc_id=javascript-74010-ninarasi) invokes the function in response to messages from Azure SignalR, allowing your application to take actions with _real-time contexts_.
 
 Triggers and bindings help you abstract your function's interfaces to other components it interacts with, eliminating hardcoded integrations. They are [configured differently based on the programming language](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp#trigger-and-binding-definitions&WT.mc_id=javascript-74010-ninarasi ) you use. For example - JavaScript functions are configured in the [functions.json](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference?tabs=blob#function-code?WT.mc_id=javascript-74010-ninarasi ) file. Here's an example of what that looks like.
 
@@ -192,9 +197,9 @@ Entity Functions provide explicit _state mangement_ for Durable Functions, defin
 :::
 
 Durable Functions are a fascinating topic that would require a separate, longer post, to do justice. For now, 
-let's look at some [application patterns](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-entities?tabs=csharp&WT.mc_id=javascript-74010-ninarasi ) that showcase the value of these starting with the simplest one: [Function Chaining](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview?tabs=csharp#chaining&WT.mc_id=javascript-74010-ninarasi ).
+let's look at some [application patterns](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-entities?tabs=csharp&WT.mc_id=javascript-74010-ninarasi ) that showcase the value of these starting with the simplest one - [Function Chaining](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview?tabs=csharp#chaining&WT.mc_id=javascript-74010-ninarasi ) as shown below:
 
-![Function Chaining](https://docs.microsoft.com/en-us/azure/azure-functions/durable/media/durable-functions-concepts/function-chaining.png&WT.mc_id=javascript-74010-ninarasi )
+![Function Chaining](./img/function-chaining.png )
 
  Here, we want to execute a sequence of named functions _in a specific order_. As shown in the snippet below, the orchestrator function coordinates invocations on the given functions in the desired sequence - "chaining" inputs and outputs to establish the workflow. Take note of the `yield` keyword. This triggers a checkpoint, preserving the current state of the function for reliable operation.
 
