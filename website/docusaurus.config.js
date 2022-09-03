@@ -205,19 +205,19 @@ const config = {
           },
           {
             label: 'Java',
-            to: 'https://developer.microsoft.com/en-us/java/',
+            to: 'https://developer.microsoft.com/en-us/java/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: 'JavaScript',
-            to: 'https://aka.ms/javascript',
+            to: 'https://docs.microsoft.com/en-us/javascript/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: '.NET',
-            to: 'https://dotnet.microsoft.com/en-us/',
+            to: 'https://dotnet.microsoft.com/en-us/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: 'Python',
-            to: 'https://docs.microsoft.com/en-us/azure/developer/python/',
+            to: 'https://docs.microsoft.com/en-us/azure/developer/python/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: 'Privacy Statement ',
