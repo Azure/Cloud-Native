@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9522],{3269:e=>{e.exports=JSON.parse('{"label":"serverless","permalink":"/Cloud-Native/blog/tags/serverless","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);
