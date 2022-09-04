@@ -14,11 +14,11 @@ tags: [serverless-september, 30-days-of-serverless, azure-functions, vscode, dev
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/03-functions-quickstart" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Build Your First Function" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Build Your First Function" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -51,12 +51,11 @@ Ready? Let's go.
 
 ![](./img/banner.png)
 
-* Build your first function [using VS Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=nodejs&WT.mc_id=javascript-74010-ninarasi)
 ---
 
 ## Developer Guidance
 
-Before we jump into development, let's familiarize ourselves with language-specific guidance from the Azure Functions Developer Guide. We'll review the [JavaScript version](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference?tabs=blob&WT.mc_id=javascript-74010-ninarasi) here but guides for F#, Java, Python, C# and PowerShell are available in the docs.
+Before we jump into development, let's familiarize ourselves with language-specific guidance from the Azure Functions Developer Guide. We'll review the [JavaScript version](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference?tabs=blob&WT.mc_id=javascript-74010-ninarasi) but guides for F#, Java, Python, C# and PowerShell are also available.
 
  1. A **function** is defined by two things: _code_ (written in a supported programming language) and _configuration_ (specified in a `functions.json` file, declaring the triggers, bindings and other context for execution).
 
@@ -82,10 +81,12 @@ FunctionsProject
  | - node_modules
  | - host.json
  | - package.json
- | - extensions.csproj
+ | - local.settings.json
 ```
 
-We'll dive into what the contents of these files look like, when we build and deploy the first function.
+We'll dive into what the contents of these files look like, when we build and deploy the first function. We'll cover `local.settings.json` in the _About Local Testing_ section at the end.
+
+---
 
 ## My First Function App
 
@@ -186,15 +187,24 @@ You can also visit the deployed function URL directly in a local browser - testi
 
  ![Final screenshot for VS Code workflow](./img/vscode-11.png)
 
-🎉 **Congratulations - you created and ran a function app locally!**
+
+:::success 🎉 **Congratulations**
+You created and ran a function app locally!
+:::
 
 ### (Re)Deploy to Azure
 
 Now, just follow the [creating a function app in Azure](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node#publish-the-project-to-azure) steps to deploy it to Azure, using an active subscription! The deployed app resource should now show up under the `Function App` Resources where you can click `Execute Function Now` to test the Azure-deployed version instead. You can also look up the function URL in the portal and visit that link in your local browser to trigger the function without the name context.
 
-🎉 **Congratulations - you have an Azure hosted serverless function app!**
+
+:::success 🎉 **Congratulations**
+You have an Azure-hosted serverless function app!
+:::
+
 
 Challenge yourself and try to [change the code and redeploy](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node#run-the-function-in-azure) to Azure to return something different. _You have effectively created a serverless API endpoint!_ 
+
+---
 
 ## About Core Tools
 
@@ -210,7 +220,7 @@ First, let's talk about [Azure Functions Core Tools](https://docs.microsoft.com/
   * [`func settings`](https://docs.microsoft.com/en-us/azure/azure-functions/functions-core-tools-reference?tabs=v2#func-settings-decrypt) - manage environment settings for local Functions host
   * [`func templates`](https://docs.microsoft.com/en-us/azure/azure-functions/functions-core-tools-reference?tabs=v2#func-templates-list) - list available templates
 
-Learn how to [work with Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Cmacos%2Ccsharp%2Cportal%2Cbash).
+Learn how to [work with Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Cmacos%2Ccsharp%2Cportal%2Cbash). Not only can it help with quick command execution, it can also be invaluable for debugging issues that may not always be visible or understandable in an IDE.
 
 ## About Local Testing
 

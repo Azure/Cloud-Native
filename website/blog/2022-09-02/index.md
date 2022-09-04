@@ -83,7 +83,7 @@ Azure Functions can be programmed in many popular languages (C#, F#, Java, JavaS
 * Or we wanted to use a different runtime for a supported language? 
 :::
 
-**[Custom Handlers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-ninarasi )** have you covered! These are lightweight webservers that can receive and process input events from the Functions host - and return responses that can be delivered to any output targets. By this definition, custom handlers can be implemented by _any language that supports receiving HTTP events_. Check out [this example](https://docs.microsoft.com/en-us/azure/azure-functions/media/functions-custom-handlers?WT.mc_id=javascript-74010-ninarasi ) for a custom handler in Go.
+**[Custom Handlers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-ninarasi )** have you covered! These are lightweight webservers that can receive and process input events from the Functions host - and return responses that can be delivered to any output targets. By this definition, custom handlers can be implemented by _any language that supports receiving HTTP events_. Check out [the quickstart for writing a custom handler](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-other?tabs=go%2Cmacos&WT.mc_id=javascript-74010-ninarasi ) in Rust or Go.
 
 ![Custom Handlers](./img/azure-functions-custom-handlers-overview.png)
 

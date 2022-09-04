@@ -57,8 +57,8 @@ _Welcome to the Week 1 of your learning journey into Serverless technologies. Le
 
 :::info WEEK 1 - AZURE FUNCTIONS
 _Posts will be linked here once published._
- * Sep 02 - Learn Core Concepts
- * Sep 03 - Build Your First Function
+ * Sep 02 - [Learn Core Concepts](/blog/02-functions-intro)
+ * Sep 03 - [Build Your First Function](/blog/03-functions-quickstart)
  * Sep 04 - Functions for Java Developers
  * Sep 05 - Functions for JavaScript Developers
  * Sep 06 - Functions for .NET Developers
