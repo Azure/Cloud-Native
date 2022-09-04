@@ -31,9 +31,11 @@ tags: [serverless-september, 30-days-of-serverless,  azure-functions]
 
 ---
 
-Welcome to `Day 2` of #30DaysOfServerless!
+Welcome to Day 2️⃣ of #30DaysOfServerless!
 
-Today, we kickstart our journey into serveless on Azure with a look at _Functions As a Service_. Specifically, we'll explore Azure Functions - from core concepts to usage patterns. Let's get started!
+Today, we kickstart our journey into serveless on Azure with a look at _Functions As a Service_. We'll explore Azure Functions - from core concepts to usage patterns. 
+
+Ready? Let's Go!
 
 ---
 
@@ -43,8 +45,8 @@ Today, we kickstart our journey into serveless on Azure with a look at _Function
  * Triggers, Bindings and Custom Handlers
  * What is Durable Functions?
  * Orchestrators, Entity Functions and Application Patterns
- * Exercise: Try this yourself!
- * Resources: For self-study!
+ * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)!
+ * **Resources**: [#30DaysOfServerless Collection](https://aka.ms/30DaysOfServerless/collection).
 
 ![](./img/banner.png)
 
@@ -244,7 +246,7 @@ That was a lot of information to absorb! Thankfully, there are a lot of examples
 The goal for today was to give you a quick tour of key terminology and concepts related to Azure Functions. Tomorrow, we dive into _the developer experience_, starting with core tools for local development and ending by deploying our first Functions app.
 
 Want to do some prep work? Here are a few useful links:
-- [Azure Functions Quickstart](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node&WT.mc_id=javascript-74010-ninarasi )
+- [Azure Functions Quickstart](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node?WT.mc_id=javascript-74010-ninarasi )
 - [Durable Functions Quickstart](https://docs.microsoft.com/en-us/azure/azure-functions/durable/quickstart-js-vscode)
 - [Azure Functions VS Code Extension](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp&WT.mc_id=javascript-74010-ninarasi )
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples&WT.mc_id=javascript-74010-ninarasi )

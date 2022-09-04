@@ -20,14 +20,15 @@ keywords: [azure, functions, serverless, concepts]
   <meta name="twitter:site" content="@AzureStaticApps" /> 
 </head>
 
+
 ## What We'll Cover
  * What is Serverless September? (6 initiatives)
  * How can I _participate_? (3 actions)
  * How can I _skill up_ (30 days)
  * Who is behind this? (Team Contributors)
  * How can _you_ contribute? (Custom Issues)
- * **Exercise**: Take the Cloud Skills Challenge!
- * **Resources**: Save the Serverless September Collection.
+ * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)!
+ * **Resources**: [#30DaysOfServerless Collection](https://aka.ms/30DaysOfServerless/collection).
 
 ---
 
