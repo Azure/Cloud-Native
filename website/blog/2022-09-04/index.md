@@ -2,7 +2,7 @@
 slug: 04-functions-java
 title: 04. Functions For Java Devs 
 authors: [rory]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -33,15 +33,17 @@ tags: [serverless-september, azure-functions, java, serverless]
 
 Welcome to `Day 4` of #30DaysOfServerless!
 
-We're reaching the half-way mark for the week, and today we want to talk about Azure Functions for the _Java_ developer! By the end of this article, you should know how to setup your local environment for Azure Functions, and built and deployed your first Functions app, and get a sense for what you can build with it next.
+_Yesterday_ we walked through an Azure Functions Quickstart with JavaScript, and used it to understand the general Functions App structure, tooling and developer experience. 
+
+_Today_ we'll look at developing Functions app with a _different_ programming language - namely, **Java** - and explore developer guidance, tools and resources to build serverless Java solutions on Azure.
 
 ---
 
 ## What We'll Cover
- * **Quickstart**: Create a Java Functions App
- * **Preview**: Run your Functions App locally
- * **Deploy**: Run your Functions App on Azure
- * **Usage**: Explore scenarios and next steps!
+ * **Developer Guidance**: For Azure Functions on Java
+ * **Build & Deploy**: Our First Java Functions App
+ * **Usage Tutorials**: Integrate App with other Azure Services
+ * **Azure Samples**: Explore samples for other triggers, bindings
  * **Exercise:** [Develop Java serverless Functions on Azure using Maven](https://docs.microsoft.com/learn/modules/develop-azure-functions-app-with-maven-plugin/) 
  * **Resources**: Check out [Java at Microsoft](https://developer.microsoft.com/en-us/java/) and use [Java Your Way](https://aka.ms/JavaYourWay)!
 
@@ -49,9 +51,23 @@ We're reaching the half-way mark for the week, and today we want to talk about A
 
 ---
 
-## 1. Create The App
+## Developer Guidance
 
-In today's post, we'll walk through the [Quickstart: Azure Functions](https://docs.microsoft.com/en-gb/azure/azure-functions/create-first-function-vs-code-java) tutorial using Visual Studio Code. In the process, we'll setup our development environment with the relevent command-line tools and VS Code extensions required to make building and deploying Functions apps fairly painless.
+If you're a Java developer new to serverless on Azure, start by exploring the [Azure Functions Java Developer Guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption). It covers: 
+ * Quickstarts with [Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-java) and [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-java?tabs=bash%2Cazure-cli%2Cbrowser)
+ * Building with Maven-based tooling for [Gradle](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-java-gradle), [Eclipse](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-maven-eclipse) & [IntelliJ IDEA](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-maven-intellij)
+ * Exploring [project scaffolding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#project-scaffolding) & [JDK runtimes](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#jdk-runtime-availability-and-support) (Java 8 and Java 11)
+ * Using [Java annotations for Triggers, Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#triggers-and-annotations) - with [reference](https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.functions.annotation?view=azure-java-stable) docs.
+ * Adopting [best practices](https://docs.microsoft.com/en-us/azure/azure-functions/functions-best-practices?tabs=java) for hosting, reliability and efficiency.
+ * Java [code samples](https://docs.microsoft.com/en-us/samples/azure-samples/azure-functions-samples-java/azure-functions-java/) and [integration tutorials](https://docs.microsoft.com/en-us/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
+
+In this blog post, we'll dive into one quickstart, and discuss other resources briefly, for awareness! Do check out the recommended exercises and resources for self-study! 
+
+---
+
+## My First Java Functions App
+
+In today's post, we'll walk through the [Quickstart: Azure Functions](https://docs.microsoft.com/en-gb/azure/azure-functions/create-first-function-vs-code-java) tutorial using Visual Studio Code. In the process, we'll setup our development environment with the relevant command-line tools and VS Code extensions to make building Functions app simpler.
 
 _Note: Completing this exercise may incur a a cost of a few USD cents based on your Azure subscription. Explore [pricing details](https://azure.microsoft.com/en-us/pricing/details/functions/#pricing) to learn more_.
 
@@ -67,9 +83,24 @@ First, make sure you have your development environment setup and configured.
  6. **The Azure Functions extension for Visual Studio Code** - [Install](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 :::
 
-First, open a command-line terminal and create a folder for your project. Then use the `code` command to launch Visual Studio Code from that directory.
 
-1. Now, open a terminal, to create and change into a new directory:
+### VS Code Setup
+
+:::note NEW TO VISUAL STUDIO CODE?
+Start with the [Java in Visual Studio Code](https://code.visualstudio.com/docs/languages/java) tutorial to jumpstart your learning!
+:::
+
+Install the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) (shown below) to install 6 popular extensions to help development workflow from creation to testing, debugging, and deployment.
+
+![Extension Pack for Java](./img/java-extensions.png)
+
+Now, it's time to get started on our first Java-based Functions app.
+
+
+
+### 1. Create App
+
+1. Open a command-line terminal and create a folder for your project. Use the `code` command to launch Visual Studio Code from that directory as shown:
 
     ```bash
     $ mkdir java-function-resource-group-api
@@ -77,11 +108,11 @@ First, open a command-line terminal and create a folder for your project. Then u
     $ code .
     ```
 
-2. Open the Visual Studio Command Palette (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>)
+2. Open the Visual Studio Command Palette (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>) and select `Azure Functions: create new project` to kickstart the create workflow. Alternatively, you can click the Azure icon (on activity sidebar), to get the `Workspace` window,  click "+" and pick the "Create Function" option as shown below.
 
     ![Screenshot of creating function in Azure from Visual Studio Code.](./img/32-create-new-project.png)
 
-3. Enter `Azure Functions: create new project`. Use the following table to finish the prompts:
+3. This triggers a multi-step workflow. Fill in the information for each step as shown in the following prompts. **Important:** Start this process from an empty folder - the workflow will populate it with the scaffold for your Java-based Functions app.
 
     |Prompt|Value|
     |--|--|
@@ -89,16 +120,18 @@ First, open a command-line terminal and create a folder for your project. Then u
     |**Select a language**| Choose `Java`.|
     |**Select a version of Java**| Choose `Java 11` or `Java 8`, the Java version on which your functions run in Azure. Choose a Java version that you've verified locally. |
     | **Provide a group ID** | Choose `com.function`. |
-    | **Provide an artifact ID** | Choose `myFunction`. |
+    | **Provide an artifact ID** | Enter `myFunction`. |
     | **Provide a version** | Choose `1.0-SNAPSHOT`. |
     | **Provide a package name** | Choose `com.function`. |
-    | **Provide an app name** | Choose `HttpExample`. |
+    | **Provide an app name** | Enter `HttpExample`. |
     | **Select the build tool for Java project** | Choose `Maven`. |
 
 
-Visual Studio Code uses the provided information and generates an Azure Functions project. You can view the local project files in the Explorer.
+Visual Studio Code uses the provided information and generates an Azure Functions project. You can view the local project files in the Explorer - it should look like this:
 
-## 2. Preview The App
+![Azure Functions Scaffold For Java](./img/java-scaffold.png)
+
+### 2. Preview App
 
 
 Visual Studio Code integrates with the Azure Functions Core tools to let you run this project on your local development computer before you publish to Azure.
@@ -120,11 +153,13 @@ Visual Studio Code integrates with the Azure Functions Core tools to let you run
 
 2. Copy the URL of your HttpExample function from this output to a browser and append the query string **?name=<YOUR_NAME>**, making the full URL something like `http://localhost:7071/api/HttpExample?name=Functions`. The browser should display a message that echoes back your query string value. The terminal in which you started your project also shows log output as you make requests.
 
-1. With the **Terminal** panel focused, press <kbd>Ctrl + C</kbd> to stop Core Tools and disconnect the debugger.
+:::success 🎉 CONGRATULATIONS
+You created and ran a function app locally!
+:::
 
-After you've verified that the function runs correctly on your local computer, it's time to use Visual Studio Code and Maven to publish and test the project on Azure.
+With the **Terminal** panel focused, press <kbd>Ctrl + C</kbd> to stop Core Tools and disconnect the debugger. After you've verified that the function runs correctly on your local computer, it's time to use Visual Studio Code and Maven to publish and test the project on Azure.
 
-## 3. Sign into Azure
+### 3. Sign into Azure
 
 Before you can deploy, sign in to your Azure subscription.
 
@@ -148,7 +183,7 @@ When the creation is complete, the following Azure resources are created in your
 * Function app. A function app is the deployment and execution unit for your functions. The name is randomly generated based on your artifactId, appended with a randomly generated number.
 
 
-## 4. Deploy to Azure
+### 4. Deploy App
 
 1. Back in the **Resources** area in the side bar, expand your subscription, your new function app, and **Functions**. Right-click (Windows) or <kbd>Ctrl -</kbd> click (macOS) the `HttpExample` function and choose **Execute Function Now...**.
 
@@ -160,13 +195,32 @@ When the creation is complete, the following Azure resources are created in your
 
 You can also copy the complete Invoke URL shown in the output of the publish command into a browser address bar, appending the query parameter ?name=Functions. The browser should display similar output as when you ran the function locally.
 
-## 5. Clean up resources
+:::success 🎉 CONGRATULATIONS
+You deployed your function app to Azure, and invoked it!
+:::
+
+
+### 5. Clean up
 
 Use the following command to delete the resource group and all its contained resources to avoid incurring further costs.
 
 ```bash
 az group delete --name java-functions-group
 ```
+
+## Next Steps
+
+So, where can you go from here? The example above used a familiar `HTTP Trigger` scenario with a single Azure service (Azure Functions). Now, think about how you can build richer workflows by using other triggers and integrating with other Azure or third-party services.
+
+### Other Triggers, Bindings
+
+Check out [Azure Functions Samples In Java](https://docs.microsoft.com/en-us/samples/azure-samples/azure-functions-samples-java/azure-functions-java/) for samples (and short use cases) that highlight other triggers - with code! This includes triggers to integrate with CosmosDB, Blob Storage, Event Grid, Event Hub, Kafka and more.
+
+### Scenario with Integrations
+
+Once you've tried out the samples, try building an end-to-end scenario by using these triggers to integrate seamlessly with other Services. Here are a couple of useful tutorials:
+ * Azure Functions with [Event Hub trigger and CosmosDB output binding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
+ * GitHub Star Count app with [SignalR trigger](https://docs.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-azure-functions-java?toc=%2Fazure%2Fazure-functions%2Ftoc.json)
 
 
 ## Exercise
