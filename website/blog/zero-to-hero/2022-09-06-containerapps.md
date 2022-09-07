@@ -43,7 +43,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * Dapr In Azure Container Apps
  * Conclusion
 
-![](./img/banner.png)
+![](./img/zero-to-hero-kendall.png)
 
 ---
 
