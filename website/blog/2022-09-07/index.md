@@ -178,6 +178,20 @@ Another option is to create a web application that talks to the database and dis
 
 ![Website that Checks for Fires](img/Check%20for%20Fires.gif)
 
+---
+
+## Next Steps
+
+This article showcased the Timer Trigger and the HTTP Trigger for Azure Functions in Python. Now try exploring other triggers and bindings by browsing [Bindings code samples for Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=python#bindings-code-examples&WT.mc_id=javascript-74010-cxa) and [Azure Functions samples for Python](https://docs.microsoft.com/en-us/samples/browse/?products=azure-functions&WT.mc_id=javascript-74010-cxa&languages=python&WT.mc_id=javascript-74010-cxa)
+
+Once you've tried out the samples, you may want to explore more advanced integrations or extensions for serverless Python scenarios. Here are some suggestions:
+ * [Develop Python worker extensions for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/develop-python-worker-extensions?tabs=windows%2Cpypi&WT.mc_id=javascript-74010-cxa) and publish to PyPI or GitHub.
+ * [Connect Azure Functions to Azure Storage](https://docs.microsoft.com/en-us/azure/azure-functions/functions-add-output-binding-storage-queue-cli?pivots=programming-language-python&tabs=in-process%2Cbash%2Cbrowser&WT.mc_id=javascript-74010-cxa) using the CLI
+ * [Create Real-Time alerts with Azure Functions and SignalR Service](https://docs.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-azure-functions-python?toc=%2Fazure%2Fazure-functions%2Ftoc.json&WT.mc_id=javascript-74010-cxa)
+
+And check out the resources for more tutorials to build up your Azure Functions skills.
+
+
 ## Exercise
 
 I encourage you to fork [the repository](https://github.com/kjaymiller/fire-map) and try building and deploying it yourself! You can see the TimerTrigger and a HTTPTrigger building the website. 
