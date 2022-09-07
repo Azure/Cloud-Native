@@ -184,7 +184,7 @@ We'll create a second workflow in the Logic Apps to receive change notifications
     - Select output from previous steps: `Events`
 1. Inside For each, select **+** in the flow and **add an action**, search for **Data operations** and select **Parse JSON**. Fill in Parse JSON action as below:
     - Content: `Events Content`
-    - Schema: Copy the json content from [schema-parse.json]() and paste as a schema
+    - Schema: Copy the json content from [schema-parse.json](../2022-09-20/img/schema-parse.json) and paste as a schema
   
 1. Select **+** in the flow and **add an action**, search for **Control** and add **For each** as an action. Fill in For each action as below:
     - Select output from previous steps: `value`
