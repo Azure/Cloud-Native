@@ -40,8 +40,8 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
 
 ## What We'll Cover
  * What are Durable Entities
- * 101: Some Background
- * 102: A Programming Model
+ * Some Background
+ * A Programming Model
  * Entities for a Micro-Blogging Platform
 
 ![](./img/zero-to-hero-david.png)
