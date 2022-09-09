@@ -76,6 +76,12 @@ yönet:
   url: https://github.com/Yonet
   image_url: https://github.com/Yonet.png
 
+justin:
+  name: Justin Yoo
+  title: Senior Cloud Advocate @Microsoft
+  url: https://github.com/justinyoo
+  image_url: https://github.com/justinyoo.png
+
 kendall:
   name: Kendall Roden
   title: Azure Container Apps PM @Microsoft
@@ -93,3 +99,4 @@ matt:
   title: Principal Cloud Advocate @Microsoft
   url: https://github.com/codemillmatt
   image_url: https://github.com/codemillmatt.png
+
