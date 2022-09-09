@@ -67,7 +67,7 @@ But the problem is that every event publisher (system/device that creates events
 3. Productivity: The overall productivity decreases because of the lack of the standard format of events.
 
 <div style="text-align: center;">
-  <img src="./img/cloudevents-icon-color.png" alt="CloudEvents logo" width="200" height="200">
+  <img src="./img/cloudevents-icon-color.png" alt="CloudEvents logo" width="200" height="200" />
 </div>
 
 Therefore, [CNCF (Cloud-Native Computing Foundation)][cncf] has brought up the concept, called [CloudEvents][ce]. CloudEvents is a specification that commonly describes event data. Conforming any event data to this spec will simplify the event declaration and delivery across systems and platforms and more, resulting in a huge productivity increase.

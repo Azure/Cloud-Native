@@ -1,16 +1,52 @@
 ---
-title: 'Deploy an ASP.NET Core UI and multiple APIs to Azure Container Apps'
-description: Deploy your containerized, multi-project .NET applications to Azure Container Apps
-services: container-apps
-author: alexwolfmsft
-ms.author: alexwolf
-ms.service: container-apps
-ms.topic: tutorial
-ms.date: 3/04/2022
-ms.custom: mode-ui, event-tier1-build-2022
+slug: 15-aca-dotnet
+title: 15. Deploy an ASP.NET app to ACA
+authors: [alexwolf]
+draft: true
+hide_table_of_contents: false
+toc_min_heading_level: 2
+toc_max_heading_level: 3
+keywords: [azure, functions, serverless, concepts]
+image: ./img/dotnet/banner.png
+description: "Deploy your containerized, multi-project .NET applications to Azure Container Apps" 
+tags: [serverless-september, 30-days-of-serverless, dotnet, asp.net, azure-container-apps, dapr, microservices]
 ---
 
-# Tutorial: Deploy an ASP.NET Core UI with multiple APIs to Azure Container Apps
+<head>
+  <meta name="twitter:url" 
+    content="https://azure.github.io/Cloud-Native/blog/15-aca-dotnet" />
+  <meta name="twitter:title" 
+    content="#30DaysOfServerless: Deploy an ASP.NET app to Azure Container Apps " />
+  <meta name="twitter:description" 
+    content="#30DaysOfServerless: Deploy an ASP.NET app to Azure Container Apps" />
+  <meta name="twitter:image"
+    content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" 
+    content="@nitya" />
+  <meta name="twitter:site" content="@AzureAdvocates" /> 
+  <link rel="canonical" 
+    href="https://azure.github.io/Cloud-Native/blog/15-aca-dotnet" />
+</head>
+
+---
+
+Welcome to `Day 15` of #30DaysOfServerless!
+
+---
+
+## What We'll Cover
+ * Deploy ASP.NET Core 6.0 app to Azure Container Apps
+ * Automate deployment workflows using GitHub Actions
+ * Provision and deploy resources using Azure Bicep
+ * Exercise: Try this yourself!
+ * Resources: For self-study!
+
+![](./img/dotnet/banner.png)
+
+---
+
+# Introduction
 
 Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
 
@@ -18,64 +54,52 @@ In this tutorial, you'll deploy a containerized ASP.NET Core 6.0 application to 
 
 You will use GitHub Actions in combination with Bicep to deploy the application. These tools provide an approachable and sustainable solution for building CI/CD pipelines and working with Container Apps.
 
-In this tutorial, you learn how to:
-
-> [!div class="checklist"]
->
-> - Deploy an ASP.NET Core 6.0 application to Azure Container Apps
-> - Automate deployment workflows using GitHub Actions
-> - Provision and deploy resources using Azure Bicep
-
-## Prerequisites
-
+:::info PRE-REQUISITES
 - An Azure subscription. [Sign up for free](https://azure.microsoft.com).
 - A [GitHub account](https://github.com/join), with access to GitHub Actions.
 - The [Azure CLI](/azure/install-azure-cli) installed locally.
+:::
 
-## Exploring and setting up the sample app
+## Architecture
 
-To follow along with this tutorial, fork the sample project below. The steps ahead can be completed with or without Dapr integration, so choose whichever you are comfortable with. Dapr provides various benefits when working with Microservices that are explained in-depth in other tutorials. All of the steps in this tutorial can be completed using only GitHub and the Azure CLI.
-
-### [ASP.NET Core app without Dapr](#tab/exclude-dapper)
-
-You can [fork the sample project here](https://github.com/Azure-Samples/dotNET-FrontEnd-to-BackEnd-on-Azure-Container-Apps), or clone it to your local computer using the command below.
-
-```bash
-git clone https://github.com/Azure-Samples/dotNET-FrontEnd-to-BackEnd-on-Azure-Container-Apps.git
-```
-
-### [ASP.NET Core app with Dapr](#tab/include-dapper)
-
-You can [fork the sample project here](https://github.com/Azure-Samples/dotNET-FrontEnd-to-BackEnd-with-DAPR-on-Azure-Container-Apps), or clone it to your local computer using the command below.
-
-```bash
-git clone https://github.com/Azure-Samples/dotNET-FrontEnd-to-BackEnd-with-DAPR-on-Azure-Container-Apps.git
-```
-
----
-
-The goal of this tutorial is to setup a container app environment with a separate container for each project in the sample store app. The major components of the sample project include:
+In this tutorial, we'll setup a container app environment with a separate container for each project in the sample store app. The major components of the sample project include:
 
 - A Blazor Server front-end web app to display product information
 - A products API to list available products
 - An inventory API to determine how many products are in stock
-- GitHub Actions and Bicep templates to provision Azure resources and then build and deploy the sample app. You will explore these templates later in the tutorial.
+- GitHub Actions and Bicep templates to provision Azure resources and then build and deploy the sample app. 
+
+You will explore these templates later in the tutorial.
 
 Public internet traffic should be proxied to the Blazor app. The back-end APIs should only be reachable via requests from the Blazor app inside the container apps environment. This setup can be achieved using container apps environment ingress configurations during deployment.
 
-:::image type="content" source="./img/web-app-apis/architecture.png" alt-text="An architecture diagram of the shopping app.":::
+![An architecture diagram of the shopping app](./img/dotnet/architecture.png)
 
-### Running the app locally
+---
 
-If you chose to clone the sample app using git, you can run the app locally from Visual Studio using the steps below.
+## Project Sources
 
-1) Inside Visual Studio, to run the application locally, right click on the Blazor **Store** project and select **Set as Startup Project**. 
+Want to follow along? Fork the sample below. The tutorial can be completed with or without Dapr integration. Pick the path you feel comfortable in. Dapr provides various benefits that make working with Microservices easier - you can learn more in the docs. For this tutorial you will need GitHub and Azure CLI.
 
-2) Press the start button at the top of Visual Studio to run the app. 
+:::info PICK YOUR PATH
+To follow along with this tutorial, fork the relevant sample project below.  
+ * [**Project Repo: Without Dapr**](https://github.com/Azure-Samples/dotNET-FrontEnd-to-BackEnd-on-Azure-Container-Apps)
+ * [**Project Repo: With Dapr**](https://github.com/Azure-Samples/dotNET-FrontEnd-to-BackEnd-with-DAPR-on-Azure-Container-Apps)
 
-3) Once the Blazor app is running, you can start each API in the background by right-clicking on the project node and selecting **Debug --> Start without debugging**. When the app is running properly it should look like the screenshot below.
+:::
 
-:::image type="content" source="./img/web-app-apis/store-ui.png" alt-text="A screenshot of the running app.":::
+You can run the app locally from Visual Studio:
+ * Right click on the Blazor **Store** project and select **Set as Startup Project**. 
+ * Press the start button at the top of Visual Studio to run the app. 
+ * (Once running) start each API in the background by 
+  - right-clicking on the project node 
+  - selecting **Debug --> Start without debugging**.
+
+Once the Blazor app is running, you should see something like this:
+
+![An architecture diagram of the shopping app](./img/dotnet/store-ui.png)
+
+---
 
 ## Configuring Azure credentials
 
@@ -94,7 +118,7 @@ In order to deploy the application to Azure through GitHub Actions, you first ne
 
 1) Under the settings tab of your forked GitHub repo, create a new secret named **AzureSPN**. The name is important to match the Bicep templates included in the project, which we'll review later. Paste the copied service principal values on your clipboard into the secret and save your changes. This new secret will be used by the GitHub Actions workflow to authenticate to Azure.
 
-    :::image type="content" source="./img/web-app-apis/github-secrets.png" alt-text="A screenshot of adding GitHub secrets.":::
+    :::image type="content" source="./img/dotnet/github-secrets.png" alt-text="A screenshot of adding GitHub secrets.":::
 
 ## Deploy using Github Actions
 
@@ -102,11 +126,11 @@ You are now ready to deploy the application to Azure Container Apps using GitHub
 
 1) Switch to the **Actions** tab along the top navigation of your GitHub repository. If you have not done so already, ensure that workflows are enabled by clicking the button in the center of the page.
 
-    :::image type="content" source="./img/web-app-apis/enable-actions.png" alt-text="A screenshot showing how to enable GitHub actions.":::
+![A screenshot showing how to enable GitHub actions](./img/dotnet/enable-actions.png)
 
 1) Navigate to the main **Code** tab of your repository and select the **main** dropdown. Enter *deploy* into the branch input box, and then select **Create branch: deploy from 'main'**.  
 
-    :::image type="content" source="./img/web-app-apis/create-branch.png" alt-text="A screenshot showing how to create the deploy branch.":::
+![A screenshot showing how to create the deploy branch](./img/dotnet/create-branch.png)
 
 1) On the new **deploy** branch, navigate down into the **.github/workflows** folder. You should see a file called **deploy.yml**, which contains the main GitHub Actions workflow script. Click on the file to view its content. You'll learn more about this file later in the tutorial.
 
@@ -116,11 +140,11 @@ You are now ready to deploy the application to Azure Container Apps using GitHub
 
 1) In the upper right of the screen, select **Start commit** and then **Commit changes** to commit your edit. This will persist the change to the file and trigger the GitHub Actions workflow to build and deploy the app.
 
-    :::image type="content" source="./img/web-app-apis/commit-changes.png" alt-text="A screenshot showing how to commit changes.":::
+![A screenshot showing how to commit changes](./img/dotnet/commit-changes.png)
 
 1) Switch to the **Actions** tab along the top navigation again. You should see the workflow running to create the necessary resources and deploy the app. The workflow may take several minutes to run. When it completes successfully, all of the jobs should have a green checkmark icon next to them.
 
-    :::image type="content" source="./img/web-app-apis/github-actions-success.png" alt-text="The completed GitHub workflow.":::
+![The completed GitHub workflow.](./img/dotnet/github-actions-success.png)
 
 ## Explore the Azure resources
 
@@ -130,22 +154,22 @@ Once the GitHub Actions workflow has completed successfully you can browse the c
 
 2) You should see seven resources available that match the screenshot and table descriptions below.
 
-    :::image type="content" source="./img/web-app-apis/azure-resources.png" alt-text="The resources created in Azure.":::
+![The resources created in Azure.](./img/dotnet/azure-resources.png)
 
 
-    |Resource name  |Type  |Description  |
-    |---------|---------|---------|
-    |inventory     | Container app        | The containerized inventory API.          |
-    |msdocswebappapisacr     | Container registry         | A registry that stores the built Container images for your apps.         |
-    |msdocswebappapisai    | Application insights        | Application insights provides advanced monitoring, logging and metrics for your apps.         |
-    |msdocswebappapisenv     | Container apps environment         | A container environment that manages networking, security and resource concerns. All of your containers live in this environment.        |
-    |msdocswebappapislogs     | Log Analytics workspace         | A workspace environment for managing logging and analytics for the container apps environment         |
-    |products     | Container app         | The containerized products API.         |
-    |store     | Container app         | The Blazor front-end web app.         |
+|Resource name  |Type  |Description  |
+|---------|---------|---------|
+|inventory     | Container app        | The containerized inventory API.          |
+|msdocswebappapisacr     | Container registry         | A registry that stores the built Container images for your apps.         |
+|msdocswebappapisai    | Application insights        | Application insights provides advanced monitoring, logging and metrics for your apps.         |
+|msdocswebappapisenv     | Container apps environment         | A container environment that manages networking, security and resource concerns. All of your containers live in this environment.        |
+|msdocswebappapislogs     | Log Analytics workspace         | A workspace environment for managing logging and analytics for the container apps environment         |
+|products     | Container app         | The containerized products API.         |
+|store     | Container app         | The Blazor front-end web app.         |
     
 3) You can view your running app in the browser by clicking on the **store** container app. On the overview page, click the **Application Url** link on the upper right of the screen.
 
-    :::image type="content" source="./img/web-app-apis/application-url.png" alt-text="The link to browse the app.":::
+    :::image type="content" source="./img/dotnet/application-url.png" alt-text="The link to browse the app.":::
 
 ## Understanding the GitHub Actions workflow
 
