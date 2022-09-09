@@ -81,3 +81,22 @@ justin:
   title: Senior Cloud Advocate @Microsoft
   url: https://github.com/justinyoo
   image_url: https://github.com/justinyoo.png
+
+kendall:
+  name: Kendall Roden
+  title: Azure Container Apps PM @Microsoft
+  url: https://github.com/kendallroden
+  image_url: https://github.com/kendallroden.png
+
+davidjusto:
+  name: David Justo
+  title: Software Engineer @Microsoft
+  url: https://github.com/davidmrdavid
+  image_url: https://github.com/davidmrdavid.png
+
+matt:
+  name: Matt Soucoup
+  title: Principal Cloud Advocate @Microsoft
+  url: https://github.com/codemillmatt
+  image_url: https://github.com/codemillmatt.png
+

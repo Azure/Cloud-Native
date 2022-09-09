@@ -43,6 +43,13 @@
   --ifm-color-primary-lighter: #ffc326;
   --ifm-color-primary-lightest: #ffce4d;
 }
+/* GitHub-style Themed Images
+  https://docusaurus.io/docs/markdown-features/assets#github-style-themed-images
+ */
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
 
 /*
 [data-theme='dark'] {

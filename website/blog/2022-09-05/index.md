@@ -2,23 +2,23 @@
 slug: 05-functions-js
 title: 05. Functions for JS Devs 
 authors: [aaron]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [azure, functions, serverless, concepts]
 image: ./img/banner.png
 description: "Introduction to Azure Functions, from core concepts to hello world!" 
-tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
+tags: [serverless-september, 30-days-of-serverless, azure-functions, azure-container-apps, javascript]
 ---
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/05-functions-js" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Azure Functions for JavaScript Developers" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Azure Functions for JavaScript Developers" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -33,14 +33,19 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
 
 Welcome to `Day 5` of #30DaysOfServerless!
 
-The theme for this week is Azure Functions. We'll talk about building a serverless HTTP API using JavaScript.
+_Yesterday_ we looked at Azure Functions from the perspective of a Java developer. _Today_, we'll do a similar walkthrough from the perspective of a JavaScript developer. 
+
+And, we'll use this to explore another popular usage scenario for Azure Functions: **building a serverless HTTP API using JavaScript**. 
+
+Ready? Let's go.
 
 ---
 
 ## What We'll Cover
- * Creating an Azure Function
- * Adding a HTTP Trigger
+ * Developer Guidance
+ * Create Azure Function with CLI
  * Calling an external API
+ * Azure Samples & Scenarios for JS
  * Exercise: Support searching
  * Resources: For self-study!
 
@@ -48,15 +53,34 @@ The theme for this week is Azure Functions. We'll talk about building a serverle
 
 ---
 
-As we continue to explore how we can use Azure Functions, today we're going to look at using JavaScript to create one, and we're going to be using the newly release [Node.js 18 support for Azure Functions](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/) to make the most out of the platform.
+## Developer Guidance
+
+If you're a JavaScript developer new to serverless on Azure, start by exploring the [Azure Functions JavaScript Developers Guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node?tabs=v2-v3-v4-export%2Cv2-v3-v4-done%2Cv2%2Cv2-log-custom-telemetry%2Cv2-accessing-request-and-response%2Cwindows-setting-the-node-version&WT.mc_id=javascript-74010-cxa). It covers:
+ * Quickstarts for Node.js - using Visual Code, CLI or Azure Portal
+ * Guidance on hosting options and performance considerations
+ * Azure Functions [bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples?WT.mc_id=javascript-74010-cxa) and ([code samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure-functions&languages=javascript&WT.mc_id=javascript-74010-cxa)) for JavaScript
+ * Scenario examples - integrations with other Azure Services
+
+
+### Node.js 18 Support 
+
+:::info Node.js 18 Support (Public Preview)
+Azure Functions support for Node.js 18 [entered Public Preview on Aug 31, 2022](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/?WT.mc_id=javascript-74010-cxa) and is supported by the [Azure Functions v.4.x runtime!](https://docs.microsoft.com/en-us/azure/azure-functions/functions-versions?tabs=azure-cli%2Cin-process%2Cv4&pivots=programming-language-javascript&WT.mc_id=javascript-74010-cxa)
+:::
+
+As we continue to explore how we can use Azure Functions, today we're going to look at using JavaScript to create one, and we're going to be using the newly released **Node.js 18 support for Azure Functions** to make the most out of the platform. 
+
+Ensure you have Node.js 18 and Azure Functions v4.x versions installed, along with a text editor (I'll use VS Code in this post), and a terminal, then we're ready to go.
+
+
+
+## Scenario: Calling The GitHub API
 
 The application we're going to be building today will use the GitHub API to return a random commit message, so that we don't need to come up with one ourselves! After all, naming things can be really hard! 🤣 
 
-Ensure you have Node.js 18 installed, a text editor (I'll use VS Code in this post), and a terminal, then we're ready to go.
 
-## Creating an Azure Function
-
-To create our Azure Function, we're going to use the [Azure Functions CLI](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash), which we can install using npm:
+### Creating the Azure Function
+To create our Azure Function, we're going to use the [Azure Functions CLI](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash&WT.mc_id=javascript-74010-cxa), which we can install using npm:
 
 ```bash
 npm install --global azure-function-core-tools
@@ -72,9 +96,9 @@ When running `func init` we can either provide the `worker-runtime` and `languag
 
 Once the `init` command is completed, you should have a `.vscode` folder, and the files `.gitignore`, `host.json`, `local.settings.json`, and `package.json`.
 
-![Files generated by func init](./img/light/01.png)
+![Files generated by func init](./img/light/01.png#gh-light-mode-only)![Files generated by func init](./img/01.png#gh-dark-mode-only)
 
-## Adding a HTTP Trigger
+### Adding a HTTP Trigger
 
 We have an empty Functions app so far, what we need to do next is create a Function that it will run, and we're going to make a HTTP Trigger Function, which is a Function that responds to HTTP requests. We'll use the `func new` command to create that:
 
@@ -116,7 +140,8 @@ Let's go ahead and start the Function and call it:
 func start
 ```
 
-![Starting the Function](./img/light/02.png)
+![Starting the Function](./img/light/02.png#gh-light-mode-only)![Starting the Function](./img/02.png#gh-dark-mode-only)
+
 
 With the Function started, access the endpoint `http://localhost:7071/api/get-commit-message` via a browser or using `cURL`:
 
@@ -124,9 +149,13 @@ With the Function started, access the endpoint `http://localhost:7071/api/get-co
 curl http://localhost:7071/api/get-commit-message\?name\=ServerlessSeptember
 ```
 
-![Hello from Azure Functions](./img/light/03.png)
+![Hello from Azure Functions](./img/light/03.png#gh-light-mode-only)![Hello from Azure Functions](./img/03.png#gh-dark-mode-only)
 
-## Calling an external API
+:::success 🎉 CONGRATULATIONS
+You created and ran a JavaScript function app locally!
+:::
+
+### Calling an external API
 
 It's time to update the Function to do what we want to do - call the GitHub Search API and get some commit messages. The endpoint that we'll be calling is [https://api.github.com/search/commits?q=language:javascript](https://api.github.com/search/commits?q=language:javascript).
 
@@ -169,16 +198,36 @@ curl http://localhost:7071/api/get-commit-message
 
 The you'll get some commit messages:
 
-![A series of commit messages from the GitHub Search API](./img/light/04.png)
+![A series of commit messages from the GitHub Search API](./img/light/04.png#gh-light-mode-only)![A series of commit messages from the GitHub Search API](./img/04.png#gh-dark-mode-only)
 
-🎉 There we go, we've created an Azure Function which is used as a proxy to another API, that we call using native `fetch` in Node.js 18, and return a subset of the JSON payload.
 
-## Exercise - Support searching
+:::success 🎉 CONGRATULATIONS
+There we go, we've created an Azure Function which is used as a proxy to another API, that we call (using native `fetch` in Node.js 18) and from which we return a subset of the JSON payload.
+:::
 
-The GitHub Serach API allows you to provide search parameters via the `q` query string. In this sample, we hard-coded it to be `language:javascript`, but as a follow-on exercise, expand the Function to allow the caller to provide the search terms as a query string to the Azure Function, which is passed to the GitHub Search API. Hint - have a look at the `req` argument.
+
+## Next Steps
+
+### Other Triggers, Bindings
+
+This article focused on using the HTTPTrigger and relevant bindings, to build a serverless API using Azure Functions. How can you explore other supported bindings, with code samples to illustrate usage?
+ * Start with the [Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples?WT.mc_id=javascript-74010-cxa) documentation to get a list of supported triggers/bindings for JavaScript
+ * Explore the [Azure serverless community library](https://www.serverlesslibrary.net/?language=JavaScript) and [Azure Samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure-functions&languages=javascript&WT.mc_id=javascript-74010-cxa) resources by technology.
+
+### Scenarios with Integrations
+
+Once you've tried out the samples, try building an end-to-end scenario by using these triggers to integrate seamlessly with other services. Here are some suggestions:
+ * [Azure Queue storage trigger and bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue?tabs=in-process%2Cextensionv5%2Cextensionv3&pivots=programming-language-javascript&WT.mc_id=javascript-74010-cxa)
+ * [Show GitHub start count with Azure SignalR service](https://docs.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-azure-functions-javascript?toc=%2Fazure%2Fazure-functions%2Ftoc.json&WT.mc_id=javascript-74010-cxa)
+ * [Deploy a GraphQL API as an Azure Function](https://docs.microsoft.com/en-us/azure/developer/javascript/how-to/with-web-app/graphql/azure-function-hello-world?tabs=visualstudiocode&WT.mc_id=javascript-74010-cxa)
+
+
+## Exercise: Support searching
+
+The GitHub Search API allows you to provide search parameters via the `q` query string. In this sample, we hard-coded it to be `language:javascript`, but as a follow-on exercise, expand the Function to allow the caller to provide the search terms as a query string to the Azure Function, which is passed to the GitHub Search API. Hint - have a look at the `req` argument.
 
 ## Resources
 
-- [Public preview of Node.js 18 for Azure Functions](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/)
+- [Public preview of Node.js 18 for Azure Functions](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/?WT.mc_id=javascript-74010-cxa)
 - [`fetch` support in Node.js 18](https://nodejs.org/en/blog/announcements/v18-release-announce/#fetch-experimental)
-- [Refactor Node.js and Express APIs to Serverless APIs with Azure Functions](https://docs.microsoft.com/learn/modules/shift-nodejs-express-apis-serverless/)
+- [Refactor Node.js and Express APIs to Serverless APIs with Azure Functions](https://docs.microsoft.com/learn/modules/shift-nodejs-express-apis-serverless/?WT.mc_id=javascript-74010-cxa)
