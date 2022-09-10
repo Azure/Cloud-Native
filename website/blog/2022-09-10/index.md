@@ -135,7 +135,7 @@ As you can see, the ingress feature enables communications to other container ap
 
 ![Greeting service code](./img/greeting-service-code.png)
 
-... and now have a working microservices app on ACA! 🎉
+... and now we have a working microservices app on ACA! 🎉
 
 ![Hello World](./img/aca-microservice.png)
 
