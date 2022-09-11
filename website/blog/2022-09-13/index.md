@@ -51,22 +51,20 @@ Welcome to `Day 9` of #30DaysOfServerless!
 
 
 ## What is Dapr and Why to use it?
-We as a developers have been asked many times to create scalable resilient and distributed applications as microservices, but we faced the same challenges such as recovering state after failures, discovery and calling other microservices, integration with external resources, asynchronous communications between different services and distributed tracing and measuring message calls and performance across components and networked services. 
+We as a developers have been asked many times to create scalable resilient and distributed applications as microservices, but we faced the same challenges such as recovering state after failures, services discovery and calling other microservices, integration with external resources, asynchronous communications between different services, distributed tracing and measuring message calls and performance across components and networked services. 
 
-Dapr (Distributed Application Runtime) offers a solution for the common problems that needed in any distributed microservice application. Dapr can be used with [any language](https://docs.dapr.io/concepts/overview/#dapr-sdks) (Go, .NET python, Node, Java, C++) and can run [anywhere](https://docs.dapr.io/concepts/overview/#hosting-environments) (On-premise, Kubernetes, Azure Cloud, GCP, AWS, IBM)
+Dapr (Distributed Application Runtime) offers a solution for the common problems that needed in any distributed microservice application. Dapr can be used with [any language](https://docs.dapr.io/concepts/overview/#dapr-sdks) (Go, .NET python, Node, Java, C++) and can run [anywhere](https://docs.dapr.io/concepts/overview/#hosting-environments) (On-premise, Kubernetes, Azure Cloud, GCP, AWS, IBM, etc...)
 
-Dapr core component is the Building Block, Dapr supports so far 9 building blocks. Building block in a simple words is a modular component which encapsulates best practices and can be accessed over standard HTTP or gRPC APIs.
+Dapr core component is the [Building Block](https://docs.dapr.io/concepts/building-blocks-concept/), Dapr supports so far 9 Building Blocks. Building Block in a simple words is a modular component which encapsulates best practices and can be accessed over standard HTTP or gRPC APIs.
 
-Dapr core component is the [Building Block](https://docs.dapr.io/concepts/building-blocks-concept/), Dapr supports so far 9 building blocks. Building block in a simple words is a modular component which encapsulates best practices and can be accessed over standard HTTP or gRPC APIs.
+Building Blocks address common challenges in building resilient, microservices applications and implement best practices and patterns. Building Blocks provide a consistent APIs and abstracting away the implementation details to keep your code simple and portable.
 
-Building blocks address common challenges in building resilient, microservices applications and codify best practices and patterns. Building blocks provide a consistent APIs and abstracting away the implementation details to keep your code simple and portable.
-
-The diagram below shows the 9 building blocks which exposes public API that can be called from your code, and can be configured using [components](https://docs.dapr.io/concepts/components-concept/) to implement the building blocks’ capability. Remember that you can pick whatever building block suites your distributed microservice application and you can incorporate other building blocks as needed.
+The diagram below shows the 9 Building Blocks which exposes public API that can be called from your code, and can be configured using [components](https://docs.dapr.io/concepts/components-concept/) to implement the building blocks’ capability. Remember that you can pick whatever building block suites your distributed microservice application and you can incorporate other building blocks as needed.
 
 ![Diagram of the 9 bulding blocks by dapr](img/DaprBuildingBlocks.jpg)
 
 ## How Dapr works with your microservice application?
-Dapr exposes its building blocks and components through a **sidecar architecture**. A sidecar enables Dapr to run in a separate memory process or separate container alongside your service. Sidecars provide isolation and encapsulation as they aren't part of the service, but connected to it. This separation enables each to have its own runtime environment and be built upon different programming platforms.
+Dapr exposes its Building Blocks and components through a **sidecar architecture**. A sidecar enables Dapr to run in a separate memory process or separate container alongside your service. Sidecars provide isolation and encapsulation as they aren't part of the service, but connected to it. This separation enables each to have its own runtime environment and be built upon different programming platforms.
 
 ![Diagram showing the sidcar concept in Dapr](img/ACA-Tutorial-DaprSidecar-s.jpg)
 
@@ -77,14 +75,15 @@ In this blog post we will create one single Azure Container App which will act a
 
 ![Diagram showing architecture of sample project](img/ACA-Tutorial-AsyncComm-s.jpg)
 
-Our fictious service named `orders-processor` will be processing messages published into an Azure Service Bus Topic named `orderreceivedtopic`, Dapr Pub/Sub building block will be configured by providing a configuration file named `pubsub-svcbus.yaml` which contains all the needed information to establish the relation between the container app and the service bus topic. Then when the message is consumed by the `orders-processor` service, it will store a copy of it into Azure Cosmos DB, we will reply on Dapr State Store building block by providing a configuration file named `statestore-cosmosdb.yaml` to configure the `orders-processor` service with the Azure Cosmos DB.
+Our fictious service named `orders-processor` will be processing messages published into an Azure Service Bus Topic named `orderreceivedtopic`, Dapr Pub/Sub building block will be configured by providing a configuration file named `pubsub-svcbus.yaml` which contains all the needed information to establish the relation between the container app and the service bus topic. Then when the message is consumed by the `orders-processor` service, it will store a copy of it into Azure Cosmos DB, we will rely on Dapr State Store building block by providing a configuration file named `statestore-cosmosdb.yaml` to configure the `orders-processor` service with the Azure Cosmos DB.
 
 During the code walkthrough, you'll see that we will not introduce any SDK for Azure Service Bus nor Azure Cosmos DB, thanks for the abstracting done by Dapr building blocks, everything will be configured using the component files, so let's jump into the code :)
-:::info Advanced scenarios
-This scenario is a simplified version of a detailed tutorial which covers more advanced scenarios, if you are interested you can check it on [my blog.](https://bitoftech.net/2022/08/25/tutorial-building-microservice-applications-azure-container-apps-dapr/)
+
+:::info Looking for Advanced scenarios?
+This scenario is a simplified version of a detailed tutorial which covers more advanced scenarios, if you are interested you can check more [Advanced scenarios on my blog.](https://bitoftech.net/2022/08/25/tutorial-building-microservice-applications-azure-container-apps-dapr/)
 :::
 ## Let's build our first Dapr Application and deploy it to Azure Container Apps!
-In today's post, we'll be using Visual Studio Code to build the app using ASP.NET Core 6.0. In the process, we'll setup our development environment with the relevant command-line tools and VS Code extensions. In addition to this I will walk you through creating the needed Azure resources to complete this tutorial, we will be relying on Azure CLI for this.
+In today's post, we'll be using VS Code to build the app using ASP.NET Core 6.0. In the process, we'll setup our development environment with the relevant command-line tools and VS Code extensions. In addition to this I will walk you through creating the needed Azure resources to complete this tutorial, we will be relying on Azure CLI for this.
 
 _Note: Completing this exercise may incur a a cost of a few USD based on your Azure subscription._
 
@@ -109,15 +108,15 @@ First, make sure you have your development environment setup and configured.
    cd orders-service
    code .
     ```
-2. From VS Code Terminal tab, open developer command prompt or PowerShell terminal in the project folder `orders-service` and initialize the project by typing: `dotnet new webapi -o Orders.Processor  --no-https` This will create and ASP.NET Web Api project scaffolded with 1 single controller. 
+2. From VS Code Terminal tab, open developer command prompt or PowerShell terminal in the project folder `orders-service` and initialize the project by typing: `dotnet new webapi -o Orders.Processor  --no-https` This will create and ASP.NET Web API project scaffolded with 1 single controller. 
 
 3. We need to containerize this application so we can push it to Azure Container Registry as a docker image then deploy it to Azure Container Apps, to do so Open the VS Code Command Palette (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>) and select `Docker: Add Docker Files to Workspace...`
     - Use `.NET: ASP.NET Core` when prompted for application platform.
     - Choose `Linux` when prompted to choose the operating system.
     - You will be asked if you want to add Docker Compose files. Select `No`.
-    - Take a not of the provided application port as we will be using later on.
+    - Take a not of the provided **application port** as we will be using later on.
     - `Dockerfile` and `.dockerignore` files are added to the workspace.
-4. Now we will add the DTO which will be used to deserialize the consumed message from Azure Service Topic, so add a new file named `OrderModel.cs` under a new folder named `Models` and paste the code below
+4. Now we will add the DTO which will be used to deserialize the consumed message from Azure Service Bus Topic, so add a new file named `OrderModel.cs` under a new folder named `Models` and use the code below
     ```csharp
     public class OrderModel
     {
@@ -127,7 +126,7 @@ First, make sure you have your development environment setup and configured.
         public DateTime CreatedOn { get; set; }
     }
     ```
-5. Install Dapr Client NuGet package, we need this package to be able to subscribe to the Azure Service Bus Topic in a programmatic way, to do so from developer command prompt or PowerShell terminal type `dotnet add package Dapr.AspNetCore`
+5. Install Dapr Client NuGet package, we need this package to be able to subscribe to the Azure Service Bus Topic in a programmatic way, to do so, from developer command prompt or PowerShell terminal type `dotnet add package Dapr.AspNetCore`
 6. Create an API endpoint for the consumer/service to subscribe to the topic, this endpoint will start receiving the messages published to the topic `orderreceivedtopic`, to do so, add a new controller named `ExternalOrdersController.cs` under `Controllers` folder and use the code below:
     ```csharp
     [ApiController]
@@ -167,10 +166,10 @@ First, make sure you have your development environment setup and configured.
       - We have added an action method named `orderreceived` which can be reached on the route `api/externalorders/orderreceived`
       - We have attributed this action method with the attribute `Topic`. The first argument is the name of the pub/sub component, the second argument is the topic to subscribe to, in our case `orderreceivedtopic`
       - The action method expects to receive a `OrderModel` object.
-      - Inside this action method we start the business logic needed, once the logic is completed endpoint should return 200 ok respons to indicate that the consumer processed the message successfully and the broker can delete this message.
+      - Inside this action method we start the business logic needed, once the logic is completed endpoint should return 200 ok respons to indicate that the consumer processed the message successfully and the service broker (Azure Service Bus) can delete this message.
       - If anything went wrong during execution of business logic and we want to retry processing this message at a later time, we return 400 bad request, this will inform the message broker that the message needs to be retired based on the configuration in the message broker.
-      - If we need to drop the message as we are aware it will not be processed even after retries we return a 404 not found response, this will tell the message broker to drop the message and move it to dead-letter or poison queue.
-7. Register Dapr and Subscribe Handler at the Consumer startup 
+      - If we need to drop the message as we are aware it will not be processed even after multiple retries, we return a 404 not found response, this will tell the message broker to drop the message and move it to dead-letter or poison queue.
+7. Register Dapr client and Subscribe handler at the service startup 
 Open file `Program.cs` and replace its content with the content below:
     ```csharp
         var builder = WebApplication.CreateBuilder(args);
@@ -202,11 +201,11 @@ Open file `Program.cs` and replace its content with the content below:
         app.Run();
     ```
     :::note Want to know more?
-       Check this [blog post](https://bitoftech.net/2022/09/02/azure-container-apps-async-communication-with-dapr-pub-sub-api-part-6/) which describes in detail how the subscriber was able to register topic with the defined endpoint 
+       Check this [blog post](https://bitoftech.net/2022/09/02/azure-container-apps-async-communication-with-dapr-pub-sub-api-part-6/) which describes in detail how the consumer was able to discover available topic names, Pub/Sub names, and which routes/endpoints to push messages to.
     :::
 ### 2. Provision Azure Service Bus and Topic
-We need to create the Azure Service Bus so we can configure the Pub/sub dapr component and test locally
-1. Open PowerShell console and Login to Azure by using `az login` if you have multiple subscriptions, set the subscription you want to use in this tutorial before proceeding, you can do this by using `az account set --subscription <name or id>` As well calling `az upgrade` is a good practice to ensure you are running the latest Aure CLI Command.
+We need to create the Azure Service Bus so we can configure the Dapr Pub/Sub component and test locally
+1. Open PowerShell console and Login to Azure by using the command `az login` if you have multiple subscriptions, set the subscription you want to use in this tutorial before proceeding, you can do this by using `az account set --subscription <name or id>` As well calling `az upgrade` is a good practice to ensure you are running the latest Aure CLI Command.
 2. Create Azure Resource Group by using the code below, feel free to change the name and location of the resource group
     ```powershell
     $RESOURCE_GROUP="orders-services-rg"
@@ -215,7 +214,7 @@ We need to create the Azure Service Bus so we can configure the Pub/sub dapr com
       --name $RESOURCE_GROUP `
       --location "$LOCATION"
     ```
-3. Create Azure Service Bus Namespace, a Topic and get the primary connection string, you can change the name space, and topic, but you have to update the codecase based on your changes. 
+3. Create Azure Service Bus namespace, a yopic and get the primary connection string, you can change the name space, and topic, but you have to update the codecase based on your changes. 
     ```powershell
     $NamespaceName="ordersservices"
     $TopicName="orderreceivedtopic"
@@ -231,10 +230,10 @@ We need to create the Azure Service Bus so we can configure the Pub/sub dapr com
     ```
 You can navigate to the Azure Portal and check that the resource group is created and the service bus namespace is created too.
 ### 3. Install and Initialize Dapr in a local development environment
-In order to run Dapr locally on our development machines, we need to install Dapr CLI Runtime, you can follow the [official documentation](https://docs.dapr.io/getting-started/install-dapr-cli/), but I will list the details too
+In order to run Dapr locally on our development machine, we need to install Dapr CLI Runtime, you can follow the [official documentation](https://docs.dapr.io/getting-started/install-dapr-cli/), but I will list the details too
 1. Install the Dapr CLI, run PowerShell console as an administrator and run the below command: 
     ```powershell
-     -Command "iwr -useb https://raw.githubusercontent.com/dapr/cli/master/install/install.ps1 | iex"
+     powershell -Command "iwr -useb https://raw.githubusercontent.com/dapr/cli/master/install/install.ps1 | iex"
     ```  
     Note: You might need to execute the following  PowerShell command `Set-ExecutionPolicy RemoteSigned -scope CurrentUser` before installing the Dapr CLI, this command is to allow local PowerShell scripts to run regardless of signature, and requires trusted digital signatures only for remote scripts.
 
@@ -244,14 +243,14 @@ In order to run Dapr locally on our development machines, we need to install Dap
     ```
     To verify the deployment; check Dapr version by running the following command: `dapr --version` 
     :::note Want to know more?
-        Check this [blog post](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/) which describes in detail what components added to your machine we calling `dapr init`
+        Check this [blog post](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/) which describes in detail what components added to your machine when we called `dapr init`
     ::: 
-### 4. Create Dapr Component file for Pub/Sub bulding block
+### 4. Create Dapr Component file for Pub/Sub building block
 Dapr uses a modular design where functionality is delivered as a component. Each component has an interface definition. All of the components are pluggable so that you can swap out one component with the same interface for another.
 
 Components are configured at design-time with a YAML file which is stored in either a components/local folder within your solution, or globally in the .dapr folder created when invoking dapr init [(read here for more details)](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/). These YAML files adhere to the generic [Dapr component schema](https://docs.dapr.io/operations/components/component-schema/), but each is specific to the component specification.
 
-1. Create 2 new folders under the project root directory `orders-service`, one named `dapr-component` and the second one `component` (will be used in next steps), then add a new yaml file named `pubsub-svcbus.yaml` under folder `dapr-component` and paste the content below:
+1. Create 2 new folders under the project root directory `orders-service`, one named `dapr-component` and the second one `component` (will be used in next steps), then add a new yaml file named `pubsub-svcbus.yaml` under folder `dapr-component` and use the file content below:
     ```yaml
     apiVersion: dapr.io/v1alpha1
     kind: Component
@@ -266,13 +265,13 @@ Components are configured at design-time with a YAML file which is stored in eit
     scopes:
     - orders-processor
     ```
-    Note that we used the name pubsub-servicebus which should match the name of Pub/Sub componenet we've used in the `ExternalOrdersController.cs` controller on the action method attribute `Topic`. As well we have set the metadata key/value to allow us to connect to Azure Service Bus Topic. You need to replace the `connectionString` value with your Service Bus connection string. For full metadata specs, you can [check this page](https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/).
+    Note that we used the name `pubsub-servicebus` which should match the name of Pub/Sub componenet we've used ealier in the `ExternalOrdersController.cs` controller on the action method with the attribute `Topic`. As well we have set the metadata (key/value) to allow us to connect to Azure Service Bus topic. You need to replace the `connectionString` value with your Service Bus connection string. For full metadata specs, you can [check this page](https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/).
 
     :::warning
-        The above example uses secrets as plain strings. It is recommended to use a secret store for the secretsm we will be doing this when publish application to Azure Container App. Don't check in connection string to source control by mistake!
+        The above example uses secrets as plain strings. It is recommended to use a secret store for the secrets, we will be doing this when we publish the app to Azure Container Apps. Don't check in connection string to source control by mistake!
     ::: 
 
-    Note about The `Scopes` property: By default, all Dapr-enabled container apps within the same environment will load the full set of deployed components. By adding scopes to a component, you tell the Dapr sidecars for each respective container app which components to load at runtime. Using scopes is recommended for production workloads.
+    Note about The `Scopes` property: By default, all Dapr enabled container apps within the same environment will load the full set of deployed components. By adding scopes to a component, you tell the Dapr sidecars for each respective container app which components to load at runtime. Using scopes is recommended for production workloads.
     In our case, we have set the scopes to read `orders-processor` as this will be the application that needs access to Azure Service Bus.
 
 ### 5. Running Dapr application locally and test end to end
@@ -282,11 +281,11 @@ Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub 
     ```powershell
     dapr run --app-id orders-processor --app-port 5039 --dapr-http-port 3500 --components-path "../dapr-components" dotnet run
     ```
-    When using Dapr run command we are running a dapr process as a sidecar next to the Web API application, the properties we have configured as the following:
+    When using `dapr run` command we are running a dapr process as a sidecar next to the Web API application, the properties we have configured as the following:
 
     - app-id: The unique identifier of the application. Used for service discovery, state encapsulation, and the pub/sub consumer identifier.
-    - app-port: This parameter tells Dapr which port your application is listening on, you can get the app port from `dockerfile` the Web API Project.
-    - dapr-http-port: The HTTP port for Dapr to listen on.
+    - app-port: This parameter tells Dapr which port your application is listening on, you can get the app port from `dockerfile` in the Web API Project.
+    - dapr-http-port: the HTTP port for Dapr to listen on.
     - components-path: path to the dapr componenet(s) folder.
     For a full list of properties, you can check this [link](https://docs.dapr.io/reference/cli/dapr-run/)
 
@@ -296,7 +295,7 @@ Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub 
 2. To publish a message to the topic `orderreceivedtopic` we can use Dapr extension: 
     - Right click on the Dapr application `orders-processor` and select `Publish Message to Application`.
     - Wizard will ask what is the Pub/sub component name you want to publish to, provide `pubsub-servicebus` and hit enter.
-    - Wizard will ask what topic name to publish to, provide  `orderreceivedtopic` and hit enter.
+    - Wizard will ask what topic name to publish to, provide `orderreceivedtopic` and hit enter.
     - Wizard will ask to provide a JSON payload for the method, provide the JSON below and hit enter.
       ```json
       {
@@ -306,15 +305,15 @@ Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub 
       }
       ```
     - The JSON payload provided matches the model structure `OrderModel` expected in action method `OrderReceived` in controller `ExternalOrdersController`. Framework will automatically serialize the object to this model.
-    - To check the results and if the flow completed end to end, go to the VS Code terminal and check the logs, in the action method we are logging information  when a message is consumed, you should see something similar to the below
+    - To check the results and if the flow completed end to end, go to the VS Code terminal and check the logs, in the action method we are logging information logs when a message is consumed, you should see something similar to the below
     ![Image showing logs in terminal](img/TerminalLogs.jpg)
     :::info Want to debug Dapr application locally?
-      If you want to set breakpoints and debug dapper application locally, you can do this in VS code by following simple steps. This is very important when you are running multiple services together and want to test your microservice where multi-services are invoking each other. To learn more you can follow those steps on [my blog.](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/)
+      If you want to set breakpoints and debug your daper application locally, you can do this in VS code by following simple steps. This is very important when you are running multiple services together and want to test your microservice where multi-services are invoking each other. To learn more, you can continue reading on [my blog.](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/)
     :::
 ### 6. Deploy the application to Azure Container Apps
-We will follow some steps below in order to deploy the service `Orders.Processor` to Azure Container Apps, but we need to do one addition before deploying, we have to create a component file for Azure Cosmos DB which is meeting the [specs defined by Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#configure-dapr-components).
+We will follow few steps in order to deploy the service `Orders.Processor` to Azure Container Apps, but we need to do one addition before deploying, we have to create a component file for Azure Service Bus which meets the [specs defined by Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#configure-dapr-components).
       
-  1. Create a new yaml file named `pubsub-svcbus.yaml` and add it under folder `components` (Created earlier), paste the content below:
+  1. Create a new yaml file named `pubsub-svcbus.yaml` and add it under folder `components` (folder created earlier), use the file content below:
       ```yaml
       # pubsub.yaml for Azure Service Bus component
       componentType: pubsub.azure.servicebus
@@ -330,9 +329,9 @@ We will follow some steps below in order to deploy the service `Orders.Processor
       - orders-processor
       ```
       Two things to notice here:
-      - We didn’t specify the component name `pubsub-servicebus` when we created this component file, we are going to specify it once we add this dapr component to Azure Apps Environment via CLI.
-      - The second thing we are not setting the Azure Service Bus Connection string here, this will not be secure, we are using `secretRef` which will allow us to set the actual `sb-root-connectionstring` value after we deploy this component to the Azure Container Environment. So this key will not be stored in the source code by mistake.
-  2. Create Azure Container Registry (ACR) instance in the resource group to push/build and store images of the application. Fell free to change the name of the ACR, to do so run the following command:
+      - We didn't specify the component name `pubsub-servicebus` when we created this component file, we are going to specify it once we add this dapr component to Azure Container Apps Environment via CLI.
+      - The second thing, we are not setting the Azure Service Bus Connection string here, this will not be secure, we are using `secretRef` which will allow us to set the actual `sb-root-connectionstring` value after we deploy this component to the Azure Container Apps Environment. So this key will not be stored in the source code by mistake.
+  2. Create Azure Container Registry (ACR) instance in the resource group to build/push and store docker images of our service. Feel free to change the name of the ACR, to do so run the following command:
       ```powershell
         ## Create Azure Container Registry
         $ACR_NAME="ordersservicesacr"
@@ -349,7 +348,7 @@ We will follow some steps below in order to deploy the service `Orders.Processor
       cd {YourLocalPath}\orders-service
       az acr build --registry $ACR_NAME --image $BACKEND_SVC_NAME --file 'Orders.Processor/Dockerfile' .      
       ```
-  4. Provision Azure Container Env and Container App: Azure Container Apps Environment acts as a secure boundary around a group of all container apps, to create it, run the below command:
+  4. Provision Azure Container Apps Env and Container App: Azure Container Apps Environment acts as a secure boundary around a group of all container apps, to create it, run the below command:
       ```powershell
 
         ## Upgrade az container app cli or install it
@@ -371,13 +370,13 @@ We will follow some steps below in order to deploy the service `Orders.Processor
           --yaml '.\components\pubsub-svcbus.yaml'
       ```
         Notice that we set the component name `pubsub-servicebus` when we added it Container Apps Environment.
-        Once the command completes and from the Azure Portal, navigate to your Container Apps Environment, select `Dapr Components`, then click on `pubsub-servicebus` component, and provide your Azure Service Bus Connection string in the Secrets text box value for secret `sb-root-connectionstring` and click `Edit` button. It will be similar to the below image
+        Once the command completes and from the Azure Portal, navigate to your Container Apps Environment, select `Dapr Components`, then click on `pubsub-servicebus` component, and provide your Azure Service Bus Connection string in the Secrets text box value for secret `sb-root-connectionstring`, then click `Edit` button. It will be similar to the below image
         ![Image showing ACA Env Secrets](img/SecretRef-S.jpg)
-   6. Now we need to create a new Azure Container App, we need to have this new container app with those capabilities in place:
-      - Ingress for this container app should be disabled (No access via HTTP at all, this is a background processor responsible to process published messages).
+   6. Now we need to create a new Azure Container App, this container app should have the below capabilities:
+      - Ingress should be disabled (No access via HTTP at all, or other services, this is a background processor responsible to process published messages).
       - Dapr needs to be enabled 
 
-      To achieve the above run the below PowerShell script and notice how we removed the Ingress property totally Ingress is disabled for this Container App:
+      To achieve the above run the below PowerShell script and notice how we didn't provide the `Ingress` property, Ingress will be disabled for this Container App:
       ```powershell
       ## Create Azure COntain App
       $BACKEND_SVC_NAME="orders-processor"
@@ -395,9 +394,9 @@ We will follow some steps below in order to deploy the service `Orders.Processor
         --dapr-app-id  $BACKEND_SVC_NAME `
         --dapr-app-port 5039
       ```
-  7. With all those steps implemented we are ready to test end to end on the cloud, to do this:
-      - From the Azure Portal, select the Azure Container App Created `orders-processor` and navigate to `Log stream` under `Monitoring` tab, leave the stream connected and opened.
-      - From the Azure Portal, select the Azure Service Namespace created `ordersservices`, select the topic `orderreceivedtopic`, select the subscription named `orders-processor`, then click on `Service Bus Explorer (preview)` from there we need to publish/send a message, use the JSON payload below
+  7. With all those steps implemented we are ready to test end to end on Azure, to do this:
+      - From the Azure Portal, select the Azure Container App `orders-processor` and navigate to `Log stream` under `Monitoring` tab, leave the stream connected and opened.
+      - From the Azure Portal, select the Azure Service Bus Namespace `ordersservices`, select the topic `orderreceivedtopic`, select the subscription named `orders-processor`, then click on `Service Bus Explorer (preview)` from there we need to publish/send a message, use the JSON payload below
       ```json
         {
           "data": {
@@ -407,7 +406,7 @@ We will follow some steps below in order to deploy the service `Orders.Processor
             }
         }
       ```
-      - If all is configured correctly, you should start seeing the information logs in Log stream, similar to the images below
+      - If all is configured correctly, you should start seeing the information logs in Container Apps Log stream, similar to the images below
       ![Image showing publishing messages from Azure Service](img/SvsBusPublishMessage-s.jpg)
       - Information logs on the `Log stream` of the deployed Azure Container App
       ![Image showing ACA Log Stream](img/ACA-Logstream-s.jpg)
@@ -416,29 +415,37 @@ We will follow some steps below in order to deploy the service `Orders.Processor
 You have successfully deployed to the cloud an Azure Container App and configured Dapr Pub/Sub API with Azure Service Bus.
 :::
 
+### 7. Clean up
+
+If you are done with the tutorial, use the following command to delete the resource group and all its contained resources to avoid incurring further costs.
+
+```powershell
+az group delete --name $RESOURCE_GROUP
+```
+
 ## Exercise
 I left for you the confgiuration of the Dapr State Store API with Azure Cosmos DB :) 
 
 When you look at the action method `OrderReceived` in controller `ExternalOrdersController`, you will see that I left a line with `ToDo:` note, this line is resposible to save the received message (OrderModel) into Azure Cosmos DB. 
 
-There is no need to change anything on the code base (other than removing this commented line), that's the beauty of Dapr Building Blocks and how easy it allows us to plug components to our microservice application.
+There is no need to change anything on the code base (other than removing this commented line), that's the beauty of Dapr Building Blocks and how easy it allow us to plug components to our microservice application without any plumping and brining external SDKs.
 
-For sure you need to work on the configuration part of Dapr State Store and creating new component file like what we have done with the Pub/Sub API, things that you need to work on are:
+For sure you need to work on the configuration part of Dapr State Store by creating a new component file like what we have done with the Pub/Sub API, things that you need to work on are:
 - Provision Azure Cosmos DB Account and obtain its masterKey.
 - Create a Dapr Component file adhering to Dapr Specs.
 - Create an Azure Container Apps component file adhering to ACA component specs.
-- Test localy on your dev machine using Dapr Component file
-- Build a new image of the application and push it to Azure Container Registry.
+- Test localy on your dev machine using Dapr Component file.
 - Register the new Dapr State Store component with Azure Container Apps Environment and set the Cosmos Db masterKey from the Azure Portal.
+- Build a new image of the application and push it to Azure Container Registry.
 - Update Azure Container Apps and create a new revision which contains the updated code.
 - Verify the results by checking Azure Cosmos DB, you should see the Order Model stored in Cosmos DB.
 
 If you need help, you can always refer to my blog post [Azure Container Apps State Store With Dapr State Management API](https://bitoftech.net/2022/08/29/azure-container-apps-state-store-with-dapr-state-management-api/) which contains exactly what you need to implement here, so I'm very confident you will be able to complete this exercise with no issues, happy coding :)
 
 ## What's Next?
-If you enjoyed working with Dapr and Azure Container Apps, and you want to have deep dive with more complex scenarios (Dapr bindings, service discovery, auto scaling with KEDA, sync services communication, distributed tracing, health probes, etc...) and multiple services involved, I have created a detailed tutorial which should walk you through step by step to build the application.
+If you enjoyed working with Dapr and Azure Container Apps, and you want to have a deep dive with more complex scenarios (Dapr bindings, service discovery, auto scaling with KEDA, sync services communication, distributed tracing, health probes, etc...) where multiple services deployed to a single Container App Environment; I have created a detailed tutorial which should walk you through step by step with through details to build the application.
 
-The published posts so far are below, and I'm publishing more posts on weekly basis, so stay tuned :)
+So far, the published posts below, and I'm publishing more posts on weekly basis, so stay tuned :)
 
 - [Tutorial for building Microservice Applications with Azure Container Apps and Dapr – Part 1](https://bitoftech.net/2022/08/25/tutorial-building-microservice-applications-azure-container-apps-dapr/)
 - [Deploy backend API Microservice to Azure Container Apps – Part 2](https://bitoftech.net/2022/08/25/deploy-microservice-application-azure-container-apps/)
