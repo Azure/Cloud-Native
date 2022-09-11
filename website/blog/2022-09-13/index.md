@@ -155,7 +155,7 @@ First, make sure you have your development environment setup and configured.
             //await _daprClient.SaveStateAsync<OrderModel>("statestore-cosmosdb", orderModel.OrderId.ToString(), orderModel);
 
             //Return 200 ok to acknowledge order is processed successfully          
-            return Ok($"Order Proessing completed successfuly");
+            return Ok($"Order Processing completed successfully");
 
             //Retunr 400 bad request to retry re-processing based on service broker configuration
             //return BadRequest($"Failed to process order due to: failure reason");
@@ -166,7 +166,7 @@ First, make sure you have your development environment setup and configured.
       - We have added an action method named `orderreceived` which can be reached on the route `api/externalorders/orderreceived`
       - We have attributed this action method with the attribute `Topic`. The first argument is the name of the pub/sub component, the second argument is the topic to subscribe to, in our case `orderreceivedtopic`
       - The action method expects to receive a `OrderModel` object.
-      - Inside this action method we start the business logic needed, once the logic is completed endpoint should return 200 ok respons to indicate that the consumer processed the message successfully and the service broker (Azure Service Bus) can delete this message.
+      - Inside this action method we start the business logic needed, once the logic is completed endpoint should return 200 ok response to indicate that the consumer processed the message successfully and the service broker (Azure Service Bus) can delete this message.
       - If anything went wrong during execution of business logic and we want to retry processing this message at a later time, we return 400 bad request, this will inform the message broker that the message needs to be retired based on the configuration in the message broker.
       - If we need to drop the message as we are aware it will not be processed even after multiple retries, we return a 404 not found response, this will tell the message broker to drop the message and move it to dead-letter or poison queue.
 7. Register Dapr client and Subscribe handler at the service startup 
@@ -214,7 +214,7 @@ We need to create the Azure Service Bus so we can configure the Dapr Pub/Sub com
       --name $RESOURCE_GROUP `
       --location "$LOCATION"
     ```
-3. Create Azure Service Bus namespace, a yopic and get the primary connection string, you can change the name space, and topic, but you have to update the codecase based on your changes. 
+3. Create Azure Service Bus namespace, a topic and get the primary connection string, you can change the name space, and topic, but you have to update the codebase based on your changes. 
     ```powershell
     $NamespaceName="ordersservices"
     $TopicName="orderreceivedtopic"
@@ -265,7 +265,7 @@ Components are configured at design-time with a YAML file which is stored in eit
     scopes:
     - orders-processor
     ```
-    Note that we used the name `pubsub-servicebus` which should match the name of Pub/Sub componenet we've used ealier in the `ExternalOrdersController.cs` controller on the action method with the attribute `Topic`. As well we have set the metadata (key/value) to allow us to connect to Azure Service Bus topic. You need to replace the `connectionString` value with your Service Bus connection string. For full metadata specs, you can [check this page](https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/).
+    Note that we used the name `pubsub-servicebus` which should match the name of Pub/Sub component we've used earlier in the `ExternalOrdersController.cs` controller on the action method with the attribute `Topic`. As well we have set the metadata (key/value) to allow us to connect to Azure Service Bus topic. You need to replace the `connectionString` value with your Service Bus connection string. For full metadata specs, you can [check this page](https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/).
 
     :::warning
         The above example uses secrets as plain strings. It is recommended to use a secret store for the secrets, we will be doing this when we publish the app to Azure Container Apps. Don't check in connection string to source control by mistake!
@@ -275,7 +275,7 @@ Components are configured at design-time with a YAML file which is stored in eit
     In our case, we have set the scopes to read `orders-processor` as this will be the application that needs access to Azure Service Bus.
 
 ### 5. Running Dapr application locally and test end to end
-Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub API confgiured with Azure Service Bus 
+Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub API configured with Azure Service Bus 
 1. Within VS Code, open PowerShell terminal, change the directory in the terminal to folder `orders-service` and run the below command in PS terminal:
 
     ```powershell
@@ -286,7 +286,7 @@ Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub 
     - app-id: The unique identifier of the application. Used for service discovery, state encapsulation, and the pub/sub consumer identifier.
     - app-port: This parameter tells Dapr which port your application is listening on, you can get the app port from `dockerfile` in the Web API Project.
     - dapr-http-port: the HTTP port for Dapr to listen on.
-    - components-path: path to the dapr componenet(s) folder.
+    - components-path: path to the Dapr component(s) folder.
     For a full list of properties, you can check this [link](https://docs.dapr.io/reference/cli/dapr-run/)
 
     If all is working as expected, from VS Code, you can open Dapr extension and you should see our application `orders-processor` up and running as the image below: 
@@ -424,17 +424,17 @@ az group delete --name $RESOURCE_GROUP
 ```
 
 ## Exercise
-I left for you the confgiuration of the Dapr State Store API with Azure Cosmos DB :) 
+I left for you the configuration of the Dapr State Store API with Azure Cosmos DB :) 
 
-When you look at the action method `OrderReceived` in controller `ExternalOrdersController`, you will see that I left a line with `ToDo:` note, this line is resposible to save the received message (OrderModel) into Azure Cosmos DB. 
+When you look at the action method `OrderReceived` in controller `ExternalOrdersController`, you will see that I left a line with `ToDo:` note, this line is responsible to save the received message (OrderModel) into Azure Cosmos DB. 
 
-There is no need to change anything on the code base (other than removing this commented line), that's the beauty of Dapr Building Blocks and how easy it allow us to plug components to our microservice application without any plumping and brining external SDKs.
+There is no need to change anything on the code base (other than removing this commented line), that's the beauty of Dapr Building Blocks and how easy it allows us to plug components to our microservice application without any plumping and brining external SDKs.
 
 For sure you need to work on the configuration part of Dapr State Store by creating a new component file like what we have done with the Pub/Sub API, things that you need to work on are:
 - Provision Azure Cosmos DB Account and obtain its masterKey.
 - Create a Dapr Component file adhering to Dapr Specs.
 - Create an Azure Container Apps component file adhering to ACA component specs.
-- Test localy on your dev machine using Dapr Component file.
+- Test locally on your dev machine using Dapr Component file.
 - Register the new Dapr State Store component with Azure Container Apps Environment and set the Cosmos Db masterKey from the Azure Portal.
 - Build a new image of the application and push it to Azure Container Registry.
 - Update Azure Container Apps and create a new revision which contains the updated code.
