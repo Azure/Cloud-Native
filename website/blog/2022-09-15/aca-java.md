@@ -1,14 +1,14 @@
 ---
-slug: 15-containerapps-java
+slug: 15-aca-java
 title: 15. Containerized Apps on Azure - For the Java Dev
-authors: [nitya, brian]
+authors: [brian]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [azure, functions, serverless, containers, java]
-image: ./img/banner.png
-description: "Learn how to deploy containerized apps to Azure Container apps (ACA) using Azure Container Registry (ACR)" 
+keywords: [azure, functions, serverless, containers, java, springboot]
+image: ./img/java/banner.png
+description: "Learn how to deploy containerized Spring boot apps to Azure Container apps (ACA) using Azure Container Registry (ACR)" 
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices]
 ---
 
@@ -44,7 +44,7 @@ Welcome to `Day 15` of #30DaysOfServerless!
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-![](./img/banner.png)
+![](./img/java/banner.png)
 
 ---
 
