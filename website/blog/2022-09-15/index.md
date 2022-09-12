@@ -1,14 +1,14 @@
 ---
-slug: 15-FIXME
-title: 15. <FIXME>
-authors: [nitya]
+slug: 15-containerapps-java
+title: 15. Containerized Apps on Azure - For the Java Dev
+authors: [nitya, brian]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [azure, functions, serverless, concepts]
+keywords: [azure, functions, serverless, containers, java]
 image: ./img/banner.png
-description: "<FIXME>" 
+description: "Learn how to deploy containerized apps to Azure Container apps (ACA) using Azure Container Registry (ACR)" 
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices]
 ---
 
@@ -32,15 +32,15 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
 
 ---
 
-Welcome to `Day 9` of #30DaysOfServerless!
+Welcome to `Day 15` of #30DaysOfServerless!
 
 ---
 
 ## What We'll Cover
- * Section 1
- * Section 2
- * Section 3
- * Section 4
+ * Spring boot apps in containers
+ * CI/CD for containerized Spring boot apps
+ * Step-by-step: Deploying to ACR
+ * Step-by-step: Deploying and running on ACA
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
@@ -49,14 +49,24 @@ Welcome to `Day 9` of #30DaysOfServerless!
 ---
 
 
-## Section 1
-
-## Section 2
-
-## Section 3
-
-## Section 4
-
+## Spring boot apps in containers
+    - CI/CD for containerized Spring Apps
+    - Introduction to Azure Container Apps
+    - Introduction to feature flags
+## CI/CD for containerized Spring boot apps
+     - GitHub Actions for CI/CD
+     - Azure container Registry
+     - CI/CD for containerized Spring Boot Apps
+## Step-by-step: Deploying to ACR
+     - Create an ACR instance
+     - Deploy an image to ACR
+     - View images in your registry
+## Deploying and running on ACA
+     - Create an ACA Environment
+     - Create a Container App
+     - Verify deployment
+     - A/B testing using Feature Flags
+ 
 ## Exercise
 
 ## Resources
