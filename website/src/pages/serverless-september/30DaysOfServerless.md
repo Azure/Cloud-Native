@@ -53,16 +53,16 @@ Posts will be published nightly on our main [blog](/blog) page. Once the post is
 
 _Welcome to the Week 1 of your learning journey into Serverless technologies. Let's talk about Azure Functions - what it is, core features and tools, and best practices for getting started in the programming language of your choice._
 
-![Azure Functions](../../../static/img/banners/functions.png)
+![Azure Functions](../../../static/img/banners/roadmap-week1.png)
 
 :::info WEEK 1 - AZURE FUNCTIONS
 _Posts will be linked here once published._
  * Sep 02 - [Learn Core Concepts](/blog/02-functions-intro)
  * Sep 03 - [Build Your First Function](/blog/03-functions-quickstart)
- * Sep 04 - Functions for Java Developers
- * Sep 05 - Functions for JavaScript Developers
- * Sep 06 - Functions for .NET Developers
- * Sep 07 - Functions for Python Developers
+ * Sep 04 - [Functions for Java Developers](/blog/04-functions-java)
+ * Sep 05 - [Functions for JavaScript Developers](/blog/05-functions-js)
+ * Sep 06 - [Functions for .NET Developers](/blog/06-functions-dotnet)
+ * Sep 07 - [Functions for Python Developers](/blog/07-functions-python)
  * Sep 08 - Functions + Serverless On Azure
 :::
 
