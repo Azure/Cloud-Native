@@ -1,25 +1,25 @@
 ---
-slug: 13-FIXME
-title: 13. <FIXME>
-authors: [nitya]
+slug: 13-dapr-aca-quickstart
+title: 13. Build ACA with Dapr
+authors: [taiseer]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [azure, functions, serverless, concepts]
+keywords: [azure, serverless, dapr, containerapps, dotnet]
 image: ./img/banner.png
-description: "<FIXME>" 
+description: "Let's build our first Azure Container Apps solution with Dapr!" 
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices]
 ---
 
 <!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/13-dapr-aca-quickstart" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Azure Container Apps + Dapr" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Azure Container Apps + Dapr" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,22 +27,22 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/08-functions-azure" />
+    href="https://azure.github.io/Cloud-Native/blog/13-dapr-aca-quickstart" />
 </head>
 
 ---
 
-Welcome to `Day 9` of #30DaysOfServerless!
+Welcome to `Day 13` of #30DaysOfServerless!
 
 ---
 
 ## What We'll Cover
- * What is Dapr and Why to use it?
- * How Dapr works with your microservice application?
- * What scenarios we are covering today?
- * Let's build our first Dapr Application and deploy it to Azure Container Apps!
+ * What is Dapr - and why should you use it?
+ * How Dapr works with your microservice app
+ * Application scenario we are covering today
+ * Quickstart: Build your first ACA with Dapr
  * Exercise: Try this yourself!
- * What's Next? 
+ * What's Next: Advanced scenario in 10-part series 
  * Resources: For self-study!
 
 ![](./img/banner.png)
@@ -50,7 +50,7 @@ Welcome to `Day 9` of #30DaysOfServerless!
 ---
 
 
-## What is Dapr and Why to use it?
+## Introduction To Dapr
 We as a developers have been asked many times to create scalable resilient and distributed applications as microservices, but we faced the same challenges such as recovering state after failures, services discovery and calling other microservices, integration with external resources, asynchronous communications between different services, distributed tracing and measuring message calls and performance across components and networked services. 
 
 Dapr (Distributed Application Runtime) offers a solution for the common problems that needed in any distributed microservice application. Dapr can be used with [any language](https://docs.dapr.io/concepts/overview/#dapr-sdks) (Go, .NET python, Node, Java, C++) and can run [anywhere](https://docs.dapr.io/concepts/overview/#hosting-environments) (On-premise, Kubernetes, Azure Cloud, GCP, AWS, IBM, etc...)
@@ -63,14 +63,14 @@ The diagram below shows the 9 Building Blocks which exposes public API that can 
 
 ![Diagram of the 9 bulding blocks by dapr](img/DaprBuildingBlocks.jpg)
 
-## How Dapr works with your microservice application?
+## Dapr & Microservices
 Dapr exposes its Building Blocks and components through a **sidecar architecture**. A sidecar enables Dapr to run in a separate memory process or separate container alongside your service. Sidecars provide isolation and encapsulation as they aren't part of the service, but connected to it. This separation enables each to have its own runtime environment and be built upon different programming platforms.
 
 ![Diagram showing the sidcar concept in Dapr](img/ACA-Tutorial-DaprSidecar-s.jpg)
 
 This pattern is named Sidecar because it resembles a sidecar attached to a motorcycle. In the previous figure, note how the Dapr sidecar is attached to your service to provide distributed application capabilities.
 
-## What scenarios we are covering today?
+## Today's App Scenario
 In this blog post we will create one single Azure Container App which will act as background processor services (service will not be accessible on the internet nor via other services) and configure two Dapr building blocks which they are the Pub/Sub and the State Store. Let's take a look at the architecture diagram below to have better understanding of what we are building:
 
 ![Diagram showing architecture of sample project](img/ACA-Tutorial-AsyncComm-s.jpg)
@@ -82,7 +82,8 @@ During the code walkthrough, you'll see that we will not introduce any SDK for A
 :::info Looking for Advanced scenarios?
 This scenario is a simplified version of a detailed tutorial which covers more advanced scenarios, if you are interested you can check more [Advanced scenarios on my blog.](https://bitoftech.net/2022/08/25/tutorial-building-microservice-applications-azure-container-apps-dapr/)
 :::
-## Let's build our first Dapr Application and deploy it to Azure Container Apps!
+
+## Build ACA with Dapr
 In today's post, we'll be using VS Code to build the app using ASP.NET Core 6.0. In the process, we'll setup our development environment with the relevant command-line tools and VS Code extensions. In addition to this I will walk you through creating the needed Azure resources to complete this tutorial, we will be relying on Azure CLI for this.
 
 _Note: Completing this exercise may incur a a cost of a few USD based on your Azure subscription._
@@ -203,6 +204,7 @@ Open file `Program.cs` and replace its content with the content below:
     :::note Want to know more?
        Check this [blog post](https://bitoftech.net/2022/09/02/azure-container-apps-async-communication-with-dapr-pub-sub-api-part-6/) which describes in detail how the consumer was able to discover available topic names, Pub/Sub names, and which routes/endpoints to push messages to.
     :::
+
 ### 2. Provision Azure Service Bus and Topic
 We need to create the Azure Service Bus so we can configure the Dapr Pub/Sub component and test locally
 1. Open PowerShell console and Login to Azure by using the command `az login` if you have multiple subscriptions, set the subscription you want to use in this tutorial before proceeding, you can do this by using `az account set --subscription <name or id>` As well calling `az upgrade` is a good practice to ensure you are running the latest Aure CLI Command.
@@ -229,7 +231,9 @@ We need to create the Azure Service Bus so we can configure the Dapr Pub/Sub com
     az servicebus namespace authorization-rule keys list --resource-group $RESOURCE_GROUP --namespace-name $NamespaceName --name RootManageSharedAccessKey --query primaryConnectionString --output tsv
     ```
 You can navigate to the Azure Portal and check that the resource group is created and the service bus namespace is created too.
-### 3. Install and Initialize Dapr in a local development environment
+
+
+### 3. Setup Dapr for local dev
 In order to run Dapr locally on our development machine, we need to install Dapr CLI Runtime, you can follow the [official documentation](https://docs.dapr.io/getting-started/install-dapr-cli/), but I will list the details too
 1. Install the Dapr CLI, run PowerShell console as an administrator and run the below command: 
     ```powershell
@@ -245,7 +249,9 @@ In order to run Dapr locally on our development machine, we need to install Dapr
     :::note Want to know more?
         Check this [blog post](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/) which describes in detail what components added to your machine when we called `dapr init`
     ::: 
-### 4. Create Dapr Component file for Pub/Sub building block
+
+
+### 4. Create Dapr Component file for Pub/Sub 
 Dapr uses a modular design where functionality is delivered as a component. Each component has an interface definition. All of the components are pluggable so that you can swap out one component with the same interface for another.
 
 Components are configured at design-time with a YAML file which is stored in either a components/local folder within your solution, or globally in the .dapr folder created when invoking dapr init [(read here for more details)](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/). These YAML files adhere to the generic [Dapr component schema](https://docs.dapr.io/operations/components/component-schema/), but each is specific to the component specification.
@@ -274,7 +280,7 @@ Components are configured at design-time with a YAML file which is stored in eit
     Note about The `Scopes` property: By default, all Dapr enabled container apps within the same environment will load the full set of deployed components. By adding scopes to a component, you tell the Dapr sidecars for each respective container app which components to load at runtime. Using scopes is recommended for production workloads.
     In our case, we have set the scopes to read `orders-processor` as this will be the application that needs access to Azure Service Bus.
 
-### 5. Running Dapr application locally and test end to end
+### 5. Preview Dapr app locally for e2e testing
 Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub API configured with Azure Service Bus 
 1. Within VS Code, open PowerShell terminal, change the directory in the terminal to folder `orders-service` and run the below command in PS terminal:
 
@@ -310,7 +316,9 @@ Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub 
     :::info Want to debug Dapr application locally?
       If you want to set breakpoints and debug your daper application locally, you can do this in VS code by following simple steps. This is very important when you are running multiple services together and want to test your microservice where multi-services are invoking each other. To learn more, you can continue reading on [my blog.](https://bitoftech.net/2022/08/29/dapr-integration-with-azure-container-apps/)
     :::
-### 6. Deploy the application to Azure Container Apps
+
+
+### 6. Deploy app to Azure Container Apps
 We will follow few steps in order to deploy the service `Orders.Processor` to Azure Container Apps, but we need to do one addition before deploying, we have to create a component file for Azure Service Bus which meets the [specs defined by Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#configure-dapr-components).
       
   1. Create a new yaml file named `pubsub-svcbus.yaml` and add it under folder `components` (folder created earlier), use the file content below:

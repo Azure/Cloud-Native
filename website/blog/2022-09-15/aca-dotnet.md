@@ -1,6 +1,6 @@
 ---
 slug: 15-aca-dotnet
-title: 15. Deploy an ASP.NET app to ACA
+title: 15. Deploy ASP.NET app to ACA
 authors: [alexwolf]
 draft: true
 hide_table_of_contents: false

@@ -1,6 +1,6 @@
 ---
 slug: 15-aca-java
-title: 15. Containerized Apps on Azure - For the Java Dev
+title: 15. Deploy Spring Boot App to ACA
 authors: [brian]
 draft: true
 hide_table_of_contents: false
