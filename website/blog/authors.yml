@@ -58,12 +58,6 @@ glaucia:
   url: https://github.com/glaucia86
   image_url: https://github.com/glaucia86.png
 
-anthony:
-  name: Anthony Chu
-  title: Senior PM @Microsoft
-  url: https://github.com/anthonychu
-  image_url: https://github.com/anthonychu.png
-
 dina:
   name: Dina Berry
   title: Senior Content Developer @Microsoft
@@ -130,3 +124,8 @@ melony:
   url: https://github.com/cloudmelon
   image_url: https://github.com/cloudmelon.png
 
+anthony:
+  name: Anthony Chu
+  title: Principal Product Manager @Microsoft
+  url: https://github.com/anthonychu
+  image_url: https://github.com/anthonychu.png

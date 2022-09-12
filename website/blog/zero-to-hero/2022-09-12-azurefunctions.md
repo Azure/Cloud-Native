@@ -2,7 +2,7 @@
 slug: zero2hero-func-03
 title: 🚀 | Use Custom Handlers For Go
 authors: [melony]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

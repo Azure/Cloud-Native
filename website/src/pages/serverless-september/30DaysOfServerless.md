@@ -55,7 +55,7 @@ Posts will be published nightly on our main [blog](/blog) page. Once the post is
 
 _Welcome to the Week 1 of your learning journey into Serverless technologies. Let's talk about Azure Functions - what it is, core features and tools, and best practices for getting started in the programming language of your choice._
 
-![Azure Functions](../../../static/img/banners/roadmap-week1.png)
+![Azure Functions](./../../../static/img/banners/roadmap-Week1.png)
 
 :::info WEEK 1 - AZURE FUNCTIONS
 _Posts will be linked here once published._
