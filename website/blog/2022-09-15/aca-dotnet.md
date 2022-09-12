@@ -57,7 +57,8 @@ You will use GitHub Actions in combination with Bicep to deploy the application.
 :::info PRE-REQUISITES
 - An Azure subscription. [Sign up for free](https://azure.microsoft.com).
 - A [GitHub account](https://github.com/join), with access to GitHub Actions.
-- The [Azure CLI](/azure/install-azure-cli) installed locally.
+- The [Azure CLI](https://docs.microsoft.com/azure/install-azure-cli) installed locally.
+- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 :::
 
 ## Architecture
@@ -103,7 +104,7 @@ Once the Blazor app is running, you should see something like this:
 
 ## Configuring Azure credentials
 
-In order to deploy the application to Azure through GitHub Actions, you first need to create a service principal. The service principal will allow the GitHub Actions process to authenticate to your Azure subscription to create resources and deploy code. You can [learn more about Service Principals](/azure/create-an-azure-service-principal-azure-cli) in the Azure CLI documentation. For this step you'll need to be logged into the Azure CLI.
+In order to deploy the application to Azure through GitHub Actions, you first need to create a service principal. The service principal will allow the GitHub Actions process to authenticate to your Azure subscription to create resources and deploy code. You can [learn more about Service Principals](https://docs.microsoft.com/azure/create-an-azure-service-principal-azure-cli) in the Azure CLI documentation. For this step you'll need to be logged into the Azure CLI.
 
 1) If you have not done so already, make sure to [fork the sample project](https://github.com/Azure-Samples/dotNET-FrontEnd-to-BackEnd-on-Azure-Container-Apps) to your own GitHub account or organization. 
 
@@ -338,7 +339,7 @@ jobs:
 
 ## Understanding the Bicep templates
 
-During the provisioning stage of the GitHub Actions workflow, the **main.bicep** file is processed. Bicep files provide a declarative way of generating resources in Azure and are ideal for managing infrastructure as code. You can [learn more about Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) in the related documentation.  The *main.bicep* file in the sample project creates the following resources:
+During the provisioning stage of the GitHub Actions workflow, the **main.bicep** file is processed. Bicep files provide a declarative way of generating resources in Azure and are ideal for managing infrastructure as code. You can [learn more about Bicep](https://docs.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep) in the related documentation.  The *main.bicep* file in the sample project creates the following resources:
 
 - The container registry to store images of the containerized apps.
 - The container apps environment, which handles networking and resource management for the container apps.
@@ -790,7 +791,7 @@ output fqdn string = containerApp.properties.configuration.ingress.fqdn
 
 The code for this specific sample application is largely the same whether or not Dapr is integrated. However, even with this simple app, there are a few benefits and configuration differences when using Dapr that are worth exploring. 
 
-In this scenario most of the changes are related to communication between the container apps. However, you can explore the full range of Dapr benefits by reading the [Dapr integration with Azure Container Apps](/azure/container-apps/dapr-overview?branch=pr-en-us-200735&tabs=bicep1%2Cyaml) article in the conceptual documentation.
+In this scenario most of the changes are related to communication between the container apps. However, you can explore the full range of Dapr benefits by reading the [Dapr integration with Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml) article in the conceptual documentation.
 
 ### [Without Dapr](#tab/exclude-dapper)
 
@@ -902,6 +903,3 @@ Follow these steps in the Azure portal to remove the resources you created:
 1. Enter the resource group name **msdocswebappsapi** in the *Are you sure you want to delete "msdocswebappsapi"* confirmation dialog.
 1. Select **Delete**.  
     The process to delete the resource group may take a few minutes to complete.
-
-> [!TIP]
-> Having issues? Let us know on GitHub by opening an issue in the [Azure Container Apps repo](https://github.com/microsoft/azure-container-apps).
