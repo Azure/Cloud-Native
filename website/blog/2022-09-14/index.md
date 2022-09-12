@@ -1,7 +1,7 @@
 ---
 slug: 14-aca-managed-id
 title: 14. Secret Stores & Managed ID
-authors: [nitya]
+authors: [kendall]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
