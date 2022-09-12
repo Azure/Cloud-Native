@@ -30,12 +30,17 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
 </head>
 
 ---
+:::warning SEP 08: CHANGE IN PUBLISHING SCHEDULE
+
+Starting from Week 2 (Sep 8), we'll be publishing blog posts in _batches_ rather than on a daily basis, so you can read a series of related posts together. _Don't want to miss updates?_ Just [subscribe to the feed](https://azure.github.io/Cloud-Native/blog/rss.xml)
+:::
+
+---
 
 Welcome to `Day 8` of #30DaysOfServerless!
 
 The theme for this week is Azure Functions. We'll talk about ...
 
----
 
 ## What We'll Cover
  * Section 1
