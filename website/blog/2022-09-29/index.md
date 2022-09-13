@@ -1,6 +1,6 @@
 ---
 slug: 29-azure-developer-cli
-title: 29. Using the Azure Developer CLI to get up and running with Dapr
+title: 29. Using the Azure Developer CLI to go from your local development environment to cloud in minutes
 authors: [savannah]
 draft: true
 hide_table_of_contents: false
@@ -9,7 +9,7 @@ toc_max_heading_level: 3
 keywords: [azure, functions, serverless, concepts]
 image: ./img/banner.png
 description: "<FIXME>" 
-tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices, azd, azure-developer-cli]
+tags: [serverless-september, 30-days-of-serverless, microservices, azd, azure-developer-cli]
 ---
 
 <!-- FIXME -->
