@@ -1,6 +1,6 @@
 ---
 slug: 29-azure-developer-cli
-title: 29. Using the Azure Developer CLI to go from your local development environment to cloud in minutes
+title: 29. Code to Cloud with the Azure Developer CLI (`azd`)
 authors: [savannah]
 draft: true
 hide_table_of_contents: false
