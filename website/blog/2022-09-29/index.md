@@ -140,9 +140,9 @@ Finally let's talk about setting up CI/CD! This might be my favorite `azd` featu
 
 
 ## **Exercise:** Try it yourself or create your own template!
-As an exercise, try out the workflow listed above with any template on GitHub!
+As an exercise, try out the workflow above with [any template on GitHub](https://aka.ms/azure-dev/templates)!
 
-Or, try out turning your own project into an Azure Developer CLI-enabled template by following [this guidance](https://aka.ms/azure-dev/enabletemplate). If you create your own template, don't forget to tag the repo with the [`azd-templates` topic](https://aka.ms/azure-dev/templates) on GitHub to help others find it (unfamiliar with GitHub topics? [Learn how to add topics to your repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository))! We'd also love to chat with you about your experience creating an `azd` template - if you're open to providing feedback around this, please fill out [this form](https://aka.ms/azd-user-research-signup?source=serverless-september)!
+Or, try turning your own project into an Azure Developer CLI-enabled template by following [this guidance](https://aka.ms/azure-dev/enabletemplate). If you create your own template, don't forget to tag the repo with the [`azd-templates` topic](https://aka.ms/azure-dev/templates) on GitHub to help others find it (unfamiliar with GitHub topics? [Learn how to add topics to your repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository))! We'd also love to chat with you about your experience creating an `azd` template - if you're open to providing feedback around this, please fill out [this form](https://aka.ms/azd-user-research-signup?source=serverless-september)!
 
 
 ## **Resources**
