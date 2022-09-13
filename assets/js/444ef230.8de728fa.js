@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3086],{2089:e=>{e.exports=JSON.parse('{"label":"azure-container-apps","permalink":"/Cloud-Native/blog/tags/azure-container-apps","allTagsPath":"/Cloud-Native/blog/tags","count":5}')}}]);
