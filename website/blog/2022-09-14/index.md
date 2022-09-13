@@ -1,7 +1,7 @@
 ---
-slug: 14-FIXME
-title: 14. <FIXME>
-authors: [nitya]
+slug: 14-aca-managed-id
+title: 14. Secret Stores & Managed ID
+authors: [kendall]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2

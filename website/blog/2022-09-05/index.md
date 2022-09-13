@@ -224,7 +224,7 @@ Once you've tried out the samples, try building an end-to-end scenario by using 
 
 ## Exercise: Support searching
 
-The GitHub Serach API allows you to provide search parameters via the `q` query string. In this sample, we hard-coded it to be `language:javascript`, but as a follow-on exercise, expand the Function to allow the caller to provide the search terms as a query string to the Azure Function, which is passed to the GitHub Search API. Hint - have a look at the `req` argument.
+The GitHub Search API allows you to provide search parameters via the `q` query string. In this sample, we hard-coded it to be `language:javascript`, but as a follow-on exercise, expand the Function to allow the caller to provide the search terms as a query string to the Azure Function, which is passed to the GitHub Search API. Hint - have a look at the `req` argument.
 
 ## Resources
 

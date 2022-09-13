@@ -4,6 +4,7 @@ title: 30 Days Of Serverless
 
 # Roadmap for #30Days
 
+---
 
 ## Welcome! 
 
@@ -15,14 +16,15 @@ This is a tentative roadmap for #30DaysOfServerless, a daily content series plan
  * **Build End-to-End Solutions** using familiar Dev Tools & Languages
 
 
-:::danger TENTATIVE ROADMAP
-This page shows our planned roadmap for the month (Sep 1-30, 2022). However, we may modify the content or sequence of posts as we go, in response to _your_ requests and feedback. 
+:::warning 🚨 SEP 08: CHANGE IN PUBLISHING SCHEDULE
 
-Visit our [Discussions](https://github.com/Azure/Cloud-Native/discussions) board and leave us feedback or requests under the #30DaysOfServerless topic!
-::: 
+Starting from Week 2 (Sep 8), we'll be publishing blog posts in _batches_ rather than on a daily basis, so you can read a series of related posts together. _Don't want to miss updates?_ Just [subscribe to the feed](https://azure.github.io/Cloud-Native/blog/rss.xml)
+:::
 
-Check out the 
-[official Serverless September collection](https://docs.microsoft.com/en-us/users/leannturpin-6614/collections/kjqpsnzg4opdo2?WT.mc_id=javascript-74010-ninarasi) of learning modules and don't forget to register for the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) to complete them.
+Here are some actions you can take in the meantime:
+ * Visit our [Discussions](https://github.com/Azure/Cloud-Native/discussions) board and leave us feedback or requests under the #30DaysOfServerless topic!
+ * Register for the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi).
+ * Check out the [official Serverless September collection](https://docs.microsoft.com/en-us/users/leannturpin-6614/collections/kjqpsnzg4opdo2?WT.mc_id=javascript-74010-ninarasi) of learning modules and don't forget to 
 
 
 ---
@@ -53,16 +55,16 @@ Posts will be published nightly on our main [blog](/blog) page. Once the post is
 
 _Welcome to the Week 1 of your learning journey into Serverless technologies. Let's talk about Azure Functions - what it is, core features and tools, and best practices for getting started in the programming language of your choice._
 
-![Azure Functions](../../../static/img/banners/functions.png)
+![Azure Functions](./../../../static/img/banners/roadmap-Week1.png)
 
 :::info WEEK 1 - AZURE FUNCTIONS
 _Posts will be linked here once published._
  * Sep 02 - [Learn Core Concepts](/blog/02-functions-intro)
  * Sep 03 - [Build Your First Function](/blog/03-functions-quickstart)
- * Sep 04 - Functions for Java Developers
- * Sep 05 - Functions for JavaScript Developers
- * Sep 06 - Functions for .NET Developers
- * Sep 07 - Functions for Python Developers
+ * Sep 04 - [Functions for Java Developers](/blog/04-functions-java)
+ * Sep 05 - [Functions for JavaScript Developers](/blog/05-functions-js)
+ * Sep 06 - [Functions for .NET Developers](/blog/06-functions-dotnet)
+ * Sep 07 - [Functions for Python Developers](/blog/07-functions-python)
  * Sep 08 - Functions + Serverless On Azure
 :::
 
@@ -70,7 +72,7 @@ _Posts will be linked here once published._
 
 ## Azure Container Apps
 
-_Welcome to Week 2. You've learnt how to build event-driven serverless backends using Azure Functions. But how can you orchestrate and scale more complex solutions? The answer lies in microservice architectures and containerized apps. This week we explore Azure Container Apps (ACA) - and learn how the Distributed Application Runtime (Dapr) technology can work alongside ACA to unlock richer capabilities and simplify developer experience.
+_Welcome to Week 2. You've learnt how to build event-driven serverless backends using Azure Functions. But how can you orchestrate and scale more complex solutions? The answer lies in microservice architectures and containerized apps. This week we explore Azure Container Apps (ACA) - and learn how the Distributed Application Runtime (Dapr) technology can work alongside ACA to unlock richer capabilities and simplify developer experience._
 
 ![Azure Container Apps and Dapr](../../../static/img/banners/container-apps.png)
 
