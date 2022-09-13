@@ -53,7 +53,13 @@ The Azure Developer CLI (`azd`) is an new, open source tool that makes it quick 
 
 The Azure Developer CLI commands are simple, high-level and map to core stages in your developer workflow. Think project initialization/creation, build, deploy, repeat!
 
-By using [idiomatic and flexible application templates](https://aka.ms/azure-dev/templates?source=serverless-september), the Azure Developer CLI uses recipes for common application architectures that you can customize for your use case. These templates include best practices, sample application code that goes beyond "Hello World!", infrastructure as code assets so you can move your code to the cloud and set up monitoring for your application and all the bits to set up CI/CD to run on every commit to your repo against resources on Azure, all in the language(s) you're most comfortable in. You can use an [existing template](https://aka.ms/azure-dev/templates?source=serverless-september) or even create your own (more on that later!).
+By using [idiomatic and flexible application templates](https://aka.ms/azure-dev/templates?source=serverless-september), the Azure Developer CLI uses recipes for common application architectures that you can customize for your use case. These templates include:
+- best practices
+- sample application code that goes beyond "Hello World!"
+- infrastructure as code assets so you can move your code to the cloud and set up monitoring for your application, and
+- all the bits to set up CI/CD to run on every commit to your repo against resources on Azure
+
+...all in the language(s) you're most comfortable in. You can use an [existing template](https://aka.ms/azure-dev/templates?source=serverless-september) or even create your own (more on that later!).
 
 ## **(Template) Anatomy 101**: What makes an `azd` template?
 So now that you've been introduced to the Azure Developer CLI, let's take a look at an `azd`-enabled codebase, which we call a template. You can think of a template as a recipe - it provides a solid foundation that you can customize depending on your preference/use case/requirements. 
