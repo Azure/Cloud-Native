@@ -58,12 +58,6 @@ glaucia:
   url: https://github.com/glaucia86
   image_url: https://github.com/glaucia86.png
 
-anthony:
-  name: Anthony Chu
-  title: Senior PM @Microsoft
-  url: https://github.com/anthonychu
-  image_url: https://github.com/anthonychu.png
-
 dina:
   name: Dina Berry
   title: Senior Content Developer @Microsoft
@@ -75,9 +69,69 @@ yönet:
   title: Senior Developer Advocate @Microsoft
   url: https://github.com/Yonet
   image_url: https://github.com/Yonet.png
-
+  
 savannah:
   name: Savannah Ostrowski
   title: Senior Product Manager @Microsoft
   url: https://twitter.com/savostrowski
   image_url: https://github.com/savannahostrowski.png
+  
+justin:
+  name: Justin Yoo
+  title: Senior Cloud Advocate @Microsoft
+  url: https://github.com/justinyoo
+  image_url: https://github.com/justinyoo.png
+
+kendall:
+  name: Kendall Roden
+  title: Azure Container Apps PM @Microsoft
+  url: https://github.com/kendallroden
+  image_url: https://github.com/kendallroden.png
+
+davidjusto:
+  name: David Justo
+  title: Software Engineer @Microsoft
+  url: https://github.com/davidmrdavid
+  image_url: https://github.com/davidmrdavid.png
+
+matt:
+  name: Matt Soucoup
+  title: Principal Cloud Advocate @Microsoft
+  url: https://github.com/codemillmatt
+  image_url: https://github.com/codemillmatt.png
+
+ayca:
+  name: Ayca Bas
+  title: Senior Cloud Advocate @Microsoft
+  url: https://github.com/aycabas
+  image_url: https://github.com/aycabas.png
+
+alexwolf:
+  name: Alex Wolf
+  title: Software Engineer @Microsoft
+  url: https://github.com/alexwolfmsft
+  image_url: https://github.com/alexwolfmsft.png
+
+brian:
+  name: Brian Benz
+  title: Senior Cloud Advocate @Microsoft
+  url: https://github.com/bbenz
+  image_url: https://github.com/bbenz.png
+
+taiseer:
+  name: Taisser Joudeh
+  title: Modern Apps Consultant @Microsoft
+  url: https://github.com/tjoudeh
+  image_url: https://github.com/tjoudeh.png
+
+melony:
+  name: Melony Qin
+  title: Product Manager, Azure Functions @Microsoft
+  url: https://github.com/cloudmelon
+  image_url: https://github.com/cloudmelon.png
+
+anthony:
+  name: Anthony Chu
+  title: Principal Product Manager @Microsoft
+  url: https://github.com/anthonychu
+  image_url: https://github.com/anthonychu.png

@@ -1,6 +1,6 @@
 ---
-slug: 12-FIXME
-title: 12. <FIXME>
+slug: 12-hello-dapr
+title: 12. Introducing Dapr!
 authors: [nitya]
 draft: true
 hide_table_of_contents: false

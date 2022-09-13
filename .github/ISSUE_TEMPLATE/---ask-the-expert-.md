@@ -3,7 +3,7 @@ name: "\U0001F3A4 Ask The Expert!"
 about: 'Use this issue to submit a question for Product Teams '
 title: "[Ask The Expert]  "
 labels: ask the expert
-assignees: ''
+assignees: nitya
 
 ---
 

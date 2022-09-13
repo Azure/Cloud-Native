@@ -1,0 +1,60 @@
+{
+    "properties": {
+        "value": {
+            "items": {
+                "properties": {
+                    "changeType": {
+                        "type": "string"
+                    },
+                    "clientState": {
+                        "type": "string"
+                    },
+                    "resource": {
+                        "type": "string"
+                    },
+                    "resourceData": {
+                        "properties": {
+                            "@@odata.id": {
+                                "type": "string"
+                            },
+                            "@@odata.type": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "organizationId": {
+                                "type": "string"
+                            },
+                            "sequenceNumber": {
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "subscriptionExpirationDateTime": {
+                        "type": "string"
+                    },
+                    "subscriptionId": {
+                        "type": "string"
+                    },
+                    "tenantId": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "changeType",
+                    "clientState",
+                    "resource",
+                    "resourceData",
+                    "subscriptionExpirationDateTime",
+                    "subscriptionId",
+                    "tenantId"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+    }
