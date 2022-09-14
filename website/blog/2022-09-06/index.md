@@ -43,7 +43,7 @@ The theme for this week is Azure Functions. Today we're going to talk about why 
 * How does Azure Functions fit in?
 * Let's build a simple Azure Function in .NET
 * Developer Guide, Samples & Scenarios
-* Exercise: Explore the [Create Serverless Applications](https://docs.microsoft.com/en-us/training/paths/create-serverless-applications/?WT.mc_id=javascript-74010-cxa) path.
+* Exercise: Explore the [Create Serverless Applications](https://docs.microsoft.com/training/paths/create-serverless-applications/?WT.mc_id=javascript-74010-cxa) path.
 * Resources: For self-study!
 
 ![A banner image that has the title of this article with the author's photo and a drawing that summarizes the demo application.](./img/banner.png)
@@ -55,7 +55,7 @@ The leaves are changing colors and there's a chill in the air, or for those luck
 
 ## What is serverless computing?
 
-For developers, serverless computing means you write highly compact individual functions that do one thing - and run in the cloud. These functions [are triggered by some external event](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp&WT.mc_id=javascript-74010-cxa). That event could be a record being inserted into a database, a file uploaded into BLOB storage, a timer interval elapsed, or even a simple HTTP request.
+For developers, serverless computing means you write highly compact individual functions that do one thing - and run in the cloud. These functions [are triggered by some external event](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp&WT.mc_id=javascript-74010-cxa). That event could be a record being inserted into a database, a file uploaded into BLOB storage, a timer interval elapsed, or even a simple HTTP request.
 
 But... servers are still definitely involved! What has changed from other types of cloud computing is that the idea and **ownership of the server** has been abstracted away.
 
@@ -211,8 +211,8 @@ _Keep an eye out for an update to this post where we walk through a scenario lik
 
 This brings us close to the end of Week 1 with Azure Functions. We've learned core concepts, built and deployed our first Functions app, and explored quickstarts and scenarios for different programming languages. So, what can you do to explore this topic on your own?
 
-* Explore the [Create Serverless Applications](https://docs.microsoft.com/en-us/training/paths/create-serverless-applications/?WT.mc_id=javascript-74010-cxa) learning path which has several modules that explore Azure Functions integrations with various services.
-* Take up the [Cloud Skills Challenge](https://docs.microsoft.com/en-us/training/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) and complete those modules in a fun setting where you compete with peers for a spot on the leaderboard!
+* Explore the [Create Serverless Applications](https://docs.microsoft.com/training/paths/create-serverless-applications/?WT.mc_id=javascript-74010-cxa) learning path which has several modules that explore Azure Functions integrations with various services.
+* Take up the [Cloud Skills Challenge](https://docs.microsoft.com/training/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) and complete those modules in a fun setting where you compete with peers for a spot on the leaderboard!
 
 Then come back tomorrow as we wrap up the week with a discussion on end-to-end scenarios, a recap of what we covered this week, and a look at what's ahead next week.
 
@@ -222,12 +222,12 @@ Then come back tomorrow as we wrap up the week with a discussion on end-to-end s
 
 Start here for developer guidance in getting started with Azure Functions as a .NET/C# developer:
 
-* [Develop C# class library functions using Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library?tabs=v2%2Ccmd&WT.mc_id=javascript-74010-cxa). 
-* [Using C# to develop .NET isolated process functions](https://docs.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-process-guide?WT.mc_id=javascript-74010-cxa).
-* [Quickstart: Create your first C# function in Azure using Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-your-first-function-visual-studio?tabs=in-process&WT.mc_id=javascript-74010-cxa).
+* [Develop C# class library functions using Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-dotnet-class-library?tabs=v2%2Ccmd&WT.mc_id=javascript-74010-cxa). 
+* [Using C# to develop .NET isolated process functions](https://docs.microsoft.com/azure/azure-functions/dotnet-isolated-process-guide?WT.mc_id=javascript-74010-cxa).
+* [Quickstart: Create your first C# function in Azure using Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio?tabs=in-process&WT.mc_id=javascript-74010-cxa).
 
-Then learn about [supported Triggers and Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp#bindings-code-examples?WT.mc_id=javascript-74010-cxa) for C#, with code snippets to show how they are used. 
+Then learn about [supported Triggers and Bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#bindings-code-examples?WT.mc_id=javascript-74010-cxa) for C#, with code snippets to show how they are used. 
 
-Finally, explore [Azure Functions samples for C#](https://docs.microsoft.com/en-us/samples/browse/?products=azure-functions&languages=csharp&WT.mc_id=javascript-74010-cxa) and learn to implement serverless solutions. Examples include:
- * Using Azure Functions to [check storage of Azure Cognitive Services on a schedule](https://docs.microsoft.com/en-us/samples/azure-samples/azure-search-dotnet-samples/check-storage-usage/?WT.mc_id=javascript-74010-cxa) using Timer Triggers.
-* Using Azure Functions to [implement a ToDo Backend API](https://docs.microsoft.com/en-us/samples/azure-samples/azure-sql-binding-func-dotnet-todo/todo-backend-dotnet-azure-sql-bindings-azure-functions/?WT.mc_id=javascript-74010-cxa) illustrating Azure SQL integration.
+Finally, explore [Azure Functions samples for C#](https://docs.microsoft.com/samples/browse/?products=azure-functions&languages=csharp&WT.mc_id=javascript-74010-cxa) and learn to implement serverless solutions. Examples include:
+ * Using Azure Functions to [check storage of Azure Cognitive Services on a schedule](https://docs.microsoft.com/samples/azure-samples/azure-search-dotnet-samples/check-storage-usage/?WT.mc_id=javascript-74010-cxa) using Timer Triggers.
+* Using Azure Functions to [implement a ToDo Backend API](https://docs.microsoft.com/samples/azure-samples/azure-sql-binding-func-dotnet-todo/todo-backend-dotnet-azure-sql-bindings-azure-functions/?WT.mc_id=javascript-74010-cxa) illustrating Azure SQL integration.

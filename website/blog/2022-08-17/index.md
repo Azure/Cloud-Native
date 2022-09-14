@@ -46,12 +46,12 @@ This year, we wanted to combine _beginner-friendly_ options (for those just star
 
 We'll also explore the full spectrum of serverless - from Functions-as-a-Service (for granularity) to Containerization (for deployment) and Microservices (for scalability). Here are a few services and technologies you'll get to learn more about:
 
- * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/overview?WT.mc_id=javascript-74010-ninarasi)
+ * [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=javascript-74010-ninarasi)
+ * [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview?WT.mc_id=javascript-74010-ninarasi)
  * [Distributed Application Runtime (dapr)](https://dapr.io/?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Logic Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/logic-apps/?WT.mc_id=javascript-74010-ninarasi)
+ * [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/?WT.mc_id=javascript-74010-ninarasi)
+ * [Azure Logic Apps](https://docs.microsoft.com/azure/static-web-apps/?WT.mc_id=javascript-74010-ninarasi)
+ * [Azure Static Web Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=javascript-74010-ninarasi)
 
 
 

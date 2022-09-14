@@ -209,7 +209,7 @@ const config = {
           },
           {
             label: 'JavaScript',
-            to: 'https://docs.microsoft.com/en-us/javascript/?WT.mc_id=javascript-74010-ninarasi',
+            to: 'https://docs.microsoft.com/javascript/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: '.NET',
@@ -217,7 +217,7 @@ const config = {
           },
           {
             label: 'Python',
-            to: 'https://docs.microsoft.com/en-us/azure/developer/python/?WT.mc_id=javascript-74010-ninarasi',
+            to: 'https://docs.microsoft.com/azure/developer/python/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: 'Privacy Statement ',
@@ -275,7 +275,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b> Take the <a href="https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
+          '<b> Take the <a href="https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,

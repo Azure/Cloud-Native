@@ -67,7 +67,7 @@ Some of the use cases for ACA include event-driven processing jobs and backgroun
 
 Before we jump into microservices communication, we should review how networking works within ACA. With ACA being a managed service, Azure will take care of most of your underlying infrastructure concerns. As you provision an ACA resource, Azure provisions an Environment to deploy Container Apps into. This environment is your isolation boundary.
 
-![Azure Container Apps Environment](https://docs.microsoft.com/en-us/azure/container-apps/media/environments/azure-container-apps-environments.png)
+![Azure Container Apps Environment](https://docs.microsoft.com/azure/container-apps/media/environments/azure-container-apps-environments.png)
 
 By default, Azure creates and manages a new Virtual Network (VNET) for you and the VNET is associated with the environment. As you deploy container apps, they are deployed into the same VNET and the environment is assigned a static public IP address which allows your apps to be accessible over the internet. This VNET is not visible or manageable.
 
