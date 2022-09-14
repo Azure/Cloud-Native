@@ -18,7 +18,7 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | When | What | Where |
 |:---|:---|:---|
 | Sep 01 | ✍🏽 [Kickoff: #30DaysOfServerless, 4 Themed Weeks](/blog/01-kickoff) | Website |
-| Sep 01 | 🎯 **Cloud Skills Challenge**: [Register Now](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)| Microsoft Learn |
+| Sep 01 | 🎯 **Cloud Skills Challenge**: [Register Now](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)| Microsoft Learn |
 | Sep 02 | ✍🏽 [Week 1:  Functions-As-A-Service](/serverless-september/30DaysOfServerless#azure-functions) |  Website   |
 | Sep 05 |  🚀 [A walkthrough of Durable Entities](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-walkthrough-of-durable-entities/ba-p/3616832?WT.mc_id=javascript-74010-ninarasi) | Apps On Azure |
 | Sep 05 | 🚀 [Go Cloud Native With Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) | Apps On Azure |
@@ -41,7 +41,7 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 28 | 🏆 **Hacks:**  [So you want to migrate your project to Serverless?](https://developer.microsoft.com/reactor/events/16960?WT.mc_id=javascript-74010-ninarasi)  | 🌟 Register Now |
 | Sep 29 | 🎤 **ATE: Azure Container Apps** [Live Q&A with Product Team](https://reactor.microsoft.com/en-us/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Here|
 | Sep 29 | [Serverless Meetup: #SamosaChai.NET ](https://developer.microsoft.com/en-us/reactor/events/17020/) = Livestream  |🌟 Register Now  |
-| Sep 30 | 🎯 **Cloud Skills Challenge**: [Last Day To Complete It!](https://docs.microsoft.com/en-us/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)| [Microsoft Learn](https://docs.microsoft.com/en-us/users/leannturpin-6614/collections/kjqpsnzg4opdo2?WT.mc_id=javascript-74010-ninarasi) |
+| Sep 30 | 🎯 **Cloud Skills Challenge**: [Last Day To Complete It!](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)| [Microsoft Learn](https://docs.microsoft.com/users/leannturpin-6614/collections/kjqpsnzg4opdo2?WT.mc_id=javascript-74010-ninarasi) |
 
 ---
 

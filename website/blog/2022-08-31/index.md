@@ -16,7 +16,7 @@ This year for Serverless September we want to hear all the amazing ways our stud
 
 ### Getting Started
 
-If you don't already have an [Azure for Students](https://docs.microsoft.com/en-us/azure/education-hub/azure-dev-tools-teaching/azure-students-program?WT.mc_id=academic-75239-sagibbon) account you can easily get your **FREE** account created at [Azure for Students Sign up](https://azure.microsoft.com/en-us/free/students/?WT.mc_id=academic-75239-sagibbon).
+If you don't already have an [Azure for Students](https://docs.microsoft.com/azure/education-hub/azure-dev-tools-teaching/azure-students-program?WT.mc_id=academic-75239-sagibbon) account you can easily get your **FREE** account created at [Azure for Students Sign up](https://azure.microsoft.com/en-us/free/students/?WT.mc_id=academic-75239-sagibbon).
 
 If you are new to serverless, here are a couple links to get you started:
  * [Build Cloud Native Apps on Azure](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/?WT.mc_id=academic-75239-sagibbon)
@@ -26,16 +26,16 @@ If you are new to serverless, here are a couple links to get you started:
 ### No Experience, No problem
 
 For Serverless September we have planned beginner friendly content all month long. Covering such services as:
- * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview?WT.mc_id=academic-75239-sagibbon)
- * [Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/overview?WT.mc_id=academic-75239-sagibbon)
+ * [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=academic-75239-sagibbon)
+ * [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview?WT.mc_id=academic-75239-sagibbon)
  * [Distributed Application Runtime (dapr)](https://dapr.io/)
- * [Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/?WT.mc_id=academic-75239-sagibbon)
- * [Azure Logic Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/?WT.mc_id=academic-75239-sagibbon)
- * [Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/logic-apps/?WT.mc_id=academic-75239-sagibbon)
+ * [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/?WT.mc_id=academic-75239-sagibbon)
+ * [Azure Logic Apps](https://docs.microsoft.com/azure/static-web-apps/?WT.mc_id=academic-75239-sagibbon)
+ * [Azure Static Web Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=academic-75239-sagibbon)
 
 You can follow [#30DaysOfServerles](https://azure.github.io/Cloud-Native/blog/) here on the blog for daily posts covering concepts, scenarios, and how to create end-to-end solutions. 
 
-Join the [Cloud Skills Challenge](https://azure.github.io/Cloud-Native/serverless-september/CloudSkills/) where we have selected a list of Learn Modules for you to go through at your own pace, including deploying a full stack application with [Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/logic-apps/?WT.mc_id=academic-75239-sagibbon).
+Join the [Cloud Skills Challenge](https://azure.github.io/Cloud-Native/serverless-september/CloudSkills/) where we have selected a list of Learn Modules for you to go through at your own pace, including deploying a full stack application with [Azure Static Web Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=academic-75239-sagibbon).
 
 
 ### Have A Question 
@@ -52,7 +52,7 @@ If you have written a blog post, recorded a video, have an open source Azure Ser
 
 ## 🧭 Explore Student Resources
 
-* [Microsoft Student Hub](https://docs.microsoft.com/en-us/learn/student-hub/?WT.mc_id=academic-75239-sagibbon) - highlight student focused resources across Microsoft
+* [Microsoft Student Hub](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-75239-sagibbon) - highlight student focused resources across Microsoft
 * [Microsoft Learn Student Ambassadors](https://studentambassadors.microsoft.com/?WT.mc_id=academic-75239-sagibbon) - our student focused community program
 * [Imagine Cup](https://imaginecup.microsoft.com/en-us/Events?ocid=pre_web_ambassador_learnmore_all?WT.mc_id=academic-75239-sagibbon) - our annual student innovation competition
 
