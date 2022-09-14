@@ -102,13 +102,13 @@ For those interested in taking advantage of the open source ecosystem while reap
 
 Container apps provides other cloud native features and capabilities in addition to those above including, but not limited to: 
 
- * [Revisions](https://docs.microsoft.com/en-us/azure/container-apps/application-lifecycle-management?WT.mc_id=javascript-74010-cxa): immutable snapshot representative of a specific version of a container app which can take advantage of the [managed traffic splitting capability](https://docs.microsoft.com/en-us/azure/container-apps/revisions-manage?tabs=bash&WT.mc_id=javascript-74010-cxa) 
- * [Health probes](https://docs.microsoft.com/en-us/azure/container-apps/health-probes?tabs=arm-template?WT.mc_id=javascript-74010-cxa): Based on [Kubernetes health probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/?WT.mc_id=javascript-74010-cxa) with support for Readiness, Liveness and Startup 
- * [Built-in authentication](https://docs.microsoft.com/en-us/azure/container-apps/authentication-openid?WT.mc_id=javascript-74010-cxa)
- * [Managed Identity](https://docs.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet&WT.mc_id=javascript-74010-cxa)
- * [Custom domain names and certificates](https://docs.microsoft.com/en-us/azure/container-apps/custom-domains-certificates?WT.mc_id=javascript-74010-cxa)
- * [Virtual Network injection](https://docs.microsoft.com/en-us/azure/container-apps/networking?WT.mc_id=javascript-74010-cxa)
- * [Platform observability](https://docs.microsoft.com/en-us/azure/container-apps/observability?tabs=bash&WT.mc_id=javascript-74010-cxa) : log streaming, console connect, Azure monitor 
+ * [Revisions](https://docs.microsoft.com/azure/container-apps/application-lifecycle-management?WT.mc_id=javascript-74010-cxa): immutable snapshot representative of a specific version of a container app which can take advantage of the [managed traffic splitting capability](https://docs.microsoft.com/azure/container-apps/revisions-manage?tabs=bash&WT.mc_id=javascript-74010-cxa) 
+ * [Health probes](https://docs.microsoft.com/azure/container-apps/health-probes?tabs=arm-template?WT.mc_id=javascript-74010-cxa): Based on [Kubernetes health probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/?WT.mc_id=javascript-74010-cxa) with support for Readiness, Liveness and Startup 
+ * [Built-in authentication](https://docs.microsoft.com/azure/container-apps/authentication-openid?WT.mc_id=javascript-74010-cxa)
+ * [Managed Identity](https://docs.microsoft.com/azure/container-apps/managed-identity?tabs=portal%2Cdotnet&WT.mc_id=javascript-74010-cxa)
+ * [Custom domain names and certificates](https://docs.microsoft.com/azure/container-apps/custom-domains-certificates?WT.mc_id=javascript-74010-cxa)
+ * [Virtual Network injection](https://docs.microsoft.com/azure/container-apps/networking?WT.mc_id=javascript-74010-cxa)
+ * [Platform observability](https://docs.microsoft.com/azure/container-apps/observability?tabs=bash&WT.mc_id=javascript-74010-cxa) : log streaming, console connect, Azure monitor 
  
 The ability to dynamically scale and support growing numbers of users, events, and requests is one of the core requirements for most cloud native, distributed applications. Azure Container Apps is purpose-built with this and other cloud native tenants in mind. 
 

@@ -182,7 +182,7 @@ To put it all together, let’s set up Entity clients to generate and manipulate
 
 ### Interacting with Entity
 
-Before going there, let’s talk briefly about how you can interact with an Entity. Entity interactions take one of two forms -- [calls and signals](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-entities?tabs=csharp#access-entities):
+Before going there, let’s talk briefly about how you can interact with an Entity. Entity interactions take one of two forms -- [calls and signals](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-entities?tabs=csharp#access-entities):
 
 Calling an entity is a two-way communication. You send an operation message to the entity and then wait for the response message before you continue. The response can be a result value or an error.
 Signaling an entity is a one-way (fire-and-forget) communication. You send an operation message but don’t wait for a response. You have the reassurance that the message will be delivered eventually, but you don’t know when and don’t know what the response is.

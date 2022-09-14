@@ -791,7 +791,7 @@ output fqdn string = containerApp.properties.configuration.ingress.fqdn
 
 The code for this specific sample application is largely the same whether or not Dapr is integrated. However, even with this simple app, there are a few benefits and configuration differences when using Dapr that are worth exploring. 
 
-In this scenario most of the changes are related to communication between the container apps. However, you can explore the full range of Dapr benefits by reading the [Dapr integration with Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml) article in the conceptual documentation.
+In this scenario most of the changes are related to communication between the container apps. However, you can explore the full range of Dapr benefits by reading the [Dapr integration with Azure Container Apps](https://docs.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml) article in the conceptual documentation.
 
 ### [Without Dapr](#tab/exclude-dapper)
 

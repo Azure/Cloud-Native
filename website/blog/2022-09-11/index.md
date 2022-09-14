@@ -130,4 +130,4 @@ Have fun scaling your containers!
 * [Set scaling rules in Azure Container Apps](https://docs.microsoft.com/azure/container-apps/scale-app)
 * [Kubernetes Event-driven Autoscaling (KEDA)](https://keda.sh/)
 * [KEDA Scalers](https://keda.sh/docs/scalers/)
-* [KEDA scalers conversion](https://docs.microsoft.com/en-us/azure/container-apps/scale-app#keda-scalers-conversion)
+* [KEDA scalers conversion](https://docs.microsoft.com/azure/container-apps/scale-app#keda-scalers-conversion)

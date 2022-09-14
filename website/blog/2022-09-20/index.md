@@ -64,7 +64,7 @@ Microsoft Graph uses webhook mechanism to track changes in resources and deliver
 
 If you'd like to track a large set of resources in a high frequency, you can use Azure Events Hubs instead of traditional webhooks to receive change notifications. Azure Event Hubs is a popular real-time events ingestion and distribution service built for scale.
 
-> Microsoft Graph Change Notifications can be also received by using Azure Event Grid that is currently available for Microsoft Partners. Please review the documentation for more information: [Partner Events overview for customers - Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/partner-events-overview)
+> Microsoft Graph Change Notifications can be also received by using Azure Event Grid that is currently available for Microsoft Partners. Please review the documentation for more information: [Partner Events overview for customers - Azure Event Grid](https://docs.microsoft.com/azure/event-grid/partner-events-overview)
 
 ## ⚒️ Exercise: Setup Azure Event Hubs and Key Vault 
 To get Microsoft Graph Change Notifications delivered to Azure Event Hubs, we'll have to setup Azure Event Hubs and Azure Key Vault. We'll use Azure Key Vault to access to Event Hubs connection string. 
@@ -209,7 +209,7 @@ To debug our onboarding experience, we'll need to create a new user in Azure Act
 
 ## 📚 Resources
 - [Microsoft Graph Fundamentals](https://aka.ms/learn-graph)
-- [Get change notifications delivered in different ways](https://docs.microsoft.com/en-us/graph/change-notifications-delivery)
-- [Real-time presence with Microsoft 365, Azure, and Power Platform](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/presence-microsoft-365-power-platform)
-- [Partner Events overview for customers - Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/partner-events-overview)
+- [Get change notifications delivered in different ways](https://docs.microsoft.com/graph/change-notifications-delivery)
+- [Real-time presence with Microsoft 365, Azure, and Power Platform](https://docs.microsoft.com/azure/architecture/solution-ideas/articles/presence-microsoft-365-power-platform)
+- [Partner Events overview for customers - Azure Event Grid](https://docs.microsoft.com/azure/event-grid/partner-events-overview)
 

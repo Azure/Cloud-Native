@@ -7,7 +7,7 @@ const CoreServices = [
   { 
     title: 'Azure Functions',
     svgpath: 'img/svg/azure-functions.svg',
-    link: "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview",
+    link: "https://docs.microsoft.com/azure/azure-functions/functions-overview",
     description: (
       <>
        Build event-driven serverless solutions with less code and infrastructure maintenance costs.
@@ -17,7 +17,7 @@ const CoreServices = [
   { 
     title: 'Azure Container Apps',
     svgpath: 'img/svg/azure-container-apps.svg',
-    link: "https://docs.microsoft.com/en-us/azure/container-apps/overview",
+    link: "https://docs.microsoft.com/azure/container-apps/overview",
     description: (
       <>
         Azure Container Apps enables you to run microservices and containerized applications on a serverless platform.
@@ -27,7 +27,7 @@ const CoreServices = [
   { 
     title: 'Azure Kubernetes Service',
     svgpath: 'img/svg/azure-kubernetes.svg',
-    link: "https://docs.microsoft.com/en-us/azure/aks/",
+    link: "https://docs.microsoft.com/azure/aks/",
     description: (
       <>
         Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster by offloading the operational overhead to Azure. 
@@ -60,7 +60,7 @@ const MoreServices = [
   {
     title: 'Kubernetes Event-Drive Autoscaling',
     svgpath: 'img/svg/azure-keda.svg',
-    link: "https://docs.microsoft.com/en-us/azure/aks/keda-about",
+    link: "https://docs.microsoft.com/azure/aks/keda-about",
     description: (
       <>
         A lightweight component for event-driven autoscaling of applications in a sustainable, cost-efficient manner.
@@ -70,7 +70,7 @@ const MoreServices = [
   {
     title: 'Azure Monitor',
     svgpath: 'img/svg/azure-monitor.svg',
-    link: "https://docs.microsoft.com/en-us/azure/azure-monitor/overview",
+    link: "https://docs.microsoft.com/azure/azure-monitor/overview",
     description: (
       <>
         Delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.. 
@@ -80,7 +80,7 @@ const MoreServices = [
   {
     title: 'Azure Static Web Apps',
     svgpath: 'img/svg/azure-swa.svg',
-    link: "https://docs.microsoft.com/en-us/azure/static-web-apps/",
+    link: "https://docs.microsoft.com/azure/static-web-apps/",
     description: (
       <>
         Azure Static Web Apps allows you to build modern web applications that automatically publish to the web as your code changes.
@@ -91,7 +91,7 @@ const MoreServices = [
   {
     title: 'Azure Event Grid',
     svgpath: 'img/svg/azure-event-grid.svg',
-    link: "https://docs.microsoft.com/en-us/azure/event-grid/",
+    link: "https://docs.microsoft.com/azure/event-grid/",
     description: (
       <>
         Event Grid is a highly scalable, serverless event broker that you can use to integrate applications using events..
@@ -101,7 +101,7 @@ const MoreServices = [
   {
     title: 'Azure Logic Apps',
     svgpath: 'img/svg/azure-logic-apps.svg',
-    link: "https://docs.microsoft.com/en-us/azure/logic-apps/",
+    link: "https://docs.microsoft.com/azure/logic-apps/",
     description: (
       <>
         Build automated scalable workflows to integrate your apps and data across cloud services and on-premises systems
@@ -111,7 +111,7 @@ const MoreServices = [
   {
     title: 'Azure App Insights',
     svgpath: 'img/svg/azure-app-insights.svg',
-    link: "https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+    link: "https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview",
     description: (
       <>
         A feature of Azure Monitor that provides extensible application performance management (APM) and monitoring for live web apps. 

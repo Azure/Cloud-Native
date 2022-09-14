@@ -15,6 +15,6 @@ They’re based on microservices architectures, use managed services, and take a
 ## Resources 
 
 Visit the Azure Architecture Center and
- * [Learn Application Architecture Fundamentals](https://docs.microsoft.com/en-us/azure/architecture/guide/?WT.mc_id=javascript-74010-ninarasi) to design your solution.
- * [Browse Azure Architecture](https://docs.microsoft.com/en-us/azure/architecture/browse/?WT.mc_id=javascript-74010-ninarasi) to view real-world usage examples.
- * [Explore Cloud Adoption Framework Guidance](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/?WT.mc_id=javascript-74010-ninarasi)
+ * [Learn Application Architecture Fundamentals](https://docs.microsoft.com/azure/architecture/guide/?WT.mc_id=javascript-74010-ninarasi) to design your solution.
+ * [Browse Azure Architecture](https://docs.microsoft.com/azure/architecture/browse/?WT.mc_id=javascript-74010-ninarasi) to view real-world usage examples.
+ * [Explore Cloud Adoption Framework Guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/?WT.mc_id=javascript-74010-ninarasi)

@@ -49,7 +49,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
 
 ---
  
-If you have been working with [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=javascript-74010-cxa) for a while, you may know Azure Functions is a serverless FaaS (Function as a Service) offered provided by Microsoft Azure, which is built for your key scenarios, including building web APIs, processing file uploads, responding to database changes, processing IoT data streams, managing message queues, and more.
+If you have been working with [Azure Functions](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=javascript-74010-cxa) for a while, you may know Azure Functions is a serverless FaaS (Function as a Service) offered provided by Microsoft Azure, which is built for your key scenarios, including building web APIs, processing file uploads, responding to database changes, processing IoT data streams, managing message queues, and more.
 
 
 ## Custom Handlers: What and Why
@@ -66,15 +66,15 @@ Let’s take a look at custom handlers and how it works.
   * The custom handler is a local HTTP web server. It executes the function code and returns a response payload to the Functions host. 
   * The Functions host passes data from the response to the function's output bindings which will be passed to the downstream stream services for data processing. 
   
-Check out [this article to know more about Azure functions custom handlers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-cxa).
+Check out [this article to know more about Azure functions custom handlers](https://docs.microsoft.com/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-cxa).
 
 ---
 
 ## Message processing with Custom Handlers
 
-[Message processing](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging?WT.mc_id=javascript-74010-cxa) is one of the key scenarios that Azure functions are trying to address. In the message-processing scenario, events are often collected in queues. These events can trigger Azure functions to execute a piece of business logic. 
+[Message processing](https://docs.microsoft.com/azure/architecture/guide/technology-choices/messaging?WT.mc_id=javascript-74010-cxa) is one of the key scenarios that Azure functions are trying to address. In the message-processing scenario, events are often collected in queues. These events can trigger Azure functions to execute a piece of business logic. 
 
-You can use the Service Bus trigger to respond to messages from an [Azure Service Bus queue](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview?WT.mc_id=javascript-74010-cxa) - it's then up to the Azure functions custom handlers to take further actions to process the messages. The process is described in the following diagram:
+You can use the Service Bus trigger to respond to messages from an [Azure Service Bus queue](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview?WT.mc_id=javascript-74010-cxa) - it's then up to the Azure functions custom handlers to take further actions to process the messages. The process is described in the following diagram:
 
 ![Building Serverless Go Applications with Azure functions custom handlers](./img/melony-processing.png)
 
@@ -94,7 +94,7 @@ In Azure function, the `function.json` defines the function's trigger, input and
 }
 ```
 
-You can add a binding definition in the function.json to write the output to a database or other locations of your desire. [Supported bindings can be found here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp#add-bindings-to-a-function&WT.mc_id=javascript-74010-cxa).
+You can add a binding definition in the function.json to write the output to a database or other locations of your desire. [Supported bindings can be found here](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#add-bindings-to-a-function&WT.mc_id=javascript-74010-cxa).
 
 As we’re programming in Go, so we need to set the value of `defaultExecutablePath` to handler in the `customHandler.description` section in the `host.json` file.
 
@@ -165,7 +165,7 @@ Let’s go back to Azure portal portal the events see how those messages in Azur
 
 ![Monitoring Serverless Go Applications with Azure functions custom handlers](./img/melony-monitoring.png)
 
-Check out [this article about monitoring Azure Service bus](https://docs.microsoft.com/en-us/azure/service-bus-messaging/monitor-service-bus?WT.mc_id=javascript-74010-cxa) for further information.
+Check out [this article about monitoring Azure Service bus](https://docs.microsoft.com/azure/service-bus-messaging/monitor-service-bus?WT.mc_id=javascript-74010-cxa) for further information.
 
 ## Next steps
 
@@ -175,8 +175,8 @@ Thanks for following along, we’re looking forward to hearing your feedback.  A
 :::info RESOURCES 
 Start to build your serverless applications with custom handlers, check out the official documentation:
 
- * [Getting started with Azure functions custom handlers](https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-cxa) 
- * [Create a Go or Rust function in Azure using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-other?tabs=go%2Cwindows&WT.mc_id=javascript-74010-cxa)
+ * [Getting started with Azure functions custom handlers](https://docs.microsoft.com/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-cxa) 
+ * [Create a Go or Rust function in Azure using Visual Studio Code](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-other?tabs=go%2Cwindows&WT.mc_id=javascript-74010-cxa)
 :::
 
 Life is a journey of learning.  Let’s stay tuned!

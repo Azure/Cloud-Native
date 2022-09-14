@@ -53,13 +53,13 @@ _Today_ we'll look at developing Functions app with a _different_ programming la
 
 ## Developer Guidance
 
-If you're a Java developer new to serverless on Azure, start by exploring the [Azure Functions Java Developer Guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption). It covers: 
- * Quickstarts with [Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-java) and [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-java?tabs=bash%2Cazure-cli%2Cbrowser)
- * Building with Maven-based tooling for [Gradle](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-java-gradle), [Eclipse](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-maven-eclipse) & [IntelliJ IDEA](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-maven-intellij)
- * Exploring [project scaffolding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#project-scaffolding) & [JDK runtimes](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#jdk-runtime-availability-and-support) (Java 8 and Java 11)
- * Using [Java annotations for Triggers, Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#triggers-and-annotations) - with [reference](https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.functions.annotation?view=azure-java-stable) docs.
- * Adopting [best practices](https://docs.microsoft.com/en-us/azure/azure-functions/functions-best-practices?tabs=java) for hosting, reliability and efficiency.
- * Java [code samples](https://docs.microsoft.com/en-us/samples/azure-samples/azure-functions-samples-java/azure-functions-java/) and [integration tutorials](https://docs.microsoft.com/en-us/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
+If you're a Java developer new to serverless on Azure, start by exploring the [Azure Functions Java Developer Guide](https://docs.microsoft.com/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption). It covers: 
+ * Quickstarts with [Visual Studio Code](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-java) and [Azure CLI](https://docs.microsoft.com/azure/azure-functions/create-first-function-cli-java?tabs=bash%2Cazure-cli%2Cbrowser)
+ * Building with Maven-based tooling for [Gradle](https://docs.microsoft.com/azure/azure-functions/functions-create-first-java-gradle), [Eclipse](https://docs.microsoft.com/azure/azure-functions/functions-create-maven-eclipse) & [IntelliJ IDEA](https://docs.microsoft.com/azure/azure-functions/functions-create-maven-intellij)
+ * Exploring [project scaffolding](https://docs.microsoft.com/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#project-scaffolding) & [JDK runtimes](https://docs.microsoft.com/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#jdk-runtime-availability-and-support) (Java 8 and Java 11)
+ * Using [Java annotations for Triggers, Bindings](https://docs.microsoft.com/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption#triggers-and-annotations) - with [reference](https://docs.microsoft.com/java/api/com.microsoft.azure.functions.annotation?view=azure-java-stable) docs.
+ * Adopting [best practices](https://docs.microsoft.com/azure/azure-functions/functions-best-practices?tabs=java) for hosting, reliability and efficiency.
+ * Java [code samples](https://docs.microsoft.com/samples/azure-samples/azure-functions-samples-java/azure-functions-java/) and [integration tutorials](https://docs.microsoft.com/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
 
 In this blog post, we'll dive into one quickstart, and discuss other resources briefly, for awareness! Do check out the recommended exercises and resources for self-study! 
 
@@ -214,13 +214,13 @@ So, where can you go from here? The example above used a familiar `HTTP Trigger`
 
 ### Other Triggers, Bindings
 
-Check out [Azure Functions Samples In Java](https://docs.microsoft.com/en-us/samples/azure-samples/azure-functions-samples-java/azure-functions-java/) for samples (and short use cases) that highlight other triggers - with code! This includes triggers to integrate with CosmosDB, Blob Storage, Event Grid, Event Hub, Kafka and more.
+Check out [Azure Functions Samples In Java](https://docs.microsoft.com/samples/azure-samples/azure-functions-samples-java/azure-functions-java/) for samples (and short use cases) that highlight other triggers - with code! This includes triggers to integrate with CosmosDB, Blob Storage, Event Grid, Event Hub, Kafka and more.
 
 ### Scenario with Integrations
 
 Once you've tried out the samples, try building an end-to-end scenario by using these triggers to integrate seamlessly with other Services. Here are a couple of useful tutorials:
- * Azure Functions with [Event Hub trigger and CosmosDB output binding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
- * GitHub Star Count app with [SignalR trigger](https://docs.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-azure-functions-java?toc=%2Fazure%2Fazure-functions%2Ftoc.json)
+ * Azure Functions with [Event Hub trigger and CosmosDB output binding](https://docs.microsoft.com/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
+ * GitHub Star Count app with [SignalR trigger](https://docs.microsoft.com/azure/azure-signalr/signalr-quickstart-azure-functions-java?toc=%2Fazure%2Fazure-functions%2Ftoc.json)
 
 
 ## Exercise
@@ -230,9 +230,9 @@ Time to put this into action and validate your development workflow:
  * Complete the [Develop Java serverless Functions on Azure using Maven](https://docs.microsoft.com/learn/modules/develop-azure-functions-app-with-maven-plugin/) module
 
 ## Resources
- * [Azure Functions: Java Quickstarts](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-java)
- * [Best Practices for Java Apps On Azure](https://docs.microsoft.com/en-us/learn/paths/best-practices-java-azure/)
+ * [Azure Functions: Java Quickstarts](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-java)
+ * [Best Practices for Java Apps On Azure](https://docs.microsoft.com/learn/paths/best-practices-java-azure/)
  * [Java at Microsoft](https://developer.microsoft.com/en-us/java/) 
- * [Java with EventHub Trigger and CosmosDB Binding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
- * [Java Integrations: Azure Functions and SignalR](https://docs.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-azure-functions-java?toc=%2Fazure%2Fazure-functions%2Ftoc.json)
- * [Java Samples: Azure Functions](https://docs.microsoft.com/en-us/samples/browse/?products=azure-functions&languages=java)
+ * [Java with EventHub Trigger and CosmosDB Binding](https://docs.microsoft.com/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
+ * [Java Integrations: Azure Functions and SignalR](https://docs.microsoft.com/azure/azure-signalr/signalr-quickstart-azure-functions-java?toc=%2Fazure%2Fazure-functions%2Ftoc.json)
+ * [Java Samples: Azure Functions](https://docs.microsoft.com/samples/browse/?products=azure-functions&languages=java)

@@ -13,6 +13,6 @@ As developers, we have our favorite programming languages and developer workflow
 * [Build with .NET](https://azure.microsoft.com/en-us/resources/developers/net/?WT.mc_id=javascript-74010-ninarasi)
 * [Build with Python](https://azure.microsoft.com/en-us/resources/developers/python/?WT.mc_id=javascript-74010-ninarasi)
 * [Build with JavaScript/Node.js](https://azure.microsoft.com/en-us/resources/developers/nodejs/?WT.mc_id=javascript-74010-ninarasi)
-* [Build with other languages](https://docs.microsoft.com/en-us/azure/developer/?WT.mc_id=javascript-74010-ninarasi)
+* [Build with other languages](https://docs.microsoft.com/azure/developer/?WT.mc_id=javascript-74010-ninarasi)
 
 We'll keep the page updated with more resources throughout September!

@@ -98,7 +98,7 @@ First, make sure you have your development environment setup and configured.
  5. **VS Code Docker extension** - [Install](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
  6. **Dapr CLI. Details on installation on this post too** - [Install](https://docs.dapr.io/getting-started/install-dapr-cli/)
  7. **VS Code Dapr extension. Depends on Dapr CLI** - [Install](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-dapr)
- 8. **Azure CLI** - [Install](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+ 8. **Azure CLI** - [Install](https://docs.microsoft.com/cli/azure/install-azure-cli)
 :::
 
 ### 1. Create the service project (Web API)
@@ -319,7 +319,7 @@ Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub 
 
 
 ### 6. Deploy app to Azure Container Apps
-We will follow few steps in order to deploy the service `Orders.Processor` to Azure Container Apps, but we need to do one addition before deploying, we have to create a component file for Azure Service Bus which meets the [specs defined by Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#configure-dapr-components).
+We will follow few steps in order to deploy the service `Orders.Processor` to Azure Container Apps, but we need to do one addition before deploying, we have to create a component file for Azure Service Bus which meets the [specs defined by Azure Container Apps](https://docs.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#configure-dapr-components).
       
   1. Create a new yaml file named `pubsub-svcbus.yaml` and add it under folder `components` (folder created earlier), use the file content below:
       ```yaml
@@ -468,7 +468,7 @@ So far, the published posts below, and I'm publishing more posts on weekly basis
 - _Use IaC to provision Azure Container Apps Environment with Bicep – Part 11_
 
 ## Resources
-- [Azure Container Apps documentation](https://docs.microsoft.com/en-us/azure/container-apps/)
+- [Azure Container Apps documentation](https://docs.microsoft.com/azure/container-apps/)
 - [Getting started with Dapr](https://docs.dapr.io/getting-started/)
-- [Dapr for .NET Developers](https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/)
-- [az containerapp cli](https://docs.microsoft.com/en-us/cli/azure/containerapp?view=azure-cli-latest)
+- [Dapr for .NET Developers](https://docs.microsoft.com/dotnet/architecture/dapr-for-net-developers/)
+- [az containerapp cli](https://docs.microsoft.com/cli/azure/containerapp?view=azure-cli-latest)
