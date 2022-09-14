@@ -193,11 +193,11 @@ const config = {
         links: [
           {
             label: `Cloud Native`,
-            to: 'https://azure.microsoft.com/en-us/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi'
+            to: 'https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
             label: `Serverless`,
-            to: 'https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi'
+            to: 'https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
             label: '#30DaysOf',
@@ -205,7 +205,7 @@ const config = {
           },
           {
             label: 'Java',
-            to: 'https://developer.microsoft.com/en-us/java/?WT.mc_id=javascript-74010-ninarasi',
+            to: 'https://developer.microsoft.com/java/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: 'JavaScript',
@@ -213,7 +213,7 @@ const config = {
           },
           {
             label: '.NET',
-            to: 'https://dotnet.microsoft.com/en-us/?WT.mc_id=javascript-74010-ninarasi',
+            to: 'https://dotnet.microsoft.com/?WT.mc_id=javascript-74010-ninarasi',
           },
           {
             label: 'Python',
@@ -221,7 +221,7 @@ const config = {
           },
           {
             label: 'Privacy Statement ',
-            to: 'https://privacy.microsoft.com/en-us/privacystatement',
+            to: 'https://privacy.microsoft.com/privacystatement',
           },
           { 
            label: `Copyright © ${new Date().getFullYear()} Microsoft`,

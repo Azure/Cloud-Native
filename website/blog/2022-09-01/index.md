@@ -59,8 +59,8 @@ We'll go into more details about **#30DaysOfServerless** in this post - don't fo
 What are 3 things you can do today, to jumpstart your learning journey?
 
  * **Register** for live Q&A sessions (free, online)
-    - Sep 15 - [Ask The Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/events/17000/)
-    - Sep 29 - [Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/17000/)
+    - Sep 15 - [Ask The Expert: Azure Functions](https://reactor.microsoft.com/reactor/events/17000/)
+    - Sep 29 - [Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/reactor/events/17000/)
   * **Register** for the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) - 30 days to complete it!
  * **Register** for the [Serverless Hacks Challenge](https://docs.microsoft.com/events/learn-events/reactor-serverlessseptember/?wt.mc_id=eventspg_16946_webpage_reactor&WT.mc_id=javascript-74010-ninarasi) office hours (weekly)
 
@@ -72,11 +72,11 @@ What are 3 things you can do today, to jumpstart your learning journey?
 
 [#30DaysOfServerless](/serverless-september/30DaysOfServerless) is a month-long series of daily blog posts grouped into 4 themed weeks - taking you from core concepts to end-to-end solution examples in 30 days. Each article will be short (5-8 mins reading time) and provide exercises and resources to help you reinforce learnings and take next steps.
 
-This series focuses on the [Serverless On Azure](https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi) learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
+This series focuses on the [Serverless On Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi) learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
  * **Week 1:** Get started with serverless using [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=javascript-74010-ninarasi) 
  * **Week 2:** Build & deploy microservices with [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview?WT.mc_id=javascript-74010-ninarasi) and [Dapr](https://dapr.io/?WT.mc_id=javascript-74010-ninarasi).
  * **Week 3:** Streamline integrations using [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=javascript-74010-ninarasi) and [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview?WT.mc_id=javascript-74010-ninarasi)
- * **Week 4:** Develop End-to-End solutions with [Serverless on Azure](https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi)
+ * **Week 4:** Develop End-to-End solutions with [Serverless on Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi)
 
 ![](./img/banner.png)
 

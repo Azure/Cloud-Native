@@ -10,13 +10,13 @@ Welcome to the Cloud Native on Azure website, a central location for hosting con
 
 
 ## About Cloud Native
-[Cloud Native applications](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/) are built from the ground up—optimized for cloud scale and performance. They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. 
+[Cloud Native applications](https://azure.microsoft.com/solutions/cloud-native-apps/) are built from the ground up—optimized for cloud scale and performance. They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. 
 
-Learn more about how to [build cloud-native applications in Azure](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/).
+Learn more about how to [build cloud-native applications in Azure](https://azure.microsoft.com/solutions/cloud-native-apps/).
 
 ## Serverless on Azure
 
-Learn to go [Serverless on Azure](https://azure.microsoft.com/en-us/solutions/serverless/) and maximize core business value by minimizing the time and resources you spend on infrastructure-related requirements. 
+Learn to go [Serverless on Azure](https://azure.microsoft.com/solutions/serverless/) and maximize core business value by minimizing the time and resources you spend on infrastructure-related requirements. 
 
 Use fully managed, end-to-end Azure serverless solutions to boost developer productivity, optimize resources, and accelerate the pace of innovation.
 

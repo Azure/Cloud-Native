@@ -147,4 +147,4 @@ For additional insight into the dapr integration visit aka.ms/aca-dapr.
  
 Backed by and integrated with powerful cloud native technologies, Azure Container Apps strives to make developers productive, while reducing the operational overhead and learning curve that typically accompanies adopting a cloud-native strategy. 
 
-If you are interested in building resilient, portable and highly-scalable apps visit [Azure Container Apps | Microsoft Azure](https://azure.microsoft.com/en-us/services/container-apps/) today!
+If you are interested in building resilient, portable and highly-scalable apps visit [Azure Container Apps | Microsoft Azure](https://azure.microsoft.com/services/container-apps/) today!

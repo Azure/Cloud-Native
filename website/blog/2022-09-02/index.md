@@ -65,7 +65,7 @@ Azure has [this useful flowchart](https://docs.microsoft.com/azure/architecture/
  * **Platform as a Service (PaaS)** - where you use a provider-_managed_ hosting environment like Azure Container Apps.
  * **Functions as a Service (FaaS)** - where you forget about hosting environments and simply _deploy your code_ for the provider to run.
 
-Here, "serverless" compute refers to hosting options where we (as developers) can focus on building apps _without having to manage the infrastructure_. See [serverless compute options on Azure](https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi ) for more information.
+Here, "serverless" compute refers to hosting options where we (as developers) can focus on building apps _without having to manage the infrastructure_. See [serverless compute options on Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi ) for more information.
 
 ---
 

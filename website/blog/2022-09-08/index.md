@@ -97,7 +97,7 @@ _Or perhaps you prefer to learn core concepts with code in a structured learning
 
 ## What's Next? Hello, Cloud Native!
 
-So where to next? In Week 2 we turn our attention from _Functions-as-a-Service_ to building more complex backends using _Containers and Microservices_. We'll focus on two core technologies - [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/?WT.mc_id=javascript-74010-ninarasi) and [Dapr](https://docs.dapr.io/?WT.mc_id=javascript-74010-ninarasi) (Distributed Application Runtime) - both key components of a broader vision around **[Building Cloud Native Applications in Azure](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)**.
+So where to next? In Week 2 we turn our attention from _Functions-as-a-Service_ to building more complex backends using _Containers and Microservices_. We'll focus on two core technologies - [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/?WT.mc_id=javascript-74010-ninarasi) and [Dapr](https://docs.dapr.io/?WT.mc_id=javascript-74010-ninarasi) (Distributed Application Runtime) - both key components of a broader vision around **[Building Cloud Native Applications in Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)**.
 
 What is Cloud Native you ask? 
 

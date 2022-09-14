@@ -32,8 +32,8 @@ This year, we created _this_ website (shortcut: [https://aka.ms/serverless-septe
 
 Start by bookmarking these two sites:
 
- * [Build Cloud Native Apps on Azure](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)
- * [Go Serverless On Azure](https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi)
+ * [Build Cloud Native Apps on Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)
+ * [Go Serverless On Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi)
 
 
 ### More Options

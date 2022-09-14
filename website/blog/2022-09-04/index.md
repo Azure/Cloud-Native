@@ -45,7 +45,7 @@ _Today_ we'll look at developing Functions app with a _different_ programming la
  * **Usage Tutorials**: Integrate App with other Azure Services
  * **Azure Samples**: Explore samples for other triggers, bindings
  * **Exercise:** [Develop Java serverless Functions on Azure using Maven](https://docs.microsoft.com/learn/modules/develop-azure-functions-app-with-maven-plugin/) 
- * **Resources**: Check out [Java at Microsoft](https://developer.microsoft.com/en-us/java/) and use [Java Your Way](https://aka.ms/JavaYourWay)!
+ * **Resources**: Check out [Java at Microsoft](https://developer.microsoft.com/java/) and use [Java Your Way](https://aka.ms/JavaYourWay)!
 
 ![](./img/banner.png)
 
@@ -69,7 +69,7 @@ In this blog post, we'll dive into one quickstart, and discuss other resources b
 
 In today's post, we'll walk through the [Quickstart: Azure Functions](https://docs.microsoft.com/en-gb/azure/azure-functions/create-first-function-vs-code-java) tutorial using Visual Studio Code. In the process, we'll setup our development environment with the relevant command-line tools and VS Code extensions to make building Functions app simpler.
 
-_Note: Completing this exercise may incur a a cost of a few USD cents based on your Azure subscription. Explore [pricing details](https://azure.microsoft.com/en-us/pricing/details/functions/#pricing) to learn more_.
+_Note: Completing this exercise may incur a a cost of a few USD cents based on your Azure subscription. Explore [pricing details](https://azure.microsoft.com/pricing/details/functions/#pricing) to learn more_.
 
 First, make sure you have your development environment setup and configured.
 
@@ -232,7 +232,7 @@ Time to put this into action and validate your development workflow:
 ## Resources
  * [Azure Functions: Java Quickstarts](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-java)
  * [Best Practices for Java Apps On Azure](https://docs.microsoft.com/learn/paths/best-practices-java-azure/)
- * [Java at Microsoft](https://developer.microsoft.com/en-us/java/) 
+ * [Java at Microsoft](https://developer.microsoft.com/java/) 
  * [Java with EventHub Trigger and CosmosDB Binding](https://docs.microsoft.com/azure/azure-functions/functions-event-hub-cosmos-db?tabs=bash)
  * [Java Integrations: Azure Functions and SignalR](https://docs.microsoft.com/azure/azure-signalr/signalr-quickstart-azure-functions-java?toc=%2Fazure%2Fazure-functions%2Ftoc.json)
  * [Java Samples: Azure Functions](https://docs.microsoft.com/samples/browse/?products=azure-functions&languages=java)

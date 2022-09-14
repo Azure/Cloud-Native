@@ -92,7 +92,7 @@ First, make sure you have your development environment setup and configured.
 :::info PRE-REQUISITES
 
  1. **An Azure account with an active subscription** - [Create an account for free](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio)
- 2. **dotnet 6.0** - [Install](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+ 2. **dotnet 6.0** - [Install](https://dotnet.microsoft.com/download/dotnet/6.0)
  3. **Docker Desktop** - [Install](https://docs.docker.com/desktop/install/windows-install/) 
  4. **Visual Studio Code** - [Install](https://code.visualstudio.com/)
  5. **VS Code Docker extension** - [Install](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)

@@ -27,8 +27,8 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 12  | 🚀 Building stateful applications with Azure durable functions  | Apps On Azure|
 | Sep 12 | 🚀 Journey to the cloud with Azure Container Apps | Apps On Azure |
 | Sep 14 | 🏆 **Hacks:** [How to DevOps and Serverless the Right Way](https://developer.microsoft.com/reactor/events/16958?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now |
-| Sep 15 | 🎤 **ATE: Azure Functions** [Live Q&A with Product Team](https://reactor.microsoft.com/en-us/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now|
-| Sep 16 | [Containers, Serverless & IoT Meetup](https://developer.microsoft.com/en-us/reactor/events/16727/) - In-Person, Online |🌟 Register Now |
+| Sep 15 | 🎤 **ATE: Azure Functions** [Live Q&A with Product Team](https://reactor.microsoft.com/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now|
+| Sep 16 | [Containers, Serverless & IoT Meetup](https://developer.microsoft.com/reactor/events/16727/) - In-Person, Online |🌟 Register Now |
 | Sep 16 | 🚀 Error Handling with Kafka extension - and what's new with the Kafka trigger  | Apps On Azure |
 | Sep 16 | ✍🏽 [Week 3: Serverless Integrations](/serverless-september/30DaysOfServerless#serverless-integrations) | Website  |
 | Sep 19 | 🚀 Azure Container Apps observability | Apps On Azure |
@@ -39,8 +39,8 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 26 | 🚀 End-to-End solution development with code | Apps on Azure |
 | Sep 28 |  **Webinar:** [Java Azure Functions with Kafka](https://info.microsoft.com/ww-landing-build-serverless-apis-with-azure-functions-kafka-extension.html?lcid=en-us&WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now |
 | Sep 28 | 🏆 **Hacks:**  [So you want to migrate your project to Serverless?](https://developer.microsoft.com/reactor/events/16960?WT.mc_id=javascript-74010-ninarasi)  | 🌟 Register Now |
-| Sep 29 | 🎤 **ATE: Azure Container Apps** [Live Q&A with Product Team](https://reactor.microsoft.com/en-us/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Here|
-| Sep 29 | [Serverless Meetup: #SamosaChai.NET ](https://developer.microsoft.com/en-us/reactor/events/17020/) = Livestream  |🌟 Register Now  |
+| Sep 29 | 🎤 **ATE: Azure Container Apps** [Live Q&A with Product Team](https://reactor.microsoft.com/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Here|
+| Sep 29 | [Serverless Meetup: #SamosaChai.NET ](https://developer.microsoft.com/reactor/events/17020/) = Livestream  |🌟 Register Now  |
 | Sep 30 | 🎯 **Cloud Skills Challenge**: [Last Day To Complete It!](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)| [Microsoft Learn](https://docs.microsoft.com/users/leannturpin-6614/collections/kjqpsnzg4opdo2?WT.mc_id=javascript-74010-ninarasi) |
 
 ---

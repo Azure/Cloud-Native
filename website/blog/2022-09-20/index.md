@@ -45,7 +45,7 @@ Every day millions of people spend their precious time in productivity tools. Wh
 
 Following pre-requisites are recommended:
 - [Microsoft 365 Developer Program account](https://aka.ms/m365developers)
-- [Microsoft Azure Subscription](https://azure.microsoft.com/en-us/free/)
+- [Microsoft Azure Subscription](https://azure.microsoft.com/free/)
 
 ## ✨ The power of Microsoft Graph
 Microsoft Graph is the gateway to data and intelligence in Microsoft 365 platform. Microsoft Graph exploses Rest APIs and client libraries to access data across Microsoft 365 core services such as Calendar, Teams, To Do, Outlook, People, Planner, OneDrive, OneNote and more.

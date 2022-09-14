@@ -104,7 +104,7 @@ Next, we create the code that runs when the function is called.
 
 ### Connecting to the Database and our Source
 
-> Disclaimer: The data that we're pulling is for educational purposes only. This is not meant to be a production level application. You're welcome play with this project but ensure that you're using the data [in compliance with Esri](https://www.esri.com/en-us/legal/overview).
+> Disclaimer: The data that we're pulling is for educational purposes only. This is not meant to be a production level application. You're welcome play with this project but ensure that you're using the data [in compliance with Esri](https://www.esri.com/legal/overview).
 
 
 Our function does two important things. 

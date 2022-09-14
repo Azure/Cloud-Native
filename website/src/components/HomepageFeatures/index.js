@@ -37,7 +37,7 @@ const CoreServices = [
   {
     title: 'Azure RedHat Open Shift',
     svgpath: 'img/svg/azure-openshift.svg',
-    link: "https://azure.microsoft.com/en-us/services/openshift/",
+    link: "https://azure.microsoft.com/services/openshift/",
     description: (
       <>
         Use highly available, fully managed OpenShift clusters on demand - monitored and operated jointly by Microsoft and Red Hat

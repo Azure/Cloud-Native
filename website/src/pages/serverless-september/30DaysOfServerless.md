@@ -8,7 +8,7 @@ title: 30 Days Of Serverless
 
 ## Welcome! 
 
-This is a tentative roadmap for #30DaysOfServerless, a daily content series planned for the upcoming **Serverless September** project. It's a month-long celebration of [Serverless On Azure](https://azure.microsoft.com/en-us/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi) with a curated journey that takes you from understanding core technologies to developing solutions for end-to-end scenarios - organized into 4 stages:
+This is a tentative roadmap for #30DaysOfServerless, a daily content series planned for the upcoming **Serverless September** project. It's a month-long celebration of [Serverless On Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi) with a curated journey that takes you from understanding core technologies to developing solutions for end-to-end scenarios - organized into 4 stages:
 
  * **Go Serverless** with Azure Functions
  * **Deploy Microservices** with Azure Container Apps
@@ -37,7 +37,7 @@ _Welcome to our September Serverless kickoff!!_ Our Serverless September officia
 
 :::success SERVERLESS SEPTEMBER INITIATIVES
  * [**30DaysOfServerless**](/serverless-september/30DaysOfServerless) - daily blog posts on this site and [dev.to/azure](https://dev.to/azure)
- * [**Serverless Hacks**](/serverless-september/ServerlessHacks) - weekly hack sessions at [Microsoft Reactor](https://developer.microsoft.com/en-us/reactor/?WT.mc_id=javascript-74010-ninarasi)
+ * [**Serverless Hacks**](/serverless-september/ServerlessHacks) - weekly hack sessions at [Microsoft Reactor](https://developer.microsoft.com/reactor/?WT.mc_id=javascript-74010-ninarasi)
  * [**Zero To Hero**](/serverless-september/ZeroToHero) - 4-part blog from Product Engineering teams on [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog?WT.mc_id=javascript-74010-ninarasi)
  * [**Cloud Skills Challenge**](/serverless-september/CloudSkills) - Interactive skilling [competition](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) that can help with certification.
  * [**Ask The Expert**](/serverless-september/AskTheExpert) - Live 30 minute broadcast to [get questions answered](https://docs.microsoft.com/shows/ask-the-expert/?WT.mc_id=javascript-74010-ninarasi) by product experts 
