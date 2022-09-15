@@ -179,6 +179,6 @@ To learn more, visit [Azure Container Apps | Microsoft Azure](https://azure.micr
 
 :::info ASK THE EXPERT: LIVE Q&A
 The Azure Container Apps team will answer questions live on **September 29**. 
- * [Sign up to attend](https://reactor.microsoft.com/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) for live Q&A with the team
+ * [Sign up to attend](https://reactor.microsoft.com/en-us/reactor/events/17004/?WT.mc_id=javascript-74010-ninarasi) for live Q&A with the team
  * [submit your questions](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=ask+the+expert&template=---ask-the-expert-.md&title=%5BAsk+The+Expert%5D++) ahead of time, for prioritization.
 :::

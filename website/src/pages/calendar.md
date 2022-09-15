@@ -37,7 +37,7 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 23 | ✍🏽 [Week 4: Serverless End-to-End](/serverless-september/30DaysOfServerless#serverless-end-to-end) | Website   |
 | Sep 23 | [#Learnathon - Azure Functions](https://www.meetup.com/microsoft-reactor-bengaluru/events/288155698/) - In Person, Online| 🌟 Register Now |
 | Sep 26 | 🚀 End-to-End solution development with code | Apps on Azure |
-| Sep 28 |  **Webinar:** [Java Azure Functions with Kafka](https://info.microsoft.com/ww-landing-build-serverless-apis-with-azure-functions-kafka-extension.html?lcid=en-us&WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now |
+| Sep 28 |  **Webinar:** [Java Azure Functions with Kafka](https://info.microsoft.com/ww-landing-build-serverless-apis-with-azure-functions-kafka-extension.html?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now |
 | Sep 28 | 🏆 **Hacks:**  [So you want to migrate your project to Serverless?](https://developer.microsoft.com/reactor/events/16960?WT.mc_id=javascript-74010-ninarasi)  | 🌟 Register Now |
 | Sep 29 | 🎤 **ATE: Azure Container Apps** [Live Q&A with Product Team](https://reactor.microsoft.com/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Here|
 | Sep 29 | [Serverless Meetup: #SamosaChai.NET ](https://developer.microsoft.com/reactor/events/17020/) = Livestream  |🌟 Register Now  |
