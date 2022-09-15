@@ -29,13 +29,13 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 14 | 🏆 **Hacks:** [How to DevOps and Serverless the Right Way](https://developer.microsoft.com/reactor/events/16958?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now |
 | Sep 15 | 🎤 **ATE: Azure Functions** [Live Q&A with Product Team](https://reactor.microsoft.com/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now|
 | Sep 16 | [Containers, Serverless & IoT Meetup](https://developer.microsoft.com/reactor/events/16727/) - In-Person, Online |🌟 Register Now |
-| Sep 16 | 🚀 Error Handling with Kafka extension - and what's new with the Kafka trigger  | Apps On Azure |
 | Sep 16 | ✍🏽 [Week 3: Serverless Integrations](/serverless-september/30DaysOfServerless#serverless-integrations) | Website  |
 | Sep 19 | 🚀 Azure Container Apps observability | Apps On Azure |
+| Sep 19 | 🚀 Error Handling with Kafka extension - and what's new with the Kafka trigger  | Apps On Azure |
 | Sep 21 | 🏆 **Hacks:**  [The Serverless Project that Got Me Promoted!](https://developer.microsoft.com/reactor/events/16959?WT.mc_id=javascript-74010-ninarasi)  | 🌟 Register Now |
-| Sep 23 | 🚀 How to monitor and troubleshoot applications in Azure Functions | Apps On Azure |
 | Sep 23 | ✍🏽 [Week 4: Serverless End-to-End](/serverless-september/30DaysOfServerless#serverless-end-to-end) | Website   |
 | Sep 23 | [#Learnathon - Azure Functions](https://www.meetup.com/microsoft-reactor-bengaluru/events/288155698/) - In Person, Online| 🌟 Register Now |
+| Sep 26 | 🚀 How to monitor and troubleshoot applications in Azure Functions | Apps On Azure |
 | Sep 26 | 🚀 End-to-End solution development with code | Apps on Azure |
 | Sep 28 |  **Webinar:** [Java Azure Functions with Kafka](https://info.microsoft.com/ww-landing-build-serverless-apis-with-azure-functions-kafka-extension.html?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now |
 | Sep 28 | 🏆 **Hacks:**  [So you want to migrate your project to Serverless?](https://developer.microsoft.com/reactor/events/16960?WT.mc_id=javascript-74010-ninarasi)  | 🌟 Register Now |
