@@ -8,7 +8,7 @@ assignees: nitya
 ---
 
 ## What Product(s) Are You Talking About? 
-(ex: Azure Functions)
+(ex: Azure Functions or Azure Container Apps)
 
 ## What is the Question?
 (ex: Do you have plans to support X? How do I implement Y using this service?)
