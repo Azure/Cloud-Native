@@ -12,14 +12,13 @@ description: "<FIXME>"
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, keda, autoscaling]
 ---
 
-<!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/11-scaling-container-apps" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Scaling Your Container Apps" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Scaling Your Container Apps" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,21 +26,23 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, keda,
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/08-functions-azure" />
+    href="https://azure.github.io/Cloud-Native/blog/11-scaling-container-apps" />
 </head>
 
 ---
 
 Welcome to `Day 11` of #30DaysOfServerless!
 
+Yesterday we explored Azure Container Concepts related to environments, networking and microservices communication - and illustrated these with a deployment example. Today, we turn our attention to _scaling_ your container apps with demand.
+
 ---
 
 ## What We'll Cover
- * Section 1
- * Section 2
- * Section 3
- * Section 4
- * Exercise: Try this yourself!
+ * What makes ACA Serverless?
+ * What is Keda?
+ * Scaling Your ACA
+ * ACA Scaling In Action
+ * Exercise: Explore [azure-opensource-labs](https://aka.ms/oss-labs) examples
  * Resources: For self-study!
 
 ![](./img/banner.png)
