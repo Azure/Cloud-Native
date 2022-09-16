@@ -295,7 +295,8 @@ Now we should be ready to run our service locally with Dapr Sidecar and Pub/Sub 
     - components-path: path to the Dapr component(s) folder.
     For a full list of properties, you can check this [link](https://docs.dapr.io/reference/cli/dapr-run/)
 
-    If all is working as expected, from VS Code, you can open Dapr extension and you should see our application `orders-processor` up and running as the image below: 
+    If all is working as expected, from VS Code, you can open Dapr extension and you should see our application `orders-processor` up and running as the image below:
+    
     ![Image showing Dapr Application up and Running](img/DaprRunning.jpg)
 
 2. To publish a message to the topic `orderreceivedtopic` we can use Dapr extension: 
@@ -415,7 +416,7 @@ We will follow few steps in order to deploy the service `Orders.Processor` to Az
         }
       ```
       - If all is configured correctly, you should start seeing the information logs in Container Apps Log stream, similar to the images below
-      ![Image showing publishing messages from Azure Service](img/SvsBusPublishMessage-s.jpg)
+      ![Image showing publishing messages from Azure Service](img/SvsBusPublishMessage-S.jpg)
       - Information logs on the `Log stream` of the deployed Azure Container App
       ![Image showing ACA Log Stream](img/ACA-Logstream-s.jpg)
 
