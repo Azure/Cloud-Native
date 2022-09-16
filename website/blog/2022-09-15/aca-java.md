@@ -50,14 +50,10 @@ Welcome to `Day 15` of #30DaysOfServerless!
 ## Deploying Java containers in the cloud
 
 
-[Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview) enable application code packaged in containers to run and scale without the overhead of managing cloud infrastructure and container orchestration.
-[GitHub Actions](https://docs.github.com/en/actions) are a great choice for building automated Continuous Integration/Continuous Deployment (CI/CD) workflows. 
+[Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview) enable application code packaged in containers to run and scale without the overhead of managing cloud infrastructure and container orchestration.  In this post I'll show you how to deploy a Java application running on Spring Boot in a container to Azure Container Registry and Azure Container Apps. 
 
-In this post I'll show you how to deploy a Java application running on Spring Boot in a containers to Azure Container Registry and Azure App Service. 
-
-> [!div class="checklist"]
 - Create an Azure Container Registry (ACR) and Azure Container App (ACA) using the Azure portal.
-- Deploy code to the Azure COntainer Registry using AZ ACR BUILD form the Azure CLI. 
+- Deploy code to the Azure Container Registry using AZ ACR BUILD form the Azure CLI. 
 - Deploy the container from the Azure Container Registry to Azure Container Apps using the Azure portal.
 
 
@@ -75,7 +71,6 @@ Sign in to Azure from the CLI using the ```az login``` command, and follow the p
 ### Get the sample code 
 Fork and clone the [sample GitHub repo](https://github.com/bbenz/spring-boot-docker-aca) to your local machine.  Navigate to the  and click **Fork** in the top-right corner of the page.
 
-> [!NOTE]
 > The [example code](https://github.com/bbenz/spring-boot-docker-aca) that we're using is a very basic containerized Spring Boot example.  There are a lot more details to learn about Spring boot apps in docker, for a deep dive check out this [Spring Boot Guide](https://spring.io/guides/gs/spring-boot-docker/) 
 
 ### Optional - Running the sample code locally
@@ -119,15 +114,16 @@ az acr login --name myregistryname
 The command returns **Login Succeeded** once completed.
 
 #### Build and deploy with AZ ACR Build
-Next, we're going to deploy the docker container we created earlier using the AZ ACR BUILd command.  Go to your local clone of the **spring-boot-docker-aca** repo in the command line, type: 
+Next, we're going to deploy the docker container we created earlier using the AZ ACR Build command.  [AZ ACR Build](https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest#az-acr-build) creates a docker build from local code and pushes the container to Azure Container Registry if the build is successful. 
 
+Go to your local clone of the **spring-boot-docker-aca** repo in the command line, type: 
 
 ```azurecli
 az acr build --registry myregistryname --image spring-boot-docker-aca:v1 .
 ```
 
 #### List container images
-Once the AZ ACR BUILD command is complete, you should be able to view the container as a repository in the registry.  In the portal, open your registry and select **Repositories**, then select the **spring-boot-docker-aca** repository you created with docker push.  You should also see the **v1** image under Tags.
+Once the AZ ACR Build command is complete, you should be able to view the container as a repository in the registry.  In the portal, open your registry and select **Repositories**, then select the **spring-boot-docker-aca** repository you created with docker push.  You should also see the **v1** image under Tags.
 
 
 ### Deploying and running on ACA
