@@ -103,14 +103,14 @@ Want a quick intro to the topic? Start by watching the short video below - then 
 ### Dev Options
 
 We typically have **three options** for development:
- * Use the [Azure Portal](https://docs.microsoft.com/en-us/azure/container-apps/get-started-existing-container-image-portal?pivots=container-apps-private-registry) - provision and deploy from a browser.
- * Use [Visual Studio Code](https://docs.microsoft.com/en-us/azure/container-apps/deploy-visual-studio-code) (with relevant extensions) - if you prefer an IDE
- * Using [Azure CLI](https://docs.microsoft.com/en-us/azure/container-apps/get-started-existing-container-image?tabs=bash&pivots=container-apps-private-registry) - if you prefer to build and deploy from command line.
+ * Use the [Azure Portal](https://docs.microsoft.com/azure/container-apps/get-started-existing-container-image-portal?pivots=container-apps-private-registry) - provision and deploy from a browser.
+ * Use [Visual Studio Code](https://docs.microsoft.com/azure/container-apps/deploy-visual-studio-code) (with relevant extensions) - if you prefer an IDE
+ * Using [Azure CLI](https://docs.microsoft.com/azure/container-apps/get-started-existing-container-image?tabs=bash&pivots=container-apps-private-registry) - if you prefer to build and deploy from command line.
 
 The documentation site has quickstarts for three contexts:
- * [using a sample container image](https://docs.microsoft.com/en-us/azure/container-apps/quickstart-portal) - pre-existing example on Azure for convenience
- * [using a custom container image](https://docs.microsoft.com/en-us/azure/container-apps/get-started-existing-container-image-portal?pivots=container-apps-private-registry) - to understand container registry usage
- * [using code on your local machine](https://docs.microsoft.com/en-us/azure/container-apps/quickstart-code-to-cloud?tabs=bash%2Ccsharp&pivots=acr-remote) - to start from source repo
+ * [using a sample container image](https://docs.microsoft.com/azure/container-apps/quickstart-portal) - pre-existing example on Azure for convenience
+ * [using a custom container image](https://docs.microsoft.com/azure/container-apps/get-started-existing-container-image-portal?pivots=container-apps-private-registry) - to understand container registry usage
+ * [using code on your local machine](https://docs.microsoft.com/azure/container-apps/quickstart-code-to-cloud?tabs=bash%2Ccsharp&pivots=acr-remote) - to start from source repo
 
 For this quickstart, we'll go with the first option (sample image) so we can move quickly to core concepts. We'll leave the others as an exercise for you to explore.
 
@@ -119,7 +119,7 @@ For this quickstart, we'll go with the first option (sample image) so we can mov
 :::info PRE-REQUISITES
 You need:
  * An Azure account with an active subscription
- * An installed [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+ * An installed [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli)
 :::
 
 Start by logging into Azure from the CLI. The command should launch a browser to complete the auth flow (or give you an option to take an alternative path).
@@ -249,18 +249,18 @@ An illustrated guide summarizing these concepts in a single sketchnote.
 
 We covered a lot today - we'll stop with a quick overview of core concepts behind Azure Container Apps, each linked to documentation for self-study. We'll dive into more details on _some_ of these concepts in upcoming articles:
 
- * [Environments](https://docs.microsoft.com/en-us/azure/container-apps/environment) - are the _secure boundary_ around a group of container apps that are deployed in the same virtual network. They write logs to a shared Log Analytics workspace and can communicate seamlessly using Dapr, if used.
- * [Containers](https://docs.microsoft.com/en-us/azure/container-apps/containers) refer to the _container image_ deployed in the Azure Container App. They can use any runtime, programming language, or development stack - and be discovered using any public or private container registry. A container app can support multiple containers.
- * [Revisions](https://docs.microsoft.com/en-us/azure/container-apps/revisions) are _immutable_ snapshots of an Azure Container App. The first revision is created when the ACA is first deployed, with new revisions created when redeployment occurs with [revision-scope changes](https://docs.microsoft.com/en-us/azure/container-apps/revisions#revision-scope-changes). Multiple revisions can run concurrently in an environment.
- * [Application Lifecycle Management](https://docs.microsoft.com/en-us/azure/container-apps/application-lifecycle-management) revolves around these revisions, with a container app having three phases: _deployment_, _update_ and _deactivation_.
- * [Microservices](https://docs.microsoft.com/en-us/azure/container-apps/microservices) are independent units of functionality in cloud native architectures. _A single container app typically represents a single microservice_, and can be composed from one or more containers. Microservices can now be scaled and upgraded indepedently, giving your application more flexbility and control.
- * [Networking](https://docs.microsoft.com/en-us/azure/container-apps/networking) architecture consist of a virtual network (VNET) associated with the environment. Unless you provide a custom VNET at environment creation time, a default VNET is automatically created. The VNET configuration determines access (ingress, internal vs. external) and can influence auto-scaling choices (e.g., use HTTP Edge Proxy and scale based on number of HTTP requests).
- * [Observability](https://docs.microsoft.com/en-us/azure/container-apps/observability) is about monitoring the health of your application and diagnosing it to improve reliability or performance. Azure Container Apps has a number of features - from Log streaming and Container console to integration with Azure Monitor - to provide a holistic view of application status over time.
- * [Easy Auth](https://docs.microsoft.com/en-us/azure/container-apps/authentication) is possible with built-in support for authentication and authorization including support for popular identity providers like Facebook, Google, Twitter and GitHub - alongside the Microsoft Identity Platform.
+ * [Environments](https://docs.microsoft.com/azure/container-apps/environment) - are the _secure boundary_ around a group of container apps that are deployed in the same virtual network. They write logs to a shared Log Analytics workspace and can communicate seamlessly using Dapr, if used.
+ * [Containers](https://docs.microsoft.com/azure/container-apps/containers) refer to the _container image_ deployed in the Azure Container App. They can use any runtime, programming language, or development stack - and be discovered using any public or private container registry. A container app can support multiple containers.
+ * [Revisions](https://docs.microsoft.com/azure/container-apps/revisions) are _immutable_ snapshots of an Azure Container App. The first revision is created when the ACA is first deployed, with new revisions created when redeployment occurs with [revision-scope changes](https://docs.microsoft.com/azure/container-apps/revisions#revision-scope-changes). Multiple revisions can run concurrently in an environment.
+ * [Application Lifecycle Management](https://docs.microsoft.com/azure/container-apps/application-lifecycle-management) revolves around these revisions, with a container app having three phases: _deployment_, _update_ and _deactivation_.
+ * [Microservices](https://docs.microsoft.com/azure/container-apps/microservices) are independent units of functionality in cloud native architectures. _A single container app typically represents a single microservice_, and can be composed from one or more containers. Microservices can now be scaled and upgraded indepedently, giving your application more flexbility and control.
+ * [Networking](https://docs.microsoft.com/azure/container-apps/networking) architecture consist of a virtual network (VNET) associated with the environment. Unless you provide a custom VNET at environment creation time, a default VNET is automatically created. The VNET configuration determines access (ingress, internal vs. external) and can influence auto-scaling choices (e.g., use HTTP Edge Proxy and scale based on number of HTTP requests).
+ * [Observability](https://docs.microsoft.com/azure/container-apps/observability) is about monitoring the health of your application and diagnosing it to improve reliability or performance. Azure Container Apps has a number of features - from Log streaming and Container console to integration with Azure Monitor - to provide a holistic view of application status over time.
+ * [Easy Auth](https://docs.microsoft.com/azure/container-apps/authentication) is possible with built-in support for authentication and authorization including support for popular identity providers like Facebook, Google, Twitter and GitHub - alongside the Microsoft Identity Platform.
 
 :::info DAPR INTEGRATION MADE EASY
  
-[Dapr integration](https://docs.microsoft.com/en-us/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml) uses a sidecar architecture, allowing Azure Container Apps to communicate with Dapr Building Block APIs over gRPC or HTTP. Your ACA can be built to run with or without Dapr - allowing you to _incrementally adopt_ specific APIs to unlock related capabilities as the need arises.
+[Dapr integration](https://docs.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml) uses a sidecar architecture, allowing Azure Container Apps to communicate with Dapr Building Block APIs over gRPC or HTTP. Your ACA can be built to run with or without Dapr - allowing you to _incrementally adopt_ specific APIs to unlock related capabilities as the need arises.
 :::
 
 ![](https://docs.dapr.io/images/overview-sidecar-model.png)
@@ -270,12 +270,12 @@ We covered a lot today - we'll stop with a quick overview of core concepts behin
 Congratulations! You made it! By now you should have a good idea of what Cloud Native development means, why Microservices and Containers are important to that vision - and how Azure Container Apps helps simplify the building and deployment of _microservices based applications_ using _serverless architectures_ on Azure.
 
 Now it's your turn to reinforce learning by doing.
- * Try walking through this quickstart yourself, but [using the Azure Portal](https://docs.microsoft.com/en-us/azure/container-apps/quickstart-portal) option.
- * Then try a [custom container image](https://docs.microsoft.com/en-us/azure/container-apps/deploy-visual-studio-code) option using Visual Studio Code, and validate your IDE-based setup for future tutorials.
+ * Try walking through this quickstart yourself, but [using the Azure Portal](https://docs.microsoft.com/azure/container-apps/quickstart-portal) option.
+ * Then try a [custom container image](https://docs.microsoft.com/azure/container-apps/deploy-visual-studio-code) option using Visual Studio Code, and validate your IDE-based setup for future tutorials.
 
 ## Resources
 
 Three key resources to bookmark and explore:
- * [Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/) - documentation
+ * [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/) - documentation
  * [Distributed Application Runtime (Dapr)](https://docs.dapr.io/) - documentation
- * [Azure Container Apps](https://docs.microsoft.com/en-us/azure/container-apps/samples) - samples for exploration
+ * [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/samples) - samples for exploration

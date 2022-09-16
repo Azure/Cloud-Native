@@ -114,7 +114,7 @@ az acr login --name myregistryname
 The command returns **Login Succeeded** once completed.
 
 #### Build and deploy with AZ ACR Build
-Next, we're going to deploy the docker container we created earlier using the AZ ACR Build command.  [AZ ACR Build](https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest#az-acr-build) creates a docker build from local code and pushes the container to Azure Container Registry if the build is successful. 
+Next, we're going to deploy the docker container we created earlier using the AZ ACR Build command.  [AZ ACR Build](https://docs.microsoft.com/cli/azure/acr?view=azure-cli-latest#az-acr-build) creates a docker build from local code and pushes the container to Azure Container Registry if the build is successful. 
 
 Go to your local clone of the **spring-boot-docker-aca** repo in the command line, type: 
 
