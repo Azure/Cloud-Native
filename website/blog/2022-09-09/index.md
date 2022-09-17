@@ -49,15 +49,15 @@ Welcome to `Day 9` of #30DaysOfServerless!
 
 ## The Week Ahead
 
-Welcome to Week 2 of #ServerlessSeptember, where we put the focus on **Microservices** and building Cloud Native applications that are optimized for **serverless** solutions on Azure. One week is not enough to do this complex topic justice so designed a 7-part story that can help jumpstart the journey.
+Welcome to Week 2 of #ServerlessSeptember, where we put the focus on **Microservices** and building Cloud Native applications that are optimized for **serverless** solutions on Azure. One week is not enough to do this complex topic justice so consider this a 7-part jumpstart to the longer journey.
 
- 1. **Hello, Container Apps (ACA)** - We start today by introducing Azure Container Apps, a key service that helps you _run microservices and containerized apps on a serverless platform_ - and learn the core concepts. (_Tutorial 1: First ACA_)
- 2. **Communication with Microservices** - We'll dive into core concepts on environments and virtual networking, and learn how microservices communicate in ACA. _(Tutorial 2: ACA with 3 Microservices)_
- 3. **Scaling Your Container Apps** - We'll talk about what KEDA is and how you can configure your ACA for auto-scaling with KEDA-supported triggers - and see this in action for a couple of examples, with a tutorial. _(Tutorial 3: Configure Autoscaling_)
- 4. **Hello, Distributed Application Runtime (Dapr)** - We'll introduce Dapr, a rich set of _Building Block APIs_ that simplifies microservices development with ACA. Dapr implements a _sidecar pattern_ allowing you to incrementally adopt capabilities to suit your needs. (_Tutorial 4: Setup & Explore Dapr_)
- 5. **Building ACA with Dapr** - We'll look at how Dapr works with ACA, and build our first Dapr-enabled Azure Container Apps solution showcasing Pub/Sub and State Management APIs in the context of a fictitious enterprise scenario - using .NET. (_Tutorial 5: Build ACA with Dapr_)
- 6. **Managed Identity and Secrets** - We'll look at some of the core security concepts in Azure Container Apps, focusing specifically on secrets management (storing and using sensitive values) and managed identities.
- 7. **Microservices + Serverless On Azure** - We'll wrap the week up with a recap of activities, and set the stage for Week 3 with a focus on _Integrations_. We'll also have resources for self-study including additional posts walking through ACA development in different languages.
+ 1. **Hello, Container Apps (ACA)** - Learn about Azure Container Apps, a key service that helps you _run microservices and containerized apps on a serverless platform_. Know the core concepts. (_Tutorial 1: First ACA_)
+ 2. **Communication with Microservices** - Dive deeper into two key concepts: _environments_ and _virtual networking_. Learn how microservices communicate in ACA, and walkthrough an example. _(Tutorial 2: ACA with 3 Microservices)_
+ 3. **Scaling Your Container Apps** - Learn about KEDA. Understand how to configure your ACA for auto-scaling with KEDA-supported triggers. Put this into action by walking through a tutorial. _(Tutorial 3: Configure Autoscaling_)
+ 4. **Hello, Distributed Application Runtime (Dapr)** - Learn about Dapr and how its _Building Block APIs_ simplify microservices development with ACA. Know how the _sidecar pattern_ enables incremental adoption of Dapr APIs without requiring any Dapr code integration in app. (_Tutorial 4: Setup & Explore Dapr_)
+ 5. **Building ACA with Dapr** - See how Dapr works with ACA by building a Dapr-enabled Azure Container App. Walk through a .NET tutorial using Pub/Sub and State Management APIs in an enterprise scenario. (_Tutorial 5: Build ACA with Dapr_)
+ 6. **Managing Secrets With Dapr** - We'll look at the Secrets API (a key Building Block of Dapr) and learn how it simplifies management of sensitive information in ACA.
+ 7. **Microservices + Serverless On Azure** - We recap Week 2 (_Microservices_) and set the stage for Week 3 ( _Integrations_) of Serverless September. Plus, self-study resources including ACA development tutorials in different languages.
 
 Ready? Let's go!
 
@@ -65,30 +65,30 @@ Ready? Let's go!
 
 ## Azure Container Apps!
 
-When building your application, your first decision is about _where you host your application_. The [Azure Architecture Center has a handy chart](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-74010-ninarasi) to help you decide between choices like Azure Functions, Azure App Service, Azure Container Instances, Azure Container Apps and more. But if you are new to this space, you'll need a good understanding of the terms and concepts behind the services Today, we'll focus on _Azure Container Apps_ (ACA), going from basic definitions to core concepts.
+When building your application, your first decision is about _where you host your application_. The [Azure Architecture Center has a handy chart](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-74010-ninarasi) to help you decide between choices like Azure Functions, Azure App Service, Azure Container Instances, Azure Container Apps and more. But if you are new to this space, you'll need a good understanding of the terms and concepts behind the services Today, we'll focus on _Azure Container Apps_ (ACA) - so let's start with the fundamentals.
 
 
-###  Containerized Apps: A Primer
+### Containerized App Defined
 
 A containerized app is one where the application components, dependencies, and configuration, are packaged into a single file (**container image**), which can be instantiated in an isolated runtime environment (**container**) that is portable across hosts (OS). This makes containers lightweight and scalable - and ensures that applications behave consistently on different host platforms.
 
-Container images can be shared via  **container registries** (public or private) helping developers discover and deploy related apps with less effort. **Scaling** a containerized app can be as simple as activating more instances of its container image. However, this requires **container orchestrators** to now automate management of container apps for efficiency. Orchestrators use technologies like Kubernetes to support capabilities like _workload scheduling, self-healing and auto-scaling on demand_.
+Container images can be shared via  **container registries** (public or private) helping developers discover and deploy related apps with less effort. **Scaling** a containerized app can be as simple as activating more instances of its container image. However, this requires **container orchestrators** to automate the management of container apps for efficiency. Orchestrators use technologies like Kubernetes to support capabilities like _workload scheduling, self-healing and auto-scaling on demand_.
 
 ### Cloud Native & Microservices
 
-Containers are seen as one of the [5 pillars of Cloud Native app development](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa), an approach that emphasizes tailoring applications to take advantage of the unique benefits of modern dynamic environments (involving public, private and hybrid clouds). Containers are **particularly suited to serverless solutions based on microservices**.
+Containers are seen as one of the [5 pillars of Cloud Native app development](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa), an approach where applications are designed explicitly to take advantage of the unique benefits of modern dynamic environments (involving public, private and hybrid clouds). Containers are particularly suited to **serverless solutions based on microservices**.
 
- * _With serverless_ - developers use **managed services** instead of managing infrastructure. Services are event-driven and can be configured for autoscaling with rules and triggers. This is cost-effective, with developers paying only for the compute cycles and resources they use.
- * _With microservices_ - developers **compose applications from independent components**. Each can be deployed in its own container, and scaled at that granularity. This simplifies component reuse (across apps) and maintainability - allowing developers to evolve app functionality at microservice levels.
+ * _With serverless_ - developers use **managed services** instead of managing their own infrastructure. Services are typically event-driven and can be configured for autoscaling with rules tied to event triggers. Serverless is cost-effective, with developers paying only for the compute cycles and resources they use.
+ * _With microservices_ - developers **compose their applications from independent components**. Each component can be deployed in its own container, and scaled at that granularity. This simplifies component reuse (across apps) and maintainability (over time) - with developers evolving functionality at microservice (vs. app) levels.
 
 ### Hello, Azure Container Apps!
 
 Azure Container Apps is the managed service that helps you run containerized apps and microservices as a serverless compute solution, on Azure. You can:
 
- * deploy serverless API endpoints - autoscaled by HTTP request traffic
- * host background processing apps - autoscaled by CPU or memory load
- * handle event-driven processing - autoscaled by #messages in queue
- * run microservices - autoscaled by any KEDA-supported scaler.
+ * **deploy serverless API endpoints** - autoscaled by HTTP request traffic
+ * **host background processing apps** - autoscaled by CPU or memory load
+ * **handle event-driven processing** - autoscaled by #messages in queue
+ * **run microservices** - autoscaled by any KEDA-supported scaler.
 
 Want a quick intro to the topic? Start by watching the short video below - then read these two posts from our _ZeroToHero_ series:
  * [Go cloud native with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) - also see [the illustrated guide](http://localhost:3000/Cloud-Native/assets/images/Go-Cloud-Native-f6ac3225c3d9741a1fbff81030f7f830.png)
@@ -258,12 +258,16 @@ We covered a lot today - we'll stop with a quick overview of core concepts behin
  * [Observability](https://docs.microsoft.com/azure/container-apps/observability) is about monitoring the health of your application and diagnosing it to improve reliability or performance. Azure Container Apps has a number of features - from Log streaming and Container console to integration with Azure Monitor - to provide a holistic view of application status over time.
  * [Easy Auth](https://docs.microsoft.com/azure/container-apps/authentication) is possible with built-in support for authentication and authorization including support for popular identity providers like Facebook, Google, Twitter and GitHub - alongside the Microsoft Identity Platform.
 
+Keep these terms in mind as we walk through more tutorials this week, to see how they find application in real examples. Finally, a note on Dapr, the [Distributed Application Runtime](http://dapr.io) that abstracts away many of the challenges posed by distributed systems - and lets you focus on your application logic.
+
 :::info DAPR INTEGRATION MADE EASY
  
-[Dapr integration](https://docs.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml) uses a sidecar architecture, allowing Azure Container Apps to communicate with Dapr Building Block APIs over gRPC or HTTP. Your ACA can be built to run with or without Dapr - allowing you to _incrementally adopt_ specific APIs to unlock related capabilities as the need arises.
+[Dapr](https://docs.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml) uses a sidecar architecture, allowing Azure Container Apps to communicate with Dapr Building Block APIs over either gRPC or HTTP. Your ACA can be built to run with or without Dapr - giving you the flexibility to _incrementally adopt_ specific APIs and unlock related capabilities as the need arises.
 :::
 
 ![](https://docs.dapr.io/images/overview-sidecar-model.png)
+
+In later articles this week, we'll do a deeper dive into Dapr and build our first Dapr-enable Azure Container App to get a better understanding of this integration.
 
 ## Exercise
 

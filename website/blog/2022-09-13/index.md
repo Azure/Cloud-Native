@@ -12,7 +12,6 @@ description: "Let's build our first Azure Container Apps solution with Dapr!"
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices]
 ---
 
-<!-- FIXME -->
 <head>
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/blog/13-dapr-aca-quickstart" />
@@ -33,6 +32,8 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
 ---
 
 Welcome to `Day 13` of #30DaysOfServerless!
+
+In the past few days we focused our attention on Azure Container Apps, building microservices-based solutions and learning related concepts like environments, networking and auto-scaling - before introducing the sidecar capability of Dapr. Today, we look at how Dapr and ACA work seamlessly together to simplify microservices development in the cloud.
 
 ---
 
