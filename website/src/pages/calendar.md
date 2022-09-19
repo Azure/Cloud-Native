@@ -24,14 +24,14 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 05 | 🚀 [Go Cloud Native With Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) | Apps On Azure |
 | Sep 07 | 🏆 **Hacks:** [How to get into Tech And Serverless ](https://www.youtube.com/watch?v=Srb9mQXLcXc?WT.mc_id=javascript-74010-ninarasi)| YouTube |
 | Sep 09 | ✍🏽 [Week 2: Containers & Microservices](/serverless-september/30DaysOfServerless#azure-container-apps)  | Website |
-| Sep 12  | 🚀 Building stateful applications with Azure durable functions  | Apps On Azure|
-| Sep 12 | 🚀 Journey to the cloud with Azure Container Apps | Apps On Azure |
+| Sep 12 | 🚀 [Journey to the cloud with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609) | Apps On Azure |
+| Sep 12 | 🚀 [Building Serverless Go Applications with Azure functions custom handlers](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-serverless-go-applications-with-azure-functions-custom/ba-p/3623617) | Apps On Azure|
 | Sep 14 | 🏆 **Hacks:** [How to DevOps and Serverless the Right Way](https://developer.microsoft.com/reactor/events/16958?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now |
 | Sep 15 | 🎤 **ATE: Azure Functions** [Live Q&A with Product Team](https://reactor.microsoft.com/reactor/events/17000/?WT.mc_id=javascript-74010-ninarasi) | 🌟 Register Now|
+| Sep 15 | 🚀 [Error Handling with Kafka extension - and what's new with the Kafka trigger](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/error-handling-with-apache-kafka-extension-for-azure-functions/ba-p/3628936) | Apps On Azure |
 | Sep 16 | [Containers, Serverless & IoT Meetup](https://developer.microsoft.com/reactor/events/16727/) - In-Person, Online |🌟 Register Now |
 | Sep 16 | ✍🏽 [Week 3: Serverless Integrations](/serverless-september/30DaysOfServerless#serverless-integrations) | Website  |
-| Sep 19 | 🚀 Azure Container Apps observability | Apps On Azure |
-| Sep 19 | 🚀 Error Handling with Kafka extension - and what's new with the Kafka trigger  | Apps On Azure |
+| Sep 19 | 🚀 [Azure Container Apps observability](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/observability-with-azure-container-apps/ba-p/3627909) | Apps On Azure |
 | Sep 21 | 🏆 **Hacks:**  [The Serverless Project that Got Me Promoted!](https://developer.microsoft.com/reactor/events/16959?WT.mc_id=javascript-74010-ninarasi)  | 🌟 Register Now |
 | Sep 23 | ✍🏽 [Week 4: Serverless End-to-End](/serverless-september/30DaysOfServerless#serverless-end-to-end) | Website   |
 | Sep 23 | [#Learnathon - Azure Functions](https://www.meetup.com/microsoft-reactor-bengaluru/events/288155698/) - In Person, Online| 🌟 Register Now |
