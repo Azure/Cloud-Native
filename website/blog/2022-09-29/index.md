@@ -53,6 +53,8 @@ The Azure Developer CLI (`azd`) is an new, open source tool that makes it quick 
 
 The Azure Developer CLI commands are simple, high-level and map to core stages in your developer workflow. Think project initialization/creation, build, deploy, repeat!
 
+![](img/azd-workflow.png)
+
 By using [idiomatic and flexible application templates](https://aka.ms/azure-dev/templates?source=serverless-september), the Azure Developer CLI uses recipes for common application architectures that you can customize for your use case. These templates include:
 - best practices
 - sample application code that goes beyond "Hello World!"
