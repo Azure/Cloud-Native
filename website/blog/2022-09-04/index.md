@@ -67,7 +67,7 @@ In this blog post, we'll dive into one quickstart, and discuss other resources b
 
 ## My First Java Functions App
 
-In today's post, we'll walk through the [Quickstart: Azure Functions](https://docs.microsoft.com/en-gb/azure/azure-functions/create-first-function-vs-code-java) tutorial using Visual Studio Code. In the process, we'll setup our development environment with the relevant command-line tools and VS Code extensions to make building Functions app simpler.
+In today's post, we'll walk through the [Quickstart: Azure Functions](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-java) tutorial using Visual Studio Code. In the process, we'll setup our development environment with the relevant command-line tools and VS Code extensions to make building Functions app simpler.
 
 _Note: Completing this exercise may incur a a cost of a few USD cents based on your Azure subscription. Explore [pricing details](https://azure.microsoft.com/pricing/details/functions/#pricing) to learn more_.
 
