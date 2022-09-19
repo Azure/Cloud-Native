@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[853],{2662:e=>{e.exports=JSON.parse('{"label":"keda","permalink":"/Cloud-Native/blog/tags/keda","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);
