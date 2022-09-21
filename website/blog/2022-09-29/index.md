@@ -111,7 +111,7 @@ The next step here is provisioning. `azd` is running `azd provision` on your beh
 Finally, the final step here in running `azd up` is deployment. `azd` is running `azd deploy` and deploying the application code to the resources that we're provisioned in the previous phase of the process. Once this has completed, you'll be able to click on two different endpoint URLs - one for the back-end and one for the front-end. 
 ![](img/deploy-up.png)
 
-The back-end endpoint (`service api`) hosts the specification for the API via the `openapi.json` file that's also in the root of the project template. You can explore the endpoints that are available in the web app here. 
+The back-end endpoint (`service api`) hosts the specification for the API via the `openapi.yaml` file that's also in the root of the project template. You can explore the endpoints that are available in the web app here. 
 ![](img/backend.png)
 
 The front-end endpoint (`service web`) hosts a fully-fledged and functional ToDo web app with a UI, Cosmos DB for the database and Key Vault for application secrets. This isn't just application hosting. It's really everything you need to be successful and productive, all set up on your behalf by the Azure Developer CLI.
