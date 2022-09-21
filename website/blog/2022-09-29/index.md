@@ -103,7 +103,7 @@ So let's walk through it. On running `azd up -t todo-python-mongo-swa-func`, I'm
     - **An Azure subscription** - the Azure location where your resources will be deployed
 ![](img/start-up.png)
 
-Once that information is provided, `azd` will pull down the code from GitHub and create a `.azure/` in the project root that contains all Azure Developer CLI environment information that you just entered. This directory will be important when it comes time to provision and deploy infrastructure in the next step in the `up` process.
+Once that information is provided, `azd` will pull down the code from GitHub and create a `.azure/` directory in the project root that contains all Azure Developer CLI environment information that you just entered. This directory will be important when it comes time to provision and deploy infrastructure in the next step in the `up` process.
 
 The next step here is provisioning. `azd` is running `azd provision` on your behalf and leveraging the IaC assets in the `.infra/` directory in the project. As the tool works to provision, you'll see an output of each resource (name alongside a unique identifier which you can use to reference back to the Azure Portal, if you want)
 ![](img/provision-up.png)
