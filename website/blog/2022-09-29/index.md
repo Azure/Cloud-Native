@@ -49,7 +49,7 @@ Welcome to `Day 29` of #30DaysOfServerless!
 ---
 
 ## **A new tool has entered the chat:** What is the Azure Developer CLI (`azd`)?
-The Azure Developer CLI (`azd`) is an new, open source tool that makes it quick and simple for you to move your application from your local development environment to Azure while considering your end-to-end developer workflow. You might be familiar with other CLIs that focus on Infrastructure as Code or scaffolding your application but the Azure Developer CLI does all that and more!
+The Azure Developer CLI (`azd`) is a new, open source tool that makes it quick and simple for you to move your application from your local development environment to Azure while considering your end-to-end developer workflow. You might be familiar with other CLIs that focus on Infrastructure as Code or scaffolding your application but the Azure Developer CLI does all that and more!
 
 The Azure Developer CLI commands are simple, high-level and map to core stages in your developer workflow. Think project initialization/creation, build, deploy, repeat!
 
@@ -97,13 +97,13 @@ When designing the CLI, we wanted the experience to be both flexible and non-mag
 
 ![](img/single-step.png)
 
-So let's walk through it. On running `azd up --template Azure-Samples/todo-python-mongo-swa-func`, I'm prompted for a couple pieces of information as part of the `azd init` process being run under the hood:
+So let's walk through it. On running `azd up -t todo-python-mongo-swa-func`, I'm prompted for a couple pieces of information as part of the `azd init` process being run under the hood:
     - **An environment name** - the prefix for the resource group that will be created to hold all Azure resources
     - **An Azure region** - the Azure location where your resources will be deployed
     - **An Azure subscription** - the Azure subscription where your resources will be deployed
 ![](img/start-up.png)
 
-Once that information is provided, `azd` will pull down the code from GitHub and create a `.azure/` in the project root that contains all Azure Developer CLI environment information that you just entered. This directory will be important when it comes time to provision and deploy infrastructure in the next step in the `up` process.
+Once that information is provided, `azd` will pull down the code from GitHub and create a `.azure/` directory in the project root that contains all Azure Developer CLI environment information that you just entered. This directory will be important when it comes time to provision and deploy infrastructure in the next step in the `up` process.
 
 The next step here is provisioning. `azd` is running `azd provision` on your behalf and leveraging the IaC assets in the `.infra/` directory in the project. As the tool works to provision, you'll see an output of each resource (name alongside a unique identifier which you can use to reference back to the Azure Portal, if you want)
 ![](img/provision-up.png)
@@ -111,7 +111,7 @@ The next step here is provisioning. `azd` is running `azd provision` on your beh
 Finally, the final step here in running `azd up` is deployment. `azd` is running `azd deploy` and deploying the application code to the resources that we're provisioned in the previous phase of the process. Once this has completed, you'll be able to click on two different endpoint URLs - one for the back-end and one for the front-end. 
 ![](img/deploy-up.png)
 
-The back-end endpoint (`service api`) hosts the specification for the API via the `openapi.json` file that's also in the root of the project template. You can explore the endpoints that are available in the web app here. 
+The back-end endpoint (`service api`) hosts the specification for the API via the `openapi.yaml` file that's also in the root of the project template. You can explore the endpoints that are available in the web app here. 
 ![](img/backend.png)
 
 The front-end endpoint (`service web`) hosts a fully-fledged and functional ToDo web app with a UI, Cosmos DB for the database and Key Vault for application secrets. This isn't just application hosting. It's really everything you need to be successful and productive, all set up on your behalf by the Azure Developer CLI.
@@ -122,7 +122,7 @@ The front-end endpoint (`service web`) hosts a fully-fledged and functional ToDo
 But there's more!
 
 ## Best practices: Monitoring and CI/CD!
-In my opinion, it's not enough to _just_ set up the application on Azure! I want to know that my web app is performant and serving my users reliably! I also want to make sure that I'm not inadvertently breaking my application as I continue to make changes to it. Thankfully, the Developer CLI also handles all of this via two additional commands - `azd monitor` and `azd pipeline config`.
+In my opinion, it's not enough to _just_ set up the application on Azure! I want to know that my web app is performant and serving my users reliably! I also want to make sure that I'm not inadvertently breaking my application as I continue to make changes to it. Thankfully, the Azure Developer CLI also handles all of this via two additional commands - `azd monitor` and `azd pipeline config`.
 
 ### Application Monitoring
 When we provisioned all of our infrastructure, we also set up application monitoring via a Bicep file in our `.infra/` directory that spec'd out an Application Insights dashboard. By running `azd monitor` we can see the dashboard with live metrics that was configured for the application. 
@@ -134,7 +134,7 @@ We can also navigate to the Application Dashboard by clicking on the resource gr
 I don't know about everyone else but I have spent a ton of time building out similar dashboards. It can be super time-consuming to write all the queries and create the visualizations so this feels like a real time saver.
 
 ### CI/CD
-Finally let's talk about setting up CI/CD! This might be my favorite `azd` feature. As I mentioned before, the Azure Developer CLI has a command, `azd pipeline config`, which uses the files in the `.github/` directory to set up a GitHub Action. More than that, if there is no upstream repo, the Developer CLI will actually help you create one. But what does this mean exactly? Because our GitHub action is using the same commands you'd run in the CLI under the hood, we're actually going to have CI/CD set up to run on every commit into the repo, against real Azure resources. What a sweet collaboration feature!
+Finally let's talk about setting up CI/CD! This might be my favorite `azd` feature. As I mentioned before, the Azure Developer CLI has a command, `azd pipeline config`, which uses the files in the `.github/` directory to set up a GitHub Action. More than that, if there is no upstream repo, the Developer CLI will actually help you create one. But what does this mean exactly? Because our GitHub Action is using the same commands you'd run in the CLI under the hood, we're actually going to have CI/CD set up to run on every commit into the repo, against real Azure resources. What a sweet collaboration feature!
 
 ![](img/pipeline-config.png)
 
