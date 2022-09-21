@@ -97,7 +97,7 @@ When designing the CLI, we wanted the experience to be both flexible and non-mag
 
 ![](img/single-step.png)
 
-So let's walk through it. On running `azd up --template Azure-Samples/todo-python-mongo-swa-func`, I'm prompted for a couple pieces of information as part of the `azd init` process being run under the hood:
+So let's walk through it. On running `azd up -t todo-python-mongo-swa-func`, I'm prompted for a couple pieces of information as part of the `azd init` process being run under the hood:
     - **An environment name** - the prefix for the resource group that will be created to hold all Azure resources
     - **An Azure region** - the Azure location where your resources will be deployed
     - **An Azure subscription** - the Azure location where your resources will be deployed
