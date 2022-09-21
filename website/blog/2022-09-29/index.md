@@ -82,7 +82,7 @@ Let's talk about the files in terms of their purpose:
   - `tests/` - test for the application, written using [Playwright](https://playwright.dev/)
 
 ### Infrastructure as Code (provisioning and deploying infrastructure on Azure, programmatically)
-  - `infra/` - contains all infrastructure as code (IaC) assets written in [Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep); includes logic to set up all components we need to set up the application on Azure, wire everything up securely, and monitor application health, performance and usage!
+  - `infra/` - contains all infrastructure as code (IaC) assets written in [Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep) or [Terraform](https://aka.ms/azure-dev/terraform); includes logic to set up all components we need to set up the application on Azure, wire everything up securely, and monitor application health, performance and usage!
 
 ### CI/CD
   - `.github/` - contains a GitHub Actions workflow to set up a CI/CD pipeline that runs on every new commit to the repo
