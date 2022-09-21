@@ -100,7 +100,7 @@ When designing the CLI, we wanted the experience to be both flexible and non-mag
 So let's walk through it. On running `azd up --template Azure-Samples/todo-python-mongo-swa-func`, I'm prompted for a couple pieces of information as part of the `azd init` process being run under the hood:
     - **An environment name** - the prefix for the resource group that will be created to hold all Azure resources
     - **An Azure region** - the Azure location where your resources will be deployed
-    - **An Azure subscription** - the Azure location where your resources will be deployed
+    - **An Azure subscription** - the Azure subscription where your resources will be deployed
 ![](img/start-up.png)
 
 Once that information is provided, `azd` will pull down the code from GitHub and create a `.azure/` in the project root that contains all Azure Developer CLI environment information that you just entered. This directory will be important when it comes time to provision and deploy infrastructure in the next step in the `up` process.
