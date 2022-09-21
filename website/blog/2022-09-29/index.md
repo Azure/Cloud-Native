@@ -122,7 +122,7 @@ The front-end endpoint (`service web`) hosts a fully-fledged and functional ToDo
 But there's more!
 
 ## Best practices: Monitoring and CI/CD!
-In my opinion, it's not enough to _just_ set up the application on Azure! I want to know that my web app is performant and serving my users reliably! I also want to make sure that I'm not inadvertently breaking my application as I continue to make changes to it. Thankfully, the Developer CLI also handles all of this via two additional commands - `azd monitor` and `azd pipeline config`.
+In my opinion, it's not enough to _just_ set up the application on Azure! I want to know that my web app is performant and serving my users reliably! I also want to make sure that I'm not inadvertently breaking my application as I continue to make changes to it. Thankfully, the Azure Developer CLI also handles all of this via two additional commands - `azd monitor` and `azd pipeline config`.
 
 ### Application Monitoring
 When we provisioned all of our infrastructure, we also set up application monitoring via a Bicep file in our `.infra/` directory that spec'd out an Application Insights dashboard. By running `azd monitor` we can see the dashboard with live metrics that was configured for the application. 
