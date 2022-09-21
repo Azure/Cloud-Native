@@ -49,7 +49,7 @@ Welcome to `Day 29` of #30DaysOfServerless!
 ---
 
 ## **A new tool has entered the chat:** What is the Azure Developer CLI (`azd`)?
-The Azure Developer CLI (`azd`) is an new, open source tool that makes it quick and simple for you to move your application from your local development environment to Azure while considering your end-to-end developer workflow. You might be familiar with other CLIs that focus on Infrastructure as Code or scaffolding your application but the Azure Developer CLI does all that and more!
+The Azure Developer CLI (`azd`) is a new, open source tool that makes it quick and simple for you to move your application from your local development environment to Azure while considering your end-to-end developer workflow. You might be familiar with other CLIs that focus on Infrastructure as Code or scaffolding your application but the Azure Developer CLI does all that and more!
 
 The Azure Developer CLI commands are simple, high-level and map to core stages in your developer workflow. Think project initialization/creation, build, deploy, repeat!
 
