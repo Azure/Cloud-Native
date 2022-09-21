@@ -86,6 +86,7 @@ Let's talk about the files in terms of their purpose:
 
 ### CI/CD
   - `.github/` - contains a GitHub Actions workflow to set up a CI/CD pipeline that runs on every new commit to the repo
+  - `.azdo/` - contains a Azure Pipelines workflow to set up a CI/CD pipeline that runs on every new commit to the repo
 
 
 ## **End-to-end support:** Move code to cloud in a single step!
@@ -93,7 +94,7 @@ Let's talk about the files in terms of their purpose:
 
 So now that we've gone over what this template contains on GitHub, let's pull this template code down to our local machine, set it up for local development, provision the right infrastructure, and deploy the code on Azure in a **single step**.
 
-When designing the CLI, we wanted the experience to be both flexible and non-magical (no side effects, easy to understand). That being said, we're going to run this all with `azd up` but you could alternatively run a series of three commands and the outcome would be the same - `azd init --template Azure-Samples/todo-python-mongo-swa-func` (to pull the code down to your machine), `azd provision` (to provision infrastructure) and then `azd deploy` (to deploy application code on Azure). Choose your own adventure!
+When designing the CLI, we wanted the experience to be both flexible and non-magical (no side effects, easy to understand). So, we're going to run this all with `azd up` but you could alternatively run a series of three commands and the outcome would be the same - `azd init --t Azure-Samples/todo-python-mongo-swa-func` (to pull the code down to your machine), `azd provision` (to provision infrastructure) and then `azd deploy` (to deploy application code on Azure). Choose your own adventure!
 
 ![](img/single-step.png)
 
@@ -108,13 +109,13 @@ Once that information is provided, `azd` will pull down the code from GitHub and
 The next step here is provisioning. `azd` is running `azd provision` on your behalf and leveraging the IaC assets in the `.infra/` directory in the project. As the tool works to provision, you'll see an output of each resource (name alongside a unique identifier which you can use to reference back to the Azure Portal, if you want)
 ![](img/provision-up.png)
 
-Finally, the final step here in running `azd up` is deployment. `azd` is running `azd deploy` and deploying the application code to the resources that we're provisioned in the previous phase of the process. Once this has completed, you'll be able to click on two different endpoint URLs - one for the back-end and one for the front-end. 
+Finally, the final step here in running `azd up` is deployment. `azd` is running `azd deploy` and deploying the application code to the resources that we're provisioned in the previous phase of the process. Once this has completed, you'll be able to click on two different endpoint URLs - one for the backend and one for the frontend. 
 ![](img/deploy-up.png)
 
-The back-end endpoint (`service api`) hosts the specification for the API via the `openapi.yaml` file that's also in the root of the project template. You can explore the endpoints that are available in the web app here. 
+The backend endpoint (`service api`) hosts the specification for the API via the `openapi.yaml` file that's also in the root of the project template. You can explore the endpoints that are available in the web app here. 
 ![](img/backend.png)
 
-The front-end endpoint (`service web`) hosts a fully-fledged and functional ToDo web app with a UI, Cosmos DB for the database and Key Vault for application secrets. This isn't just application hosting. It's really everything you need to be successful and productive, all set up on your behalf by the Azure Developer CLI.
+The frontend endpoint (`service web`) hosts a fully-fledged and functional ToDo web app with a UI, Cosmos DB for the database and Key Vault for application secrets. This isn't just application hosting. It's really everything you need to be successful and productive, all set up on your behalf by the Azure Developer CLI.
 ![](img/frontend.png)
 
 ...and that's it! We've successfully deployed our application on Azure! 
