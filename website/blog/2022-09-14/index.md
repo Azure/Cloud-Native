@@ -27,14 +27,13 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
     content="@keroden" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/08-functions-azure" />
+    href="https://azure.github.io/Cloud-Native/blog/14-aca-managed-id" />
 </head>
 
 ---
 
 Welcome to `Day 13` of #30DaysOfServerless! In the previous post, we learned about all things Distributed Application Runtime (Dapr) and highlighted the capabilities you can unlock through managed Dapr in Azure Container Apps! Now we will dive into how to make use of Container Apps secrets and managed identities to securely access cloud-hosted resources that your Container Apps depend on! 
-
-Let's jump in!
+  
 ---
 
 ## What We'll Cover
@@ -64,7 +63,9 @@ Let's dive a bit deeper into the following three topics:
 2. Using Managed Identity to connect to Azure services
 3. Connecting to services securely for Dapr-enabled apps 
 
-## Leveraging Container Apps secrets at runtime 
+## Secure access to external services without Dapr  
+
+### Leveraging Container Apps secrets at runtime 
 
 Users can leverage this approach for any values which need to be securely stored, however, it is recommended to use Managed Identity where possible when connecting to Azure-specific resources. 
   
@@ -94,9 +95,66 @@ az containerapp create \
 
 This **ConnectionString** environment variable can be used within your application code to securely access the connection string value at runtime.
 
-## Section 3
+### Using Managed Identity to connect to Azure services
+  
+A managed identity from Azure Active Directory (Azure AD) allows your container app to access other Azure AD-protected resources. This approach is recommended where possible as it eliminates the need for managing secret credentials in your container apps and allows you to properly scope the permissions needed for a given container app using role-based access control. Both system-assigned and user-assigned identities are available in container apps. For more background on managed identities in Azure AD, see [Managed identities for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview).
+  
+To configure your app with a system-assigned managed identity you will follow similar steps to the following: 
+  
+Step 1: Run the following command to create a system-assigned identity for your container app 
+  az containerapp identity assign \
+  --name "myQueueApp" \
+  --resource-group "my-resource-group" \
+  --system-assigned
+  
+Step 2: Retrieve the identity details for your container app and store the Principal ID for the identity in a variable **"PRINCIPAL_ID"**
+  az containerapp identity show \
+  --name "myQueueApp" \
+  --resource-group "my-resource-group"
+  
+Step 3: Assign the appropriate roles and permissions to your container app's managed identity using the Principal ID in step 2 based on the resources you need to access (example below)
+  
+az role assignment create \
+    --role "Storage Queue Data Contributor" \
+    --assignee $PRINCIPAL_ID \
+    --scope "/subscriptions/<subscription>/resourceGroups/<resource-group>/providers/Microsoft.Storage/storageAccounts/<storage-account>/queueServices/default/queues/<queue>"
+ 
 
-## Section 4
+After running the above commands, your container app will be able to access your Azure Store Queue because it's managed identity has been assigned the "Store Queue Data Contributor" role. The role assignments you create will be contingent solely on the resources your container app needs to access.
+
+In addition to using managed identity to access services from your container app, you can also use managed identity to [pull your container images from Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-apps/containers#container-registries).
+
+## Secure access to external services with Dapr  
+
+For Dapr-enabled apps, there are three ways to connect to the resources your solutions depend on. In this section, we will discuss recommendation on when to use each approach. 
+  
+1. Using Container Apps secrets in your Dapr components
+2. Using Managed Identity to connect to Azure services
+3. Using a Dapr Secret Store reference in your Dapr component 
+
+### Leveraging Container Apps secrets in your Dapr components
+
+Prior to providing support for the Dapr Secret's Management building block, this was the only approach available for securely storing sensitive values for use in Dapr components. 
+
+In Dapr OSS, when no secret store reference is provided in a Dapr component file, the default secret store is set to "Kubernetes secrets". In Container Apps, we do not expose the ability to use this default store. Rather, Container Apps secrets can be used in it's place. 
+  
+With the introduction of the Secrets API and the ability to use Dapr + Managed Identity, this approach is useful for a limited number of scenarios: 
+- Quick demos and dev/test scenarios using the Container Apps CLI 
+- Securing values when a secret store is not configured or available for use  
+- Using service principal credentials to configure an Azure Key Vault secret store component (Using Managed Identity is recommend) 
+- Securing access credentials which may be required when creating a non-Azure secret store component 
+  
+Step 1: Run the following command to create a system-assigned identity for your container app 
+  az containerapp identity assign \
+  --name "myQueueApp" \
+  --resource-group "my-resource-group" \
+  --system-assigned
+  
+Step 2: Retrieve the identity details for your container app and store the Principal ID for the identity in a variable **"PRINCIPAL_ID"**
+  az containerapp identity show \
+  --name "myQueueApp" \
+  --resource-group "my-resource-group"
+
 
 ## Exercise
 
@@ -113,6 +171,8 @@ This **ConnectionString** environment variable can be used within your applicati
 ## Resources
 
 Here are the main resources to explore for self-study:
+ * [Azure Container Apps Secrets](https://learn.microsoft.com/en-us/azure/container-apps/manage-secrets?tabs=azure-cli)
+ * [Managed Identities in Azure Container Apps]()
  * [Dapr Documentation: Core Concepts](https://v1-9.docs.dapr.io/concepts/)
  * [Dapr Quickstarts](https://docs.dapr.io/getting-started/quickstarts/)
  * [Dapr Tutorials](https://docs.dapr.io/getting-started/tutorials/)
