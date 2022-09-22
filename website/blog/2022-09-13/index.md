@@ -43,7 +43,7 @@ In the past few days we focused our attention on Azure Container Apps, building 
  * Application scenario we are covering today
  * Quickstart: Build your first ACA with Dapr
  * Exercise: Try this yourself!
- * What's Next: Advanced scenario in 10-part series 
+ * What's Next: Advanced scenario in 12-part series 
  * Resources: For self-study!
 
 ![](./img/banner.png)
@@ -57,9 +57,9 @@ As developers, we are often tasked with create scalable resilient and distribute
 Dapr provides its core capabilities as a set of [Building Blocks](https://docs.dapr.io/concepts/building-blocks-concept/) as detailed in the introduction to dapr article released as a part of this series. Building Blocks provide consistent APIs that abstract away the implementation details to keep microservices code simple and portable.
 
 ## Today's App Scenario
-In this blog post we will create one single Azure Container App which will act as background processor services (service will not be accessible on the internet nor via other services) and configure two Dapr building blocks which they are the Pub/Sub and the State Store. Let's take a look at the architecture diagram below to have better understanding of what we are building:
+In this blog post we will create one single Azure Container App which will act as background processor services (service will not be accessible on the internet nor via other services) and configure two Dapr building blocks: Pub/Sub and State Management. Let's take a look at the architecture diagram below to have better understanding of what we are building:
 
-![Diagram showing architecture of sample project](img/ACA-Tutorial-AsyncComm-s.jpg)
+![Diagram showing architecture of sample project](img/ACA-Tutorial-AsyncComm-0922.jpg)
 
 Our fictious service named `orders-processor` will be processing messages published into an Azure Service Bus Topic named `orderreceivedtopic`, Dapr Pub/Sub building block will be configured by providing a configuration file named `pubsub-svcbus.yaml` which contains all the needed information to establish the relation between the container app and the service bus topic. Then when the message is consumed by the `orders-processor` service, it will store a copy of it into Azure Cosmos DB, we will rely on Dapr State Store building block by providing a configuration file named `statestore-cosmosdb.yaml` to configure the `orders-processor` service with the Azure Cosmos DB.
 
@@ -191,7 +191,7 @@ Open file `Program.cs` and replace its content with the content below:
        Check this [blog post](https://bitoftech.net/2022/09/02/azure-container-apps-async-communication-with-dapr-pub-sub-api-part-6/) which describes in detail how the consumer was able to discover available topic names, Pub/Sub names, and which routes/endpoints to push messages to.
     :::
 
-### 2. Provision Azure Service Bus and Topic
+### 2. Provision Azure Service Bus, Topic and Subscription
 We need to create the Azure Service Bus so we can configure the Dapr Pub/Sub component and test locally
 1. Open PowerShell console and Login to Azure by using the command `az login` if you have multiple subscriptions, set the subscription you want to use in this tutorial before proceeding, you can do this by using `az account set --subscription <name or id>` As well calling `az upgrade` is a good practice to ensure you are running the latest Aure CLI Command.
 2. Create Azure Resource Group by using the code below, feel free to change the name and location of the resource group
@@ -202,16 +202,24 @@ We need to create the Azure Service Bus so we can configure the Dapr Pub/Sub com
       --name $RESOURCE_GROUP `
       --location "$LOCATION"
     ```
-3. Create Azure Service Bus namespace, a topic and get the primary connection string, you can change the name space, and topic, but you have to update the codebase based on your changes. 
+3. Create Azure Service Bus namespace, a topic, a subscription and get the primary connection string (for local dev testing), you can change the name space, and topic, but you have to update the codebase based on your changes. 
     ```powershell
     $NamespaceName="ordersservices"
     $TopicName="orderreceivedtopic"
+    $TopicSubscription="orders-processor-subscription"
 
     ##Create servicebus namespace
     az servicebus namespace create --resource-group $RESOURCE_GROUP --name $NamespaceName --location $LOCATION
 
-    ##Create service topic under namespace
+    ##Create a topic under namespace
     az servicebus topic create --resource-group $RESOURCE_GROUP --namespace-name $NamespaceName --name $TopicName
+
+    ##Create a topic subscription
+    az servicebus topic subscription create `
+      --resource-group $RESOURCE_GROUP `
+      --namespace-name $NamespaceName `
+      --topic-name $TopicName `
+      --name $TopicSubscription
 
     ##List connection string
     az servicebus namespace authorization-rule keys list --resource-group $RESOURCE_GROUP --namespace-name $NamespaceName --name RootManageSharedAccessKey --query primaryConnectionString --output tsv
@@ -252,15 +260,19 @@ Components are configured at design-time with a YAML file which is stored in eit
       type: pubsub.azure.servicebus
       version: v1
       metadata:
-      - name: connectionString # Required when not using Azure Authentication.
-        value: "<Service Bus connection string from step 3.2>"
+      - name: connectionString # Used for local dev testing.
+        value: "<connection string from step 2.3>"
+      - name: consumerID
+        value: "orders-processor-subscription"
     scopes:
     - orders-processor
     ```
-    Note that we used the name `pubsub-servicebus` which should match the name of Pub/Sub component we've used earlier in the `ExternalOrdersController.cs` controller on the action method with the attribute `Topic`. As well we have set the metadata (key/value) to allow us to connect to Azure Service Bus topic. You need to replace the `connectionString` value with your Service Bus connection string. For full metadata specs, you can [check this page](https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/).
+    Note that we used the name `pubsub-servicebus` which should match the name of Pub/Sub component we've used earlier in the `ExternalOrdersController.cs` controller on the action method with the attribute `Topic`. As well we have set the metadata (key/value) to allow us to connect to Azure Service Bus topic. The metdata `consumerID` value should match the topic subscription name `orders-processor-subscription`.
+    
+    You need to replace the `connectionString` value with your Service Bus connection string. This is only needed for your local testing on your development machine, we'll be using a different approach (**Managed Identities**) when deploying Dapr component to Azure Container Apps Environment. For full metadata specs, you can [check this page](https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/).
 
     :::warning
-        The above example uses secrets as plain strings. It is recommended to use a secret store for the secrets, we will be doing this when we publish the app to Azure Container Apps. Don't check in connection string to source control by mistake!
+        The above sample uses secrets as plain strings for local dev testing. It is recommended to use Managed Identities approach when we deploy the app to Azure Container Apps. Don't check in connection string to source control by mistake!
     ::: 
 
     Note about The `Scopes` property: By default, all Dapr enabled container apps within the same environment will load the full set of deployed components. By adding scopes to a component, you tell the Dapr sidecars for each respective container app which components to load at runtime. Using scopes is recommended for production workloads.
@@ -314,18 +326,19 @@ We will follow few steps in order to deploy the service `Orders.Processor` to Az
       componentType: pubsub.azure.servicebus
       version: v1
       metadata:
-      - name: connectionString
-        secretRef: sb-root-connectionstring
-      secrets:
-      - name: sb-root-connectionstring
-        value: "<value>"
+      - name: namespaceName
+        value: "ordersservices.servicebus.windows.net"
+      - name: consumerID
+        value: "orders-processor-subscription"  
       # Application scopes  
       scopes:
       - orders-processor
       ```
-      Two things to notice here:
+      Things to notice here:
       - We didn't specify the component name `pubsub-servicebus` when we created this component file, we are going to specify it once we add this dapr component to Azure Container Apps Environment via CLI.
-      - The second thing, we are not setting the Azure Service Bus Connection string here, this will not be secure, we are using `secretRef` which will allow us to set the actual `sb-root-connectionstring` value after we deploy this component to the Azure Container Apps Environment. So this key will not be stored in the source code by mistake.
+      - We are not referencing any service bus connection strings, the authentication between dapr Pub/Sub API and Azure Service Bus will be configured using Managed Identities. This is very secure now as Managed Identities will eliminate the need for developers to manage credentials or secrets.
+      - The metadata `namespaceName` value is set to the address of the Service Bus namespace as a fully qualified domain name. The key is mandatory when using Managed Identities for authentication.
+      - We are setting the metadata `consumerID` value to match the topic subscription name `orders-processor-subscription`. If you didn't set this metadata, dapr runtime will try to create a subscription using the dapr application ID.
   2. Create Azure Container Registry (ACR) instance in the resource group to build/push and store docker images of our service. Feel free to change the name of the ACR, to do so run the following command:
       ```powershell
         ## Create Azure Container Registry
@@ -364,9 +377,6 @@ We will follow few steps in order to deploy the service `Orders.Processor` to Az
           --dapr-component-name pubsub-servicebus `
           --yaml '.\components\pubsub-svcbus.yaml'
       ```
-        Notice that we set the component name `pubsub-servicebus` when we added it Container Apps Environment.
-        Once the command completes and from the Azure Portal, navigate to your Container Apps Environment, select `Dapr Components`, then click on `pubsub-servicebus` component, and provide your Azure Service Bus Connection string in the Secrets text box value for secret `sb-root-connectionstring`, then click `Edit` button. It will be similar to the below image
-        ![Image showing ACA Env Secrets](img/SecretRef-S.jpg)
    6. Now we need to create a new Azure Container App, this container app should have the below capabilities:
       - Ingress should be disabled (No access via HTTP at all, or other services, this is a background processor responsible to process published messages).
       - Dapr needs to be enabled 
@@ -389,28 +399,83 @@ We will follow few steps in order to deploy the service `Orders.Processor` to Az
         --dapr-app-id  $BACKEND_SVC_NAME `
         --dapr-app-port 5039
       ```
-  7. With all those steps implemented we are ready to test end to end on Azure, to do this:
-      - From the Azure Portal, select the Azure Container App `orders-processor` and navigate to `Log stream` under `Monitoring` tab, leave the stream connected and opened.
-      - From the Azure Portal, select the Azure Service Bus Namespace `ordersservices`, select the topic `orderreceivedtopic`, select the subscription named `orders-processor`, then click on `Service Bus Explorer (preview)` from there we need to publish/send a message, use the JSON payload below
-      ```json
-        {
-          "data": {
-              "reference": "Order 150",
-              "quantity": 150,
-              "createdOn": "2022-05-10T12:45:22.0983978Z"
-            }
-        }
+### 7. Configure Managed Identities in Azure Container App   
+As you noticed so far, we are not using any connection strings to establish the relation between our Container App and Azure Service Bus, we will rely on [Managed Identities](https://learn.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet) to allow our container app to access Azure Service Bus. There are two types of identities which can a be granted to our container app:
+- A `system-assigned` identity, it will be tied to our container app and if we deleted the container app, the identity will be deleted. An app can only have one system-assigned identity.
+- A `user-assigned` identity is a standalone Azure resource that can be assigned to our container app and other resources. A container app can have multiple user-assigned identities. The identity exists until you delete them.
+
+We will be using a `system-assigned` identity, and then configure Azure Service Bus access control role assignments to grant our container app a `Azure Service Bus Data Receiver` role to allow receiving messages from Service Bus queues and subscriptions.
+  1. Run the command below to create `system-assigned` identity for our container app:
+      ```PowerShell
+      ##assigning the system assigned identity
+      az containerapp identity assign `
+        --resource-group $RESOURCE_GROUP `
+        --name $BACKEND_SVC_NAME `
+        --system-assigned
       ```
-      - If all is configured correctly, you should start seeing the information logs in Container Apps Log stream, similar to the images below
-      ![Image showing publishing messages from Azure Service](img/SvsBusPublishMessage-S.jpg)
-      - Information logs on the `Log stream` of the deployed Azure Container App
-      ![Image showing ACA Log Stream](img/ACA-Logstream-s.jpg)
+     This command will create an Enterprise Application (so a Service Principal) within Azure AD, which is linked to our container app, the output of this command will be as the below, keep a note of the property `principalId` as we are going to use it in the next step.
+     ```Json
+      {
+        "principalId": "456782b0-d5be-4dbd-afa0-5e2cff05d04d",
+        "tenantId": "0a02a8b1-XXXX-XXXX-XXXX-67ceb9132d81",
+        "type": "SystemAssigned"
+      }
+     ```
+     Note: This can be done from Azure Portal as described [here.](https://learn.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet#add-a-system-assigned-identity)
+  
+  2. Next, we need to associate the container app system-identity with the target which is Azure Service Bus to allow our container app via dapr runtime to access the topic and subscription created, we need to grant our container app the least privilege needed to receive data from topic and subscription, so we are going to assign a built-in role in Azure service bus named `Azure Service Bus Data Receiver` You can read more about [Azure built-in roles for Azure Service Bus.](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-managed-service-identity#azure-built-in-roles-for-azure-service-bus)
+  Run the command below to associate the `system-assigned` with access-control role `Azure Service Bus Data Receiver`
+      ```PowerShell
+        $subscription_id = "<Your Azure Subscription ID>"	## Your Azure Subscription
+        $principalId = "456782b0-d5be-4dbd-afa0-5e2cff05d04d" ## Principal Id after creating system identity for container app 
+        $roleNameOrId =  "Azure Service Bus Data Receiver" ## Built in role name
+        $resourceName = "ordersservices" ##Name of your Service Bus Namespace
+
+        az role assignment create `
+        --assignee $principalId `
+        --role $roleNameOrId `
+        --scope /subscriptions/$subscription_id/resourcegroups/$RESOURCE_GROUP/providers/Microsoft.ServiceBus/namespaces/$resourceName
+      ```
+     You can verify from Azure Portal that the association relation is created by going to your container app, select `identity` tab, then click on `Azure role assignments` button, you should see the role assignment as the below image:
+    ![Image showing container apps role assignment](img/RoleAssignment-S.jpg)
+  3. Lastly, we need to restart the container app revision, to do so run the command below:
+     ```PowerShell
+      ##Get revision name and assign it to a variable
+      $REVISION_NAME = (az containerapp revision list `
+              --name $BACKEND_SVC_NAME  `
+              --resource-group $RESOURCE_GROUP `
+              --query [0].name)
+      
+      ##Restart revision by name							   
+      az containerapp revision restart `
+        --resource-group $RESOURCE_GROUP `
+        --name $BACKEND_SVC_NAME  `
+        --revision $REVISION_NAME
+     ```
+
+### 8. Run end to end Test on Azure
+With all those steps implemented we are ready to test end to end on Azure, to do this:
+  - From the Azure Portal, select the Azure Container App `orders-processor` and navigate to `Log stream` under `Monitoring` tab, leave the stream connected and opened.
+  - From the Azure Portal, select the Azure Service Bus Namespace `ordersservices`, select the topic `orderreceivedtopic`, select the subscription named `orders-processor-subscription`, then click on `Service Bus Explorer (preview)` from there we need to publish/send a message, use the JSON payload below
+    ```json
+      {
+        "data": {
+            "reference": "Order 150",
+            "quantity": 150,
+            "createdOn": "2022-05-10T12:45:22.0983978Z"
+          }
+      }
+    ```
+  - If all is configured correctly, you should start seeing the information logs in Container Apps Log stream, similar to the images below
+  ![Image showing publishing messages from Azure Service](img/SvsBusPublishMessage-S.jpg)
+  - Information logs on the `Log stream` of the deployed Azure Container App
+  ![Image showing ACA Log Stream](img/ACA-Logstream-s.jpg)
 
 :::success 🎉 CONGRATULATIONS
 You have successfully deployed to the cloud an Azure Container App and configured Dapr Pub/Sub API with Azure Service Bus.
 :::
 
-### 7. Clean up
+### 9. Clean up
 
 If you are done with the tutorial, use the following command to delete the resource group and all its contained resources to avoid incurring further costs.
 
@@ -430,7 +495,7 @@ For sure you need to work on the configuration part of Dapr State Store by creat
 - Create a Dapr Component file adhering to Dapr Specs.
 - Create an Azure Container Apps component file adhering to ACA component specs.
 - Test locally on your dev machine using Dapr Component file.
-- Register the new Dapr State Store component with Azure Container Apps Environment and set the Cosmos Db masterKey from the Azure Portal.
+- Register the new Dapr State Store component with Azure Container Apps Environment and set the Cosmos Db masterKey from the Azure Portal. _If you want to challenge yourself more, use the Managed Identity approach as done in this post! The right way to protect your keys and you will not worry about managing CosmosDb keys anymore!_
 - Build a new image of the application and push it to Azure Container Registry.
 - Update Azure Container Apps and create a new revision which contains the updated code.
 - Verify the results by checking Azure Cosmos DB, you should see the Order Model stored in Cosmos DB.
@@ -450,9 +515,10 @@ So far, the published posts below, and I'm publishing more posts on weekly basis
 - [Azure Container Apps Async Communication with Dapr Pub/Sub API – Part 6](https://bitoftech.net/2022/09/02/azure-container-apps-async-communication-with-dapr-pub-sub-api-part-6/)
 - [Azure Container Apps with Dapr Bindings Building Block – Part 7](https://bitoftech.net/2022/09/05/azure-container-apps-with-dapr-bindings-building-block/)
 - [Azure Container Apps Monitoring and Observability with Application Insights – Part 8](https://bitoftech.net/2022/09/09/azure-container-apps-monitoring-and-observability-with-application-insights-part-8/)
-- _Integrate Health probes in Azure Container Apps – Part 9_
-- _Azure Container Apps Auto Scaling with KEDA – Part 10_
-- _Use IaC to provision Azure Container Apps Environment with Bicep – Part 11_
+- [Continuous Deployment for Azure Container Apps using GitHub Actions – Part 9](https://bitoftech.net/2022/09/13/continuous-deployment-for-azure-container-apps-using-github-actions-part-9/)
+- [Use Bicep to Deploy Dapr Microservices Apps to Azure Container Apps – Part 10](https://bitoftech.net/2022/09/16/use-bicep-to-deploy-dapr-microservices-apps-to-azure-container-apps-part-10/)
+- [Azure Container Apps Auto Scaling with KEDA – Part 11](https://bitoftech.net/2022/09/22/azure-container-apps-auto-scaling-with-keda-part-11/)
+- _Integrate Health probes in Azure Container Apps – Part 12_
 
 ## Resources
 - [Azure Container Apps documentation](https://docs.microsoft.com/azure/container-apps/)
