@@ -1,6 +1,6 @@
 ---
-slug: 14-aca-managed-id
-title: 14. Container Apps Secrets and Managed Identity
+slug: 13-aca-managed-id
+title: 13. Container Apps Secrets and Managed Identity
 authors: [kendall]
 draft: true
 hide_table_of_contents: false
@@ -12,22 +12,21 @@ description: "<FIXME>"
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices]
 ---
 
-<!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/13-aca-managed-id" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Secrets in Azure Container Apps />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Secrets in Azure Container Apps" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@keroden" />
+    content="@kendallroden" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/14-aca-managed-id" />
+    href="https://azure.github.io/Cloud-Native/blog/13-aca-managed-id" />
 </head>
 
 ---
@@ -41,6 +40,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
    * Using Container Apps Secrets
    * Using Managed Identity for connecting to Azure resources
    * Using Dapr secret store component references (Dapr-only)
+   * Conclusion
    * Resources: For self-study!
 
 ![](./img/banner.png)
@@ -294,6 +294,10 @@ To configure your app with a system-assigned managed identity you will follow si
         scopes:
           - myApp
   ```
+  
+  ## Summary 
+  
+  In this post, we have covered the high-level details on how to work with secret values in Azure Container Apps for both Dapr and Non-Dapr apps. In the next article, we will walk through a complex Dapr example from end-to-end which makes use of the new support for Dapr + Managed Identity. Stayed tuned for additional documentation around Dapr secrets as it will be release in the next two weeks! 
 
   ## Resources
 
