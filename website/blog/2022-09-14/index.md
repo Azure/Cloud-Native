@@ -247,7 +247,6 @@ To configure your app with a system-assigned managed identity you will follow si
     --dapr-component-name secretstore \
     --yaml "./secretstore.yaml"
   ```
-  ```
   
   Step 3: Run the following command to create a system-assigned identity for your container app 
   
