@@ -136,7 +136,7 @@ In addition to using managed identity to access services from your container app
 
 ## Secure access to external services with Dapr  
 
-For Dapr-enabled apps, there are a few ways to connect to the resources your solutions depend on. In this section, we will discuss recommendation on when to use each approach. 
+For Dapr-enabled apps, there are a few ways to connect to the resources your solutions depend on. In this section, we will discuss when to use each approach. 
   1. Using Container Apps secrets in your Dapr components
   1. Using Managed Identity with Dapr Components 
   1. Using Dapr Secret Stores for runtime secrets and component references 
