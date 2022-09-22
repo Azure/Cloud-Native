@@ -96,6 +96,7 @@ The [latest Dapr release](https://docs.dapr.io/concepts/building-blocks-concept/
  * [Bindings](https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/) for seamless workflow integrations using event triggers
  * [Actors](https://docs.dapr.io/developing-applications/building-blocks/actors/actors-overview/) for encapsulated & reusable objects that enable reliable, scalable behaviors
  * [Observability](https://learn.microsoft.com/azure/container-apps/observability) to monitor application events for health and performance
+ * [Secrets](https://docs.dapr.io/developing-applications/building-blocks/secrets/) for securely accessing sensitive values.
 
 In the next section, we'll dive into Dapr-enabled Azure Container Apps. Before we do that, here are a couple of resources to help you explore the Dapr platform by itself, and get more hands-on experience with the concepts and capabilities:
  * [Dapr Quickstarts](https://docs.dapr.io/getting-started/quickstarts/) - build your first Dapr app, then explore quickstarts for a core APIs including service-to-service invocation, pub/sub, state mangement, bindings and secrets management.
