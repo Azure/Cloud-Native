@@ -59,9 +59,9 @@ In Azure Container Apps, applications can securely leverage connection informati
 Specifically for Dapr-enabled container apps, users can now tap into the power of the Dapr secrets API! With this new capability unlocked in Container Apps, users can call the Dapr secrets API from their application code to securely access secrets from Key Vault or other backing secret stores. In addition, customers can also make use of a secret store component reference when wiring up Dapr state store components and more! ALSO, I'm excietd to share that support for  Dapr + Managed Identity is now available as well. What does this mean? It means that you can enable Managed Identity for your container app, and when establishing connections via Dapr, the Dapr sidecar can use this identity! This means simplified components without the need for secrets when connecting to Azure services! 
   
 Let's dive a bit deeper into the following three topics:
-1. Using Container Apps secrets in your container apps
-2. Using Managed Identity to connect to Azure services
-3. Connecting to services securely for Dapr-enabled apps 
+  1. Using Container Apps secrets in your container apps
+  2. Using Managed Identity to connect to Azure services
+  3. Connecting to services securely for Dapr-enabled apps 
 
 ## Secure access to external services without Dapr  
 
@@ -76,22 +76,22 @@ Before we dive in, let's establish a few important points regarding secrets in c
   
 Step 1: Provide the secure value as a secret parameter when creating your container app using the syntax **"SECRET_NAME=SECRET_VALUE"**
 
-az containerapp create \
-  --resource-group "my-resource-group" \
-  --name queuereader \
-  --environment "my-environment-name" \
-  --image demos/queuereader:v1 \
-**--secrets "queue-connection-string=$CONNECTION_STRING"**
+  az containerapp create \
+    --resource-group "my-resource-group" \
+    --name queuereader \
+    --environment "my-environment-name" \
+    --image demos/queuereader:v1 \
+  **--secrets "queue-connection-string=$CONNECTION_STRING"**
   
 Step 2: Create an environment variable which references the value of the secret created in step 1 using the syntax **"ENV_VARIABLE_NAME=secretref:SECRET_NAME"**
   
-az containerapp create \
-  --resource-group "my-resource-group" \
-  --name myQueueApp \
-  --environment "my-environment-name" \
-  --image demos/myQueueApp:v1 \
- **--secrets "queue-connection-string=$CONNECTIONSTRING"** \
- **--env-vars "QueueName=myqueue" "ConnectionString=secretref:queue-connection-string"**
+  az containerapp create \
+    --resource-group "my-resource-group" \
+    --name myQueueApp \
+    --environment "my-environment-name" \
+    --image demos/myQueueApp:v1 \
+   **--secrets "queue-connection-string=$CONNECTIONSTRING"** \
+   **--env-vars "QueueName=myqueue" "ConnectionString=secretref:queue-connection-string"**
 
 This **ConnectionString** environment variable can be used within your application code to securely access the connection string value at runtime.
 
@@ -102,37 +102,37 @@ A managed identity from Azure Active Directory (Azure AD) allows your container 
 To configure your app with a system-assigned managed identity you will follow similar steps to the following: 
   
 Step 1: Run the following command to create a system-assigned identity for your container app 
-  az containerapp identity assign \
-  --name "myQueueApp" \
-  --resource-group "my-resource-group" \
-  --system-assigned
   
+  az containerapp identity assign \
+    --name "myQueueApp" \
+    --resource-group "my-resource-group" \
+    --system-assigned
+
 Step 2: Retrieve the identity details for your container app and store the Principal ID for the identity in a variable **"PRINCIPAL_ID"**
+
   az containerapp identity show \
-  --name "myQueueApp" \
-  --resource-group "my-resource-group"
+    --name "myQueueApp" \
+    --resource-group "my-resource-group"
   
 Step 3: Assign the appropriate roles and permissions to your container app's managed identity using the Principal ID in step 2 based on the resources you need to access (example below)
   
-az role assignment create \
+  az role assignment create \
     --role "Storage Queue Data Contributor" \
     --assignee $PRINCIPAL_ID \
     --scope "/subscriptions/<subscription>/resourceGroups/<resource-group>/providers/Microsoft.Storage/storageAccounts/<storage-account>/queueServices/default/queues/<queue>"
  
-
-After running the above commands, your container app will be able to access your Azure Store Queue because it's managed identity has been assigned the "Store Queue Data Contributor" role. The role assignments you create will be contingent solely on the resources your container app needs to access.
+After running the above commands, your container app will be able to access your Azure Store Queue because it's managed identity has been assigned the "Store Queue Data Contributor" role. The role assignments you create will be contingent solely on the resources your container app needs to access. To instrument your code to use this managed identity, see more details [here](https://learn.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet#connect-to-azure-services-in-app-code). 
 
 In addition to using managed identity to access services from your container app, you can also use managed identity to [pull your container images from Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-apps/containers#container-registries).
 
 ## Secure access to external services with Dapr  
 
-For Dapr-enabled apps, there are three ways to connect to the resources your solutions depend on. In this section, we will discuss recommendation on when to use each approach. 
-  
-1. Using Container Apps secrets in your Dapr components
-2. Using Managed Identity to connect to Azure services
-3. Using a Dapr Secret Store reference in your Dapr component 
+For Dapr-enabled apps, there are a few ways to connect to the resources your solutions depend on. In this section, we will discuss recommendation on when to use each approach. 
+  1. Using Container Apps secrets in your Dapr components
+  2. Using Managed Identity with Dapr Components 
+  3. Using Dapr Secret Stores for runtime secrets and component references 
 
-### Leveraging Container Apps secrets in your Dapr components
+### Using Container Apps secrets in your Dapr components
 
 Prior to providing support for the Dapr Secret's Management building block, this was the only approach available for securely storing sensitive values for use in Dapr components. 
 
@@ -144,17 +144,78 @@ With the introduction of the Secrets API and the ability to use Dapr + Managed I
 - Using service principal credentials to configure an Azure Key Vault secret store component (Using Managed Identity is recommend) 
 - Securing access credentials which may be required when creating a non-Azure secret store component 
   
-Step 1: Run the following command to create a system-assigned identity for your container app 
-  az containerapp identity assign \
-  --name "myQueueApp" \
-  --resource-group "my-resource-group" \
-  --system-assigned
+Step 1: Create a Dapr component which can be used by one or more services in the container apps environment. In the below example, you will create a secret to store the storage account key and reference this secret from the appropriate Dapr metadata property. 
   
-Step 2: Retrieve the identity details for your container app and store the Principal ID for the identity in a variable **"PRINCIPAL_ID"**
-  az containerapp identity show \
-  --name "myQueueApp" \
-  --resource-group "my-resource-group"
+   ```yaml
+      componentType: state.azure.blobstorage
+      version: v1
+      metadata:
+      - name: accountName
+        value: testStorage
+      - name: accountKey
+        secretRef: account-key
+      - name: containerName
+        value: myContainer
+      secrets:
+      - name: account-key
+        value: "<STORAGE_ACCOUNT_KEY>"
+      scopes:
+      - nodeapp
+    ```
+  
+Step 2: Deploy the Dapr component using the below command with the appropriate arguments.
+  
+  az containerapp env dapr-component set \
+    --name "my-environment" \
+    --resource-group "my-resource-group" \
+    --dapr-component-name statestore \
+    --yaml "./statestore.yaml"
 
+### Using Managed Identity with Dapr Components 
+
+Dapr-enabled container apps can now make use of managed identities within Dapr components. This is the most ideal path for connecting to Azure services securely, and allows for the removal of sensitive values in the component itself. 
+
+The Dapr sidecar makes use of the existing identities available within a given container app; Dapr itself does not have it's own identity. Therefore, the steps to enable Dapr + MI are similar to those in the section regarding managed identity for non-Dapr apps. See example steps below specifically for using a system-assigned identity: 
+
+Step 1: Create a system-assigned identity for your container app 
+Step 2: Retrieve the identity details for your container app and store the Principal ID for the identity in a variable **"PRINCIPAL_ID"**
+Step 3: Assign the appropriate roles and permissions for accessing the resources backing your Dapr components to your container app's managed identity using the Principal ID
+Step 4: Create a simplified Dapr component without any secrets required 
+ 
+  ```yaml
+      componentType: state.azure.blobstorage
+      version: v1
+      metadata:
+      - name: accountName
+        value: testStorage
+      - name: containerName
+        value: myContainer
+      scopes:
+      - nodeapp
+   ```
+  
+Step 5: Deploy the component to test the connection from your container app via Dapr! 
+  
+Keep in mind, all Dapr components will be loaded by each Dapr-enabled container app in an environment by default. In order to avoid apps without the appropriate permissions from loading a component unsuccessfully, use scopes. This will ensure that only applications with the appropriate identities to access the backing resource load the component. 
+  
+### Using Dapr Secret Stores for runtime secrets and component references  
+
+Dapr integrates with secret stores to provide apps and other components with secure storage and access to secrets such as access keys and passwords. The Dapr Secrets API is now available for use in Container Apps. 
+
+Using Dapr’s secret store building block typically involves the following:
+  - Setting up a component for a specific secret store solution.
+  - Retrieving secrets using the Dapr secrets API in the application code.
+  - Optionally, referencing secrets in Dapr component files.
+
+ 
+  
+  
+  
+  
+  
+  https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/
+
+  
 
 ## Exercise
 
