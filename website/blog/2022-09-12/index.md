@@ -105,7 +105,7 @@ In the next section, we'll dive into Dapr-enabled Azure Container Apps. Before w
 
 ## Integrate Dapr & Azure Container Apps
 
-Dapr currently has a [v1.9 (preview)](https://v1-9.docs.dapr.io/) version, but Azure Container Apps supports [Dapr v1.8.3](https://learn.microsoft.com/azure/container-apps/dapr-overview#current-supported-dapr-version). In this section, we'll look at what it takes to enable, configure, and use, Dapr integration with Azure Container Apps. It involves 3 steps: _enabling_ Dapr using settings, _configuring_ Dapr components (API) for use, then invoking the APIs.
+Dapr currently has a [v1.9 (preview)](https://v1-9.docs.dapr.io/) version, but Azure Container Apps supports [Dapr v1.8](https://learn.microsoft.com/azure/container-apps/dapr-overview#current-supported-dapr-version). In this section, we'll look at what it takes to enable, configure, and use, Dapr integration with Azure Container Apps. It involves 3 steps: _enabling_ Dapr using settings, _configuring_ Dapr components (API) for use, then invoking the APIs.
 
 Here's a simple [a publisher-subscriber scenario](https://learn.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#dapr-settings) from the documentation. We have two Container apps identified as `publisher-app` and `subscriber-app` deployed in a single environment. Each ACA has an activated `daprd` sidecar, allowing them to use the _Pub/Sub_ API to communicate asynchronously with each other - without having to write the underlying pub/sub implementation themselves. Rather, we can see that the Dapr API uses a `pubsub,azure.servicebus` **component** to implement that capability.
 
@@ -121,7 +121,7 @@ We can enable Dapr integration in the Azure Container App during creation by _sp
 
 Once enabled, Dapr will run in the same _environment_ as the Azure Container App, and listen on **port 3500** for API requests. The Dapr sidecar can be shared my multiple Container Apps _deployed in the same environment_. 
 
-There are four main settings - the example below shows the ARM template properties, but you can [find the equivalent CLI parameters here](https://learn.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#enable-dapr) for comparison.
+There are four main settings we will focus on for this demo - the example below shows the ARM template properties, but you can [find the equivalent CLI parameters here](https://learn.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#enable-dapr) for comparison.
  * `dapr.enabled` - enable Dapr for Azure Container App
  * `dapr.appPort` - specify port on which app is listening
  * `dapr.appProtocol` - specify if using `http` (default) or `gRPC` for API
@@ -140,10 +140,10 @@ These are defined under the `properties.configuration` section for your resource
 
 ### 2. [Configure Dapr in ACA:  Components](https://learn.microsoft.com/azure/container-apps/dapr-overview?tabs=bicep1%2Cyaml#configure-dapr-components)
 
-The next step after activating the Dapr sidecar, is to define the _APIs_ that you want to use and potentially specify the **Dapr components** (specific implementations of that API) that you prefer. These components are created at environment-level and can be accessed by all Dapr-enabled Container Apps running in it. 
+The next step after activating the Dapr sidecar, is to define the _APIs_ that you want to use and potentially specify the **Dapr components** (specific implementations of that API) that you prefer. These components are created at environment-level and by default, Dapr-enabled containers apps in an environment will load the complete set of deployed components -- **use the `scopes` property** to ensure only components needed by a given app are loaded at runtime. Here's what the ARM template `resources` section looks like for the example above. This tells us that the environment has a `dapr-pubsub` component of type `pubsub.azure.servicebus` deployed - where that component is loaded by container apps with dapr ids (`publisher-app`, `subscriber-app`).
 
-By default, Dapr-enabled containers apps in an environment will load the complete set of deployed components -- **use the `scopes` property** to be more specific about components loaded by each ACA. Here's what the ARM template `resources` section looks like for the example above. This tells us that the environment has a `dapr-pubsub` component of type `pubsub.azure.servicebus` deployed - where that component is loaded by default in apps specified by name (`publisher-app`, `subscriber-app`).
-
+**NOTE: The secrets approach used here is ideal for demo purposes. We recommend using Managed Identity + Dapr for Azure services in production. For more details on secrets, see tomorrow's post on secrets!**
+  
 ```json
 {
   "resources": [
@@ -178,7 +178,7 @@ With this configuration, the ACA is now set to use pub/sub capabilities from the
 
 ## Exercise: Deploy Dapr-enabled ACA
 
-In the next post in this series, we'll be doing a walkthrough of a more complex example, to show how Dapr-enabled Azure Container Apps are created and deployed. 
+In the next couple posts in this series, we'll be discussing how you can use the Dapr secrets API and doing a walkthrough of a more complex example, to show how Dapr-enabled Azure Container Apps are created and deployed. 
 
 However, you can get hands-on experience with these concepts by walking through one of these two tutorials, each providing an alternative approach to configure and setup the application describe in the scenario below:
  * **Tutorial 1**: [Deploy a Dapr-enabled ACA using **Azure CLI**](https://learn.microsoft.com/azure/container-apps/microservices-dapr)
