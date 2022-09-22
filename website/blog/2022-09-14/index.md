@@ -274,29 +274,28 @@ To configure your app with a system-assigned managed identity you will follow si
   --scope /subscriptions/{subscriptionid}/resourcegroups/{resource-group-name}/providers/Microsoft.KeyVault/vaults/{key-vault-name}
  ```
  
-  Step 6: Begin using the Dapr Secrets API in your application code to retrieve secrets! See additional details [here](https://docs.dapr.io/reference/api/secrets_api/)
+  Step 6: Begin using the Dapr Secrets API in your application code to retrieve secrets! See additional details [here] https://docs.dapr.io/reference/api/secrets_api/)
   
   #### Referencing secrets in Dapr component files
   
   Once a Dapr secret store component is available in the environment, it can be used to retrieve secrets for use in other components. For example, when creating a state store component, you can add a reference to the Dapr secret store from which you would like to source connection information. You will no longer use secrets directly in the component spec, but rather will instruct the Dapr sidecar to retrieve the secrets from the specified store. 
   
-    ```yaml
-      componentType: state.azure.blobstorage
-      version: v1
-      metadata:
-      - name: accountName
-        value: testStorage
-      - name: accountKey
-        secretRef: account-key
-      - name: containerName
-        value: myContainer
-      secretStoreComponent: "<SECRET_STORE_COMPONENT_NAME>"
-      scopes:
-      - myApp
-   ```
- 
+  ```yaml
+        componentType: state.azure.blobstorage
+        version: v1
+        metadata:
+        - name: accountName
+          value: testStorage
+        - name: accountKey
+          secretRef: account-key
+        - name: containerName
+          value: myContainer
+        secretStoreComponent: "<SECRET_STORE_COMPONENT_NAME>"
+        scopes:
+          - myApp
+  ```
 
-## Resources
+  ## Resources
 
 Here are the main resources to explore for self-study:
  * [Azure Container Apps Secrets](https://learn.microsoft.com/en-us/azure/container-apps/manage-secrets?tabs=azure-cli)
