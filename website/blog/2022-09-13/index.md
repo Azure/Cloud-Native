@@ -1,6 +1,6 @@
 ---
-slug: 13-dapr-aca-quickstart
-title: 13. Build ACA with Dapr
+slug: 14-dapr-aca-quickstart
+title: 14. Build ACA with Dapr
 authors: [taiseer]
 draft: true
 hide_table_of_contents: false
@@ -14,7 +14,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/13-dapr-aca-quickstart" />
+    content="https://azure.github.io/Cloud-Native/blog/14-dapr-aca-quickstart" />
   <meta name="twitter:title" 
     content="#30DaysOfServerless: Azure Container Apps + Dapr" />
   <meta name="twitter:description" 
@@ -31,7 +31,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
 
 ---
 
-Welcome to `Day 13` of #30DaysOfServerless!
+Welcome to `Day 14` of #30DaysOfServerless!
 
 In the past few days we focused our attention on Azure Container Apps, building microservices-based solutions and learning related concepts like environments, networking and auto-scaling - before introducing the sidecar capability of Dapr. Today, we look at how Dapr and ACA work seamlessly together to simplify microservices development in the cloud.
 
@@ -52,22 +52,9 @@ In the past few days we focused our attention on Azure Container Apps, building 
 
 
 ## Introduction To Dapr
-We as a developers have been asked many times to create scalable resilient and distributed applications as microservices, but we faced the same challenges such as recovering state after failures, services discovery and calling other microservices, integration with external resources, asynchronous communications between different services, distributed tracing and measuring message calls and performance across components and networked services. 
+As developers, we are often tasked with create scalable resilient and distributed microservices, but face challenges such as recovering state after failures, establishing reliable communication between services, integrating with external resources and instrumenting distributed tracing for end-to-end solution observability. Dapr (Distributed Application Runtime) offers an approach for solving these common problems more easily. 
 
-Dapr (Distributed Application Runtime) offers a solution for the common problems that needed in any distributed microservice application. Dapr can be used with [any language](https://docs.dapr.io/concepts/overview/#dapr-sdks) (Go, .NET python, Node, Java, C++) and can run [anywhere](https://docs.dapr.io/concepts/overview/#hosting-environments) (On-premise, Kubernetes, Azure Cloud, GCP, AWS, IBM, etc...)
-
-Dapr provides is core capabilities as a set of [Building Blocks](https://docs.dapr.io/concepts/building-blocks-concept/), with 9 Building Blocks availablee today in Dapr OSS. Building Blocks address common challenges in building resilient, microservices applications and make it easier for developers to implement best practices and patterns. Building Blocks provide consistent APIs and abstract away the implementation details to keep microservices code simple and portable.
-
-The diagram below shows the 9 Building Blocks or APIs that can be called from your code, and can be configured using [components](https://docs.dapr.io/concepts/components-concept/). Remember that you can pick and choose the building blocks relevant to your services and implement them on an as needed basis.
-
-![Diagram of the 9 bulding blocks by dapr](img/DaprBuildingBlocks.jpg)
-
-## Dapr & Microservices
-Dapr exposes its Building Blocks and components through a **sidecar architecture**. A sidecar enables Dapr to run in a separate memory process or separate container alongside your service. Sidecars provide isolation and encapsulation as they remove plumbling code and dependencies from your core application logic.
-
-![Diagram showing the sidecar concept in Dapr](img/ACA-Tutorial-DaprSidecar-s.jpg)
-
-This pattern is named Sidecar because it resembles a sidecar attached to a motorcycle. In the previous figure, note how the Dapr sidecar is attached to your service to provide distributed application capabilities.
+Dapr provides its core capabilities as a set of [Building Blocks](https://docs.dapr.io/concepts/building-blocks-concept/) as detailed in the introduction to dapr article released as a part of this series. Building Blocks provide consistent APIs that abstract away the implementation details to keep microservices code simple and portable.
 
 ## Today's App Scenario
 In this blog post we will create one single Azure Container App which will act as background processor services (service will not be accessible on the internet nor via other services) and configure two Dapr building blocks which they are the Pub/Sub and the State Store. Let's take a look at the architecture diagram below to have better understanding of what we are building:
