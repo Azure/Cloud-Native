@@ -532,7 +532,7 @@ So far, the published posts below, and I'm publishing more posts on weekly basis
 - [Azure Container Apps Monitoring and Observability with Application Insights – Part 8](https://bitoftech.net/2022/09/09/azure-container-apps-monitoring-and-observability-with-application-insights-part-8/)
 - [Continuous Deployment for Azure Container Apps using GitHub Actions – Part 9](https://bitoftech.net/2022/09/13/continuous-deployment-for-azure-container-apps-using-github-actions-part-9/)
 - [Use Bicep to Deploy Dapr Microservices Apps to Azure Container Apps – Part 10](https://bitoftech.net/2022/09/16/use-bicep-to-deploy-dapr-microservices-apps-to-azure-container-apps-part-10/)
-- _Azure Container Apps Auto Scaling with KEDA – Part 11_
+- [Azure Container Apps Auto Scaling with KEDA – Part 11](https://bitoftech.net/2022/09/22/azure-container-apps-auto-scaling-with-keda-part-11/)
 - _Integrate Health probes in Azure Container Apps – Part 12_
 
 ## Resources
