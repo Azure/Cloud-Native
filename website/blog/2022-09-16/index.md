@@ -1,6 +1,6 @@
 ---
-slug: 16-FIXME
-title: 16. <FIXME>
+slug: 16-hello-logic-apps
+title: 16. Hello, Logic Apps
 authors: [nitya]
 draft: true
 hide_table_of_contents: false

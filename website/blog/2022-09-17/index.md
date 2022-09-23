@@ -1,6 +1,6 @@
 ---
 slug: 17-logicappsandcosmosdb
-title: 17. Using Logic Apps with Cosmos DB
+title: 17. Logic Apps with Cosmos DB
 authors: [nitya, brian]
 draft: true
 hide_table_of_contents: false

@@ -1,6 +1,6 @@
 ---
-slug: 20-Build seamless automations to boost productivity with Microsoft Graph, Event Hubs and Logic Apps
-title: 20. Build seamless automations to boost productivity with Microsoft Graph, Event Hubs and Logic Apps
+slug: 20-events-graph
+title: 20. Integrate with Microsoft Graph
 authors: [ayca]
 draft: true
 hide_table_of_contents: false

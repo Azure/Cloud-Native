@@ -135,3 +135,15 @@ anthony:
   title: Principal Product Manager @Microsoft
   url: https://github.com/anthonychu
   image_url: https://github.com/anthonychu.png
+
+mikemorton:
+  name: Mike Morton
+  title: Principal PM, Container Apps @Microsoft
+  url: https://github.com/BigMorty
+  image_url: https://github.com/BigMorty.png
+
+ramya:
+  name: Ramya Oruganti
+  title: Senior PM, Azure Functions @Microsoft
+  url: https://twitter.com/ramyaoncloud
+  image_url: https://pbs.twimg.com/profile_images/588627587435397120/vuA4BT3a_400x400.jpg

@@ -1,6 +1,6 @@
 ---
 slug: 21-cloudevents-via-event-grid
-title: 21. How to Consume CloudEvents via Azure Event Grid
+title: 21. CloudEvents with Event Grid
 authors: [justin]
 draft: true
 hide_table_of_contents: false

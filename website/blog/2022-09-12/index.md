@@ -142,7 +142,10 @@ These are defined under the `properties.configuration` section for your resource
 
 The next step after activating the Dapr sidecar, is to define the _APIs_ that you want to use and potentially specify the **Dapr components** (specific implementations of that API) that you prefer. These components are created at environment-level and by default, Dapr-enabled containers apps in an environment will load the complete set of deployed components -- **use the `scopes` property** to ensure only components needed by a given app are loaded at runtime. Here's what the ARM template `resources` section looks like for the example above. This tells us that the environment has a `dapr-pubsub` component of type `pubsub.azure.servicebus` deployed - where that component is loaded by container apps with dapr ids (`publisher-app`, `subscriber-app`).
 
-**NOTE: The secrets approach used here is ideal for demo purposes. We recommend using Managed Identity + Dapr for Azure services in production. For more details on secrets, see tomorrow's post on secrets!**
+:::info  USING MANAGED IDENTITY + DAPR
+
+The secrets approach used here is idea for demo purposes. However, we recommend using _Managed Identity with Dapr_ in production. For more details on secrets, check out tomorrow's post on _Secrets and Managed Identity in Azure Container Apps_
+:::
   
 ```json
 {

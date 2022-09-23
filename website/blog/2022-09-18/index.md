@@ -1,6 +1,6 @@
 ---
 slug: 18-cloudmail
-title: 18. Teaching the cloud to read your mail
+title: 18. Logic Apps + Computer Vision
 authors: [nitya, brian]
 draft: true
 hide_table_of_contents: false

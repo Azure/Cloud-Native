@@ -1,6 +1,6 @@
 ---
-slug: 19-FIXME
-title: 19. <FIXME>
+slug: 19-hello-event-grid
+title: 19. Hello, Event Grid!
 authors: [nitya]
 draft: true
 hide_table_of_contents: false
