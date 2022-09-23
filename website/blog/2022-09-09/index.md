@@ -20,7 +20,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
   <meta name="twitter:description" 
     content="#30DaysOfServerless: Introduction to Container Apps Core Concepts" />
   <meta name="twitter:image"
-    content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
+    content="https://azure.github.io/Cloud-Native/assets/images/banner-2b8cf81d448cbb7f947a85dd71631b84.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@nitya" />
