@@ -8,7 +8,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [azure, functions, serverless, concepts]
 image: ./img/banner.png
-description: "<FIXME>" 
+description: "Today we'll shift gears and talk about Dapr - the Distributed Application Runtime - and how it makes microservices development with ACA _easier_" 
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices]
 ---
 
@@ -20,7 +20,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
   <meta name="twitter:description" 
     content="#30DaysOfServerless: Dapr Integration with ACA" />
   <meta name="twitter:image"
-    content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
+    content="http://localhost:3000/Cloud-Native/assets/images/banner-cc3cfe656444b6f21e4bc8d2c541bc3e.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@nitya" />

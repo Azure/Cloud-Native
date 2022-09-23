@@ -2,7 +2,7 @@
 slug: 13-aca-managed-id
 title: 13. Secrets + Managed Identity
 authors: [kendall]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -111,7 +111,7 @@ This **ConnectionString** environment variable can be used within your applicati
                                                                                        
 ### Using Managed Identity to connect to Azure services
   
-A managed identity from Azure Active Directory (Azure AD) allows your container app to access other Azure AD-protected resources. This approach is recommended where possible as it eliminates the need for managing secret credentials in your container apps and allows you to properly scope the permissions needed for a given container app using role-based access control. Both system-assigned and user-assigned identities are available in container apps. For more background on managed identities in Azure AD, see [Managed identities for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview).
+A managed identity from Azure Active Directory (Azure AD) allows your container app to access other Azure AD-protected resources. This approach is recommended where possible as it eliminates the need for managing secret credentials in your container apps and allows you to properly scope the permissions needed for a given container app using role-based access control. Both system-assigned and user-assigned identities are available in container apps. For more background on managed identities in Azure AD, see [Managed identities for Azure resources](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).
   
 To configure your app with a system-assigned managed identity you will follow similar steps to the following: 
 
@@ -147,9 +147,9 @@ Assign the appropriate roles and permissions to your container app's managed ide
     --scope "/subscriptions/<subscription>/resourceGroups/<resource-group>/providers/Microsoft.Storage/storageAccounts/<storage-account>/queueServices/default/queues/<queue>"
  ```
   
-After running the above commands, your container app will be able to access your Azure Store Queue because it's managed identity has been assigned the "Store Queue Data Contributor" role. The role assignments you create will be contingent solely on the resources your container app needs to access. To instrument your code to use this managed identity, see more details [here](https://learn.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet#connect-to-azure-services-in-app-code). 
+After running the above commands, your container app will be able to access your Azure Store Queue because it's managed identity has been assigned the "Store Queue Data Contributor" role. The role assignments you create will be contingent solely on the resources your container app needs to access. To instrument your code to use this managed identity, see more details [here](https://learn.microsoft.com/azure/container-apps/managed-identity?tabs=portal%2Cdotnet#connect-to-azure-services-in-app-code). 
 
-In addition to using managed identity to access services from your container app, you can also use managed identity to [pull your container images from Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-apps/containers#container-registries).
+In addition to using managed identity to access services from your container app, you can also use managed identity to [pull your container images from Azure Container Registry](https://learn.microsoft.com/azure/container-apps/containers#container-registries).
 
 ## Secure access to external services with Dapr  
 
@@ -324,8 +324,8 @@ In this post, we have covered the high-level details on how to work with secret 
 ## Resources
 
 Here are the main resources to explore for self-study:
- * [Azure Container Apps Secrets](https://learn.microsoft.com/en-us/azure/container-apps/manage-secrets?tabs=azure-cli)
- * [Managed Identities in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet)
+ * [Azure Container Apps Secrets](https://learn.microsoft.com/azure/container-apps/manage-secrets?tabs=azure-cli)
+ * [Managed Identities in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/managed-identity?tabs=portal%2Cdotnet)
  * [Dapr Documentation: Core Concepts](https://v1-9.docs.dapr.io/concepts/)
  * [Dapr Quickstarts](https://docs.dapr.io/getting-started/quickstarts/)
  * [Dapr Tutorials](https://docs.dapr.io/getting-started/tutorials/)
