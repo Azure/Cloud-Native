@@ -64,7 +64,7 @@ In this post I'll walk you through setting up a Logic App that works with Cosmos
 
 
 
-Cosmos DB has [many APIs to choose from](https://learn.microsoft.com/azure/cosmos-db/choose-api), but to use the [default Logic App connection](https://docs.microsoft.com/en-us/connectors/documentdb/), we need to choose the a Cosmos DB SQL API.  We'll set this up via the Azure Portal. 
+Cosmos DB has [many APIs to choose from](https://learn.microsoft.com/azure/cosmos-db/choose-api), but to use the [default Logic App connection](https://docs.microsoft.com/connectors/documentdb/), we need to choose the a Cosmos DB SQL API.  We'll set this up via the Azure Portal. 
 
 To get started with Cosmos DB, you create an account, then a database, then a container to store JSON documents. To create a new Cosmos DB account from the [portal dashboard](https://portal.azure.com), Select **Create a resource > Azure Cosmos DB > Create**.  Choose **core SQL** for the API.
 
@@ -72,7 +72,7 @@ To get started with Cosmos DB, you create an account, then a database, then a co
 
 Select your subscription, then create a new resource group called **CosmosWeather**.  Enter an account name and choose a location, select provisioned throughput capacity mode and apply the free tier discount. From here you can select **Review and Create**, then **Create** 
 
-> Azure Cosmos DB is available in two different capacity modes: provisioned throughput and [serverless](https://docs.microsoft.com/en-us/azure/cosmos-db/throughput-serverless). You can perform the same database operations in both modes, but the way you get billed for these operations is different. We wil be using provisioned throughput and the free tier for this example.
+> Azure Cosmos DB is available in two different capacity modes: provisioned throughput and [serverless](https://docs.microsoft.com/azure/cosmos-db/throughput-serverless). You can perform the same database operations in both modes, but the way you get billed for these operations is different. We wil be using provisioned throughput and the free tier for this example.
 
 :::image type="content" source="img/cosmosdbaccount.png" alt-text="Set up the Cosmos DB account":::
 
