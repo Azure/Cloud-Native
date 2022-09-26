@@ -1,5 +1,5 @@
 ---
-slug: 28-serverless-power-platform-custom-connector
+slug: 28-where-am-i
 title: 28. Where am I? My GPS Location with Serverless Power Platform Custom Connector
 authors: [justin]
 draft: true

@@ -425,7 +425,7 @@ Things to notice here:
       ```
       
 ### Configure Managed Identities in Azure Container App   
-As you noticed so far, we are not using any connection strings to establish the relation between our Container App and Azure Service Bus, we will rely on [Managed Identities](https://learn.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet) to allow our container app to access Azure Service Bus. 
+As you noticed so far, we are not using any connection strings to establish the relation between our Container App and Azure Service Bus, we will rely on [Managed Identities](https://learn.microsoft.com/azure/container-apps/managed-identity?tabs=portal%2Cdotnet) to allow our container app to access Azure Service Bus. 
 
 We will be using a `system-assigned` identity with a role assignments to grant our container app the `Azure Service Bus Data Receiver` role which will allow it to receive messages from Service Bus queues and subscriptions.
 
@@ -447,9 +447,9 @@ We will be using a `system-assigned` identity with a role assignments to grant o
       }
      ```
      
-     Note: This can be done from Azure Portal as described [here.](https://learn.microsoft.com/en-us/azure/container-apps/managed-identity?tabs=portal%2Cdotnet#add-a-system-assigned-identity)
+     Note: This can be done from Azure Portal as described [here.](https://learn.microsoft.com/azure/container-apps/managed-identity?tabs=portal%2Cdotnet#add-a-system-assigned-identity)
   
-  2. Next, we need to associate the container app system-identity with the target Azure Service Bus resouce. You can read more about [Azure built-in roles for Azure Service Bus.](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-managed-service-identity#azure-built-in-roles-for-azure-service-bus). Run the command below to associate the `system-assigned` with access-control role `Azure Service Bus Data Receiver`
+  2. Next, we need to associate the container app system-identity with the target Azure Service Bus resouce. You can read more about [Azure built-in roles for Azure Service Bus.](https://learn.microsoft.com/azure/service-bus-messaging/service-bus-managed-service-identity#azure-built-in-roles-for-azure-service-bus). Run the command below to associate the `system-assigned` with access-control role `Azure Service Bus Data Receiver`
       ```PowerShell
         $subscription_id = "<Your Azure Subscription ID>"	## Your Azure Subscription
         $principalId = "456782b0-d5be-4dbd-afa0-5e2cff05d04d" ## Principal Id after creating system identity for container app 
