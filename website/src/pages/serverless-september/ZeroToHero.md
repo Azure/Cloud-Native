@@ -10,7 +10,7 @@ title: Zero to Hero
 Zero-to-Hero is a series of blog posts from our _Product Engineering_ teams, that will be published on the [Microsoft Tech Community: Apps On Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog?WT.mc_id=javascript-74010-ninarasi) blog and links updated below for convenience.
 
  * ✨ 4-part series focused on developer journey from concepts to best practices.
- * ✨ Associated [Ask The Expert](AskTheExpert)live Q&A! _[**Submit questions early**](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=ask+the+expert&template=---ask-the-expert-.md&title=%5BAsk+The+Expert%5D++)_ for prioritization!
+ * ✨ Associated [Ask The Expert](AskTheExpert) live Q&A! _[**Submit questions early**](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=ask+the+expert&template=---ask-the-expert-.md&title=%5BAsk+The+Expert%5D++)_ for prioritization!
 :::
 
 <br/>
