@@ -35,4 +35,4 @@ Zero-to-Hero is a series of blog posts from our _Product Engineering_ teams, tha
 | Sep 12, 2022 | [Journey to the cloud with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609?WT.mc_id=javascript-74010-cxa) | [Anthony Chu](https://twitter.com/nthonyChu) |
 | Sep 19, 2022 | [Observability with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/observability-with-azure-container-apps/ba-p/3627909?WT.mc_id=javascript-74010-cxa) | [Mike Morton](https://twitter.com/BigMorty) |
 | Sep 26, 2022 | End-to-End solution development with code | [Kendall Roden](https://twitter.com/KendallRoden) |
-| Sep 29, 2022 | 🎤 **Ask The Expert**  <br/> Live Q&A with Azure Container Apps Team | [🌟 Register](https://reactor.microsoft.com/reactor/events/17000/?WT.mc_id=javascript-74010-cxa) |
+| Sep 29, 2022 | 🎤 **Ask The Expert**  <br/> Live Q&A with Azure Container Apps Team | [🌟 Register](https://aka.ms/ATEonLearn) |
