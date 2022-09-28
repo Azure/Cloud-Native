@@ -2,7 +2,7 @@
 slug: 14-dapr-aca-quickstart
 title: 14. Build ACA with Dapr
 authors: [taiseer]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -26,7 +26,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/13-dapr-aca-quickstart" />
+    href="https://azure.github.io/Cloud-Native/blog/14-dapr-aca-quickstart" />
 </head>
 
 ---
