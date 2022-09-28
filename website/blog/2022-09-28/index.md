@@ -1,8 +1,8 @@
 ---
 slug: 28-where-am-i
-title: 28. Where am I? My GPS Location with Serverless Power Platform Custom Connector
+title: 28. Serverless + Power Platforms
 authors: [justin]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -32,9 +32,11 @@ tags: [serverless-september, 30-days-of-serverless, azure-functions, openapi, po
 
 ---
 
-Welcome to `Day 28` of #30DaysOfServerless! Since it's the serverless end-to-end week, I'm going to discuss how to use a serverless application &ndash; [Azure Functions][az fncapp] with [OpenAPI extension][gh az fncapp openapi] &ndash; to be seamlessly integrated with [Power Platform custom connector][pp cuscon] through [Azure API Management][az apim].
+Welcome to `Day 28` of #30DaysOfServerless! 
 
-> You might like to have a look at this [sample app on GitHub repository][gh sample] used in this post.
+Since it's the serverless end-to-end week, I'm going to discuss how to use a serverless application &ndash; [Azure Functions][az fncapp] with [OpenAPI extension][gh az fncapp openapi] &ndash; to be seamlessly integrated with [Power Platform custom connector][pp cuscon] through [Azure API Management][az apim] - in a post I call *"Where am I? My GPS Location with Serverless Power Platform Custom Connector"*
+
+OK. Are you ready? Let's get started!
 
 ---
 
@@ -52,7 +54,10 @@ Welcome to `Day 28` of #30DaysOfServerless! Since it's the serverless end-to-end
 
 ---
 
-OK. Are you ready? Let's get started!
+:::info SAMPLE REPO
+Want to follow along? Check out the [sample app on GitHub repository][gh sample] used in this post.
+:::
+
 
 
 ## What is Power Platform custom connector?
