@@ -1,6 +1,6 @@
 ---
 slug: 26-FIXME
-title: 26. <FIXME>
+title: 26. <E2E DaprAlbums?> 🚧
 authors: [nitya]
 draft: true
 hide_table_of_contents: false

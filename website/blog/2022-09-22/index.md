@@ -1,6 +1,6 @@
 ---
 slug: 22-FIXME
-title: 22. Serverless Integrations on Azure
+title: 22. Serverless + Integrations 🚧
 authors: [nitya]
 draft: true
 hide_table_of_contents: false

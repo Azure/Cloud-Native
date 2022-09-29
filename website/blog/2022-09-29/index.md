@@ -1,6 +1,6 @@
 ---
 slug: 29-azure-developer-cli
-title: 29. Code to Cloud with the Azure Developer CLI (`azd`)
+title: 29. Code to Cloud with `azd`
 authors: [savannah]
 draft: true
 hide_table_of_contents: false

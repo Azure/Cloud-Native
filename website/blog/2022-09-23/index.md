@@ -1,6 +1,6 @@
 ---
-slug: 23-FIXME
-title: 23. <FIXME>
+slug: 23-e2e-tutorials
+title: 23. Intro to E2E Week  🚧
 authors: [nitya]
 draft: true
 hide_table_of_contents: false
@@ -15,11 +15,11 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
 <!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/23-e2e-tutorials" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: E2E Application Tutorials" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: E2E Application Tutorials" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +27,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/08-functions-azure" />
+    href="https://azure.github.io/Cloud-Native/blog/23-e2e-tutorials" />
 </head>
 
 ---
