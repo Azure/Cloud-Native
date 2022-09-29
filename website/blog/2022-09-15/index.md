@@ -33,7 +33,7 @@ tags: [serverless-september, 30-days-of-serverless, azure-container-apps, dapr]
 
 Welcome to `Day 15` of #30DaysOfServerless!
 
-This post marks the midpoint of our Serverless on Azure journey! Our [Week 2 Roadmap](https://azure.github.io/Cloud-Native/serverless-september/30DaysOfServerless/) showcased two key technologies - [Azure Container Apps (ACA)](https://learn.microsoft.com/en-us/azure/container-apps/) and [Dapr](https://dapr.io) - for building serverless microservices. We'll also look at what happened elsewhere in #ServerlessSeptember, then set the stage for our next week's focus: Serverless Integrations.
+This post marks the midpoint of our Serverless on Azure journey! Our [Week 2 Roadmap](https://azure.github.io/Cloud-Native/serverless-september/30DaysOfServerless/) showcased two key technologies - [Azure Container Apps (ACA)](https://learn.microsoft.com/azure/container-apps/) and [Dapr](https://dapr.io) - for building serverless microservices. We'll also look at what happened elsewhere in #ServerlessSeptember, then set the stage for our next week's focus: Serverless Integrations.
 
 Ready? Let's Go!
 
@@ -76,8 +76,8 @@ Here's a visual recap:
 There's no better way to get familiar with the concepts, than to dive in and play with code samples and hands-on tutorials. Here are 4 resources to bookmark and try out:
  1. [Dapr Quickstarts](https://docs.dapr.io/getting-started/quickstarts/) - these walk you through samples showcasing individual Building Block APIs - with multiple language options available.
  2. [Dapr Tutorials](https://docs.dapr.io/getting-started/tutorials/) provides more complex examples of microservices applications and tools usage, including a [Distributed Calculator](https://github.com/dapr/quickstarts/tree/master/tutorials/distributed-calculator) polyglot app.
- 3. Next, try to [Deploy a Dapr application to Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/microservices-dapr?tabs=bash) to get familiar with the process of setting up the environment, then deploying the app.
- 4. Or, explore the many [Azure Container Apps samples](https://learn.microsoft.com/en-us/azure/container-apps/samples?source=recommendations) showcasing various features and more complex architectures tied to real world scenarios.
+ 3. Next, try to [Deploy a Dapr application to Azure Container Apps](https://learn.microsoft.com/azure/container-apps/microservices-dapr?tabs=bash) to get familiar with the process of setting up the environment, then deploying the app.
+ 4. Or, explore the many [Azure Container Apps samples](https://learn.microsoft.com/azure/container-apps/samples?source=recommendations) showcasing various features and more complex architectures tied to real world scenarios.
 
 ## What's Next: Serverless Integrations!
 
