@@ -12,10 +12,9 @@ description: "Build a Power Platform custom connector with Azure Functions and O
 tags: [serverless-september, 30-days-of-serverless, azure-functions, openapi, power-platform, custom-connector]
 ---
 
-<!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/28-serverless-power-platform-custom-connector" />
+    content="https://azure.github.io/Cloud-Native/blog/28-where-am-i" />
   <meta name="twitter:title" 
     content="#30DaysOfServerless: Serverless Power Platform Custom Connector for GPS Location" />
   <meta name="twitter:description" 
@@ -27,7 +26,7 @@ tags: [serverless-september, 30-days-of-serverless, azure-functions, openapi, po
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/28-serverless-power-platform-custom-connector" />
+    href="https://azure.github.io/Cloud-Native/blog/28-where-am-i" />
 </head>
 
 ---
@@ -66,7 +65,7 @@ Want to follow along? Check out the [sample app on GitHub repository][gh sample]
 
 However, what if you want to use your internal APIs or APIs not yet offering their official connectors? Here's an example. If your company has an inventory management system, and you want to use it within your [Power Apps][pp pa] or [Power Automate][pp pau]. That point is exactly where [Power Platform custom connectors][pp cuscon] is necessary.
 
-![Inventory Management System for Power Apps][image-01]
+![Inventory Management System for Power Apps](./img/28-serverless-power-platform-custom-connector-01.png)
 
 Therefore, Power Platform custom connectors enrich those citizen developers' capabilities because those connectors can connect any API applications for the citizen developers to use.
 
@@ -232,7 +231,7 @@ Run the function app in the local. Here are the latitude and longitude values fo
 * latitude: 37.574703
 * longitude: 126.978519
 
-![Google Map for Seoul][image-02]
+![Google Map for Seoul](./img/28-serverless-power-platform-custom-connector-02.png)
 
 It seems to be working! Let's deploy it to Azure.
 
@@ -241,51 +240,51 @@ It seems to be working! Let's deploy it to Azure.
 
 [Visual Studio 2022][vs] provides a built-in deployment tool for [Azure Functions][az fncapp] app onto Azure. In addition, the deployment tool supports seamless integration with [Azure API Management][az apim] as long as your Azure Functions app enables the OpenAPI capability. In this post, I'm going to use this feature. Right-mouse click on the Azure Functions project and select the "Publish" menu.
 
-![Visual Studio context menu for publish][image-03]
+![Visual Studio context menu for publish](./img/28-serverless-power-platform-custom-connector-03.png)
 
 Then, you will see the publish screen. Click the "➕ New" button to create a new publish profile.
 
-![Create a new publish profile][image-04]
+![Create a new publish profile](./img/28-serverless-power-platform-custom-connector-04.png)
 
 Choose "Azure" and click the "Next" button.
 
-![Choose the target platform for publish][image-05]
+![Choose the target platform for publish](./img/28-serverless-power-platform-custom-connector-05.png)
 
 Select the app instance. This time simply pick up the "Azure Function App (Windows)" option, then click "Next".
 
-![Choose the target OS for publish][image-06]
+![Choose the target OS for publish](./img/28-serverless-power-platform-custom-connector-06.png)
 
 If you already provision an Azure Function app instance, you will see it on the screen. Otherwise, create a new one. Then, click "Next".
 
-![Choose the target instance for publish][image-07]
+![Choose the target instance for publish](./img/28-serverless-power-platform-custom-connector-07.png)
 
 In the next step, you are asked to choose the Azure API Management instance for integration. Choose one, or create a new one. Then, click "Next".
 
-![Choose the APIM instance for integration][image-08]
+![Choose the APIM instance for integration](./img/28-serverless-power-platform-custom-connector-08.png)
 
 Finally, select the publish method &ndash; either local publish or GitHub Actions workflow. Let's pick up the local publish method for now. Then, click "Finish".
 
-![Choose the deployment type][image-09]
+![Choose the deployment type](./img/28-serverless-power-platform-custom-connector-09.png)
 
 The publish profile has been created. Click "Close" to move on.
 
-![Publish profile created][image-10]
+![Publish profile created](./img/28-serverless-power-platform-custom-connector-10.png)
 
 Now the function app is ready for deployment. Click the "Publish" button and see how it goes.
 
-![Publish function app][image-11]
+![Publish function app](./img/28-serverless-power-platform-custom-connector-11.png)
 
 The Azure function app has been deployed and integrated with the Azure API Management instance.
 
-![Function app published][image-12]
+![Function app published](./img/28-serverless-power-platform-custom-connector-12.png)
 
 Go to the published function app site, and everything looks OK.
 
-![Function app on Azure][image-13]
+![Function app on Azure](./img/28-serverless-power-platform-custom-connector-13.png)
 
 And API Management shows the function app integrated perfectly.
 
-![Function app integrated with APIM][image-14]
+![Function app integrated with APIM](./img/28-serverless-power-platform-custom-connector-14.png)
 
 Now, you are ready to create a custom connector. Let's move on.
 
@@ -299,15 +298,15 @@ There are two ways to create a custom connector.
 
 First, you can directly use the built-in API Management feature. Then, click the ellipsis icon and select the "Create Power Connector" menu.
 
-![Create Power Connector menu][image-15]
+![Create Power Connector menu](./img/28-serverless-power-platform-custom-connector-15.png)
 
 Then, you are redirected to this screen. While the "API" and "API display name" fields are pre-populated, you need to choose the Power Platform environment tied to your tenant. Choose an environment, click "Authenticate", and click "Create".
 
-![Create custom connector screen][image-16]
+![Create custom connector screen](./img/28-serverless-power-platform-custom-connector-16.png)
 
 Check your custom connector on Power Apps or Power Automate side.
 
-![Custom connector created on Power Apps][image-17]
+![Custom connector created on Power Apps](./img/28-serverless-power-platform-custom-connector-17.png)
 
 However, there's a caveat to this approach. Because it's tied to your tenant, you should use the second approach if you want to use this custom connector on the other tenant.
 
@@ -316,27 +315,27 @@ However, there's a caveat to this approach. Because it's tied to your tenant, yo
 
 Click the ellipsis icon again and select the "Export" menu.
 
-![Export menu][image-18]
+![Export menu](./img/28-serverless-power-platform-custom-connector-18.png)
 
 On the Export API screen, choose the "OpenAPI v2 (JSON)" panel because Power Platform custom connector currently accepts version 2 of the OpenAPI document.
 
-![Select OpenAPI v2][image-19]
+![Select OpenAPI v2](./img/28-serverless-power-platform-custom-connector-19.png)
 
 Download the OpenAPI document to your local computer and move to your Power Apps or Power Automate page under your desired environment. I'm going to use the Power Automate page. First, go to the "Data" ➡️ "Custom connectors" page. Then, click the "➕ New custom connector" ➡️ "Import an OpenAPI file" at the top right corner.
 
-![New custom connector][image-20]
+![New custom connector](./img/28-serverless-power-platform-custom-connector-20.png)
 
 When a modal pops up, give the custom connector name and import the OpenAPI document exported above. Then, click "Continue".
 
-![Import custom connector][image-21]
+![Import custom connector](./img/28-serverless-power-platform-custom-connector-21.png)
 
 Actually, that's it! Next, click the "✔️ Create connector" button to create the connector.
 
-![Create custom connector][image-22]
+![Create custom connector](./img/28-serverless-power-platform-custom-connector-22.png)
 
 Go back to the custom connector page, and you will see the "Maps API" custom connector you just created.
 
-![Custom connector imported][image-23]
+![Custom connector imported](./img/28-serverless-power-platform-custom-connector-23.png)
 
 So, you are ready to create a Power Apps app to display your location on Google Maps or Naver Map! Let's move on.
 
@@ -350,26 +349,26 @@ Open the Power Apps Studio, and create an empty canvas app, named `Who am I` wit
 
 To use the custom connector created above, you need to add it to the Power App. Click the cylinder icon on the left and click the "Add data" button.
 
-![Add custom connector to data pane][image-24]
+![Add custom connector to data pane](./img/28-serverless-power-platform-custom-connector-24.png)
 
 Search the custom connector name, "Maps API", and click the custom connector to add.
 
-![Search custom connector][image-25]
+![Search custom connector](./img/28-serverless-power-platform-custom-connector-25.png)
 
 To use the custom connector, you also need to create a connection to it. Click the "Connect" button and move on.
 
-![Create connection to custom connector][image-26]
+![Create connection to custom connector](./img/28-serverless-power-platform-custom-connector-26.png)
 
 Now, you've got the connection to the custom connector.
 
-![Connection to custom connector ready][image-27]
+![Connection to custom connector ready](./img/28-serverless-power-platform-custom-connector-27.png)
 
 
 ### Controls
 
 Let's build the Power Apps app. First of all, put three controls &ndash; [Image][pp pa controls image], [Slider][pp pa controls slider] and [Button][pp pa controls button] onto the canvas.
 
-![Power Apps control added][image-28]
+![Power Apps control added](./img/28-serverless-power-platform-custom-connector-28.png)
 
 Click the "Screen1" control and change the value on the property "OnVisible" to the formula below. The formula stores the current slider value in the `zoomlevel` collection.
 
@@ -429,15 +428,15 @@ It's the image reference value somewhere you can't get there.
 
 Therefore, you need a workaround using a Power Automate workflow to sort out this issue. Open the Power Automate Studio, create an instant cloud flow with the Power App trigger, and give it the "Where am I" name. Then add input parameters of `lat`, `long` and `zoom`.
 
-![Power Apps trigger on Power Automate workflow][image-29]
+![Power Apps trigger on Power Automate workflow](./img/28-serverless-power-platform-custom-connector-29.png)
 
 Add custom connector action to get the map image.
 
-![Select action to get the Google Maps image][image-30]
+![Select action to get the Google Maps image](./img/28-serverless-power-platform-custom-connector-30.png)
 
 In the action, pass the appropriate parameters to the action.
 
-![Pass parameters to the custom connector action][image-31]
+![Pass parameters to the custom connector action](./img/28-serverless-power-platform-custom-connector-31.png)
 
 Add a "Response" action and put the following values into each field.
 
@@ -464,11 +463,11 @@ Add a "Response" action and put the following values into each field.
     }
     ```
 
-![Format the Response action][image-32]
+![Format the Response action](./img/28-serverless-power-platform-custom-connector-32.png)
 
 Let's return to the Power Apps Studio and add the Power Automate workflow you created.
 
-![Add Power Automate workflow][image-33]
+![Add Power Automate workflow](./img/28-serverless-power-platform-custom-connector-33.png)
 
 Select "Button1" and change the value on the property "OnSelect" below. It replaces the direct call to the custom connector with the Power Automate workflow.
 
@@ -508,11 +507,11 @@ First(result).base64Image
 
 The workaround has been applied. Click the "Where am I?" button to see your current location from Google Maps.
 
-![Run Power Apps app #1][image-34]
+![Run Power Apps app #1](./img/28-serverless-power-platform-custom-connector-34.png)
 
 If you change the slider left or right, you will see either the zoomed-in image or the zoomed-out image.
 
-![Run Power Apps app #2][image-35]
+![Run Power Apps app #2](./img/28-serverless-power-platform-custom-connector-35.png)
 
 Now, you've created a Power Apps app to show your current location using:
 
