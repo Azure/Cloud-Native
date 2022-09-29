@@ -2,7 +2,7 @@
 slug: 18-cloudmail
 title: 18. Logic Apps + Computer Vision
 authors: [brian]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -12,7 +12,6 @@ description: "<FIXME>"
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices]
 ---
 
-<!-- FIXME -->
 <head>
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/blog/18-cloudmail" />
