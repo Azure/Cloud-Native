@@ -66,9 +66,7 @@ But the problem is that every event publisher (system/device that creates events
 2. Accessibility: There were no common libraries, tooling and infrastructure to deliver events across systems.
 3. Productivity: The overall productivity decreases because of the lack of the standard format of events.
 
-<div style="text-align: center;">
-  <img src="./img/cloudevents-icon-color.png" alt="CloudEvents logo" width="200" height="200" />
-</div>
+![Cloud Events Logo](img/cloudevents-icon-color.png)
 
 Therefore, [CNCF (Cloud-Native Computing Foundation)][cncf] has brought up the concept, called [CloudEvents][ce]. CloudEvents is a specification that commonly describes event data. Conforming any event data to this spec will simplify the event declaration and delivery across systems and platforms and more, resulting in a huge productivity increase.
 
@@ -82,15 +80,15 @@ Before CloudEvents, [Azure Event Grid][az eg] described events in their own way.
 
 Take a look at the simple diagram below, which describes how Azure Event Grid captures events raised from various Azure services. In this diagram, Azure Key Vault takes the role of the event source or event publisher, and [Azure Logic Apps][az logapp] takes the role of the event handler (I'll discuss Azure Logic Apps as the event handler later in this post). We use [Azure Event Grid System Topic][az eg topic system] for Azure.
 
-![Azure Event Grid for Azure][image-01]
+![Azure Event Grid for Azure](./img/21-cloudevents-via-event-grid-01.png)
 
 Therefore, let's create an [Azure Event Grid System Topic][az eg topic system] that captures events raised from [Azure Key Vault][az kv] when a new version of a secret is added.
 
-![Azure Event Grid System Topic for Key Vault][image-02]
+![Azure Event Grid System Topic for Key Vault](./img/21-cloudevents-via-event-grid-02.png)
 
 As Azure Event Grid makes use of the [pub/sub pattern][enterprisepattern pubsub], you need to create the [Azure Event Grid Subscription][ag eg sub] to consume the events. Here's the subscription that uses the Event Grid data format:
 
-![Azure Event Grid System Subscription for Key Vault in Event Grid Format][image-03]
+![Azure Event Grid System Subscription for Key Vault in Event Grid Format][./img/21-cloudevents-via-event-grid-03.png]
 
 Once you create the subscription, create a new version of the secret on Azure Key Vault. Then, Azure Key Vault raises an event, which is captured in the Event Grid format:
 
@@ -138,7 +136,7 @@ So, how is it different from the CloudEvents format? Let's take a look. Accordin
 
 This time, let's create another subscription using the CloudEvents schema. Here's how to create the subscription against the system topic:
 
-![Azure Event Grid System Subscription for Key Vault in CloudEvents Format][image-04]
+![Azure Event Grid System Subscription for Key Vault in CloudEvents Format](./img/21-cloudevents-via-event-grid-04.png)
 
 Therefore, Azure Key Vault emits the event data in the CloudEvents format:
 
@@ -169,11 +167,11 @@ Can you identify some differences between the Event Grid format and the CloudEve
 
 As mentioned above, the event data described outside Azure or your own applications within Azure might not be understandable by Azure Event Grid. In this case, we need to use [Azure Event Grid Custom Topic][az eg topic custom]. Here's the diagram for it:
 
-![Azure Event Grid for Applications outside Azure][image-05]
+![Azure Event Grid for Applications outside Azure](./img/21-cloudevents-via-event-grid-05.png)
 
 Let's create the Azure Event Grid Custom Topic. When you create the topic, make sure that you use the CloudEvent schema during the provisioning process:
 
-![Azure Event Grid Custom Topic][image-06]
+![Azure Event Grid Custom Topic](./img/21-cloudevents-via-event-grid-06.png)
 
 If your application needs to publish events to Azure Event Grid Custom Topic, your application should build the event data in the CloudEvents format. If you use a .NET application, add the [NuGet package][az eg nuget] first.
 
@@ -223,7 +221,7 @@ The captured event data looks like the following:
 
 However, due to limitations, someone might insist that their existing application doesn't or can't emit the event data in the CloudEvents format. In this case, what should we do? There's no standard way of sending the event data in the CloudEvents format to Azure Event Grid Custom Topic. One of the approaches we may be able to apply is to put a converter between the existing application and Azure Event Grid Custom Topic like below:
 
-![Azure Event Grid for Applications outside Azure with Converter][image-07]
+![Azure Event Grid for Applications outside Azure with Converter](./img/21-cloudevents-via-event-grid-07.png)
 
 Once the Function app (or any converter app) receives legacy event data, it internally converts the CloudEvents format and publishes it to Azure Event Grid.
 
@@ -263,18 +261,18 @@ I put [Azure Logic Apps][az logapp] as the event handler in the previous diagram
 
 Create a new Logic Apps instance and add the HTTP Request trigger. Once it saves, you will get the endpoint URL.
 
-![Azure Logic Apps with HTTP Request Trigger][image-08]
+![Azure Logic Apps with HTTP Request Trigger](./img/21-cloudevents-via-event-grid-08.png)
 
 Then, create the Azure Event Grid Subscription with:
 
 * Endpoint type: Webhook
 * Endpoint URL: The Logic Apps URL from above.
 
-![Azure Logic Apps with HTTP Request Trigger][image-09]
+![Azure Logic Apps with HTTP Request Trigger](./img/21-cloudevents-via-event-grid-09.png)
 
 Once the subscription is ready, this Logic Apps works well as the event handler. Here's how it receives the CloudEvents data from the subscription.
 
-![Azure Logic Apps that Received CloudEvents data][image-10]
+![Azure Logic Apps that Received CloudEvents data](./img/21-cloudevents-via-event-grid-10.png)
 
 Now you've got the CloudEvents data. It's entirely up to you to handle that event data however you want!
 
@@ -296,6 +294,7 @@ Want to know more about CloudEvents in real-life examples? Here are several reso
 * [Event-Driven KeyVault Secrets Rotation Management][post 4]
 
 
+[image-logo]: img/cloudevents-icon-color.png
 [image-01]: img/21-cloudevents-via-event-grid-01.png
 [image-02]: img/21-cloudevents-via-event-grid-02.png
 [image-03]: img/21-cloudevents-via-event-grid-03.png

@@ -43,6 +43,10 @@ Every day millions of people spend their precious time in productivity tools. Wh
 - 🚀 Debug your onboarding experience
 - 📚 Resources
 
+
+![](./img/banner.png)
+
+
 Following pre-requisites are recommended:
 - [Microsoft 365 Developer Program account](https://aka.ms/m365developers)
 - [Microsoft Azure Subscription](https://azure.microsoft.com/free/)
