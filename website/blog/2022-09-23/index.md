@@ -32,7 +32,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
 
 ---
 
-Welcome to `Day 9` of #30DaysOfServerless!
+Welcome to `Day 23` of #30DaysOfServerless!
 
 ---
 
