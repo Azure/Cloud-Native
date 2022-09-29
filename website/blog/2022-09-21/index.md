@@ -2,7 +2,7 @@
 slug: 21-cloudevents-via-event-grid
 title: 21. CloudEvents with Event Grid
 authors: [justin]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -12,7 +12,6 @@ description: "Introducing CloudEvents, the CNCF's standard event spec, and how t
 tags: [serverless-september, cloudevents, azure-event-grid, azure-logic-apps, azure-functions]
 ---
 
-<!-- FIXME -->
 <head>
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/blog/21-cloudevents-via-event-grid" />
