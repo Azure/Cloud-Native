@@ -2,7 +2,7 @@
 slug: 20-events-graph
 title: 20. Integrate with Microsoft Graph
 authors: [ayca]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -12,14 +12,13 @@ description: "build a seamsless onboarding experience to new employees joining a
 tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr, microservices, microsoft-graph, logic-apps, microsoft-365, event-hubs]
 ---
 
-<!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/20-events-graph" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Integrate with Microsoft Graph" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Integrate with Microsoft Graph" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,31 +26,41 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/08-functions-azure" />
+    href="https://aycabas.com/2022/09/28/build-seamless-automations-to-boost-productivity-with-microsoft-graph-event-hubs-and-logic-apps/" />
 </head>
 
 ---
-# Build seamless automations to boost productivity with Microsoft Graph, Event Hubs and Logic Apps
-Every day millions of people spend their precious time in productivity tools. What if you use data and intelligence behind the Microsoft applications (Microsoft Teams, Outlook, and many other Office apps) to build seemsless automations and custom apps to boost productivity? In this post, we'll build a seamsless onboarding experience to new employees joining a company with the power of Microsoft Graph. 
 
-## 📝 What We'll Cover
+Welcome to `Day 20` of #30DaysOfServerless!
+
+Every day millions of people spend their precious time in productivity tools. What if you use data and intelligence behind the Microsoft applications (Microsoft Teams, Outlook, and many other Office apps) to build seamless automations and custom apps to boost productivity? 
+
+In this post, we'll learn how to build a seamless onboarding experience for new employees joining a company with the power of Microsoft Graph, integrated with Event Hubs and Logic Apps! 
+
+---
+
+## What We'll Cover
 - ✨ The power of Microsoft Graph
 - 🖇️ How do Microsoft Graph and Event Hubs work together?
-- ⚒️ Exercise: Setup Azure Event Hubs and Key Vault
-- 🪡 Exercise: Subscribe to `users` resource to receive change notifications by using Logic Apps
-- ♾️ Exercise: Create Onboarding workflow in the Logic Apps
-- 🚀 Debug your onboarding experience
-- 📚 Resources
-
+- 🛠 Let's Build an Onboarding Workflow!
+    - 1️⃣ Setup Azure Event Hubs + Key Vault
+    - 2️⃣ Subscribe to `users`, receive change notifications from Logic Apps
+    - 3️⃣ Create Onboarding workflow in the Logic Apps
+- 🚀 Debug: Your onboarding experience
+- ✋ Exercise: Try this tutorial out yourself!
+- 📚 Resources: For Self-Study
 
 ![](./img/banner.png)
 
+---
 
-Following pre-requisites are recommended:
+:::info PRE-REQUISITES (Recommended)
+
 - [Microsoft 365 Developer Program account](https://aka.ms/m365developers)
 - [Microsoft Azure Subscription](https://azure.microsoft.com/free/)
+:::
 
-## ✨ The power of Microsoft Graph
+## ✨ The Power of Microsoft Graph
 Microsoft Graph is the gateway to data and intelligence in Microsoft 365 platform. Microsoft Graph exploses Rest APIs and client libraries to access data across Microsoft 365 core services such as Calendar, Teams, To Do, Outlook, People, Planner, OneDrive, OneNote and more.
 
 ![Overview of Microsoft Graph](../2022-09-20/img/graph.png)
@@ -60,17 +69,24 @@ You can build custom experiences by using Microsoft Graph such as automating the
 
 ![Solution architecture](../2022-09-20/img/architecture.png)
  
-## 🖇️ How do Microsoft Graph and Event Hubs work together?
-Microsoft Graph uses webhook mechanism to track changes in resources and deliver change notifications to the clients. As an example to the Microsoft Graph Change Notifications, you can receive change notifications when:
+---
+
+## 🖇️ Microsoft Graph with Event Hubs
+
+Microsoft Graph uses a webhook mechanism to track changes in resources and deliver change notifications to the clients. For example, with Microsoft Graph Change Notifications, you can receive change notifications when:
 - a new task is added in the to-do list
 - a user changes the presence status from busy to available
 - an event is deleted/cancelled from the calendar
 
-If you'd like to track a large set of resources in a high frequency, you can use Azure Events Hubs instead of traditional webhooks to receive change notifications. Azure Event Hubs is a popular real-time events ingestion and distribution service built for scale.
+If you'd like to track a large set of resources at a high frequency, use Azure Events Hubs instead of traditional webhooks to receive change notifications. Azure Event Hubs is a popular real-time events ingestion and distribution service built for scale.
 
-> Microsoft Graph Change Notifications can be also received by using Azure Event Grid that is currently available for Microsoft Partners. Please review the documentation for more information: [Partner Events overview for customers - Azure Event Grid](https://docs.microsoft.com/azure/event-grid/partner-events-overview)
+:::info EVENT GRID - PARTNER EVENTS
 
-## ⚒️ Exercise: Setup Azure Event Hubs and Key Vault 
+> Microsoft Graph Change Notifications can be also received by using **Azure Event Grid** -- currently available for Microsoft Partners! Read the [Partner Events Overview](https://docs.microsoft.com/azure/event-grid/partner-events-overview) documentation for details.
+:::
+
+## Setup Azure Event Hubs + Key Vault.
+
 To get Microsoft Graph Change Notifications delivered to Azure Event Hubs, we'll have to setup Azure Event Hubs and Azure Key Vault. We'll use Azure Key Vault to access to Event Hubs connection string. 
 
 ### 1️⃣ Create Azure Event Hubs
@@ -100,8 +116,10 @@ To get Microsoft Graph Change Notifications delivered to Azure Event Hubs, we'll
     - Click **Add**.
 1. Select **Overview** tab from the left pane and copy the **Vault URI**.
 
-## 🪡 Exercise: Subscribe to `users` resource to receive change notifications by using Logic Apps
-To start receiving Microsoft Graph Change Notifications, we'll need to create subscription to the resource that we'd like to track. We'll use Azure Logic Apps to create subscription. 
+---
+
+## Subscribe for Logic Apps change notifications 
+To start receiving Microsoft Graph Change Notifications, we'll need to create subscription to the resource that we'd like to track - here, 'users'. We'll use Azure Logic Apps to create subscription. 
 
 To create subscription for Microsoft Graph Change Notifications, we'll need to make a http post request to `https://graph.microsoft.com/v1.0/subscriptions`. Microsoft Graph requires Azure Active Directory authentication make API calls. First, we'll need to register an app to Azure Active Directory, and then we will make the Microsoft Graph Subscription API call with Azure Logic Apps.
 
@@ -167,7 +185,9 @@ To create subscription for Microsoft Graph Change Notifications, we'll need to m
 
 After subscription is created successfully by Logic Apps, Azure Event Hubs will receive notifications whenever there is a new user created in Azure Active Directory.
 
-## ♾️ Exercise: Create Onboarding workflow in the Logic Apps
+---
+
+## Create Onboarding workflow in Logic Apps
 We'll create a second workflow in the Logic Apps to receive change notifications from Event Hubs when there is a new user created in the Azure Active Directory and add new user in Onboarding team on Microsoft Teams.
 
 1. Go to the Logic Apps you created in the previous steps, select **Workflows** tab and create a new workflow by selecting **+ Add**:
@@ -197,6 +217,8 @@ We'll create a second workflow in the Logic Apps to receive change notifications
     - A user AAD ID for the user to add to a team: `id`
 1. Select **Save**.
 
+---
+
 ## 🚀 Debug your onboarding experience
 To debug our onboarding experience, we'll need to create a new user in Azure Active Directory and see if it's added in Microsoft Teams Onboarding team automatically.
 1. Go to [Azure Portal](https://portal.azure.com) and select Azure Active Directory from the left pane and go to **Users**. Select **+ New user** and **Create new user**. Fill in the details as below:
@@ -210,6 +232,12 @@ To debug our onboarding experience, we'll need to create a new user in Azure Act
 
 1. Once the *teams-onboarding-flow* runs successfully, you should be able to see `Jane Doe` as a member of the Onboarding team on Microsoft Teams! 🥳
 ![new member in Onboarding team on Microsoft Teams](../2022-09-20/img/new-member-onboarding.png)
+
+:::success Congratulations! 🎉
+You just built an onboarding experience using Azure Logic Apps, Azure Event Hubs and Azure Key Vault.
+:::
+
+---
 
 ## 📚 Resources
 - [Microsoft Graph Fundamentals](https://aka.ms/learn-graph)
