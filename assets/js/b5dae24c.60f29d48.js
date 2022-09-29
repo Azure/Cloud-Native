@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7052],{63444:e=>{e.exports=JSON.parse('{"label":"dapr","permalink":"/Cloud-Native/blog/tags/dapr","allTagsPath":"/Cloud-Native/blog/tags","count":14}')}}]);
