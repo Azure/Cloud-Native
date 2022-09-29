@@ -2,7 +2,7 @@
 slug: 24-aca-dotnet
 title: 24. Deploy ASP.NET app to ACA
 authors: [alexwolf]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -32,6 +32,10 @@ tags: [serverless-september, 30-days-of-serverless, dotnet, asp.net, azure-conta
 ---
 
 Welcome to `Day 24` of #30DaysOfServerless!
+
+We continue exploring E2E scenarios with this tutorial where you'll deploy a containerized ASP.NET Core 6.0 application to Azure Container Apps. 
+
+The application consists of a front-end web app built using Blazor Server, as well as two Web API projects to manage data. These projects will exist as three separate containers inside of a shared container apps environment.
 
 ---
 
