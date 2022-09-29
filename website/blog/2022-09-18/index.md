@@ -1,7 +1,7 @@
 ---
 slug: 18-cloudmail
 title: 18. Logic Apps + Computer Vision
-authors: [nitya, brian]
+authors: [brian]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
@@ -15,11 +15,11 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
 <!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/18-cloudmail" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Logic Apps + Computer Vision" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Logic Apps + Computer Vision" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,12 +27,16 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/08-functions-azure" />
+    href="https://azure.github.io/Cloud-Native/blog/18-cloudmail" />
 </head>
 
 ---
 
 Welcome to `Day 18` of #30DaysOfServerless!
+
+Yesterday my Serverless September post introduced you to making Azure Logic Apps and Azure Cosmos DB work together with a sample application that collects weather data.  Today I'm sharing a more robust solution that actually reads my mail.  Let's learn about **Teaching the cloud to read your mail!**
+
+Ready? Let's go!
 
 ---
 
@@ -46,37 +50,36 @@ Welcome to `Day 18` of #30DaysOfServerless!
 
 ---
 
-## Teaching the cloud to read your mail
+## Introducing the ReadMail solution
 
-### Introduction to the ReadMail solution
+The US Postal system offers [a subscription service](https://informeddelivery.usps.com/) that sends you images of mail it will be delivering to your home.  I decided it would be cool to try getting Azure to collect data based on these images, so that I could categorize my mail and track the types of mail that I received.  
 
-Yesterday my Serverless September post introduced you to making Azure Logic Apps and Azure Cosmos DB work together with a sample application that collects weather data.  Today I'm sharing a more robust solution that actually reads my mail.  
-
-The US Postal system offers [a subscription service](https://informeddelivery.usps.com/) that sends you images of mail it will be delivering to your home.  I decided it would be cool to try getting Azure to collect data based on these images, so that I could categorize my mail and track the types of mail that I received.  To do this, I used Azure storage, Cosmos DB, Logic Apps, and computer vision.  
-
-When a new email comes in from the US Postal service (USPS), it triggers a logic app that:
+To do this, I used Azure storage, Cosmos DB, Logic Apps, and computer vision.  When a new email comes in from the US Postal service (USPS), it triggers a logic app that:
 
 * Posts attachments to Azure storage
 * Triggers Azure Computer vision to perform an OCR function on attachments
 * Extracts any results into a JSON document
 * Writes the JSON document to Cosmos DB 
 
-:::image type="content" source="img/readmailworkflow.png" alt-text="workflow for the readmail solution":::
+![workflow for the readmail solution](img/readmailworkflow.png)
 
 In this post I'll walk you through setting up the solution for yourself.  
 
-### Prerequisites
+:::info Prerequisites
 
 - Contributor or Owner permissions on an active Azure subscription.
-  - [Create an account for free](https://azure.microsoft.com/free/).
+  - Don't have one? [Create an account for free](https://azure.microsoft.com/free/).
 - A [USPS Informed Delivery account](https://informeddelivery.usps.com/).
   - Alternatively, any service that sends attached images via email
-    
-### Setting up Azure storage, Cosmos DB and Computer Vision
+:::
+
+---
+
+## Setup Azure Services
 
 First, we'll create all of the target environments we need to be used by our Logic App, then we;ll create the Logic App.  
 
-#### Setting up Azure Storage 
+### 1. Azure Storage 
 
 We'll be using Azure storage to collect attached images from emails as they arrive.  Adding images to Azure storage will also trigger a workflow that performs OCR on new attached images and stores the OCR data in Cosmos DB.  
  
@@ -95,9 +98,9 @@ The **Basics** tab covers all of the features and information that we will need 
 
 Select **Review + create** to accept the remaining default options, then validate and create the account.
 
-#### Setting up Cosmos DB
+### 2. Azure CosmosDB
 
-Cosmos DB will be used to store the JSON documents returned by the COmputer Vision OCR process.  
+CosmosDB will be used to store the JSON documents returned by the COmputer Vision OCR process.  
 
 > See more details and screen shots for setting up CosmosDB in yesterday's Serverless September post - **Using Logic Apps with Cosmos DB**
 
@@ -114,7 +117,7 @@ Next, create a new database and container. Go to the **Data Explorer** in your n
 
 Press **OK** to create a database and container
 
-#### Setting up Azure Computer Vision
+### 3. Azure Computer Vision
 
 Azure Cognitive Services' [Computer Vision](https://azure.microsoft.com/products/cognitive-services/computer-vision/) will perform an OCR process on each image attachment that is stored in Azure storage.  
 
@@ -141,10 +144,20 @@ The **Basics** and **Identity** tabs cover all of the features and information t
 
 Select **Review + create** to accept the remaining default options, then validate and create the account.
 
+---
 
-### Connecting it all together with a Logic App 
+## Connect it all with a Logic App 
 
-Now we're ready to put this all together in a Logic App workflow!  From the [portal dashboard](https://portal.azure.com), Select **Create a resource > Integration > Logic App > Create**.  Name your Logic App and select a location, the rest fo the settings can be left at their defaults.  Once you new Logic App is created, select **Create a workflow from designer** to get started.  
+Now we're ready to put this all together in a Logic App workflow!  
+
+:::tip 1. Create Logic App
+:::
+From the [portal dashboard](https://portal.azure.com), Select **Create a resource > Integration > Logic App > Create**.  Name your Logic App and select a location, the rest of the settings can be left at their defaults.  
+
+
+:::tip 2. Create Workflow: Add Trigger
+:::
+Once the Logic App is created, select **Create a workflow from designer**.  
 
 >A workflow is a series of steps that defines a task or process. Each workflow starts with a single trigger, after which you must add one or more actions.
 
@@ -168,9 +181,13 @@ Then add a new parameter:
 |--|--|
 | From | Add the email address that sends you the email with attachments | 
 
-Next, add an action below this trigger.  Choose **add an action** and choose **control > for-each**. 
 
-:::image type="content" source="img/logicappforeach.png" alt-text="logic app for each":::
+:::tip 3. Create Workflow: Add Action (for Trigger)
+:::
+
+Choose **add an action** and choose **control > for-each**. 
+
+![logic app for each](img/logicappforeach.png)
 
 Inside the for-each action, in **Select an output from previous steps**, choose **attachments**.  Then, again inside the  for-each action, add the **create blob** action: 
 
@@ -195,8 +212,7 @@ Set the following values:
 
 > We create and read from a blob for each attachment because Computer Vision needs a non-virtual source to read from when performing an OCR process. Because we enabled system assigned identity to grant Computer Vision to other existing resources, it can access the blob but not the outlook.com attachment.  Also, we pass the ID of the blob to use as a unique ID when writing to Cosmos DB.
 
-:::image type="content" source="img/createblobfromattachments.png" alt-text="crate blob from attachments":::
-
+![create blob from attachments](img/createblobfromattachments.png)
 
 Next, inside the same for-each action, choose **add an action** and choose **control > condition**. Set the value to **Media Type > is equal to > image/JPEG**
 
@@ -218,15 +234,25 @@ Next, fill in your Cosmos DB Database ID and Collection ID.  Create a JSON docum
 
 >Be sure to use the ID passed from blob storage as your unique ID for CosmosDB.  That way you can troubleshoot and JSON or OCR issues by tracing back the JSON document in Cosmos Db to the blob in Azure storage.  Also, include the Computer Vision JSON response, as it contains the results of the Computer Vision OCR scan.  all other elements are optional.  
 
+
+:::tip 4. TEST WORKFLOW
+:::
+
 When complete, you should have an action the Logic App designer that looks something like this:  
 
-:::image type="content" source="img/cosmoscreateorupdatedocument.png" alt-text="Logic App workflow create or update document in cosmosdb":::
+![Logic App workflow create or update document in cosmosdb](img/cosmoscreateorupdatedocument.png)
 
 Save the workflow and test the connections by clicking **Run Trigger > Run**.  If connections are working, you should see documents flowing into Cosmos DB each time that an email arrives with image attachments.   
 
 Check the data in Cosmos Db by opening the Data explorer, then choosing the container you created and selecting **items**.  You should see documents similar to this: 
 
-:::image type="content" source="img/readmailfinalresults.png" alt-text="Logic App workflow with trigger and action":::
+![Logic App workflow with trigger and action](img/readmailfinalresults.png)
+
+:::tip 1. Congratulations
+You just built your personal ReadMail solution with Logic Apps! 🎉
+:::
+
+---
 
 ## Resources: For self-study!
 
@@ -237,8 +263,4 @@ Once you have an understanding of the basics in ths post, there is so much more 
 - For more info on Logic Apps, see the docs at https://learn.microsoft.com/azure/logic-apps/
 - For details on Azure Cognitive Services and Computer Vision, see https://azure.microsoft.com/products/cognitive-services/computer-vision/.
 
-- 
 Thanks for stopping by!  
-
--BB
-
