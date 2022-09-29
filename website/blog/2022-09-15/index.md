@@ -65,6 +65,12 @@ In our #30Days series we focused on Azure Container Apps and Dapr.
  * In [Secure ACA Access](https://azure.github.io/Cloud-Native/blog/13-aca-managed-id) we learned how to secure ACA access to external services with - and without - Dapr, covering Secret Stores and Managed Identity.
  * Finally, [Build ACA with Dapr](https://azure.github.io/Cloud-Native/blog/14-dapr-aca-quickstart) tied it all together with a enterprise app scenario where an orders processor (ACA) uses Dapr APIs (PubSub, State Management) to receive and store order messages from Azure Service Bus.
 
+Here's a visual recap:
+
+![](./../../static/img/banners/roadmap-Week2.png)
+
+
+
 ## Self Study: Code Samples & Tutorials
 
 There's no better way to get familiar with the concepts, than to dive in and play with code samples and hands-on tutorials. Here are 4 resources to bookmark and try out:
