@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[6650],{48541:e=>{e.exports=JSON.parse('{"label":"logic-apps","permalink":"/Cloud-Native/blog/tags/logic-apps","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);
