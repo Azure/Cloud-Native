@@ -62,7 +62,7 @@ We'll deploy a Java application running on Spring Boot in a container to Azure C
 -  **Active Azure subscription** with Contributor or Owner permissions. [Create an account for free](https://azure.microsoft.com/free/) if you don't have one.
 - **GitHub account**. Sign up for [free](https://github.com/join) if you don't have one.
 - Install **[Git](https://github.com/git-guides/install-git)**.
-- Install the **[Azure CLI](/cli/azure/install-azure-cli)**.
+- Install the **[Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)**.
 :::
 
 Sign in to Azure from the CLI using the ```az login``` command, and follow the prompts in your browser to complete the authentication process.  Also, ensure you're running the latest version of the CLI by using the ```az upgrade```  command.
