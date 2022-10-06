@@ -1,5 +1,5 @@
 ---
-slug: serverless-status-post
+slug: serverless-status-nn
 title: 💣 NN | In a Nutshell 
 authors: [devanshi]
 draft: true
