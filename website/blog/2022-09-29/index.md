@@ -2,7 +2,7 @@
 slug: 29-azure-developer-cli
 title: 29. Code to Cloud with `azd`
 authors: [savannah]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -15,11 +15,11 @@ tags: [serverless-september, 30-days-of-serverless, microservices, azd, azure-de
 <!-- FIXME -->
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/functions-1" />
+    content="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli" />
   <meta name="twitter:title" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Code to Cloud with Azure Developer CLI" />
   <meta name="twitter:description" 
-    content="#30DaysOfServerless: Azure Functions Fundamentals" />
+    content="#30DaysOfServerless: Code to Cloud with Azure Developer CLI" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/post-kickoff.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,12 +27,22 @@ tags: [serverless-september, 30-days-of-serverless, microservices, azd, azure-de
     content="@savostrowski" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/08-functions-azure" />
+    href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli" />
 </head>
 
 ---
 
 Welcome to `Day 29` of #30DaysOfServerless!
+
+We are in the final days of the 30-day journey so it seemed appropriate to end the _End-to-End_ Developer Journey with a discussion on _tooling_ that can simplify and enhance the developer experience from development to deployment and beyond. Say hello to the **Azure Developer CLI**.
+
+Ready? Let's go!
+
+:::tip Updated: October 6, 2022
+
+Today marked the [October 22 release](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/) of the Azure Developer CLI - bringing with it a few new features and community-targeted resources. Look out for a follow-up post to this one that dives into more details, just in time for **#Hacktoberfest!** 🌟
+
+:::
 
 ---
 
