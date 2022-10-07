@@ -51,7 +51,7 @@ Ready? Let's Go!
 ## This Week In Events
 
 We had a number of activities happen this week - here's a quick summary:
- * On **Zero To Hero:** <br/>Anthony Chu took us on a [Journey to the Cloud with Azure Container Apps](http://localhost:3000/Cloud-Native/blog/zero2hero-aca-04) exploring tools to simplify develop-deploy workflows for ACA. And Melony Qin talked about [Using Custom Handlers For Go](http://localhost:3000/Cloud-Native/blog/zero2hero-func-03), explaining how this allows extended languages support in Azure Functions.
+ * On **Zero To Hero:** <br/>Anthony Chu took us on a [Journey to the Cloud with Azure Container Apps](/blog/zero2hero-aca-04) exploring tools to simplify develop-deploy workflows for ACA. And Melony Qin talked about [Using Custom Handlers For Go](/blog/zero2hero-func-03), explaining how this allows extended languages support in Azure Functions.
  * On **Serverless Hacks:**  <br/>Gwyn was joined by Liam Hampton as they talked about [How to DevOps and Serverless The Right Way](https://www.youtube.com/watch?v=EcsAcm22GqI). And it's not too late to complete the hack and [submit your solution to our hall of fame](https://azure.github.io/Cloud-Native/serverless-september/ServerlessHacks/).
  * On **Ask The Expert:** <br/>We had our first Live Q&A Session featuring members of the Azure Functions team, hosted by Gwyn. Catch up on the [recording](https://www.youtube.com/watch?v=wB5Va1a-MeY) for useful tips and guidance.
 

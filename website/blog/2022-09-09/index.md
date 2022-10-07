@@ -91,7 +91,7 @@ Azure Container Apps is the managed service that helps you run containerized app
  * **run microservices** - autoscaled by any KEDA-supported scaler.
 
 Want a quick intro to the topic? Start by watching the short video below - then read these two posts from our _ZeroToHero_ series:
- * [Go cloud native with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) - also see [the illustrated guide](http://localhost:3000/Cloud-Native/assets/images/Go-Cloud-Native-f6ac3225c3d9741a1fbff81030f7f830.png)
+ * [Go cloud native with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) - also see [the illustrated guide](/assets/images/Go-Cloud-Native-f6ac3225c3d9741a1fbff81030f7f830.png)
  * [Journey to the cloud with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609?WT.mc_id=javascript-74010-cxa) - for developer tooling options.
 
 <iframe width="600" height="400" src="https://www.youtube.com/embed/b3dopSTnSRg" title="How to Build and Deliver Apps Fast and Scalable with Azure Container Apps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

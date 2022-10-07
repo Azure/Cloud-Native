@@ -20,7 +20,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, dapr,
   <meta name="twitter:description" 
     content="#30DaysOfServerless: Dapr Integration with ACA" />
   <meta name="twitter:image"
-    content="http://localhost:3000/Cloud-Native/assets/images/banner-cc3cfe656444b6f21e4bc8d2c541bc3e.png" />
+    content="http://azure.github.io/Cloud-Native/assets/images/banner-cc3cfe656444b6f21e4bc8d2c541bc3e.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@nitya" />

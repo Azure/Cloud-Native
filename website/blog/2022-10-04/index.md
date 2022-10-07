@@ -40,8 +40,7 @@ It's `Serverless September` in a Nutshell! Join us as we unpack our month-long l
  * Containers and Microservices
  * Serverless Integrations
  * End-to-End Solutions
- * Take the Cloud Skills Challenge!
- * Bookmark our Serverless Collection.
+ * Developer Tools & #Hacktoberfest
 
 ![Banner for Serverless September](./img/banner.png)
 
@@ -49,7 +48,7 @@ It's `Serverless September` in a Nutshell! Join us as we unpack our month-long l
 
 ## Building Cloud-native Apps
 
-By definition, _Cloud native technologies empower organizations to **build and run scalable applications** in modern, dynamic environments such as public, private, and hybrid clouds._ You can learn more about Cloud-native in Kendall Roden's #ServerlessSeptember post on [Going Cloud Native with Azure Container Apps](zero2hero-aca-01).
+By definition, _Cloud native technologies empower organizations to **build and run scalable applications** in modern, dynamic environments such as public, private, and hybrid clouds._ You can learn more about Cloud-native in Kendall Roden's #ServerlessSeptember post on [Going Cloud Native with Azure Container Apps](/blog/zero2hero-aca-01).
 
 Serveless technologies accelerate productivity and minimize costs for deploying applications at cloud scale. So, what can we build with serverless technologies in cloud-native on Azure? _Anything that is event-driven_ - examples include:
  - **Microservices** - scaled by KEDA-compliant triggers
@@ -69,7 +68,7 @@ _Functions-as-a-Service_ (FaaS) is the epitome of developer productivity for ful
 
 In Azure, FaaS is provided by Azure Functions. Check out our [Functions + Serverless on Azure](./../2022-09-08/index.md) to go from learning core concepts, to building your first Functions app in your programming language of choice. Azure functions support multiple programming languages including C#, F#, Java, JavaScript, Python, Typescript, and PowerShell. 
 
-Want to get extended language support for languages like Go, and Rust? You can [Use Custom Handlers](zero2hero-func-03) to make this happen! But what if you want to have long-running functions, or create complex workflows involving more than one function? Read our [post on Durable Entities](zero2hero-func-02) to learn how you can _orchestrate_ this with Azure Functions.
+Want to get extended language support for languages like Go, and Rust? You can [Use Custom Handlers](/blog/zero2hero-func-03) to make this happen! But what if you want to have long-running functions, or create complex workflows involving more than one function? Read our [post on Durable Entities](/blog/zero2hero-func-02) to learn how you can _orchestrate_ this with Azure Functions.
 
 Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session with the Azure Functions team to get answers to popular community questions on Azure Functions features and usage.
 
@@ -77,12 +76,21 @@ Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session wit
 
 ## Microservices & Containers 
 
-### Azure Container Apps
+Functions-as-a-Service is an ideal first step towards serverless development. But Functions are just _one of the 5 pillars_ of [Cloud native](https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01). This week we'll look at two of the other pillars: **microservices** and **containers** - with specific focus on two core technologies: Azure Container Apps and Dapr (Distributed Application Runtime).
 
-### Dapr
+In this 6-part series of posts, we walk through each technology independently, before looking at the value of building Azure Container Apps **with Dapr**.
+
+ * In [Hello Container Apps](https://azure.github.io/Cloud-Native/blog/09-aca-fundamentals) we learned core concepts & deployed our first ACA.
+ * In [Microservices Communication](https://azure.github.io/Cloud-Native/blog/microservices-10) we learned about ACA environments and virtual networks, and how microservices communicate in ACA with a hands-on tutorial.
+ * In [Scaling Your Container Apps](https://azure.github.io/Cloud-Native/blog/11-scaling-container-apps) we learned about KEDA (Kubernetes Event-Driven Autoscaler) and configuring ACA for autoscaling with KEDA-compliant triggers.
+ * In [Build with Dapr](https://azure.github.io/Cloud-Native/blog/12-build-with-dapr) we introduced the Distributed Application Runtime (Dapr), exploring its Building Block APIs and sidecar architecture for working with ACA.
+ * In [Secure ACA Access](https://azure.github.io/Cloud-Native/blog/13-aca-managed-id) we learned how to secure ACA access to external services with - and without - Dapr, covering Secret Stores and Managed Identity.
+ * Finally, [Build ACA with Dapr](https://azure.github.io/Cloud-Native/blog/14-dapr-aca-quickstart) tied it all together with a enterprise app scenario where an orders processor (ACA) uses Dapr APIs (PubSub, State Management) to receive and store order messages from Azure Service Bus.
 
 
-Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session with the Azure Functions team to get answers to popular community questions on Azure Functions features and usage.
+![Build ACA with Dapr](http://localhost:3002/Cloud-Native/assets/images/ACA-Tutorial-AsyncComm-0922-909e943512d388e21a69516efb153bdf.jpg)
+
+Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session with the Azure Container Apps team for answers to popular community questions on core features and usage.
 
 <iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&ep=serverless-september-azure-container-apps" width="640" height="360"></iframe>
 
@@ -91,7 +99,7 @@ Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session wit
 
 In the first half of the month we looked at _compute_ resources for building and deploying serverless applications. In the second half, we look at _integration_ tools and resources that automate developer workflows to streamline the end-to-end developer experience.
 
-In Azure, this is enabled by services like [Azure Logic Apps](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview) and [Azure Event Grid](https://learn.microsoft.com/en-us/azure/event-grid/overview). Azure Logic Apps provides a visual designer to _create and automate workflows_ with little or no code involved. Azure Event Grid provides a _highly-scable event broker_ with support for pub/sub communications to drive async event-driven architectures. 
+In Azure, this is enabled by services like [Azure Logic Apps](https://learn.microsoft.com/azure/logic-apps/logic-apps-overview) and [Azure Event Grid](https://learn.microsoft.com/azure/event-grid/overview). Azure Logic Apps provides a visual designer to _create and automate workflows_ with little or no code involved. Azure Event Grid provides a _highly-scable event broker_ with support for pub/sub communications to drive async event-driven architectures. 
 
  * In [Tracking Weather Data Changes With Logic Apps](https://azure.github.io/Cloud-Native/blog/17-integrate-cosmosdb) we look at how you can use Logic Apps to  integrate the MSN weather service with Azure CosmosDB, allowing automated collection of weather data on changes.
  * In [Teach the Cloud to Read & Categorize Mail](https://azure.github.io/Cloud-Native/blog/18-cloudmail) we take it a step further, using Logic Apps to automate a workflow that includes a Computer Vision service to "read" images and store the results to CosmosDB.
@@ -100,7 +108,7 @@ In Azure, this is enabled by services like [Azure Logic Apps](https://learn.micr
 
  ![Azure Event Grid And Logic Apps](https://azure.github.io/Cloud-Native/assets/images/21-cloudevents-via-event-grid-01-694e11ff4422f7f4f28ae03f08580170.png)
 
-Want to explore other such integrations? Browse [Azure Architectures](https://learn.microsoft.com/en-us/azure/architecture/browse/?filter-products=Logic%20A&products=azure-event-grid%2Cazure-logic-apps) and filter by selected Azure services for more real-world scenarios.
+Want to explore other such integrations? Browse [Azure Architectures](https://learn.microsoft.com/azure/architecture/browse/?filter-products=Logic%20A&products=azure-event-grid%2Cazure-logic-apps) and filter by selected Azure services for more real-world scenarios.
 
 ---
 
@@ -127,8 +135,7 @@ And **watch this space for more such tutorials and content through October**, in
 
 ---
 
-## What's Next
+## Join us at Microsoft Ignite!
 
- * Developer Calendar
- * MSIgnite
- * Cloud Skills
+Want to continue your learning journey, and learn about what's next for Serverless on Azure? 
+**Microsoft Ignite** happens Oct 11-14 and has multiple sessions on relevant technologies and tools. Check out the [Session Catalog](https://ignite.microsoft.com/sessions?q=cloud%2520native&s=%257B%2522name%2522%253A%2522translate.refine.label.sort.relevance%2522%252C%2522type%2522%253A0%257D&t=%257B%2522from%2522%253A%25222022-10-12T00%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222022-10-14T23%253A59%253A59-04%253A00%2522%257D&g=%255B%257B%2522name%2522%253A%2522live-now-and-upcoming%2522%252C%2522enabled%2522%253Afalse%257D%255D) and register to attend online. 

@@ -20,7 +20,7 @@ tags: [serverless-september, 30-days-of-serverless,  azure-container-apps, keda,
   <meta name="twitter:description" 
     content="#30DaysOfServerless: Scaling Your Container Apps" />
   <meta name="twitter:image"
-    content="http://localhost:3000/Cloud-Native/assets/images/banner-3e6ce6ac4f59bb1c536972dced457df3.png" />
+    content="http://azure.github.io/Cloud-Native/assets/images/banner-3e6ce6ac4f59bb1c536972dced457df3.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@nitya" />
