@@ -1,6 +1,6 @@
 ---
 slug: serverless-status-post
-title: ServerlessSeptember In a Nutshell
+title: Serverless September - In a Nutshell
 authors: [devanshi]
 draft: false
 hide_table_of_contents: false
@@ -48,7 +48,7 @@ It's `Serverless September` in a Nutshell! Join us as we unpack our month-long l
 
 ## Building Cloud-native Apps
 
-By definition, _Cloud native technologies empower organizations to **build and run scalable applications** in modern, dynamic environments such as public, private, and hybrid clouds._ You can learn more about Cloud-native in Kendall Roden's #ServerlessSeptember post on [Going Cloud Native with Azure Container Apps](/blog/zero2hero-aca-01).
+By definition, _Cloud-native technologies empower organizations to **build and run scalable applications** in modern, dynamic environments such as public, private, and hybrid clouds._ You can learn more about Cloud-native in Kendall Roden's #ServerlessSeptember post on [Going Cloud-native with Azure Container Apps](/blog/zero2hero-aca-01).
 
 Serveless technologies accelerate productivity and minimize costs for deploying applications at cloud scale. So, what can we build with serverless technologies in cloud-native on Azure? _Anything that is event-driven_ - examples include:
  - **Microservices** - scaled by KEDA-compliant triggers
@@ -76,7 +76,7 @@ Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session wit
 
 ## Microservices & Containers 
 
-Functions-as-a-Service is an ideal first step towards serverless development. But Functions are just _one of the 5 pillars_ of [Cloud native](https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01). This week we'll look at two of the other pillars: **microservices** and **containers** - with specific focus on two core technologies: Azure Container Apps and Dapr (Distributed Application Runtime).
+Functions-as-a-Service is an ideal first step towards serverless development. But Functions are just _one of the 5 pillars_ of [Cloud-native](https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01). This week we'll look at two of the other pillars: **microservices** and **containers** - with specific focus on two core technologies: Azure Container Apps and Dapr (Distributed Application Runtime).
 
 In this 6-part series of posts, we walk through each technology independently, before looking at the value of building Azure Container Apps **with Dapr**.
 
@@ -88,7 +88,7 @@ In this 6-part series of posts, we walk through each technology independently, b
  * Finally, [Build ACA with Dapr](https://azure.github.io/Cloud-Native/blog/14-dapr-aca-quickstart) tied it all together with a enterprise app scenario where an orders processor (ACA) uses Dapr APIs (PubSub, State Management) to receive and store order messages from Azure Service Bus.
 
 
-![Build ACA with Dapr](http://localhost:3002/Cloud-Native/assets/images/ACA-Tutorial-AsyncComm-0922-909e943512d388e21a69516efb153bdf.jpg)
+![Build ACA with Dapr](https://github.com/Azure/Cloud-Native/blob/41cc0890acd204a9069836dfcc5727c48d5fca97/website/blog/2022-09-14/img/ACA-Tutorial-AsyncComm-0922.jpg)
 
 Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session with the Azure Container Apps team for answers to popular community questions on core features and usage.
 
@@ -138,4 +138,4 @@ And **watch this space for more such tutorials and content through October**, in
 ## Join us at Microsoft Ignite!
 
 Want to continue your learning journey, and learn about what's next for Serverless on Azure? 
-**Microsoft Ignite** happens Oct 11-14 and has multiple sessions on relevant technologies and tools. Check out the [Session Catalog](https://ignite.microsoft.com/sessions?q=cloud%2520native&s=%257B%2522name%2522%253A%2522translate.refine.label.sort.relevance%2522%252C%2522type%2522%253A0%257D&t=%257B%2522from%2522%253A%25222022-10-12T00%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222022-10-14T23%253A59%253A59-04%253A00%2522%257D&g=%255B%257B%2522name%2522%253A%2522live-now-and-upcoming%2522%252C%2522enabled%2522%253Afalse%257D%255D) and register to attend online. 
+**Microsoft Ignite** happens Oct 12-14 this year and has multiple sessions on relevant technologies and tools. Check out the [Session Catalog](https://ignite.microsoft.com/en-US/sessions?q=cloud%2520native%2520architectures&f=%255B%257B%2522name%2522%253A%2522Breakout%2522%252C%2522facetName%2522%253A%2522sessionType%2522%257D%255D&s=%257B%2522name%2522%253A%2522translate.refine.label.sort.relevance%2522%252C%2522type%2522%253A0%257D&t=%257B%2522from%2522%253A%25222022-10-12T00%253A00%253A00-07%253A00%2522%252C%2522to%2522%253A%25222022-10-13T23%253A59%253A59-07%253A00%2522%257D&g=%255B%257B%2522name%2522%253A%2522live-now-and-upcoming%2522%252C%2522enabled%2522%253Afalse%257D%255Dl) and [register here](https://ignite.microsoft.com/en-US/sessions/8950b2b1-62eb-48f9-90ef-5ad779ce8e22?source=sessions) to attend online. 
