@@ -119,7 +119,12 @@ And we hope you think of `awesome-azd` as another possible project to contribute
  * Explore [Custom Issues](https://azure.github.io/awesome-azd/docs/intro#our-custom-issues) for actionable ways to contribute code.
  * Explore [Other Ways To Help](https://azure.github.io/awesome-azd/docs/intro#other-ways-to-help) for equally important non-code contributions.
  
-Check out the FAQ section to learn how to [create](https://azure.github.io/awesome-azd/docs/faq/create-template), [discover](https://azure.github.io/awesome-azd/docs/faq/discover-azd), and [contribute](https://azure.github.io/awesome-azd/docs/faq/contribute-template) templates. And don't hesitate to reach out to us - either via Issues on the repo, or in the [Discussions](https://github.com/Azure/Cloud-Native/discussions) section of this site, to give us feedback!
+Check out the FAQ section to learn how to [create](https://azure.github.io/awesome-azd/docs/faq/create-template), [discover](https://azure.github.io/awesome-azd/docs/faq/discover-azd), and [contribute](https://azure.github.io/awesome-azd/docs/faq/contribute-template) templates. Or take a couple of minutes to watch this video walkthrough from [Jon Gallant](https://twitter.com/jongallant):
+
+<iframe width="350" height="500" src="https://www.youtube.com/embed/vJa0K0TDvdM" title="Awesome-azd"></iframe>
+
+
+And don't hesitate to reach out to us - either via Issues on the repo, or in the [Discussions](https://github.com/Azure/Cloud-Native/discussions) section of this site, to give us feedback!
 
 Happy Hacking! 🎃
 
