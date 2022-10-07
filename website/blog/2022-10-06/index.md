@@ -68,17 +68,17 @@ Prefer to watch a video overview? I have you covered! Check out my recent conver
  - explored Azure Developer CLI commands in the terminal and VS Code, and
  - (probably most importantly) got a web app up and running on Azure with a database, Key Vault and monitoring all in a couple of minutes
 
-<iframe width="500" height="300" src="https://www.youtube.com/embed/VTk-FhJyo7s" title="Introducing the Azure Developer CLI (azd) | Azure Friday" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="500" height="300" src="https://www.youtube.com/embed/VTk-FhJyo7s" title="Introducing the Azure Developer CLI (azd) | Azure Friday"></iframe>
 
 ---
 
 ## October Release
 
 We're pleased to announce the October 2022 release of the Azure Developer CLI (currently `0.3.0-beta.2`). Read [the release announcement](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#new-template-gallery-awesome-azd) for more details. Here are the highlights:
-
   * **Azure Pipelines for CI/CD**: This addresses [azure-dev#101](https://github.com/Azure/azure-dev/issues/101), adding support for Azure Pipelines (alongside GitHub Actions) as a CI/CD provider. [Learn more](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/configure-devops-pipeline?tabs=azdo) about usage and related documentation.
   * **Improved Infrastructure as Code structure via Bicep modules**: This addresses [azure-dev#543](https://github.com/Azure/azure-dev/issues/543), which recognized the complexity of using a single `resources.bicep` file for all resources. With this release, `azd` templates now come with Bicep modules organized by purpose making it easier to edit and understand. [Learn more](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#improved-infrastructure-as-code-structure-via-bicep-modules) about this structure, and how to use it.
   * **New Templates Gallery - awesome-azd**: This addresses [azure-dev#398](https://github.com/Azure/azure-dev/issues/398), which aimed to make templates more discoverable and easier to contribute. [Learn more](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#new-template-gallery-awesome-azd) about how the new gallery improves the template discovery experience.
+
 
 In the next section, we'll dive briefly into the last feature, introducing the new [`awesome-azd`](https://aka.ms/awesome-azd) site and resource for templates discovery and contribution. And, since it's #Hacktoberfest season, we'll talk about the **Contributor Guide** and the many ways you can contribute to this project - with, or without, code.
 
