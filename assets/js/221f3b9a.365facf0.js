@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[1378],{83544:e=>{e.exports=JSON.parse('{"label":"azure-developer-cli","permalink":"/Cloud-Native/blog/tags/azure-developer-cli","allTagsPath":"/Cloud-Native/blog/tags","count":2}')}}]);

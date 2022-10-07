@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8505],{68639:e=>{e.exports=JSON.parse('{"label":"hacktoberfest","permalink":"/Cloud-Native/blog/tags/hacktoberfest","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);
