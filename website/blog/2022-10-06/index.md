@@ -2,13 +2,13 @@
 slug: 29-awesome-azd
 title: Oct | `awesome-azd` Templates
 authors: [savannah]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [azure, functions, serverless, concepts]
+keywords: [azure, serverless, devtools, azd]
 image: ./img/banner.png
-description: "<FIXME>" 
+description: "What's new in Azure Developer CLI October 2022 release?" 
 tags: [cloud-native, devtools, hacktoberfest, azure-developer-cli]
 ---
 
@@ -47,7 +47,7 @@ Ready? Let's go!
 ## What We'll Cover
  * **Azure Friday**: Introducing the Azure Developer CLI (Video)
  * **October 2022 Release**: What's New in the Azure Developer CLI? 
-    * **Azure Pipelines for CI/CD**: [Learn more](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/configure-devops-pipeline?tabs=azdo)
+    * **Azure Pipelines for CI/CD**: [Learn more](https://learn.microsoft.com/azure/developer/azure-developer-cli/configure-devops-pipeline?tabs=azdo)
     * **Improved Infrastructure as Code structure via Bicep modules:** [Learn more](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#improved-infrastructure-as-code-structure-via-bicep-modules)
     * **A new `azd` template gallery**: The new `azd-templates` gallery for community use! [Learn more](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#new-template-gallery-awesome-azd)
   * **Awesome-Azd**: The new `azd-templates` gallery for Community use
@@ -62,7 +62,7 @@ Ready? Let's go!
 
 This post is a follow-up to our #ServerlessSeptember post on **[Code to Cloud with Azure Developer CLI](./../2022-09-29/index.md)** where we introduced `azd`, a new open-source tool that makes it quick and simple for you to move your application from a _local development environment_ to Azure, streamlining your _end-to-end developer workflow_ in the process. 
 
-Prefer to watch a video overview? I have you covered! Check out my recent conversation with Scott Hanselman on [Azure Friday](https://learn.microsoft.com/en-us/Shows/Azure-Friday/) where we:
+Prefer to watch a video overview? I have you covered! Check out my recent conversation with Scott Hanselman on [Azure Friday](https://learn.microsoft.com/Shows/Azure-Friday/) where we:
  - talked about the code-to-cloud developer journey
  - walkthrough the ins and outs of an `azd` template
  - explored Azure Developer CLI commands in the terminal and VS Code, and
@@ -75,7 +75,7 @@ Prefer to watch a video overview? I have you covered! Check out my recent conver
 ## October Release
 
 We're pleased to announce the October 2022 release of the Azure Developer CLI (currently `0.3.0-beta.2`). Read [the release announcement](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#new-template-gallery-awesome-azd) for more details. Here are the highlights:
-  * **Azure Pipelines for CI/CD**: This addresses [azure-dev#101](https://github.com/Azure/azure-dev/issues/101), adding support for Azure Pipelines (alongside GitHub Actions) as a CI/CD provider. [Learn more](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/configure-devops-pipeline?tabs=azdo) about usage and related documentation.
+  * **Azure Pipelines for CI/CD**: This addresses [azure-dev#101](https://github.com/Azure/azure-dev/issues/101), adding support for Azure Pipelines (alongside GitHub Actions) as a CI/CD provider. [Learn more](https://learn.microsoft.com/azure/developer/azure-developer-cli/configure-devops-pipeline?tabs=azdo) about usage and related documentation.
   * **Improved Infrastructure as Code structure via Bicep modules**: This addresses [azure-dev#543](https://github.com/Azure/azure-dev/issues/543), which recognized the complexity of using a single `resources.bicep` file for all resources. With this release, `azd` templates now come with Bicep modules organized by purpose making it easier to edit and understand. [Learn more](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#improved-infrastructure-as-code-structure-via-bicep-modules) about this structure, and how to use it.
   * **New Templates Gallery - awesome-azd**: This addresses [azure-dev#398](https://github.com/Azure/azure-dev/issues/398), which aimed to make templates more discoverable and easier to contribute. [Learn more](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#new-template-gallery-awesome-azd) about how the new gallery improves the template discovery experience.
 
