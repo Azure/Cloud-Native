@@ -48,7 +48,7 @@ It's `Serverless September` in a Nutshell! Join us as we unpack our month-long l
 
 ## Building Cloud-native Apps
 
-By definition, _Cloud-native technologies empower organizations to **build and run scalable applications** in modern, dynamic environments such as public, private, and hybrid clouds._ You can learn more about Cloud-native in Kendall Roden's #ServerlessSeptember post on [Going Cloud-native with Azure Container Apps](/blog/zero2hero-aca-01).
+By definition, _cloud-native technologies empower organizations to **build and run scalable applications** in modern, dynamic environments such as public, private, and hybrid clouds._ You can learn more about cloud-native in Kendall Roden's #ServerlessSeptember post on [Going Cloud-native with Azure Container Apps](/blog/zero2hero-aca-01).
 
 Serveless technologies accelerate productivity and minimize costs for deploying applications at cloud scale. So, what can we build with serverless technologies in cloud-native on Azure? _Anything that is event-driven_ - examples include:
  - **Microservices** - scaled by KEDA-compliant triggers
@@ -76,7 +76,7 @@ Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session wit
 
 ## Microservices & Containers 
 
-Functions-as-a-Service is an ideal first step towards serverless development. But Functions are just _one of the 5 pillars_ of [Cloud-native](https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01). This week we'll look at two of the other pillars: **microservices** and **containers** - with specific focus on two core technologies: Azure Container Apps and Dapr (Distributed Application Runtime).
+Functions-as-a-Service is an ideal first step towards serverless development. But Functions are just _one of the 5 pillars_ of [cloud-native](https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01). This week we'll look at two of the other pillars: **microservices** and **containers** - with specific focus on two core technologies: Azure Container Apps and Dapr (Distributed Application Runtime).
 
 In this 6-part series of posts, we walk through each technology independently, before looking at the value of building Azure Container Apps **with Dapr**.
 
