@@ -37,7 +37,7 @@ It's `Serverless September` in a Nutshell! Join us as we unpack our month-long l
 
 ## What We'll Cover
  * Functions-as-a-Service (FaaS)
- * Containers and Microservices
+ * Microservices and Containers
  * Serverless Integrations
  * End-to-End Solutions
  * Developer Tools & #Hacktoberfest
@@ -74,7 +74,7 @@ Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session wit
 
 <iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&ep=serverless-september-azure-functions" width="600" height="400"></iframe>
 
-## Microservices & Containers 
+## Microservices and Containers 
 
 Functions-as-a-Service is an ideal first step towards serverless development. But Functions are just _one of the 5 pillars_ of [cloud-native](https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01). This week we'll look at two of the other pillars: **microservices** and **containers** - with specific focus on two core technologies: Azure Container Apps and Dapr (Distributed Application Runtime).
 
