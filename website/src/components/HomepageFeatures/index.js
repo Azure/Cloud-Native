@@ -35,7 +35,7 @@ const CoreServices = [
     ),
   },
   {
-    title: 'Azure RedHat Open Shift',
+    title: 'Azure RedHat OpenShift',
     svgpath: 'img/svg/azure-openshift.svg',
     link: "https://azure.microsoft.com/services/openshift/",
     description: (
