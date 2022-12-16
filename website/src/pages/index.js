@@ -18,8 +18,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/serverless-september">
-            Explore #ServerlessSeptember ⚡️⚡️
+            to="/New-Year">
+            Coming Soon: #CloudNativeNewYear 🥳
           </Link>
         </div>
       </div>

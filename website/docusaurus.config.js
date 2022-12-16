@@ -92,9 +92,10 @@ const config = {
         },
         items: [
           {
-            to: '/serverless-september/', 
-            label: '🍂 #ServerlessSeptember', position: 'left'
+            to: '/New-Year/', 
+            label: '🥳 #CloudNativeNewYear', position: 'left'
           },
+          /*
           {
             to: '/calendar/', 
             label: 'Events', position: 'left'
@@ -112,6 +113,9 @@ const config = {
             to: 'https://github.com/Azure/Cloud-Native/discussions',
              position: 'left'
           },
+          */
+
+          /*
           {
             type: 'dropdown',
             label: 'Sitemap',
@@ -155,11 +159,16 @@ const config = {
               },
             ],
           },
+          */
           {
             type: 'dropdown',
-            label: 'Archives',
+            label: '🍂 #ServerlessSeptember',
             position: 'right',
             items: [
+              {
+                label: '2022 Website',
+                href: '/serverless-september',
+              },
               {
                 label: '2020 Content',
                 href: 'https://dev.to/azure/serverlessseptember-2020-content-collection-443k',
@@ -275,7 +284,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b> Take the <a href="https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
+          '<b> Explore <a href="https://learn.microsoft.com/users/nityan/collections/1e7ksrzjw3rz1m?WT.mc_id=javascript-74010-ninarasi"><b>Cloud Native Resources!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,

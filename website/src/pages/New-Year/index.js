@@ -7,13 +7,13 @@ import styles from './../index.module.css';
 
 const CampaignFeatures = [
   {
-    title: '#30DaysOfServerless',
+    title: '#30DaysOfCloudNative',
     Svg: require('@site/static/img/svg/campaign-30days.svg').default,
     fillColor: "#f25022",
-    link: "/Cloud-Native/serverless-september/30DaysOfServerless",
+    link: "/Cloud-Native/New-Year/",
     description: (
       <>
-      Join us on a #30Day journey covering Azure Functions, Container Apps, Dapr, Event Grid, Logic Apps & more.
+      Join us on a #30Day journey into Cloud-Native fundamentals.
       </>
     ),
   },
@@ -21,13 +21,25 @@ const CampaignFeatures = [
     title: 'Zero To Hero',
     Svg: require('@site/static/img/svg/campaign_hero.svg').default,
     fillColor: "#7fba00",
-    link: "/Cloud-Native/serverless-september/ZeroToHero",
+    link: "/Cloud-Native/New-Year/",
     description: (
       <>
-      Get the latest updates on Serverless On Azure products and features - directly from product teams!
+      Get the latest updates on Cloud Native technologies and related Azure services and tools - directly from product teams!
       </>
     ),
   },
+  {
+    title: 'Cloud Skills',
+    Svg: require('@site/static/img/svg/campaign_skills.svg').default,
+    fillColor: "#ffb900",
+    link: "/Cloud-Native/New-Year/",
+    description: (
+      <>
+      Skill up on key cloud technologies with these free, self-guided learning courses - and make the leaderboard!
+      </>
+    ),
+  },
+  /*
   {
     title: 'Serverless Hacks',
     Svg: require('@site/static/img/svg/team.svg').default,
@@ -36,17 +48,6 @@ const CampaignFeatures = [
     description: (
       <>
       Join us for weekly events at Microsoft Reactor, as we work through hands-on challenges in Serverless!
-      </>
-    ),
-  },
-  {
-    title: 'Cloud Skills',
-    Svg: require('@site/static/img/svg/campaign_skills.svg').default,
-    fillColor: "#ffb900",
-    link: "/Cloud-Native/serverless-september/CloudSkills",
-    description: (
-      <>
-      Skill up on key cloud technologies with these free, self-guided learning courses - and make the leaderboard!
       </>
     ),
   },
@@ -72,6 +73,7 @@ const CampaignFeatures = [
       </>
     ),
   },
+  */
 ];
 
 function Feature({Svg, title, description, link, fillColor}) {
@@ -96,16 +98,16 @@ function CampaignHeader() {
       <div className="container">
 
         <h1 className="hero__title">
-          It's Serverless September!
+          It's Cloud Native New Year! 🥳
         </h1>
         <p>
-          Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then join us <b>September 1, 2022</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native journey.
+          Join us for a month-long celebration of Cloud Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then  <b>check back on January 23, 2023</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native developer journey.
         </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/blog">
-            Explore #30DaysOfServerless 🎉
+            Skill Up With #30DaysOfCloudNative ⚡️
           </Link>
         </div>
       </div>
@@ -131,7 +133,7 @@ function FeaturesSection() {
 export default function() {
   return (
     <Layout
-      title={`Welcome to #ServerlessSeptember`}
+      title={`Welcome to #CloudNativeNewYear`}
       description="Join us for a month-long celebration of Cloud Native technologies go from core concept to code with #30DaysOfServerless />"> 
       <CampaignHeader/>
       <main>
