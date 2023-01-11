@@ -189,8 +189,8 @@ const config = {
       },
 
       footer: {
-        style: 'dark',
         /*
+        style: 'dark',
         logo: {
           alt: 'Serverless September Logo',
           src: 'img/campaign_banner.png',
@@ -282,11 +282,11 @@ const config = {
 
       /* Banner Announcements */
       announcementBar: {
-        id: 'Serverless September kicks off Sep 1, 2022!',
+        id: '2023 Cloud Native New Year!',
         content:
           '<b> Explore <a href="https://aka.ms/CNNY/collection"><b>Cloud-Native Resources!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
-        backgroundColor: '#ffb900',
-        textColor: '#000000',
+        backgroundColor: '#0D032C',
+        textColor: '#ffffff',
         isCloseable: false,
       },
 

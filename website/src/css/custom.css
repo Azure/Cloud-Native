@@ -11,17 +11,29 @@
 */
 
 
-/* Default Mode *
+/* 
+--- SERVERLESS SEPT 
 :root {
-  --ifm-color-primary: #552f99;
-  --ifm-color-primary-dark: #4d2a8a;
-  --ifm-color-primary-darker: #482882;
-  --ifm-color-primary-darkest: #3c216b;
-  --ifm-color-primary-light: #5e34a8;
-  --ifm-color-primary-lighter: #6236b0;
-  --ifm-color-primary-lightest: #6f40c4;
+  --ifm-color-primary: #8661c5;
+  --ifm-color-primary-dark: #764bbd;
+  --ifm-color-primary-darker: #6e43b7;
+  --ifm-color-primary-darkest: #5b3797;
+  --ifm-color-primary-light: #9677cd;
+  --ifm-color-primary-lighter: #9f81d1;
+  --ifm-color-primary-lightest: #b7a2dd;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #ffb900;
+  --ifm-color-primary-dark: #e6a600;
+  --ifm-color-primary-darker: #d99d00;
+  --ifm-color-primary-darkest: #b38100;
+  --ifm-color-primary-light: #ffc01a;
+  --ifm-color-primary-lighter: #ffc326;
+  --ifm-color-primary-lightest: #ffce4d;
 }
 */
+
 
 :root {
   --ifm-color-primary: #8661c5;
@@ -33,16 +45,17 @@
   --ifm-color-primary-lightest: #b7a2dd;
 }
 
-/* Dark Mode */
 [data-theme='dark'] {
-  --ifm-color-primary: #ffb900;
-  --ifm-color-primary-dark: #e6a600;
-  --ifm-color-primary-darker: #d99d00;
-  --ifm-color-primary-darkest: #b38100;
-  --ifm-color-primary-light: #ffc01a;
-  --ifm-color-primary-lighter: #ffc326;
-  --ifm-color-primary-lightest: #ffce4d;
+  --ifm-color-primary: #c5b4e3;
+  --ifm-color-primary-dark: #ae96d8;
+  --ifm-color-primary-darker: #a388d2;
+  --ifm-color-primary-darkest: #805bc2;
+  --ifm-color-primary-light: #dcd2ee;
+  --ifm-color-primary-lighter: #e7e0f4;
+  --ifm-color-primary-lightest: #ffffff;
 }
+
+
 /* GitHub-style Themed Images
   https://docusaurus.io/docs/markdown-features/assets#github-style-themed-images
  */

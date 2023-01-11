@@ -5,6 +5,10 @@ import Link from '@docusaurus/Link';
 
 import styles from './../index.module.css';
 
+// Import banner
+import Image from '@theme/IdealImage';
+import bannerImg from './../../../static/img/cnny23/hero-banner.png';
+
 const CampaignFeatures = [
   {
     title: '#30DaysOfCloudNative',
@@ -18,13 +22,13 @@ const CampaignFeatures = [
     ),
   },
   {
-    title: 'Zero To Hero',
-    Svg: require('@site/static/img/svg/campaign_hero.svg').default,
+    title: 'Ask The Experts',
+    Svg: require('@site/static/img/svg/campaign_ama.svg').default,
     fillColor: "#7fba00",
     link: "/Cloud-Native/New-Year/",
     description: (
       <>
-      Get the latest updates on Cloud-Native technologies and related Azure services and tools - directly from product teams!
+      Join us for online conversations with the product teams - submit questions ahead of time or ask them live!
       </>
     ),
   },
@@ -96,20 +100,9 @@ function CampaignHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-
-        <h1 className="hero__title">
-          It's Cloud-Native New Year! 🥳
-        </h1>
-        <p>
-          Join us for a month-long celebration of Cloud-Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then  <b>check back on January 23, 2023</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native developer journey.
-        </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/blog">
-            Skill Up With #30DaysOfCloudNative ⚡️
-          </Link>
-        </div>
+        <Link to="/blog">
+          <Image img={bannerImg} className={styles.featureImg} />
+        </Link>
       </div>
     </header>
   );
@@ -137,6 +130,10 @@ export default function() {
       description="Join us for a month-long celebration of Cloud-Native technologies go from core concept to code with #30DaysOfServerless />"> 
       <CampaignHeader/>
       <main>
+        <br/>
+        <p className="container">
+          Join us for a month-long celebration of Cloud-Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then  <b>check back on January 23, 2023</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native developer journey. 
+        </p>
         <FeaturesSection/>
       </main>
     </Layout>
