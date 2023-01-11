@@ -88,7 +88,7 @@ const config = {
         title: 'Cloud-Native',
         logo: {
           alt: 'Azure Cloud Logo',
-          src: 'img/logo.png',
+          src: 'img/cnny23/logo.svg',
         },
         items: [
           {
@@ -189,16 +189,6 @@ const config = {
       },
 
       footer: {
-        /*
-        style: 'dark',
-        logo: {
-          alt: 'Serverless September Logo',
-          src: 'img/campaign_banner.png',
-          href: 'https://aka.ms/serverless-september',
-          width: 280,
-          height: 100,
-        },
-        */
         links: [
           {
             label: `Cloud-Native`,
