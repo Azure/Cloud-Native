@@ -99,7 +99,7 @@ function CampaignHeader() {
           It's Serverless September!
         </h1>
         <p>
-          Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then join us <b>September 1, 2022</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native journey.
+          Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then join us <b>September 1, 2022</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native journey.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -132,7 +132,7 @@ export default function() {
   return (
     <Layout
       title={`Welcome to #ServerlessSeptember`}
-      description="Join us for a month-long celebration of Cloud Native technologies go from core concept to code with #30DaysOfServerless />"> 
+      description="Join us for a month-long celebration of Cloud-Native technologies go from core concept to code with #30DaysOfServerless />"> 
       <CampaignHeader/>
       <main>
         <FeaturesSection/>

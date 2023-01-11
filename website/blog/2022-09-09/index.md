@@ -49,7 +49,7 @@ Welcome to `Day 9` of #30DaysOfServerless!
 
 ## The Week Ahead
 
-Welcome to Week 2 of #ServerlessSeptember, where we put the focus on **Microservices** and building Cloud Native applications that are optimized for **serverless** solutions on Azure. One week is not enough to do this complex topic justice so consider this a 7-part jumpstart to the longer journey.
+Welcome to Week 2 of #ServerlessSeptember, where we put the focus on **Microservices** and building Cloud-Native applications that are optimized for **serverless** solutions on Azure. One week is not enough to do this complex topic justice so consider this a 7-part jumpstart to the longer journey.
 
  1. **Hello, Container Apps (ACA)** - Learn about Azure Container Apps, a key service that helps you _run microservices and containerized apps on a serverless platform_. Know the core concepts. (_Tutorial 1: First ACA_)
  2. **Communication with Microservices** - Dive deeper into two key concepts: _environments_ and _virtual networking_. Learn how microservices communicate in ACA, and walkthrough an example. _(Tutorial 2: ACA with 3 Microservices)_
@@ -74,9 +74,9 @@ A containerized app is one where the application components, dependencies, and c
 
 Container images can be shared via  **container registries** (public or private) helping developers discover and deploy related apps with less effort. **Scaling** a containerized app can be as simple as activating more instances of its container image. However, this requires **container orchestrators** to automate the management of container apps for efficiency. Orchestrators use technologies like Kubernetes to support capabilities like _workload scheduling, self-healing and auto-scaling on demand_.
 
-### Cloud Native & Microservices
+### Cloud-Native & Microservices
 
-Containers are seen as one of the [5 pillars of Cloud Native app development](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa), an approach where applications are designed explicitly to take advantage of the unique benefits of modern dynamic environments (involving public, private and hybrid clouds). Containers are particularly suited to **serverless solutions based on microservices**.
+Containers are seen as one of the [5 pillars of Cloud-Native app development](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa), an approach where applications are designed explicitly to take advantage of the unique benefits of modern dynamic environments (involving public, private and hybrid clouds). Containers are particularly suited to **serverless solutions based on microservices**.
 
  * _With serverless_ - developers use **managed services** instead of managing their own infrastructure. Services are typically event-driven and can be configured for autoscaling with rules tied to event triggers. Serverless is cost-effective, with developers paying only for the compute cycles and resources they use.
  * _With microservices_ - developers **compose their applications from independent components**. Each component can be deployed in its own container, and scaled at that granularity. This simplifies component reuse (across apps) and maintainability (over time) - with developers evolving functionality at microservice (vs. app) levels.
@@ -91,7 +91,7 @@ Azure Container Apps is the managed service that helps you run containerized app
  * **run microservices** - autoscaled by any KEDA-supported scaler.
 
 Want a quick intro to the topic? Start by watching the short video below - then read these two posts from our _ZeroToHero_ series:
- * [Go cloud native with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) - also see [the illustrated guide](/assets/images/Go-Cloud-Native-f6ac3225c3d9741a1fbff81030f7f830.png)
+ * [Go Cloud-Native with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) - also see [the illustrated guide](/assets/images/Go-Cloud-Native-f6ac3225c3d9741a1fbff81030f7f830.png)
  * [Journey to the cloud with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609?WT.mc_id=javascript-74010-cxa) - for developer tooling options.
 
 <iframe width="600" height="400" src="https://www.youtube.com/embed/b3dopSTnSRg" title="How to Build and Deliver Apps Fast and Scalable with Azure Container Apps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -253,7 +253,7 @@ We covered a lot today - we'll stop with a quick overview of core concepts behin
  * [Containers](https://docs.microsoft.com/azure/container-apps/containers) refer to the _container image_ deployed in the Azure Container App. They can use any runtime, programming language, or development stack - and be discovered using any public or private container registry. A container app can support multiple containers.
  * [Revisions](https://docs.microsoft.com/azure/container-apps/revisions) are _immutable_ snapshots of an Azure Container App. The first revision is created when the ACA is first deployed, with new revisions created when redeployment occurs with [revision-scope changes](https://docs.microsoft.com/azure/container-apps/revisions#revision-scope-changes). Multiple revisions can run concurrently in an environment.
  * [Application Lifecycle Management](https://docs.microsoft.com/azure/container-apps/application-lifecycle-management) revolves around these revisions, with a container app having three phases: _deployment_, _update_ and _deactivation_.
- * [Microservices](https://docs.microsoft.com/azure/container-apps/microservices) are independent units of functionality in cloud native architectures. _A single container app typically represents a single microservice_, and can be composed from one or more containers. Microservices can now be scaled and upgraded indepedently, giving your application more flexbility and control.
+ * [Microservices](https://docs.microsoft.com/azure/container-apps/microservices) are independent units of functionality in Cloud-Native architectures. _A single container app typically represents a single microservice_, and can be composed from one or more containers. Microservices can now be scaled and upgraded indepedently, giving your application more flexbility and control.
  * [Networking](https://docs.microsoft.com/azure/container-apps/networking) architecture consist of a virtual network (VNET) associated with the environment. Unless you provide a custom VNET at environment creation time, a default VNET is automatically created. The VNET configuration determines access (ingress, internal vs. external) and can influence auto-scaling choices (e.g., use HTTP Edge Proxy and scale based on number of HTTP requests).
  * [Observability](https://docs.microsoft.com/azure/container-apps/observability) is about monitoring the health of your application and diagnosing it to improve reliability or performance. Azure Container Apps has a number of features - from Log streaming and Container console to integration with Azure Monitor - to provide a holistic view of application status over time.
  * [Easy Auth](https://docs.microsoft.com/azure/container-apps/authentication) is possible with built-in support for authentication and authorization including support for popular identity providers like Facebook, Google, Twitter and GitHub - alongside the Microsoft Identity Platform.
@@ -271,7 +271,7 @@ In later articles this week, we'll do a deeper dive into Dapr and build our firs
 
 ## Exercise
 
-Congratulations! You made it! By now you should have a good idea of what Cloud Native development means, why Microservices and Containers are important to that vision - and how Azure Container Apps helps simplify the building and deployment of _microservices based applications_ using _serverless architectures_ on Azure.
+Congratulations! You made it! By now you should have a good idea of what Cloud-Native development means, why Microservices and Containers are important to that vision - and how Azure Container Apps helps simplify the building and deployment of _microservices based applications_ using _serverless architectures_ on Azure.
 
 Now it's your turn to reinforce learning by doing.
  * Try walking through this quickstart yourself, but [using the Azure Portal](https://docs.microsoft.com/azure/container-apps/quickstart-portal) option.

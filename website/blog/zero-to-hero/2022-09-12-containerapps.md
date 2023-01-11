@@ -8,7 +8,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [azure, functions, containerapps, serverless, concepts]
 image: ./img/banner.png
-description: "In this article, we discuss how Azure Container Apps is purpose-built to support cloud native applications." 
+description: "In this article, we discuss how Azure Container Apps is purpose-built to support Cloud-Native applications." 
 tags: [serverless-september, zero-to-hero, azure-functions, azure-container-apps, dapr]
 ---
 
@@ -16,9 +16,9 @@ tags: [serverless-september, zero-to-hero, azure-functions, azure-container-apps
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01" />
   <meta name="twitter:title" 
-    content="#ZeroToHero: Go Cloud Native With Azure Container Apps" />
+    content="#ZeroToHero: Go Cloud-Native With Azure Container Apps" />
   <meta name="twitter:description" 
-    content="#ZeroToHero: Go Cloud Native With Azure Container Apps" />
+    content="#ZeroToHero: Go Cloud-Native With Azure Container Apps" />
   <meta name="twitter:image"
     content="https://azure.github.io/Cloud-Native/img/banners/serverless-zero2hero.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -47,9 +47,9 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
 
 ---
 
-Last week, [@kendallroden](https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/296868?WT.mc_id=javascript-74010-cxa) wrote about [what it means to be cloud native](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407) and how Azure Container Apps provides a serverless containers platform for hosting all of your cloud native applications. Today, we’ll walk through a few ways to get your apps up and running on Azure Container Apps.
+Last week, [@kendallroden](https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/296868?WT.mc_id=javascript-74010-cxa) wrote about [what it means to be Cloud-Native](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407) and how Azure Container Apps provides a serverless containers platform for hosting all of your Cloud-Native applications. Today, we’ll walk through a few ways to get your apps up and running on Azure Container Apps.
 
-Depending on where you are in your cloud native app development journey, you might choose to use different tools to deploy your apps.
+Depending on where you are in your Cloud-Native app development journey, you might choose to use different tools to deploy your apps.
 
  * **“Right-click, publish”** – Deploying an app directly from an IDE or code editor is often seen as a bad practice, but it’s one of the quickest ways to test out an app in a cloud environment.
  * **Command line interface** – CLIs are useful for deploying apps from a terminal. Commands can be run manually or in a script.
@@ -173,7 +173,7 @@ stages:
 Conclusion
  
 
-In this article, we looked at a few ways to deploy your cloud native applications to Azure Container Apps and how to decide which one to use based on where you are in your app’s journey to the cloud.
+In this article, we looked at a few ways to deploy your Cloud-Native applications to Azure Container Apps and how to decide which one to use based on where you are in your app’s journey to the cloud.
 
 To learn more, visit [Azure Container Apps | Microsoft Azure](https://azure.microsoft.com/services/container-apps/?WT.mc_id=javascript-74010-cxa) today!
 

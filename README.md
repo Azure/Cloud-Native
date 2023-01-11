@@ -10,7 +10,7 @@ Join us for a month-long celebration of serverless computing - from core concept
 
 | ![Welcome to Serverless September](./website/static/img/banners/post-kickoff.png)|
 |:---:|
-|_Bookmark this page, then join us September 1, 2022 as we kickstart multiple learning initiatives to jumpstart your Cloud Native journey._| 
+|_Bookmark this page, then join us September 1, 2022 as we kickstart multiple learning initiatives to jumpstart your Cloud-Native journey._| 
 ||
 
 ## [https://aka.ms/serverless-september](http://aka.ms/azure/cloud-native/serverless-september)

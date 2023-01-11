@@ -7,7 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
-// Cloud Native Home Page Header
+// Cloud-Native Home Page Header
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -27,7 +27,7 @@ function HomepageHeader() {
   );
 }
 
-// Cloud Native Home Page
+// Cloud-Native Home Page
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (

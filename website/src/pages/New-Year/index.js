@@ -24,7 +24,7 @@ const CampaignFeatures = [
     link: "/Cloud-Native/New-Year/",
     description: (
       <>
-      Get the latest updates on Cloud Native technologies and related Azure services and tools - directly from product teams!
+      Get the latest updates on Cloud-Native technologies and related Azure services and tools - directly from product teams!
       </>
     ),
   },
@@ -98,10 +98,10 @@ function CampaignHeader() {
       <div className="container">
 
         <h1 className="hero__title">
-          It's Cloud Native New Year! 🥳
+          It's Cloud-Native New Year! 🥳
         </h1>
         <p>
-          Join us for a month-long celebration of Cloud Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then  <b>check back on January 23, 2023</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native developer journey.
+          Join us for a month-long celebration of Cloud-Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then  <b>check back on January 23, 2023</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native developer journey.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -134,7 +134,7 @@ export default function() {
   return (
     <Layout
       title={`Welcome to #CloudNativeNewYear`}
-      description="Join us for a month-long celebration of Cloud Native technologies go from core concept to code with #30DaysOfServerless />"> 
+      description="Join us for a month-long celebration of Cloud-Native technologies go from core concept to code with #30DaysOfServerless />"> 
       <CampaignHeader/>
       <main>
         <FeaturesSection/>

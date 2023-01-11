@@ -9,11 +9,11 @@ const config = {
 
   // --- CONFIG-30DAYS #1: Add Custom Fields (accessible globally)
   customFields: {
-    description: 'Cloud Native technologies and techniques enable loosely coupled systems that are resilient, manageable, and observable. Use containers, microservices, APIs and more to build and run scalable applications in modern hybrid cloud environments.',
+    description: 'Cloud-Native technologies and techniques enable loosely coupled systems that are resilient, manageable, and observable. Use containers, microservices, APIs and more to build and run scalable applications in modern hybrid cloud environments.',
   },
 
   // --- CONFIG-30DAYS #2: Config Landing Pages metadata
-  title: 'Building Cloud Native Apps',
+  title: 'Building Cloud-Native Apps',
   tagline: 'From Code - To Containers - To Cloud!',
 
 
@@ -52,7 +52,7 @@ const config = {
         // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog
         blog: {
           blogTitle: 'Learn in #30DaysOfServerless',
-          blogDescription: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud Native Applications at scale!',
+          blogDescription: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud-Native Applications at scale!',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'Recent Articles',
           tagsBasePath: 'tags',
@@ -85,7 +85,7 @@ const config = {
       },
       
       navbar: {
-        title: 'Cloud Native',
+        title: 'Cloud-Native',
         logo: {
           alt: 'Azure Cloud Logo',
           src: 'img/logo.png',
@@ -201,7 +201,7 @@ const config = {
         */
         links: [
           {
-            label: `Cloud Native`,
+            label: `Cloud-Native`,
             to: 'https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
@@ -260,7 +260,7 @@ const config = {
         },
         { 
           name: 'twitter:description', 
-          content: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud Native Applications at scale!'
+          content: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud- Native Applications at scale!'
         },
         { 
           name: 'twitter:image', 
@@ -284,7 +284,7 @@ const config = {
       announcementBar: {
         id: 'Serverless September kicks off Sep 1, 2022!',
         content:
-          '<b> Explore <a href="https://aka.ms/CNNY/collection"><b>Cloud Native Resources!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
+          '<b> Explore <a href="https://aka.ms/CNNY/collection"><b>Cloud-Native Resources!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
         backgroundColor: '#ffb900',
         textColor: '#000000',
         isCloseable: false,

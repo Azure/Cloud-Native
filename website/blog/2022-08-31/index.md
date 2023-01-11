@@ -19,7 +19,7 @@ This year for Serverless September we want to hear all the amazing ways our stud
 If you don't already have an [Azure for Students](https://docs.microsoft.com/azure/education-hub/azure-dev-tools-teaching/azure-students-program?WT.mc_id=academic-75239-sagibbon) account you can easily get your **FREE** account created at [Azure for Students Sign up](https://azure.microsoft.com/free/students/?WT.mc_id=academic-75239-sagibbon).
 
 If you are new to serverless, here are a couple links to get you started:
- * [Build Cloud Native Apps on Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=academic-75239-sagibbon)
+ * [Build Cloud-Native Apps on Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=academic-75239-sagibbon)
  * [Go Serverless On Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=academic-75239-sagibbon)
 
 

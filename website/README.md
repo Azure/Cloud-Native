@@ -1,16 +1,16 @@
-# Building Cloud Native Apps
+# Building Cloud-Native Apps
 
 
 [![Deploy to GitHub Pages](https://github.com/Azure/Cloud-Native/actions/workflows/deploy-ghpages.yml/badge.svg)](https://github.com/Azure/Cloud-Native/actions/workflows/deploy-ghpages.yml)
 
 ---
 
-Welcome to the Cloud Native on Azure website, a central location for hosting content, news and resources related to various **Serverless on Azure** initiatives across the Azure organization, starting with [**Serverless September**](https://aka.ms/serverless-september) in 2022.
+Welcome to the Cloud-Native on Azure website, a central location for hosting content, news and resources related to various **Serverless on Azure** initiatives across the Azure organization, starting with [**Serverless September**](https://aka.ms/serverless-september) in 2022.
 
 
 
-## About Cloud Native
-[Cloud Native applications](https://azure.microsoft.com/solutions/cloud-native-apps/) are built from the ground up—optimized for cloud scale and performance. They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. 
+## About Cloud-Native
+[Cloud-Native applications](https://azure.microsoft.com/solutions/cloud-native-apps/) are built from the ground up—optimized for cloud scale and performance. They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. 
 
 Learn more about how to [build cloud-native applications in Azure](https://azure.microsoft.com/solutions/cloud-native-apps/).
 
@@ -25,7 +25,7 @@ Use fully managed, end-to-end Azure serverless solutions to boost developer prod
 
 Serverless September is a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices. 
 
-Bookmark this page, then join us September 1, 2022 as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud Native journey.
+Bookmark this page, then join us September 1, 2022 as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native journey.
 
 ---
 

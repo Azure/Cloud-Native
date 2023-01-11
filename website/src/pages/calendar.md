@@ -21,7 +21,7 @@ _Check this section for links to upcoming activities for #Serverless September. 
 | Sep 01 | 🎯 **Cloud Skills Challenge**: [Register Now](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)| Microsoft Learn |
 | Sep 02 | ✍🏽 [Week 1:  Functions-As-A-Service](/serverless-september/30DaysOfServerless#azure-functions) |  Website   |
 | Sep 05 |  🚀 [A walkthrough of Durable Entities](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-walkthrough-of-durable-entities/ba-p/3616832?WT.mc_id=javascript-74010-ninarasi) | Apps On Azure |
-| Sep 05 | 🚀 [Go Cloud Native With Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) | Apps On Azure |
+| Sep 05 | 🚀 [Go Cloud-Native With Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) | Apps On Azure |
 | Sep 07 | 🏆 **Hacks:** [How to get into Tech And Serverless ](https://www.youtube.com/watch?v=Srb9mQXLcXc?WT.mc_id=javascript-74010-ninarasi)| YouTube |
 | Sep 09 | ✍🏽 [Week 2: Containers & Microservices](/serverless-september/30DaysOfServerless#azure-container-apps)  | Website |
 | Sep 12 | 🚀 [Journey to the cloud with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609) | Apps On Azure |

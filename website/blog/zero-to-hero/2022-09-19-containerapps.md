@@ -48,7 +48,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
 
 ---
 
-In past weeks, [@kendallroden](https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/296868) wrote about [what it means to be cloud native](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407) and [@Anthony Chu](https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/236816) the various ways to [get your apps running on Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609). Today, we will talk about the **observability tools** you can use to observe, debug, and diagnose your Azure Container Apps.
+In past weeks, [@kendallroden](https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/296868) wrote about [what it means to be Cloud-Native](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407) and [@Anthony Chu](https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/236816) the various ways to [get your apps running on Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609). Today, we will talk about the **observability tools** you can use to observe, debug, and diagnose your Azure Container Apps.
 
 **Azure Container Apps** provides several observability features to help you debug and diagnose your apps. There are both Azure portal and CLI options you can use to help understand the health of your apps and help identify when issues arise.
 

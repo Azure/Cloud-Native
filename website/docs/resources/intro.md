@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Cloud Native Apps
+# Cloud-Native Apps
 
-> **Cloud Native Apps are built from the ground up and optimized for cloud scale and performance.**
+> **Cloud-Native Apps are built from the ground up and optimized for cloud scale and performance.**
 
 They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. Learn how to [build cloud-native apps on Azure!](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)
 
