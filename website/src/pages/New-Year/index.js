@@ -36,7 +36,7 @@ const CampaignFeatures = [
     title: 'Cloud Skills',
     Svg: require('@site/static/img/svg/campaign_skills.svg').default,
     fillColor: "#ffb900",
-    link: "/Cloud-Native/New-Year/",
+    link: "https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356&WT.mc_id=javascript-84290-ninarasi",
     description: (
       <>
       Skill up on key cloud technologies with these free, self-guided learning courses - and make the leaderboard!
