@@ -4,21 +4,14 @@ Copyright (c) Microsoft Corporation.
 Licensed under the Creative Commons Attribution 4.0 International (CC-BY-4.0) license.
 -->
 
-# It's #ServerlessSeptember
+# It's #CloudNativeNewYear
 
-Join us for a month-long celebration of serverless computing - from core concepts and developer tools, to usage scenarios and best practices.
+Join us for a month-long celebration of cloud-native technologies - from core concepts and developer tools, to usage scenarios and best practices.
 
-| ![Welcome to Serverless September](./website/static/img/banners/post-kickoff.png)|
+| ![Welcome to Cloud-Native New Year!](./website/static/img/cnny23/with-slogan.png)|
 |:---:|
-|_Bookmark this page, then join us September 1, 2022 as we kickstart multiple learning initiatives to jumpstart your Cloud-Native journey._| 
+|_Bookmark this page, then join us Jan 23, 2023 as we kickstart multiple learning initiatives to jumpstart your Cloud-Native journey._| 
 ||
 
-## [https://aka.ms/serverless-september](http://aka.ms/azure/cloud-native/serverless-september)
+## [https://aka.ms/CloudNativeNewYear](https://aka.ms/CloudNativeNewYear)
 
-<!--
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/Serverless-September_Dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/Serverless-September_Light.png">
-  <img alt="Serverless September" src="./assets/Serverless-September_Light.png">
-</picture>
--->

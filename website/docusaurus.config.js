@@ -51,8 +51,8 @@ const config = {
         // Configure: Blog (improve SEO)
         // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog
         blog: {
-          blogTitle: 'Learn in #30DaysOfServerless',
-          blogDescription: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud-Native Applications at scale!',
+          blogTitle: 'Learn in #30DaysOfCloudNative',
+          blogDescription: 'Explore Cloud-Native Technologies, Architectures, and Developer Tools - to build your Cloud-Native Applications at scale!',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'Recent Articles',
           tagsBasePath: 'tags',
@@ -95,71 +95,6 @@ const config = {
             to: '/New-Year/', 
             label: '🥳 #CloudNativeNewYear', position: 'left'
           },
-          /*
-          {
-            to: '/calendar/', 
-            label: 'Events', position: 'left'
-          },
-          {
-            to: 'https://aka.ms/serverless-september/videos', 
-            label: 'Videos', position: 'left'
-          },
-          {
-            to: '/blog', 
-            label: 'Blog', position: 'left'
-          },
-          {
-            label: 'Discussions',
-            to: 'https://github.com/Azure/Cloud-Native/discussions',
-             position: 'left'
-          },
-          */
-
-          /*
-          {
-            type: 'dropdown',
-            label: 'Sitemap',
-            position: 'right',
-            items: [
-              {
-                label: '1. Serverless Hacks',
-                href: '/serverless-september/ServerlessHacks',
-              },
-              {
-                label: '2. Cloud Skills Challenge',
-                href: '/serverless-september/CloudSkills',
-              },
-              {
-                label: '3. Zero To Hero',
-                href: '/serverless-september/ZeroToHero',
-              },
-              {
-                label: '4. Ask The Expert',
-                href: '/serverless-september/AskTheExpert',
-              },
-              {
-                label: '5. Community Buzz',
-                href: '/serverless-september/CommunityBuzz',
-              },
-              {
-                label: '6. #30DaysOfServerless',
-                href: '/serverless-september/30DaysOfServerless',
-              },
-              {
-                label: '7. Blog',
-                href: '/blog',
-              },
-              {
-                label: '8. Videos',
-                href: '/docs/videos/intro',
-              },
-              {
-                label: '9. Resources',
-                href: '/docs/resources/intro',
-              },
-            ],
-          },
-          */
           {
             type: 'dropdown',
             label: '🍂 #ServerlessSeptember',
@@ -199,8 +134,8 @@ const config = {
             to: 'https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi'
           },
           {
-            label: '#30DaysOf',
-            to: 'https://aka.ms/30DaysOf',
+            label: 'Collection',
+            to: 'https://aka.ms/CNNY/collection',
           },
           {
             label: 'Java',
@@ -242,19 +177,19 @@ const config = {
       metadata: [
         { 
           name: 'twitter:url', 
-          content: 'https://aka.ms/serverless-september'
+          content: 'https://aka.ms/CloudNativeNewYear'
         },
         { 
           name: 'twitter:title', 
-          content: '#ServerlessSeptember is here!'
+          content: '#CloudNativeNewYear is here!'
         },
         { 
           name: 'twitter:description', 
-          content: 'Explore Serverless Technologies, Microservices Architectures, and Developer Tools - to build your Cloud- Native Applications at scale!'
+          content: 'Explore Cloud-Native Technologies, Microservices Architectures, and Developer Tools - to build your Cloud- Native Applications at scale!'
         },
         { 
           name: 'twitter:image', 
-          content: 'https://azure.github.io/Cloud-Native/assets/images/post-kickoff-4a04995b44f0cc4a784fb4ab5e29cf7c.png'
+          content: 'https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png'
         },
         { 
           name: 'twitter:card', 
@@ -269,12 +204,11 @@ const config = {
           content: '@AzureAdvocates'
         },
       ],
-
       /* Banner Announcements */
       announcementBar: {
         id: '2023 Cloud Native New Year!',
         content:
-          '<b> Explore <a href="https://aka.ms/CNNY/collection"><b>Cloud-Native Resources!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
+          '<b> Take the <a href="https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356&WT.mc_id=javascript-84290-ninarasi"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
         backgroundColor: '#0D032C',
         textColor: '#ffffff',
         isCloseable: false,
