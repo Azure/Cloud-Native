@@ -42,9 +42,6 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-<!-- FIXME: banner image -->
-![](../static/img/banners/empty.png)
-
 
 <!-- ************************************* -->
 <!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
