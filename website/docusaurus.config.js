@@ -51,10 +51,10 @@ const config = {
         // Configure: Blog (improve SEO)
         // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog
         blog: {
-          blogTitle: 'Learn in #30DaysOfCloudNative',
-          blogDescription: 'Explore Cloud-Native Technologies, Architectures, and Developer Tools - to build your Cloud-Native Applications at scale!',
+          blogTitle: 'Learn in #30DaysOfServerless',
+          blogDescription: 'Explore Cloud-Native Technologies, Architectures, and Developer Tools - to build your Serverless Applications at scale!',
           blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'Recent Articles',
+          blogSidebarTitle: '#30DaysOfServerless',
           tagsBasePath: 'tags',
           archiveBasePath: 'archive',
           postsPerPage: 1,
@@ -251,6 +251,14 @@ const config = {
          * Path to data on filesystem relative to site dir.
          */
         path: './blog-cnny',
+        blogTitle: 'Learn in #30DaysOfCloudNative',blogDescription: 'Explore Cloud-Native Technologies, Architectures, and Developer Tools - to build your Serverless Applications at scale!',
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: '#30DaysOfCloudNative',
+        tagsBasePath: 'tags',
+        archiveBasePath: 'archive',
+        postsPerPage: 1,
+        showReadingTime: true,
+        sortPosts: 'descending'
       },
     ],
     [
