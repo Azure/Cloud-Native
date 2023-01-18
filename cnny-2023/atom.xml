@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://azure.github.io/Cloud-Native/cnny-2023</id>
+    <title>Building Cloud-Native Apps Blog</title>
+    <updated>2023-01-18T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://azure.github.io/Cloud-Native/cnny-2023"/>
+    <subtitle>Building Cloud-Native Apps Blog</subtitle>
+    <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Announcing CNNY 2023]]></title>
+        <id>cnny23-announce</id>
+        <link href="https://azure.github.io/Cloud-Native/cnny-2023/cnny23-announce"/>
+        <updated>2023-01-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Explore serverless container options for development - including managed options like AKS and ACA]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to #CloudNativeNewYear!</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="happy-new-year-2023">Happy New Year 2023!<a class="hash-link" href="#happy-new-year-2023" title="Direct link to heading">​</a></h2><p>New Year...New Beginnings... New Learnings! We know how much you all enjoyed learning about different technologies in the Serverless Space with <a href="https://azure.github.io/Cloud-Native/serverless-september" target="_blank" rel="noopener noreferrer">Serverless September</a> that ran for 30 days last fall. The engagement was electric! We had more than 60k engaged! With the same engagement in mind, we are starting 30 days of learning around Cloud-native Technologies. </p><p><img loading="lazy" src="/Cloud-Native/assets/images/hero-banner-991129dffd470b38678db8972274c09a.png" width="3840" height="654" class="img_ev3q"></p><p>Introducing, <strong>Cloud Native New Year</strong> ( #CloudNativeNewYear), a 30-day event of learning, skilling up around technologies within the Cloud-native space. For each day, we are going to focus on topics that incrementally increase in complexity to take you from a zero to Hero journey. For 30 days, we'll be diving deep into the world of cloud native technologies, with a focus on Kubernetes. Whether you're a beginner or an experienced professional, our expert instructors will guide you through the process of understanding and utilizing these cutting-edge tools.  </p><p>With the increasing demand for cloud-based solutions, it's more important than ever to understand the ins and outs of cloud native technologies. Kubernetes, in particular, is quickly becoming the industry standard for container orchestration, and mastering it can give you a major advantage in the job market. </p><p>During our event, you'll learn how to set up and manage a Kubernetes cluster, how to deploy and scale applications on it, and how to troubleshoot and maintain your cluster. You'll also learn how to build Continuous Integration (CI) and Continuous Delivery (CD) Pipelines to manage applications on Kubernetes. </p><p>We have three different avenues for you engage in Cloud-native New year </p><ol><li><p>30 days of <a href="https://azure.github.io/Cloud-Native/New-Year/" target="_blank" rel="noopener noreferrer">CLoud-native</a> content </p></li><li><p>Live <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finfo.microsoft.com%2Fww-landing-a-quickstart-guide-to-kubernetes-concepts.html%3Flcid%3Den-us&amp;data=05%7C01%7Cboskeysavla%40microsoft.com%7C428b9551fcb44f514bbe08daf28ea08f%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638088991711695444%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=NvzMeEFj2Rps7ZrAyjlrfW7BNQeCe80huqW02SXN8Zg%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Webinar</a> on Kubernetes Fundamentals </p></li><li><p><a href="https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356" target="_blank" rel="noopener noreferrer">Cloud Skills Challenge</a> </p></li><li><p>Ask the Experts! </p></li></ol><p>But it's not just about the technology - we'll also be discussing the business and organizational implications of cloud native adoption. You'll learn about the benefits and challenges of moving to a cloud native architecture, and how to communicate and sell the value of cloud native to your team and stakeholders. </p><p>So, here's a summary of how you can participate! </p><ul><li><p>Bookmark the <a href="https://azure.github.io/Cloud-Native/New-Year/" target="_blank" rel="noopener noreferrer">Cloud Native New Year site</a>, and if you love the content give us a star on the <a href="https://github.com/azure/cloud-native" target="_blank" rel="noopener noreferrer">Github</a> pages! </p></li><li><p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finfo.microsoft.com%2Fww-landing-a-quickstart-guide-to-kubernetes-concepts.html%3Flcid%3Den-us&amp;data=05%7C01%7Cboskeysavla%40microsoft.com%7C428b9551fcb44f514bbe08daf28ea08f%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638088991711695444%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=NvzMeEFj2Rps7ZrAyjlrfW7BNQeCe80huqW02SXN8Zg%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Sign-up</a> for the Kubernetes Fundamentals Webinar </p></li><li><p><a href="https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356" target="_blank" rel="noopener noreferrer">Enroll</a> in the Cloud Skills Challenge! </p></li></ul><p>Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. Sign up for "Cloud Native New Year" today and start the new year off on the right foot!</p>]]></content>
+        <author>
+            <name>Boskey Savla</name>
+            <uri>https://twitter.com/boskey</uri>
+        </author>
+        <author>
+            <name>Cory Skimming</name>
+            <uri>https://twitter.com/cskimming</uri>
+        </author>
+        <author>
+            <name>Devanshi Joshi</name>
+            <uri>https://github.com/devanshidiaries</uri>
+        </author>
+        <category label="cloud-native" term="cloud-native"/>
+        <category label="30daysofcloudnative" term="30daysofcloudnative"/>
+        <category label="zero-to-hero" term="zero-to-hero"/>
+        <category label="ask-the-expert" term="ask-the-expert"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+    </entry>
+</feed>

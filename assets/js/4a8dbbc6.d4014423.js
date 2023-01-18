@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[122],{38170:e=>{e.exports=JSON.parse('{"permalink":"/Cloud-Native/cnny-2023/tags/azure-kubernetes-service","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

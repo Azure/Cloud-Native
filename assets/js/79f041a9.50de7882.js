@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[262],{10830:e=>{e.exports=JSON.parse('{"label":"azure-kubernetes-service","permalink":"/Cloud-Native/blog/tags/azure-kubernetes-service","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);
