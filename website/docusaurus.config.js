@@ -96,6 +96,10 @@ const config = {
             label: '🥳 #CloudNativeNewYear', position: 'left'
           },
           {
+            to: '/New-Year/calendar', 
+            label: '🗓 Calendar', position: 'left'
+          },
+          {
             type: 'dropdown',
             label: '🍂 #ServerlessSeptember',
             position: 'right',
