@@ -236,6 +236,24 @@ const config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'blog-cnny',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'cnny-2023',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './blog-cnny',
+      },
+    ],
+    [
       'docusaurus-plugin-clarity',
       {
       }

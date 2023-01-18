@@ -14,7 +14,7 @@ const CampaignFeatures = [
     title: '#30DaysOfCloudNative',
     Svg: require('@site/static/img/svg/campaign-30days.svg').default,
     fillColor: "#f25022",
-    link: "/Cloud-Native/blog",
+    link: "/Cloud-Native/cnny-2023",
     description: (
       <>
       Join us on a #30Day journey into Cloud-Native fundamentals.

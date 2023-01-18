@@ -42,7 +42,10 @@ This week we'll focus on advanced topics and best practices for Cloud-Native pra
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-![](./../../../static/img/cnny23/github-banner.png)
+![](./../../static/img/cnny23/hero-banner.png)
+
+---
+
 
 ## Section 1
 
