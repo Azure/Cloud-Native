@@ -14,7 +14,7 @@ const CampaignFeatures = [
     title: '#30DaysOfCloudNative',
     Svg: require('@site/static/img/svg/campaign-30days.svg').default,
     fillColor: "#f25022",
-    link: "/Cloud-Native/New-Year/",
+    link: "/Cloud-Native/blog",
     description: (
       <>
       Join us on a #30Day journey into Cloud-Native fundamentals.
@@ -25,7 +25,7 @@ const CampaignFeatures = [
     title: 'Ask The Experts',
     Svg: require('@site/static/img/svg/campaign_ama.svg').default,
     fillColor: "#7fba00",
-    link: "/Cloud-Native/New-Year/",
+    link: "/Cloud-Native/New-Year/ate",
     description: (
       <>
       Join us for online conversations with the product teams - submit questions ahead of time or ask them live!
@@ -36,7 +36,7 @@ const CampaignFeatures = [
     title: 'Cloud Skills',
     Svg: require('@site/static/img/svg/campaign_skills.svg').default,
     fillColor: "#ffb900",
-    link: "https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356&WT.mc_id=javascript-84290-ninarasi",
+    link: "https://aka.ms/cnny/challenge",
     description: (
       <>
       Skill up on key cloud technologies with these free, self-guided learning courses - and make the leaderboard!
