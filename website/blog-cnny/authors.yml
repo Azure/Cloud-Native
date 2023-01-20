@@ -27,3 +27,17 @@ paul:
   title: Cloud-Native Advocate @Microsoft
   url: https://github.com/pauldotyu
   image_url: https://github.com/pauldotyu.png
+
+
+josh:
+  name: Josh Duffney
+  title: Cloud-Native Advocate @Microsoft
+  url: https://github.com/duffney
+  image_url: https://github.com/duffney.png
+
+steven:
+  name: Steven Murawski
+  title: Cloud-Native Advocate @Microsoft
+  url: https://github.com/smurawski
+  image_url: https://github.com/smurawski.png
+

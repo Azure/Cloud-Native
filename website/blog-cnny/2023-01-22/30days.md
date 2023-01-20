@@ -1,14 +1,14 @@
 ---
-slug: serverless-containers
-title: Serverless Containers
-authors: [nitya]
+slug: cnny-kickoff
+title: It's 30DaysOfCloudNative!
+authors: [boskey, cory, devanshi, steven, josh, paul, nitya]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [serverless, containers, decision-tree, aks, kubernetes, container-apps]
 image: https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png
-description: "Explore serverless container options for development - including managed options like AKS and ACA" 
+description: "Let's  kick of Cloud Native New Year with #30DaysOfCloudNative" 
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 ---
 
@@ -29,9 +29,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     href="https://azure.github.io/Cloud-Native/blog/serverless-containers" />
 </head>
 
-Welcome to `Day 1, Week 4` of #CloudNativeNewYear!
-
-This week we'll focus on advanced topics and best practices for Cloud-Native practitioners, kicking off with this post on _Serverless Container Options_ with Azure. We'll look at technologies, tools and best practices that range from managed services like Azure Kubernetes Service, to options allowing finer granularity of control and oversight.
+Welcome to the `Kickoff Post` for #30DaysOfCloudNative - one of the core initiatives within #CloudNativeNewYear! Over the next four weeks, join us as we take you from fundamentals to functional usage of Cloud-native technologies, one blog post at a time! Read on to learn a little bit about this initiative and what you can expect to learn from this journey!
 
 
 ## What We'll Cover
