@@ -16,10 +16,10 @@
 |:---|:---|:---|
 | Jan 23 | 🎯 Cloud Skills Challenge Starts | [Register Now](https://aka.ms/cnny/challenge)|
 | Jan 23 | ✍🏽 #30DaysOfCloudNative Kickoff | [Website](https://aka.ms/cnny) |
-| Jan 24 | ⚛  [#TechExpresso](https://developer.microsoft.com/reactor/series/S-1058/):  Container Offerings in Azure | [Register Now](https://developer.microsoft.com/reactor/events/18134/)|
+| Jan 24 | ⚛  [#TechEspresso](https://developer.microsoft.com/reactor/series/S-1058/):  Container Offerings in Azure | [Register Now](https://developer.microsoft.com/reactor/events/18134/)|
 | Jan 26 | 🎙 Webinar: Quickstart Guide to Kubernetes | [Register Now](https://info.microsoft.com/ww-landing-a-quickstart-guide-to-kubernetes-concepts.html) |
-| Feb 03 | ⚛  [#AzureHappyHours](https://www.youtube.com/playlist?list=PLmsFUfdnGr3zCvRrMxOetO8fr_bo_hOjA):  How DAPR Bindings simplify integration with 3rd party services | [Register Now](https://developer.microsoft.com/reactor/events/18305/)|
+| Feb 03 | ⚛  [#AzureHappyHours](https://www.youtube.com/playlist?list=PLmsFUfdnGr3zCvRrMxOetO8fr_bo_hOjA):  How DAPR Bindings simplify 3rd party service integrations | [Register Now](https://developer.microsoft.com/reactor/events/18305/)|
 | Feb 10 | ⚛ [SamosaChai.NET](https://www.youtube.com/playlist?list=PLmsFUfdnGr3wtJ6wDHQ4RGhXdw22bY6uJ)  Microservices with DAPR+.NET | [Register Now](https://developer.microsoft.com/reactor/events/18304/) |
-| Feb 14 | ⚛  [#TechExpresso](https://developer.microsoft.com/reactor/series/S-1058/):  Azure Kubernetes Service for Startups | [Register Now](https://developer.microsoft.com/reactor/events/18134/)|
+| Feb 14 | ⚛  [#TechEspresso](https://developer.microsoft.com/reactor/series/S-1058/):  Azure Kubernetes Service for Startups | [Register Now](https://developer.microsoft.com/reactor/events/18134/)|
 | Feb 17 | ⚛  [#AzureHappyHours](https://www.youtube.com/playlist?list=PLmsFUfdnGr3zCvRrMxOetO8fr_bo_hOjA): DAPR Config Building Block for Microservices Setup | #SaveTheDate |
 | Feb 23 | 🎯 Cloud Skills Challenge Ends| [Last Day!!](https://aka.ms/cnny/challenge) |
