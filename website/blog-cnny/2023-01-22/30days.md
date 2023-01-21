@@ -1,7 +1,7 @@
 ---
 slug: cnny-kickoff
-title: It's 30DaysOfCloudNative!
-authors: [cory, devanshi, steven, sonia, josh, paul, jorge, nitya]
+title: Kicking Off 30DaysOfCloudNative!
+authors: [cory, devanshi, steven, nitya]
 draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
@@ -41,7 +41,7 @@ Welcome to the `Kick-off Post` for #30DaysOfCloudNative - one of the core initia
 
 ---
 
-![Cloud-native New Year](../../static/img/banners/post-kickoff.png)
+![Cloud-native New Year](../../static/img/cnny23/cnny-event-card.png)
 
 
 Welcome to `Day 01` of [ 🥳 #CloudNativeNewYear ](https://aka.ms/CNNY)! Today, we kick off a full month of content and activities to skill you up on all things Cloud-native on Azure with content, events, and community interactions! Read on to learn about what we have planned!

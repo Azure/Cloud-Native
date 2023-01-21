@@ -1,7 +1,7 @@
 ---
 slug: cnny23-announce
 title: Announcing CNNY 2023
-authors: [boskey, cory, devanshi]
+authors: [cory, devanshi]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
