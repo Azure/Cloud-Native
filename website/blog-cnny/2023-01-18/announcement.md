@@ -2,7 +2,7 @@
 slug: cnny23-announce
 title: Announcing CNNY 2023
 authors: [boskey, cory, devanshi]
-draft: false
+draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -47,9 +47,9 @@ We have three different avenues for you engage in Cloud-native New year
 
 1. 30 days of [CLoud-native](https://azure.github.io/Cloud-Native/New-Year/) content 
 
-2. Live [Webinar](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finfo.microsoft.com%2Fww-landing-a-quickstart-guide-to-kubernetes-concepts.html%3Flcid%3Den-us&data=05%7C01%7Cboskeysavla%40microsoft.com%7C428b9551fcb44f514bbe08daf28ea08f%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638088991711695444%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=NvzMeEFj2Rps7ZrAyjlrfW7BNQeCe80huqW02SXN8Zg%3D&reserved=0) on Kubernetes Fundamentals 
+2. Live [Webinar](https://info.microsoft.com/ww-landing-a-quickstart-guide-to-kubernetes-concepts.html) on Kubernetes Fundamentals 
 
-3. [Cloud Skills Challenge](https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) 
+3. [Cloud Skills Challenge](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) 
 
 4. Ask the Experts! 
 
@@ -59,9 +59,9 @@ So, here's a summary of how you can participate!
 
 - Bookmark the [Cloud Native New Year site](https://azure.github.io/Cloud-Native/New-Year/), and if you love the content give us a star on the [Github](https://github.com/azure/cloud-native) pages! 
 
-- [Sign-up](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finfo.microsoft.com%2Fww-landing-a-quickstart-guide-to-kubernetes-concepts.html%3Flcid%3Den-us&data=05%7C01%7Cboskeysavla%40microsoft.com%7C428b9551fcb44f514bbe08daf28ea08f%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638088991711695444%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=NvzMeEFj2Rps7ZrAyjlrfW7BNQeCe80huqW02SXN8Zg%3D&reserved=0) for the Kubernetes Fundamentals Webinar 
+- [Sign-up](https://info.microsoft.com/ww-landing-a-quickstart-guide-to-kubernetes-concepts.html) for the Kubernetes Fundamentals Webinar 
 
-- [Enroll](https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+- [Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
 
 Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. Sign up for "Cloud Native New Year" today and start the new year off on the right foot! 
 

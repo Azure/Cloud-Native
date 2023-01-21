@@ -18,7 +18,7 @@ The live broadcast will have a moderated chat session where you can submit quest
 
 ## When are the sessions?
 
-Visit the [**Ask The Experts**](https://learn.microsoft.com/en-us/events/learn-events/Ask-the-expert/) page to see previous sessions for reference! Then check back here after _January 23, 2023_ for details on ATE sessions for #CloudNativeNew Year!
+Visit the [**Ask The Experts**](https://learn.microsoft.com/events/learn-events/Ask-the-expert/) page to see previous sessions for reference! Then check back here after _January 23, 2023_ for details on ATE sessions for #CloudNativeNew Year!
 
 | Date | Description | 
 |:---|:---|

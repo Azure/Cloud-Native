@@ -96,8 +96,12 @@ const config = {
             label: '🥳 #CloudNativeNewYear', position: 'left'
           },
           {
+            to: '/cnny-2023', 
+            label: 'Blog', position: 'left'
+          },
+          {
             to: '/New-Year/calendar', 
-            label: '🗓 Calendar', position: 'left'
+            label: 'Calendar', position: 'left'
           },
           {
             type: 'dropdown',
@@ -181,7 +185,7 @@ const config = {
       metadata: [
         { 
           name: 'twitter:url', 
-          content: 'https://aka.ms/CloudNativeNewYear'
+          content: 'https://aka.ms/CNNY'
         },
         { 
           name: 'twitter:title', 
@@ -212,7 +216,7 @@ const config = {
       announcementBar: {
         id: '2023 Cloud Native New Year!',
         content:
-          '<b> Take the <a href="https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356&WT.mc_id=javascript-84290-ninarasi"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
+          '<b> Take the <a href="https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356&WT.mc_id=javascript-84290-ninarasi"><b>Cloud Skills Challenge!</b></a> - Give us <a href="https://github.com/azure/cloud-native"><b>🌟 on GitHub</b></a> </b> ',
         backgroundColor: '#0D032C',
         textColor: '#ffffff',
         isCloseable: false,

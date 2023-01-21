@@ -1,8 +1,8 @@
 ---
 slug: cnny-kickoff
 title: It's 30DaysOfCloudNative!
-authors: [cory, devanshi, steven, josh, paul, nitya]
-draft: true
+authors: [cory, devanshi, steven, sonia, josh, paul, jorge, nitya]
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -44,7 +44,7 @@ Welcome to the `Kick-off Post` for #30DaysOfCloudNative - one of the core initia
 ![Cloud-native New Year](../../static/img/banners/post-kickoff.png)
 
 
-Welcome to `Day 01` of [🍂 #CloudNativeNewYear](https://aka.ms/CNNY)! Today, we kick off a full month of content and activities to skill you up on all things Cloud-native on Azure with content, events, and community interactions! Read on to learn about what we have planned!
+Welcome to `Day 01` of [ 🥳 #CloudNativeNewYear ](https://aka.ms/CNNY)! Today, we kick off a full month of content and activities to skill you up on all things Cloud-native on Azure with content, events, and community interactions! Read on to learn about what we have planned!
 
 ---
 
@@ -64,7 +64,7 @@ We'll go into more details about **#30DaysOfCloudNative** in this post - don't f
 
 What are 3 things you can do today, to jumpstart your learning journey?
 
- * **Register** for live Q&A sessions (free, online)
+ * **Register** for live Q&A sessions (free, online) 
     - Feb 9 - [Ask The Expert: Azure Kubernetes Service (PDT)](https://aka.ms/ATE0209/RSVP)
     - Feb 10 - [Ask the Expert: Azure Kubernetes Service (SGT)](https://aka.ms/ATE0209/APAC-RSVP)
   * **Register** for the [Cloud Skills Challenge](https://aka.ms/Challenge) - 30 days to complete it!
@@ -77,23 +77,23 @@ What are 3 things you can do today, to jumpstart your learning journey?
 
 This series focuses on the [Cloud-native On Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi) learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
  * **Week 1:** Get started with [Cloud-native Concepts](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi) 
- * **Week 2:** Build & deploy [Kubernetes Apps on cloud](https://azure.microsoft.com/en-us/solutions/kubernetes-on-azure/?WT.mc_id=javascript-74010-ninarasi).
- * **Week 3:** Migrate your applications to [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-74010-ninarasi).
+ * **Week 2:** Build & deploy [Kubernetes Apps on cloud](https://azure.microsoft.com/solutions/kubernetes-on-azure/?WT.mc_id=javascript-74010-ninarasi).
+ * **Week 3:** Migrate your applications to [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service/?WT.mc_id=javascript-74010-ninarasi).
  * **Week 4:** Go from Code to Containers to Cloud with [Cloud-native solutions](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)
 
 ![](./img/banner.png)
 
-We have a [tentative roadmap](https://azure.github.io/Cloud-Native/cnny-2023/) for the topics we hope to cover and will keep this updated as we go with links to actual articles as they get published.
+We have a tentative weekly-themed roadmap for the topics we hope to cover and will keep this updated as we go with links to actual articles as they get published.
 
 :::info Week 1: FOCUS ON CLOUD-NATIVE FUNDAMENTALS
 
-Here's a sneak peek at what we have planned for week 1. We'll start with a broad look at cloud-native fundamentals and walkthrough the core concepts of microservices, containers and Kubernetes.
+Here's a sneak peek at the week 1 schedule. We'll start with a broad review of cloud-native fundamentals and walkthrough the core concepts of microservices, containers and Kubernetes.
 
- * Jan 23: Learn Core Concepts for Cloud-native
- * Jan 24: Container 101
- * Jan 25: Adopting Microservices with Kubernetes
- * Jan 26: Kubernetes 101
- * Jan 27: Exploring your Cloud Native Options
+ * **Jan 23**: Learn Core Concepts for Cloud-native
+ * **Jan 24**: Container 101
+ * **Jan 25**: Adopting Microservices with Kubernetes
+ * **Jan 26**: Kubernetes 101
+ * **Jan 27**: Exploring your Cloud Native Options
 
 :::
 
@@ -102,7 +102,7 @@ Here's a sneak peek at what we have planned for week 1. We'll start with a broad
 
 ## Let's Get Started!
 
-Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-74010-ninarasi) for updates in your favorite feed reader! **And look out for our first Cloud-native Funcdamentals post on January 23rd!**
+Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-74010-ninarasi) for updates in your favorite feed reader! **And look out for our first Cloud-native Fundamentals post on January 23rd!**
 
 
 ---

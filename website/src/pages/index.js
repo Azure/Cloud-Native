@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/New-Year">
-            Coming Soon: #CloudNativeNewYear 🥳
+            Time for #CloudNativeNewYear 🥳
           </Link>
         </div>
       </div>

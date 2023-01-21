@@ -18,26 +18,37 @@ boskey:
 
 cory:
   name: Cory Skimming
-  title: Product Marketing Manager
+  title: Sr. Product Marketing Manager
   url: https://twitter.com/cskimming
   image_url: https://pbs.twimg.com/profile_images/1493684068227055617/iC9r8v6Z_400x400.jpg
 
 paul:
   name: Paul Yu
-  title: Cloud-Native Advocate @Microsoft
+  title: Senior Cloud Advocate 
   url: https://github.com/pauldotyu
   image_url: https://github.com/pauldotyu.png
 
 
 josh:
   name: Josh Duffney
-  title: Cloud-Native Advocate @Microsoft
+  title: Senior Cloud Advocate
   url: https://github.com/duffney
   image_url: https://github.com/duffney.png
 
 steven:
   name: Steven Murawski
-  title: Cloud-Native Advocate @Microsoft
+  title: Principal Cloud Advocate
   url: https://github.com/smurawski
   image_url: https://github.com/smurawski.png
 
+jorge:
+  name: Jorge Arteiro
+  title: Senior Cloud Advocate
+  url: https://github.com/jorgearteiro
+  image_url: https://github.com/jorgearteiro.png
+
+sonia:
+  name: Sonia Cuff
+  title: Principal Cloud Advocate 
+  url: https://github.com/scuffy
+  image_url: https://github.com/scuffy.png
