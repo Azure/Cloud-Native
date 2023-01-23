@@ -92,7 +92,7 @@ In the next section, we'll demonstrate how to enable persistent storage on AKS.
 
 ## Persistent storage on AKS
 
-With AKS, [CSI drivers](https://learn.microsoft.com/azure/aks/csi-storage-drivers?WT.mc_id=containers-84290-stmuraws) and [storage classes](https://learn.microsoft.com/azure/aks/concepts-storage?WT.mc_id=containers-84290-stmuraws#storage-classes) are pre-deployed into your cluster. This allows you to natively use [Azure Disks](https://learn.microsoft.com/azure/aks/azure-disk-csi?WT.mc_id=containers-84290-stmuraws), [Azure Files](https://learn.microsoft.com/azure/aks/azure-files-csi?WT.mc_id=containers-84290-stmuraws), and [Azure Blob Storage](https://learn.microsoft.com/azure/aks/azure-blob-csi?WT.mc_id=containers-84290-stmuraws) as persistent volumes. You can either bring your own Azure storage account and use it with AKS or have AKS provision an Azure storage account for you.
+With AKS, [CSI drivers](https://learn.microsoft.com/azure/aks/csi-storage-drivers?WT.mc_id=containers-84290-pauyu) and [storage classes](https://learn.microsoft.com/azure/aks/concepts-storage?WT.mc_id=containers-84290-pauyu#storage-classes) are pre-deployed into your cluster. This allows you to natively use [Azure Disks](https://learn.microsoft.com/azure/aks/azure-disk-csi?WT.mc_id=containers-84290-pauyu), [Azure Files](https://learn.microsoft.com/azure/aks/azure-files-csi?WT.mc_id=containers-84290-pauyu), and [Azure Blob Storage](https://learn.microsoft.com/azure/aks/azure-blob-csi?WT.mc_id=containers-84290-pauyu) as persistent volumes. You can either bring your own Azure storage account and use it with AKS or have AKS provision an Azure storage account for you.
 
 To view the Storage CSI drivers that have been enabled in your AKS cluster, run the following command.
 
@@ -215,7 +215,7 @@ EOF
 
 In the manifest above, you'll see that we are mounting a new volume called `mypvc` (the name can be whatever you want) in the pod which points to a PVC named `pvc-azuredisk`. With the volume in place, we can mount it in the container by referencing the name of the volume  `mypvc` and setting the mount path to `/var/lib/postgresql/data` (which is the [default path](https://www.postgresql.org/docs/9.1/storage-file-layout.html)).
 
-> 💡 IMPORTANT: When mounting a volume into a non-empty subdirectory, you must add [`subPath`](https://kubernetes.io/docs/concepts/storage/volumes/#using-subpath) to the volume mount and point it to a subdirectory in the volume rather than mounting at root. In our case, when Azure Disk is formatted, it leaves a `lost+found` directory as documented [here](https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/could-not-change-permissions-azure-files?WT.mc_id=containers-84290-stmuraws).
+> 💡 IMPORTANT: When mounting a volume into a non-empty subdirectory, you must add [`subPath`](https://kubernetes.io/docs/concepts/storage/volumes/#using-subpath) to the volume mount and point it to a subdirectory in the volume rather than mounting at root. In our case, when Azure Disk is formatted, it leaves a `lost+found` directory as documented [here](https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/could-not-change-permissions-azure-files?WT.mc_id=containers-84290-pauyu).
 
 Watch the pods and wait for the `STATUS` to show `Running` and the pod's `READY` status shows `1/1`.
 
@@ -246,7 +246,7 @@ If you navigate back to the website, you'll find the vote are still there 🎉
 
 ## Takeaways
 
-By design, containers are meant to be ephemeral and stateless workloads are ideal on Kubernetes. However, there will come a time when your data needs to outlive the container. To persist data in your Kubernetes workloads, you need to leverage PV, PVC, and optionally storage classes. In our demo scenario, we leveraged CSI drivers built into AKS and created a PVC using pre-installed storage classes. From there, we updated the database deployment to mount the PVC in the container and AKS did the rest of the work in provisioning the underlying Azure Disk. If the built-in storage classes does not fit your needs; for example, you need to change the `ReclaimPolicy` or change the SKU for the Azure resource, then you can [create your own custom storage class](https://learn.microsoft.com/azure/aks/azure-disk-csi#create-a-custom-storage-class?WT.mc_id=containers-84290-stmuraws) and configure it just the way you need it 😊
+By design, containers are meant to be ephemeral and stateless workloads are ideal on Kubernetes. However, there will come a time when your data needs to outlive the container. To persist data in your Kubernetes workloads, you need to leverage PV, PVC, and optionally storage classes. In our demo scenario, we leveraged CSI drivers built into AKS and created a PVC using pre-installed storage classes. From there, we updated the database deployment to mount the PVC in the container and AKS did the rest of the work in provisioning the underlying Azure Disk. If the built-in storage classes does not fit your needs; for example, you need to change the `ReclaimPolicy` or change the SKU for the Azure resource, then you can [create your own custom storage class](https://learn.microsoft.com/azure/aks/azure-disk-csi#create-a-custom-storage-class?WT.mc_id=containers-84290-pauyu) and configure it just the way you need it 😊
 
 We'll revisit this topic again next week but in the meantime, check out some of the resources listed below to learn more.
 
@@ -257,8 +257,8 @@ See you in the next post!
 * [Kubernetes: Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
 * [Kubernetes: Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 * [Container Storage Interface (CSI) for Kubernetes](https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/)
-* [Container Storage Interface (CSI) drivers on Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/csi-storage-drivers?WT.mc_id=containers-84290-stmuraws)
-* [Enable CSI driver on a new or existing AKS cluster](https://learn.microsoft.com/azure/aks/azure-blob-csi?WT.mc_id=containers-84290-stmuraws&tabs=NFS#enable-csi-driver-on-a-new-or-existing-aks-cluster)
-* [AKS: Volumes](https://learn.microsoft.com/azure/aks/concepts-storage?WT.mc_id=containers-84290-stmuraws#volumes)
-* [AKS: Storage Classes](https://learn.microsoft.com/azure/aks/concepts-storage?WT.mc_id=containers-84290-stmuraws#storage-classes)
-* [AKS: Built-in Storage Classes](https://learn.microsoft.com/azure/aks/azure-disks-dynamic-pv?WT.mc_id=containers-84290-stmuraws#built-in-storage-classes)
+* [Container Storage Interface (CSI) drivers on Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/csi-storage-drivers?WT.mc_id=containers-84290-pauyu)
+* [Enable CSI driver on a new or existing AKS cluster](https://learn.microsoft.com/azure/aks/azure-blob-csi?WT.mc_id=containers-84290-pauyu&tabs=NFS#enable-csi-driver-on-a-new-or-existing-aks-cluster)
+* [AKS: Volumes](https://learn.microsoft.com/azure/aks/concepts-storage?WT.mc_id=containers-84290-pauyu#volumes)
+* [AKS: Storage Classes](https://learn.microsoft.com/azure/aks/concepts-storage?WT.mc_id=containers-84290-pauyu#storage-classes)
+* [AKS: Built-in Storage Classes](https://learn.microsoft.com/azure/aks/azure-disks-dynamic-pv?WT.mc_id=containers-84290-pauyu#built-in-storage-classes)
