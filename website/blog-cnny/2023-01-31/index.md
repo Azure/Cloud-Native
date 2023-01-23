@@ -49,7 +49,7 @@ In yesterday's post, [@StevenMurawski](https://twitter.com/StevenMurawski) showe
 
 ## Exposing Pods via Service
 
-There are a few ways to expose your pod in Kubernetes. One way is to take an imperative approach and use the `kubectl expose` command. This is probably the quickest way to achieve your goal but it isn't the best way. A better way to expose your pod by taking a declarative approach by creating a [services](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-stmuraws#services) manifest file and deploying it using the `kubectl apply` command.
+There are a few ways to expose your pod in Kubernetes. One way is to take an imperative approach and use the `kubectl expose` command. This is probably the quickest way to achieve your goal but it isn't the best way. A better way to expose your pod by taking a declarative approach by creating a [services](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-pauyu#services) manifest file and deploying it using the `kubectl apply` command.
 
 Don't worry if you are unsure of how to make this manifest, we'll use `kubectl` to help generate it.
 
@@ -69,7 +69,7 @@ kubectl expose deployment myvote \
   --target-port=8080
 ```
 
-Notice the `--type` argument has a value of `LoadBalancer`. This service type is implemented by the `cloud-controller-manager` which is part of the Kubernetes control plane. When using a managed Kubernetes cluster such as Azure Kubernetes Service, a [public standard load balancer](https://learn.microsoft.com/azure/aks/load-balancer-standard?WT.mc_id=containers-84290-stmuraws#use-the-public-standard-load-balancer) will be able to provisioned when the service type is set to `LoadBalancer`. The load balancer will also have a public IP assigned which will make your deployment publicly available.
+Notice the `--type` argument has a value of `LoadBalancer`. This service type is implemented by the `cloud-controller-manager` which is part of the Kubernetes control plane. When using a managed Kubernetes cluster such as Azure Kubernetes Service, a [public standard load balancer](https://learn.microsoft.com/azure/aks/load-balancer-standard?WT.mc_id=containers-84290-pauyu#use-the-public-standard-load-balancer) will be able to provisioned when the service type is set to `LoadBalancer`. The load balancer will also have a public IP assigned which will make your deployment publicly available.
 
 Kubernetes supports four [service types](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types):
 
@@ -186,7 +186,7 @@ Next, we need to install an [Ingress Controller](https://kubernetes.io/docs/conc
 
 You could install this manually by following [these instructions](https://kubernetes.github.io/ingress-nginx/deploy/#azure), but if you do that you'll be responsible for maintaining and supporting the resource.
 
-I like to take advantage of free maintenance and support when I can get it, so I'll opt to use the [Web Application Routing add-on for AKS](https://learn.microsoft.com/azure/aks/web-app-routing?WT.mc_id=containers-84290-stmuraws&tabs=without-osm).
+I like to take advantage of free maintenance and support when I can get it, so I'll opt to use the [Web Application Routing add-on for AKS](https://learn.microsoft.com/azure/aks/web-app-routing?WT.mc_id=containers-84290-pauyu&tabs=without-osm).
 
 > 💡 TIP: Whenever you install an AKS add-on, it will be maintained and fully supported by Azure Support.
 
@@ -211,7 +211,7 @@ kubectl create ingress myvote \
   --dry-run=client > ingress.yaml
 ```
 
-The `--class=webapprouting.kubernetes.azure.com` option activates the AKS web application routing add-on. This AKS add-on can also integrate with other Azure services such as [Azure DNS](https://learn.microsoft.com/azure/dns/dns-overview?WT.mc_id=containers-84290-stmuraws) and [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?WT.mc_id=containers-84290-stmuraws) for TLS certificate management, so this special class makes it all work.
+The `--class=webapprouting.kubernetes.azure.com` option activates the AKS web application routing add-on. This AKS add-on can also integrate with other Azure services such as [Azure DNS](https://learn.microsoft.com/azure/dns/dns-overview?WT.mc_id=containers-84290-pauyu) and [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?WT.mc_id=containers-84290-pauyu) for TLS certificate management, so this special class makes it all work.
 
 The `--rule="/*=myvote:80"` option looks confusing but we can use `kubectl` again to help us understand how to format the value for the option.
 
@@ -277,7 +277,7 @@ Lastly, if you are unsure how to begin writing your service manifest, you can us
 
 ## Resources
 
-* [Services](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-stmuraws#services)
-* [Ingress Controllers](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-stmuraws#ingress-controllers)
+* [Services](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-pauyu#services)
+* [Ingress Controllers](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-pauyu#ingress-controllers)
 * [Hands-on Lab: Web Application Routing on AKS](https://aka.ms/aks-webapp-routing-lab)
-* [How-to Guide: Ingress Controller in AKS](https://learn.microsoft.com/azure/aks/ingress-basic??WT.mc_id=containers-84290-stmuraws&tabs=azure-cli)
+* [How-to Guide: Ingress Controller in AKS](https://learn.microsoft.com/azure/aks/ingress-basic??WT.mc_id=containers-84290-pauyu&tabs=azure-cli)
