@@ -14,11 +14,11 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/serverless-containers" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/cnny-kickoff" />
   <meta name="twitter:title" 
-    content="Serverless Container Options" />
+    content="Kicking off Cloud Native New Year 2023" />
   <meta name="twitter:description" 
-    content="Explore serverless container options for development - including managed options like AKS and ACA" />
+    content="Let's  kick-off Cloud Native New Year with #30DaysOfCloudNative" />
   <meta name="twitter:image" 
     content="https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -26,7 +26,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="@nitya" />
   <meta name="twitter:site" content="@nitya" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/serverless-containers" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/cnny-kickoff" />
 </head>
 
 Welcome to the `Kick-off Post` for #30DaysOfCloudNative - one of the core initiatives within #CloudNativeNewYear! Over the next four weeks, join us as we take you from fundamentals to functional usage of Cloud-native technologies, one blog post at a time! Read on to learn a little bit about this initiative and what you can expect to learn from this journey!
@@ -44,7 +44,7 @@ Welcome to the `Kick-off Post` for #30DaysOfCloudNative - one of the core initia
 ![Cloud-native New Year](../../static/img/cnny23/cnny-event-card.png)
 
 
-Welcome to `Day 01` of [ 🥳 #CloudNativeNewYear ](https://aka.ms/CNNY)! Today, we kick off a full month of content and activities to skill you up on all things Cloud-native on Azure with content, events, and community interactions! Read on to learn about what we have planned!
+Welcome to `Week 01` of [ 🥳 #CloudNativeNewYear ](https://aka.ms/CNNY)! Today, we kick off a full month of content and activities to skill you up on all things Cloud-native on Azure with content, events, and community interactions! Read on to learn about what we have planned!
 
 ---
 

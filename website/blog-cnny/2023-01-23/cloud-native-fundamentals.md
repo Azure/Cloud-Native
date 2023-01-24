@@ -1,6 +1,6 @@
 ---
 slug: cloud-native-fundamentals
-title: 1. Cloud-native Fundamentals 
+title: 1-1. Cloud-native Fundamentals 
 authors: [cory]
 draft: false
 hide_table_of_contents: false
@@ -13,7 +13,8 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
 ---
 
 
-Welcome to the first week of #CloudNativeNewYear!
+Welcome to `Week 1` of #CloudNativeNewYear!
+
 
 ![Cloud-native New Year](../../static/img/cnny23/cnny-event-card.png)
 
@@ -70,7 +71,7 @@ Cloud-native architectures can bring many benefits to an organization, including
 
 There are five areas that are generally cited as the core building blocks of cloud-native architecture: 
 
-1.	[Microservices](https://learn.microsoft.com/en-us/devops/deliver/what-are-microservices): Breaking down monolithic applications into smaller, independent, and loosely-coupled services that can be developed, deployed, and scaled independently.
+1.	[Microservices](https://learn.microsoft.com/devops/deliver/what-are-microservices): Breaking down monolithic applications into smaller, independent, and loosely-coupled services that can be developed, deployed, and scaled independently.
 2.	Containers: Packaging software in lightweight, portable, and self-sufficient containers that can run consistently across different environments.
 3.	Automation: Using automation tools and DevOps processes to manage and operate the cloud-native infrastructure and applications, including deployment, scaling, monitoring, and self-healing.
 4.	Service discovery: Using service discovery mechanisms, such as APIs & service meshes, to enable services to discover and communicate with each other.
@@ -94,7 +95,7 @@ Stay tuned, as we will be diving deeper into these topics in the coming weeks:
 
 * **Register** for the [Cloud Skills Challenge](https://aka.ms/Challenge) - 30 days to complete it!
 * **Resources**: [#30DaysOfCloudNative Collection](https://aka.ms/CNNY/collection)
-* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/en-us/resources/cloud-native-infrastructure-with-microsoft-azure/)
+* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/resources/cloud-native-infrastructure-with-microsoft-azure/)
 
 ---
 

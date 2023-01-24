@@ -14,7 +14,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/cnny23-announce" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/cnny23-announce" />
   <meta name="twitter:title" 
     content="Announcing CNNY 2023" />
   <meta name="twitter:description" 
@@ -26,10 +26,11 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="@nitya" />
   <meta name="twitter:site" content="@azureadvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/cnny23-announce" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023//cnny23-announce" />
 </head>
 
-Welcome to #CloudNativeNewYear!
+Welcome to `Week 1` of #CloudNativeNewYear!
+
 
 ## Happy New Year 2023! 
 
