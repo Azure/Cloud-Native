@@ -1,13 +1,13 @@
 ---
 slug: FIXME-route-here
 title: FIXME - Blog Post Title Here
-authors: [FIXME-one, FIXME-two]
+authors: [steven]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [FIXME, comma, separated, keywords, for, metatags]
-image:
+image: https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png
 description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown"
 tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
 ---
@@ -20,7 +20,7 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
   <meta name="twitter:description"
     content="FIXME: Post Description" />
   <meta name="twitter:image"
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator"
     content="@nitya" />
@@ -28,7 +28,6 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
   <link rel="canonical"
     href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
 </head>
-<!-- End METADATA -->
 
 Welcome to `Day #6` of #CloudNativeNewYear!
 
@@ -78,7 +77,7 @@ Leave your shell opened with your current location inside the application reposi
 
 ### Step 2 - Set up AKS
 
-Running the template deployment from the demo script (I'm using the PowerShell example in [cnny23-week2-day1.ps1](https://aka.ms/azure-voting-app-rust/blob/main/cnny-week2-day1.ps1), but there's a Bash variant at [cnny23-week2-day1.sh](https://aka.ms/azure-voting-app-rust/blob/main/cnny-week2-day1.sh)) stands up the environment.  The second, third, and fourth commands take some of the output from the Bicep deployment to set up for later commands, so don't close out your shell after you run these commands.
+Running the template deployment from the demo script (I'm using the PowerShell example in [cnny23-week2-day1.ps1](https://aka.ms/azure-voting-app-rust/setup-powershell), but there's a Bash variant at [cnny23-week2-day1.sh](https://aka.ms/azure-voting-app-rust/setup-bash)) stands up the environment.  The second, third, and fourth commands take some of the output from the Bicep deployment to set up for later commands, so don't close out your shell after you run these commands.
 
 ```powershell
 az deployment sub create --template-file ./deploy/main.bicep --location eastus --parameters 'resourceGroup=cnny-week2'
@@ -102,7 +101,9 @@ $BuildTag = az acr repository show-tags `
                               --query '[0]' -o tsv
 ```
 
-***NOTE:* Wondering what the `--%` is in the first command line?  That tells the PowerShell interpreter to pass the input after it as is to the command without parsing/evaluating it. Otherwise, PowerShell messes a bit with the templated `{{.Run.ID}}` bit.**
+:::tip 
+Wondering what the `--%` is in the first command line?  That tells the PowerShell interpreter to pass the input after it "as is" to the command without parsing/evaluating it. Otherwise, PowerShell messes a bit with the templated `{{.Run.ID}}` bit.
+:::
 
 ## Running Containers in Kubernetes Pods
 
@@ -176,12 +177,13 @@ Now, let's create our Pod definition for our application.  We'll use the same te
 ```powershell
 kubectl run azure-voting-app `
             --image "$AcrName.azurecr.io/cnny2023/azure-voting-app-rust:$BuildTag" `
-            --env "DATABASE_URL=postgres://postgres:mypassword@$DB_IP" `
+            --env "DATABASE_SERVER=$DB_IP" `
+            --env "DATABASE_PASSWORD=mypassword`
             --output yaml `
             --dry-run=client > manifests/pod-app.yaml
 ```
 
-That command gets us a similar YAML file to the database container - you can see [the full file here](https://aka.ms/azure-voting-app-rust/blob/week2/day1/manifests/pod-app.yaml)
+That command gets us a similar YAML file to the database container - you can see [the full file here](https://github.com/azure-samples/azure-voting-app-rust/blob/week2/day1/manifests/pod-app.yaml)
 
 Let's get our application container running.
 
@@ -212,7 +214,7 @@ Once our pod is running, we can check to make sure everything is working by lett
 kubectl port-forward pod/azure-voting-app 8080:8080
 ```
 
-![Azure voting website in a browser with three buttons, one for Dogs, one for Cats, and one for Reset.  The counter is Dogs - 0 and Cats - 0.](./../../../static/img/cnny23/azure_voting_app.png)
+![Azure voting website in a browser with three buttons, one for Dogs, one for Cats, and one for Reset.  The counter is Dogs - 0 and Cats - 0.](../../static/img/cnny23/azure_voting_app.png)
 
 When you are done voting, you can stop the port forwarding by using Control-C to break the command.
 
@@ -247,8 +249,8 @@ kubectl get pod azure-voting-db -o jsonpath='{.status.podIP}'
 The second command will report out the new IP Address for our database container.  Let's open `./manifests/pod-app.yaml` and update the container IP to our new one.
 
 ```yml
-- name: DATABASE_URL
-      value: postgres://postgres:mypassword@YOUR_NEW_IP_HERE
+- name: DATABASE_SERVER
+  value: YOUR_NEW_IP_HERE
 ```
 
 Then we can deploy the application with the information it needs to find its database.  We'll also list out our pods to see what is running.
@@ -335,7 +337,7 @@ So, let's open `./manifests/deployment-db.yaml` in our editor and add the follow
           value: "mypassword"
 ```
 
-Your file should look like this [deployment-db.yaml](https://aka.ms/azure-voting-app-rust/blob/week2/day1/manifests/deployment-db.yaml).
+Your file should look like this [deployment-db.yaml](https://github.com/azure-samples/azure-voting-app-rust/blob/week2/day1/manifests/deployment-db.yaml).
 
 Once we have our configuration file updated, we can deploy our database container image.
 
@@ -379,11 +381,11 @@ Now, we can update our application deployment configuration file with:
 
 ```yml
         env:
-        - name: DATABASE_URL
-          value: postgres://postgres:mypassword@YOUR_NEW_IP_HERE
+        - name: DATABASE_SERVER
+          value: YOUR_NEW_IP_HERE
 ```
 
-Your file should look like this [deployment-app.yaml](https://aka.ms/azure-voting-app-rust/blob/week2/day1/manifests/deployment-app.yaml).
+Your file should look like this [deployment-app.yaml](https://github.com/azure-samples/azure-voting-app-rust/blob/week2/day1/manifests/deployment-app.yaml).
 
 After we save those changes, we can deploy our application.
 
@@ -437,7 +439,7 @@ Deployments allow us to create more durable configuration for the workloads we d
 
 If you want to try these steps, head over to [the source repository](https://aka.ms/azure-voting-app-rust), fork it, clone it locally, and give it a spin!
 
-You can check your manifests against the manifests in the `week2/day1` [branch of the source repository](https://aka.ms/azure-voting-app-rust/tree/week2/day1/manifests).
+You can check your manifests against the manifests in the `week2/day1` [branch of the source repository](https://github.com/azure-samples/azure-voting-app-rust/tree/week2/day1/manifests).
 
 ## Resources
 
