@@ -21,5 +21,6 @@
 | Feb 03 | ⚛  [#AzureHappyHours](https://www.youtube.com/playlist?list=PLmsFUfdnGr3zCvRrMxOetO8fr_bo_hOjA):  How DAPR Bindings simplify 3rd party service integrations | [Register Now](https://developer.microsoft.com/reactor/events/18305/)|
 | Feb 10 | ⚛ [#SamosaChaiDotNET](https://www.youtube.com/playlist?list=PLmsFUfdnGr3wtJ6wDHQ4RGhXdw22bY6uJ)  Microservices with DAPR+.NET | [Register Now](https://developer.microsoft.com/reactor/events/18304/) |
 | Feb 14 | ⚛  [#TechEspresso](https://developer.microsoft.com/reactor/series/S-1058/):  Azure Kubernetes Service for Startups | [Register Now](https://developer.microsoft.com/reactor/events/18134/)|
-| Feb 17 | ⚛  [#AzureHappyHours](https://www.youtube.com/playlist?list=PLmsFUfdnGr3zCvRrMxOetO8fr_bo_hOjA): DAPR Config Building Block for Microservices Setup | #SaveTheDate |
+| Feb 17 | ⚛  [#AzureHappyHour](https://www.youtube.com/playlist?list=PLmsFUfdnGr3zCvRrMxOetO8fr_bo_hOjA): DAPR Config Building Block for Microservices Setup | [Register Now](https://developer.microsoft.com/en-us/reactor/events/18334/) |
 | Feb 23 | 🎯 Cloud Skills Challenge Ends| [Last Day!!](https://aka.ms/cnny/challenge) |
+| Feb 28 | ⚛  [#TechEspresso](https://developer.microsoft.com/reactor/series/S-1058/):  KEDA & DAPR extension introduction in AKS | [Register Now](https://developer.microsoft.com/en-us/reactor/events/18351/) |
