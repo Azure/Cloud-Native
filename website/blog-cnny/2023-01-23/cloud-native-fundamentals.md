@@ -1,6 +1,6 @@
 ---
 slug: cloud-native-fundamentals
-title: Cloud-native fundamentals 
+title: 1. Cloud-native Fundamentals 
 authors: [cory]
 draft: false
 hide_table_of_contents: false
@@ -20,6 +20,7 @@ Welcome to the first week of #CloudNativeNewYear!
 You will often hear the term "cloud-native" when discussing modern application development, but even a quick online search will return a huge number of articles, tweets, and web pages with a variety of definitions. So, what does cloud-native actually mean? Also, what makes an application a *cloud-native application* versus a "regular" application? 
 
 Today, we will address these questions and more as we kickstart our learning journey (and our new year!) with an introductory dive into the wonderful world of cloud-native. 
+
 ---
 
 ## What We'll Cover
@@ -43,6 +44,7 @@ While there are lots of definitions of cloud-native floating around, at it's cor
 :::
 
 ---
+
 ## 2. So, what exactly is a cloud-native application? 
  Cloud-native applications are *specifically* designed to take advantage of the scalability, resiliency, and distributed nature of modern cloud infrastructure.  But how does this differ from a "traditional" application?
 
@@ -51,6 +53,7 @@ Traditional applications are generally been built, tested, and deployed as a sin
 To contrast, in cloud-native architectures the application components are decomposed into loosely coupled services, rather than built and deployed as one block of code. This decomposition into multiple self-contained services enables teams to manage complexity and improve the speed, agility, and scale of software delivery. Many small parts enables teams to make targeted updates, deliver new features, and fix any issues without leading to broader service disruption. 
 
 ---
+
 ## 3. The benefits of cloud-native
 Cloud-native architectures can bring many benefits to an organization, including: 
 
@@ -62,6 +65,7 @@ Cloud-native architectures can bring many benefits to an organization, including
 6. **Increased agility:** easily add new features or services to your applications to meet changing business needs and market demand.
 
 ---
+
 ## 4. The pillars of cloud-native
 
 There are five areas that are generally cited as the core building blocks of cloud-native architecture: 
@@ -74,21 +78,26 @@ There are five areas that are generally cited as the core building blocks of clo
 
 These can (and should!) be used in combination to deliver cloud-native solutions that are highly scalable, flexible, and available. 
 
-:::info Stay tuned, as we will be diving deeper into some of these topics in the coming weeks, in the following posts:
+:::info WHAT'S NEXT
 
- * **Jan 24**: Containers 101
- * **Jan 25**: Adopting Microservices with Kubernetes
- * **Jan 26**: Kubernetes 101
- * **Jan 27**: Exploring your Cloud-native Options
+Stay tuned, as we will be diving deeper into these topics in the coming weeks:
 
- :::
+* **Jan 24**: Containers 101
+* **Jan 25**: Adopting Microservices with Kubernetes
+* **Jan 26**: Kubernetes 101
+* **Jan 27**: Exploring your Cloud-native Options
+:::
+
 ---
+
 ## Resources
 
-  * **Register** for the [Cloud Skills Challenge](https://aka.ms/Challenge) - 30 days to complete it!
-  * **Resources**: [#30DaysOfCloudNative Collection](https://aka.ms/CNNY/collection)
-  * **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/en-us/resources/cloud-native-infrastructure-with-microsoft-azure/)
+* **Register** for the [Cloud Skills Challenge](https://aka.ms/Challenge) - 30 days to complete it!
+* **Resources**: [#30DaysOfCloudNative Collection](https://aka.ms/CNNY/collection)
+* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/en-us/resources/cloud-native-infrastructure-with-microsoft-azure/)
 
 ---
- Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-74010-ninarasi) to the blog to get daily posts delivered directly to your favorite feed reader!
+
+Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-74010-ninarasi) to the blog to get daily posts delivered directly to your favorite feed reader!
+
 ---
