@@ -33,7 +33,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persist
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll explore the topic of #FIXME.
+The theme for this week is #FIXME. Yesterday we talked about how to set app configurations and secrets at runtime using Kubernetes ConfigMaps and Secrets. Today we'll explore the topic of persistent storage on Kubernetes and show you can leverage Persistent Volumes and Persistent Volume Claims to ensure your PostgreSQL data can survive container restarts.
 
 ## What We'll Cover
 
@@ -47,26 +47,22 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 <!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
 <!-- ************************************* -->
 
-In yesterday's post, [@joshduffney](https://twitter.com/joshduffney) showed us how to set app configurations and secrets at runtime using Kubernetes ConfigMaps and Secrets. Today, I'll show you can leverage Persistent Volumes and Persistent Volume Claims to ensure your PostgreSQL data can survive container restarts.
-
 ## Containers are ephemeral
 
 In our sample application, the frontend UI writes vote values to a backend PostgreSQL database. By default the database container stores its data on the container's local file system, so there will be data loss when the pod is re-deployed or crashes as containers are meant to start with a clean slate each time.
 
 Let's re-deploy our sample app and experience the problem first hand.
 
-```bash
-# Deploy the database
-kubectl apply -f https://raw.githubusercontent.com/pauldotyu/azure-voting-app-rust/k8s-storage/manifests/deployment-db.yaml
+> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/week2/day3), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context.
 
-# Deploy the web application
-kubectl apply -f https://raw.githubusercontent.com/pauldotyu/azure-voting-app-rust/k8s-storage/manifests/deployment-app.yaml
+```bash
+kubectl apply -f ./manifests
 ```
 
 Wait for the `azure-voting-app` service to be assigned a public IP then browse to the website and submit some votes. Use the command below to print the URL to the terminal.
 
 ```bash
-echo "http://$(kubectl get service azure-voting-app -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
+echo "http://$(kubectl get ingress azure-voting-app -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
 ```
 
 Now, let's delete the pods and watch Kubernetes do what it does best... that is, re-schedule pods.
@@ -172,36 +168,34 @@ kubectl apply -f - <<EOF
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  creationTimestamp: null
+  labels:
+    app: azure-voting-db
   name: azure-voting-db
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: azure-voting-db
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: azure-voting-db
     spec:
-      nodeSelector:
-        "kubernetes.io/os": linux
       containers:
-      - name: azure-voting-db
-        image: postgres:15.0-alpine
-        imagePullPolicy: Always
-        env:
-        - name: POSTGRES_PASSWORD
-          value: "mypassword"
+      - image: postgres:15.0-alpine
+        name: postgres
         ports:
         - containerPort: 5432
-          name: psql
-        resources:
-          limits:
-            memory: "120Mi"
-            cpu: "3m"
-          requests:
-            memory: "40Mi"
-            cpu: "1m"
+        env:
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: azure-voting-secret
+              key: POSTGRES_PASSWORD
+        resources: {}
         volumeMounts:
         - name: mypvc
           mountPath: "/var/lib/postgresql/data"
