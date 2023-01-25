@@ -77,7 +77,7 @@ We'll learn more about most of these topics as we progress through Cloud Native 
 
 ## What is Kubernetes?
 
-Let's hear from Brendan Burns, one of the creators of Kubernetes as to what Kubernetes actually is.
+Let's hear from Brendan Burns, one of the founders of Kubernetes as to what Kubernetes actually is.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/q1PcAawa4Bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -91,7 +91,7 @@ And Brendan shares a bit more with us about how Kubernetes works.
 
 Kubernetes allows us to deploy and manage our applications effectively and consistently. 
 
-By providing a consistent API across many of the concerns our applications have, like load balancers, networking, storage, and compute, Kubernetes improves both our ability to build new software. 
+By providing a consistent API across many of the concerns our applications have, like load balancing, networking, storage, and compute, Kubernetes improves both our ability to build and ship new software. 
 
 There are standards for the applications to depend on for resources needed. Deployments, metrics, and logs are provided in a standardized fashion allowing more effecient operations across our application environments. 
 
