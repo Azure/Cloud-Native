@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[5133],{79287:e=>{e.exports=JSON.parse('{"label":"microsoft-365","permalink":"/Cloud-Native/blog/tags/microsoft-365","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);

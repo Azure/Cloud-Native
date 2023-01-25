@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[6894],{72338:a=>{a.exports=JSON.parse('{"label":"autoscaling","permalink":"/Cloud-Native/blog/tags/autoscaling","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);
