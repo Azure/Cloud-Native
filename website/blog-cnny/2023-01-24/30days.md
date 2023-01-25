@@ -7,7 +7,7 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [serverless, containers, decision-tree, aks, kubernetes, container-apps]
-image: ../../static/img/cnny23/containers101-banner.png
+image: https://azure.github.io/Cloud-Native/img/og/30-02.png
 description: "Let's dive into the various technologies behind Cloud Native development, starting with Containers." 
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service, containers]
 ---
@@ -20,7 +20,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
   <meta name="twitter:description" 
     content="Let's dive into the various technologies behind Cloud Native development, starting with Containers." />
   <meta name="twitter:image" 
-    content="../../static/img/cnny23/containers101-banner.png" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-02.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@stevenmurawski" />

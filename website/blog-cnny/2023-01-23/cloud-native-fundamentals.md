@@ -7,7 +7,7 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloud-native, containers, decision-tree, kubernetes]
-image: https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png
+image: https://azure.github.io/Cloud-Native/img/og/30-01.png
 description: The fundamentals of Cloud-native!
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 ---
