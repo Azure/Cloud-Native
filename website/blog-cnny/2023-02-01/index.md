@@ -1,20 +1,20 @@
 ---
-slug: FIXME-route-here
-title: FIXME - Blog Post Title Here
-authors: [FIXME-one, FIXME-two]
+slug: fundamentals-day-3
+title: Kubernetes Fundamentals - ConfigMaps and Secrets
+authors: [josh]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [FIXME, comma, separated, keywords, for, metatags]
-image:
+image: ../../static/img/cnny23/config_maps_and_secrets-banner.png
 description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown" 
 tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
 ---
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-3" />
   <meta name="twitter:title" 
     content="FIXME: Title Of Post" />
   <meta name="twitter:description" 
@@ -26,9 +26,8 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-3" />
 </head>
-<!-- End METADATA -->
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!
 

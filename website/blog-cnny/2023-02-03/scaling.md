@@ -1,20 +1,20 @@
 ---
-slug: FIXME-route-here
-title: FIXME - Blog Post Title Here
-authors: [FIXME-one, FIXME-two]
+slug: fundamentals-day-5
+title: Kubernetes Fundamentals - Scaling Pods and Nodes
+authors: [steven]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [FIXME, comma, separated, keywords, for, metatags]
-image:
+image: ../../static/img/cnny23/scaling_pods_and_nodes-banner.png
 description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown"
 tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
 ---
 
 <head>
   <meta name="twitter:url"
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-5" />
   <meta name="twitter:title"
     content="FIXME: Title Of Post" />
   <meta name="twitter:description"
@@ -26,9 +26,8 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-5" />
 </head>
-<!-- End METADATA -->
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!
 
@@ -42,10 +41,6 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-
-<!-- ************************************* -->
-<!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
-<!-- ************************************* -->
 
 ## Scaling Our Application
 
@@ -196,7 +191,7 @@ CPU and memory utilization are the primary drivers for the Horizontal Pod Autosc
 
 ## Exercise
 
-Let's try out the scaling configurations that we just walked through using [our sample application](https://aka.ms/azure-voting-app-rust).  If you still have your environment from Day 1, you can use that. Otherwise, we'll use the [same setup steps]().
+Let's try out the scaling configurations that we just walked through using [our sample application](https://aka.ms/azure-voting-app-rust).  If you still have your environment from Day 1, you can use that. Otherwise, we'll use the [same setup steps from Monday's post](../2023-01-30/PodsAndDeployments.md#setting-up-a-kubernetes-environment-in-azure).
 
 ### Set Up Your Environment (if you don't have one yet)
 

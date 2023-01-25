@@ -1,20 +1,20 @@
 ---
-slug: application-deployment-with-kubernetes-services-and-ingress
-title: "Application Deployment with Kubernetes: Services and Ingress"
+slug: fundamentals-day-2
+title: Kubernetes Fundamentals - Services and Ingress
 authors: [paul]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloudnative, azure, kubernetes, serivce, ingress]
-image:
+image: ../../static/img/cnny23/services_and_ingress-banner.png
 description: "Exposing Web Apps on Azure Kubernetes Service: A Step-by-Step Guide using Kubernetes Service and Ingress Resources" 
 tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, service, ingress]
 ---
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-2" />
   <meta name="twitter:title" 
     content="FIXME: Title Of Post" />
   <meta name="twitter:description" 
@@ -26,9 +26,8 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, service
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-2" />
 </head>
-<!-- End METADATA -->
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!
 

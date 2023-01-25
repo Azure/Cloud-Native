@@ -1,20 +1,20 @@
 ---
-slug: FIXME-route-here
-title: FIXME - Blog Post Title Here
+slug: fundamentals-day-1
+title: Kubernetes Fundamentals - Pods and Deployments
 authors: [steven]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [FIXME, comma, separated, keywords, for, metatags]
-image: https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png
+image: ../../static/img/cnny23/pods_and_deployments-banner.png
 description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown"
 tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
 ---
 
 <head>
   <meta name="twitter:url"
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-1" />
   <meta name="twitter:title"
     content="FIXME: Title Of Post" />
   <meta name="twitter:description"
@@ -26,7 +26,7 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-1" />
 </head>
 
 Welcome to `Day #6` of #CloudNativeNewYear!

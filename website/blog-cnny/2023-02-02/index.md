@@ -1,13 +1,13 @@
 ---
-slug: application-deployment-with-kubernetes-volumes-mounts-and-claims
-title: "Application Deployment with Kubernetes:  Volumes, Mounts, and Claims"
+slug: fundamentals-day-4
+title: "Kubernetes Fundamentals - Volumes, Mounts, and Claims"
 authors: [paul]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloudnative, azure, kubernetes, storage]
-image:
+image: ../../static/img/cnny23/volumes_and_claims-banner.png
 description: "Persisting Data on Azure Kubernetes Service: A Step-by-Step Guide using Kubernetes Persistent Volumes, Persistent Volume Claims, and Storage Classes" 
 tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persistent-volumes, persistent-volume-claims]
 ---
@@ -15,7 +15,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persist
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-4" />
   <meta name="twitter:title" 
     content="FIXME: Title Of Post" />
   <meta name="twitter:description" 
@@ -27,9 +27,8 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persist
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-4" />
 </head>
-<!-- End METADATA -->
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!
 
