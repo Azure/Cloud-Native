@@ -47,19 +47,19 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 <!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
 <!-- ************************************* -->
 
-## Decouple configurations with ConfigMaps
+## Decouple configurations with ConfigMaps and Secerts
 
-A ConfigMap is a Kubernetes object that decouples configuration data from pod definitions. 
+A ConfigMap is a Kubernetes object that decouples configuration data from pod definitions. Kubernetes secerts are similar, but were designed to decouple senstive information. 
 
-Separating the configuration of your application promotes better organization and security of your Kubernetes environment. It also enables you to share the same configuration across multiple pods and deployments which can simplify scaling and management. 
+Separating the configuration and secerts from your application promotes better organization and security of your Kubernetes environment. It also enables you to share the same configuration and different secerts across multiple pods and deployments which can simplify scaling and management. Using ConfigMaps and Secerts in Kubernetes is a best practice that can help to improve the scalability, security, and maintainability of your cluster.
 
-Using a ConfigMap in Kubernetes is a best practice that can help to improve the scalability, security, and maintainability of your cluster.
+By the end of this tutorial, you'll have added a Kubernetes ConfigMap and Secret to the Azure Voting deployment.
 
-### Create the ConfigMap
+## Create the ConfigMap
 
-ConfigMaps can be used in one of two ways; as environment variables or volumes. For this tutorial you'll use a ConfigMap to create three environment variables inside the pod; DATABASE_URL, FISRT_VALUE, and SECOND_VALUE.
+ConfigMaps can be used in one of two ways; as environment variables or volumes. 
 
-The DATABASE_URL provides the connection string to a Postgres. FIRST_VALUE and SECOND_VALUE are configuration options that change what voting options the application presents to the users.
+For this tutorial you'll use a ConfigMap to create three environment variables inside the pod; DATABASE_SERVER, FISRT_VALUE, and SECOND_VALUE. The DATABASE_SERVER provides part of connection string to a Postgres. FIRST_VALUE and SECOND_VALUE are configuration options that change what voting options the application presents to the users.
 
 Follow the below steps to create a new ConfigMap:
 
@@ -71,7 +71,7 @@ Follow the below steps to create a new ConfigMap:
     metadata:
       name: azure-voting-config
     data:
-      DATABASE_URL: "postgres://postgres:mypassword@azure-voting-db"
+      DATABASE_SERVER: azure-voting-db
       FIRST_VALUE: "Go"
       SECOND_VALUE: "Rust"
     ```
@@ -82,71 +82,19 @@ Follow the below steps to create a new ConfigMap:
     kubectl create -f config-map.yaml
     ```
 
-### Modify the deployment manifest
+## Create the Secret
 
-With the ConfigMap created the next step is to replace the environment variables provided in the application deployment manuscript with the values stored in the ConfigMap.
-
-Complete the following steps to add the ConfigMap to the deployment mainifest:
-
-1. Open the Kubernetes manifest file `deployment-app.yaml`. 
-
-2. In the containers section, add an `envFrom` section. This section will reference the config map you created above.
-
-    ```yaml
-    envFrom:
-    - configMapRef:
-        name: azure-voting-config
-    ```
-
-    Using `envFrom` exposes all the values witin the ConfigMap as environment variables. Making it so you don't have to list them individually. 
-
-3. Remove the env section that contains the `DATABASE_URL` environment variable (lines 28-30), as it is already defined in the config map.
-
-4. Save the changes to the deployment manifest file.
-
-5. Apply the changes to the deployment by running the following command:
-
-    ```bash
-    kubectl apply -f deployment-app.yaml
-    ```
-
-### Verify the ConfigMap
-
-Lastly, verify that the ConfigMap was added to your deploy by running the following command:
-
-    ```bash
-    kubectl describe deployment azure-voting-app
-    ```
-
-Browse the output until you find the `envFrom` section with the config map reference. 
-
-You can also verify that the environment variables from the config map are being passed to the container by running the command `kubectl exec -it <pod-name> -- printenv`. This command will show you all the environment variables passed to the pod including the one from configmap.
-
-By following these steps, you will have successfully added a config map to the Azure Voting App Kubernetes deployment, and the environment variables defined in the config map will be passed to the container running in the pod.
-
-## Secure sensitive information with Kubernetes Secrets
-
-Kubernetes Secrets provides a way for you to securely store sensitive information that can be used by Pods and Services.
-
-By using Secrets, you can avoid storing confidential information in source control and avoid storing sensitive information as plaintext within Pod and Services configuration files.
-
-Follow the steps below to add a secret to the Azure Voting Kubernetes deployment.
-
-### Create the Kubernetes Secret
-
-The `deployment-db.yaml` is a Kubernetes manifest that deploys a Postgres SQL that the Azure Voting App uses to store its results. 
-
-Currently, that deployment manifest contains an environment variable `POSTGRES_PASSWORD`. Your task is to replace that environment variable with a Kubernetes Secret. 
+The `deployment-db.yaml` and `deployment-app.yaml` are Kubernetes manifests that deploy the Azure Voting App. Currently, those deployment manifests contain the environment variables `POSTGRES_PASSWORD` and `DATABASE_PASSWORD` with the value stored as plain text. Your task is to replace that environment variable with a Kubernetes Secret.
 
 Create a Secret running the following commands:
 
-1. Encode the `POSTGRES_PASSWORD'.
+1. Encode `mypassword`.
 
     ```bash
     echo -n "mypassword" | base64
     ```
 
-2. Create a YAML file named `secret.yaml`. In this file, add `POSTGRES_PASSWORD` and the encoded value returned above under the data section.
+2. Create a YAML file named `secret.yaml`. In this file, add `POSTGRES_PASSWORD` as the key and the encoded value returned above under as the value in the data section.
 
     ```yml
     apiVersion: v1
@@ -167,7 +115,75 @@ Create a Secret running the following commands:
 > [!WARNING]
 > base64 encoding is a simple and widely supported way to obscure plaintext data, it is not secure, as it can easily be decoded. If you want to store sensitive data like password, you should use a more secure method like encrypting with a Key Management Service (KMS) before storing it in the Secret.
 
-### Verify the Secret
+## Modify the app deployment manifest
+
+With the ConfigMap and Secert both created the next step is to replace the environment variables provided in the application deployment manuscript with the values stored in the ConfigMap and the Secert.
+
+Complete the following steps to add the ConfigMap and Secert to the deployment mainifest:
+
+1. Open the Kubernetes manifest file `deployment-app.yaml`. 
+
+2. In the containers section, add an `envFrom` section and upate the `env` section.
+
+    ```yaml
+    envFrom:
+    - configMapRef:
+        name: azure-voting-config
+    env:
+    - name: DATABASE_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: azure-voting-secret
+          key: POSTGRES_PASSWORD
+    ```
+
+    Using `envFrom` exposes all the values witin the ConfigMap as environment variables. Making it so you don't have to list them individually. 
+
+3. Save the changes to the deployment manifest file.
+
+4. Apply the changes to the deployment by running the following command:
+
+    ```bash
+    kubectl apply -f deployment-app.yaml
+    ```
+
+## Modify the database deployment manifest 
+
+Next, update the database deployment manifest and replace the plain text environment variable with the Kubernetes Secert.
+
+1. Open the `deployment-db.yaml`.
+2. To add the secret to the deployment, replace the _env_ section with the following code:
+
+    ```yml
+    env:
+    - name: POSTGRES_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: azure-voting-secret
+          key: POSTGRES_PASSWORD
+    ```
+
+3. Apply the updated manifest.
+
+    ```bash
+    kubectl apply -f deployment-db.yaml
+    ```
+
+## Verify the ConfigMap and output environment variables
+
+Verify that the ConfigMap was added to your deploy by running the following command:
+
+    ```bash
+    kubectl describe deployment azure-voting-app
+    ```
+
+Browse the output until you find the `envFrom` section with the config map reference. 
+
+You can also verify that the environment variables from the config map are being passed to the container by running the command `kubectl exec -it <pod-name> -- printenv`. This command will show you all the environment variables passed to the pod including the one from configmap.
+
+By following these steps, you will have successfully added a config map to the Azure Voting App Kubernetes deployment, and the environment variables defined in the config map will be passed to the container running in the pod.
+
+## Verify the Secret and describe the deployment
 
 Once the secret has been created you can verify it exists by running the following command:
 
@@ -187,24 +203,6 @@ By default, the describe command doesn't output the encoded value, but if you ou
  kubectl get secret azure-voting-secret -o json
 ```
 
-### Modify the Deployment
+## Conclusion
 
-To use the secret, add the secret to the database deployment manifest.
-
-1. Open the `deployment-db.yaml`.
-2. To add the secret to the deployment, replace the _env_ section with the following code:
-
-    ```yml
-      env:
-      - name: POSTGRES_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: azure-voting-secret
-            key: POSTGRES_PASSWORD
-    ```
-
-3. Next, apply the updated manifest.
-
-    ```bash
-    kubectl apply -f deployment-db.yaml
-    ```
+In conclusion, using ConfigMaps and Secrets in Kubernetes can help to improve the scalability, security, and maintainability of your cluster. By decoupling configuration data and sensitive information from pod definitions, you can promote better organization and security in your Kubernetes environment. Additionally, separating these elements allows for sharing the same configuration and different secrets across multiple pods and deployments, simplifying scaling and management.
