@@ -32,7 +32,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, service
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll explore the topic of #FIXME.
+The theme for this week is #FIXME. Yesterday we talked about how to deploy a containerized web app workload to Azure Kubernetes Service (AKS). Today we'll explore the topic of services and ingress and walk through the steps of making our containers accessible both internally as well as over the internet so that you can share it with the world 😊
 
 ## What We'll Cover
 
@@ -45,25 +45,53 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 <!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
 <!-- ************************************* -->
 
-In yesterday's post, [@StevenMurawski](https://twitter.com/StevenMurawski) showed us how to deploy a containerized web app workload to Azure Kubernetes Service (AKS). Today, I'll walk you through the steps of making this app accessible over the internet, so that you can share it with the world 😊
-
 ## Exposing Pods via Service
 
 There are a few ways to expose your pod in Kubernetes. One way is to take an imperative approach and use the `kubectl expose` command. This is probably the quickest way to achieve your goal but it isn't the best way. A better way to expose your pod by taking a declarative approach by creating a [services](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-pauyu#services) manifest file and deploying it using the `kubectl apply` command.
 
 Don't worry if you are unsure of how to make this manifest, we'll use `kubectl` to help generate it.
 
-First, let's get simple deployment on our AKS cluster.
+First, let's ensure we have the database deployed on our AKS cluster.
+
+> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/main), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context.
 
 ```bash
-kubectl create deployment myvote \
-  --image=ghcr.io/pauldotyu/azure-voting-app-rust@sha256:5e932a5c75f88ccc79c80b992ef4e39e129dd4ad4dbdd004e7f62109e3c97a19
+kubectl apply -f ./manifests/deployment-db.yaml
 ```
 
-Next, let's expose the deployment with the following command.
+Next, let's deploy the application. If you are following along from yesterday's content, there isn't anything you need to change; however, if you are deploy the app from scratch, you'll need to modify the `deployment-app.yaml` manifest and update it with your image tag and database pod's IP address.
 
 ```bash
-kubectl expose deployment myvote \
+kubectl apply -f ./manifests/deployment-app.yaml
+```
+
+Now, let's expose the database using a service so that we can leverage Kubernetes' built-in service discovery to be able to reference it by name; not pod IP. Run the following command.
+
+```bash
+kubectl expose deployment azure-voting-db \
+  --port=5432 \
+  --target-port=5432
+```
+
+With the database exposed using service, we can update the app deployment manifest to use the service name instead of pod IP. This way, if the pod ever gets assigned a new IP, we don't have to worry about updating the IP each time and redeploying our web application. Kubernetes has internal service discovery mechanism in place that allows us to reference a service by its name.
+
+Let's make an update to the manifest. Replace the environment variable for `DATABASE_SERVER` with the following:
+
+```yml
+- name: DATABASE_SERVER
+  value: azure-voting-db
+```
+
+Re-deploy the app with the updated configuration.
+
+```bash
+kubectl apply -f ./manifests/deployment-app.yaml
+```
+
+One service down, one to go. Run the following command to expose the web application.
+
+```bash
+kubectl expose deployment azure-voting-app \
   --type=LoadBalancer \
   --port=80 \
   --target-port=8080
@@ -83,27 +111,40 @@ Kubernetes supports four [service types](https://kubernetes.io/docs/concepts/ser
 Now, let's confirm you can reach the web app from the internet. You can use the following command to print the URL to your terminal.
 
 ```bash
-echo "http://$(kubectl get service myvote -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
+echo "http://$(kubectl get service azure-voting-app -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
 ```
 
-Great! The `kubectl expose` command gets the job done, but as mentioned above, it is not the best method of exposing deployments. It is better to expose deployments declaratively using a [service](https://kubernetes.io/docs/concepts/services-networking/service/) manifest, so let's delete the service and redeploy.
+Great! The `kubectl expose` command gets the job done, but as mentioned above, it is not the best method of exposing deployments. It is better to expose deployments declaratively using a [service](https://kubernetes.io/docs/concepts/services-networking/service/) manifest, so let's delete the services and redeploy using manifests.
 
 ```bash
-kubectl delete service myvote
+kubectl delete service azure-voting-db azure-voting-app
 ```
 
 To use `kubectl` to generate our manifest file, we can use the same `kubectl expose` command that we ran earlier but this time, we'll include  `--output=yaml` and `--dry-run=client`. This will instruct the command to output the manifest that would be sent to the `kube-api` server in YAML format to the terminal.
 
+Generate the manifest for the database service.
+
 ```bash
-kubectl expose deployment myvote \
+kubectl expose deployment azure-voting-db \
+  --type=ClusterIP \
+  --port=5432 \
+  --target-port=5432 \
+  --output=yaml \
+  --dry-run=client > ./manifests/service-db.yaml
+```
+
+Generate the manifest for the application service.
+
+```bash
+kubectl expose deployment azure-voting-app \
   --type=LoadBalancer \
   --port=80 \
   --target-port=8080 \
   --output=yaml \
-  --dry-run=client > service.yaml
+  --dry-run=client > ./manifests/service-app.yaml
 ```
 
-The command above redirected the YAML output to a file called `service.yaml` in your current working directory and your file should look like this.
+The command above redirected the YAML output to your manifests directory. Here is what the web application service looks like.
 
 ```yml
 apiVersion: v1
@@ -111,15 +152,15 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: myvote
-  name: myvote
+    app: azure-voting-app
+  name: azure-voting-app
 spec:
   ports:
   - port: 80
     protocol: TCP
     targetPort: 8080
   selector:
-    app: myvote
+    app: azure-voting-app
   type: LoadBalancer
 status:
   loadBalancer: {}
@@ -127,22 +168,22 @@ status:
 
 > 💡 TIP: To view the schema of any `api-resource` in Kubernetes, you can use the `kubectl explain` command. In this case the `kubectl explain service` command will tell us exactly what each of these fields do.
 
-Re-deploy the service using the new service manifest.
+Re-deploy the services using the new service manifests.
 
 ```bash
-kubectl apply -f service.yaml
+kubectl apply -f ./manifests/service-db.yaml -f ./manifests/service-app.yaml
 
 # You should see TYPE is set to LoadBalancer and the EXTERNAL-IP is set
-kubectl get service myvote
+kubectl get service azure-voting-db azure-voting-app
 ```
 
 Confirm again that our application is accessible again. Run the following command to print the URL to the terminal.
 
 ```bash
-echo "http://$(kubectl get service myvote -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
+echo "http://$(kubectl get service azure-voting-app -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
 ```
 
-That was easy, right? We just exposed an application using Kubernetes services and specified the type to be `LoadBalancer` so that we can test the application over the public internet.
+That was easy, right? We just exposed both of our pods using Kubernetes services. The database only needs to be accessible from within the cluster so `ClusterIP` is perfect for that. For the web application, we specified the type to be `LoadBalancer` so that we can access the application over the public internet.
 
 But wait... remember that if you want to expose web applications over the public internet, a Service with a public IP is not the best way; the better approach is to use an Ingress resource.
 
@@ -160,26 +201,26 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: myvote
-  name: myvote
+    app: azure-voting-app
+  name: azure-voting-app
 spec:
   ports:
   - port: 80
     protocol: TCP
     targetPort: 8080
   selector:
-    app: myvote
+    app: azure-voting-app
 ```
 
 > 📝 NOTE: The default service type is ClusterIP so we can omit the `type` altogether.
 
-Re-apply the service manifest.
+Re-apply the app service manifest.
 
 ```bash
-kubectl apply -f service.yaml
+kubectl apply -f ./manifests/service-app.yaml
 
 # You should see TYPE set to ClusterIP and EXTERNAL-IP set to <none>
-kubectl get service myvote 
+kubectl get service azure-voting-app
 ```
 
 Next, we need to install an [Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). There are quite a few options, and the Kubernetes-maintained [NGINX Ingress Controller](https://github.com/kubernetes/ingress-nginx) is commonly deployed.
@@ -204,16 +245,16 @@ az aks addon enable \
 Now, let's use the same approach we took in creating our service to create our Ingress resource. Run the following command to generate the Ingress manifest.
 
 ```bash
-kubectl create ingress myvote \
+kubectl create ingress azure-voting-app \
   --class=webapprouting.kubernetes.azure.com \
-  --rule="/*=myvote:80" \
+  --rule="/*=azure-voting-app:80" \
   --output yaml \
-  --dry-run=client > ingress.yaml
+  --dry-run=client > ./manifests/ingress.yaml
 ```
 
-The `--class=webapprouting.kubernetes.azure.com` option activates the AKS web application routing add-on. This AKS add-on can also integrate with other Azure services such as [Azure DNS](https://learn.microsoft.com/azure/dns/dns-overview?WT.mc_id=containers-84290-pauyu) and [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?WT.mc_id=containers-84290-pauyu) for TLS certificate management, so this special class makes it all work.
+The `--class=webapprouting.kubernetes.azure.com` option activates the AKS web application routing add-on. This AKS add-on can also integrate with other Azure services such as [Azure DNS](https://learn.microsoft.com/azure/dns/dns-overview?WT.mc_id=containers-84290-pauyu) and [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?WT.mc_id=containers-84290-pauyu) for TLS certificate management and this special class makes it all work.
 
-The `--rule="/*=myvote:80"` option looks confusing but we can use `kubectl` again to help us understand how to format the value for the option.
+The `--rule="/*=azure-voting-app:80"` option looks confusing but we can use `kubectl` again to help us understand how to format the value for the option.
 
 ```bash
 kubectl create ingress --help
@@ -229,7 +270,7 @@ In the output you will see the following:
 
 It expects a `host` and `path` separated by a forward-slash, then expects the backend `service` name and `port` separated by a colon. We're not using a hostname for this demo so we can omit it. For the path, an asterisk is used to specify a wildcard path prefix.
 
-So, the value of `/*=myvote:80` creates a routing rule for all paths following the domain (or in our case since we don't have a hostname specified, the IP) to route traffic to our `myvote` backend service on port `80`.
+So, the value of `/*=azure-voting-app:80` creates a routing rule for all paths following the domain (or in our case since we don't have a hostname specified, the IP) to route traffic to our `azure-voting-app` backend service on port `80`.
 
 > 📝 NOTE: Configuring the hostname and TLS is outside the scope of this demo but please visit this URL https://bit.ly/aks-webapp-routing for an in-depth hands-on lab centered around Web Application Routing on AKS.
 
@@ -240,7 +281,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   creationTimestamp: null
-  name: myvote
+  name: azure-voting-app
 spec:
   ingressClassName: webapprouting.kubernetes.azure.com
   rules:
@@ -248,7 +289,7 @@ spec:
       paths:
       - backend:
           service:
-            name: myvote
+            name: azure-voting-app
             port:
               number: 80
         path: /
@@ -257,21 +298,21 @@ status:
   loadBalancer: {}
 ```
 
-Apply the manifest.
+Apply the app ingress manifest.
 
 ```bash
-kubectl apply -f ingress.yaml
+kubectl apply -f ./manifests/ingress.yaml
 ```
 
 Validate the web application is available from the internet again. You can run the following command to print the URL to the terminal.
 
 ```bash
-echo "http://$(kubectl get ingress myvote -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
+echo "http://$(kubectl get ingress azure-voting-app -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
 ```
 
 ## Takeaways
 
-Exposing your applications both internally and externally can be easily achieved using Service and Ingress resources respectively. If your service is HTTP or HTTPS based, use Ingress with an internally accessible Service (i.e., ClusterIP or NodePort); otherwise, use the Service resource.  If your Service needs to be publicly accessible, set the type to LoadBalancer to expose a public IP for it. To learn more about these resources, please visit the links listed below.
+Exposing your applications both internally and externally can be easily achieved using Service and Ingress resources respectively. If your service is HTTP or HTTPS based and needs to be accessible from outsie the cluster, use Ingress with an internal Service (i.e., ClusterIP or NodePort); otherwise, use the Service resource.  If your TCP-based Service needs to be publicly accessible, you set the type to LoadBalancer to expose a public IP for it. To learn more about these resources, please visit the links listed below.
 
 Lastly, if you are unsure how to begin writing your service manifest, you can use `kubectl` and have it do most of the work for you 🥳
 
