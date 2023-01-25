@@ -66,6 +66,7 @@ Kubernetes is an open source container orchestration engine that can help with a
 
 Kubernetes takes physical (or virtual) resources and provides a consistent API over them, bringing a consistency to the management and runtime experience for our applications.  Kubernetes provides us with a number of capabilities such as:
 
+* Container scheduling
 * Service discovery and load balancing
 * Storage orchestration
 * Automated rollouts and rollbacks
