@@ -7,7 +7,7 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [serverless, containers, decision-tree, aks, kubernetes, container-apps]
-image: https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png
+image: https://azure.github.io/Cloud-Native/img/og/30-00.png
 description: "Let's  kick-off Cloud Native New Year with #30DaysOfCloudNative" 
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 ---
@@ -20,7 +20,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
   <meta name="twitter:description" 
     content="Let's  kick-off Cloud Native New Year with #30DaysOfCloudNative" />
   <meta name="twitter:image" 
-    content="https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-00.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@nitya" />
