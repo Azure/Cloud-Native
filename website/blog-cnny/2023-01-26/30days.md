@@ -23,8 +23,8 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="https://azure.github.io/Cloud-Native/img/og/30-04.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
-  <meta name="twitter:site" content="@nitya" /> 
+    content="@joshduffney" />
+  <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/cnny-2023/microservices-101" />
 </head>

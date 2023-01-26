@@ -24,7 +24,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@stevenmurawski" />
-  <meta name="twitter:site" content="@stevenmurawski" /> 
+  <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/cnny-2023/kubernetes-101" />
 </head>
