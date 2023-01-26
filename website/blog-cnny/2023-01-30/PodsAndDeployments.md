@@ -1,44 +1,52 @@
 ---
 slug: fundamentals-day-1
-title: Kubernetes Fundamentals - Pods and Deployments
+title: 2-1. Kubernetes Fundamentals - Pods and Deployments
 authors: [steven]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [FIXME, comma, separated, keywords, for, metatags]
-image: ../../static/img/cnny23/pods_and_deployments-banner.png
-description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown"
-tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
+keywords: [pods, deployments, kubernetes, aks, container-apps, cloud-native]
+image: https://azure.github.io/Cloud-Native/img/og/30-06.png
+description: "The theme for this week is Kubernetes fundamentals. Today we'll explore the topic of Pods and Deployments in Kubernetes."
+tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 ---
 
 <head>
   <meta name="twitter:url"
     content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-1" />
   <meta name="twitter:title"
-    content="FIXME: Title Of Post" />
+    content="2-1. Kubernetes Fundamentals - Pods and Deployments" />
   <meta name="twitter:description"
-    content="FIXME: Post Description" />
+    content="The theme for this week is Kubernetes fundamentals. Today we'll explore the topic of Pods and Deployments in Kubernetes." />
   <meta name="twitter:image"
-    content="https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png" />
+    content="image: https://azure.github.io/Cloud-Native/img/og/30-06.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator"
-    content="@nitya" />
+    content="@stevenmurawski" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
     href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-1" />
 </head>
 
-Welcome to `Day #6` of #CloudNativeNewYear!
+Welcome to `Day #1 of Week 2` of #CloudNativeNewYear!
 
 The theme for this week is Kubernetes fundamentals. Last week we talked about Cloud Native architectures and the Cloud Native landscape. Today we'll explore the topic of Pods and Deployments in Kubernetes.
+
+:::tip Friday, February 3rd at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+
+:::
 
 ## What We'll Cover
  * Setting Up A Kubernetes Environment in Azure
  * Running Containers in Kubernetes Pods
  * Making the Pods Resilient with Deployments
- * Exercise: Try this yourself!
- * Resources: For self-study!
+ * Exercise
+ * Resources
 
 ## Setting Up A Kubernetes Environment in Azure
 
@@ -101,7 +109,7 @@ $BuildTag = az acr repository show-tags `
                               --query '[0]' -o tsv
 ```
 
-:::tip 
+:::tip
 Wondering what the `--%` is in the first command line?  That tells the PowerShell interpreter to pass the input after it "as is" to the command without parsing/evaluating it. Otherwise, PowerShell messes a bit with the templated `{{.Run.ID}}` bit.
 :::
 

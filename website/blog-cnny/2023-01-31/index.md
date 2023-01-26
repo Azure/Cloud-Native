@@ -1,14 +1,14 @@
 ---
 slug: fundamentals-day-2
-title: Kubernetes Fundamentals - Services and Ingress
+title: 2-2. Kubernetes Fundamentals - Services and Ingress
 authors: [paul]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloudnative, azure, kubernetes, serivce, ingress]
-image: ../../static/img/cnny23/services_and_ingress-banner.png
-description: "Exposing Web Apps on Azure Kubernetes Service: A Step-by-Step Guide using Kubernetes Service and Ingress Resources" 
+image: https://azure.github.io/Cloud-Native/img/og/30-07.png
+description: "A Step-by-Step Guide using Kubernetes Service and Ingress Resources on AKS" 
 tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, service, ingress]
 ---
 
@@ -16,22 +16,30 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, service
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-2" />
   <meta name="twitter:title" 
-    content="FIXME: Title Of Post" />
+    content="2-2. Kubernetes Fundamentals - Services and Ingress" />
   <meta name="twitter:description" 
-    content="FIXME: Post Description" />
+    content="A Step-by-Step Guide using Kubernetes Service and Ingress Resources on AKS"  />
   <meta name="twitter:image" 
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-07.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@pauldotyu" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-2" />
 </head>
 
-Welcome to `Day #FIXME` of #CloudNativeNewYear!
+Welcome to `Day 2 of Week 2` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about how to deploy a containerized web app workload to Azure Kubernetes Service (AKS). Today we'll explore the topic of services and ingress and walk through the steps of making our containers accessible both internally as well as over the internet so that you can share it with the world 😊
+The theme for this week is #Kubernetes fundamentals. Yesterday we talked about how to deploy a containerized web app workload to Azure Kubernetes Service (AKS). Today we'll explore the topic of services and ingress and walk through the steps of making our containers accessible both internally as well as over the internet so that you can share it with the world 😊
+
+:::tip Friday, February 3rd at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+
+:::
 
 ## What We'll Cover
 
@@ -39,10 +47,6 @@ The theme for this week is #FIXME. Yesterday we talked about how to deploy a con
 * Exposing Services via Ingress
 * Takeaways
 * Resources
-
-<!-- ************************************* -->
-<!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
-<!-- ************************************* -->
 
 ## Exposing Pods via Service
 
@@ -52,7 +56,7 @@ Don't worry if you are unsure of how to make this manifest, we'll use `kubectl` 
 
 First, let's ensure we have the database deployed on our AKS cluster.
 
-> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/main), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context.
+> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/main), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context.  Check out [the first post this week for more on the environment setup](../2023-01-30/PodsAndDeployments.md#setting-up-a-kubernetes-environment-in-azure).
 
 ```bash
 kubectl apply -f ./manifests/deployment-db.yaml

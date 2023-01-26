@@ -1,14 +1,14 @@
 ---
 slug: fundamentals-day-4
-title: "Kubernetes Fundamentals - Volumes, Mounts, and Claims"
+title: 2-4. Kubernetes Fundamentals - Volumes, Mounts, and Claims
 authors: [paul]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloudnative, azure, kubernetes, storage]
-image: ../../static/img/cnny23/volumes_and_claims-banner.png
-description: "Persisting Data on Azure Kubernetes Service: A Step-by-Step Guide using Kubernetes Persistent Volumes, Persistent Volume Claims, and Storage Classes" 
+image: https://azure.github.io/Cloud-Native/img/og/30-09.png
+description: "A Step-by-Step Guide using Kubernetes Persistent Volumes, Persistent Volume Claims, and Storage Classes" 
 tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persistent-volumes, persistent-volume-claims]
 ---
 
@@ -17,22 +17,30 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persist
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-4" />
   <meta name="twitter:title" 
-    content="FIXME: Title Of Post" />
+    content="2-4. Kubernetes Fundamentals - Volumes, Mounts, and Claims" />
   <meta name="twitter:description" 
-    content="FIXME: Post Description" />
+    content="A Step-by-Step Guide using Kubernetes Persistent Volumes, Persistent Volume Claims, and Storage Classes" />
   <meta name="twitter:image" 
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-09.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@pauldotyu" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-4" />
 </head>
 
-Welcome to `Day #FIXME` of #CloudNativeNewYear!
+Welcome to `Day 4 of Week 2` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about how to set app configurations and secrets at runtime using Kubernetes ConfigMaps and Secrets. Today we'll explore the topic of persistent storage on Kubernetes and show you can leverage Persistent Volumes and Persistent Volume Claims to ensure your PostgreSQL data can survive container restarts.
+The theme for this week is Kubernetes fundamentals. Yesterday we talked about how to set app configurations and secrets at runtime using Kubernetes ConfigMaps and Secrets. Today we'll explore the topic of persistent storage on Kubernetes and show you can leverage Persistent Volumes and Persistent Volume Claims to ensure your PostgreSQL data can survive container restarts.
+
+:::tip Friday, February 3rd at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+
+:::
 
 ## What We'll Cover
 
@@ -42,17 +50,13 @@ The theme for this week is #FIXME. Yesterday we talked about how to set app conf
 * Takeaways
 * Resources
 
-<!-- ************************************* -->
-<!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
-<!-- ************************************* -->
-
 ## Containers are ephemeral
 
 In our sample application, the frontend UI writes vote values to a backend PostgreSQL database. By default the database container stores its data on the container's local file system, so there will be data loss when the pod is re-deployed or crashes as containers are meant to start with a clean slate each time.
 
 Let's re-deploy our sample app and experience the problem first hand.
 
-> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/week2/day3), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context.
+> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/week2/day3), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context. Check out [the first post this week for more on the environment setup](../2023-01-30/PodsAndDeployments.md#setting-up-a-kubernetes-environment-in-azure).
 
 ```bash
 kubectl apply -f ./manifests

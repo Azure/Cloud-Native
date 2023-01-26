@@ -1,45 +1,52 @@
 ---
 slug: fundamentals-day-5
-title: Kubernetes Fundamentals - Scaling Pods and Nodes
+title: 2-5. Kubernetes Fundamentals - Scaling Pods and Nodes
 authors: [steven]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [FIXME, comma, separated, keywords, for, metatags]
-image: ../../static/img/cnny23/scaling_pods_and_nodes-banner.png
-description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown"
-tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
+keywords: [scaling, kubernetes, aks, container-apps, cloud-native]
+image: https://azure.github.io/Cloud-Native/img/og/30-10.png
+description: "Learning to Scale Pods and Nodes in Kubernetes on Azure"
+tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 ---
 
 <head>
   <meta name="twitter:url"
     content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-5" />
   <meta name="twitter:title"
-    content="FIXME: Title Of Post" />
+    content="2-5. Kubernetes Fundamentals - Scaling Pods and Nodes" />
   <meta name="twitter:description"
-    content="FIXME: Post Description" />
+    content="Learning to Scale Pods and Nodes in Kubernetes on Azure" />
   <meta name="twitter:image"
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-10.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator"
-    content="@nitya" />
+    content="@stevenmurawski" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
     href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-5" />
 </head>
 
-Welcome to `Day #FIXME` of #CloudNativeNewYear!
+Welcome to `Day 5 of Week 2` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll explore the topic of #FIXME.
+The theme for this week is Kubernetes fundamentals. Yesterday we talked about adding persistent storage to our deployment. Today we'll explore the topic of scaling pods and nodes in our Kubernetes cluster.
+
+:::tip Friday, February 3rd at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+
+:::
 
 ## What We'll Cover
- * Section 1
- * Section 2
- * Section 3
- * Section 4
- * Exercise: Try this yourself!
- * Resources: For self-study!
+ * Scaling Our Application
+ * Scaling Pods
+ * Scaling Nodes
+ * Exercise
+ * Resources
 
 
 ## Scaling Our Application
@@ -191,93 +198,9 @@ CPU and memory utilization are the primary drivers for the Horizontal Pod Autosc
 
 ## Exercise
 
-Let's try out the scaling configurations that we just walked through using [our sample application](https://aka.ms/azure-voting-app-rust).  If you still have your environment from Day 1, you can use that. Otherwise, we'll use the [same setup steps from Monday's post](../2023-01-30/PodsAndDeployments.md#setting-up-a-kubernetes-environment-in-azure).
+Let's try out the scaling configurations that we just walked through using [our sample application](https://aka.ms/azure-voting-app-rust).  If you still have your environment from Day 1, you can use that. 
 
-### Set Up Your Environment (if you don't have one yet)
-
-You can skip to the next section if you've been playing along with the samples this week.
-
-* Clone the project repository
-
-```powershell
-$GitHubOrganization = 'Azure-Samples'
-git clone "https://github.com/$GitHubOrganization/azure-voting-app-rust"
-cd azure-voting-app-rust
-```
-
-* Set up your AKS cluster
-
-```powershell
-az deployment sub create --template-file ./deploy/main.bicep --location eastus --parameters 'resourceGroup=cnny-week2'
-$AcrName = az deployment sub show --name main --query 'properties.outputs.acr_name.value' -o tsv
-$AksName = az deployment sub show --name main --query 'properties.outputs.aks_name.value' -o tsv
-$ResourceGroup = az deployment sub show --name main --query 'properties.outputs.resource_group_name.value' -o tsv
-az aks get-credentials --resource-group $ResourceGroup --name $AksName
-```
-
-* Build the application container image and publish it to Azure Container Registry
-
-```powershell
-az acr build --registry $AcrName --% --image cnny2023/azure-voting-app-rust:{{.Run.ID}} .
-$BuildTag = az acr repository show-tags `
-                              --name $AcrName `
-                              --repository cnny2023/azure-voting-app-rust `
-                              --orderby time_desc `
-                              --query '[0]' -o tsv
-```
-
-* Create the deployment for the database container image.
-
-```powershell
-kubectl create deployment azure-voting-db `
-                            --image "postgres:15.0-alpine" `
-                            --port 5432 `
-                            --output yaml `
-                            --dry-run=client > manifests/deployment-db.yaml
-```
-
-* Edit the `./manifests/deployment-db.yaml` file to add an environment variable
-
-```yml
-    env:
-    - name: POSTGRES_PASSWORD
-      value: "mypassword"
-```
-
-* Apply the `./manifests/deployment-db.yaml` file with `kubectl`
-
-```powershell
-kubectl apply -f ./manifests/deployment-db.yaml
-```
-
-
-* Create the deployment for the application container image
-
-```powershell
-kubectl create deployment azure-voting-app `
-                        --image "$AcrName.azurecr.io/cnny2023/azure-voting-app-rust:$BuildTag" `
-                        --port 8080 `
-                        --output yaml `
-                        --dry-run=client > manifests/deployment-app.yaml
-```
-
-* Get the IP address for the database container pod and update the `./manifests/deployment-app.yaml` file with the environment variable.
-
-```powershell
-kubectl get pod --selector app=azure-voting-db -o jsonpath='{.items[0].status.podIP}'
-```
-
-```yml
-    env:
-    - name: DATABASE_URL
-      value: postgres://postgres:mypassword@REPLACE_WITH_DB_IP
-```
-
-* Apply the `./manifests/deployment-app.yaml` file with `kubectl`
-
-```powershell
-kubectl apply -f ./manifests/deployment-app.yaml
-```
+> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/week2/day4), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context. Check out [the first post this week for more on the environment setup](../2023-01-30/PodsAndDeployments.md#setting-up-a-kubernetes-environment-in-azure).
 
 ### Configure Horizontal Pod Autoscaler
 

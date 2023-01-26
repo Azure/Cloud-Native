@@ -1,50 +1,50 @@
 ---
 slug: fundamentals-day-3
-title: Kubernetes Fundamentals - ConfigMaps and Secrets
+title: 2-3. Kubernetes Fundamentals - ConfigMaps and Secrets
 authors: [josh]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [FIXME, comma, separated, keywords, for, metatags]
-image: ../../static/img/cnny23/config_maps_and_secrets-banner.png
-description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown" 
-tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
+keywords: [kubernetes, container-apps, secrets, configuration]
+image: https://azure.github.io/Cloud-Native/img/og/30-08.png
+description: "Working with ConfigMaps and Secrets in Kubernetes" 
+tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 ---
 
 <head>
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-3" />
   <meta name="twitter:title" 
-    content="FIXME: Title Of Post" />
+    content="2-3. Kubernetes Fundamentals - ConfigMaps and Secrets" />
   <meta name="twitter:description" 
-    content="FIXME: Post Description" />
+    content="Working with ConfigMaps and Secrets in Kubernetes" />
   <meta name="twitter:image" 
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-08.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@joshduffney" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-3" />
 </head>
 
-Welcome to `Day #FIXME` of #CloudNativeNewYear!
+Welcome to `Day 3 of Week 2` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll explore the topic of #FIXME.
+The theme for this week is Kubernetes fundamentals. Yesterday we talked about Services and Ingress. Today we'll explore the topic of passing configuration and secrets to our applications in Kubernetes with ConfigMaps and Secrets.
+
+:::tip Friday, February 3rd at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+
+:::
 
 ## What We'll Cover
- * Section 1
- * Section 2
- * Section 3
- * Section 4
- * Exercise: Try this yourself!
- * Resources: For self-study!
-
-
-<!-- ************************************* -->
-<!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
-<!-- ************************************* -->
+ * Decouple configurations with ConfigMaps and Secerts
+ * Passing Environment Data with ConfigMaps and Secrets
+ * Conclusion
 
 ## Decouple configurations with ConfigMaps and Secerts
 
@@ -54,7 +54,11 @@ Separating the configuration and secerts from your application promotes better o
 
 By the end of this tutorial, you'll have added a Kubernetes ConfigMap and Secret to the Azure Voting deployment.
 
-## Create the ConfigMap
+## Passing Environment Data with ConfigMaps and Secrets
+
+> 📝 NOTE: If you don't have an AKS cluster deployed, please head over to [Azure-Samples/azure-voting-app-rust](https://github.com/Azure-Samples/azure-voting-app-rust/tree/week2/day2), clone the repo, and follow the instructions in the [README.md](https://github.com/Azure-Samples/azure-voting-app-rust/blob/main/README.md) to execute the Azure deployment and setup your `kubectl` context. Check out [the first post this week for more on the environment setup](../2023-01-30/PodsAndDeployments.md#setting-up-a-kubernetes-environment-in-azure).
+
+### Create the ConfigMap
 
 ConfigMaps can be used in one of two ways; as environment variables or volumes. 
 
@@ -81,7 +85,7 @@ Follow the below steps to create a new ConfigMap:
     kubectl create -f config-map.yaml
     ```
 
-## Create the Secret
+### Create the Secret
 
 The `deployment-db.yaml` and `deployment-app.yaml` are Kubernetes manifests that deploy the Azure Voting App. Currently, those deployment manifests contain the environment variables `POSTGRES_PASSWORD` and `DATABASE_PASSWORD` with the value stored as plain text. Your task is to replace that environment variable with a Kubernetes Secret.
 
@@ -114,7 +118,7 @@ Create a Secret running the following commands:
 > [!WARNING]
 > base64 encoding is a simple and widely supported way to obscure plaintext data, it is not secure, as it can easily be decoded. If you want to store sensitive data like password, you should use a more secure method like encrypting with a Key Management Service (KMS) before storing it in the Secret.
 
-## Modify the app deployment manifest
+### Modify the app deployment manifest
 
 With the ConfigMap and Secert both created the next step is to replace the environment variables provided in the application deployment manuscript with the values stored in the ConfigMap and the Secert.
 
@@ -146,7 +150,7 @@ Complete the following steps to add the ConfigMap and Secert to the deployment m
     kubectl apply -f deployment-app.yaml
     ```
 
-## Modify the database deployment manifest 
+### Modify the database deployment manifest 
 
 Next, update the database deployment manifest and replace the plain text environment variable with the Kubernetes Secert.
 
@@ -168,7 +172,7 @@ Next, update the database deployment manifest and replace the plain text environ
     kubectl apply -f deployment-db.yaml
     ```
 
-## Verify the ConfigMap and output environment variables
+### Verify the ConfigMap and output environment variables
 
 Verify that the ConfigMap was added to your deploy by running the following command:
 
@@ -182,7 +186,7 @@ You can also verify that the environment variables from the config map are being
 
 By following these steps, you will have successfully added a config map to the Azure Voting App Kubernetes deployment, and the environment variables defined in the config map will be passed to the container running in the pod.
 
-## Verify the Secret and describe the deployment
+### Verify the Secret and describe the deployment
 
 Once the secret has been created you can verify it exists by running the following command:
 
