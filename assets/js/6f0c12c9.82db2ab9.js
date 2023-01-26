@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[72235],{19518:e=>{e.exports=JSON.parse('{"label":"microservices","permalink":"/Cloud-Native/cnny-2023/tags/microservices","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":1}')}}]);
