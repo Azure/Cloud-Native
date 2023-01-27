@@ -1,6 +1,6 @@
 ---
-slug: FIXME-eshoponweb-storage-configs-and-secrets
-title: FIXME - eShopOnWeb Storage, Configs, and Secrets
+slug: FIXME-week3-day2
+title: "3-2. Migrating Applications to Kubernetes: Adapting Storage, Networking, and Configuration"
 authors: [paul]
 draft: true
 hide_table_of_contents: false
@@ -36,11 +36,11 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 ## What We'll Cover
 
 * Gather requirements
-* Implement ConfigMaps
-* Implement Persistent Volumes using Azure Files
-* Implement Secrets using Azure Key Vault
-* Re-deploy the application and test
-* Summary
+* Implement environment variables using ConfigMaps
+* Implement persistent volumes using Azure Files
+* Implement secrets using Azure Key Vault
+* Re-package deployments
+* Conclusion
 * Resources
 
 <!-- ************************************* -->
@@ -65,7 +65,7 @@ Let's gather some requirements for configs, persistent storage, and secrets that
 * Need to inject ASP.NET environment variables to override app settings
 * Need persistent storage volume for ASP.NET key storage
 
-## Implement ConfigMaps
+## Implement environment variables using ConfigMaps
 
 ConfigMaps are relatively straight-forward to create. If you were following along with the examples last week, this should be review 😉
 
@@ -96,7 +96,7 @@ data:
 EOF
 ```
 
-## Implement Persistent Volumes using Azure Files
+## Implement persistent volumes using Azure Files
 
 Similar to last week's exercise, we will take advantage of storage classes built into AKS. For this week's scenario, the `azurefile-csi-premium` storage class will be used to create an Azure Files resource as our backend storage.
 
@@ -136,7 +136,7 @@ spec:
 EOF
 ```
 
-## Implement Secrets using Azure Key Vault
+## Implement secrets using Azure Key Vault
 
 It's a well known fact that Kubernetes secretes are just base64-encoded values and not secure especially if malicious users have access to your Kubernetes cluster. In a production scenario, you will want to leverage an external vault like [Azure Key Vault]((https://azure.microsoft.com/products/key-vault/)) or [HashiCorp Vault](https://www.vaultproject.io/) to encrypt and store secrets.
 
@@ -152,7 +152,9 @@ az aks enable-addons \
 With the add-on enabled, you should see `aks-secrets-store-csi-driver` and `aks-secrets-store-provider-azure` resources installed on each node in your Kubernetes cluster. Run the command below to verify.
 
 ```bash
-kubectl get pods -n kube-system -l 'app in (secrets-store-csi-driver, secrets-store-provider-azure)'
+kubectl get pods \
+  --namespace kube-system \
+  --selector 'app in (secrets-store-csi-driver, secrets-store-provider-azure)'
 ```
 
 The Secrets Store CSI driver enable the usage of secret stores via CSI (Container Storage Interface) volumes, and the [Azure Key Vault Provider for Secrets Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/) enables integration with Azure Key Vault. This provider offers capabilities such as mounting and syncing between the secure vault and Kubernetes Secrets.
@@ -163,16 +165,25 @@ You may not have an Azure Key Vault created yet, so let's create one and add som
 AKV_NAME=$(az keyvault create -n akv-eshop$RANDOM -g rg-eshop --query name -o tsv)
 
 # Database server password
-az keyvault secret set --vault-name $AKV_NAME -n mssql-password --value "@someThingComplicated1234"
+az keyvault secret set \
+  --vault-name $AKV_NAME \
+  --name mssql-password \
+  --value "@someThingComplicated1234"
 
 # Catalog database connection string
-az keyvault secret set --vault-name $AKV_NAME -n mssql-connection-catalog --value "Server=db;Database=Microsoft.eShopOnWeb.CatalogDb;User Id=sa;Password=@someThingComplicated1234;TrustServerCertificate=True;"
+az keyvault secret set \
+  --vault-name $AKV_NAME \
+  --name mssql-connection-catalog \
+  --value "Server=db;Database=Microsoft.eShopOnWeb.CatalogDb;User Id=sa;Password=@someThingComplicated1234;TrustServerCertificate=True;"
 
 # Identity database connection string
-az keyvault secret set --vault-name $AKV_NAME -n mssql-connection-identity --value "Server=db;Database=Microsoft.eShopOnWeb.Identity;User Id=sa;Password=@someThingComplicated1234;TrustServerCertificate=True;"
+az keyvault secret set \
+  --vault-name $AKV_NAME \
+  --name mssql-connection-identity \
+  --value "Server=db;Database=Microsoft.eShopOnWeb.Identity;User Id=sa;Password=@someThingComplicated1234;TrustServerCertificate=True;"
 ```
 
-### Authenticate using Azure Workload Identity
+### Pods authentication using Azure Workload Identity
 
 In order for our Pods to retrieve secrets from Azure Key Vault, we'll need to set up a way for the Pod to authenticate against Azure AD. This can be achieved by implementing the new [Azure Workload Identity](https://learn.microsoft.com/azure/aks/workload-identity-overview?WT.mc_id=containers-84290-pauyu) feature of AKS. 
 
@@ -189,7 +200,9 @@ For more information on how the authentication mechanism all works, check out th
 To implement all this, start by enabling the new preview feature for AKS.
 
 ```bash
-az feature register --namespace "Microsoft.ContainerService" --name "EnableWorkloadIdentityPreview"
+az feature register \
+  --namespace "Microsoft.ContainerService" \
+  --name "EnableWorkloadIdentityPreview"
 ```
 
 > 📝 NOTE: This can take several minutes to complete.
@@ -197,7 +210,9 @@ az feature register --namespace "Microsoft.ContainerService" --name "EnableWorkl
 Check the status and ensure the `state` shows `Regestered` before moving forward.
 
 ```bash
-az feature show --namespace "Microsoft.ContainerService" --name "EnableWorkloadIdentityPreview"
+az feature show \
+  --namespace "Microsoft.ContainerService" \
+  --name "EnableWorkloadIdentityPreview"
 ```
 
 Update your AKS cluster to enable the workload identity feature and enable the OIDC issuer endpoint.
@@ -324,7 +339,7 @@ az keyvault set-policy \
   --spn $MANAGED_IDENTITY_CLIENT_ID
 ```
 
-## Re-deploy the application and test
+## Re-package deployments
 
 Update your database deployment to load environment variables from our ConfigMap, attach the PVC and SecretProviderClass as volumes, mount the volumes into the Pod, and use the ServiceAccount called `eshop-account` to retrieve secrets.
 
@@ -509,7 +524,7 @@ If all went well with your deployment updates, you should be able to browse to y
 echo "http://$(kubectl get service web -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
 ```
 
-## Summary
+## Conclusion
 
 Although there is no visible changes on with our website, we've made a ton of changes on the Kubernetes backend to make this application much more secure and resilient.
 
