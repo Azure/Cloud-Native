@@ -2,7 +2,7 @@
 slug: explore-options
 title: 1-5. Exploring Cloud-Native Options
 authors: [cory]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
