@@ -174,7 +174,11 @@ kubectl apply -f ./manifests/pod-db.yaml
 
 I'm going to need the IP address of the Pod, so that my application can connect to it, so we can use `kubectl` to get some information about our pod.  By default, `kubectl get pod` only displays certain information but it retrieves a lot more.  We can use the [JSONPath syntax](https://kubernetes.io/docs/reference/kubectl/jsonpath/) to index into the response and get the information you want.
 
-***NOTE:* To see what you can get, I usually run the command with the output type of JSON and then I can find where the data I want is and create my JSONPath query to get it.**
+:::tip
+
+To see what you can get, I usually run the `kubectl` command with the output type (`-o JSON`) of JSON and then I can find where the data I want is and create my JSONPath query to get it.
+
+:::
 
 ```powershell,
 $DB_IP = kubectl get pod azure-voting-db -o jsonpath='{.status.podIP}'
