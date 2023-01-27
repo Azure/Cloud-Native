@@ -7,7 +7,7 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloud-native, containers, decision-tree, kubernetes, serverless, microservices]
-image: https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png
+image: https://azure.github.io/Cloud-Native/img/og/30-05.png
 description: There are many cloud-native technologies - but which are the best fit for your projects? 
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 
@@ -24,7 +24,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="https://azure.github.io/Cloud-Native/img/og/30-05.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@cskimming" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/cnny-2023/explore-options" />
@@ -58,7 +58,7 @@ Today, we will do a brief recap of some of these technologies and provide some b
  * [Microservices 101](https://azure.github.io/Cloud-Native/cnny-2023/microservices-101)
  * [Kubernetes 101](https://azure.github.io/Cloud-Native/cnny-2023/Kubernetes-101)
  
- :::
+:::
 
 --- 
 ## To Containerize or not to Containerize? 
@@ -116,8 +116,8 @@ For a detailed look into the world of Serverless and lots of great learning cont
 ## Resources
 * **Register** for the [Cloud Skills Challenge](https://aka.ms/Challenge) - 30 days to complete it!
 * **Learning Resources**: [#30DaysOfCloudNative Collection](https://aka.ms/CNNY/collection)
-* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/en-us/resources/cloud-native-infrastructure-with-microsoft-azure/)
-* **eBook:** [Cloud-native Architecture Mapbook](https://azure.microsoft.com/en-us/resources/azure-cloud-native-architecture-mapbook/)
+* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/resources/cloud-native-infrastructure-with-microsoft-azure/?WT.mc_id=javascript-74010-ninarasi)
+* **eBook:** [Cloud-native Architecture Mapbook](https://azure.microsoft.com/resources/azure-cloud-native-architecture-mapbook/?WT.mc_id=javascript-74010-ninarasi)
 
 ---
 ## What's up next in #CloudNativeNewYear?
