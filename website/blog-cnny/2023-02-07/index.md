@@ -47,11 +47,17 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 <!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
 <!-- ************************************* -->
 
+:::caution 
+
+Before you begin, make sure you've gone through yesterday's [post](#FIXME) to set up your AKS cluster and CI/CD workflows. As you make modifications to your AKS deployment, you will be committing files to your GitHub repo, and using GitHub Workflows to automatically deploy the changes.
+
+:::
+
 ## Gather requirements
 
-The eShopOnWeb application has a fairly simple architecture. The web UI is written in .NET 7 and has two components. One is the front end where customers can browse and shop while the other is for administrators to maintain the product catalog. The data that powers both the web UI components is sourced from a SQL Server container. This database server consists of two databases; one for the product catalog, and another for the user identities.
+The eShopOnWeb application is written in .NET 7 and has two major pieces of functionality. The front end site is where customers can browse and shop. The site also allows admins to gain access to a backend portal to manage the product catalog. This admin portal, relies on a separate REST API service for its data and the data is sourced from a SQL Server container.
 
-Let's gather some requirements for configs, persistent storage, and secrets that we'll need to implement in our Kubernetes cluster.
+Looking through the source code which can be found [here](https://github.com/pauldotyu/eShopOnWeb/tree/main/src) we can identify some requirements for configs, persistent storage, and secrets.
 
 ### Database server
 
@@ -83,7 +89,7 @@ data:
 EOF
 ```
 
-Create a ConfigMap to store ASP.NET environment variables.
+Create another ConfigMap to store ASP.NET environment variables.
 
 ```bash
 kubectl apply -f - <<EOF
@@ -98,9 +104,9 @@ EOF
 
 ## Implement persistent volumes using Azure Files
 
-Similar to last week's exercise, we will take advantage of storage classes built into AKS. For this week's scenario, the `azurefile-csi-premium` storage class will be used to create an Azure Files resource as our backend storage.
+Similar to last week, we will take advantage of storage classes built into AKS. For our SQL Server data, we'll use the `azurefile-csi-premium` storage class and leverage an Azure Files resource as our backend storage.
 
-Create a PVC for the database server.
+Create a PVC for persisting SQL Server data.
 
 ```bash
 kubectl apply -f - <<EOF
@@ -118,7 +124,7 @@ spec:
 EOF
 ```
 
-Create a PVC for the ASP.NET applications.
+Create another PVC for persisting ASP.NET data.
 
 ```bash
 kubectl apply -f - <<EOF
@@ -143,10 +149,15 @@ It's a well known fact that Kubernetes secretes are just base64-encoded values a
 With AKS, we can enable the [Secrets Store CSI driver](https://secrets-store-csi-driver.sigs.k8s.io/) add-on which will allow us to leverage Azure Key Vault.
 
 ```bash
+# Set some variables
+RG_NAME=<YOUR_RESOURCE_GROUP_NAME>
+AKS_NAME=<YOUR_AKS_CLUSTER_NAME>
+ACR_NAME=<YOUR_ACR_NAME>
+
 az aks enable-addons \
   --addons azure-keyvault-secrets-provider \
-  --name <YOUR_AKS_CLUSTER_NAME> \
-  --resource-group <YOUR_RESOURCE_GROUP_NAME>
+  --name $AKS_NAME \
+  --resource-group $RG_NAME
 ```
 
 With the add-on enabled, you should see `aks-secrets-store-csi-driver` and `aks-secrets-store-provider-azure` resources installed on each node in your Kubernetes cluster. Run the command below to verify.
@@ -162,7 +173,10 @@ The Secrets Store CSI driver enable the usage of secret stores via CSI (Containe
 You may not have an Azure Key Vault created yet, so let's create one and add some secrets to it.
 
 ```bash
-AKV_NAME=$(az keyvault create -n akv-eshop$RANDOM -g rg-eshop --query name -o tsv)
+AKV_NAME=$(az keyvault create \
+  --name akv-eshop$RANDOM \
+  --resource-group $RG_NAME \
+  --query name -o tsv)
 
 # Database server password
 az keyvault secret set \
@@ -185,9 +199,13 @@ az keyvault secret set \
 
 ### Pods authentication using Azure Workload Identity
 
-In order for our Pods to retrieve secrets from Azure Key Vault, we'll need to set up a way for the Pod to authenticate against Azure AD. This can be achieved by implementing the new [Azure Workload Identity](https://learn.microsoft.com/azure/aks/workload-identity-overview?WT.mc_id=containers-84290-pauyu) feature of AKS. 
+In order for our Pods to retrieve secrets from Azure Key Vault, we'll need to set up a way for the Pod to authenticate against Azure AD. This can be achieved by implementing the new [Azure Workload Identity](https://learn.microsoft.com/azure/aks/workload-identity-overview?WT.mc_id=containers-84290-pauyu) feature of AKS.
 
-> 📝 NOTE: At the time of this writing, the workload identity feature of AKS is in Preview.
+:::info
+
+At the time of this writing, the workload identity feature of AKS is in Preview.
+
+:::
 
 The workload identity feature within AKS allows us to leverage native Kubernetes resources and link a [Kubernetes ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) to an [Azure Managed Identity](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview?WT.mc_id=containers-84290-pauyu) to authenticate against Azure AD.
 
@@ -205,7 +223,11 @@ az feature register \
   --name "EnableWorkloadIdentityPreview"
 ```
 
-> 📝 NOTE: This can take several minutes to complete.
+:::caution
+
+This can take several minutes to complete.
+
+:::
 
 Check the status and ensure the `state` shows `Regestered` before moving forward.
 
@@ -219,8 +241,8 @@ Update your AKS cluster to enable the workload identity feature and enable the O
 
 ```bash
 az aks update \
-  --name aks-eshop \
-  --resource-group rg-eshop \
+  --name $AKS_NAME \
+  --resource-group $RG_NAME \
   --enable-workload-identity \
   --enable-oidc-issuer 
 ```
@@ -229,8 +251,8 @@ Create an Azure Managed Identity and retrieve its clientId.
 
 ```bash
 MANAGED_IDENTITY_CLIENT_ID=$(az identity create \
-  --name mid-eshop \
-  --resource-group rg-eshop \
+  --name aks-workload-identity \
+  --resource-group $RG_NAME \
   --subscription $(az account show --query id -o tsv) \
   --query 'clientId' -o tsv)
 ```
@@ -242,8 +264,9 @@ Create the Kubernetes ServiceAccount.
 SERVICE_ACCOUNT_NAMESPACE=default
 
 # Set the service account name
-SERVICE_ACCOUNT_NAME=eshop-account
+SERVICE_ACCOUNT_NAME=eshop-serviceaccount
 
+# Create the service account
 kubectl apply -f - <<EOF
 apiVersion: v1
 kind: ServiceAccount
@@ -257,27 +280,34 @@ metadata:
 EOF
 ```
 
-We just deployed and enabled a bunch of stuff. Let's review what we just did.
+That was a lot... Let's review what we just did.
 
-We have an Azure Managed Identity (which is an object in Azure AD), an OIDC issuer endpoint (which is in our Kubernetes cluster), and a Kubernetes ServiceAccount. 
+We have an Azure Managed Identity (object in Azure AD), an OIDC issuer URL (endpoint in our Kubernetes cluster), and a Kubernetes ServiceAccount.
 
 The next step is to tie these three components together and establish a [Federated Identity Credential](https://learn.microsoft.com/graph/api/resources/federatedidentitycredentials-overview?WT.mc_id=containers-84290-pauyu&view=graph-rest-1.0) so that Azure AD can trust authentication requests from your Kubernetes cluster.
 
-> 📝 NOTE: This identity federation can be established between Azure AD any Kubernetes cluster; not just AKS 🤗
+:::info
+
+This identity federation can be established between Azure AD any Kubernetes cluster; not just AKS 🤗
+
+:::
 
 To establish the federated credential, we'll need the OIDC issuer URL, and a subject which points to your Kubernetes ServiceAccount.
 
 ```bash
 # Get the OIDC issuer URL
-OIDC_ISSUER_URL=$(az aks show -n aks-eshop -g rg-eshop --query "oidcIssuerProfile.issuerUrl" -o tsv)
+OIDC_ISSUER_URL=$(az aks show \
+  --name $AKS_NAME \
+  --resource-group $RG_NAME \
+  --query "oidcIssuerProfile.issuerUrl" -o tsv)
 
 # Set the subject name using this format: `system:serviceaccount:<YOUR_SERVICE_ACCOUNT_NAMESPACE>:<YOUR_SERVICE_ACCOUNT_NAME>`
 SUBJECT=system:serviceaccount:$SERVICE_ACCOUNT_NAMESPACE:$SERVICE_ACCOUNT_NAME
 
 az identity federated-credential create \
-  --name fc-eshop \
-  --identity-name mid-eshop \
-  --resource-group rg-eshop \
+  --name aks-federated-credential \
+  --identity-name aks-workload-identity \
+  --resource-group $RG_NAME \
   --issuer $OIDC_ISSUER_URL \
   --subject $SUBJECT
 ```
@@ -286,7 +316,10 @@ With the authentication components set, we can now create a SecretProviderClass 
 
 ```bash
 # Get the tenant id for the key vault
-TENANT_ID=$(az keyvault show -n $AKV_NAME -g rg-eshop --query properties.tenantId -o tsv)
+TENANT_ID=$(az keyvault show \
+  --name $AKV_NAME \
+  --resource-group $RG_NAME \
+  --query properties.tenantId -o tsv)
 
 # Create the secret provider for azure key vault
 kubectl apply -f - <<EOF
@@ -341,7 +374,7 @@ az keyvault set-policy \
 
 ## Re-package deployments
 
-Update your database deployment to load environment variables from our ConfigMap, attach the PVC and SecretProviderClass as volumes, mount the volumes into the Pod, and use the ServiceAccount called `eshop-account` to retrieve secrets.
+Update your database deployment to load environment variables from our ConfigMap, attach the PVC and SecretProviderClass as volumes, mount the volumes into the Pod, and use the ServiceAccount to retrieve secrets.
 
 Additionally, you may notice the database Pod is set to use `fsGroup:10001` as part of the `securityContext`. This is required as the MSSQL container runs using a non-root account called `mssql` and this account has the proper permissions to read/write data at the `/var/opt/mssql` mount path.
 
@@ -365,7 +398,7 @@ spec:
     spec:
       securityContext:
         fsGroup: 10001
-      serviceAccountName: eshop-account
+      serviceAccountName: ${SERVICE_ACCOUNT_NAME}
       containers:
         - name: db
           image: mcr.microsoft.com/mssql/server:2019-latest
@@ -403,6 +436,9 @@ EOF
 We'll update the API and Web deployments in a similar way.
 
 ```bash
+# Set the image tag
+IMAGE_TAG=<YOUR_IMAGE_TAG>
+
 # API deployment
 kubectl apply -f - <<EOF
 apiVersion: apps/v1
@@ -421,10 +457,10 @@ spec:
       labels:
         app: api
     spec:
-      serviceAccount: eshop-account
+      serviceAccount: ${SERVICE_ACCOUNT_NAME}
       containers:
         - name: api
-          image: ${ACR_NAME}.azurecr.io/api:v0.1.0
+          image: ${ACR_NAME}.azurecr.io/api:${IMAGE_TAG}
           ports:
             - containerPort: 80
           envFrom:
@@ -478,10 +514,10 @@ spec:
       labels:
         app: web
     spec:
-      serviceAccount: eshop-account
+      serviceAccount: ${SERVICE_ACCOUNT_NAME}
       containers:
         - name: web
-          image: ${ACR_NAME}.azurecr.io/web:v0.1.0
+          image: ${ACR_NAME}.azurecr.io/web:${IMAGE_TAG}
           ports:
             - containerPort: 80
           envFrom:
