@@ -2,7 +2,7 @@
 slug: fundamentals-day-1
 title: 2-1. Kubernetes Fundamentals - Pods and Deployments
 authors: [steven]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -395,9 +395,11 @@ Now, we can update our application deployment configuration file with:
         env:
         - name: DATABASE_SERVER
           value: YOUR_NEW_IP_HERE
+        - name: DATABASE_PASSWORD
+          value: mypassword
 ```
 
-Your file should look like this [deployment-app.yaml](https://github.com/azure-samples/azure-voting-app-rust/blob/week2/day1/manifests/deployment-app.yaml).
+Your file should look like this [deployment-app.yaml](https://github.com/azure-samples/azure-voting-app-rust/blob/week2/day1/manifests/deployment-app.yaml) (but with IPs and image names matching your environment).
 
 After we save those changes, we can deploy our application.
 
@@ -431,6 +433,10 @@ NAME                                READY   STATUS    RESTARTS   AGE
 azure-voting-app-56c9ccc89d-2b5mx   1/1     Running   0          2s
 azure-voting-db-686d758fbf-8jnq8    1/1     Running   0          14m
 ```
+
+:::info
+Your Pods will likely have different identifiers at the end, so adjust your commands to match the names in your environment.
+:::
 
 As you can see, by the time the `kubectl get pods` command was run, Kubernetes had already spun up a new pod for the application container image.  Thanks Kubernetes!
 
