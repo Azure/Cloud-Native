@@ -20,7 +20,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
   <meta name="twitter:description"
     content="The theme for this week is Kubernetes fundamentals. Today we'll explore the topic of Pods and Deployments in Kubernetes." />
   <meta name="twitter:image"
-    content="image: https://azure.github.io/Cloud-Native/img/og/30-06.png" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-06.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator"
     content="@stevenmurawski" />
