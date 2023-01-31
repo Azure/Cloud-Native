@@ -100,7 +100,7 @@ function CampaignHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Link to="/blog">
+        <Link to="/cnny-2023">
           <Image img={bannerImg} className={styles.featureImg} />
         </Link>
       </div>
@@ -132,7 +132,7 @@ export default function() {
       <main>
         <br/>
         <p className="container">
-          Join us for a month-long celebration of Cloud-Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then  <b>check back on January 23, 2023</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native developer journey. 
+          Join us for a month-long celebration of Cloud-Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then <b><a href="/Cloud-Native/cnny-2023">head over to the blog</a> every week day</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native developer journey. 
         </p>
         <FeaturesSection/>
       </main>
