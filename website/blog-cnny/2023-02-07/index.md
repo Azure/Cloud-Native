@@ -1,6 +1,6 @@
 ---
 slug: FIXME-week3-day2
-title: "3-2. Migrating Applications to Kubernetes: Adapting Storage, Networking, and Configuration"
+title: "3-2. Migrating Applications to Kubernetes: Adapting Storage, Secrets, and Configuration"
 authors: [paul]
 draft: true
 hide_table_of_contents: false
