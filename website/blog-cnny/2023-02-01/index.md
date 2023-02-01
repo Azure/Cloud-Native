@@ -2,7 +2,7 @@
 slug: fundamentals-day-3
 title: 2-3. Kubernetes Fundamentals - ConfigMaps and Secrets
 authors: [josh]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
