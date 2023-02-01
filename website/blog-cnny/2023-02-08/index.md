@@ -31,7 +31,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, ingress
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll explore how to expose the eShopOnWeb app so that customers can reach it over the internet using a custom domain name and TLS.
+The theme for this week is #FIXME. Yesterday we added configuration, secrets, and storage to our app. Today we'll explore how to expose the eShopOnWeb app so that customers can reach it over the internet using a custom domain name and TLS.
 
 ## What We'll Cover
 
@@ -49,32 +49,36 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 
 ## Gather requirements
 
-Currently, our eShopApplication has three services:
+Currently, our eShopOnWeb app has three Kubernetes services deployed:
 
-1. The `db` pod is exposed internally via `ClusterIP`
-1. The `api` pod is exposed externally via `LoadBalancer`
-1. The `web` pod is exposed externally via `LoadBalancer`
+1. `db` exposed internally via `ClusterIP`
+1. `api` exposed externally via `LoadBalancer`
+1. `web` exposed externally via `LoadBalancer`
 
-When using `LoadBalancer`, AKS provisions an Azure Load Balancer with a public IP address and up to this point, we've been using this to test. No one is going to remember the IP address, so we need to fix that by adding a custom domain name and securing it with a TLS certificate.
+As mentioned in [my post last week](https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-2/), Services deployed in front of Pods allows applications to communicate with each other using DNS names. Kubernetes has service discovery capabilities built-in that allows Pods to resolve Services simply by using their names.
 
-Here's what we are going to need:
+In the case of our `api` and `web` deployments, they can simply reach the database by calling its name, `db`. The service type of `ClusterIP` for the `db` can remain as-is since it only needs to be accessed by the `api` and `web` apps.
+
+On the other hand, `api` and `web` both need to be accessed over the public internet for our users. Currently, these services are using service type `LoadBalancer` which tells AKS to provision an Azure Load Balancer with a public IP address. No one is going to remember the IP addresses, so we need to make the app more accessible by adding a custom domain name and securing it with a TLS certificate.
+
+Here's what we're going to need:
 
 * Custom domain name added to our externally accessible services (`api` and `web`)
 * TLS certificate for the custom domain name
 * Routing rule to ensure requests with `/api/` in the URL is routed to the backend REST API
 * Routing rule to ensure requests without `/api/` in the URL is routing to the storefront
 
-With AKS, the [Web Application Routing](https://learn.microsoft.com/azure/aks/web-app-routing?WT.mc_id=containers-84290-pauyu&tabs=without-osm) add-on will help us achieve all these goals. This add-on will install a managed open-source NGINX Ingress Controller and also enable integrations with Azure DNS and Azure Key Vault. The integration with Azure DNS is made possible via the `external-dns` controller which is deployed into your AKS cluster and the integration with Azure Key Vault is made possible via the Secret Store CSI driver (which was installed during yesterday's exercise).
+Just like last week, we will use the [Web Application Routing](https://learn.microsoft.com/azure/aks/web-app-routing?WT.mc_id=containers-84290-pauyu&tabs=without-osm) add-on for AKS. But this time, we'll enable its integrations with Azure DNS and Azure Key Vault to satisfy all of our app requirements.
 
 :::info
 
-For learning purposes we will use self-signed certificates and a fake custom domain name. In order to browse to the site using the custom domain, you will need to update your host file and add an entry which points the custom domain to the ingress public IP address. This will mimic a DNS lookup on your machine. In a production scenario, you will need to have a real domain delegated to Azure DNS and a valid TLS certificate for your domain.
+At the time of this writing the add-on is still in Public Preview
 
 :::
 
 ## Generate TLS certificate and store in Azure Key Vault
 
-We deployed an Azure Key Vault yesterday to store secrets, so we'll use it to store our TLS certificates as well.
+We deployed an Azure Key Vault [yesterday](#FIXME) to store secrets. We'll use it again to store our TLS certificates too.
 
 Let's create and export a self-signed certificate for our custom domain.
 
@@ -84,7 +88,15 @@ openssl req -new -x509 -nodes -out web-tls.crt -keyout web-tls.key -subj "/CN=${
 openssl pkcs12 -export -in web-tls.crt -inkey web-tls.key -out web-tls.pfx -password pass:
 ```
 
-Get your Azure Key Vault name and set the value in a variable.
+:::info
+
+For learning purposes we'll use a self-signed certificate and a fake custom domain name. To browse to the site using the fake domain, we'll need to mimic a DNS lookup by adding an entry to your host file which points the domain to the public IP address assigned to the ingress controller.
+
+In a production scenario, you will need to have a real domain delegated to Azure DNS and a valid TLS certificate for your domain.
+
+:::
+
+Grab your Azure Key Vault name and set the value in a variable for later use.
 
 ```bash
 RESOURCE_GROUP=cnny-week3
@@ -123,7 +135,7 @@ WEB_TLS_CERT_ID=$(az keyvault certificate import \
 Create a custom domain for our application.
 
 ```bash
-DNS_NAME=eshoponweb.$RANDOM.com
+DNS_NAME=eshoponweb$RANDOM.com
 
 DNS_ZONE_ID=$(az network dns zone create \
   --name $DNS_NAME \
@@ -134,9 +146,14 @@ DNS_ZONE_ID=$(az network dns zone create \
 
 ## Enable Web Application Routing add-on for AKS
 
-In order for the Web Application Routing add-on to be able to manipulate DNS zone entries in the Azure DNS resource, we'll need to pass in the `--dns-zone-resource-id` parameter.
+As we enable the Web Application Routing add-on, we'll also pass in the Azure DNS Zone resource id so that DNS zone entries can be automatically created as you deploy Ingress manifests.
 
 ```bash
+AKS_NAME=$(az resource list \
+  --resource-group $RESOURCE_GROUP \
+  --resource-type Microsoft.ContainerService/managedClusters \
+  --query "[0].name" -o tsv)
+
 az aks enable-addons \
   --name $AKS_NAME \
   --resource-group $RESOURCE_GROUP \
@@ -144,10 +161,10 @@ az aks enable-addons \
   --dns-zone-resource-id=$DNS_ZONE_ID
 ```
 
-The Web Application Routing add-on also deploys a new Azure Managed Identity in your AKS cluster's managed resource group. This managed identity is what the `external-dns` controller uses to write entries into Azure DNS. Currently, it does not have permission to do that, so let's grant it permission.
+The add-on will deploy a new Azure Managed Identity. This managed identity is used by the [`external-dns` controller](https://learn.microsoft.com/azure/aks/web-app-routing?WT.mc_id=containers-84290-pauyu&tabs=without-osm#web-application-routing-add-on-overview:~:text=external%2Ddns%20controller%3A%20Watches%20for%20Kubernetes%20Ingress%20resources%20and%20creates%20DNS%20A%20records%20in%20the%20cluster%2Dspecific%20DNS%20zone.%20Note%20that%20this%20is%20only%20deployed%20when%20you%20pass%20in%20the%20%2D%2Ddns%2Dzone%2Dresource%2Did%20argument.), which is deployed into your Kubernetes cluster to write DNS entries on your behalf. Currently, it does not have permission to do that, so let's grant it permission.
 
 ```bash
-# This is where resources are automatically deployed into by AKS
+# This is where resources are automatically deployed by AKS
 NODE_RESOURCE_GROUP=$(az aks show \
   --name $AKS_NAME \
   --resource-group $RESOURCE_GROUP \
@@ -168,6 +185,16 @@ az role assignment create \
   --scope $DNS_ZONE_ID
 ```
 
+The Azure Managed Identity will also be used to retrieve and rotate TLS certificates from Azure Key Vault. So we'll need to grant it permission for that too.
+
+```bash
+az keyvault set-policy \
+  --name $AKV_NAME \
+  --object-id $MANAGED_IDENTTIY_OBJECT_ID \
+  --secret-permissions get \
+  --certificate-permissions get
+```
+
 ## Implement Ingress for the web application
 
 Before we create a new Ingress manifest, let's update the existing services to use `ClusterIP` instead of `LoadBalancer`. With an Ingress in place, there is no reason why we need the Service resources to be accessible from outside the cluster. The new Ingress will be the only entrypoint for external users.
@@ -179,7 +206,7 @@ kubectl patch service api -p '{"spec": {"type": "ClusterIP"}}'
 kubectl patch service web -p '{"spec": {"type": "ClusterIP"}}'
 ```
 
-Deploy a new Ingress for the web UI.
+Deploy a new Ingress to place in front of the `web` Service. Notice there is a special `annotations` entry for `kubernetes.azure.com/tls-cert-keyvault-uri` which points back to our self-signed certificate that was uploaded to Azure Key Vault.
 
 ```bash
 kubectl apply -f - <<EOF
@@ -202,6 +229,13 @@ spec:
               number: 80
         path: /
         pathType: Prefix
+      - backend:
+          service:
+            name: api
+            port:
+              number: 80
+        path: /api
+        pathType: Prefix
   tls:
   - hosts:
     - ${DNS_NAME}
@@ -209,118 +243,93 @@ spec:
 EOF
 ```
 
-Within a few minutes, Azure DNS will be updated with a new `A` record which points to the ingress resource's public IP. Since we have a custom domain now, we can simply browse using this domain name.
+In our manifest above, we've also configured the Ingress route the traffic to either the `web` or `api` services based on the URL path requested. If the request URL includes `/api`/ then it will send traffic to the `api` backend service. Otherwise, it will send traffic to the `web` service.
+
+Within a few minutes, the `external-dns` controller will add an `A` record to Azure DNS which points to the Ingress resource's public IP. With the custom domain in place, we can simply browse using this domain name.
 
 :::info
 
-As mentioned above, since this is not a real domain name, we need to modify the host file on our local machine to make it seem like our custom domain resolves to the ingress resource's public IP address.
+As mentioned above, since this is not a real domain name, we need to modify our host file to make it seem like our custom domain is resolving to the Ingress' public IP address.
 
-To get the ingress public IP, run the following.
+To get the ingress public IP, run the following:
 
 ```bash
+# Get the IP
 kubectl get ingress web -o jsonpath="{.status.loadBalancer.ingress[0].ip}"
+
+# Get the hostname
+kubectl get ingress web -o jsonpath="{.spec.tls[0].hosts[0]}"
 ```
 
 Next, open your host file and add an entry using the format `<YOUR_PUBLIC_IP> <YOUR_CUSTOM_DOMAIN>`. Below is an example of what it should look like.
 
 ```text
-20.237.116.224 eshoponweb.11265.com
+20.237.116.224 eshoponweb11265.com
 ```
 
 See this [doc](https://linuxize.com/post/how-to-edit-your-hosts-file/) for more info on how to do this.
 
 :::
 
-Since we are using a self-signed certificate, your browser will give you a warning about the site being insecure. This is expected, so go ahead and proceed anyway to load up the page.
+When browsing to the website, you may be presented with a warning about your connection not being private. This is due to the fact that we are using a self-signed certificate. This is expected, so go ahead and proceed anyway to load up the page.
 
-Browse around, add items to the cart and check-out using the `demo@microsoft.com` account.
+### Why is the Admin page broken?
 
-### Broken admin page
+If you log in using the `admin@microsoft.com` account and browse to the **Admin** page, you'll notice no products are loaded on the page.
 
-Log out then log back in using the `admin@microsoft.com` account and browse to the **Admin** page. Did you notice no products were loaded on the page? This is because we have not configured a route for it. We need to add an additional path in our ingress manifest to tell it to route all traffic with `/api/` in the URL to the `api` service. We can simply add another `backend` to the `paths` array in the YAML manifest.
+This is because the admin page is built using Blazor and compiled as a WebAssembly application that runs in your browser. When the application was compiled, it packed the `appsettings.Development.json` file as an embedded resource. This file contains the base URL for the public API and it currently points to `https://localhost:5099`. Now that we have a domain name, we can update the base URL and point it to our custom domain.
 
-```yaml
-      - backend:
-          service:
-            name: api
-            port:
-              number: 80
-        path: /api
-        pathType: Prefix
-```
-
-Let's re-apply our updated manifest.
+From the root of the `eShopOnWeb` repo, update the configuration file using a [`sed` command](https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/).
 
 ```bash
-kubectl apply -f - <<EOF
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    kubernetes.azure.com/tls-cert-keyvault-uri: ${WEB_TLS_CERT_ID}
-  name: web
-spec:
-  ingressClassName: webapprouting.kubernetes.azure.com
-  rules:
-  - host: ${DNS_NAME}
-    http:
-      paths:
-      - backend:
-          service:
-            name: web
-            port:
-              number: 80
-        path: /
-        pathType: Prefix
-      - backend:
-          service:
-            name: api
-            port:
-              number: 80
-        path: /api
-        pathType: Prefix
-  tls:
-  - hosts:
-    - ${DNS_NAME}
-    secretName: web-tls
-EOF
+sed -i -e "s/localhost:5099/${DNS_NAME}/g" ./src/BlazorAdmin/wwwroot/appsettings.Development.json
 ```
 
-The admin page is built using Blazor and compiled as a WebAssembly application which runs in your browser. When it was initially compiled it embedded the `appsettings.Development.json` file as a resource. This configuration file has an entry for `abiBase` which is what determines the public API endpoints to call for data. Now that we have a domain name, we can update the `appsettings.Development.json` file, rebuild the container, then update the image.
-
-Update the configuration file.
+Rebuild and push the container to Azure Container Registry.
 
 ```bash
-sed -i "s/localhost:5099/${DNS_NAME}/g" ./src/BlazorAdmin/wwwroot/appsettings.Development.json
-```
-
-Rebuild the container.
-
-```bash
+# Grab the name of your Azure Container Registry
 ACR_NAME=$(az resource list \
   --resource-group $RESOURCE_GROUP \
   --resource-type Microsoft.ContainerRegistry/registries \
   --query "[0].name" -o tsv)
 
+# Invoke a build and publish job
 az acr build \
   --registry $ACR_NAME \
   --image $ACR_NAME.azurecr.io/web:v0.1.0 \
   --file ./src/Web/Dockerfile .
 ```
 
-Once the container build has completed, update the `web` deployment to deploy the latest.
+Once the container build has completed, we can issue a `kubectl patch` command to quickly update the `web` deployment to test our change.
 
 ```bash
-kubectl patch deployment web -p '{"spec": {"template": {"spec": {"containers": {"image": "${ACR_NAME}.azurecr.io/web:v0.1.0"}}}}}'
+kubectl patch deployment web -p "$(cat <<EOF
+{
+  "spec": {
+    "template": {
+      "spec": {
+        "containers": [
+          {
+            "name": "web",
+            "image": "${ACR_NAME}.azurecr.io/web:v0.1.0"
+          }
+        ]
+      }
+    }
+  }
+}
+EOF
+)"
 ```
 
-Finally, we can browse to our admin page again and confirm it is loading product data 🥳
+If all went well, you will be able to browse the admin page again and confirm product data is being loaded 🥳
 
 ## Conclusion
 
-The Web Application Routing for AKS aims to secure and streamline the process of making your application available to the public. It natively integrates with other Azure services like Azure DNS and Azure Key Vault and eliminates the need to make DNS entries and can automatically pull in TLS certificates directly from Azure Key Vault and even rotate them as you upload newer certificates.
+The Web Application Routing for AKS aims to secure and streamline the process of making your application available to the public. With the "managed" open-source [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), we can configure routing rules to send traffic to appropriate services. Since it is managed by Azure, it natively integrates with other Azure services like Azure DNS and eliminates the need to manually create DNS entries. It can also integrate with Azure Key Vault to automatically pull in TLS certificates and rotate them as needed to further reduce operational overhead.
 
-In the upcoming posts we'll look to further operationalize our deployment and add additional security features so stay tuned!
+We are one step closer to production and in the upcoming posts we'll further operationalize and secure our deployment, so stay tuned!
 
 In the meantime, check out the resources listed below for further reading.
 
@@ -329,3 +338,5 @@ In the meantime, check out the resources listed below for further reading.
 * [Web Application Routing (Preview)](https://learn.microsoft.com/azure/aks/web-app-routing?WT.mc_id=containers-84290-pauyu&tabs=without-osm)
 * [Web Application Routing on AKS](https://dev.to/azure/web-application-routing-on-aks-58ap)
 * [Lab: Web Application Routing with AKS](https://aka.ms/aks-webapp-routing-lab)
+* [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
+* [What is Azure DNS?](https://learn.microsoft.com/azure/dns/dns-overview?WT.mc_id=containers-84290-pauyu)
