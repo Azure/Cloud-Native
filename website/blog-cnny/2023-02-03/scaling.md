@@ -2,7 +2,7 @@
 slug: fundamentals-day-5
 title: 2-5. Kubernetes Fundamentals - Scaling Pods and Nodes
 authors: [steven]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
