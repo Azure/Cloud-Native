@@ -64,7 +64,7 @@ To follow along, you'll need an instance of:
 
 ## Create a digital signing certificate
 
-A digital signing certificate is certificate that is used to digitally sign and verify the authenticity and integrity of digital artifacts. Such documents, software, and of course container images. 
+A digital signing certificate is a certificate that is used to digitally sign and verify the authenticity and integrity of digital artifacts. Such documents, software, and of course container images.  
 
 Before you can implement digital signatures, you must first create a digital signing certificate. 
 
@@ -95,7 +95,7 @@ Run the following command to generate the certificate:
 
     The _ekus_ and _key usage_ of this certificate policy dictate that the certificate can only be used for digital signatures.
 
-2. Create the certificate in Azure KeyVault
+2. Create the certificate in Azure Key Vault
 
     ```bash
     az keyvault certificate create --name $keyName --vault-name $keyVaultName --policy @my_policy.json
@@ -105,9 +105,9 @@ Run the following command to generate the certificate:
 
 ## Generate a Azure Container Registry token
 
-Azure Container Registry tokens are used to grant access to the contents of the registry. Tokens can be used for a varity of things such as pulling images, pushing images, or managing the registry. 
+Azure Container Registry tokens are used to grant access to the contents of the registry. Tokens can be used for a variety of things such as pulling images, pushing images, or managing the registry.
 
-As part of the container image signing workflow you'll need a token to authenticate the Notation CLI with your Azure Container Registry.
+As part of the container image signing workflow, you'll need a token to authenticate the Notation CLI with your Azure Container Registry.
 
 Run the following command to generate an ACR token:
 
@@ -125,7 +125,7 @@ Replace `$tokenName` with your name for the ACR token and `$registry` with the n
 
 ## Setup Notation
 
-Notation is the command-line interface for the CNCF Notary projet. You'll use it to digitally sign the _api_ and _web_ container images for the eShopOnWeb application.
+Notation is the command-line interface for the CNCF Notary project. You'll use it to digitally sign the _api_ and _web_ container images for the eShopOnWeb application.
 
 Run the following commands to download and install the NotationCli:
 
@@ -170,7 +170,7 @@ Run the following commands to download and install the NotationCli:
 
 ## Install the Notation Azure Key Vault plugin
 
-By design the NotationCli supports plugins that extend its digital signing capabilites to remote registries. And in order to sign your container images stored in Azure Container Registry, you'll need to install the Azure Key Vault plugin for Notation.
+By design the NotationCli supports plugins that extend its digital signing capabilities to remote registries. And in order to sign your container images stored in Azure Container Registry, you'll need to install the Azure Key Vault plugin for Notation.
 
 Run the following commands to install the `azure-kv` plugin:
 
