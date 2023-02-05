@@ -23,7 +23,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="https://azure.github.io/Cloud-Native/img/og/30-11.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator"
-    content="@smurawski" />
+    content="@stevenmurawski" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
     href="https://azure.github.io/Cloud-Native/blog/bring-your-app-day-1" />
