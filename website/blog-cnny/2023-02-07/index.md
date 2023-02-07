@@ -7,7 +7,7 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloudnative, azure, kubernetes, configmaps, persistent-volumes, secrets, azure-files, azure-key-vault, azure-workload-identity, best-practices]
-image: https://via.placeholder.com/600x200?text=Placeholder
+image: https://azure.github.io/Cloud-Native/img/og/30-12.png
 description: "Learn how to optimize your Kubernetes environment by implementing ConfigMaps for environment variable management, Azure Files for persistent storage, and Azure Workload Identity plus Azure Key Vault for secure secret management." 
 tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, configmaps, persistent-storage, secrets-management, workload-identity]
 ---
@@ -16,22 +16,36 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, configm
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-2" />
   <meta name="twitter:title" 
-    content="FIXME: Title Of Post" />
+    content="3-2. Bringing Your Application to Kubernetes - Adapting Storage, Secrets, and Configuration" />
   <meta name="twitter:description" 
-    content="FIXME: Post Description" />
+    content="Learn how to optimize your Kubernetes environment by implementing ConfigMaps for environment variable management, Azure Files for persistent storage, and Azure Workload Identity plus Azure Key Vault for secure secret management." />
   <meta name="twitter:image" 
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-12.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@pauldotyu" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-2" />
 </head>
 
-Welcome to `Day #FIXME` of #CloudNativeNewYear!
+Welcome to `Day 2 of Week 3` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll evaluate our sample application's configuration, storage, and networking requirements and implement using Kubernetes and Azure resources.
+The theme for this week is Bringing Your Application to Kubernetes. Yesterday we talked about getting an existing application running in Kubernetes with a full pipeline in GitHub Actions. Today we'll evaluate our sample application's configuration, storage, and networking requirements and implement using Kubernetes and Azure resources.
+
+:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+
+:::
+
+:::tip Friday, February 10th at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 10th and bring your questions!
+
+:::
 
 ## What We'll Cover
 
@@ -49,7 +63,7 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 
 :::caution 
 
-Before you begin, make sure you've gone through yesterday's [post](#FIXME) to set up your AKS cluster.
+Before you begin, make sure you've gone through yesterday's [post](../2023-02-06/index.md) to set up your AKS cluster.
 
 :::
 
@@ -583,6 +597,13 @@ You can also find manifests with all the changes made in today's post in the [Az
 See you in the next post!
 
 ## Resources
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
 
 * [Quickstart: Deploy a SQL Server container with Azure Kubernetes Services (AKS)](https://learn.microsoft.com/sql/linux/quickstart-sql-server-containers-kubernetes?WT.mc_id=containers-84290-pauyu&view=sql-server-ver16)
 * [Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/)

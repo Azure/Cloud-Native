@@ -1,37 +1,51 @@
 ---
-slug: bring-your-app-day-1
-title: "3-3. Migrating Applications to Kubernetes: Opening your Application with Ingress"
+slug: bring-your-app-day-3
+title: "3-3. Bringing Your Application to Kubernetes - Opening your Application with Ingress"
 authors: [paul]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloudnative, azure, kubernetes, configmaps, persistent-volumes, secrets, azure-files, azure-key-vault, azure-workload-identity, best-practices]
-image: https://via.placeholder.com/600x200?text=Placeholder
+image: https://azure.github.io/Cloud-Native/img/og/30-13.png
 description: "Expose your web application on Azure Kubernetes Service with ease using the Web Application Routing add-on. Benefit from automatic installation of a NGINX Ingress Controller, integration with Azure DNS for custom domains, and secure TLS with Azure Key Vault. Follow our step-by-step guide to enhance the accessibility and security of your web application." 
 tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, ingress, nginx-ingress-controller, azure-dns, azure-key-vault]
 ---
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-3" />
   <meta name="twitter:title" 
-    content="FIXME: Title Of Post" />
+    content="3-3. Bringing Your Application to Kubernetes - Opening your Application with Ingress" />
   <meta name="twitter:description" 
-    content="FIXME: Post Description" />
+    content="Expose your web application on Azure Kubernetes Service with ease using the Web Application Routing add-on. Benefit from automatic installation of a NGINX Ingress Controller, integration with Azure DNS for custom domains, and secure TLS with Azure Key Vault. Follow our step-by-step guide to enhance the accessibility and security of your web application." />
   <meta name="twitter:image" 
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-13.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@pauldotyu" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-3" />
 </head>
 
-Welcome to `Day #FIXME` of #CloudNativeNewYear!
+Welcome to `Day #3 of Week 3` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we added configuration, secrets, and storage to our app. Today we'll explore how to expose the eShopOnWeb app so that customers can reach it over the internet using a custom domain name and TLS.
+The theme for this week is Bringing Your Application to Kubernetes. Yesterday we added configuration, secrets, and storage to our app. Today we'll explore how to expose the eShopOnWeb app so that customers can reach it over the internet using a custom domain name and TLS.
+
+:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+
+:::
+
+:::tip Friday, February 10th at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 10th and bring your questions!
+
+:::
 
 ## What We'll Cover
 
@@ -55,7 +69,7 @@ Currently, our eShopOnWeb app has three Kubernetes services deployed:
 1. `api` exposed externally via `LoadBalancer`
 1. `web` exposed externally via `LoadBalancer`
 
-As mentioned in [my post last week](https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-2/), Services allow applications to communicate with each other using DNS names. Kubernetes has service discovery capabilities built-in that allows Pods to resolve Services simply by using their names.
+As mentioned in [my post last week](../2023-01-31/index.md), Services allow applications to communicate with each other using DNS names. Kubernetes has service discovery capabilities built-in that allows Pods to resolve Services simply by using their names.
 
 In the case of our `api` and `web` deployments, they can simply reach the database by calling its name. The service type of `ClusterIP` for the `db` can remain as-is since it only needs to be accessed by the `api` and `web` apps.
 
@@ -78,7 +92,7 @@ At the time of this writing the add-on is still in Public Preview
 
 ## Generate TLS certificate and store in Azure Key Vault
 
-We deployed an Azure Key Vault [yesterday](#FIXME) to store secrets. We'll use it again to store a TLS certificate too.
+We deployed an Azure Key Vault [yesterday](../2023-02-07/index.md) to store secrets. We'll use it again to store a TLS certificate too.
 
 Let's create and export a self-signed certificate for the custom domain.
 
@@ -338,6 +352,13 @@ In the meantime, check out the resources listed below for further reading.
 You can also find manifests with all the changes made in today's post in the [Azure-Samples/eShopOnAKS](https://github.com/Azure-Samples/eShopOnAKS/tree/week3/day3) repository.
 
 ## Resources
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
 
 * [Web Application Routing (Preview)](https://learn.microsoft.com/azure/aks/web-app-routing?WT.mc_id=containers-84290-pauyu&tabs=without-osm)
 * [Web Application Routing on AKS](https://dev.to/azure/web-application-routing-on-aks-58ap)

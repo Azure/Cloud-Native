@@ -1,46 +1,62 @@
 ---
-slug: FIXME-route-here
-title:  3-5. Migrating Applications to Kubernetes - CI/CD Secure Supply Chain
-authors: [FIXME-one, FIXME-two]
+slug: bring-your-app-day-5
+title:  3-5. Bringing Your Application to Kubernetes - CI/CD Secure Supply Chain
+authors: [josh]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [FIXME, comma, separated, keywords, for, metatags]
-image:
-description: "FIXME: Used in <meta> tag. If not specified, becomes first line of Markdown" 
-tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-hero, ask-the-expert, azure-functions, azure-container-apps, azure-event-grid, azure-logic-apps, serverless-e2e]
+keywords: [cloudnative, azure, kubernetes, azure-key-vault, github-actions, secure-supply-chain, notary, notation]
+image: https://azure.github.io/Cloud-Native/img/og/30-15.png
+description: "In this article, you'll learn how to use Notary, an open-source project hosted by the Cloud Native Computing Foundation (CNCF) to digitally sign container images stored on Azure Container Registry." 
+tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, secure-supply-chain, notary, notation, azure-key-vault]
 ---
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-5" />
   <meta name="twitter:title" 
-    content="FIXME: Title Of Post" />
+    content="3-5. Bringing Your Application to Kubernetes - CI/CD Secure Supply Chain" />
   <meta name="twitter:description" 
-    content="FIXME: Post Description" />
+    content="In this article, you'll learn how to use Notary, an open-source project hosted by the Cloud Native Computing Foundation (CNCF) to digitally sign container images stored on Azure Container Registry." />
   <meta name="twitter:image" 
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-15.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@joshduffney" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-5" />
 </head>
-<!-- End METADATA -->
 
-Welcome to `Day #FIXME` of #CloudNativeNewYear!
+Welcome to `Day 5 of Week 3` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll explore the topic of #FIXME.
+The theme for this week is Bringing Your Application to Kubernetes. Yesterday we talked about debugging and instrumenting our application. Today we'll explore the topic of container image signing and secure supply chain.
+
+:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+
+:::
+
+:::tip Friday, February 10th at 11 AM PST
+
+Join us for a live demo and let us answer your questions.
+
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 10th and bring your questions!
+
+:::
 
 ## What We'll Cover
- * Section 1
- * Section 2
- * Section 3
- * Section 4
- * Exercise: Try this yourself!
- * Resources: For self-study!
+ * Introduction
+ * Prerequisites
+ * Create a digital signing certificate
+ * Generate an Azure Container Registry Token
+ * Set up Notation
+ * Install the Notation Azure Key Vault Plugin
+ * Add the signing Certificate to Notation
+ * Sign Container Images
+ * Conclusion
 
 
 <!-- ************************************* -->
@@ -251,3 +267,10 @@ Digital signing plays a critical role in ensuring the security of software suppl
 By signing software components, organizations can verify the authenticity and integrity of software, helping to prevent unauthorized modifications, tampering, and malware. 
 
 And if you want to take digital signing to a whole new level by using them to prevent the deployment of unsigned container images, check out the [Ratify](https://github.com/deislabs/ratify) project on GitHub!
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::

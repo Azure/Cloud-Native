@@ -34,11 +34,17 @@ Welcome to `Day 4 of Week 2` of #CloudNativeNewYear!
 
 The theme for this week is Kubernetes fundamentals. Yesterday we talked about how to set app configurations and secrets at runtime using Kubernetes ConfigMaps and Secrets. Today we'll explore the topic of persistent storage on Kubernetes and show you can leverage Persistent Volumes and Persistent Volume Claims to ensure your PostgreSQL data can survive container restarts.
 
-:::tip Friday, February 3rd at 11 AM PST
+:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+
+:::
+
+:::tip Catch the Replay of the Live Demo
 
 Join us for a live demo and let us answer your questions.
 
-[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+[We were live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/week2-demo).  
 
 :::
 
@@ -250,6 +256,13 @@ We'll revisit this topic again next week but in the meantime, check out some of 
 See you in the next post!
 
 ## Resources
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
 
 * [Kubernetes: Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
 * [Kubernetes: Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)

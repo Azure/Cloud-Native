@@ -33,11 +33,17 @@ Welcome to `Day 2 of Week 2` of #CloudNativeNewYear!
 
 The theme for this week is #Kubernetes fundamentals. Yesterday we talked about how to deploy a containerized web app workload to Azure Kubernetes Service (AKS). Today we'll explore the topic of services and ingress and walk through the steps of making our containers accessible both internally as well as over the internet so that you can share it with the world 😊
 
-:::tip Friday, February 3rd at 11 AM PST
+:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+
+:::
+
+:::tip Catch the Replay of the Live Demo
 
 Join us for a live demo and let us answer your questions.
 
-[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+[We were live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/week2-demo).  
 
 :::
 
@@ -320,6 +326,13 @@ Exposing your applications both internally and externally can be easily achieved
 Lastly, if you are unsure how to begin writing your service manifest, you can use `kubectl` and have it do most of the work for you 🥳
 
 ## Resources
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
 
 * [Services](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-pauyu#services)
 * [Ingress Controllers](https://learn.microsoft.com/azure/aks/concepts-network?WT.mc_id=containers-84290-pauyu#ingress-controllers)

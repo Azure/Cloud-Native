@@ -33,11 +33,17 @@ Welcome to `Day 3 of Week 2` of #CloudNativeNewYear!
 
 The theme for this week is Kubernetes fundamentals. Yesterday we talked about Services and Ingress. Today we'll explore the topic of passing configuration and secrets to our applications in Kubernetes with ConfigMaps and Secrets.
 
-:::tip Friday, February 3rd at 11 AM PST
+:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+
+:::
+
+:::tip Catch the Replay of the Live Demo
 
 Join us for a live demo and let us answer your questions.
 
-[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+[We were live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/week2-demo).  
 
 :::
 
@@ -209,3 +215,10 @@ By default, the describe command doesn't output the encoded value, but if you ou
 ## Conclusion
 
 In conclusion, using ConfigMaps and Secrets in Kubernetes can help to improve the scalability, security, and maintainability of your cluster. By decoupling configuration data and sensitive information from pod definitions, you can promote better organization and security in your Kubernetes environment. Additionally, separating these elements allows for sharing the same configuration and different secrets across multiple pods and deployments, simplifying scaling and management.
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
