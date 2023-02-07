@@ -160,7 +160,7 @@ EOF
 
 It's a well known fact that Kubernetes secretes are not really secrets. They're just base64-encoded values and not secure, especially if malicious users have access to your Kubernetes cluster. 
 
-In a production scenario, you will want to leverage an external vault like [Azure Key Vault]((https://azure.microsoft.com/products/key-vault/)) or [HashiCorp Vault](https://www.vaultproject.io/) to encrypt and store secrets.
+In a production scenario, you will want to leverage an external vault like [Azure Key Vault](https://azure.microsoft.com/products/key-vault?WT.mc_id=containers-84290-pauyu) or [HashiCorp Vault](https://www.vaultproject.io/) to encrypt and store secrets.
 
 With AKS, we can enable the [Secrets Store CSI driver](https://secrets-store-csi-driver.sigs.k8s.io/) add-on which will allow us to leverage Azure Key Vault.
 
