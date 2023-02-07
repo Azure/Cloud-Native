@@ -49,25 +49,25 @@ The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll
 
 :::caution 
 
-Before you begin, make sure you've gone through yesterday's [post](#FIXME) to set up your AKS cluster and CI/CD workflows. As you make modifications to your AKS deployment, you will be committing files to your GitHub repo, and using GitHub Workflows to automatically deploy the changes.
+Before you begin, make sure you've gone through yesterday's [post](#FIXME) to set up your AKS cluster.
 
 :::
 
 ## Gather requirements
 
-The eShopOnWeb application is written in .NET 7 and has two major pieces of functionality. The front end site is where customers can browse and shop. The site also allows admins to gain access to a backend portal to manage the product catalog. This admin portal, relies on a separate REST API service for its data and the data is sourced from a SQL Server container.
+The eShopOnWeb application is written in .NET 7 and has two major pieces of functionality. The web UI is where customers can browse and shop. The web UI also includes an admin portal for managing the product catalog. This admin portal, is packaged as a WebAssembly application and relies on a separate REST API service. Both the web UI and the REST API connect to the same SQL Server container.
 
-Looking through the source code which can be found [here](https://github.com/pauldotyu/eShopOnWeb/tree/main/src) we can identify some requirements for configs, persistent storage, and secrets.
+Looking through the source code which can be found [here](https://github.com/Azure-Samples/eShopOnAKS/tree/main/src) we can identify requirements for configs, persistent storage, and secrets.
 
 ### Database server
 
 * Need to store the password for the `sa` account as a secure secret
 * Need persistent storage volume for data directory
-* Need to inject environment variables for SQL Server license type EULA acceptance
+* Need to inject environment variables for SQL Server license type and EULA acceptance
 
-### Web UI and backend REST API service
+### Web UI and REST API service
 
-* Need to store database connection strings in secure secrets
+* Need to store database connection string as a secure secret
 * Need to inject ASP.NET environment variables to override app settings
 * Need persistent storage volume for ASP.NET key storage
 
@@ -104,9 +104,9 @@ EOF
 
 ## Implement persistent volumes using Azure Files
 
-Similar to last week, we will take advantage of storage classes built into AKS. For our SQL Server data, we'll use the `azurefile-csi-premium` storage class and leverage an Azure Files resource as our backend storage.
+Similar to last week, we'll take advantage of storage classes built into AKS. For our SQL Server data, we'll use the `azurefile-csi-premium` storage class and leverage an [Azure Files](https://learn.microsoft.com/azure/storage/files/storage-files-introduction?WT.mc_id=containers-84290-pauyu) resource as our PersistentVolume.
 
-Create a PVC for persisting SQL Server data.
+Create a PersistentVolumeClaim (PVC) for persisting SQL Server data.
 
 ```bash
 kubectl apply -f - <<EOF
@@ -144,7 +144,9 @@ EOF
 
 ## Implement secrets using Azure Key Vault
 
-It's a well known fact that Kubernetes secretes are just base64-encoded values and not secure especially if malicious users have access to your Kubernetes cluster. In a production scenario, you will want to leverage an external vault like [Azure Key Vault]((https://azure.microsoft.com/products/key-vault/)) or [HashiCorp Vault](https://www.vaultproject.io/) to encrypt and store secrets.
+It's a well known fact that Kubernetes secretes are not really secrets. They're just base64-encoded values and not secure, especially if malicious users have access to your Kubernetes cluster. 
+
+In a production scenario, you will want to leverage an external vault like [Azure Key Vault]((https://azure.microsoft.com/products/key-vault/)) or [HashiCorp Vault](https://www.vaultproject.io/) to encrypt and store secrets.
 
 With AKS, we can enable the [Secrets Store CSI driver](https://secrets-store-csi-driver.sigs.k8s.io/) add-on which will allow us to leverage Azure Key Vault.
 
@@ -160,7 +162,9 @@ az aks enable-addons \
   --resource-group $RG_NAME
 ```
 
-With the add-on enabled, you should see `aks-secrets-store-csi-driver` and `aks-secrets-store-provider-azure` resources installed on each node in your Kubernetes cluster. Run the command below to verify.
+With the add-on enabled, you should see `aks-secrets-store-csi-driver` and `aks-secrets-store-provider-azure` resources installed on each node in your Kubernetes cluster. 
+
+Run the command below to verify.
 
 ```bash
 kubectl get pods \
@@ -168,7 +172,7 @@ kubectl get pods \
   --selector 'app in (secrets-store-csi-driver, secrets-store-provider-azure)'
 ```
 
-The Secrets Store CSI driver enable the usage of secret stores via CSI (Container Storage Interface) volumes, and the [Azure Key Vault Provider for Secrets Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/) enables integration with Azure Key Vault. This provider offers capabilities such as mounting and syncing between the secure vault and Kubernetes Secrets.
+The Secrets Store CSI driver allows us to use secret stores via Container Storage Interface (CSI) volumes. This provider offers capabilities such as mounting and syncing between the secure vault and Kubernetes Secrets. On AKS, the [Azure Key Vault Provider for Secrets Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/) enables integration with [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?WT.mc_id=containers-84290-pauyu).
 
 You may not have an Azure Key Vault created yet, so let's create one and add some secrets to it.
 
@@ -207,11 +211,11 @@ At the time of this writing, the workload identity feature of AKS is in Preview.
 
 :::
 
-The workload identity feature within AKS allows us to leverage native Kubernetes resources and link a [Kubernetes ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) to an [Azure Managed Identity](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview?WT.mc_id=containers-84290-pauyu) to authenticate against Azure AD.
+The workload identity feature within AKS allows us to leverage native Kubernetes resources and link a [Kubernetes ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) to an [Azure Managed Identity](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview?WT.mc_id=containers-84290-pauyu) to authenticate against [Azure AD](https://learn.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis?WT.mc_id=containers-84290-pauyu).
 
 For the authentication flow, our Kubernetes cluster will act as an Open ID Connect (OIDC) issuer and will be able issue identity tokens to ServiceAccounts which will be assigned to our Pods.
 
-The Azure Managed Identity will be granted permission to access secrets in our Azure Key Vault. With the ServiceAccount being assigned to our Pods, they will be able to retrieve our secrets.
+The Azure Managed Identity will be granted permission to access secrets in our Azure Key Vault and with the ServiceAccount being assigned to our Pods, they will be able to retrieve our secrets.
 
 For more information on how the authentication mechanism all works, check out this [doc](https://azure.github.io/azure-workload-identity/docs/introduction.html#how-it-works).
 
@@ -247,7 +251,7 @@ az aks update \
   --enable-oidc-issuer 
 ```
 
-Create an Azure Managed Identity and retrieve its clientId.
+Create an Azure Managed Identity and retrieve its client ID.
 
 ```bash
 MANAGED_IDENTITY_CLIENT_ID=$(az identity create \
@@ -280,11 +284,17 @@ metadata:
 EOF
 ```
 
+:::info
+
+Note to enable this `ServiceAccount` to work with Azure Workload Identity, you must annotate the resource with `azure.workload.identity/client-id`, and add a label of `azure.workload.identity/use: "true"`
+
+:::
+
 That was a lot... Let's review what we just did.
 
 We have an Azure Managed Identity (object in Azure AD), an OIDC issuer URL (endpoint in our Kubernetes cluster), and a Kubernetes ServiceAccount.
 
-The next step is to tie these three components together and establish a [Federated Identity Credential](https://learn.microsoft.com/graph/api/resources/federatedidentitycredentials-overview?WT.mc_id=containers-84290-pauyu&view=graph-rest-1.0) so that Azure AD can trust authentication requests from your Kubernetes cluster.
+The next step is to "tie" these components together and establish a [Federated Identity Credential](https://learn.microsoft.com/graph/api/resources/federatedidentitycredentials-overview?WT.mc_id=containers-84290-pauyu&view=graph-rest-1.0) so that Azure AD can trust authentication requests from your Kubernetes cluster.
 
 :::info
 
@@ -312,7 +322,7 @@ az identity federated-credential create \
   --subject $SUBJECT
 ```
 
-With the authentication components set, we can now create a SecretProviderClass which includes details about the Azure Key Vault, the secrets to pull out from the vault, and identity used to access the vault.
+With the authentication components set, we can now create a [SecretProviderClass](https://secrets-store-csi-driver.sigs.k8s.io/getting-started/usage.html) which includes details about the Azure Key Vault, the secrets to pull out from the vault, and identity used to access the vault.
 
 ```bash
 # Get the tenant id for the key vault
@@ -564,9 +574,11 @@ echo "http://$(kubectl get service web -o jsonpath='{.status.loadBalancer.ingres
 
 Although there is no visible changes on with our website, we've made a ton of changes on the Kubernetes backend to make this application much more secure and resilient.
 
-We used a combination of Kubernetes resources and AKS-specific features to achieve our goal of securing our secrets and ensuring data is not lost on crashes and container restarts. With just a few more components that we'll add later this week, our eShopOnWeb app will be ready for primetime 🚀
+We used a combination of Kubernetes resources and AKS-specific features to achieve our goal of securing our secrets and ensuring data is not lost on container crashes and restarts.
 
-To learn more about the components we leveraged here today, checkout the resources and additional tutorials listed below.
+To learn more about the components we leveraged here today, checkout the resources and additional tutorials listed below. 
+
+You can also find manifests with all the changes made in today's post in the [Azure-Samples/eShopOnAKS](https://github.com/Azure-Samples/eShopOnAKS/tree/week3/day2) repository.
 
 See you in the next post!
 
