@@ -14,7 +14,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/serverless-containers" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/serverless-containers" />
   <meta name="twitter:title" 
     content="Serverless Container Options" />
   <meta name="twitter:description" 
@@ -26,7 +26,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="@nitya" />
   <meta name="twitter:site" content="@nitya" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/serverless-containers" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/serverless-containers" />
 </head>
 
 Welcome to `Week 4` of #CloudNativeNewYear!

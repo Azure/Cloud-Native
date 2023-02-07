@@ -14,7 +14,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
 
 <head>
   <meta name="twitter:url"
-    content="https://azure.github.io/Cloud-Native/blog/bring-your-app-day-1" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-1" />
   <meta name="twitter:title"
     content="3-1. Bringing Your Application to Kubernetes - CI/CD" />
   <meta name="twitter:description"
@@ -26,7 +26,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="@stevenmurawski" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
-    href="https://azure.github.io/Cloud-Native/blog/bring-your-app-day-1" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-1" />
 </head>
 
 Welcome to `Day 1 of Week 3` of #CloudNativeNewYear!

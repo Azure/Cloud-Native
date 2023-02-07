@@ -1,6 +1,6 @@
 ---
-slug: FIXME-week3-day2
-title: "3-2. Migrating Applications to Kubernetes: Adapting Storage, Secrets, and Configuration"
+slug: bring-your-app-day-2
+title: "3-2. Bringing Your Application to Kubernetes - Adapting Storage, Secrets, and Configuration"
 authors: [paul]
 draft: true
 hide_table_of_contents: false
@@ -14,7 +14,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, configm
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-2" />
   <meta name="twitter:title" 
     content="FIXME: Title Of Post" />
   <meta name="twitter:description" 
@@ -26,7 +26,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, configm
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-2" />
 </head>
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!

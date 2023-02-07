@@ -14,7 +14,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, service
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-2" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-2" />
   <meta name="twitter:title" 
     content="2-2. Kubernetes Fundamentals - Services and Ingress" />
   <meta name="twitter:description" 
@@ -26,7 +26,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, service
     content="@pauldotyu" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-2" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-2" />
 </head>
 
 Welcome to `Day 2 of Week 2` of #CloudNativeNewYear!

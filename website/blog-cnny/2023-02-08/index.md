@@ -1,5 +1,5 @@
 ---
-slug: FIXME-week3-day3
+slug: bring-your-app-day-1
 title: "3-3. Migrating Applications to Kubernetes: Opening your Application with Ingress"
 authors: [paul]
 draft: true
@@ -14,7 +14,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, ingress
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
   <meta name="twitter:title" 
     content="FIXME: Title Of Post" />
   <meta name="twitter:description" 
@@ -26,7 +26,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, ingress
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
 </head>
 
 Welcome to `Day #FIXME` of #CloudNativeNewYear!

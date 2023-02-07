@@ -15,7 +15,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persist
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-4" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-4" />
   <meta name="twitter:title" 
     content="2-4. Kubernetes Fundamentals - Volumes, Mounts, and Claims" />
   <meta name="twitter:description" 
@@ -27,7 +27,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, persist
     content="@pauldotyu" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-4" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-4" />
 </head>
 
 Welcome to `Day 4 of Week 2` of #CloudNativeNewYear!

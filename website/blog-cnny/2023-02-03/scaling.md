@@ -14,7 +14,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
 
 <head>
   <meta name="twitter:url"
-    content="https://azure.github.io/Cloud-Native/blog/fundamentals-day-5" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-5" />
   <meta name="twitter:title"
     content="2-5. Kubernetes Fundamentals - Scaling Pods and Nodes" />
   <meta name="twitter:description"
@@ -26,7 +26,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="@stevenmurawski" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
-    href="https://azure.github.io/Cloud-Native/blog/fundamentals-day-5" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-5" />
 </head>
 
 Welcome to `Day 5 of Week 2` of #CloudNativeNewYear!
