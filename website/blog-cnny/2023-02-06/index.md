@@ -14,7 +14,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
 
 <head>
   <meta name="twitter:url"
-    content="https://azure.github.io/Cloud-Native/blog/bring-your-app-day-1" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-1" />
   <meta name="twitter:title"
     content="3-1. Bringing Your Application to Kubernetes - CI/CD" />
   <meta name="twitter:description"
@@ -26,18 +26,24 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="@stevenmurawski" />
   <meta name="twitter:site" content="@AzureAdvocates" />
   <link rel="canonical"
-    href="https://azure.github.io/Cloud-Native/blog/bring-your-app-day-1" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-1" />
 </head>
 
 Welcome to `Day 1 of Week 3` of #CloudNativeNewYear!
 
 The theme for this week is Bringing Your Application to Kubernetes. Last we talked about Kubernetes Fundamentals. Today we'll explore getting an existing application running in Kubernetes with a full pipeline in GitHub Actions.
 
+:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+
+:::
+
 :::tip Friday, February 10th at 11 AM PST
 
 Join us for a live demo and let us answer your questions.
 
-[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 3rd and bring your questions!
+[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 10th and bring your questions!
 
 :::
 
@@ -563,6 +569,13 @@ We've covered a lot of ground in today's post.  We set up federated credentials 
 This sets us up to start making changes to our application and Kubernetes configuration and have those changes automatically validated and deployed by our CI/CD system.  Tomorrow, we'll look at updating our application environment with runtime configuration, persistent storage, and more.
 
 ## Resources
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
 
 * [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/intro-kubernetes?WT.mc_id=containers-84290-stmuraws)
 * [Reusable workflows in GitHub Actions](https://docs.github.com/actions/using-workflows/reusing-workflows)

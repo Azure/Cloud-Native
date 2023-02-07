@@ -14,7 +14,7 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
   <meta name="twitter:title" 
     content="FIXME: Title Of Post" />
   <meta name="twitter:description" 
@@ -26,7 +26,7 @@ tags: [serverless-september, 30-days-of-serverless, serverless-hacks, zero-to-he
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/blog/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
 </head>
 <!-- End METADATA -->
 
