@@ -33,7 +33,7 @@ Welcome to `Day 5 of Week 2` of #CloudNativeNewYear!
 
 The theme for this week is Kubernetes fundamentals. Yesterday we talked about adding persistent storage to our deployment. Today we'll explore the topic of scaling pods and nodes in our Kubernetes cluster.
 
-:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+:::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
 [Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
 

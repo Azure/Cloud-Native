@@ -33,7 +33,7 @@ Welcome to `Day 2 of Week 2` of #CloudNativeNewYear!
 
 The theme for this week is #Kubernetes fundamentals. Yesterday we talked about how to deploy a containerized web app workload to Azure Kubernetes Service (AKS). Today we'll explore the topic of services and ingress and walk through the steps of making our containers accessible both internally as well as over the internet so that you can share it with the world 😊
 
-:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+:::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
 [Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
 

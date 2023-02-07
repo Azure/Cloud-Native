@@ -33,7 +33,7 @@ Welcome to `Day #1 of Week 2` of #CloudNativeNewYear!
 
 The theme for this week is Kubernetes fundamentals. Last week we talked about Cloud Native architectures and the Cloud Native landscape. Today we'll explore the topic of Pods and Deployments in Kubernetes.
 
-:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+:::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
 [Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
 

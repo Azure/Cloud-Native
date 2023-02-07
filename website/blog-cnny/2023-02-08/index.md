@@ -33,7 +33,7 @@ Welcome to `Day #3 of Week 3` of #CloudNativeNewYear!
 
 The theme for this week is Bringing Your Application to Kubernetes. Yesterday we added configuration, secrets, and storage to our app. Today we'll explore how to expose the eShopOnWeb app so that customers can reach it over the internet using a custom domain name and TLS.
 
-:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+:::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
 [Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
 

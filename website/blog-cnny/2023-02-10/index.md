@@ -33,7 +33,7 @@ Welcome to `Day 5 of Week 3` of #CloudNativeNewYear!
 
 The theme for this week is Bringing Your Application to Kubernetes. Yesterday we talked about debugging and instrumenting our application. Today we'll explore the topic of container image signing and secure supply chain.
 
-:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+:::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
 [Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
 

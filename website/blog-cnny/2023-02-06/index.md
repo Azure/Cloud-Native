@@ -33,7 +33,7 @@ Welcome to `Day 1 of Week 3` of #CloudNativeNewYear!
 
 The theme for this week is Bringing Your Application to Kubernetes. Last we talked about Kubernetes Fundamentals. Today we'll explore getting an existing application running in Kubernetes with a full pipeline in GitHub Actions.
 
-:::tip Ask the Experts Thursday, February 9th at 8 AM PST
+:::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
 [Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
 
