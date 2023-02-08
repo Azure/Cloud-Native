@@ -16,12 +16,18 @@ The live broadcast will have a moderated chat session where you can submit quest
 
 ---
 
+## Ask the Experts: Azure Kubernetes Service
+
+Join the Azure Kubernetes Service Product Group this New Year to learn about cloud-native development using Kubernetes on Azure computing. It is time to accelerate your cloud-native application development leveraging the de-facto container platform, Kubernetes. Discuss with the experts on how to develop, manage, scale and secure managed Kubernetes clusters on Azure with an end-to-end development and management experience using Azure Kubernetes Service and Azure Fleet Manager.
+
+---
+
 ## When are the sessions?
 
-Visit the [**Ask The Experts**](https://learn.microsoft.com/events/learn-events/Ask-the-expert/) page to see previous sessions for reference! Then check back here after _January 23, 2023_ for details on ATE sessions for #CloudNativeNew Year!
+Visit the [**Ask The Experts**](https://learn.microsoft.com/events/learn-events/Ask-the-expert/) page to Register: 
 
 | Date | Description | 
 |:---|:---|
-| TBA | |
-| TBA | |
+| Feb 9th, 2023 @ 9am PST | [Ask the Experts: Azure Kubernetes Service](https://developer.microsoft.com/en-us/reactor/events/18302/) |
+| Feb 10th, 2023 @ 2:30pm SGT| [Ask the Experts: Azure Kubernetes Service (APAC)](https://developer.microsoft.com/en-us/reactor/events/18303/)|
 |  | |
