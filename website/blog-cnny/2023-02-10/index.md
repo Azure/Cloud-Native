@@ -35,7 +35,7 @@ The theme for this week is Bringing Your Application to Kubernetes. Yesterday we
 
 :::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
-[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/ateonlearn)
+[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/cnny/ate)
 
 :::
 
