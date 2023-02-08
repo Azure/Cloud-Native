@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[36779],{5416:e=>{e.exports=JSON.parse('{"label":"ingress","permalink":"/Cloud-Native/cnny-2023/tags/ingress","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":2}')}}]);
