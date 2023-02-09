@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[60841],{29295:e=>{e.exports=JSON.parse('{"label":"30daysofcloudnative","permalink":"/Cloud-Native/cnny-2023/tags/30-daysofcloudnative","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":10}')}}]);
