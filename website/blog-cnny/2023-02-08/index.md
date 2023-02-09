@@ -29,7 +29,7 @@ tags: [cloud-native-new-year, azure-kubernetes-service, aks, kubernetes, ingress
     href="https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-3" />
 </head>
 
-Welcome to `Day #3 of Week 3` of #CloudNativeNewYear!
+Welcome to `Day 3 of Week 3` of #CloudNativeNewYear!
 
 The theme for this week is Bringing Your Application to Kubernetes. Yesterday we added configuration, secrets, and storage to our app. Today we'll explore how to expose the eShopOnWeb app so that customers can reach it over the internet using a custom domain name and TLS.
 
