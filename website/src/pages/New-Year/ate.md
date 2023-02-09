@@ -29,5 +29,5 @@ Visit the [**Ask The Experts**](https://learn.microsoft.com/events/learn-events/
 | Date | Description | 
 |:---|:---|
 | Feb 9th, 2023 @ 9am PST | [Ask the Experts: Azure Kubernetes Service](https://developer.microsoft.com/en-us/reactor/events/18302/) |
-| Feb 10th, 2023 @ 2:30pm SGT| [Ask the Experts: Azure Kubernetes Service (APAC)](https://developer.microsoft.com/en-us/reactor/events/18303/)|
+| Feb 10th, 2023 @ 12:00pm SGT| [Ask the Experts: Azure Kubernetes Service (APAC)](https://developer.microsoft.com/en-us/reactor/events/18303/)|
 |  | |
