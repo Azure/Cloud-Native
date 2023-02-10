@@ -2,7 +2,7 @@
 slug: bring-your-app-day-5
 title:  3-5. Bringing Your Application to Kubernetes - CI/CD Secure Supply Chain
 authors: [josh]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

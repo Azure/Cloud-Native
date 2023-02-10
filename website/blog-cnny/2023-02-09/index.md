@@ -222,7 +222,7 @@ configuration.GetConnectionString("CatalogConnection")
  "Server=db;Database=Microsoft.eShopOnWeb.CatalogDb;User Id=sa;Password=*****************;TrustServerCertificate=True;"
 ```
 
-![Debugging our local application connected to Kubernetes.](../../static/img/cnny23/2-debug-with-bridge-to-kubernetes.png)
+![Debugging our local application connected to Kubernetes.](../../static/img/cnny23/5-debug-with-bridge-to-kubernetes.png)
 
 We can see that the database server configured is based on our `db` service and the password is pulled from our secret in Azure KeyVault (via AKS).
 
@@ -255,6 +255,13 @@ Additionally, implementing automated alerting, such as sending notifications whe
 End-to-end visibility is also essential in understanding the flow of requests and responses between microservices in a distributed system. With end-to-end visibility, you can quickly identify bottlenecks and slowdowns in the system, helping you to resolve issues more efficiently.
 
 ## Resources
+
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
 
 * [Use Bridge to Kubernetes in VS Code](https://learn.microsoft.com/visualstudio/bridge/bridge-to-kubernetes-vs-code?WT.mc_id=containers-84290-stmuraws)
 * [Bridge to Kubernetes Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro&WT.mc_id=containers-84290-stmuraws) 
