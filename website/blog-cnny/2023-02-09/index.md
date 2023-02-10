@@ -222,7 +222,7 @@ configuration.GetConnectionString("CatalogConnection")
  "Server=db;Database=Microsoft.eShopOnWeb.CatalogDb;User Id=sa;Password=*****************;TrustServerCertificate=True;"
 ```
 
-![Debugging our local application connected to Kubernetes.](../../static/img/cnny23/2-debug-with-bridge-to-kubernetes.png)
+![Debugging our local application connected to Kubernetes.](../../static/img/cnny23/5-debug-with-bridge-to-kubernetes.png)
 
 We can see that the database server configured is based on our `db` service and the password is pulled from our secret in Azure KeyVault (via AKS).
 
