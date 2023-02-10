@@ -151,8 +151,6 @@ WEB_TLS_CERT_ID=$(az keyvault certificate import \
 Create a custom domain for our application and grab its Azure resource id.
 
 ```bash
-DNS_NAME=eshoponweb$RANDOM.com
-
 DNS_ZONE_ID=$(az network dns zone create \
   --name $DNS_NAME \
   --resource-group $RESOURCE_GROUP \
