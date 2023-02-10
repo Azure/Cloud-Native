@@ -172,7 +172,8 @@ az aks enable-addons \
   --name $AKS_NAME \
   --resource-group $RESOURCE_GROUP \
   --addons web_application_routing \
-  --dns-zone-resource-id=$DNS_ZONE_ID
+  --dns-zone-resource-id=$DNS_ZONE_ID \
+  --enable-secret-rotation
 ```
 
 The add-on will also deploy a new Azure Managed Identity which is used by the `external-dns` controller when writing Azure DNS zone entries. Currently, it does not have permission to do that, so let's grant it permission.
