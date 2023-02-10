@@ -151,8 +151,6 @@ WEB_TLS_CERT_ID=$(az keyvault certificate import \
 Create a custom domain for our application and grab its Azure resource id.
 
 ```bash
-DNS_NAME=eshoponweb$RANDOM.com
-
 DNS_ZONE_ID=$(az network dns zone create \
   --name $DNS_NAME \
   --resource-group $RESOURCE_GROUP \
@@ -174,7 +172,8 @@ az aks enable-addons \
   --name $AKS_NAME \
   --resource-group $RESOURCE_GROUP \
   --addons web_application_routing \
-  --dns-zone-resource-id=$DNS_ZONE_ID
+  --dns-zone-resource-id=$DNS_ZONE_ID \
+  --enable-secret-rotation
 ```
 
 The add-on will also deploy a new Azure Managed Identity which is used by the `external-dns` controller when writing Azure DNS zone entries. Currently, it does not have permission to do that, so let's grant it permission.
