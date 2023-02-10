@@ -256,6 +256,13 @@ End-to-end visibility is also essential in understanding the flow of requests an
 
 ## Resources
 
+:::tip Take the Cloud Skills Challenge!
+
+[Enroll](https://learn.microsoft.com/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356) in the Cloud Skills Challenge! 
+
+Don't miss out on this opportunity to level up your skills and stay ahead of the curve in the world of cloud native. 
+:::
+
 * [Use Bridge to Kubernetes in VS Code](https://learn.microsoft.com/visualstudio/bridge/bridge-to-kubernetes-vs-code?WT.mc_id=containers-84290-stmuraws)
 * [Bridge to Kubernetes Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro&WT.mc_id=containers-84290-stmuraws) 
 * [Bridge to Kubernetes Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=mindaro.mindaro&WT.mc_id=containers-84290-stmuraws).
