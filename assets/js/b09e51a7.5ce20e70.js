@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[25847],{60539:e=>{e.exports=JSON.parse('{"label":"secure-supply-chain","permalink":"/Cloud-Native/cnny-2023/tags/secure-supply-chain","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":1}')}}]);

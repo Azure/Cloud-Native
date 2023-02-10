@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[92340],{52096:e=>{e.exports=JSON.parse('{"label":"notary","permalink":"/Cloud-Native/cnny-2023/tags/notary","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":1}')}}]);
