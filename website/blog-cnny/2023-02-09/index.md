@@ -35,15 +35,15 @@ The theme for this week is Bringing Your Application to Kubernetes. Yesterday we
 
 :::tip Ask the Experts Thursday, February 9th at 9 AM PST
 
-[Join us for a live Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/cnny/ate)
+[Watch our Q&A with Experts from the Azure Kubernetes Service product team!](https://aka.ms/cnny/watch-ate)
 
 :::
 
 :::tip Friday, February 10th at 11 AM PST
 
-Join us for a live demo and let us answer your questions.
+Watch the recorded demo and conversation about this week's topics\.
 
-[We'll be live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/live-coding).  Join us Friday, February 10th and bring your questions!
+[We were live on YouTube walking through today's (and the rest of this week's) demos](https://aka.ms/cnny/week3-demo).  Join us Friday, February 10th and bring your questions!
 
 :::
 

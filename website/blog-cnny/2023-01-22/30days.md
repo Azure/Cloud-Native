@@ -54,7 +54,7 @@ We have a number of initiatives planned for the month to help you learn and skil
 
 * [#30DaysOfCloudNative](/Cloud-Native/cnny-2023/) - 4 themed weeks of daily articles in a structured roadmap
 * [Cloud Skills Challenge](https://aka.ms/CNNY/Challenge) - skill up by competing with peers to complete modules
-* [Ask The Expert](https://aka.ms/CNNY/ate) - join live Q&A sessions with Product Engineering teams
+* [Ask The Expert](https://aka.ms/cnny/watch-ate) - watch the recorded Q&A sessions with Product Engineering teams
 
 We'll go into more details about **#30DaysOfCloudNative** in this post - don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml) to the blog to get daily posts delivered directly to your preferred feed reader!
 
