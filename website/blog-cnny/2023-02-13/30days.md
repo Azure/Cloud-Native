@@ -2,7 +2,7 @@
 slug: serverless-containers
 title: 4-1. Serverless Container Options
 authors: [nitya]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
