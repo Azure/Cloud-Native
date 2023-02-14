@@ -2,7 +2,7 @@
 slug: building-with-draft
 title: 4-2. Jumpstart your applications with Draft
 authors: [cory]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -24,7 +24,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="https://azure.github.io/Cloud-Native/img/og/30-05.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@cksimming" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
     href="https://azure.github.io/Cloud-Native/cnny-2023/building-with-draft" />
