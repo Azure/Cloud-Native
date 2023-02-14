@@ -7,8 +7,8 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [cloud-native, containers, decision-tree, kubernetes, serverless, microservices]
-image: https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png
-description: There are many cloud-native technologies - but which are the best fit for your projects? 
+image: https://azure.github.io/Cloud-Native/img/og/30-17.png
+description: Jump start your Kubernetes experience with Draft
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service]
 
 ---
@@ -17,11 +17,11 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/cnny-2023/building-with-draft" />
   <meta name="twitter:title" 
-    content="Serverless Container Options" />
+    content="Jumpstart your applications with Draft" />
   <meta name="twitter:description" 
-    content="Explore technology and tooling options for building and deploying your Cloud-native solution" />
+    content="Jump start your Kubernetes experience with Draft" />
   <meta name="twitter:image" 
-    content="https://azure.github.io/Cloud-Native/img/og/30-05.png" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-17.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@cksimming" />
