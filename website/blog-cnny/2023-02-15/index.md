@@ -2,11 +2,11 @@
 slug: windows-containers
 title: 4-3. Windows Containers
 authors: [vinicius]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [containers, windows, aks, kubernetes,]
+keywords: [containers, windows, aks, kubernetes]
 image: https://azure.github.io/Cloud-Native/img/og/30-18.png
 description: "Let's learn about Windows containers!" 
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service, containers, windows]
