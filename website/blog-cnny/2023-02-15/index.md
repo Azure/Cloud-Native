@@ -7,32 +7,31 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [containers, windows, aks, kubernetes,]
-image:
+image: https://azure.github.io/Cloud-Native/img/og/30-18.png
 description: "Let's learn about Windows containers!" 
 tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-kubernetes-service, containers, windows]
 ---
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
+    content="https://azure.github.io/Cloud-Native/cnny-2023/windows-containers" />
   <meta name="twitter:title" 
-    content="FIXME: Title Of Post" />
+    content="Windows Containers" />
   <meta name="twitter:description" 
-    content="FIXME: Post Description" />
+    content="Let's learn about Windows containers!" />
   <meta name="twitter:image" 
-    content="FIXME: Post Image" />
+    content="https://azure.github.io/Cloud-Native/img/og/30-18.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
-    content="@nitya" />
+    content="@vrapolinario" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/cnny-2023/slug-FIXME" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/windows-containers" />
 </head>
-<!-- End METADATA -->
 
 Welcome to `Day 3 of Week 4` of #CloudNativeNewYear!
 
-The theme for this week is #FIXME. Yesterday we talked about #FIXME. Today we'll explore the topic of Windows containers.
+The theme for this week is going further with Cloud Native. Yesterday we talked about using Draft to accelerate your Kubernetes adoption. Today we'll explore the topic of Windows containers.
 
 ## What We'll Cover
  * Introduction
@@ -69,13 +68,13 @@ Server Core is a much larger base container image, ranging around 1.25GB. It's l
 
 The Server image builds on the Server Core one. It ranges around 3.1GB and has even greater application compatibility than the Server Core image. In addition to the traditional Windows APIs and components, this image allows for scenarios such as Machine Learning via DirectX with GPU access.
 
-The best image for your scenario is dependent on the requirements your application has on the Windows OS inside a container. However, there are some scenarios that are not supported at all on Windows containers - such as GUI or RDP dependant applications, some Windows Server infrastructure roles, such as Active Directory, among others.
+The best image for your scenario is dependent on the requirements your application has on the Windows OS inside a container. However, there are some scenarios that are not supported at all on Windows containers - such as GUI or RDP dependent applications, some Windows Server infrastructure roles, such as Active Directory, among others.
 
 ## Isolation
 
 When running containers, the kernel of the container host is shared with the containers running on it. While extremely convenient, this poses a potential risk for multi-tenant scenarios. If one container is compromised and has access to the host, it could potentially compromise other containers in the same system.
 
-For enterprise customers running on-premises (or even in the cloud), this can be mitigated by using a VM as a container host and considering the VM itself a security boundary. However, if multiple workloads from different tenants need to share the same host, Windows containers offer another option: Hyper-V isolation. While the name Hyper-V is associated with VMs, its virtualization capabilities extend to other services, including containers. Hyper-V isolated containers run on a purpose built, extremely small, highly performant VM. However, you manage a container running with Hyper-V isolation the same way you do with a process isolated one. In fact, the only notable difference is that you need to append the --isolation=hyperv tag to the docker run command.
+For enterprise customers running on-premises (or even in the cloud), this can be mitigated by using a VM as a container host and considering the VM itself a security boundary. However, if multiple workloads from different tenants need to share the same host, Windows containers offer another option: Hyper-V isolation. While the name Hyper-V is associated with VMs, its virtualization capabilities extend to other services, including containers. Hyper-V isolated containers run on a purpose built, extremely small, highly performant VM. However, you manage a container running with Hyper-V isolation the same way you do with a process isolated one. In fact, the only notable difference is that you need to append the `--isolation=hyperv` tag to the `docker run` command.
 
 ## Exercise
 
@@ -195,5 +194,5 @@ kubectl get service
 
 ## Resources
 
-* [Windows containers documentation](https://aka.ms/containers)
-* [Run Windows containers on AKS](https://learn.microsoft.com/en-us/azure/aks/learn/quick-windows-container-deploy-cli)
+* [Windows containers documentation](https://learn.microsoft.com/virtualization/windowscontainers/?WT.mc_id=containers-84290-viniap)
+* [Run Windows containers on AKS](https://learn.microsoft.com/azure/aks/learn/quick-windows-container-deploy-cli?WT.mc_id=containers-84290-viniap)
