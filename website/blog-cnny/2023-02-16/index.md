@@ -55,13 +55,13 @@ There are also integrations available from [open-source projects and third parti
 
 Add-ons provide a supported way to extend AKS. Installation, configuration and lifecycle are managed by AKS following [pre-determine updates rules](https://learn.microsoft.com/azure/aks/integrations?WT.mc_id=containers-84290-joarteir#add-ons).
 
-As an example, let's enable Open Service Mesh functionality on an existing AKS cluster using `az aks enable-addons --addons` CLI command  
+As an example, let's enable Container Insights with the monitoring addon. on an existing AKS cluster using `az aks enable-addons --addons` CLI command  
 
 ```azurecli
 az aks enable-addons \
   --name MyManagedCluster \
   --resource-group MyResourceGroup \
-  --addons open-service-mesh
+  --addons monitoring
 ```
 
 or you can use `az aks create --enable-addons` when creating new clusters
@@ -69,7 +69,7 @@ or you can use `az aks create --enable-addons` when creating new clusters
 az aks create \
   --name MyManagedCluster \
   --resource-group MyResourceGroup \
-  --enable-addons open-service-mesh
+  --enable-addons monitoring
 ```
 
 The current available add-ons are:
