@@ -129,6 +129,10 @@ Add-ons are part of the AKS resource provider in the Azure API, and AKS Extensio
 
 ## Resources
 
+:::tip It's not too late to sign up for and complete the [Cloud Skills Challenge](https://aka.ms/CNNY/Challenge)!
+
+:::
+
 * [Add-ons, Extensions, and other integrations with AKS](https://learn.microsoft.com/azure/aks/integrations?WT.mc_id=containers-84290-joarteir)
 * [Available Add-ons on AKS](https://learn.microsoft.com/azure/aks/integrations#available-add-ons?WT.mc_id=containers-84290-joarteir)
 * [Available Extensions on AKS](https://learn.microsoft.com/azure/aks/cluster-extensions?tabs=azure-cli&WT.mc_id=containers-84290-joarteir#currently-available-extensions)

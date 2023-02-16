@@ -194,5 +194,9 @@ kubectl get service
 
 ## Resources
 
+:::tip It's not too late to sign up for and complete the [Cloud Skills Challenge](https://aka.ms/CNNY/Challenge)!
+
+:::
+
 * [Windows containers documentation](https://learn.microsoft.com/virtualization/windowscontainers/?WT.mc_id=containers-84290-viniap)
 * [Run Windows containers on AKS](https://learn.microsoft.com/azure/aks/learn/quick-windows-container-deploy-cli?WT.mc_id=containers-84290-viniap)
