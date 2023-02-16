@@ -85,7 +85,7 @@ ___
 ## Resources
 * **LAST WEEK** for the [Cloud Skills Challenge](https://aka.ms/Challenge)
 * **Learning Resources**: [#30DaysOfCloudNative Collection](https://aka.ms/CNNY/collection)
-* **Podcast:** [Containerize apps to AKS wwith Draft](https://www.youtube.com/watch?v=3RIulCcDet0)
+* **Podcast:** [Containerize apps to AKS with Draft](https://www.youtube.com/watch?v=3RIulCcDet0)
 * **Project:** [Get started with Draft](https://github.com/azure/draft)
 
 ---
