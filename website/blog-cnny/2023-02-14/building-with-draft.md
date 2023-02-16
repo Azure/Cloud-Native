@@ -76,7 +76,7 @@ In this Microsoft Reactor session below, we'll briefly introduce Kubernetes and 
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=XDm2dqxGcvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
 ---
-#Conclusion
+##Conclusion
 
 Overall, Draft simplifies the process of building, deploying, and managing applications on Kubernetes, and can make the overall journey from [code to Kubernetes](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/code-to-cloud-with-azure-kubernetes-service-aks/ba-p/3669916_) significantly easier. 
 
