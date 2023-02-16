@@ -48,12 +48,12 @@ The theme for this week is going further with Cloud Native. Yesterday we talked 
 
 Azure Kubernetes Service (AKS) is a fully managed container orchestration service that makes it easy to deploy and manage containerized applications on Azure. AKS offers a number of features and capabilities, including the ability to extend its supported functionality through the use of add-ons and extensions.
 
-There are also integrations available from [open-source projects and third parties](https://learn.microsoft.com/en-us/azure/aks/integrations#open-source-and-third-party-integrations), but they are not covered by the [AKS support policy](https://learn.microsoft.com/en-us/azure/aks/support-policies).
+There are also integrations available from [open-source projects and third parties](https://learn.microsoft.com/azure/aks/integrations?WT.mc_id=containers-84290-joarteir#open-source-and-third-party-integrations), but they are not covered by the [AKS support policy](https://learn.microsoft.com/azure/aks/support-policies?WT.mc_id=containers-84290-joarteir).
 
 
 ## Add-ons
 
-Add-ons provide a supported way to extend AKS. Installation, configuration and lifecycle are managed by AKS following [pre-determine updates rules](https://learn.microsoft.com/en-us/azure/aks/integrations#add-ons).
+Add-ons provide a supported way to extend AKS. Installation, configuration and lifecycle are managed by AKS following [pre-determine updates rules](https://learn.microsoft.com/azure/aks/integrations?WT.mc_id=containers-84290-joarteir#add-ons).
 
 As an example, let's enable Open Service Mesh functionality on an existing AKS cluster using `az aks enable-addons --addons` CLI command  
 
@@ -80,11 +80,11 @@ The current available add-ons are:
 4.	**azure-policy** - Azure Policy for AKS.
 5.	**ingress-appgw** - Application Gateway Ingress Controller (AGIC).
 6.	**open-service-mesh** - CNCF Open Service Mesh project.
-7.	**azure-keyvault-secrets-provider** - Azure Keyvault Secrets Provider for Secret Store CSI Driver.
+7.	**azure-keyvault-secrets-provider** - Azure Key Vault Secrets Provider for Secret Store CSI Driver.
 8.	**web_application_routing** - Managed NGINX ingress Controller.
 9.	**keda** - CNCF Event-driven autoscaling project.
 
-For more details, get the updated [list of AKS Add-ons here](https://learn.microsoft.com/en-us/azure/aks/integrations#available-add-ons)
+For more details, get the updated [list of AKS Add-ons here](https://learn.microsoft.com/azure/aks/integrations?WT.mc_id=containers-84290-joarteir#available-add-ons)
 
 
 ## Extensions
@@ -93,7 +93,7 @@ Cluster Extensions uses Helm charts and integrates with Azure Resource Manager (
 
 Extensions can be auto upgraded using minor versions, but it requires extra management and configuration. Using Scope parameter, it can be installed on the whole cluster or per namespace.
 
-AKS Extensios requires an Azure CLI extension to be installed. To add or update this CLI extension use the following commands:
+AKS Extensions requires an Azure CLI extension to be installed. To add or update this CLI extension use the following commands:
 ```azurecli
 az extension add --name k8s-extension
 ```
@@ -117,7 +117,7 @@ az k8s-extension create \
   --configuration-settings enableInference=True allowInsecureConnections=True
 ```
 
-For more details, get the updated [list of AKS Extensions here](https://learn.microsoft.com/en-us/azure/aks/cluster-extensions?tabs=azure-cli#currently-available-extensions)
+For more details, get the updated [list of AKS Extensions here](https://learn.microsoft.com/azure/aks/cluster-extensions?tabs=azure-cli&WT.mc_id=containers-84290-joarteir#currently-available-extensions)
 
 
 ## Add-ons vs Extensions
@@ -129,10 +129,10 @@ Add-ons are part of the AKS resource provider in the Azure API, and AKS Extensio
 
 ## Resources
 
-* [Add-ons, Extensions, and other integrations with AKS](https://learn.microsoft.com/en-us/azure/aks/integrations)
-* [Available Add-ons on AKS](https://learn.microsoft.com/en-us/azure/aks/integrations#available-add-ons)
-* [Available Extensions on AKS](https://learn.microsoft.com/en-us/azure/aks/cluster-extensions?tabs=azure-cli#currently-available-extensions)
-* [Open source and third-party integrations](https://learn.microsoft.com/en-us/azure/aks/integrations#open-source-and-third-party-integrations)
+* [Add-ons, Extensions, and other integrations with AKS](https://learn.microsoft.com/azure/aks/integrations?WT.mc_id=containers-84290-joarteir)
+* [Available Add-ons on AKS](https://learn.microsoft.com/azure/aks/integrations#available-add-ons?WT.mc_id=containers-84290-joarteir)
+* [Available Extensions on AKS](https://learn.microsoft.com/azure/aks/cluster-extensions?tabs=azure-cli&WT.mc_id=containers-84290-joarteir#currently-available-extensions)
+* [Open source and third-party integrations](https://learn.microsoft.com/azure/aks/integrations?WT.mc_id=containers-84290-joarteir#open-source-and-third-party-integrations)
 * [CNCF Dapr project](https://dapr.io/) 
 * [CNCF Flux project](https://fluxcd.io/)
 * [CNCF KEDA project](https://keda.sh/)
