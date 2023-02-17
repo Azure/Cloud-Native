@@ -88,7 +88,7 @@ Missed it Live? Tune in to [Ask the Expert with Azure Kubernetes Service](https:
 :::
 
 ---
-# Week 3: Bringing your applications to Kubernetes
+## Week 3: Bringing your applications to Kubernetes
 
 So, you have learned how to build an application on Kubernetes. What about your existing applications? In Week 3, we explored how to take an existing application and set it up to run in Kubernetes:  
 
@@ -101,7 +101,7 @@ So, you have learned how to build an application on Kubernetes. What about your 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CMZ0XudQ4HA" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
-# Week 4: Go *Further* with Cloud-Native
+## Week 4: Go *Further* with Cloud-Native
 
 This week we have gone further with Cloud-native by exploring advanced topics and best practices for the Cloud-native practitioner.
 
