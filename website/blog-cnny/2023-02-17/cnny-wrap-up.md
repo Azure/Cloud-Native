@@ -17,9 +17,9 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/cnny-2023/cnny-wrap-up" />
   <meta name="twitter:title" 
-    content="Serverless Container Options" />
+    content="Cloud Native New Year Wrap Up" />
   <meta name="twitter:description" 
-    content="Explore technology and tooling options for building and deploying your Cloud-native solution" />
+    content="A review of all the great things we have learned during CNNY and how to keep the learning journey going!" />
   <meta name="twitter:image" 
     content="https://azure.github.io/Cloud-Native/img/og/30-20.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +27,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     content="@cskimm" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/cnny-2023/cnny-wrrap-up" />
+    href="https://azure.github.io/Cloud-Native/cnny-2023/cnny-wrap-up" />
 </head>
 
 And that's a wrap on the inaugural #CloudNativeNewYear!Thank you for joining us to kick off the new year with this learning journey into cloud-native! In this final post of the 2023 celebration of all things cloud-native, we'll do two things:
