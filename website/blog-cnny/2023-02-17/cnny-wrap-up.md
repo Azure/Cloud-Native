@@ -30,7 +30,7 @@ tags: [cloud-native, 30daysofcloudnative, zero-to-hero, ask-the-expert, azure-ku
     href="https://azure.github.io/Cloud-Native/cnny-2023/cnny-wrap-up" />
 </head>
 
-And that's a wrap on the inaugural #CloudNativeNewYear!Thank you for joining us to kick off the new year with this learning journey into cloud-native! In this final post of the 2023 celebration of all things cloud-native, we'll do two things:
+And that's a wrap on the inaugural #CloudNativeNewYear! Thank you for joining us to kick off the new year with this learning journey into cloud-native! In this final post of the 2023 celebration of all things cloud-native, we'll do two things:
 
 * **Look Back** - with a quick retrospective of what was covered.
 * **Look Ahead** - with resources and suggestions for how you can continue your skilling journey!
@@ -51,7 +51,7 @@ We appreciate your time and attention and we hope you found this curated learnin
 --- 
 ## Week 1: Cloud-native Fundamentals
 
-In Week 1, we took a tour through the fundementals of cloud-native technologies, including a walkthrough of the core concepts of containers, microservices, and Kubernetes. 
+In Week 1, we took a tour through the fundamentals of cloud-native technologies, including a walkthrough of the core concepts of containers, microservices, and Kubernetes. 
 
 * Jan 23 - **[Cloud-native Fundamentals](https://azure.github.io/Cloud-Native/cnny-2023/cloud-native-fundamentals)**: The answers to life and all the universe - what is cloud-native? What makes an application cloud-native? What are the benefits? (yes, we all know it's 42, but hey, gotta start somewhere!)
 * Jan 24 - **[Containers 101](https://azure.github.io/Cloud-Native/cnny-2023/containers-101)**: Containers are an essential component of cloud-native development. In this intro post, we cover how containers work and why they have become so popular. 
@@ -117,11 +117,11 @@ ___
 
 Learning is great, so why stop here? We have a host of great resources and samples for you to continue your cloud-native journey with Azure below: 
 
-* **Learning Paths:** [Cloud Native New Year Learning Path Colletion](https://learn.microsoft.com/en-us/users/nityan/collections/xz6ehr3z7o7e1q?WT.mc_id=javascript-74010-ninarasi)
+* **Learning Paths:** [Cloud Native New Year Learning Path Collection](https://learn.microsoft.com/users/nityan/collections/xz6ehr3z7o7e1q?WT.mc_id=javascript-84290-ninarasi)
 * **Samples:** [Azure Samples on GitHub](https://github.com/Azure-Samples)
 * **Hacks:** [What the Hack](https://microsoft.github.io/WhatTheHack/)
-* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/resources/cloud-native-infrastructure-with-microsoft-azure/?WT.mc_id=javascript-74010-ninarasi)
-* **eBook:** [Cloud-native Architecture Mapbook](https://azure.microsoft.com/resources/azure-cloud-native-architecture-mapbook/?WT.mc_id=javascript-74010-ninarasi)
+* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/resources/cloud-native-infrastructure-with-microsoft-azure/?WT.mc_id=javascript-84290-ninarasi)
+* **eBook:** [Cloud-native Architecture Mapbook](https://azure.microsoft.com/resources/azure-cloud-native-architecture-mapbook/?WT.mc_id=javascript-84290-ninarasi)
 
 
 ---
