@@ -1,6 +1,6 @@
 ﻿---
 slug: cnny-wrap-up
-title: 4-5 
+title: 4-5. Cloud Native New Year Wrap Up
 authors: [cory, steven, paul, josh, nitya, vinicius, jorge, devanshi ]
 draft: false
 hide_table_of_contents: false
