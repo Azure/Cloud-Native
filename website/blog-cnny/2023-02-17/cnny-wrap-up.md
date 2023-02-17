@@ -78,7 +78,7 @@ In Week 2, we took a deeper dive into the Fundamentals of Kubernetes. The posts 
 * Feb 2 - **[Volumes, Mounts, and Claims](https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-4)**: how to use persistent storage on Kubernetes (and ensure your data can survive container restarts!).
 * Feb 3 - **[Scaling Pods and Nodes](https://azure.github.io/Cloud-Native/cnny-2023/fundamentals-day-5)**: how to scale pods and nodes in our Kubernetes cluster.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=mLm9uskCrq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mLm9uskCrq0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 :::info  ASK THE EXPERTS: AZURE KUBERNETES SERVICE
@@ -98,7 +98,7 @@ So, you have learned how to build an application on Kubernetes. What about your 
 * Feb 9 - **[Debugging and Instrumentation](https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-4)**: how to debug and instrument your application now that it is on Kubernetes. 
 * Feb 10 - **[CI/CD Secure Supply Chain](https://azure.github.io/Cloud-Native/cnny-2023/bring-your-app-day-5)**: now that we have set up our application on Kubernetes, let's talk about container image signing and how to set up a secure supply change.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=CMZ0XudQ4HA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CMZ0XudQ4HA" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 # Week 4: Go *Further* with Cloud-Native
