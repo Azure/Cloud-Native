@@ -312,7 +312,7 @@ The next step is to "tie" these components together and establish a [Federated I
 
 :::info
 
-This identity federation can be established between Azure AD any Kubernetes cluster; not just AKS 🤗
+This identity federation can be established between Azure AD and any Kubernetes cluster, not just AKS 🤗
 
 :::
 
