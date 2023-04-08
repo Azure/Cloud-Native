@@ -74,7 +74,7 @@ You can also use the **'draft info'** command if you are looking for information
 
 In this Microsoft Reactor session below, we'll briefly introduce Kubernetes and the Azure Kubernetes Service (AKS) and then demo how enable your applications for Kubernetes using the open-source tool Draft. We'll show how Draft can help you create the boilerplate code to containerize your applications and add routing and scaling behaviours. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=XDm2dqxGcvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XDm2dqxGcvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 ## Conclusion
