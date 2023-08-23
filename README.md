@@ -34,7 +34,7 @@ Excited for the new era of AI? So are we!! It's time to **Fall For Intelligent A
 [Cloud Native New Year 🥳](https://azure.github.io/Cloud-Native/New-Year/) provided a month long series of content and learnings resources to help beginners skill up from _fundamentals_ to _functional usage_ of Cloud-native technologies with:
  - [#30DaysOfCloudNative](https://azure.github.io/Cloud-Native/cnny-2023/cnny-kickoff) blog posts in 4 themed weeks
  - [AskTheExpert](https://azure.github.io/Cloud-Native/New-Year/ate/) sessions on Azure Kubernetes Service
- - [CloudSkillsChallenge](https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356&WT.mc_id=javascript-84290-ninarasi) based on this [Microsoft Learn collection](https://learn.microsoft.com/en-us/users/cloudskillschallenge/collections/xkwnh4nzo5y6WT.mc_id=javascript-84290-ninarasi)
+ - [CloudSkillsChallenge](https://learn.microsoft.com/en-us/training/challenges?id=a0e385b9-f970-4182-b2e2-3b4619b6c356&WT.mc_id=javascript-84290-ninarasi) based on this [Microsoft Learn collection](https://learn.microsoft.com/en-us/users/cloudskillschallenge/collections/xkwnh4nzo5y6?WT.mc_id=javascript-84290-ninarasi)
 
 .. and more! 
 
@@ -46,10 +46,10 @@ Excited for the new era of AI? So are we!! It's time to **Fall For Intelligent A
 ## Sep 2022 ✨  #ServerlessSeptember 
 
 [Serverless September 🍂](https://azure.github.io/Cloud-Native/serverless-september) marked a month-long celebration of serverless computing - taking learners on a journet from core concepts and developer tools, to usage scenrios and best practices with:
- - [#30DaysOfServerless](https://azure.github.io/Cloud-Native/blog)
- - [Zero To Hero](https://azure.github.io/Cloud-Native/serverless-september/ZeroToHero/)
+ - [#30DaysOfServerless](https://azure.github.io/Cloud-Native/blog) blog posts in 4 themed weeks
+ - [Zero To Hero](https://azure.github.io/Cloud-Native/serverless-september/ZeroToHero/) sessions on Azure Functions, Container Apps & more
  - [Serverless Hacks](https://azure.github.io/Cloud-Native/serverless-september/ServerlessHacks/)
- - [Cloud Skills Challenges](https://learn.microsoft.com/en-us/training/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)
+ - [Cloud Skills Challenge](https://learn.microsoft.com/en-us/training/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) based on this [Microsoft Learn collection](https://learn.microsoft.com/en-us/users/cloudskillschallenge/collections/25m3hkzxygde?WT.mc_id=javascript-84290-ninarasi)
  - [Ask The Expert](https://azure.github.io/Cloud-Native/serverless-september/AskTheExpert/)
 
 .. and more! 

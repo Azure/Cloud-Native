@@ -55,6 +55,13 @@
   --ifm-color-primary-lightest: #ffffff;
 }
 
+/* TODO: 
+   Currently hardcoded hero banner text color to ensure accessible text on dark background
+   Need a better way to make this a dependent version on background color automatically
+*/
+.hero{
+  color: #ffffff;
+}
 
 /* GitHub-style Themed Images
   https://docusaurus.io/docs/markdown-features/assets#github-style-themed-images
