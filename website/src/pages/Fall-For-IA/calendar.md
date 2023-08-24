@@ -2,8 +2,8 @@
 
 #FallForIA **kicks off in mid-September** with initiatives to teach you the tools, technologies and skills you need to _modernize your applications and build differentiated experiences with AI_! Look for these signature events & more:
 
- * 🎤 **Ask The Expert** - live Q&A with product teams in Azure Functions, Azure Container Apps and more.
- * 👩🏽‍💻 **Learn Live: Serverless** - live training series on building enterprise-grade apps with Azure and AI.
+ * 🎙 **Ask The Expert** - live Q&A with product teams in Azure Functions, Azure Container Apps and more.
+ * 👩🏽‍💻 **Learn Live** - live training series on building intelligent apps end-to-end on Azure with AI.
  * ✍🏽 **#30DaysOfIA** - series of daily blog posts organized in 4 themed weeks focused on intelligent apps.
  * 🎯 **Cloud Skills Challenge** - curated collection of Learn modules in Apps, Data & AI - for self-skilling!
  * 🐝 **Community Buzz** - activities to showcase _your_ projects and contributions - including a gallery!
@@ -34,5 +34,25 @@ Start your journey by watching the opening keynote, then track these three core 
 ---
 
 ## Sep 2023
+### 🤖 | #FallIntoIA Starts
+- 👩🏽‍💻 Sep 14 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Architecture)
+- 🎯 Sep 15 | #CloudSkillsChallenge - Apps, Data and AI
+- ✍🏽 Sep 18 | #30DaysOfIA - Power Of Intelligent Applications 
+- 🎙 Sep 20 | #AskTheExpert - Azure Container Apps
+- 👩🏽‍💻 Sep 21 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Frontend Apps)
+- ✍🏽 Sep 25 | #30DaysOfIA - Build Intelligent Apps
+- 🎙 Sep 26 | #AskTheExpert - Azure Functions
+- 👩🏽‍💻 Sep 28 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Backend Integrations)
 
 ## Oct 2023
+### 🤖 | #FallIntoIA Ends
+- 👩🏽‍💻 Oct 05 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Testing & Deployment)
+
+## Nov 2023
+### 🔥 | Microsoft Ignite 
+
+Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the community in-person at Seattle, or online from anywhere in the world!
+ - 👩🏽‍💻 Nov 14 | [Pre-Day Labs](https://ignite.microsoft.com/en-US/home) (Seattle Only)
+ - 🎙 Nov 15 | [Day 1 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
+ - 🎙 Nov 16 | [Day 2 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
+ - 🎙 Nov 17 | [Day 2 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
