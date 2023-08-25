@@ -85,15 +85,30 @@ const config = {
           alt: "Azure Cloud Logo",
           src: "img/cnny23/logo.svg",
         },
-        items: [ 
+        items: [
           {
             to: "/Fall-For-IA/calendar",
-            label: "2024 Calendar",
+            label: "Calendar",
             position: "left",
           },
           {
             type: "dropdown",
-            label: "🥳 #CloudNativeNewYear",
+            label: "🆕 Intelligent Apps",
+            position: "right",
+            items: [
+              {
+                label: "#30DaysOfIA",
+                href: "/30DaysOfIA",
+              },
+              {
+                label: "🍁 | FallForIA 2023",
+                href: "/Fall-For-IA/",
+              },
+            ],
+          },
+          {
+            type: "dropdown",
+            label: "Cloud Native",
             position: "right",
             items: [
               {
@@ -101,14 +116,14 @@ const config = {
                 href: "/cnny-2023",
               },
               {
-                label: "2023 Homepage",
+                label: "🥳 | New Year 2023",
                 href: "/New-Year/",
               },
             ],
           },
           {
             type: "dropdown",
-            label: "🍂 #ServerlessSeptember",
+            label: "Serverless",
             position: "right",
             items: [
               {
@@ -116,15 +131,15 @@ const config = {
                 href: "/blog",
               },
               {
-                label: "2022 Homepage",
+                label: "🍂 September | 2022",
                 href: "/serverless-september",
               },
               {
-                label: "2020 Collection",
+                label: "🍂 September | 2020",
                 href: "https://dev.to/azure/serverlessseptember-2020-content-collection-443k",
               },
               {
-                label: "2019 Collection",
+                label: "🍂 September | 2019",
                 href: "https://dev.to/azure/serverless-september-content-collection-2fhb",
               },
             ],
@@ -177,7 +192,7 @@ const config = {
             to: "https://privacy.microsoft.com/privacystatement",
           },
           {
-            label: `Copyright © ${new Date().getFullYear()} Microsoft`,
+            label: `© ${new Date().getFullYear()} Microsoft`,
             to: "https://microsoft.com",
           },
         ],

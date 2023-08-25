@@ -1,4 +1,4 @@
-# Fall For Intelligent Apps 🤖
+# Fall For Intelligent Apps 🍁
 
 #FallForIA **kicks off in mid-September** with initiatives to teach you the tools, technologies and skills you need to _modernize your applications and build differentiated experiences with AI_! Look for these signature events & more:
 
@@ -34,7 +34,7 @@ Start your journey by watching the opening keynote, then track these three core 
 ---
 
 ## Sep 2023
-### 🤖 | #FallIntoIA Starts
+### 🍁 | #FallForIA Starts
 - 👩🏽‍💻 Sep 14 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Architecture)
 - 🎯 Sep 15 | #CloudSkillsChallenge - Apps, Data and AI
 - ✍🏽 Sep 18 | #30DaysOfIA - Power Of Intelligent Applications 
@@ -45,7 +45,7 @@ Start your journey by watching the opening keynote, then track these three core 
 - 👩🏽‍💻 Sep 28 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Backend Integrations)
 
 ## Oct 2023
-### 🤖 | #FallIntoIA Ends
+### 🍁 | #FallForIA Ends
 - 👩🏽‍💻 Oct 05 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Testing & Deployment)
 
 ## Nov 2023

@@ -18,9 +18,9 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/Fall-For-IA/calendar"
+            to="/Fall-For-IA/"
           >
-            Sep-Oct 2023 | Let's #FallForIA 🍁
+            It's Time To #FallForIA 🍁
           </Link>
         </div>
       </div>
