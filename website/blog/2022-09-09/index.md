@@ -65,7 +65,7 @@ Ready? Let's go!
 
 ## Azure Container Apps!
 
-When building your application, your first decision is about _where you host your application_. The [Azure Architecture Center has a handy chart](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-74010-ninarasi) to help you decide between choices like Azure Functions, Azure App Service, Azure Container Instances, Azure Container Apps and more. But if you are new to this space, you'll need a good understanding of the terms and concepts behind the services Today, we'll focus on _Azure Container Apps_ (ACA) - so let's start with the fundamentals.
+When building your application, your first decision is about _where you host your application_. The [Azure Architecture Center has a handy chart](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-99907-ninarasi) to help you decide between choices like Azure Functions, Azure App Service, Azure Container Instances, Azure Container Apps and more. But if you are new to this space, you'll need a good understanding of the terms and concepts behind the services Today, we'll focus on _Azure Container Apps_ (ACA) - so let's start with the fundamentals.
 
 
 ### Containerized App Defined
@@ -76,7 +76,7 @@ Container images can be shared via  **container registries** (public or private)
 
 ### Cloud-Native & Microservices
 
-Containers are seen as one of the [5 pillars of Cloud-Native app development](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa), an approach where applications are designed explicitly to take advantage of the unique benefits of modern dynamic environments (involving public, private and hybrid clouds). Containers are particularly suited to **serverless solutions based on microservices**.
+Containers are seen as one of the [5 pillars of Cloud-Native app development](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-99907-cxa), an approach where applications are designed explicitly to take advantage of the unique benefits of modern dynamic environments (involving public, private and hybrid clouds). Containers are particularly suited to **serverless solutions based on microservices**.
 
  * _With serverless_ - developers use **managed services** instead of managing their own infrastructure. Services are typically event-driven and can be configured for autoscaling with rules tied to event triggers. Serverless is cost-effective, with developers paying only for the compute cycles and resources they use.
  * _With microservices_ - developers **compose their applications from independent components**. Each component can be deployed in its own container, and scaled at that granularity. This simplifies component reuse (across apps) and maintainability (over time) - with developers evolving functionality at microservice (vs. app) levels.
@@ -91,8 +91,8 @@ Azure Container Apps is the managed service that helps you run containerized app
  * **run microservices** - autoscaled by any KEDA-supported scaler.
 
 Want a quick intro to the topic? Start by watching the short video below - then read these two posts from our _ZeroToHero_ series:
- * [Go Cloud-Native with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) - also see [the illustrated guide](/assets/images/Go-Cloud-Native-f6ac3225c3d9741a1fbff81030f7f830.png)
- * [Journey to the cloud with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609?WT.mc_id=javascript-74010-cxa) - for developer tooling options.
+ * [Go Cloud-Native with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-99907-cxa) - also see [the illustrated guide](/assets/images/Go-Cloud-Native-f6ac3225c3d9741a1fbff81030f7f830.png)
+ * [Journey to the cloud with Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609?WT.mc_id=javascript-99907-cxa) - for developer tooling options.
 
 <iframe width="600" height="400" src="https://www.youtube.com/embed/b3dopSTnSRg" title="How to Build and Deliver Apps Fast and Scalable with Azure Container Apps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

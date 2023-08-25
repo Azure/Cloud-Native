@@ -20,7 +20,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/Fall-For-IA/calendar"
           >
-            Sep-Oct 2023 | Let's #FallForIA 🤖
+            Sep-Oct 2023 | Let's #FallForIA 🍁
           </Link>
         </div>
       </div>

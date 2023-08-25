@@ -49,7 +49,7 @@ Excited for the new era of AI? So are we!! It's time to **Fall For Intelligent A
  - [#30DaysOfServerless](https://azure.github.io/Cloud-Native/blog) blog posts in 4 themed weeks
  - [Zero To Hero](https://azure.github.io/Cloud-Native/serverless-september/ZeroToHero/) sessions on Azure Functions, Container Apps & more
  - [Serverless Hacks](https://azure.github.io/Cloud-Native/serverless-september/ServerlessHacks/)
- - [Cloud Skills Challenge](https://learn.microsoft.com/en-us/training/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) based on this [Microsoft Learn collection](https://learn.microsoft.com/en-us/users/cloudskillschallenge/collections/25m3hkzxygde?WT.mc_id=javascript-84290-ninarasi)
+ - [Cloud Skills Challenge](https://learn.microsoft.com/en-us/training/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi) based on this [Microsoft Learn collection](https://learn.microsoft.com/en-us/users/cloudskillschallenge/collections/25m3hkzxygde?WT.mc_id=javascript-84290-ninarasi)
  - [Ask The Expert](https://azure.github.io/Cloud-Native/serverless-september/AskTheExpert/)
 
 .. and more! 

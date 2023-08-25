@@ -103,7 +103,7 @@ So far in the series, we've put the spotlight on Azure Kubernetes Service (AKS) 
 
 The key takeaway is this. Azure Container Apps (ACA) **also runs on Kubernetes** but abstracts away its complexity in a _managed service offering_ that lets you get productive quickly without requiring detailed knowledge of Kubernetes workings or APIs. However, if you **want full access and control over the Kubernetes API** then go with Azure Kubernetes Service (AKS) instead.
 
-![Comparison](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/401287i073CFBD50CB3A0B9/image-size/large?v=v2&px=999&WT.mc_id=javascript-74010-cxa)
+![Comparison](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/401287i073CFBD50CB3A0B9/image-size/large?v=v2&px=999&WT.mc_id=javascript-99907-cxa)
 
 
 ## Other Container Options

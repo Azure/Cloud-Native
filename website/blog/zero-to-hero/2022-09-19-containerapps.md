@@ -33,7 +33,7 @@ tags: [serverless-september, zero-to-hero,azure-container-apps, dapr]
 
 Welcome to `Day 19` of #30DaysOfServerless!
 
-Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/observability-with-azure-container-apps/ba-p/3627909?WT.mc_id=javascript-74010-cxa) blog on Microsoft Tech Community._
+Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/observability-with-azure-container-apps/ba-p/3627909?WT.mc_id=javascript-99907-cxa) blog on Microsoft Tech Community._
 
 ---
 
@@ -132,6 +132,6 @@ To learn more, visit [Azure Container Apps | Microsoft Azure](https://aka.ms/con
  
 :::info ASK THE EXPERT: LIVE Q&A
 The Azure Container Apps team will answer questions live on **September 29**. 
- * [Sign up to attend](https://reactor.microsoft.com/reactor/events/17004/?WT.mc_id=javascript-74010-ninarasi) for live Q&A with the team
+ * [Sign up to attend](https://reactor.microsoft.com/reactor/events/17004/?WT.mc_id=javascript-99907-ninarasi) for live Q&A with the team
  * [submit your questions](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=ask+the+expert&template=---ask-the-expert-.md&title=%5BAsk+The+Expert%5D++) ahead of time, for prioritization.
 :::

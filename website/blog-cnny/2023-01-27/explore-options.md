@@ -116,12 +116,12 @@ For a detailed look into the world of Serverless and lots of great learning cont
 ## Resources
 * **Register** for the [Cloud Skills Challenge](https://aka.ms/Challenge) - 30 days to complete it!
 * **Learning Resources**: [#30DaysOfCloudNative Collection](https://aka.ms/CNNY/collection)
-* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/resources/cloud-native-infrastructure-with-microsoft-azure/?WT.mc_id=javascript-74010-ninarasi)
-* **eBook:** [Cloud-native Architecture Mapbook](https://azure.microsoft.com/resources/azure-cloud-native-architecture-mapbook/?WT.mc_id=javascript-74010-ninarasi)
+* **eBook:** [Cloud Native Infrastructure with Azure](https://azure.microsoft.com/resources/cloud-native-infrastructure-with-microsoft-azure/?WT.mc_id=javascript-99907-ninarasi)
+* **eBook:** [Cloud-native Architecture Mapbook](https://azure.microsoft.com/resources/azure-cloud-native-architecture-mapbook/?WT.mc_id=javascript-99907-ninarasi)
 
 ---
 ## What's up next in #CloudNativeNewYear?
 
-Week 1 has been all about the fundamentals of cloud-native. Next week, the team will be diving in to application deployment with Azure Kubernetes Service. Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-74010-ninarasi) to the blog to get daily posts delivered directly to your favorite feed reader!
+Week 1 has been all about the fundamentals of cloud-native. Next week, the team will be diving in to application deployment with Azure Kubernetes Service. Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-99907-ninarasi) to the blog to get daily posts delivered directly to your favorite feed reader!
 
 ---

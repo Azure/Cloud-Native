@@ -34,7 +34,7 @@ tags: [serverless-september, zero-to-hero, azure-functions, azure-container-apps
 Welcome to `Day 6` of #30DaysOfServerless!
 
 
-Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-walkthrough-of-durable-entities/ba-p/3616832?WT.mc_id=javascript-74010-cxa) blog on Microsoft Tech Community._
+Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-walkthrough-of-durable-entities/ba-p/3616832?WT.mc_id=javascript-99907-cxa) blog on Microsoft Tech Community._
 
 ---
 
@@ -49,7 +49,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
 ---
  
 
-[Durable Entities](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-entities?tabs=csharp&WT.mc_id=javascript-74010-cxa) are a special type of Azure Function that allow you to implement stateful objects in a serverless environment. They make it easy to introduce stateful components to your app without needing to manually persist data to external storage, so you can focus on your business logic. We’ll demonstrate their power with a real-life example in the last section.
+[Durable Entities](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-entities?tabs=csharp&WT.mc_id=javascript-99907-cxa) are a special type of Azure Function that allow you to implement stateful objects in a serverless environment. They make it easy to introduce stateful components to your app without needing to manually persist data to external storage, so you can focus on your business logic. We’ll demonstrate their power with a real-life example in the last section.
 
 ## Entities 101: Some Background
  
