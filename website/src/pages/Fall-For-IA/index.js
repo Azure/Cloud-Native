@@ -48,7 +48,7 @@ const CampaignFeatures = [
     link: "/Cloud-Native/Fall-For-IA",
     description: (
       <>
-        Join us for weekly events at Microsoft Reactor, as we work through a hands-on workshop on Serverless!
+        Explore this 6-part from Microsoft Reactor on JS & AI on Azure and make an open-source contribution!
       </>
     ),
   },

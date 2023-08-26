@@ -14,7 +14,7 @@ We can't wait to unveil all the exciting content and events we've planned for Se
 
 ## Aug 2023
 
-### 🐝 | [#HackTogether](https://aka.ms/contoso-real-estate/hacktogether) 
+### 🐝 [#HackTogether](https://aka.ms/contoso-real-estate/hacktogether) 
 
 Join us on this 15-day virtual hack experience where you'll learn about [Contoso Real Estate](https://aka.ms/contoso-real-estate/github) (an open-sourced real-world enterprise-grade serverless app) and the technologies it uses - **in 6 livestreamed sessions**. Understand how you can deconstruct an open-source project and make your own contributions:
  - Aug 16 | [Opening Keynote](https://developer.microsoft.com/reactor/events/20275/?wt.mc_id=javascript-99907-ninarasi)
@@ -34,7 +34,7 @@ Start your journey by watching the opening keynote, then track these three core 
 ---
 
 ## Sep 2023
-### 🍁 | #FallForIA Starts
+### 🍁 #FallForIA 
 - 👩🏽‍💻 Sep 14 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Architecture)
 - 🎯 Sep 15 | #CloudSkillsChallenge - Apps, Data and AI
 - ✍🏽 Sep 18 | #30DaysOfIA - Power Of Intelligent Applications 
@@ -45,11 +45,11 @@ Start your journey by watching the opening keynote, then track these three core 
 - 👩🏽‍💻 Sep 28 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Backend Integrations)
 
 ## Oct 2023
-### 🍁 | #FallForIA Ends
+### 🍁 #FallForIA 
 - 👩🏽‍💻 Oct 05 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Testing & Deployment)
 
 ## Nov 2023
-### 🔥 | Microsoft Ignite 
+### 🔥 #MSIgnite
 
 Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the community in-person at Seattle, or online from anywhere in the world!
  - 👩🏽‍💻 Nov 14 | [Pre-Day Labs](https://ignite.microsoft.com/en-US/home) (Seattle Only)
