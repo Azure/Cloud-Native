@@ -99,6 +99,6 @@ Stay tuned, as we will be diving deeper into these topics in the coming weeks:
 
 ---
 
-Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-74010-ninarasi) to the blog to get daily posts delivered directly to your favorite feed reader!
+Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-99907-ninarasi) to the blog to get daily posts delivered directly to your favorite feed reader!
 
 ---

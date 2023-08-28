@@ -75,11 +75,11 @@ What are 3 things you can do today, to jumpstart your learning journey?
 
 [#30DaysOfCloudNative](https://azure.github.io/Cloud-Native/New-Year/) is a month-long series of daily blog posts grouped into 4 themed weeks - taking you from core concepts to end-to-end solution examples in 30 days. Each article will be short (5-8 mins reading time) and provide exercises and resources to help you reinforce learnings and take next steps.
 
-This series focuses on the [Cloud-native On Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi) learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
- * **Week 1:** Get started with [Cloud-native Concepts](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi) 
- * **Week 2:** Build & deploy [Kubernetes Apps on cloud](https://azure.microsoft.com/solutions/kubernetes-on-azure/?WT.mc_id=javascript-74010-ninarasi).
- * **Week 3:** Migrate your applications to [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service/?WT.mc_id=javascript-74010-ninarasi).
- * **Week 4:** Go from Code to Containers to Cloud with [Cloud-native solutions](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)
+This series focuses on the [Cloud-native On Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-99907-ninarasi) learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
+ * **Week 1:** Get started with [Cloud-native Concepts](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-99907-ninarasi) 
+ * **Week 2:** Build & deploy [Kubernetes Apps on cloud](https://azure.microsoft.com/solutions/kubernetes-on-azure/?WT.mc_id=javascript-99907-ninarasi).
+ * **Week 3:** Migrate your applications to [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi).
+ * **Week 4:** Go from Code to Containers to Cloud with [Cloud-native solutions](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-99907-ninarasi)
 
 ![](./img/banner.png)
 
@@ -102,7 +102,7 @@ Here's a sneak peek at the week 1 schedule. We'll start with a broad review of c
 
 ## Let's Get Started!
 
-Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-74010-ninarasi) for updates in your favorite feed reader! **And look out for our first Cloud-native Fundamentals post on January 23rd!**
+Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/cnny-2023/rss.xml?WT.mc_id=javascript-99907-ninarasi) for updates in your favorite feed reader! **And look out for our first Cloud-native Fundamentals post on January 23rd!**
 
 
 ---

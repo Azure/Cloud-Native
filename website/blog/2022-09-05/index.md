@@ -55,17 +55,17 @@ Ready? Let's go.
 
 ## Developer Guidance
 
-If you're a JavaScript developer new to serverless on Azure, start by exploring the [Azure Functions JavaScript Developers Guide](https://docs.microsoft.com/azure/azure-functions/functions-reference-node?tabs=v2-v3-v4-export%2Cv2-v3-v4-done%2Cv2%2Cv2-log-custom-telemetry%2Cv2-accessing-request-and-response%2Cwindows-setting-the-node-version&WT.mc_id=javascript-74010-cxa). It covers:
+If you're a JavaScript developer new to serverless on Azure, start by exploring the [Azure Functions JavaScript Developers Guide](https://docs.microsoft.com/azure/azure-functions/functions-reference-node?tabs=v2-v3-v4-export%2Cv2-v3-v4-done%2Cv2%2Cv2-log-custom-telemetry%2Cv2-accessing-request-and-response%2Cwindows-setting-the-node-version&WT.mc_id=javascript-99907-cxa). It covers:
  * Quickstarts for Node.js - using Visual Code, CLI or Azure Portal
  * Guidance on hosting options and performance considerations
- * Azure Functions [bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples?WT.mc_id=javascript-74010-cxa) and ([code samples](https://docs.microsoft.com/samples/browse/?products=azure-functions&languages=javascript&WT.mc_id=javascript-74010-cxa)) for JavaScript
+ * Azure Functions [bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples?WT.mc_id=javascript-99907-cxa) and ([code samples](https://docs.microsoft.com/samples/browse/?products=azure-functions&languages=javascript&WT.mc_id=javascript-99907-cxa)) for JavaScript
  * Scenario examples - integrations with other Azure Services
 
 
 ### Node.js 18 Support 
 
 :::info Node.js 18 Support (Public Preview)
-Azure Functions support for Node.js 18 [entered Public Preview on Aug 31, 2022](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/?WT.mc_id=javascript-74010-cxa) and is supported by the [Azure Functions v.4.x runtime!](https://docs.microsoft.com/azure/azure-functions/functions-versions?tabs=azure-cli%2Cin-process%2Cv4&pivots=programming-language-javascript&WT.mc_id=javascript-74010-cxa)
+Azure Functions support for Node.js 18 [entered Public Preview on Aug 31, 2022](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/?WT.mc_id=javascript-99907-cxa) and is supported by the [Azure Functions v.4.x runtime!](https://docs.microsoft.com/azure/azure-functions/functions-versions?tabs=azure-cli%2Cin-process%2Cv4&pivots=programming-language-javascript&WT.mc_id=javascript-99907-cxa)
 :::
 
 As we continue to explore how we can use Azure Functions, today we're going to look at using JavaScript to create one, and we're going to be using the newly released **Node.js 18 support for Azure Functions** to make the most out of the platform. 
@@ -80,7 +80,7 @@ The application we're going to be building today will use the GitHub API to retu
 
 
 ### Creating the Azure Function
-To create our Azure Function, we're going to use the [Azure Functions CLI](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash&WT.mc_id=javascript-74010-cxa), which we can install using npm:
+To create our Azure Function, we're going to use the [Azure Functions CLI](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash&WT.mc_id=javascript-99907-cxa), which we can install using npm:
 
 ```bash
 npm install --global azure-function-core-tools
@@ -211,15 +211,15 @@ There we go, we've created an Azure Function which is used as a proxy to another
 ### Other Triggers, Bindings
 
 This article focused on using the HTTPTrigger and relevant bindings, to build a serverless API using Azure Functions. How can you explore other supported bindings, with code samples to illustrate usage?
- * Start with the [Bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples?WT.mc_id=javascript-74010-cxa) documentation to get a list of supported triggers/bindings for JavaScript
- * Explore the [Azure serverless community library](https://www.serverlesslibrary.net/?language=JavaScript) and [Azure Samples](https://docs.microsoft.com/samples/browse/?products=azure-functions&languages=javascript&WT.mc_id=javascript-74010-cxa) resources by technology.
+ * Start with the [Bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples?WT.mc_id=javascript-99907-cxa) documentation to get a list of supported triggers/bindings for JavaScript
+ * Explore the [Azure serverless community library](https://www.serverlesslibrary.net/?language=JavaScript) and [Azure Samples](https://docs.microsoft.com/samples/browse/?products=azure-functions&languages=javascript&WT.mc_id=javascript-99907-cxa) resources by technology.
 
 ### Scenarios with Integrations
 
 Once you've tried out the samples, try building an end-to-end scenario by using these triggers to integrate seamlessly with other services. Here are some suggestions:
- * [Azure Queue storage trigger and bindings](https://docs.microsoft.com/azure/azure-functions/functions-bindings-storage-queue?tabs=in-process%2Cextensionv5%2Cextensionv3&pivots=programming-language-javascript&WT.mc_id=javascript-74010-cxa)
- * [Show GitHub start count with Azure SignalR service](https://docs.microsoft.com/azure/azure-signalr/signalr-quickstart-azure-functions-javascript?toc=%2Fazure%2Fazure-functions%2Ftoc.json&WT.mc_id=javascript-74010-cxa)
- * [Deploy a GraphQL API as an Azure Function](https://docs.microsoft.com/azure/developer/javascript/how-to/with-web-app/graphql/azure-function-hello-world?tabs=visualstudiocode&WT.mc_id=javascript-74010-cxa)
+ * [Azure Queue storage trigger and bindings](https://docs.microsoft.com/azure/azure-functions/functions-bindings-storage-queue?tabs=in-process%2Cextensionv5%2Cextensionv3&pivots=programming-language-javascript&WT.mc_id=javascript-99907-cxa)
+ * [Show GitHub start count with Azure SignalR service](https://docs.microsoft.com/azure/azure-signalr/signalr-quickstart-azure-functions-javascript?toc=%2Fazure%2Fazure-functions%2Ftoc.json&WT.mc_id=javascript-99907-cxa)
+ * [Deploy a GraphQL API as an Azure Function](https://docs.microsoft.com/azure/developer/javascript/how-to/with-web-app/graphql/azure-function-hello-world?tabs=visualstudiocode&WT.mc_id=javascript-99907-cxa)
 
 
 ## Exercise: Support searching
@@ -228,6 +228,6 @@ The GitHub Search API allows you to provide search parameters via the `q` query 
 
 ## Resources
 
-- [Public preview of Node.js 18 for Azure Functions](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/?WT.mc_id=javascript-74010-cxa)
+- [Public preview of Node.js 18 for Azure Functions](https://azure.microsoft.com/updates/public-preview-nodejs-18-in-azure-functions/?WT.mc_id=javascript-99907-cxa)
 - [`fetch` support in Node.js 18](https://nodejs.org/en/blog/announcements/v18-release-announce/#fetch-experimental)
-- [Refactor Node.js and Express APIs to Serverless APIs with Azure Functions](https://docs.microsoft.com/learn/modules/shift-nodejs-express-apis-serverless/?WT.mc_id=javascript-74010-cxa)
+- [Refactor Node.js and Express APIs to Serverless APIs with Azure Functions](https://docs.microsoft.com/learn/modules/shift-nodejs-express-apis-serverless/?WT.mc_id=javascript-99907-cxa)

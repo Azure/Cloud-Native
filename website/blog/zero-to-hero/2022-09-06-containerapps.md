@@ -33,7 +33,7 @@ tags: [serverless-september, zero-to-hero, azure-functions, azure-container-apps
 
 Welcome to `Day 6` of #30DaysOfServerless!
 
-Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-74010-cxa) blog on Microsoft Tech Community._
+Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407?WT.mc_id=javascript-99907-cxa) blog on Microsoft Tech Community._
 
 ---
 
@@ -98,17 +98,17 @@ In May of 2022, Microsoft announced the general availability of Azure Container 
 
 For those interested in taking advantage of the open source ecosystem while reaping the benefits of a managed platform experience, Container Apps run on Kubernetes and provides a set of managed open source projects embedded directly into the platform including the Kubernetes Event Driven Autoscaler (KEDA), the Distributed Application Runtime (Dapr) and Envoy.
 
-![Azure Kubernetes Service vs. Azure Container Apps](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/401287i073CFBD50CB3A0B9/image-size/large?v=v2&px=999&WT.mc_id=javascript-74010-cxa)
+![Azure Kubernetes Service vs. Azure Container Apps](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/401287i073CFBD50CB3A0B9/image-size/large?v=v2&px=999&WT.mc_id=javascript-99907-cxa)
 
 Container apps provides other Cloud-Native features and capabilities in addition to those above including, but not limited to: 
 
- * [Revisions](https://docs.microsoft.com/azure/container-apps/application-lifecycle-management?WT.mc_id=javascript-74010-cxa): immutable snapshot representative of a specific version of a container app which can take advantage of the [managed traffic splitting capability](https://docs.microsoft.com/azure/container-apps/revisions-manage?tabs=bash&WT.mc_id=javascript-74010-cxa) 
- * [Health probes](https://docs.microsoft.com/azure/container-apps/health-probes?tabs=arm-template?WT.mc_id=javascript-74010-cxa): Based on [Kubernetes health probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/?WT.mc_id=javascript-74010-cxa) with support for Readiness, Liveness and Startup 
- * [Built-in authentication](https://docs.microsoft.com/azure/container-apps/authentication-openid?WT.mc_id=javascript-74010-cxa)
- * [Managed Identity](https://docs.microsoft.com/azure/container-apps/managed-identity?tabs=portal%2Cdotnet&WT.mc_id=javascript-74010-cxa)
- * [Custom domain names and certificates](https://docs.microsoft.com/azure/container-apps/custom-domains-certificates?WT.mc_id=javascript-74010-cxa)
- * [Virtual Network injection](https://docs.microsoft.com/azure/container-apps/networking?WT.mc_id=javascript-74010-cxa)
- * [Platform observability](https://docs.microsoft.com/azure/container-apps/observability?tabs=bash&WT.mc_id=javascript-74010-cxa) : log streaming, console connect, Azure monitor 
+ * [Revisions](https://docs.microsoft.com/azure/container-apps/application-lifecycle-management?WT.mc_id=javascript-99907-cxa): immutable snapshot representative of a specific version of a container app which can take advantage of the [managed traffic splitting capability](https://docs.microsoft.com/azure/container-apps/revisions-manage?tabs=bash&WT.mc_id=javascript-99907-cxa) 
+ * [Health probes](https://docs.microsoft.com/azure/container-apps/health-probes?tabs=arm-template?WT.mc_id=javascript-99907-cxa): Based on [Kubernetes health probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/?WT.mc_id=javascript-99907-cxa) with support for Readiness, Liveness and Startup 
+ * [Built-in authentication](https://docs.microsoft.com/azure/container-apps/authentication-openid?WT.mc_id=javascript-99907-cxa)
+ * [Managed Identity](https://docs.microsoft.com/azure/container-apps/managed-identity?tabs=portal%2Cdotnet&WT.mc_id=javascript-99907-cxa)
+ * [Custom domain names and certificates](https://docs.microsoft.com/azure/container-apps/custom-domains-certificates?WT.mc_id=javascript-99907-cxa)
+ * [Virtual Network injection](https://docs.microsoft.com/azure/container-apps/networking?WT.mc_id=javascript-99907-cxa)
+ * [Platform observability](https://docs.microsoft.com/azure/container-apps/observability?tabs=bash&WT.mc_id=javascript-99907-cxa) : log streaming, console connect, Azure monitor 
  
 The ability to dynamically scale and support growing numbers of users, events, and requests is one of the core requirements for most Cloud-Native, distributed applications. Azure Container Apps is purpose-built with this and other Cloud-Native tenants in mind. 
 
@@ -152,6 +152,6 @@ If you are interested in building resilient, portable and highly-scalable apps v
 
 :::info ASK THE EXPERT: LIVE Q&A
 The Azure Container Apps team will answer questions live on **September 29**. 
- * [Sign up to attend](https://reactor.microsoft.com/reactor/events/17004/?WT.mc_id=javascript-74010-ninarasi) for live Q&A with the team
+ * [Sign up to attend](https://reactor.microsoft.com/reactor/events/17004/?WT.mc_id=javascript-99907-ninarasi) for live Q&A with the team
  * [submit your questions](https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=ask+the+expert&template=---ask-the-expert-.md&title=%5BAsk+The+Expert%5D++) ahead of time, for prioritization.
 :::

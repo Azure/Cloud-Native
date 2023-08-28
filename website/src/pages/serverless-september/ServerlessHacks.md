@@ -23,10 +23,10 @@ You can submit multiple entries - but each _must_ be associated with a unique Gi
 
 Visit the [Serverless September At The Reactor](https://aka.ms/ServerlessHacks) page and register to attend weekly online sessions with Cloud Advocate [Gwyneth Peña-Siguenza](https://twitter.com/madebygps) and special guests! Hear real-world serverless stories, ask questions and get insights to help you progress in your challenge.
 
- * **Sep 7** |  How to get into Tech And Serverless - with Linda Nichols. [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16946?WT.mc_id=javascript-74010-ninarasi)
- * **Sep 14** |  How to DevOps and Serverless the Right Way. [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16958?WT.mc_id=javascript-74010-ninarasi)
- * **Sep 21** |  The Serverless Project that Got Me Promoted! [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16959?WT.mc_id=javascript-74010-ninarasi)
- * **Sep 28** | So you want to migrate your project to Serverless? [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16960?WT.mc_id=javascript-74010-ninarasi)
+ * **Sep 7** |  How to get into Tech And Serverless - with Linda Nichols. [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16946?WT.mc_id=javascript-99907-ninarasi)
+ * **Sep 14** |  How to DevOps and Serverless the Right Way. [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16958?WT.mc_id=javascript-99907-ninarasi)
+ * **Sep 21** |  The Serverless Project that Got Me Promoted! [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16959?WT.mc_id=javascript-99907-ninarasi)
+ * **Sep 28** | So you want to migrate your project to Serverless? [`REGISTER HERE`](https://developer.microsoft.com/reactor/events/16960?WT.mc_id=javascript-99907-ninarasi)
 
 :::
 

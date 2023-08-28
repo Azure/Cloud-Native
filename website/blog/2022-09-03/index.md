@@ -41,12 +41,12 @@ Ready? Let's go.
 
 ## What We'll Cover
 
- * Review the [Azure Functions Developer Guide](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob&WT.mc_id=javascript-74010-ninarasi)
- * Build your first Function App [with VS Code](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-node?WT.mc_id=javascript-74010-ninarasi)
+ * Review the [Azure Functions Developer Guide](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob&WT.mc_id=javascript-99907-ninarasi)
+ * Build your first Function App [with VS Code](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-node?WT.mc_id=javascript-99907-ninarasi)
  * Develop locally [using Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-core-tools-reference?tabs=v2)
- * Review [Local Testing & Development](https://docs.microsoft.com/azure/azure-functions/functions-develop-local?WT.mc_id=javascript-74010-ninarasi) guidelines
- * Check out the [Durable Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/durable/quickstart-js-vscode?WT.mc_id=javascript-74010-ninarasi)
- * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)!
+ * Review [Local Testing & Development](https://docs.microsoft.com/azure/azure-functions/functions-develop-local?WT.mc_id=javascript-99907-ninarasi) guidelines
+ * Check out the [Durable Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/durable/quickstart-js-vscode?WT.mc_id=javascript-99907-ninarasi)
+ * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi)!
  * **Resources**: [#30DaysOfServerless Collection](https://aka.ms/30DaysOfServerless/collection).
 
 ![](./img/banner.png)
@@ -55,7 +55,7 @@ Ready? Let's go.
 
 ## Developer Guidance
 
-Before we jump into development, let's familiarize ourselves with language-specific guidance from the Azure Functions Developer Guide. We'll review the [JavaScript version](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob&WT.mc_id=javascript-74010-ninarasi) but guides for F#, Java, Python, C# and PowerShell are also available.
+Before we jump into development, let's familiarize ourselves with language-specific guidance from the Azure Functions Developer Guide. We'll review the [JavaScript version](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob&WT.mc_id=javascript-99907-ninarasi) but guides for F#, Java, Python, C# and PowerShell are also available.
 
  1. A **function** is defined by two things: _code_ (written in a supported programming language) and _configuration_ (specified in a `functions.json` file, declaring the triggers, bindings and other context for execution).
 
@@ -63,9 +63,9 @@ Before we jump into development, let's familiarize ourselves with language-speci
 
  3. A **host configuration** is _runtime-specific configuration_ that affects all functions running in a given function app instance. It is defined in a `host.json` file.
 
- 4. A recommended **folder structure** is defined for the function app, but may vary based on the programming language used. Check [the documentation on folder structures](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob#folder-structure&WT.mc_id=javascript-74010-ninarasi) to learn the default for _your_ preferred language.
+ 4. A recommended **folder structure** is defined for the function app, but may vary based on the programming language used. Check [the documentation on folder structures](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob#folder-structure&WT.mc_id=javascript-99907-ninarasi) to learn the default for _your_ preferred language.
 
-Here's an [example of the JavaScript folder structure](https://docs.microsoft.com/azure/azure-functions/functions-reference-node?WT.mc_id=javascript-74010-ninarasi) for a function app containing two functions with some shared dependencies. Note that `host.json` (runtime configuration) is defined once, in the root directory. And `function.json` is defined separately for each function.
+Here's an [example of the JavaScript folder structure](https://docs.microsoft.com/azure/azure-functions/functions-reference-node?WT.mc_id=javascript-99907-ninarasi) for a function app containing two functions with some shared dependencies. Note that `host.json` (runtime configuration) is defined once, in the root directory. And `function.json` is defined separately for each function.
 
 ```
 FunctionsProject
@@ -226,13 +226,13 @@ Learn how to [work with Azure Functions Core Tools](https://docs.microsoft.com/a
 
 You might have noticed that the scaffold also produced a `local.settings.json` file. What is that and why is it useful? By definition, the local.settings.json file _"stores app settings and settings used by local development tools. Settings in the local.settings.json file are used only when you're running your project locally."_
 
-Read the guidance on [Code and test Azure Functions Locally](https://docs.microsoft.com/azure/azure-functions/functions-develop-local?WT.mc_id=javascript-74010-ninarasi#local-settings-file) to learn more about how to configure development environments locally, for your preferred programming language, to support testing and debugging on the local Functions runtime.
+Read the guidance on [Code and test Azure Functions Locally](https://docs.microsoft.com/azure/azure-functions/functions-develop-local?WT.mc_id=javascript-99907-ninarasi#local-settings-file) to learn more about how to configure development environments locally, for your preferred programming language, to support testing and debugging on the local Functions runtime.
 
 ## Exercise
 We made it! Now it's your turn!! Here are a few things you can try to apply what you learned and reinforce your understanding:
  * Walk through this quickstart on your own!
- * Then try the [Durable Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/durable/quickstart-js-vscode?WT.mc_id=javascript-74010-ninarasi) as a stretch goal!
- * And take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) to skill up in fun ways
+ * Then try the [Durable Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/durable/quickstart-js-vscode?WT.mc_id=javascript-99907-ninarasi) as a stretch goal!
+ * And take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi) to skill up in fun ways
 
 ## Resources
 

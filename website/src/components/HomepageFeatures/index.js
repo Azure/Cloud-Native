@@ -4,43 +4,36 @@ import styles from './styles.module.css';
 
 
 const CoreServices = [
-  { 
-    title: 'Azure Functions',
-    svgpath: 'img/svg/azure-functions.svg',
-    link: "https://docs.microsoft.com/azure/azure-functions/functions-overview",
-    description: (
-      <>
-       Build event-driven serverless solutions with less code and infrastructure maintenance costs.
-      </>
-    ),
-  },
-  { 
-    title: 'Azure Container Apps',
-    svgpath: 'img/svg/azure-container-apps.svg',
-    link: "https://docs.microsoft.com/azure/container-apps/overview",
-    description: (
-      <>
-        Azure Container Apps enables you to run microservices and containerized applications on a serverless platform.
-      </>
-    ),
-  },
-  { 
-    title: 'Azure Kubernetes Service',
-    svgpath: 'img/svg/azure-kubernetes.svg',
+  {
+    title: "Azure Kubernetes Service",
+    svgpath: "img/svg/azure-kubernetes.svg",
     link: "https://docs.microsoft.com/azure/aks/",
     description: (
       <>
-        Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster by offloading the operational overhead to Azure. 
+        Azure Kubernetes Service makes deploying managed Kubernetes
+        clusters easier by offloading ops overhead to Azure.
       </>
     ),
   },
   {
-    title: 'Azure Red Hat OpenShift',
-    svgpath: 'img/svg/azure-openshift.svg',
-    link: "https://azure.microsoft.com/services/openshift/",
+    title: "Azure Container Apps",
+    svgpath: "img/svg/azure-container-apps.svg",
+    link: "https://docs.microsoft.com/azure/container-apps/overview",
     description: (
       <>
-        Use highly available, fully managed OpenShift clusters on demand - monitored and operated jointly by Microsoft and Red Hat
+        Azure Container Apps enables you to run microservices and containerized
+        applications on a serverless platform.
+      </>
+    ),
+  },
+  {
+    title: "Azure Functions",
+    svgpath: "img/svg/azure-functions.svg",
+    link: "https://docs.microsoft.com/azure/azure-functions/functions-overview",
+    description: (
+      <>
+        Build event-driven serverless solutions with less code and
+        infrastructure maintenance costs.
       </>
     ),
   },
@@ -48,46 +41,94 @@ const CoreServices = [
 
 const MoreServices = [
   {
-    title: 'Distributed App Runtime',
-    svgpath: 'img/svg/dapr_logo.svg',
-    link: "https://dapr.io/",
+    title: "Azure Cosmos DB",
+    svgpath: "img/svg/azure-cosmos-db.svg",
+    link: "https://learn.microsoft.com/azure/cosmos-db/",
     description: (
       <>
-        Dapr provides APIs for building portable and reliable microservices, using industry best practices.
+        Azure Cosmos DB is a fully managed, distributed NoSQL & relational
+        database for modern app development.
       </>
     ),
   },
   {
-    title: 'Kubernetes Event-Drive Autoscaling',
-    svgpath: 'img/svg/azure-keda.svg',
-    link: "https://docs.microsoft.com/azure/aks/keda-about",
+    title: "Azure AI Services",
+    svgpath: "img/svg/azure-ai.svg",
+    link: "https://learn.microsoft.com/azure/ai-services/",
     description: (
       <>
-        A lightweight component for event-driven autoscaling of applications in a sustainable, cost-efficient manner.
+        Build cutting-edge, market-ready, responsible apps for your organization
+        with Azure Open AI, Cognitive Search and more.
       </>
     ),
   },
   {
-    title: 'Azure Monitor',
-    svgpath: 'img/svg/azure-monitor.svg',
-    link: "https://docs.microsoft.com/azure/azure-monitor/overview",
+    title: "GitHub",
+    svgpath: "img/svg/github-codespaces.svg",
+    link: "https://github.com/features/",
     description: (
       <>
-        Delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.. 
-      </>
-    ),
-  },
-  {
-    title: 'Azure Static Web Apps',
-    svgpath: 'img/svg/azure-swa.svg',
-    link: "https://docs.microsoft.com/azure/static-web-apps/",
-    description: (
-      <>
-        Azure Static Web Apps allows you to build modern web applications that automatically publish to the web as your code changes.
+        Improve developer experience and enhance developer productivity with GitHub tooling like Actions, Copilot and Codespaces.
       </>
     ),
   },
   /*
+  Icons From: iconcloud.design
+  {
+    title: "Distributed App Runtime",
+    svgpath: "img/svg/dapr_logo.svg",
+    link: "https://dapr.io/",
+    description: (
+      <>
+        Dapr provides APIs for building portable and reliable microservices,
+        using industry best practices.
+      </>
+    ),
+  },
+  {
+    title: "Kubernetes Event-Drive Autoscaling",
+    svgpath: "img/svg/azure-keda.svg",
+    link: "https://docs.microsoft.com/azure/aks/keda-about",
+    description: (
+      <>
+        A lightweight component for event-driven autoscaling of applications in
+        a sustainable, cost-efficient manner.
+      </>
+    ),
+  },
+  {
+    title: "Azure Monitor",
+    svgpath: "img/svg/azure-monitor.svg",
+    link: "https://docs.microsoft.com/azure/azure-monitor/overview",
+    description: (
+      <>
+        Delivers a comprehensive solution for collecting, analyzing, and acting
+        on telemetry from your cloud and on-premises environments..
+      </>
+    ),
+  },
+  {
+    title: "Azure Static Web Apps",
+    svgpath: "img/svg/azure-swa.svg",
+    link: "https://docs.microsoft.com/azure/static-web-apps/",
+    description: (
+      <>
+        Azure Static Web Apps allows you to build modern web applications that
+        automatically publish to the web as your code changes.
+      </>
+    ),
+  },
+  {
+    title: "Azure Red Hat OpenShift",
+    svgpath: "img/svg/azure-openshift.svg",
+    link: "https://azure.microsoft.com/services/openshift/",
+    description: (
+      <>
+        Use highly available, fully managed OpenShift clusters on demand -
+        monitored and operated jointly by Microsoft and Red Hat
+      </>
+    ),
+  },
   {
     title: 'Azure Event Grid',
     svgpath: 'img/svg/azure-event-grid.svg',
@@ -124,7 +165,7 @@ const MoreServices = [
 
 function Feature({svgpath, title, description, link}) {
   return (
-    <div className={clsx('col col--3')}>
+    <div className={clsx('col col--4')}>
       <a href={link} target="_blank">
         <div className="text--center">
           <img width="150px" height="150px" src={svgpath} alt={title} />

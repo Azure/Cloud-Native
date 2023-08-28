@@ -45,7 +45,7 @@ Ready? Let's Go!
  * Triggers, Bindings and Custom Handlers
  * What is Durable Functions?
  * Orchestrators, Entity Functions and Application Patterns
- * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)!
+ * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi)!
  * **Resources**: [#30DaysOfServerless Collection](https://aka.ms/30DaysOfServerless/collection).
 
 ![](./img/banner.png)
@@ -55,27 +55,27 @@ Ready? Let's Go!
 
 ## 1. What is FaaS?
 
-Faas stands for [Functions As a Service (FaaS)](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-74010-ninarasi ). But what does that mean for us as application developers? We know that 
+Faas stands for [Functions As a Service (FaaS)](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-99907-ninarasi ). But what does that mean for us as application developers? We know that 
 building and deploying modern applications **at scale** can get _complicated_ and it starts with us needing to take decisions on _Compute_. In other words, we need to answer this question: "**where should I host my application given my resource dependencies and scaling requirements?**" 
 
 ![this useful flowchart](./img/compute-choices.png )
 
-Azure has [this useful flowchart](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-74010-ninarasi ) (shown below) to guide your decision-making. You'll see that hosting options generally fall into three categories:
+Azure has [this useful flowchart](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=javascript-99907-ninarasi ) (shown below) to guide your decision-making. You'll see that hosting options generally fall into three categories:
  * **Infrastructure as a Service (IaaS)** - where you provision and manage Virtual Machines yourself (cloud provider manages infra).
  * **Platform as a Service (PaaS)** - where you use a provider-_managed_ hosting environment like Azure Container Apps.
  * **Functions as a Service (FaaS)** - where you forget about hosting environments and simply _deploy your code_ for the provider to run.
 
-Here, "serverless" compute refers to hosting options where we (as developers) can focus on building apps _without having to manage the infrastructure_. See [serverless compute options on Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi ) for more information.
+Here, "serverless" compute refers to hosting options where we (as developers) can focus on building apps _without having to manage the infrastructure_. See [serverless compute options on Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-99907-ninarasi ) for more information.
 
 ---
 
 ## 2. Azure Functions
 
-[Azure Functions](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=javascript-74010-ninarasi ) is the Functions-as-a-Service (FaaS) option on Azure. It is the ideal serverless solution if your application is event-driven with short-lived workloads. With Azure Functions, we develop applications as modular blocks of code (`functions`) that are executed on demand, in response to configured events (`triggers`). This approach brings us two advantages:
+[Azure Functions](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=javascript-99907-ninarasi ) is the Functions-as-a-Service (FaaS) option on Azure. It is the ideal serverless solution if your application is event-driven with short-lived workloads. With Azure Functions, we develop applications as modular blocks of code (`functions`) that are executed on demand, in response to configured events (`triggers`). This approach brings us two advantages:
  * _It saves us money._ We only pay for the time the function runs.
  * _It scales with demand._ We have 3 hosting plans for flexible scaling behaviors.
 
-Azure Functions can be programmed in many popular languages (C#, F#, Java, JavaScript, TypeScript, PowerShell or Python), with Azure providing [language-specific](https://docs.microsoft.com/azure/azure-functions/supported-languages?WT.mc_id=javascript-74010-ninarasi ) handlers and default [runtimes](https://docs.microsoft.com/azure/azure-functions/supported-languages#languages-by-runtime-version?WT.mc_id=javascript-74010-ninarasi ) to execute them.
+Azure Functions can be programmed in many popular languages (C#, F#, Java, JavaScript, TypeScript, PowerShell or Python), with Azure providing [language-specific](https://docs.microsoft.com/azure/azure-functions/supported-languages?WT.mc_id=javascript-99907-ninarasi ) handlers and default [runtimes](https://docs.microsoft.com/azure/azure-functions/supported-languages#languages-by-runtime-version?WT.mc_id=javascript-99907-ninarasi ) to execute them.
 
 :::tip Concept: Custom Handlers
 
@@ -83,7 +83,7 @@ Azure Functions can be programmed in many popular languages (C#, F#, Java, JavaS
 * Or we wanted to use a different runtime for a supported language? 
 :::
 
-**[Custom Handlers](https://docs.microsoft.com/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-74010-ninarasi )** have you covered! These are lightweight webservers that can receive and process input events from the Functions host - and return responses that can be delivered to any output targets. By this definition, custom handlers can be implemented by _any language that supports receiving HTTP events_. Check out [the quickstart for writing a custom handler](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-other?tabs=go%2Cmacos&WT.mc_id=javascript-74010-ninarasi ) in Rust or Go.
+**[Custom Handlers](https://docs.microsoft.com/azure/azure-functions/functions-custom-handlers?WT.mc_id=javascript-99907-ninarasi )** have you covered! These are lightweight webservers that can receive and process input events from the Functions host - and return responses that can be delivered to any output targets. By this definition, custom handlers can be implemented by _any language that supports receiving HTTP events_. Check out [the quickstart for writing a custom handler](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-other?tabs=go%2Cmacos&WT.mc_id=javascript-99907-ninarasi ) in Rust or Go.
 
 ![Custom Handlers](./img/azure-functions-custom-handlers-overview.png)
 
@@ -98,12 +98,12 @@ This is where **triggers** and **bindings** come in.
  * `Triggers` define how a function is invoked and what associated data it will provide. _A function must have exactly one trigger_.
  * `Bindings` _declaratively_ define how a resource is connected to the function. The resource or binding can be of type input, output, or both. _Bindings are optional. A Function can have multiple input, output bindings_.
 
-Azure Functions comes with a number of [supported bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#supported-bindings&WT.mc_id=javascript-74010-ninarasi) that can be used to integrate relevant services to power a specific scenario. For instance:
- * [HTTP Triggers](https://docs.microsoft.com/azure/azure-functions/functions-bindings-http-webhook?tabs=in-process%2Cfunctionsv2&pivots=programming-language-javascript&WT.mc_id=javascript-74010-ninarasi) - invokes the function in response to an `HTTP request`. Use this to implement serverless APIs for your application.
- * [Event Grid Triggers](https://docs.microsoft.com/azure/azure-functions/functions-bindings-event-grid?tabs=in-process%2Cextensionv3&pivots=programming-language-javascript&WT.mc_id=javascript-74010-ninarasi) invokes the function on receiving events from an Event Grid. Use this to process events reactively, and potentially publish responses back to custom Event Grid topics.
- * [SignalR Service Trigger](https://docs.microsoft.com/azure/azure-functions/functions-bindings-signalr-service-trigger?tabs=in-process&pivots=programming-language-javascript&WT.mc_id=javascript-74010-ninarasi) invokes the function in response to messages from Azure SignalR, allowing your application to take actions with _real-time contexts_.
+Azure Functions comes with a number of [supported bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#supported-bindings&WT.mc_id=javascript-99907-ninarasi) that can be used to integrate relevant services to power a specific scenario. For instance:
+ * [HTTP Triggers](https://docs.microsoft.com/azure/azure-functions/functions-bindings-http-webhook?tabs=in-process%2Cfunctionsv2&pivots=programming-language-javascript&WT.mc_id=javascript-99907-ninarasi) - invokes the function in response to an `HTTP request`. Use this to implement serverless APIs for your application.
+ * [Event Grid Triggers](https://docs.microsoft.com/azure/azure-functions/functions-bindings-event-grid?tabs=in-process%2Cextensionv3&pivots=programming-language-javascript&WT.mc_id=javascript-99907-ninarasi) invokes the function on receiving events from an Event Grid. Use this to process events reactively, and potentially publish responses back to custom Event Grid topics.
+ * [SignalR Service Trigger](https://docs.microsoft.com/azure/azure-functions/functions-bindings-signalr-service-trigger?tabs=in-process&pivots=programming-language-javascript&WT.mc_id=javascript-99907-ninarasi) invokes the function in response to messages from Azure SignalR, allowing your application to take actions with _real-time contexts_.
 
-Triggers and bindings help you abstract your function's interfaces to other components it interacts with, eliminating hardcoded integrations. They are [configured differently based on the programming language](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#trigger-and-binding-definitions&WT.mc_id=javascript-74010-ninarasi ) you use. For example - JavaScript functions are configured in the [functions.json](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob#function-code?WT.mc_id=javascript-74010-ninarasi ) file. Here's an example of what that looks like.
+Triggers and bindings help you abstract your function's interfaces to other components it interacts with, eliminating hardcoded integrations. They are [configured differently based on the programming language](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#trigger-and-binding-definitions&WT.mc_id=javascript-99907-ninarasi ) you use. For example - JavaScript functions are configured in the [functions.json](https://docs.microsoft.com/azure/azure-functions/functions-reference?tabs=blob#function-code?WT.mc_id=javascript-99907-ninarasi ) file. Here's an example of what that looks like.
 
 
 ```js
@@ -123,7 +123,7 @@ Triggers and bindings help you abstract your function's interfaces to other comp
 
 The key thing to remember is that triggers and bindings have a `direction` property - triggers are always `in`, input bindings are `in` and output bindings are `out`. Some bindings can support a special `inout` direction. 
 
-The documentation has [code examples](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#supported-bindings&WT.mc_id=javascript-74010-ninarasi ) for bindings to popular Azure services. Here's an example of the bindings and trigger configuration for a [BlobStorage](https://docs.microsoft.com/azure/azure-functions/functions-bindings-storage-blob-input?tabs=in-process%2Cextensionv5&pivots=programming-language-javascript#example&WT.mc_id=javascript-74010-ninarasi ) use case.
+The documentation has [code examples](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#supported-bindings&WT.mc_id=javascript-99907-ninarasi ) for bindings to popular Azure services. Here's an example of the bindings and trigger configuration for a [BlobStorage](https://docs.microsoft.com/azure/azure-functions/functions-bindings-storage-blob-input?tabs=in-process%2Cextensionv5&pivots=programming-language-javascript#example&WT.mc_id=javascript-99907-ninarasi ) use case.
 
 ```js
 // function.json configuration
@@ -180,14 +180,14 @@ There is an option create custom bindings if necessary. We don't have time to di
 
 This sounds great, right?. But now, let's talk about one challenge for Azure Functions. In the use cases so far, the functions are _stateless_ - they take inputs at runtime if necessary, and return output results if required. But they are otherwise self-contained, which is great for scalability!
 
-But what if I needed to build more complex _workflows_ that need to store and transfer state, and complete operations in a reliable manner? [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp&WT.mc_id=javascript-74010-ninarasi ) are an extension of Azure Functions that makes _stateful workflows_ possible.
+But what if I needed to build more complex _workflows_ that need to store and transfer state, and complete operations in a reliable manner? [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp&WT.mc_id=javascript-99907-ninarasi ) are an extension of Azure Functions that makes _stateful workflows_ possible.
 
 :::tip Concept: Orchestrator Functions
 
 How can I create workflows that coordinate functions?
 :::
 
-Durable Functions use [orchestrator functions](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-orchestrations?tabs=csharp&WT.mc_id=javascript-74010-ninarasi ) to coordinate execution of other Durable functions within a given Functions app. These functions are _durable and reliable_. Later in this post, we'll talk briefly about some application patterns that showcase popular orchestration scenarios.
+Durable Functions use [orchestrator functions](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-orchestrations?tabs=csharp&WT.mc_id=javascript-99907-ninarasi ) to coordinate execution of other Durable functions within a given Functions app. These functions are _durable and reliable_. Later in this post, we'll talk briefly about some application patterns that showcase popular orchestration scenarios.
 
 :::tip Concept:  Entity Functions
 How do I persist and manage state across workflows?
@@ -199,7 +199,7 @@ Entity Functions provide explicit _state mangement_ for Durable Functions, defin
 :::
 
 Durable Functions are a fascinating topic that would require a separate, longer post, to do justice. For now, 
-let's look at some [application patterns](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-entities?tabs=csharp&WT.mc_id=javascript-74010-ninarasi ) that showcase the value of these starting with the simplest one - [Function Chaining](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp#chaining&WT.mc_id=javascript-74010-ninarasi ) as shown below:
+let's look at some [application patterns](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-entities?tabs=csharp&WT.mc_id=javascript-99907-ninarasi ) that showcase the value of these starting with the simplest one - [Function Chaining](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp#chaining&WT.mc_id=javascript-99907-ninarasi ) as shown below:
 
 ![Function Chaining](./img/function-chaining.png )
 
@@ -222,13 +222,13 @@ module.exports = df.orchestrator(function*(context) {
 ```
 
 Other application patterns for durable functions include:
- * [Fan-out/fan-in](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#fan-in-out&WT.mc_id=javascript-74010-ninarasi )
- * [Async HTTP APIs](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#async-http&WT.mc_id=javascript-74010-ninarasi )
- * [Monitoring](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#monitoring&WT.mc_id=javascript-74010-ninarasi )
- * [Human Interaction](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#human&WT.mc_id=javascript-74010-ninarasi )
- * [Aggregator (stateful entities)](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#aggregator&WT.mc_id=javascript-74010-ninarasi )
+ * [Fan-out/fan-in](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#fan-in-out&WT.mc_id=javascript-99907-ninarasi )
+ * [Async HTTP APIs](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#async-http&WT.mc_id=javascript-99907-ninarasi )
+ * [Monitoring](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#monitoring&WT.mc_id=javascript-99907-ninarasi )
+ * [Human Interaction](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#human&WT.mc_id=javascript-99907-ninarasi )
+ * [Aggregator (stateful entities)](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=javascript#aggregator&WT.mc_id=javascript-99907-ninarasi )
 
-There's a lot more to explore but we won't have time to do that today. Definitely [check the documentation](https://docs.microsoft.com/azure/azure-functions/durable/?WT.mc_id=javascript-74010-ninarasi ) and take a minute to read the [comparison with Azure Logic Apps](https://docs.microsoft.com/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs#compare-azure-functions-and-azure-logic-apps?WT.mc_id=javascript-74010-ninarasi ) to understand what each technology provides for serverless workflow automation.
+There's a lot more to explore but we won't have time to do that today. Definitely [check the documentation](https://docs.microsoft.com/azure/azure-functions/durable/?WT.mc_id=javascript-99907-ninarasi ) and take a minute to read the [comparison with Azure Logic Apps](https://docs.microsoft.com/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs#compare-azure-functions-and-azure-logic-apps?WT.mc_id=javascript-99907-ninarasi ) to understand what each technology provides for serverless workflow automation.
 
 ---
 
@@ -236,8 +236,8 @@ There's a lot more to explore but we won't have time to do that today. Definitel
 
 That was a lot of information to absorb! Thankfully, there are a lot of examples in the documentation that can help put these in context. Here are a couple of exercises you can do, to reinforce your understanding of these concepts.
 
-* Explore the [supported bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#supported-bindings&WT.mc_id=javascript-74010-ninarasi ) for Azure Functions.
-* Look at [code examples](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples&WT.mc_id=javascript-74010-ninarasi ), think of usage scenarios.
+* Explore the [supported bindings](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=csharp#supported-bindings&WT.mc_id=javascript-99907-ninarasi ) for Azure Functions.
+* Look at [code examples](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples&WT.mc_id=javascript-99907-ninarasi ), think of usage scenarios.
 
 ---
 
@@ -246,10 +246,10 @@ That was a lot of information to absorb! Thankfully, there are a lot of examples
 The goal for today was to give you a quick tour of key terminology and concepts related to Azure Functions. Tomorrow, we dive into _the developer experience_, starting with core tools for local development and ending by deploying our first Functions app.
 
 Want to do some prep work? Here are a few useful links:
-- [Azure Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-node?WT.mc_id=javascript-74010-ninarasi )
+- [Azure Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/create-first-function-vs-code-node?WT.mc_id=javascript-99907-ninarasi )
 - [Durable Functions Quickstart](https://docs.microsoft.com/azure/azure-functions/durable/quickstart-js-vscode)
-- [Azure Functions VS Code Extension](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs-code?tabs=csharp&WT.mc_id=javascript-74010-ninarasi )
-- [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples&WT.mc_id=javascript-74010-ninarasi )
+- [Azure Functions VS Code Extension](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs-code?tabs=csharp&WT.mc_id=javascript-99907-ninarasi )
+- [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?tabs=javascript#bindings-code-examples&WT.mc_id=javascript-99907-ninarasi )
 
 
 ---

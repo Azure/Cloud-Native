@@ -28,12 +28,12 @@ Well - quite a few things actually. This year, [Devanshi Joshi](https://twitter.
 
 ### New Website
 
-This year, we created _this_ website (shortcut: [https://aka.ms/serverless-september](https://aka.ms/serverless-september)) to serve as a permanent home for content in 2022 and beyond - making it a  canonical source for the `#serverless` posts we publish to  tech communities like [dev.to](https://dev.to/azure), [Azure Developer Community](https://techcommunity.microsoft.com/t5/azure-developer-community-blog/bg-p/AzureDevCommunityBlog?WT.mc_id=javascript-74010-ninarasi) and [Apps On Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog/label-name/Serverless?WT.mc_id=javascript-74010-ninarasi). We hope this also makes it easier for you to search for, or discover, current and past articles that support your learning journey!
+This year, we created _this_ website (shortcut: [https://aka.ms/serverless-september](https://aka.ms/serverless-september)) to serve as a permanent home for content in 2022 and beyond - making it a  canonical source for the `#serverless` posts we publish to  tech communities like [dev.to](https://dev.to/azure), [Azure Developer Community](https://techcommunity.microsoft.com/t5/azure-developer-community-blog/bg-p/AzureDevCommunityBlog?WT.mc_id=javascript-99907-ninarasi) and [Apps On Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bg-p/AppsonAzureBlog/label-name/Serverless?WT.mc_id=javascript-99907-ninarasi). We hope this also makes it easier for you to search for, or discover, current and past articles that support your learning journey!
 
 Start by bookmarking these two sites:
 
- * [Build Cloud-Native Apps on Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-74010-ninarasi)
- * [Go Serverless On Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-74010-ninarasi)
+ * [Build Cloud-Native Apps on Azure](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-99907-ninarasi)
+ * [Go Serverless On Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-99907-ninarasi)
 
 
 ### More Options
@@ -46,12 +46,12 @@ This year, we wanted to combine _beginner-friendly_ options (for those just star
 
 We'll also explore the full spectrum of serverless - from Functions-as-a-Service (for granularity) to Containerization (for deployment) and Microservices (for scalability). Here are a few services and technologies you'll get to learn more about:
 
- * [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview?WT.mc_id=javascript-74010-ninarasi)
- * [Distributed Application Runtime (dapr)](https://dapr.io/?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Logic Apps](https://docs.microsoft.com/azure/static-web-apps/?WT.mc_id=javascript-74010-ninarasi)
- * [Azure Static Web Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=javascript-74010-ninarasi)
+ * [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=javascript-99907-ninarasi)
+ * [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview?WT.mc_id=javascript-99907-ninarasi)
+ * [Distributed Application Runtime (dapr)](https://dapr.io/?WT.mc_id=javascript-99907-ninarasi)
+ * [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/?WT.mc_id=javascript-99907-ninarasi)
+ * [Azure Logic Apps](https://docs.microsoft.com/azure/static-web-apps/?WT.mc_id=javascript-99907-ninarasi)
+ * [Azure Static Web Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=javascript-99907-ninarasi)
 
 
 

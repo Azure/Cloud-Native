@@ -43,7 +43,7 @@ Ready? Let's Go!
  * **ICYMI**: This Week on #ServerlessSeptember
  * **Recap**: Microservices, Azure Container Apps & Dapr
  * **Coming Next:** Serverless Integrations
- * **Exercise**: [Take the Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi)
+ * **Exercise**: [Take the Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi)
  * **Resources**: For self-study!
 
 ![](./img/banner.png)
@@ -85,7 +85,7 @@ So far we've talked about core technologies (Azure Functions, Azure Container Ap
 
 ## Take the Challenge! 
 
-The [**Cloud Skills Challenge**](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-74010-ninarasi) is still going on, and we've already had hundreds of participants join and complete the learning modules to skill up on Serverless.
+The [**Cloud Skills Challenge**](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi) is still going on, and we've already had hundreds of participants join and complete the learning modules to skill up on Serverless.
 
 There's still time to join and get yourself on the leaderboard. Get familiar with Azure Functions, SignalR, Logic Apps, Azure SQL and more - in serverless contexts!! 
 

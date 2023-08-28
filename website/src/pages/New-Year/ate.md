@@ -4,7 +4,7 @@ title: Ask The Expert
 
 # Ask The Expert
 
-[Ask the Expert](https://docs.microsoft.com/shows/Ask-the-Expert/?WT.mc_id=javascript-74010-ninarasi) is a series of scheduled 30-minute **LIVE** broadcasts where you can connect with experts to get your questions answered! You an also visit the site later, to view sessions on demand - and view answers to questions you may have submitted ahead of time.
+[Ask the Expert](https://docs.microsoft.com/shows/Ask-the-Expert/?WT.mc_id=javascript-99907-ninarasi) is a series of scheduled 30-minute **LIVE** broadcasts where you can connect with experts to get your questions answered! You an also visit the site later, to view sessions on demand - and view answers to questions you may have submitted ahead of time.
 
 ![](../../../static/img/banners/serverless-ate.png)
 

@@ -33,7 +33,7 @@ tags: [serverless-september, zero-to-hero, azure-functions]
 
 Welcome to `Day 19` of #30DaysOfServerless!
 
-Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/error-handling-with-apache-kafka-extension-for-azure-functions/ba-p/3628936?WT.mc_id=javascript-74010-cxa) blog on Microsoft Tech Community._
+Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-september/ZeroToHero) initiative, featuring blog posts authored by our Product Engineering teams for #ServerlessSeptember. _Posts were originally published on the [Apps on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/error-handling-with-apache-kafka-extension-for-azure-functions/ba-p/3628936?WT.mc_id=javascript-99907-cxa) blog on Microsoft Tech Community._
 
 ---
 
