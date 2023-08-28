@@ -1,8 +1,8 @@
 ---
-slug: fallforIA-kickoff
-title: 🍁 FallForIA Kickoff!
+slug: road-to-fallforIA
+title: 🍁 Fall is Coming!
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -14,7 +14,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 
 <head>
   <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/30daysofIA/welcome-learners" />
+    content="https://azure.github.io/Cloud-Native/30daysofIA/road-to-fallforIA" />
   <meta name="twitter:title" 
     content="It's Time to Fall For Intelligent Apps" />
   <meta name="twitter:description" 
@@ -26,34 +26,13 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
     content="@nitya" />
   <meta name="twitter:site" content="@AzureAdvocates" /> 
   <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/30daysofIA/welcome-learners" />
+    href="https://azure.github.io/Cloud-Native/30daysofIA/road-to-fallforIA" />
 </head>
 
 <!-- End METADATA -->
 
-Welcome to `Day 1` of our journey as we **Fall For Intelligent Apps!** 🍁
+September is almost here - and that can only mean one thing!! It's time to **🍁 Fall for something new and exciting** and spend a few weeks skilling up on relevant tools, techologies and solutions!! 
 
-## What We'll Cover
- * Section 1
- * Section 2
- * Section 3
- * Section 4
- * Exercise: Try this yourself!
- * Resources: For self-study!
+Last year, we focused on #ServerlessSeptember. This year, we're building on that theme with the addition of cloud-scale **Data**, cloud-native **Technologies** and cloud-based **AI** integrations to help you modernize and build intelligent apps for the enterprise!
 
-
-<!-- ************************************* -->
-<!--  AUTHORS: ONLY UPDATE BELOW THIS LINE -->
-<!-- ************************************* -->
-
-## Section 1
-
-## Section 2
-
-## Section 3
-
-## Section 4
-
-## Exercise
-
-## Resources
+Watch this space - and join us in September to learn more!
