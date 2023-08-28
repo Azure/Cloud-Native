@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://azure.github.io/Cloud-Native/30daysofIA</id>
+    <title>Build Intelligent Apps On Azure Blog</title>
+    <updated>2023-08-28T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://azure.github.io/Cloud-Native/30daysofIA"/>
+    <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
+    <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[🍁 Fall is Coming!]]></title>
+        <id>https://azure.github.io/Cloud-Native/30daysofIA/road-to-fallforIA</id>
+        <link href="https://azure.github.io/Cloud-Native/30daysofIA/road-to-fallforIA"/>
+        <updated>2023-08-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure.]]></summary>
+        <content type="html"><![CDATA[<p>September is almost here - and that can only mean one thing!! It's time to <strong>🍁 Fall for something new and exciting</strong> and spend a few weeks skilling up on relevant tools, techologies and solutions!! </p><p>Last year, we focused on #ServerlessSeptember. This year, we're building on that theme with the addition of cloud-scale <strong>Data</strong>, cloud-native <strong>Technologies</strong> and cloud-based <strong>AI</strong> integrations to help you modernize and build intelligent apps for the enterprise!</p><p>Watch this space - and join us in September to learn more!</p>]]></content>
+        <author>
+            <name>It's 30DaysOfIA</name>
+            <uri>https://github.com/cloud-native</uri>
+        </author>
+        <category label="Fall-For-IA" term="Fall-For-IA"/>
+        <category label="30-days-of-IA" term="30-days-of-IA"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="hack-together" term="hack-together"/>
+        <category label="community-buzz" term="community-buzz"/>
+        <category label="ask-the-expert" term="ask-the-expert"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
+</feed>
