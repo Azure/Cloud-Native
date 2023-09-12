@@ -20,7 +20,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
   <meta name="twitter:description" 
     content="Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure." />
   <meta name="twitter:image" 
-    content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png" />
+    content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@nitya" />
