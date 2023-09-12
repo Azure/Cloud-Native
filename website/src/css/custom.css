@@ -36,7 +36,7 @@
 
 
 :root {
-  --ifm-color-primary: #8661c5;
+  --ifm-color-primary: #b638ba;
   --ifm-color-primary-dark: #764bbd;
   --ifm-color-primary-darker: #6e43b7;
   --ifm-color-primary-darkest: #5b3797;
@@ -44,13 +44,13 @@
   --ifm-color-primary-lighter: #9f81d1;
   --ifm-color-primary-lightest: #b7a2dd;
   --ifm-navbar-background-color: #f5f6f7!important;
-  --ifm-link-color: #C03BC4!important;
+  --ifm-link-color: #b638ba!important;
   /* --ifm-card-background-color: #f5f6f7!important; */
 
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #c5b4e3;
+  --ifm-color-primary: #ffb3bb;
   --ifm-color-primary-dark: #ae96d8;
   --ifm-color-primary-darker: #a388d2;
   --ifm-color-primary-darkest: #805bc2;
@@ -224,15 +224,15 @@ hr {
   color: #ffb3bb!important;
 }
 
-.table-of-contents__link:hover, .table-of-contents__link:hover code, .table-of-contents__link--active, .table-of-contents__link--active code {
+/* .table-of-contents__link:hover, .table-of-contents__link:hover code, .table-of-contents__link--active, .table-of-contents__link--active code {
   color: #C03BC4;
   text-decoration: none;
-}
+} */
 
-[data-theme='dark'] .table-of-contents__link:hover, .table-of-contents__link:hover code, .table-of-contents__link--active, .table-of-contents__link--active code {
+/* [data-theme='dark'] .table-of-contents__link:hover, .table-of-contents__link:hover code, .table-of-contents__link--active, .table-of-contents__link--active code {
   color: #ffb3bb;
   text-decoration: none;
-}
+} */
 
 @media screen and (max-width: 996px) {
   .hide-on-mobile {
