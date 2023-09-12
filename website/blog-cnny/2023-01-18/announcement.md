@@ -36,7 +36,7 @@ Welcome to `Week 1` of #CloudNativeNewYear!
 
 New Year...New Beginnings... New Learnings! We know how much you all enjoyed learning about different technologies in the Serverless Space with [Serverless September](https://azure.github.io/Cloud-Native/serverless-september) that ran for 30 days last fall. The engagement was electric! We had more than 60k engaged! With the same engagement in mind, we are starting 30 days of learning around Cloud-native Technologies. 
 
-![](./../../static/img/cnny23/hero-banner.png)
+![Cloud Native New Year](./../../static/img/cnny23/hero-banner.png)
 
 Introducing, **Cloud Native New Year** ( #CloudNativeNewYear), a 30-day event of learning, skilling up around technologies within the Cloud-native space. For each day, we are going to focus on topics that incrementally increase in complexity to take you from a zero to Hero journey. For 30 days, we'll be diving deep into the world of cloud native technologies, with a focus on Kubernetes. Whether you're a beginner or an experienced professional, our expert instructors will guide you through the process of understanding and utilizing these cutting-edge tools.  
 

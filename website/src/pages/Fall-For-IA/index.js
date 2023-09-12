@@ -2,15 +2,14 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-
 import styles from './../index.module.css';
 
 const CampaignFeatures = [
   {
     title: "#30DaysOfIA",
-    Svg: require("@site/static/img/svg/campaign-30days.svg").default,
-    fillColor: "#f25022",
-    link: "/Cloud-Native/30DaysOfIA",
+    linkTitle: "#30DaysOfIA",
+    svgpath: "../img/svg/azure-icon-30-days.svg",
+    link: "/Cloud-Native/30DaysOfIA?WT.mc_id=javascript-99907-ninarasi",
     description: (
       <>
         Join us on a #30Day journey that starts by demystifying Intelligent Apps
@@ -20,20 +19,20 @@ const CampaignFeatures = [
   },
   {
     title: "Learn Live",
-    Svg: require("@site/static/img/svg/campaign_learnlive.svg").default,
-    fillColor: "#7fba00",
-    link: "/Cloud-Native/Fall-For-IA",
+    linkTitle: "Learn Live",
+    svgpath: "../img/svg/azure-icon-learn-live.svg",
+    link: "/Cloud-Native/Fall-For-IA/LearnLive?WT.mc_id=javascript-99907-ninarasi",
     description: (
       <>
-        Deconstruct an enterprise-grade open-source e2e reference sample for a serverless application on Azure.
+        Deconstruct an enterprise-grade end to end reference sample for a serverless or Kubernetes application.
       </>
     ),
   },
   {
     title: "Ask The Expert",
-    Svg: require("@site/static/img/svg/campaign_ama.svg").default,
-    fillColor: "#b66dff",
-    link: "/Cloud-Native/Fall-For-IA",
+    linkTitle: "Ask The Expert",
+    svgpath: "../img/svg/azure-icon-ask-the-experts.svg",
+    link: "/Cloud-Native/Fall-For-IA/AskTheExpert?WT.mc_id=javascript-99907-ninarasi",
     description: (
       <>
         Join us for online conversations with the product teams - submit
@@ -43,9 +42,9 @@ const CampaignFeatures = [
   },
   {
     title: "Hack Together",
-    Svg: require("@site/static/img/svg/team.svg").default,
-    fillColor: "#00a4ef",
-    link: "/Cloud-Native/Fall-For-IA",
+    linkTitle: "Hack Together",
+    svgpath: "../img/svg/azure-icon-hack-together.svg",
+    link: "/Cloud-Native/Fall-For-IA/HackTogether?WT.mc_id=javascript-99907-ninarasi",
     description: (
       <>
         Explore this 6-part from Microsoft Reactor on JS & AI on Azure and make an open-source contribution!
@@ -54,9 +53,9 @@ const CampaignFeatures = [
   },
   {
     title: "Cloud Skills",
-    Svg: require("@site/static/img/svg/campaign_skills.svg").default,
-    fillColor: "#ffb900",
-    link: "/Cloud-Native/Fall-For-IA",
+    linkTitle: "Cloud Skills",
+    svgpath: "../img/svg/azure-icon-cloud-skills.svg",
+    link: "/Cloud-Native/Fall-For-IA/CloudSkills?WT.mc_id=javascript-99907-ninarasi",
     description: (
       <>
         Skill up on key cloud technologies with these free, self-guided learning
@@ -65,29 +64,36 @@ const CampaignFeatures = [
     ),
   },
   {
-    title: "Community Gallery",
-    Svg: require("@site/static/img/svg/campaign_buzz.svg").default,
-    link: "/Cloud-Native/Fall-For-IA",
-    fillColor: "#fe6db6",
+    title: "🆕 Community Gallery",
+    linkTitle: "Community Gallery",
+    svgpath: "../img/svg/azure-icon-comm-gallery.svg",
+    link: "/Cloud-Native/Fall-For-IA/CommunityGallery?WT.mc_id=javascript-99907-ninarasi",
     description: (
       <>
-        🆕 Explore the Community Showcase for videos, blog posts and open-source projects for the community!
+        Explore the Community Showcase for videos, blog posts and open-source projects for the community!
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description, link, fillColor}) {
+function Feature({svgpath, title, linkTitle, description, link}) {
   return (
-    <div className={clsx('col col--4')}>
-      <a href={link} target="_blank">
-        <div className="text--center">
-          <Svg height="150px" width="150px" fill={fillColor} role="img" />
+    <div className={clsx('col col--4 card-col')}>
+      <div className="card">
+        <div className="card-body">
+            <div className="text--center">
+            <img width="150px" height="150px" src={svgpath} alt="" role="presentation" />
+            </div>
+          <div fill="#00ff00" className="text--center padding-horiz--md">
+            <h2>{title}</h2>
+            <p>{description}</p>
+          </div>
+          <div className={styles.buttons}>
+            <Link className="button button--block button--secondary button--lg" to={link}>
+              {linkTitle}
+            </Link>
+          </div>
         </div>
-      </a>
-      <div fill="#00ff00" className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
       </div>
     </div>
   );
@@ -95,16 +101,29 @@ function Feature({Svg, title, description, link, fillColor}) {
 
 function CampaignHeader() {
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header className={clsx("hero hero--primary", styles.heroBannerImg)}>
       <div className="container">
-        <h1 className="hero__title">Fall For Intelligent Apps!</h1>
-        <p>
-          Join us for #FallForIA - a month-long learning journey into cloud-scale data, cloud-native technology, and AI. Build intelligent apps on Azure and create differentiated experiences for your users!
-        </p>
-        <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/30DaysOfIA">
-            Explore #30DaysOfIA 👩🏽‍💻
-          </Link>
+        <div className="row">
+          <div className="col col--6">
+            <h1 className="hero__title">🍂 Fall For Intelligent Apps!</h1>
+            <p>
+            Join us this fall on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure for your users.
+            </p>
+            <div className={styles.buttonsFFIA}>
+              <Link className="button button--secondary button--lg" to="/30DaysOfIA?WT.mc_id=javascript-99907-ninarasi">
+              #FallforIntelligentApps
+              </Link>
+            </div>
+          </div>
+          <div className="col col--6">
+            <img
+              className="hide-on-mobile"
+              src="../img/fallforia/hero-bg.png"
+              alt=""
+              role="presentation"
+              width="100%"
+            />
+          </div>
         </div>
       </div>
     </header>

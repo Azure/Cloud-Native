@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 
@@ -32,7 +33,7 @@ const CoreServices = [
     link: "https://docs.microsoft.com/azure/azure-functions/functions-overview",
     description: (
       <>
-        Build event-driven serverless solutions with less code and
+        Use Azure Functions to Build event-driven serverless solutions with less code and
         infrastructure maintenance costs.
       </>
     ),
@@ -165,15 +166,24 @@ const MoreServices = [
 
 function Feature({svgpath, title, description, link}) {
   return (
-    <div className={clsx('col col--4')}>
-      <a href={link} target="_blank">
-        <div className="text--center">
-          <img width="150px" height="150px" src={svgpath} alt={title} />
+    <div className={clsx('col col--4 card-col')}>
+      <div className="card">
+        <div className="card-body text--center">
+          {/* <a href={link} title={title} target="_blank"> */}
+            <div>
+              <img width="150px" height="150px" src={svgpath} alt="" role="presentation" />
+            </div>
+          {/* </a> */}
+          <div className="padding-horiz--md">
+            <h2>{title}</h2>
+            <p>{description}</p>
+          </div>
+          <div className={styles.buttons}>
+            <Link className="button button--block button--secondary button--lg" to={link} target="_blank">
+              {title}
+            </Link>
+          </div>
         </div>
-      </a>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
       </div>
     </div>
   );
@@ -194,7 +204,6 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
-        <hr/>
         <div className="row">
           {MoreServices.map((props, idx) => (
             <Feature key={idx} {...props} />
