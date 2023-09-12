@@ -20,7 +20,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
   <meta name="twitter:description" 
     content="Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!" />
   <meta name="twitter:image" 
-    content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png" />
+    content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" 
     content="@nitya" />
