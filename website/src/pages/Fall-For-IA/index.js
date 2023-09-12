@@ -9,7 +9,7 @@ const CampaignFeatures = [
     title: "#30DaysOfIA",
     linkTitle: "#30DaysOfIA",
     svgpath: "../img/svg/azure-icon-30-days.svg",
-    link: "/Cloud-Native/30DaysOfIA?WT.mc_id=javascript-99907-ninarasi",
+    link: "/Cloud-Native/30DaysOfIA",
     description: (
       <>
         Join us on a #30Day journey that starts by demystifying Intelligent Apps
@@ -21,7 +21,7 @@ const CampaignFeatures = [
     title: "Learn Live",
     linkTitle: "Learn Live",
     svgpath: "../img/svg/azure-icon-learn-live.svg",
-    link: "/Cloud-Native/Fall-For-IA/LearnLive?WT.mc_id=javascript-99907-ninarasi",
+    link: "/Cloud-Native/Fall-For-IA/LearnLive",
     description: (
       <>
         Deconstruct an enterprise-grade end to end reference sample for a serverless or Kubernetes application.
@@ -32,7 +32,7 @@ const CampaignFeatures = [
     title: "Ask The Expert",
     linkTitle: "Ask The Expert",
     svgpath: "../img/svg/azure-icon-ask-the-experts.svg",
-    link: "/Cloud-Native/Fall-For-IA/AskTheExpert?WT.mc_id=javascript-99907-ninarasi",
+    link: "/Cloud-Native/Fall-For-IA/AskTheExpert",
     description: (
       <>
         Join us for online conversations with the product teams - submit
@@ -44,7 +44,7 @@ const CampaignFeatures = [
     title: "Hack Together",
     linkTitle: "Hack Together",
     svgpath: "../img/svg/azure-icon-hack-together.svg",
-    link: "/Cloud-Native/Fall-For-IA/HackTogether?WT.mc_id=javascript-99907-ninarasi",
+    link: "/Cloud-Native/Fall-For-IA/HackTogether",
     description: (
       <>
         Explore this 6-part from Microsoft Reactor on JS & AI on Azure and make an open-source contribution!
@@ -55,7 +55,7 @@ const CampaignFeatures = [
     title: "Cloud Skills",
     linkTitle: "Cloud Skills",
     svgpath: "../img/svg/azure-icon-cloud-skills.svg",
-    link: "/Cloud-Native/Fall-For-IA/CloudSkills?WT.mc_id=javascript-99907-ninarasi",
+    link: "/Cloud-Native/Fall-For-IA/CloudSkills",
     description: (
       <>
         Skill up on key cloud technologies with these free, self-guided learning
@@ -67,7 +67,7 @@ const CampaignFeatures = [
     title: "🆕 Community Gallery",
     linkTitle: "Community Gallery",
     svgpath: "../img/svg/azure-icon-comm-gallery.svg",
-    link: "/Cloud-Native/Fall-For-IA/CommunityGallery?WT.mc_id=javascript-99907-ninarasi",
+    link: "/Cloud-Native/Fall-For-IA/CommunityGallery",
     description: (
       <>
         Explore the Community Showcase for videos, blog posts and open-source projects for the community!
@@ -110,7 +110,7 @@ function CampaignHeader() {
             Join us this fall on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure for your users.
             </p>
             <div className={styles.buttonsFFIA}>
-              <Link className="button button--secondary button--lg" to="/30DaysOfIA?WT.mc_id=javascript-99907-ninarasi">
+              <Link className="button button--secondary button--lg" to="/30DaysOfIA">
               #FallforIntelligentApps
               </Link>
             </div>
