@@ -31,7 +31,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 
 <!-- End METADATA -->
 
-September is almost here - and that can only mean one thing!! It's time to **🍁 Fall for something new and exciting** and spend a few weeks skilling up on relevant tools, techologies and solutions!! 
+September is almost here - and that can only mean one thing!! It's time to **🍂 Fall for something new and exciting** and spend a few weeks skilling up on relevant tools, techologies and solutions!! 
 
 Last year, we focused on #ServerlessSeptember. This year, we're building on that theme with the addition of cloud-scale **Data**, cloud-native **Technologies** and cloud-based **AI** integrations to help you modernize and build intelligent apps for the enterprise!
 
