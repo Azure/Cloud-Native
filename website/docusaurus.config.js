@@ -102,7 +102,7 @@ const config = {
             position: "right",
             items: [
               {
-                label: "🍁 | FallForIA 2023",
+                label: "🍂 | FallForIA 2023",
                 href: "/Fall-For-IA/",
               },
               {
