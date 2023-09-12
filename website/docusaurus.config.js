@@ -102,7 +102,7 @@ const config = {
             position: "right",
             items: [
               {
-                label: "🍁 | FallForIA 2023",
+                label: "🍂 | FallForIA 2023",
                 href: "/Fall-For-IA/",
               },
               {
@@ -227,7 +227,7 @@ const config = {
         {
           name: "twitter:image",
           content:
-            "https://azure.github.io/Cloud-Native/assets/ideal-img/hero-banner.e0a8d29.1030.png",
+            "https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png",
         },
         {
           name: "twitter:card",
