@@ -1,6 +1,6 @@
 ---
 slug: road-to-fallforIA
-title: 🍁 Fall is Coming!
+title: Fall is Coming! 🍂
 authors: [cnteam]
 draft: false
 hide_table_of_contents: false

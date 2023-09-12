@@ -26,7 +26,7 @@ const config = {
 
   // --- CONFIG-30DAYS #4: Config for early detection of issues
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
 
   // --- CONFIG-30DAYS #5: Config For localization
   i18n: {
@@ -83,9 +83,14 @@ const config = {
         title: "Cloud-Native",
         logo: {
           alt: "Azure Cloud Logo",
-          src: "img/cnny23/logo.svg",
+          src: "img/logo-ms-cn.png",
         },
         items: [
+          {
+            to: "/30daysofIA",
+            label: "Blog",
+            position: "left",
+          },
           {
             to: "/Fall-For-IA/calendar",
             label: "Calendar",
@@ -97,12 +102,12 @@ const config = {
             position: "right",
             items: [
               {
-                label: "#30DaysOfIA",
-                href: "/30DaysOfIA",
-              },
-              {
                 label: "🍁 | FallForIA 2023",
                 href: "/Fall-For-IA/",
+              },
+              {
+                label: "#30DaysOfIA",
+                href: "/30DaysOfIA",
               },
             ],
           },
@@ -112,12 +117,12 @@ const config = {
             position: "right",
             items: [
               {
-                label: "#30DaysOfCloudNative",
-                href: "/cnny-2023",
-              },
-              {
                 label: "🥳 | New Year 2023",
                 href: "/New-Year/",
+              },
+              {
+                label: "#30DaysOfCloudNative",
+                href: "/cnny-2023",
               },
             ],
           },
@@ -126,10 +131,6 @@ const config = {
             label: "Serverless",
             position: "right",
             items: [
-              {
-                label: "#30DaysOfServerless",
-                href: "/blog",
-              },
               {
                 label: "🍂 September | 2022",
                 href: "/serverless-september",
@@ -141,6 +142,10 @@ const config = {
               {
                 label: "🍂 September | 2019",
                 href: "https://dev.to/azure/serverless-september-content-collection-2fhb",
+              },
+              {
+                label: "#30DaysOfServerless",
+                href: "/blog",
               },
             ],
           },
@@ -169,7 +174,7 @@ const config = {
           },
           {
             label: "Collection",
-            to: "https://aka.ms/CNNY/collection",
+            to: "https://aka.ms/fallforIA/collection/?WT.mc_id=javascript-99907-ninarasi",
           },
           {
             label: "Java",
@@ -241,8 +246,8 @@ const config = {
       announcementBar: {
         id: "Call To Action",
         content:
-          '<b>🎯 Learn Apps, AI & Azure <a href="https://aka.ms/contoso-real-estate/hacktogether"><b>on #HackTogether</b></a>  | 🌟 Star us <a href="https://github.com/azure/cloud-native"><b> on GitHub</b></a> </b> ',
-        backgroundColor: "#0D032C",
+          'Learn Apps, AI & Azure on <a target="_blank" href="https://aka.ms/contoso-real-estate/hacktogether" style="color:#ffb3bb; font-weight:600;">#HackTogether</a>  | Star us on <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">GitHub</a>',
+        backgroundColor: "#140035",
         textColor: "#ffffff",
         isCloseable: false,
       },

@@ -76,15 +76,19 @@ const CampaignFeatures = [
 
 function Feature({Svg, title, description, link, fillColor}) {
   return (
-    <div className={clsx('col col--4')}>
-      <a href={link} target="_blank">
-        <div className="text--center">
-          <Svg height="150px" width="150px" fill={fillColor} role="img" />
+    <div className={clsx('col col--4 card-col')}>
+      <div className="card">
+        <div className="card-body">
+          <a href={link} title={title} target="_blank">
+            <div className="text--center">
+              <Svg height="150px" width="150px" fill={fillColor} role="img"  alt={title}/>
+            </div>
+          </a>
+          <div fill="#00ff00" className="text--center padding-horiz--md">
+            <h2>{title}</h2>
+            <p className="margin--none">{description}</p>
+          </div>
         </div>
-      </a>
-      <div fill="#00ff00" className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
       </div>
     </div>
   );
