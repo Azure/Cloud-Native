@@ -7,7 +7,9 @@
 
 Welcome to the Cloud-Native on Azure website, a central location for hosting content, news and resources related to various **Serverless on Azure** initiatives across the Azure organization, starting with [**Serverless September**](https://aka.ms/serverless-september) in 2022.
 
+## About Fall For Intelligent Apps
 
+[Fall For Intelligent Apps](https://aka.ms/fallforia) is a celebration of Apps, AI and Data in the world of cloud-native computing.
 
 ## About Cloud-Native
 [Cloud-Native applications](https://azure.microsoft.com/solutions/cloud-native-apps/) are built from the ground up—optimized for cloud scale and performance. They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. 
