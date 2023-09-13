@@ -13,20 +13,25 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 ---
 
 <head>
-  <meta name="twitter:url" 
-    content="https://azure.github.io/Cloud-Native/30daysofIA/hacktogether-recap" />
-  <meta name="twitter:title" 
-    content="Continue The Learning Journey through **Fall For Intelligent Apps! 🍂" />
-  <meta name="twitter:description" 
-    content="Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!" />
-  <meta name="twitter:image" 
-    content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" 
-    content="@nitya" />
-  <meta name="twitter:site" content="@AzureAdvocates" /> 
-  <link rel="canonical" 
-    href="https://azure.github.io/Cloud-Native/30daysofIA/hacktogether-recap" />
+<meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/hacktogether-recap"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="HackTogether Recap 🍂 | Build Intelligent Apps On Azure"/>
+<meta property="og:description" content="Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!"/>
+<meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
+    <meta name="twitter:url" 
+      content="https://azure.github.io/Cloud-Native/30daysofIA/hacktogether-recap" />
+    <meta name="twitter:title" 
+      content="Continue The Learning Journey through **Fall For Intelligent Apps! 🍂" />
+    <meta name="twitter:description" 
+      content="Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!" />
+    <meta name="twitter:image" 
+      content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" 
+      content="@nitya" />
+    <meta name="twitter:site" content="@AzureAdvocates" /> 
+    <link rel="canonical" 
+      href="https://azure.github.io/Cloud-Native/30daysofIA/hacktogether-recap" />
 </head>
 
 <!-- End METADATA -->
