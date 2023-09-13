@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // Section Header
 function SectionHeader({title, description}) {
@@ -46,7 +47,7 @@ function ContentItem({title, description, link, imglink, cta}){
         <div className={clsx('col col--6 card-col', styles.contentItem)}>
             <div className="card">
                 <div className="card__image">
-                    <Image alt={"Thumbnail Image for"+title} img={imglink}/>
+                    <Image alt={"Thumbnail Image for"+title} img={useBaseUrl(imglink)}/>
                 </div>
                 <div className="card-body">
                     <div className="text--center padding-horiz--md">
@@ -69,28 +70,28 @@ const ContentItems = [
 
   {
     title: 'Get Started With Contoso Real Estate',
-    imglink: '../img/fallforia/learn-live-contoso.jpg',
+    imglink: '/img/fallforia/learn-live-contoso.jpg',
     link: "https://aka.ms/contoso-real-estate/learn-live/Ep1?WT.mc_id=javascript-99907-ninarasi",
     description: "Learn about the Contoso Real Estate sample, fork the repo, launch GitHub Codespaces - and build/preview the application to validate environment.",
     cta: "Learn live"
   },
   {
     title: 'Develop The Portal Application',
-    imglink: '../img/fallforia/learn-live-portal-app.jpg',
+    imglink: '/img/fallforia/learn-live-portal-app.jpg',
     link: "https://aka.ms/contoso-real-estate/learn-live/Ep2?WT.mc_id=javascript-99907-ninarasi",
     description: "Learn about micro-frontends and API-first design. Deconstruct the portal app, blog app, and serverless API.",
     cta: "Learn live"
   },
   {
     title: 'Integrate Auth, Payments, Search',
-    imglink: '../img/fallforia/learn-live-third-party-payments.jpg',
+    imglink: '/img/fallforia/learn-live-third-party-payments.jpg',
     link: "https://aka.ms/contoso-real-estate/learn-live/Ep3?WT.mc_id=javascript-99907-ninarasi",
     description: "Integrate authentication to support user profiles. Integrate payments and search features using 3rd party API.",
     cta: "Learn live"
   },
   {
     title: 'Automate, Test & Deploy to Azure',
-    imglink: '../img/fallforia/learn-live-azure-developer.png',
+    imglink: '/img/fallforia/learn-live-azure-developer.png',
     link: "https://aka.ms/contoso-real-estate/learn-live/Ep4?WT.mc_id=javascript-99907-ninarasi",
     description: "Learn to design and run end-to-end tests with Playwright. Provision and deploy solution to Azure with AZD.",
     cta: "Learn live"

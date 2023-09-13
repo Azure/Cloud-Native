@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // Section Header
 function SectionHeader({title, description}) {
@@ -46,7 +47,7 @@ function ContentItem({title, description, topic, topiclink, link, imglink, cta})
         <div className={clsx('col col--4 card-col', styles.contentItem)}>
             <div className="card">
                 <div className="card__image">
-                    <Image alt={"Thumbnail Image for"+title} img={imglink}/>
+                    <Image alt={"Thumbnail Image for"+title} img={useBaseUrl(imglink)}/>
                 </div>
                 <div className="card-body">
                     <div className="text--center padding-horiz--md">
@@ -69,42 +70,42 @@ const ContentItems = [
 
   {
     title: 'Hello, Contoso Real Estate!',
-    imglink: '../img/fallforia/hack-together-contoso.png',
+    imglink: '/img/fallforia/hack-together-contoso.png',
     link: "https://developer.microsoft.com/reactor/events/20275/?WT.mc_id=javascript-99907-ninarasi",
     description: "Get an overview of the Contoso Real estate app and architecture.",
     cta: "Hack together"
   },
   {
     title: 'Introduction to GitHub Copilot',
-    imglink: '../img/fallforia/hack-together-github-copilot.png',
+    imglink: '/img/fallforia/hack-together-github-copilot.png',
     link: "https://developer.microsoft.com/reactor/events/20321/?WT.mc_id=javascript-99907-ninarasi",
     description: "Learn how to harness the power of Copilot from installation to usage.",
     cta: "Hack together"
   },
   {
     title: 'Build Your Frontend With Azure Static Web Apps',
-    imglink: '../img/fallforia/hack-together-azure-static-web-apps.png',
+    imglink: '/img/fallforia/hack-together-azure-static-web-apps.png',
     link: "https://developer.microsoft.com/reactor/events/20276/?WT.mc_id=javascript-99907-ninarasi",
     description: "Learn about Azure Static Web Apps, the SWA CLI - and usage.",
     cta: "Hack together"
   },
   {
     title: 'Build a Serverless Backend with Functions',
-    imglink: '../img/fallforia/hack-together-azure-functions.png',
+    imglink: '/img/fallforia/hack-together-azure-functions.png',
     link: "https://developer.microsoft.com/reactor/events/20277/?WT.mc_id=javascript-99907-ninarasi",
     description: "Show how Azure Functions powers the serverless backend for the app.",
     cta: "Hack together"
   },
   {
     title: 'Build & Connect Your Database with Azure Cosmos DB',
-    imglink: '../img/fallforia/hack-together-cosmos-db.png',
+    imglink: '/img/fallforia/hack-together-cosmos-db.png',
     link: "https://developer.microsoft.com/reactor/events/20278/?WT.mc_id=javascript-99907-ninarasi",
     description: "Show how you can manage your data in CosmosDB, and usage within the Contoso app.",
     cta: "Hack together"
   },
   {
     title: 'Introduction to Azure Open AI Service',
-    imglink: '../img/fallforia/hack-together-open-ai.png',
+    imglink: '/img/fallforia/hack-together-open-ai.png',
     link: "https://developer.microsoft.com/reactor/events/20322/?WT.mc_id=javascript-99907-ninarasi",
     description: "Learn the basics of Azure Open AI and explore how you can use it.",
     cta: "Hack together"
