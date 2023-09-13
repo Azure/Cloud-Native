@@ -13,6 +13,11 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 ---
 
 <head>
+  <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/road-to-fallforia"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Fall is Coming! 🍂 | Build Intelligent Apps On Azure"/>
+  <meta property="og:description" content="Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure."/>
+  <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
   <meta name="twitter:url" 
     content="https://azure.github.io/Cloud-Native/30daysofIA/road-to-fallforIA" />
   <meta name="twitter:title" 

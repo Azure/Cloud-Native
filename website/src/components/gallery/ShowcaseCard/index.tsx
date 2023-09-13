@@ -114,20 +114,22 @@ function ShowcaseCard({user}: {user: User}) {
           {user.source && (
             <ShowcaseMultipleAuthorsDropdown user={user}/>   
           )}
+          
         </div>
         <p>{user.description}</p>
         {/* {user.tags.includes('featured') && (
             <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
           )} */}
-        <ShowcaseCardTag tags={user.tags} />
       </div>
       <ul className={clsx('card__footer', styles.cardFooter)}>
-        
+        <div className="margin-bottom--md">
+        <ShowcaseCardTag tags={user.tags} />
+        </div>
         <div className={styles.buttons}>
             <Link className="button button--block button--secondary button--md"  href={user.source}>
             View this post
             </Link>
-          </div>
+        </div>
       </ul>
     </li>
   );
