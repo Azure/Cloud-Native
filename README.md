@@ -12,10 +12,10 @@ This is the repository hosting content for cloud-native and serverless community
 <br/>
 
 
-## Sep 2023 ✨ #FallForIA 🍁
+## Sep 2023 ✨ #FallForAI 🍁
 
 Excited for the new era of AI? So are we!! It's time to **Fall For Intelligent Apps** as we explore the tools, technologies and opportunities for _Building Intelligent Apps_ that can create differentiated digital experiences for your customers, using the power of Azure and AI!
- - #30DaysOfIA blog posts
+ - #30DaysOfAI blog posts
  - Learn Live training sessions
  - Ask The Expert Sessions
  - Cloud Skills Challenges
