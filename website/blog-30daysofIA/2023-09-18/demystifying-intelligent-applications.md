@@ -77,7 +77,7 @@ Another example is a social media marketing app that uses AI for time-saving dat
 
 ## Functionality-Based Apps: AI-Driven Features Enhance User Experiences
 
-As the name suggests, functionality-based applications integrate AI into how the app functions, but the end user drives the action and outcome. In this category of apps, AI takes a more active role in the user’s interaction by allowing them to use AI-created or processed output. These apps leverage AI technologies like [Azure AI Services](https://azure.microsoft.com/en-us/products/cognitive-services/%22%20/h%20HYPERLINK%20%22https:/azure.microsoft.com/en-us/products/cognitive-services/) for NLP, image recognition, and pattern recognition to improve user experience.
+As the name suggests, functionality-based applications integrate AI into how the app functions, but the end user drives the action and outcome. In this category of apps, AI takes a more active role in the user’s interaction by allowing them to use AI-created or processed output. These apps leverage AI technologies like [Azure AI Services](https://azure.microsoft.com/en-us/products/cognitive-services/) for NLP, image recognition, and pattern recognition to improve user experience.
 
 Consider a music app that generates personalized playlists based on your listening habits or your smartphone’s camera app that uses AI to recognize faces and optimize photo settings. Even more advanced are the language translation apps that translate text from one language to another and can even understand and maintain the context and subtleties of the conversation. They use NLP to accomplish these feats.
 
@@ -94,7 +94,7 @@ Similarly, OpenAI’s [ChatGPT](https://openai.com/chatgpt) allows users access 
 These apps don’t just use AI to provide outputs or improve user experiences: They push the boundaries of what’s possible in app development by integrating AI/ML components.
 
 :::info
-**Register** for the live Q&A [Ask The Expert session](file:///C:\Users\sara\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\1AQKHL79\https\aka.ms\fallforIA\ATE) on **September 26** with the  Azure Functions product engineering team.  
+**Register** for the live Q&A [Ask The Expert session](https://aka.ms/fallforIA/ATE) on **September 26** with the  Azure Functions product engineering team.  
 :::
 
 ## Breaking Down the Role of AI in Intelligent Applications
@@ -103,7 +103,9 @@ Intelligent apps reflect the merging of traditional software design with the dyn
 
 At its core, AI augments applications with the capacity to self-learn and self-improve. It allows you to create applications that predict, react, and adapt to a constantly changing environment. In the power grid management system for a major city, an AI-infused application can forecast power usage trends, react to anomalies, and adapt to sudden demand surges, ensuring optimal efficiency and preventing blackouts.
 
-Even more, AI substantially aids in development tasks. For example, there’s [GitHub Copilot](https://github.com/features/copilot%22%20/h%20HYPERLINK%20%22https:/github.com/features/copilot), an AI-powered code assistant that offers suggestions based not only on syntax but on development best practices and the intent of the code. AI has evolved from a tool you use to build apps to a partner that helps in creating them.  
+But AI’s role doesn’t end at prediction or decision-making: It also automates tasks. In enterprise solutions, it has moved beyond simple automation to encompass intelligent process automation (IPA). In this arena, AI algorithms understand, learn, and then automate entire digital workflows. For developers, this is a fertile ground for creating applications that can dramatically improve the operational efficiency of businesses.
+
+Even more, AI substantially aids in development tasks. For example, there’s [GitHub Copilot](http://https:/github.com/features/copilot), an AI-powered code assistant that offers suggestions based not only on syntax but on development best practices and the intent of the code. AI has evolved from a tool you use to build apps to a partner that helps in creating them.  
 
 Using AI to build intelligent apps isn’t about throwing out what’s worked before. It’s about enhancing the components that have the most impact and achieve the best results. Incorporating AI in apps elevates their predictive abilities, streamlines complex tasks, and even aids in the development and creation process. When you build intelligent apps, you don’t just address current problems. You anticipate future challenges and craft solutions that adapt over time.
 
