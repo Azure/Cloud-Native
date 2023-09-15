@@ -1,7 +1,7 @@
 ---
 date: 2023-09-17T09:00
 slug: kick-off
-title: Kick-off '#30DaysofIA' 🍂
+title: "Kick-off #30DaysofIA 🍂"
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
@@ -56,10 +56,10 @@ Today, we kick off the Fall season with content and activities to skill you up o
 
 We have a number of initiatives planned for the month to help you learn and skill up on relevant technologies. Click on the links to visit the relevant pages for each
 
- * #30DaysOfIA - 6 themed weeks of daily articles in a structured roadmap
- * Learn Live Series – 8 weekly live episodes on `Serverless` and `Kubernetes`
- * Ask The Expert – join live Q&A sessions with Product Engineering teams
- * Cloud Skills Challenge – skill up by competing with peers to complete modules
+ * [#30DaysOfIA](https://aka.ms/fallforIA/30days) - 6 themed weeks of daily articles in a structured roadmap
+ * [Learn Live Series](https://aka.ms/FallForIA/LearnLive) – 8 weekly live episodes on `Serverless` and `Kubernetes`
+ * [Ask The Expert](https://aka.ms/FallForIA/ATE-series) – join live Q&A sessions with Product Engineering teams
+ * [Cloud Skills Challenge](https://aka.ms/fallforIA/csc) – skill up by competing with peers to complete modules
 
 ![image](../../static/img/fallforia/blogs/2023-09-17/Website-kick-off.jpg)
 
