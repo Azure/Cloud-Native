@@ -105,7 +105,7 @@ At its core, AI augments applications with the capacity to self-learn and self-i
 
 But AI’s role doesn’t end at prediction or decision-making: It also automates tasks. In enterprise solutions, it has moved beyond simple automation to encompass intelligent process automation (IPA). In this arena, AI algorithms understand, learn, and then automate entire digital workflows. For developers, this is a fertile ground for creating applications that can dramatically improve the operational efficiency of businesses.
 
-Even more, AI substantially aids in development tasks. For example, there’s [GitHub Copilot](https:/github.com/features/copilot), an AI-powered code assistant that offers suggestions based not only on syntax but on development best practices and the intent of the code. AI has evolved from a tool you use to build apps to a partner that helps in creating them.  
+Even more, AI substantially aids in development tasks. For example, there’s [GitHub Copilot](https://github.com/features/copilot), an AI-powered code assistant that offers suggestions based not only on syntax but on development best practices and the intent of the code. AI has evolved from a tool you use to build apps to a partner that helps in creating them.  
 
 Using AI to build intelligent apps isn’t about throwing out what’s worked before. It’s about enhancing the components that have the most impact and achieve the best results. Incorporating AI in apps elevates their predictive abilities, streamlines complex tasks, and even aids in the development and creation process. When you build intelligent apps, you don’t just address current problems. You anticipate future challenges and craft solutions that adapt over time.
 
