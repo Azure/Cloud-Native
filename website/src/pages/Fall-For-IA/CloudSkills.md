@@ -4,7 +4,7 @@ title: Cloud Skills
 
 # Cloud Skills Challenge
 
-:::info 🚨 [**REGISTER NOW TO COMPETE**](https://aka.ms/fallforIA/CSC&WT.mc_id=javascript-99907-ninarasi) 🚨
+:::info 🚨 [**REGISTER NOW TO COMPETE**](https://aka.ms/fallforIA/CSC?WT.mc_id=javascript-99907-ninarasi) 🚨
 
 Use the link above to register for the Cloud Skills Challenge today! You will get an automatical email notification when the challenge kicks off, ensuring you don't waste any time! The challenge runs for 30 days (Sep 1 - Sep 30) so **an early start helps**!
 
