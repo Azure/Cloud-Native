@@ -1,6 +1,7 @@
 ---
+date: 2023-09-17T09:00
 slug: kick-off
-title: Kick-off #30DaysofIA 🍂
+title: Kick-off '#30DaysofIA' 🍂
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
@@ -67,9 +68,9 @@ We have a number of initiatives planned for the month to help you learn and skil
 What are 3 things you can do today, to jumpstart your learning journey?
 
  * Register for live Q&A sessions (free, online) 
-     * September 20  - [Ask The Expert: Azure Container Apps](https://aka.ms/FallForIA/ATE-series)
      * September 26 – [Ask The Expert: Azure Functions](https://aka.ms/FallForIA/ATE-series)
      * October 11 – [Ask The Expert: Azure App Service](https://aka.ms/FallForIA/ATE-series)
+     * October 18  - [Ask The Expert: Azure Container Apps](https://aka.ms/FallForIA/ATE-series)
      * October 25 – [Ask The Expert: Azure Kubernetes Service](https://aka.ms/FallForIA/ATE-series)
  * Register for the [Learn Live Series: Serverless Edition](https://aka.ms/FallForIA/LearnLive) – weekly live learning 
  * Register for the [Intelligent Apps webinar](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?lcid=en-us) with Microsoft and Forrester
