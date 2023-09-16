@@ -103,10 +103,10 @@ To start with the basics for developing [Kubernetes](https://azure.microsoft.com
 
 Cloud-native development when paired with **serverless computing** enhances your solution architecture for building cost optimized, resilient applications.
 
-![image](../../static/img/fallforia/blogs/2023-09-17/serverless-on-azure.jpg)
+![image](../../static/img/fallforia/blogs/2023-09-17/Serverless-New.jpg)
 
 To start with the basics for [serverless computing](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-99907-ninarasi), explore [#30DaysOfServerless](https://azure.github.io/Cloud-Native/blog).
 
 ## Let’s Get Started
 
-Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://aka.ms/fallforIA/30days/subscribe) for updates in your favorite feed reader! **And look out for our first Intelligent Apps post tomorrow!**
+Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://aka.ms/fallforIA/30days/subscribe) for updates in your favorite feed reader! **And look out for our first Intelligent Apps post Monday!**
