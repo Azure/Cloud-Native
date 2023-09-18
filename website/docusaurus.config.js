@@ -87,6 +87,11 @@ const config = {
         },
         items: [
           {
+            to: "/Fall-For-IA/",
+            label: "Home",
+            position: "left",
+          },
+          {
             to: "/30daysofIA",
             label: "Blog",
             position: "left",
@@ -246,7 +251,7 @@ const config = {
       announcementBar: {
         id: "Call To Action",
         content:
-          'Learn Apps, AI & Azure on <a target="_blank" href="https://aka.ms/contoso-real-estate/hacktogether" style="color:#ffb3bb; font-weight:600;">#HackTogether</a>  | Star us on <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">GitHub</a>',
+        'Try the <a target="_blank" href="https://aka.ms/contoso-real-estate/hacktogether" style="color:#ffb3bb; font-weight:600;">Intelligent Apps Cloud Skills Challenge</a> today - Give us <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">🌟 on GitHub</a>',
         backgroundColor: "#140035",
         textColor: "#ffffff",
         isCloseable: false,
