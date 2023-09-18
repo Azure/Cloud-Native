@@ -3,7 +3,7 @@ date: 2023-09-18T09:00
 slug: demystifying-intelligent-applications
 title: 1-1. Demystifying Intelligent Applications
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
