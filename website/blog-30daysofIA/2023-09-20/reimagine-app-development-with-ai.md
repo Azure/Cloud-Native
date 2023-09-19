@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "This article explores real-world examples of how Intelligent Apps revolutionize logistics, retail, finance, manufacturing, tech, and medicine." 
+description: "In the part of our series on intelligent apps, we’ll explore how AI is transforming application development, from design and architecture to building." 
 tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
