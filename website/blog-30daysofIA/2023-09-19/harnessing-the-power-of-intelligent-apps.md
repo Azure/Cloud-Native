@@ -37,7 +37,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 
 <!-- End METADATA -->
 
-Explore real-world examples of how **Intelligent Apps** revolutionize logistics, retail, finance, manufacturing, tech, and medicine.
+Explore real-world examples of how **Intelligent Apps** revolutionize *logistics*, *retail*, *finance*, *manufacturing*, *tech*, and *medicine*.
 
 ## What We'll Cover:
 
@@ -69,7 +69,7 @@ A chatbot could look like the following diagram as Azure services work together 
 
 ![A diagram of a conversational experience enabled by Azure services](../../static/img/fallforia/blogs/2023-09-19/blog-image-2.png)
 
-Airbus also used AI to improve its aircraft maintenance and safety. They deployed AI Anomaly Detector to gather and analyze telemetry data from multiple flights, enabling more profound insights into wear and tear on military aircraft operating in harsh conditions. This AI application helps Airbus better understand each airplane’s health. Airbus can predict and fix potential problems before they occur, improving the aircraft’s safety and operational readiness.
+Airbus also used AI to improve its aircraft maintenance and safety. They deployed [AI Anomaly Detector](https://azure.microsoft.com/en-us/products/ai-services/ai-anomaly-detector?WT.mc_id=javascript-99907-ninarasi) to gather and analyze telemetry data from multiple flights, enabling more profound insights into wear and tear on military aircraft operating in harsh conditions. This AI application helps Airbus better understand each airplane’s health. Airbus can predict and fix potential problems before they occur, improving the aircraft’s safety and operational readiness.
 
 AI and Azure are changing how organizations like Airbus operate, even in strict, highly regulated markets with stringent security requirements. And by streamlining pilot training and staying ahead of aircraft maintenance, Airbus helps its military and commercial clients reliably deliver their goods across the globe, maintaining their critical supply chains.
 
@@ -133,7 +133,7 @@ Intelligent apps also drive transformative changes in the healthcare sector. Cam
 
 The Trust used Microsoft Azure and [Azure Cognitive Search](https://azure.microsoft.com/en-us/products/ai-services/cognitive-search?WT.mc_id=javascript-99907-ninarasi), including semantic search for understanding intent and contexts and cognitive capabilities for extracting insights from data, to [standardize and automate data management](https://customers.microsoft.com/en-us/story/1612121636839251558-cpft-health-provider-azure-en-united-kingdom?WT.mc_id=javascript-99907-ninarasi). This approach made legacy, archive, and live data more discoverable, saving clinicians’ time. The Trust’s solution searches through millions of clinical documents in seconds, even recognizing handwritten notes without needing a separate optical character recognition (OCR) solution to extract text from images (Azure Cognitive Search automatically does it). Clinicians can now uncover previously inaccessible insights, enabling them to offer more personalized care.
 
-The Trust also used [Integration Services](https://azure.microsoft.com/en-us/products/category/integration/?WT.mc_id=javascript-99907-ninarasi) tools such as [Azure Logic Apps](https://azure.microsoft.com/en-us/products/logic-apps/) to create workflows without writing code and [Event Grid](https://azure.microsoft.com/en-us/products/event-grid/?WT.mc_id=javascript-99907-ninarasi) to connect Azure and third-party services through a [publisher-subscriber model](https://learn.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=javascript-99907-ninarasi). They switched on a live feed from their new EPR system to Azure to feed real-time information into other applications. Researchers can now access anonymized data to fuel medical innovations beyond the NHS.
+The Trust also used [Integration Services](https://azure.microsoft.com/en-us/products/category/integration/?WT.mc_id=javascript-99907-ninarasi) tools such as [Azure Logic Apps](https://azure.microsoft.com/en-us/products/logic-apps/?WT.mc_id=javascript-99907-ninarasi) to create workflows without writing code and [Event Grid](https://azure.microsoft.com/en-us/products/event-grid/?WT.mc_id=javascript-99907-ninarasi) to connect Azure and third-party services through a [publisher-subscriber model](https://learn.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=javascript-99907-ninarasi). They switched on a live feed from their new EPR system to Azure to feed real-time information into other applications. Researchers can now access anonymized data to fuel medical innovations beyond the NHS.
 
 The healthcare provider also invested heavily in Power BI’s data visualization and analytical functions to sift through massive amounts of information. This level of data accessibility was previously impossible with their on-premises system. The new insights have significantly improved clinicians’ efficiency for better patient care.
 
@@ -147,6 +147,6 @@ As organizations adopt AI, they’re innovating in ways that were once too diffi
 
 ## Exercise
 
- * **Complete** the [Intelligent Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc?WT.mc_id=javascript-99907-ninarasi) to build on your apps and AI skills.
+ * **Complete** the [Intelligent Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc?WT.mc_id=javascript-99907-ninarasi) to build on your to build your fundamentals for AI app development.
  * **Watch** [Episode 01](https://aka.ms/learnlive-contoso-app-deconstructed-Ep1?WT.mc_id=javascript-99907-ninarasi) of the Serverless Edition Learn Live session to learn how to build an end-to-end intelligent app solution.
  * **Register** for the [Intelligent Apps webinar](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?lcid=en-us?WT.mc_id=javascript-99907-ninarasi) with Microsoft and Forrester.
