@@ -45,7 +45,7 @@ Let’s start with understanding the **power of intelligent applications**.
  * Categories of Intelligent Apps
  * Breaking down the role of AI in intelligent apps
 
-![image](../../static/img/fallforia/blogs/2023-09-18/blog-image1.png)
+![A decorative header image for the blog](../../static/img/fallforia/blogs/2023-09-18/blog-image1.png)
 
 ## Demystifying Intelligent Applications: Leveraging AI in App Development
 
