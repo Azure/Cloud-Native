@@ -251,7 +251,7 @@ const config = {
       announcementBar: {
         id: "Call To Action",
         content:
-        'Try the <a target="_blank" href="https://aka.ms/contoso-real-estate/hacktogether" style="color:#ffb3bb; font-weight:600;">Intelligent Apps Cloud Skills Challenge</a> today - Give us <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">🌟 on GitHub</a>',
+        'Try the <a target="_blank" href="https://aka.ms/fallforIA/apps-csc" style="color:#ffb3bb; font-weight:600;">Intelligent Apps Cloud Skills Challenge</a> today - Give us <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">🌟 on GitHub</a>',
         backgroundColor: "#140035",
         textColor: "#ffffff",
         isCloseable: false,
