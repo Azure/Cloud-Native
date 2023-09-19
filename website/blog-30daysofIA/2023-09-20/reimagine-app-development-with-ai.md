@@ -37,8 +37,6 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 
 <!-- End METADATA -->
 
-Explore real-world examples of how **Intelligent Apps** revolutionize *logistics*, *retail*, *finance*, *manufacturing*, *tech*, and *medicine*.
-
 ## What We'll Cover:
 
  * What are intelligent applications?
