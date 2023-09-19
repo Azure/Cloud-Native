@@ -45,7 +45,7 @@ Explore real-world examples of how **Intelligent Apps** revolutionize logistics,
  * High level architecture for industry scenarios
  * Implementation architecture overview across industries
 
-![image](../../static/img/fallforia/blogs/2023-09-19/blog-image-1.png)
+![A decorative header image for the blog](../../static/img/fallforia/blogs/2023-09-19/blog-image-1.png)
 
 ## Real-world Success Stories
 
@@ -67,7 +67,7 @@ Aviation technology’s rapid evolution compelled Airbus to reconceive their app
 
 A chatbot could look like the following diagram as Azure services work together to create a conversational experience. Its components could include security and governance, bot logic and user experience (UX), bot cognition and intelligence, data extract, transfer, and load (ETL) operations, quality assurance and enhancements, logging, and monitoring and reporting.
 
-![image](../../static/img/fallforia/blogs/2023-09-19/blog-image-2.png)
+![A diagram of a conversational experience enabled by Azure services](../../static/img/fallforia/blogs/2023-09-19/blog-image-2.png)
 
 Airbus also used AI to improve its aircraft maintenance and safety. They deployed AI Anomaly Detector to gather and analyze telemetry data from multiple flights, enabling more profound insights into wear and tear on military aircraft operating in harsh conditions. This AI application helps Airbus better understand each airplane’s health. Airbus can predict and fix potential problems before they occur, improving the aircraft’s safety and operational readiness.
 
@@ -97,7 +97,7 @@ Financial organizations can now deploy this trained ML model to run a real-time 
 
 Organizations can deploy a fraud detection system like the following example on Microsoft Azure. The system ingests data from streams or storage, runs analytics, and uses ML to detect fraud and store results. It then alerts users and other systems to the security issue.
 
-![image](../../static/img/fallforia/blogs/2023-09-19/blog-image-3.png)
+![A diagram of an example fraud detection system](../../static/img/fallforia/blogs/2023-09-19/blog-image-3.png)
 
 Swift provides the innovative model to its banking partners, who can share data to further train the model. Azure confidential computing securely runs new models on current data to accumulate insights, generating an ongoing learning cycle. This iterative approach strengthens the global detection of fraudulent financial transactions through an increasingly faster and more accurate model.  
 
