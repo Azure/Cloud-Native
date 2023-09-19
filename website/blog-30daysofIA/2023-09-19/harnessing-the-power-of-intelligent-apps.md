@@ -3,7 +3,7 @@ date: 2023-09-19T09:00
 slug: harnessing-the-power-of-intelligent-apps
 title: 1-2. Harnessing the Power of Intelligent Apps
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -89,7 +89,7 @@ CarMax’s success story serves as a testament to the potential of intelligent a
 
 Intelligent apps also impact the highly regulated financial services sector. Swift, a leading infrastructure provider for financial messaging services, [uses intelligent apps to enhance decision-making and combat financial crime](https://customers.microsoft.com/en-us/story/1637929534319366070-swift-banking-capital-markets-azure-machine-learning?WT.mc_id=javascript-99907-ninarasi).
 
-The massive growth of cross-border transactions and instant payment networks led to a surge in financial fraud that can cost the industry hundreds of billions of dollars every year. So, Swift and Microsoft partnered to build an anomaly detection model using [federated learning techniques](https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/federated-learning-with-azure-machine-learning-powering-privacy/ba-p/3824720?WT.mc_id=javascript-99907-ninarasi) with [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning/?WT.mc_id=javascript-99907-ninarasi) and [Azure confidential computing](https://azure.microsoft.com/en-us/solutions/confidential-compute/?WT.mc_id=javascript-99907-ninarasi).
+The massive growth of cross-border transactions and instant payment networks led to a surge in financial fraud that can cost the industry hundreds of billions of dollars every year. So, Swift and Microsoft partnered to build an anomaly detection model using [federated learning techniques](https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/federated-learning-with-azure-machine-learning-powering-privacy/ba-p/3824720) with [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning/) and [Azure confidential computing](https://azure.microsoft.com/en-us/solutions/confidential-compute/).
 
 [Microsoft Purview](https://azure.microsoft.com/en-us/products/purview/?WT.mc_id=javascript-99907-ninarasi) helped govern data, as the federated learning method partially trained each model in a silo before aggregating them. This approach enabled Swift and Microsoft to develop a highly accurate model without copying or moving data from Swift members’ secure locations, ensuring the highest level of security and privacy.
 
@@ -109,7 +109,7 @@ The collaboration between Swift and Microsoft demonstrates how combining various
 
 It adopted Azure Machine Learning and other Azure AI Services to develop, train, and implement 1,500 custom models for each region and division, replacing manual methods. This solution delivers timely finance, sales, and marketing insights while freeing teams from time-consuming manual data manipulation tasks.
 
-3M used Azure Machine Learning, [automated machine learning](https://azure.microsoft.com/en-us/products/machine-learning/automatedml/?WT.mc_id=javascript-99907-ninarasi) (AutoML), and the [Many Models Solution Accelerator](https://github.com/microsoft/solution-accelerator-many-models?WT.mc_id=javascript-99907-ninarasi) to train and score numerous machine learning models in parallel. This approach significantly shortened the company’s development cycle time.
+3M used Azure Machine Learning, [automated machine learning](https://azure.microsoft.com/en-us/products/machine-learning/automatedml/) (AutoML), and the [Many Models Solution Accelerator](https://github.com/microsoft/solution-accelerator-many-models) to train and score numerous machine learning models in parallel. This approach significantly shortened the company’s development cycle time.
 
 Then, 3M integrated [Microsoft Power BI](https://powerbi.microsoft.com/en-us/?WT.mc_id=javascript-99907-ninarasi) into their solution to compile and visualize results more effectively. Executives now have an unbiased and unfiltered view of data for better decision-making. With its improved ability to forecast sales, 3M can focus on manufacturing the products it needs efficiently.
 
@@ -147,6 +147,6 @@ As organizations adopt AI, they’re innovating in ways that were once too diffi
 
 ## Exercise
 
- * **Complete** the [Intelligent Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc?WT.mc_id=javascript-99907-ninarasi) to build on your to build your fundamentals for AI app development.
- * **Watch** [Episode 01](https://aka.ms/learnlive-contoso-app-deconstructed-Ep1?WT.mc_id=javascript-99907-ninarasi) of the Serverless Edition Learn Live session to learn how to build an end-to-end intelligent app solution.
+ * **Complete** the [Intelligent Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc) to build on your to build your fundamentals for AI app development.
+ * **Watch** [Episode 01](https://aka.ms/learnlive-contoso-app-deconstructed-Ep1) of the Serverless Edition Learn Live session to learn how to build an end-to-end intelligent app solution.
  * **Register** for the [Intelligent Apps webinar](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?lcid=en-us?WT.mc_id=javascript-99907-ninarasi) with Microsoft and Forrester.
