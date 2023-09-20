@@ -40,9 +40,10 @@ In the part of our series on intelligent apps, we’ll explore how AI is transfo
 
 ## What We'll Cover:
 
- * What are intelligent applications?
- * Categories of Intelligent Apps
- * Breaking down the role of AI in intelligent apps
+ * Revolutionizing application development using AI
+ * Infusing AI in application design architecture
+ * I Assisted Pair Programming
+ * Future of App Development
 
 ![A decorative image of application development with AI](../../static/img/fallforia/blogs/2023-09-20/blog-image-1.png)
 
