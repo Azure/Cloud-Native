@@ -3,7 +3,7 @@ date: 2023-09-21T09:00
 slug: how-digital-natives-leverage-generative-ai
 title: 1-4. How Digital Natives leverage Generative AI
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
