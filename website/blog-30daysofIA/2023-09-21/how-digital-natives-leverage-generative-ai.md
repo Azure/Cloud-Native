@@ -1,5 +1,5 @@
 ---
-date: 2023-09-20T09:00
+date: 2023-09-21T09:00
 slug: how-digital-natives-leverage-generative-ai
 title: 1-4. How Digital Natives leverage Generative AI
 authors: [cnteam]
@@ -54,7 +54,8 @@ This type of AI leverages machine learning algorithms to create new data with si
 
 Generative AI is transforming how digital natives and independent software vendors (ISVs) operate. Generative AI offers new possibilities for creating unique business value, enhancing customer experiences, and driving growth.  
 
-It plays a critical role in applications, improving functionality, aiding decision-making, and automating complex tasks to deliver dynamic, uniquely personalized user experiences. Generative AI also enables and automates data-driven outcomes, functions, and features.  
+It plays a critical role in applications, improving functionality, aiding decision-making, and automating complex tasks to deliver dynamic, uniquely personalized user experiences. Generative AI also enables and automates data-driven outcomes, functions, and features.
+
 Integrating AI capabilities into customer-facing apps and turning them into intelligent apps benefits both the customer and the business, as we discussed in [Demystifying Intelligent Applications: Leveraging AI in App Development](https://azure.github.io/Cloud-Native/30daysofIA/demystifying-intelligent-applications). You get faster product development workflows and better business intelligence for sales and marketing, while your users get more natural and context-aware features and interactions.  
 
 That said, to realize generative AI’s potential, you need some strategy and knowledge of how and where it fits into your current business and operations. We’ll examine this technology’s potential to transform business operations, its risks, and rewards, and how to integrate it into your existing operations.  
@@ -65,7 +66,8 @@ Generative AI is creating new opportunities in the digital playing field. It emp
 
 For example, Microsoft used generative AI to reinvent web search in the new [AI-powered Bing and Edge](https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/). The search experience has evolved from a solitary user flow of typing in keywords and scrolling through results. It’s now a conversational experience where Bing uses context to offer better quality and more personalized search queries and results.  
 
-Similarly, Microsoft harnessed generative AI to transform its productivity suite into intelligent apps. Through [Copilot for Microsoft 365](https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work/), PowerPoint now empowers users to tell their stories by using DALL-E to generate images effortlessly. It also helps rephrase text-heavy slides to be more straightforward. Outlook now assists users to compose more effective emails, enabling better communication.  
+Similarly, Microsoft harnessed generative AI to transform its productivity suite into intelligent apps. Through [Copilot for Microsoft 365](https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work/), PowerPoint now empowers users to tell their stories by using DALL-E to generate images effortlessly. It also helps rephrase text-heavy slides to be more straightforward. Outlook now assists users to compose more effective emails, enabling better communication.
+
 These are just some examples of how AI powers day-to-day work and operations.  
 
 Businesses that ignore generative AI miss out on untapped market opportunities, letting competitors gain an edge in the digital race. By seeking ways to rethink assumptions and reinvent existing approaches, you can effectively use generative AI to create new opportunities, open products to new use cases and markets, unlock new growth and customer satisfaction levels, and increase your revenue.
