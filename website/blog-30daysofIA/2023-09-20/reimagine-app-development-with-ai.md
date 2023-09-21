@@ -3,7 +3,7 @@ date: 2023-09-20T09:00
 slug: reimagine-app-development-with-ai
 title: 1-3. Reimagine App Development with AI
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -42,7 +42,7 @@ In the part of our series on intelligent apps, we’ll explore how AI is transfo
 
  * Revolutionizing application development using AI
  * Infusing AI in application design architecture
- * I Assisted Pair Programming
+ * AI Assisted Pair Programming
  * Future of App Development
 
 ![A decorative image of application development with AI](../../static/img/fallforia/blogs/2023-09-20/blog-image-1.png)
