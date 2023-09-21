@@ -12,7 +12,8 @@ import bannerImg from './../../../static/img/cnny23/hero-banner.png';
 const CampaignFeatures = [
   {
     title: '#30DaysOfCloudNative',
-    Svg: require('@site/static/img/svg/campaign-30days.svg').default,
+    linkTitle: '#30DaysOfCloudNative',
+    svgpath: "../img/svg/azure-icon-30-days.svg",
     fillColor: "#f25022",
     link: "/Cloud-Native/cnny-2023",
     description: (
@@ -23,7 +24,8 @@ const CampaignFeatures = [
   },
   {
     title: 'Ask The Experts',
-    Svg: require('@site/static/img/svg/campaign_ama.svg').default,
+    linkTitle: 'Ask The Experts',
+    svgpath: "../img/svg/azure-icon-ask-the-experts.svg",
     fillColor: "#7fba00",
     link: "/Cloud-Native/New-Year/ate",
     description: (
@@ -34,7 +36,8 @@ const CampaignFeatures = [
   },
   {
     title: 'Cloud Skills',
-    Svg: require('@site/static/img/svg/campaign_skills.svg').default,
+    linkTitle: 'Cloud Skills',
+    svgpath: "../img/svg/azure-icon-cloud-skills.svg",
     fillColor: "#ffb900",
     link: "https://aka.ms/cnny/challenge",
     description: (
@@ -43,56 +46,24 @@ const CampaignFeatures = [
       </>
     ),
   },
-  /*
-  {
-    title: 'Serverless Hacks',
-    Svg: require('@site/static/img/svg/team.svg').default,
-    fillColor: "#00a4ef",
-    link: "/Cloud-Native/serverless-september/ServerlessHacks",
-    description: (
-      <>
-      Join us for weekly events at Microsoft Reactor, as we work through hands-on challenges in Serverless!
-      </>
-    ),
-  },
-  {
-    title: 'Ask The Expert',
-    Svg: require('@site/static/img/svg/campaign_ama.svg').default,
-    fillColor: "#b66dff",
-    link: "/Cloud-Native/serverless-september/AskTheExpert",
-    description: (
-      <>
-      Join us for online conversations with the product teams - submit questions ahead of time or ask them live!
-      </>
-    ),
-  },
-  {
-    title: 'Community Buzz',
-    Svg: require('@site/static/img/svg/campaign_buzz.svg').default,
-    link: "https://github.com/Azure/Cloud-Native/issues/new/choose",
-    fillColor: "#fe6db6",
-    description: (
-      <>
-      Build interesting demos or wrote helpful articles? Contribute your feedback and content for a chance to be featured!
-      </>
-    ),
-  },
-  */
 ];
 
-function Feature({Svg, title, description, link, fillColor}) {
+function Feature({svgpath, title, linkTitle, description, link}) {
   return (
     <div className={clsx('col col--4 card-col')}>
       <div className="card">
         <div className="card-body">
-          <a href={link} title={title} target="_blank">
             <div className="text--center">
-              <Svg height="150px" width="150px" fill={fillColor} role="img" alt={title}/>
+            <img width="150px" height="150px" src={svgpath} alt="" role="presentation" />
             </div>
-          </a>
           <div fill="#00ff00" className="text--center padding-horiz--md">
             <h2>{title}</h2>
-            <p className="margin--none">{description}</p>
+            <p>{description}</p>
+          </div>
+          <div className={styles.buttons}>
+            <Link className="button button--block button--secondary button--lg" to={link}>
+              {linkTitle}
+            </Link>
           </div>
         </div>
       </div>
