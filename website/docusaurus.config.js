@@ -213,7 +213,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
 
-      image: "img/ogImage.png",
+      image: "https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png",
 
       metadata: [
         {
