@@ -8,6 +8,7 @@ import styles from './../index.module.css';
 const CampaignFeatures = [
   {
     title: '#30DaysOfServerless',
+    linkTitle: '#30DaysOfServerless',
     Svg: require('@site/static/img/svg/campaign-30days.svg').default,
     fillColor: "#f25022",
     link: "/Cloud-Native/serverless-september/30DaysOfServerless",
@@ -19,6 +20,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Zero To Hero',
+    linkTitle: 'Zero To Hero',
     Svg: require('@site/static/img/svg/campaign_hero.svg').default,
     fillColor: "#7fba00",
     link: "/Cloud-Native/serverless-september/ZeroToHero",
@@ -30,6 +32,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Serverless Hacks',
+    linkTitle: 'Serverless Hacks',
     Svg: require('@site/static/img/svg/team.svg').default,
     fillColor: "#00a4ef",
     link: "/Cloud-Native/serverless-september/ServerlessHacks",
@@ -41,6 +44,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Cloud Skills',
+    linkTitle: 'Cloud Skills',
     Svg: require('@site/static/img/svg/campaign_skills.svg').default,
     fillColor: "#ffb900",
     link: "/Cloud-Native/serverless-september/CloudSkills",
@@ -52,6 +56,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Ask The Expert',
+    linkTitle: 'Ask The Expert',
     Svg: require('@site/static/img/svg/campaign_ama.svg').default,
     fillColor: "#b66dff",
     link: "/Cloud-Native/serverless-september/AskTheExpert",
@@ -63,6 +68,7 @@ const CampaignFeatures = [
   },
   {
     title: 'Community Buzz',
+    linkTitle: 'Community Buzz',
     Svg: require('@site/static/img/svg/campaign_buzz.svg').default,
     link: "https://github.com/Azure/Cloud-Native/issues/new/choose",
     fillColor: "#fe6db6",
@@ -74,19 +80,22 @@ const CampaignFeatures = [
   },
 ];
 
-function Feature({Svg, title, description, link, fillColor}) {
+function Feature({Svg, title, linkTitle, description, link, fillColor}) {
   return (
     <div className={clsx('col col--4 card-col')}>
       <div className="card">
         <div className="card-body">
-          <a href={link} title={title} target="_blank">
-            <div className="text--center">
-              <Svg height="150px" width="150px" fill={fillColor} role="img"  alt={title}/>
-            </div>
-          </a>
+          <div className="text--center">
+            <Svg height="150px" width="150px" fill={fillColor} role="presentation"  alt=""/>
+          </div>
           <div fill="#00ff00" className="text--center padding-horiz--md">
             <h2>{title}</h2>
-            <p className="margin--none">{description}</p>
+            <p>{description}</p>
+          </div>
+          <div className={styles.buttons}>
+            <Link className="button button--block button--secondary button--lg" to={link}>
+              {linkTitle}
+            </Link>
           </div>
         </div>
       </div>

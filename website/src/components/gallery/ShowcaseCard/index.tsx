@@ -27,10 +27,10 @@ import {sortBy} from '../../../../src/utils/jsUtils';
 
 const TagComp = React.forwardRef<HTMLLIElement, Tag>(
   ({label, color, description}, ref) => (
-    <li ref={ref} className={styles.tag} title={description}>
+    <div ref={ref} className={styles.tag} title={description}>
       <span className={styles.textLabel}>{label.toLowerCase()}</span>
       <span className={styles.colorLabel} style={{backgroundColor: color}} />
-    </li>
+    </div>
   ),
 );
 
@@ -121,7 +121,7 @@ function ShowcaseCard({user}: {user: User}) {
             <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
           )} */}
       </div>
-      <ul className={clsx('card__footer', styles.cardFooter)}>
+      <div className={clsx('card__footer', styles.cardFooter)}>
         <div className="margin-bottom--md">
         <ShowcaseCardTag tags={user.tags} />
         </div>
@@ -130,7 +130,7 @@ function ShowcaseCard({user}: {user: User}) {
             View this post
             </Link>
         </div>
-      </ul>
+      </div>
     </li>
   );
 }
