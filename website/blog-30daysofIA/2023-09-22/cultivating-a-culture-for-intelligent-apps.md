@@ -43,7 +43,6 @@ Prepare your organization to adopt intelligent apps by taking a change managemen
  * Role of change management in modernizing to intelligent apps
  * Skills needed for building intelligent apps in your organization
  * How to build a culture of change to embrace AI
- * How to build a culture of change to embrace AI
  * How to prepare for the future of intelligent apps and continuous evolution
 
 ![image of modernizing AI solutions for intelligent apps](../../static/img/fallforia/blogs/2023-09-22/blog-image-1-6.png)
@@ -83,7 +82,7 @@ Explore how modernization sets the stage for incorporating AI/ML into existing a
 
 The first step in preparing your organization for intelligent apps is to assess your current readiness for change. Analyze various elements of your organization, from infrastructure and workforce skills to strategic vision and overall culture.
 
-Can your apps and systems integrate with AI platforms like Microsoft Azure AI? Is your workforce comfortable working alongside AI, or are they fearful and resistant? Does your strategic vision incorporate AI’s transformative potential, or does it fail to acknowledge AI as a critical driver of future growth?
+Can your apps and systems integrate with AI platforms like [Microsoft Azure AI](https://azure.microsoft.com/en-us/solutions/ai/?WT.mc_id=javascript-99907-ninarasi)? Is your workforce comfortable working alongside AI, or are they fearful and resistant? Does your strategic vision incorporate AI’s transformative potential, or does it fail to acknowledge AI as a critical driver of future growth?
 
 These questions identify the challenges of integrating AI into an organization and determine the company’s readiness for intelligent apps.
 
@@ -160,5 +159,5 @@ The future is intelligent. Use this series as a guideline to navigate challenges
 ## Exercise
 
  * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
- * Complete the [AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc) to build on your AI skills.
- * Register for [Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3) of the serverless edition Learn Live session to learn how to build, test and deploy an end-to-end intelligent app solution.
+ * Complete the **[AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc)** to build on your AI skills.
+ * Register for **[Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)** of the serverless edition Learn Live session to learn how to build, test and deploy an end-to-end intelligent app solution.
