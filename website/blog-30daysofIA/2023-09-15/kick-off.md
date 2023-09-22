@@ -65,7 +65,7 @@ We have a number of initiatives planned for the month to help you learn and skil
 
 :::info **Register for the events!**
 
-What are 3 things you can do today, to jumpstart your learning journey?
+What are 4 things you can do today, to jumpstart your learning journey?
 
  * Register for live Q&A sessions (free, online) 
      * September 26 – [Ask The Expert: Azure Functions](https://aka.ms/FallForIA/ATE-series)
@@ -81,7 +81,7 @@ What are 3 things you can do today, to jumpstart your learning journey?
 
 [#30DaysOfIA](https://aka.ms/fallforIA/30days) is a series of daily blog posts grouped into themed weeks - taking you from core concepts to end-to-end solution examples in 30 days. Each article will provide conceptual lessons paired with exercises and resources to help you reinforce learnings and take next steps.
 
-This series takes you through learning journey in **four stages**, each building on the previous week to help you skill up in a beginner-friendly way:
+This series takes you through learning journey in **six stages**, each building on the previous week to help you skill up in a beginner-friendly way:
 
  * **Week 1**: Power of [Intelligent Applications](https://azure.microsoft.com/en-us/blog/build-next-generation-ai-powered-applications-on-microsoft-azure/?WT.mc_id=javascript-99907-ninarasi)
  * **Week 2:** How to build intelligent apps with [cloud-native](https://azure.microsoft.com/en-us/solutions/cloud-native-apps/?WT.mc_id=javascript-99907-ninarasi)?
