@@ -48,7 +48,7 @@ Learn best practices for modernizing your on-premises or IaaS solutions to intel
 
 ## Preparing the Path for Intelligent Apps: Transitioning from On-Premises/IaaS to Cloud-Native Applications
 
-The proliferation of generative AI is paving the way for intelligent applications, software that leverages AI capabilities to deliver unparalleled functionality and user experience. As we covered in a previous article, “Demystifying Intelligent Applications: Leveraging AI in App Development,” intelligent Apps aren’t just products of advanced coding. They interact, learn, and evolve thanks to modern AI and machine learning (ML) breakthroughs.  
+The proliferation of generative AI is paving the way for intelligent applications, software that leverages AI capabilities to deliver unparalleled functionality and user experience. As we covered in a previous article, “[Demystifying Intelligent Applications: Leveraging AI in App Development](https://azure.github.io/Cloud-Native/30daysofIA/demystifying-intelligent-applications),” intelligent Apps aren’t just products of advanced coding. They interact, learn, and evolve thanks to modern AI and machine learning (ML) breakthroughs.  
 
 The paradigm shift from traditional to intelligent apps demands that we change our approach to the technical challenges of software and architecture design. It also necessitates adopting new ways of thinking and operating within an organization, which we explore in greater depth in “[Cultivating a Culture for Intelligent Apps: Organizational Readiness and Change Management](https://azure.github.io/Cloud-Native/30daysofIA/cultivating-a-culture-for-intelligent-apps).”  
 
@@ -131,5 +131,5 @@ The power of generative AI is here, and preparing for the move toward cloud-base
 ## Exercise
 
  * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
- * Complete the [AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc) to build on your AI skills.
- * Register for [Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3) of the serverless edition Learn Live session to learn how to build, test and deploy an end-to-end intelligent app solution.
+ * Complete the **[AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc)** to build on your AI skills.
+ * Register for **[Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)** of the serverless edition Learn Live session to learn how to build, test and deploy an end-to-end intelligent app solution.
