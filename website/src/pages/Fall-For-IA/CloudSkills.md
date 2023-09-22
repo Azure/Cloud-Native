@@ -17,7 +17,7 @@ Use the link above to start the Cloud Skills Challenge today! The challenge runs
 Join us on a learning journey this fall to skill up on your core skills for developing intelligent apps. Explore how to combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences.
 
 
-![Fall for intelligent apps](./../../../static/img/banners/banner-ffiav2.jpg)
+![Fall for intelligent apps](./../../../static/img/banners/banner-ffia-v2.jpg)
 
 
 * [**Intelligent Apps Skills Challenge**](https://aka.ms/fallforIA/apps-csc?WT.mc_id=javascript-99907-ninarasi) - Applications are at the core of intelligent solution development. Cloud-native app development empowers you to create modern containerized and serverless apps to build innovative solutions. Explore how to get started with building intelligent apps using Azure Kubernetes Service, Azure Functions and GitHub.
