@@ -213,7 +213,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
 
-      image: "https://raw.githubusercontent.com/Azure/Cloud-Native/main/website/static/img/ogImage.png",
+      image: "https://azure.github.io/Cloud-Native/img/ogImage.png",
 
       metadata: [
         {
@@ -232,7 +232,7 @@ const config = {
         {
           name: "twitter:image",
           content:
-            "https://raw.githubusercontent.com/Azure/Cloud-Native/main/website/static/img/ogImage.png",
+            "https://azure.github.io/Cloud-Native/img/ogImage.png",
         },
         {
           name: "twitter:card",
