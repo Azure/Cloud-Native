@@ -3,7 +3,7 @@ date: 2023-09-22T09:00
 slug: cultivating-a-culture-for-intelligent-apps
 title: 1-6. Cultivating a Culture for Intelligent Apps
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -161,3 +161,4 @@ The future is intelligent. Use this series as a guideline to navigate challenges
  * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
  * Complete the **[AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc)** to build on your AI skills.
  * Register for **[Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)** of the serverless edition Learn Live session to learn how to build, test and deploy an end-to-end intelligent app solution.
+ * Register for **[Ask the Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/) session for live Q&A with the Product Engineering team on building intelligent serverless apps.
