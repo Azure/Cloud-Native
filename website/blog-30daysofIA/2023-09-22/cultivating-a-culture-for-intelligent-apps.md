@@ -8,7 +8,7 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
-image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
+image: https://azure.github.io/Cloud-Native/img/ogImage.png
 description: "Prepare your organization to adopt intelligent apps by taking a change management approach. Assess your readiness, upskill teams, create a culture of change and overcome resistance, and prepare for future evolution to pave the way for a smooth transition into an AI-centric company." 
 tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
@@ -18,7 +18,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
 <meta property="og:description" content="Prepare your organization to adopt intelligent apps by taking a change management approach."/>
-<meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
+<meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/cultivating-a-culture-for-intelligent-apps" />
     <meta name="twitter:title" 

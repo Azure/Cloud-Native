@@ -8,7 +8,7 @@ hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
-image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
+image: https://azure.github.io/Cloud-Native/img/ogImage.png
 description: "This Fall focus on building intelligent apps using AI and cloud-native technologies. `#FallForIntelligentApps` brings to you a learning journey to build your skills on creating differentiated experiences while modernizing your applications. It’s time to `learn it all`." 
 tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
@@ -18,7 +18,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
 <meta property="og:description" content="Join us this Fall season on a learning journey to build intelligent apps on Azure. Read all about the upcoming #FallForIntelligentApps initiative on this post!"/>
-<meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
+<meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/kick-off" />
     <meta name="twitter:title" 
