@@ -40,7 +40,7 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 ### 🍂#FallForIntelligentApps
 - Nov 2 | #LearnLive Kubernetes – Ep 04: Network Security and Access for Intelligent Applications on Azure Kubernetes Service
 
-### 🔥MSIgnite
+### 🔥#MSIgnite
 Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the community in-person at Seattle, or online from anywhere in the world! 
  - 👩🏽‍💻 Nov 14 | [Pre-Day Labs](https://ignite.microsoft.com/en-US/home) (Seattle Only)
  - 🎙 Nov 15 | [Day 1 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
