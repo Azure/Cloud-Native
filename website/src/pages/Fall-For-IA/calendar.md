@@ -1,57 +1,47 @@
-# Fall For Intelligent Apps 🍁
+# Fall For Intelligent Apps 🍂
 
-#FallForIA **kicks off in mid-September** with initiatives to teach you the tools, technologies and skills you need to _modernize your applications and build differentiated experiences with AI_! Look for these signature events & more:
+#FallForIntelligentApps kicked off **mid-September** with initiatives to help you learn the tools, technologies and skills you need to *modernize your applications and build differentiated experiences with AI*! Look for these signature events & more:
 
- * 🎙 **Ask The Expert** - live Q&A with product teams in Azure Functions, Azure Container Apps and more.
+ * 🎙 **Ask The Expert** - (free, online) with the Azure Product Group across two time zones–Americas + EMEA and APAC + ANZ
  * 👩🏽‍💻 **Learn Live** - live training series on building intelligent apps end-to-end on Azure with AI.
  * ✍🏽 **#30DaysOfIA** - series of daily blog posts organized in 4 themed weeks focused on intelligent apps.
  * 🎯 **Cloud Skills Challenge** - curated collection of Learn modules in Apps, Data & AI - for self-skilling!
  * 🐝 **Community Buzz** - activities to showcase _your_ projects and contributions - including a gallery!
 
-We can't wait to unveil all the exciting content and events we've planned for September and October. But the **Road to #FallForIA** starts right now with signature _CommunityBuzz_ events in August. Read on to learn where you can tune into livestreams, catch up on replays, and participate by making your first open-source contributions!
-
----
-
-## Aug 2023
-
-### 🐝 [#HackTogether](https://aka.ms/contoso-real-estate/hacktogether) 
-
-Join us on this 15-day virtual hack experience where you'll learn about [Contoso Real Estate](https://aka.ms/contoso-real-estate/github) (an open-sourced real-world enterprise-grade serverless app) and the technologies it uses - **in 6 livestreamed sessions**. Understand how you can deconstruct an open-source project and make your own contributions:
- - Aug 16 | [Opening Keynote](https://developer.microsoft.com/reactor/events/20275/?wt.mc_id=javascript-99907-ninarasi)
- - Aug 17 | [Introduction to GitHub Copilot](https://developer.microsoft.com/reactor/events/20321/?wt.mc_id=javascript-99907-ninarasi)
- - Aug 21 | [Build Your Front End With Azure Static Web Apps](https://developer.microsoft.com/reactor/events/20276/?wt.mc_id=javascript-99907-ninarasi)
- - Aug 24 | [Build a Serverless Backend with Azure Functions](https://developer.microsoft.com/reactor/events/20277/?wt.mc_id=javascript-99907-ninarasi)
- - Aug 28 | [Build & Connect to your database with Azure Cosmos DB](https://developer.microsoft.com/reactor/events/20278/?wt.mc_id=javascript-99907-ninarasi)
- - Aug 31 | [Introduction to Azure OpenAI Service](https://developer.microsoft.com/reactor/events/20322/?wt.mc_id=javascript-99907-ninarasi)
-
-<iframe width="800" height="480" src="https://www.youtube.com/embed/908DhvF6HZk" title="Hack Together Launch – Opening Keynote" allowfullscreen></iframe>
-
-Start your journey by watching the opening keynote, then track these three core resources for more:
-* [HackTogether - The JavaScript On Azure Global Hack](https://learn.microsoft.com/training/student-hub/hack-together?wt.mc_id=javascript-99907-ninarasi ) -  Homepage.
-* [Contoso Real Estate - Reference Architecture & Sample](https://aka.ms/contoso-real-estate/github) - GitHub Repository
-* [Contoso Real Estate - Deconsrutct/Ed](https://dev.to/nitya/series/24216) - Blog Series in Sep/Oct
+Read on to learn where you can tune into livestreams, catch up on replays, and participate by making your first open-source contributions!
 
 ---
 
 ## Sep 2023
-### 🍁 #FallForIA 
+### 🍂#FallForIntelligentApps 
 - 👩🏽‍💻 Sep 14 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Architecture)
-- 🎯 Sep 15 | #CloudSkillsChallenge - Apps, Data and AI
-- ✍🏽 Sep 18 | #30DaysOfIA - Power Of Intelligent Applications 
-- 🎙 Sep 20 | #AskTheExpert - Azure Container Apps
-- 👩🏽‍💻 Sep 21 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Frontend Apps)
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/vArX2WPWTmE?si=63KtRVpL07h9LQBq&amp;controls=0" title="Contoso Real Estate App Deconstructed Ep01: Define and get started with the Contoso Real Estate Application" allowfullscreen></iframe>
+
+- 🎯 Sep 15 | #CloudSkillsChallenge - [Apps](https://aka.ms/fallforIA/apps-csc), [Data](https://aka.ms/fallforIA/data-csc) and [AI](https://aka.ms/fallforIA/ai-csc)
+- ✍🏽 Sep 18 | #30DaysOfIA - [Power Of Intelligent Applications](https://azure.github.io/Cloud-Native/30daysofIA/demystifying-intelligent-applications) 
+- 👩🏽‍💻 Sep 21 | #LearnLive Serverless - [Ep 02: Deconstruct Contoso Real Estate (Frontend Apps)](https://aka.ms/learnlive-contoso-app-deconstructed-Ep2)
 - ✍🏽 Sep 25 | #30DaysOfIA - Build Intelligent Apps
-- 🎙 Sep 26 | #AskTheExpert - Azure Functions
-- 👩🏽‍💻 Sep 28 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Backend Integrations)
+- 🎙 Sep 26 | #AskTheExpert - [Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 💻Sept 26 | **[Driving Business Value by Modernizing with Cloud-Native & AI webinar](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?lcid=en-us)** with Microsoft and Forrester
+- 👩🏽‍💻 Sep 28 | #LearnLive Serverless - [Ep 03: Deconstruct Contoso Real Estate (Backend Integrations)](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)
 
 ## Oct 2023
-### 🍁 #FallForIA 
-- 👩🏽‍💻 Oct 05 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Testing & Deployment)
+###  🍂#FallForIntelligentApps
+- 👩🏽‍💻 Oct 05 | #LearnLive Serverless - [Ep 04: Deconstruct Contoso Real Estate (Testing & Deployment)](https://aka.ms/learnlive-contoso-app-deconstructed-Ep4)
+- 🎙 Oct 11 | #AskTheExpert - [Azure App Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 👩🏽‍💻 Oct 12 | #LearnLive Kubernetes – Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service  
+- 🎙 Oct 18 | #AskTheExpert - [Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 👩🏽‍💻 Oct 19 | #LearnLive Kubernetes – Ep 02: Securing Access to Azure Open AI Services with AKS Workload Identity  
+- 🎙 Oct 25 | #AskTheExpert – [Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 👩🏽‍💻 Oct 26 | #LearnLive Kubernetes – Ep 02: Designing Intelligent Application Deployment for Scale, Resilience, and Observability.
 
 ## Nov 2023
-### 🔥 #MSIgnite
+### 🍂#FallForIntelligentApps
+- Nov 2 | #LearnLive Kubernetes – Ep 04: Network Security and Access for Intelligent Applications on Azure Kubernetes Service
 
-Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the community in-person at Seattle, or online from anywhere in the world!
+### 🔥#MSIgnite
+Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the community in-person at Seattle, or online from anywhere in the world! 
  - 👩🏽‍💻 Nov 14 | [Pre-Day Labs](https://ignite.microsoft.com/en-US/home) (Seattle Only)
  - 🎙 Nov 15 | [Day 1 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
  - 🎙 Nov 16 | [Day 2 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
