@@ -202,11 +202,15 @@ To implement image analysis in your REST API, open the starter project template 
 
 Next, install the Azure AI Vision SDK:
 
-`pip install azure-ai-vision`
+```
+pip install azure-ai-vision
+```
 
 Then, add the following line to the `requirements.txt` file to include the `azure-ai-vision` package:
 
-`azure-ai-vision==0.13.0b1`
+```
+azure-ai-vision==0.13.0b1
+```
 
 Now, create an `ocr_helper.py` file in the project’s root folder. This file is a Python module that provides functions for processing images using OCR. Add the following code to the file:
 
