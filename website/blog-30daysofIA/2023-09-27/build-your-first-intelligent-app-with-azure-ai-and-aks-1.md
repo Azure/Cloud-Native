@@ -44,7 +44,7 @@ Delve into creating an Intelligent App that leverages Azure AI for Vision to ana
  * Build a Python Web API to perform OCR
  * Test the API locally
 
-![image of modernizing AI solutions for intelligent apps](../../static/img/fallforia/blogs/2023-09-22/blog-image-1-5.png)
+![image depicting an Intelligent App using AI](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-1.png)
 
 ## Jumpstart Your AI Journey: Building Your First Intelligent App with Azure AI and AKS (1)
 
@@ -91,29 +91,29 @@ First, log in to your Azure account and navigate to the [Azure Portal](https://p
 
 Click **Create a resource** and search for “resource group.” Create a new resource group named `computer-vision`.
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+![image in Azure Portal of creating a new resource group](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-2.png)
 
 Return to the Azure Portal home page and click **Create a resource**.
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+![image in Azure Portal of creating a new resource](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-3.png)
 
 Search for “computer vision” and select it from the results. Click **Create**.
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+![image of searching for resource group in Azure Portal](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-4.png)
 
 Clicking **Create** displays the Create Computer Vision wizard. Select the resource group you just created as the Resource group from the dropdown. Enter a resource name similar to what is seen in the screenshot below. Note that this must be a unique name so choose one that is not currently in use. Select Standard S1 as the pricing tier and check the Responsible use of AI box in the field at the bottom.
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+![Image of selecting the Responsible use of AI box](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-5.png)
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+![Image of project details](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-6.png)
 
 Click **Review + Create**, then click **Create**.
 
 Next, get the API key and endpoint from the Azure AI services multi-service account you created. Once the resource is created, navigate to the resource details page. Under **Resource Management**, select **Keys and Endpoint**. Once on the **Keys and Endpoint** page, you’ll find the **Key 1** and **Endpoint** values. These credentials are necessary to access the Azure AI APIs.
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+![image of selecting Keys and Endpoint](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-7.png)
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+![second image of selecting Keys and Endpoint](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-8.png)
 
 #### Configuring the Local Environment Variables
 
@@ -369,9 +369,13 @@ Next, open a new terminal and run the command below to list the image deployed t
 docker images
 ```
 
+![docker images](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-9.png)
+
 #### Testing the Intelligent App Locally
 
 Now, we’ll test the Intelligent App’s functionality using the following test image:
+
+![test image to test functionality](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-10.png)
 
 This image is provided as `sample1.png` in the sample app source files, so you can easily use it in the next step.
 
@@ -391,6 +395,8 @@ To test the API, open Postman and fill out the fields as follows:
     - **Form-data**
         -  **Key**: File — Click the right end of the **Key** field and select **File** from the dropdown list.
         -  **Value**: Click **Select Files**, then select the **sample1.png** file provided in the sample code.
+
+![image of selecting the sample file](../../static/img/fallforia/blogs/2023-09-27/blog-image-1-11.png)
 
 Now click the **Send** button and review the result body:
 
