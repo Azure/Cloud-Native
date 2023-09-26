@@ -388,9 +388,9 @@ To test the API, open Postman and fill out the fields as follows:
 - **URL:** http://localhost:5000/
 - **Method:** POST
 - **Body:**
---  **Form-data**
--- -  **Key**: File — Click the right end of the **Key** field and select **File** from the dropdown list.
--- -  **Value**: Click **Select Files**, then select the **sample1.png** file provided in the sample code.
+    - **Form-data**
+        -  **Key**: File — Click the right end of the **Key** field and select **File** from the dropdown list.
+        -  **Value**: Click **Select Files**, then select the **sample1.png** file provided in the sample code.
 
 Now click the **Send** button and review the result body:
 
