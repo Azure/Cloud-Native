@@ -125,8 +125,10 @@ If you haven’t done so already, clone the [starter project template](https://g
 
 Add the following key-value pairs to the file, remembering to replace the placeholder values with those you obtained from the previous step.
 
-`VISION_KEY=<THE-KEY-1-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
-`VISION_ENDPOINT=<THE-ENDPOINT-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
+```
+VISION_KEY=<THE-KEY-1-VALUE-FROM-YOUR-AZURE-AI-SERVICE>
+VISION_ENDPOINT=<THE-ENDPOINT-VALUE-FROM-YOUR-AZURE-AI-SERVICE>
+```
 
 #### Reviewing the Quickstart Code
 
@@ -208,68 +210,70 @@ Then, add the following line to the `requirements.txt` file to include the `azur
 
 Now, create an `ocr_helper.py` file in the project’s root folder. This file is a Python module that provides functions for processing images using OCR. Add the following code to the file:
 
-`import os`
-`from statistics import median`
-`from decimal import Decimal`
-`import azure.ai.vision as sdk`
+```
+import os
+from statistics import median
+from decimal import Decimal
+import azure.ai.vision as sdk
 
-`def process_ocr(source_image):`
-  `service_options = sdk.VisionServiceOptions(os.environ["VISION_ENDPOINT"],`
-                       `os.environ["VISION_KEY"])`
+def process_ocr(source_image):
+  service_options = sdk.VisionServiceOptions(os.environ["VISION_ENDPOINT"],
+                       os.environ["VISION_KEY"])
 
-  `vision_source = sdk.VisionSource(filename=source_image)`
+  vision_source = sdk.VisionSource(filename=source_image)
 
-  `analysis_options = sdk.ImageAnalysisOptions()`
+  analysis_options = sdk.ImageAnalysisOptions()
 
-  `analysis_options.features = (`
-    `sdk.ImageAnalysisFeature.CAPTION |`
-    `sdk.ImageAnalysisFeature.TEXT`
-  `)` 
+  analysis_options.features = (
+    sdk.ImageAnalysisFeature.CAPTION |
+    sdk.ImageAnalysisFeature.TEXT
+  )
 
-  `analysis_options.language = "en"`
+  analysis_options.language = "en"
 
-  `analysis_options.gender_neutral_caption = True`
+  analysis_options.gender_neutral_caption = True
 
-  `image_analyzer = sdk.ImageAnalyzer(service_options, vision_source, analysis_options)`
+  image_analyzer = sdk.ImageAnalyzer(service_options, vision_source, analysis_options)
 
-  `result = image_analyzer.analyze()`
+  result = image_analyzer.analyze()
 
-  `ocr_result = get_ocr_result(result)`
+  ocr_result = get_ocr_result(result)
 
-  `return ocr_result`
+  return ocr_result
 
-`def get_ocr_result(result):`
-  `string_list = []`
+def get_ocr_result(result):
+  string_list = []
 
-  `if result.reason != sdk.ImageAnalysisResultReason.ANALYZED:`
-    `return sdk.ImageAnalysisErrorDetails.from_result(result)`
-  `else:`
-    `if result.text is not None:`
-      `for line in result.text.lines:`
-        `for word in line.words:`
-          `string_list.append(word.content)`
+  if result.reason != sdk.ImageAnalysisResultReason.ANALYZED:
+    return sdk.ImageAnalysisErrorDetails.from_result(result)
+  else:
+    if result.text is not None:
+      for line in result.text.lines:
+        for word in line.words:
+          string_list.append(word.content)
 
-  `number_list = convert_to_decimal_list(string_list)`
+  number_list = convert_to_decimal_list(string_list)
 
-  `aggregate_result = aggregate_operations(number_list)`
+  aggregate_result = aggregate_operations(number_list)
 
-  `return {`
-    `"aggregate_result": aggregate_result,`
-    `"numbers_read": string_list`
+  return {
+    "aggregate_result": aggregate_result,
+    "numbers_read": string_list
   } 
 
-`def convert_to_decimal_list(string_list):`
-  `return list(map(Decimal, string_list))`
+def convert_to_decimal_list(string_list):
+  return list(map(Decimal, string_list))
 
-`def aggregate_operations(numbers):`
-  `result = {`
-    `'sum': sum(numbers),`
-    `'average': sum(numbers) / len(numbers),`
-    `'median': median(numbers),`
-    `'min': min(numbers),`
-    `'max': max(numbers)`
+def aggregate_operations(numbers):
+  result = {
+    'sum': sum(numbers),
+    'average': sum(numbers) / len(numbers),
+    'median': median(numbers),
+    'min': min(numbers),
+    'max': max(numbers)
   `}`
   `return result`
+```
 
 This module uses the [azure-ai-vision](https://learn.microsoft.com/python/api/azure-ai-vision/?view=azure-python-preview?WT.mc_id=javascript-99907-ninarasi) package to analyze images, including capturing captions and extracting text from the image. The `process_ocr` function inputs an image file and performs the OCR analysis. The module is a convenient tool for analyzing text-based data in pictures and performing numerical computations based on that data.
 
@@ -287,16 +291,22 @@ Finally, we must modify the `app.py` file so our code can use the `process_ocr` 
 
 Add the following import statement to the `app.py` file: 
 
-`from ocr_helper import process_ocr`
+```
+from ocr_helper import process_ocr
+```
 
 Then, replace this line:
 
-`return f"File {filename} uploaded successfully to folder: {upload_folder}"`
+```
+return f"File {filename} uploaded successfully to folder: {upload_folder}"
+```
 
 With these two lines:
 
-`aggregates = process_ocr(local_file_path)`
-`return json.dumps(aggregates, default=str)`
+```
+aggregates = process_ocr(local_file_path)
+return json.dumps(aggregates, default=str)
+```
 
 Doing so allows our application to perform aggregate operations (sum, average, median, minimum, maximum) of any numeric values found in the text and return the operation’s result as a JSON response.
 
@@ -310,44 +320,52 @@ For our application to run on Docker, it needs two additional files: a Dockerfil
 
 In the project root folder, add a file named `Dockerfile` with the content below:
 
-`# syntax=docker/dockerfile:1`
+```
+# syntax=docker/dockerfile:1
 
-`FROM python:3.8-slim-buster`
+FROM python:3.8-slim-buster
 
-`WORKDIR /intelligentapp`
+WORKDIR /intelligentapp
 
-`COPY requirements.txt requirements.txt`
-`RUN pip3 install -r requirements.txt`
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
-`RUN pip install debugpy`
+RUN pip install debugpy
 
-`COPY . .`
+COPY . .
 
-`CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]`
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+```
 
 Now create a file named `docker-compose.yml` file in the project’s root folder with the following code, replacing the `VISION_KEY` and the `VISION_ENDPOINT` according to the environment variables you configured earlier:
 
-`version: '3.8'`
-`services:`
-  `intelligentapp:`
-    `build:`
-      `context: .`
-      `dockerfile: Dockerfile`
-    `image: intelligent-app`
-    `ports:`
-      `- 5000:5000`
-    `container_name: intelligent-app`
-    `environment:`
-      `- VISION_KEY=<THE-KEY-1-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
-      `- VISION_ENDPOINT=<THE-ENDPOINT-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
+```
+version: '3.8'
+services:
+  intelligentapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: intelligent-app
+    ports:
+      - 5000:5000
+    container_name: intelligent-app
+    environment:
+      - VISION_KEY=<THE-KEY-1-VALUE-FROM-YOUR-AZURE-AI-SERVICE>
+      - VISION_ENDPOINT=<THE-ENDPOINT-VALUE-FROM-YOUR-AZURE-AI-SERVICE>
+```
 
 Then, run the following command in the terminal to build the image and start a container for the Intelligent App services defined in the `docker-compose.yml` file: 
 
-`docker-compose up --build --force-recreate`
+```
+docker-compose up --build --force-recreate
+```
 
 Next, open a new terminal and run the command below to list the image deployed to your local Docker:
 
-`docker images`
+```
+docker images
+```
 
 #### Testing the Intelligent App Locally
 
