@@ -36,7 +36,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 </head>
 
 <!-- End METADATA -->
-Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions. 
+Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions.
 
 ## What We'll Cover:
 
@@ -46,91 +46,343 @@ Delve into creating an Intelligent App that leverages Azure AI for Vision to ana
 
 ![image of modernizing AI solutions for intelligent apps](../../static/img/fallforia/blogs/2023-09-22/blog-image-1-5.png)
 
-## Preparing the Path for Intelligent Apps: Transitioning from On-Premises/IaaS to Cloud-Native Applications
+## Jumpstart Your AI Journey: Building Your First Intelligent App with Azure AI and AKS (1)
 
-The proliferation of generative AI is paving the way for intelligent applications, software that leverages AI capabilities to deliver unparalleled functionality and user experience. As we covered in a previous article, “[Demystifying Intelligent Applications: Leveraging AI in App Development](https://azure.github.io/Cloud-Native/30daysofIA/demystifying-intelligent-applications),” intelligent Apps aren’t just products of advanced coding. They interact, learn, and evolve thanks to modern AI and machine learning (ML) breakthroughs.  
+An Intelligent App is a software application that uses artificial intelligence (AI), such as machine learning (ML), to extract meaningful insights, enabling users to make informed decisions based on the extracted text, data, sound, images, and more.
 
-The paradigm shift from traditional to intelligent apps demands that we change our approach to the technical challenges of software and architecture design. It also necessitates adopting new ways of thinking and operating within an organization, which we explore in greater depth in “[Cultivating a Culture for Intelligent Apps: Organizational Readiness and Change Management](https://azure.github.io/Cloud-Native/30daysofIA/cultivating-a-culture-for-intelligent-apps).”  
+Intelligent Apps can employ advanced algorithms and models to recognize objects, patterns, and features within images, allowing them to perform tasks like object identification, image classification, facial recognition, and image segmentation.
 
-This article explores the technical infrastructure powering intelligent apps, providing a roadmap to transition traditional on-premises or Infrastructure as a Service (IaaS) solutions to intelligent apps deployed to cloud native platforms and services. We’ll discover the differences between conventional and intelligent apps, options for re-architecting existing applications, and critical strategic considerations integral to modernizing the application-building approach.  
+To explore the power of Intelligent Apps, let’s build a Python app that performs [optical character recognition](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr?WT.mc_id=javascript-99907-ninarasi) (OCR) on images containing numbers and performs aggregate functions on the extracted numbers, like sum and average. We’ll leverage [Azure AI Services](https://azure.microsoft.com/en-ca/products/cognitive-services?WT.mc_id=javascript-99907-ninarasi) for the OCR functionality and [Azure Kubernetes Service](https://azure.microsoft.com/en-ca/products/kubernetes-service?WT.mc_id=javascript-99907-ninarasi) (AKS) to develop, publish, and maintain a cloud-based, scalable app in Azure.
 
-## Understanding the Shift: Traditional vs. Intelligent Applications
+Let’s get started!
 
-Intelligent apps are more than just an incremental evolution from traditional apps. They involve a fundamental shift in software solution design, development, and deployment. A clear understanding of how each paradigm differs is crucial for comprehending the impact of this transition.  
+## Understanding Azure AI Service for Vision and Azure Kubernetes Service
 
-### Functionality and User Experience
+Azure AI for vision is a cloud-based service that offers a range of advanced computer vision capabilities enabling applications to interpret content, such as images and videos, using ML and other AI algorithms. Azure computer vision lets users integrate powerful vision features into their projects without ML experience.
 
-Traditional applications, often rule-based and rigid, rely on preprogrammed operations. A traditional weather app, for example, typically presents structured, location-based forecasts using a predetermined data source. Meanwhile, an intelligent app leverages AI for data-driven decision-making and personalization. Rather than merely displaying the forecast, it integrates ML with additional data sources—like a user’s calendar and fitness data—to determine their favorite outdoor activities, provide relevant clothing suggestions, and even automatically design ideal vacations and times based on the user’s optimal weather preferences.  
+OCR is one of the critical functionalities within Azure vision service, allowing applications to extract text from images. Within Azure AI for vision service, OCR offers several features, including text extraction, multilingual support, layout analysis of documents, and integration with Azure services, such as [Azure Functions](https://azure.microsoft.com/en-ca/products/functions) and [Azure Machine Learning](https://azure.microsoft.com/en-ca/products/machine-learning).
 
-Similarly, while traditional applications tend to offer a one-size-fits-all UI, intelligent apps use AI to create tailored interactions. For instance, an intelligent banking app might use generative AI to provide a voice-enabled UI that lets customers use natural language to ask about transactions and receive personalized financial advice.
+:::info
+Watch the intelligent apps webinar on **[Driving Business Value by Modernizing with Cloud-Native & AI](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?WT.mc_id=javascript-99907-ninarasi)** with *Microsoft* and *Forrester* on **September 26**. 
+:::
 
-### Infrastructure
+AKS is Microsoft Azure’s container orchestration platform that enables us to quickly and efficiently deploy, manage, and scale containerized applications, such as our Intelligent App.
 
-Intelligent apps integrating these sophisticated features require highly scalable, flexible infrastructure optimized for AI functionality and able to manage large volumes of real-time data. Unlike traditional applications deployed on-premises or in infrastructure as a service (IaaS) environments, intelligent apps demand the flexibility and scalability of cloud native architectures.
+Let’s explore how to leverage these tools to build an Intelligent App that uses Azure AI for Vision to analyze images and extract data.
 
-An on-premises or IaaS-based e-commerce application may struggle with connecting its data to AI services or scaling to accommodate voluminous real-time data and requests. But an intelligent app built with a cloud native approach and scalability at its core can handle variable demand much more efficiently. It also maintains its infrastructure components on demand, whether for collecting data for AI/ML consumption or user-facing features like AI-enabled customer support and personalization.
+### Prerequisites
 
-Consider an intelligent app built on Azure that creates ChatGPT-like experiences with custom data. It might connect [Azure Open AI](https://azure.microsoft.com/en-us/products/ai-services/openai-service?WT.mc_id=javascript-99907-ninarasi) and [Azure Cognitive Search](https://azure.microsoft.com/en-us/products/ai-services/cognitive-search?WT.mc_id=javascript-99907-ninarasi) to an app running on [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps/?WT.mc_id=javascript-99907-ninarasi) or [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi).  
+To follow this tutorial, ensure you have the following:
 
-The architecture might look like the following diagram based on this [demo app](https://github.com/Azure-Samples/azure-search-openai-demo-csharp):
+- [Python 3.7](https://www.python.org/downloads/) or later installed
+- [VS Code](https://code.visualstudio.com/download) or another integrated development environment (IDE) for writing Python code
+- The [sample Python application](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-1/tree/main/Microsoft_Series17-18_Code/intelligent-app-before) downloaded
+- [pip](https://pip.pypa.io/en/stable/installing/), the package manager for Python, installed
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed. Ensure Docker is running on Linux containers.
+- [Postman](https://www.postman.com/downloads/) installed. We’ll use this to test our API.
+- A [free Azure account](https://azure.microsoft.com/free/?WT.mc_id=javascript-99907-ninarasi). Sign up if you don’t have one yet.
+- The [Azure command-line interface](https://learn.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=javascript-99907-ninarasi) (CLI)
+
+For a preview of this final project, take a look at the [complete project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-1/tree/main/Microsoft_Series17-18_Code/intelligent-app-after).
+
+### Building the API with Azure AI for Vision Service
+
+First, log in to your Azure account and navigate to the [Azure Portal](https://portal.azure.com).
+
+Click **Create a resource** and search for “resource group.” Create a new resource group named `computer-vision`.
 
 ![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
 
-While the cloud is well-equipped to handle the challenges associated with shifting to AI-centric infrastructure—handling real-time data processing and storage, integrating and managing AI services, configuring event-driven and microservices architectures, and ensuring security across the distributed environment—re-architecting a traditional app to an intelligent app requires careful planning and execution to ensure it benefits fully from the capabilities of AI and cloud computing.
+Return to the Azure Portal home page and click **Create a resource**.
 
-### On-Premises/IaaS vs. Cloud-Native Platforms
+![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
 
-While on-premises and IaaS solutions provide substantial control over data and processes, this fine-grained control comes with setup and maintenance costs and may lack the scalability necessary for AI-driven Intelligent Apps. On-premises hosting involves purchasing and maintaining hardware, including servers and storage systems. IaaS involves leasing virtual hardware and then hiring and training IT personnel for the infrastructure’s operation, maintenance, and security.
+Search for “computer vision” and select it from the results. Click **Create**.
 
-Conversely, infrastructure built on cloud native app services with [Microsoft Azure](https://azure.microsoft.com/?WT.mc_id=javascript-99907-ninarasi) offers virtually unlimited scalability without ongoing hardware and maintenance costs. This feature is ideal for intelligent apps that need to adapt and scale to accommodate fluctuating workloads and data streams. And because these cloud infrastructures typically operate on a pay-as-you-go model, traditionally substantial upfront costs turn into predictable operating expenses, lowering both the cost and risk of launching applications.
+![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
 
-Moreover, cloud service providers continually update their offerings, so building on sophisticated AI tools and services through the cloud, like the [Azure AI Platform](https://azure.microsoft.com/en-us/solutions/ai/?WT.mc_id=javascript-99907-ninarasi) and orchestration capabilities with [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi), ensures that you have access to the latest AI and most advanced AI models and technologies.
+Clicking **Create** displays the Create Computer Vision wizard. Select the resource group you just created as the Resource group from the dropdown. Enter a resource name similar to what is seen in the screenshot below. Note that this must be a unique name so choose one that is not currently in use. Select Standard S1 as the pricing tier and check the Responsible use of AI box in the field at the bottom.
 
-### Strategic Considerations for Transitioning to Intelligent Apps
+![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
 
-When developing a strategy for transitioning to intelligent apps, you must consider costs, personnel skill development, and data management.
+![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
 
-Monolithic architectures are unlikely to support the scale and ease of iteration required by intelligent apps, so you’ll likely need to implement code changes to support the transition. Your chosen hosting solution and the amount of data your app will handle affect cost and performance, in addition to determining privacy and compliance requirements.
+Click **Review + Create**, then click **Create**.
 
-An app that manages or stores terabytes or petabytes of data will require storage-optimized virtual machines or a managed database service hosting. Meanwhile, an app that processes video content or performs resource-intensive calculations should prioritize high-performance computing. Maximizing storage and performance can become extraordinarily costly.
+Next, get the API key and endpoint from the Azure AI services multi-service account you created. Once the resource is created, navigate to the resource details page. Under **Resource Management**, select **Keys and Endpoint**. Once on the **Keys and Endpoint** page, you’ll find the **Key 1** and **Endpoint** values. These credentials are necessary to access the Azure AI APIs.
 
-Finally, existing applications shifting towards intelligent apps may encounter compatibility conflicts, depending on database type or the existing system’s underlying programming language. As you might imagine, a traditional app running on-premises and using a shared local database may need significant restructuring to support a cloud native architecture. You need plans for data migration, potential downtime, and training.
+![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
 
-Next, let’s look at this transformation process.
+![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
 
-### Re-Architecting Monolithic Apps into Microservices
+#### Configuring the Local Environment Variables
 
-Shifting from [monolithic applications](https://learn.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/monolithic-applications?WT.mc_id=javascript-99907-ninarasi) to microservices is pivotal for transitioning to Intelligent Apps, and you can use this shift as an opportunity to transform your legacy software into intelligent apps that leverage the flexibility and power of microservices-enabled AI solutions.
+Next, we need to define a local environment variable file. This convenient way to store our API keys in a simple text file enables us to manage sensitive information and separate configuration from our API code.
 
-Traditionally, a monolithic application (let’s use an online marketplace as an example) might handle all activities—from serving webpages to processing payments—within an on-premises server or a cloud server. However, this approach is challenging to scale and remains vulnerable to network failures or cyberattacks.
+If you haven’t done so already, clone the [starter project template](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images) from GitHub into your local computer. Open the [starter project template](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images/tree/main/Microsoft_Series17-18_Code/intelligent-app-before) in a code editor and create a new `.env` file in the root folder.
 
-Breaking these applications into multiple services with specific responsibilities, such as authentication or notifications, can overcome these limitations. These services are typically deployed as microservices within container environments like [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi) or serverless platforms like [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps?WT.mc_id=javascript-99907-ninarasi) or [Azure Functions](https://azure.microsoft.com/en-us/products/functions/?WT.mc_id=javascript-99907-ninarasi) using automated processes. This approach offers scalability, robustness, and improved performance, as each microservice can run independently and use its own database.
+**Note**: Root folder in this case is the “/Microsoft_Series17-18_Code/intelligent-app-before" folder.
 
-Shifting towards smaller, independent microservices in app architectures allows us to reap the benefits of AI-powered intelligent apps, for example, by using microservices to handle AI tasks such as processing natural language input, analyzing behavioral data, or personalizing content.
+Add the following key-value pairs to the file, remembering to replace the placeholder values with those you obtained from the previous step.
 
-:::info
-Watch [Episode 1](https://aka.ms/learnlive-contoso-app-deconstructed-Ep1) and [Episode 2](https://aka.ms/learnlive-contoso-app-deconstructed-Ep2) of the [Learn Live series](https://aka.ms/contoso-real-estate/learn-live) on how to build, test and deploy an end-to-end intelligent app solution using the [Contoso Real Estate Sample](https://github.com/Azure-Samples/contoso-real-estate).
-:::
+`VISION_KEY=<THE-KEY-1-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
+`VISION_ENDPOINT=<THE-ENDPOINT-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
 
-### Event-Driven Architectures: Knowing When to Use Them
+#### Reviewing the Quickstart Code
 
-[Event-Driven Architectures](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven?WT.mc_id=javascript-99907-ninarasi) (EDAs) can significantly enhance the performance and cost-effectiveness of intelligent apps. EDAs, typically implemented with microservices, respond in real time to events or state changes ranging from user interactions to real-time analytics.
+Let’s review the `app.py` file in the starter project template.  
 
-Consider an intelligent app designed for personalized customer engagement. Instead of designing the application to check continuously for changes in user data, an EDA can react to such changes immediately, triggering appropriate microservices. For example, if users modify their preferences, an event could trigger an AI-driven recommendation microservice to update its suggestions immediately. This real-time responsiveness, enabled by services like [Azure Event Grid](https://azure.microsoft.com/en-us/products/event-grid/?WT.mc_id=javascript-99907-ninarasi), can improve user experiences and make intelligent apps more adaptive and proactive.
+The `app.py` file works as the entry point for the Flask application. It is responsible for initializing the web server, listening for incoming requests, dispatching them to the appropriate route handlers, and generating responses. 
 
-However, it’s worth noting that while EDAs provide significant benefits, they can introduce unique complexities, such as maintaining event consistency and debugging issues in event chains across multiple microservices. Therefore, it’s important to assess your application’s needs so you can understand where it can benefit from an EDA.
+Below is the code contained in the `app.py` file:
 
-## Conclusion
+`import os`
+`import json` 
+ 
+`from flask import Flask, request` 
+`from flask_restful import Resource, Api` 
+`from werkzeug.utils import secure_filename`
 
-Transitioning to intelligent apps represents a shift in strategy, architecture, and infrastructure. By designing and re-architecting for cloud-based infrastructure, your apps gain scalability, cost-effectiveness, robust data management, access to sophisticated AI tools, enhanced security, and reduced operational overhead.   
+`app = Flask(__name__,`
+      `static_url_path='',`
+      `static_folder='static/files')`
 
-But this transition extends well beyond its technical components. Organizations and the people working within them need equal attention. You can explore these facets in greater depth in “Cultivating a Culture for Intelligent Apps: Organizational Readiness and Change Management.”  
+`api = Api(app)`
 
-The power of generative AI is here, and preparing for the move toward cloud-based intelligent applications will ensure that your apps remain performative and scalable and—most importantly—that your business is ready for the newest era of app innovation.
+`app = Flask(__name__)`
+
+`app.config['UPLOAD_FOLDER'] = 'files'`
+
+`api = Api(app)`
+
+`class UploadHandler(Resource):`
+
+  `def allowed_file(self, filename):`
+    `return '.' in filename and \`
+      `filename.rsplit('.', 1)[1].lower() in {'png'}`
+
+  `def post(self):`
+    `form = request.form.to_dict()`
+
+    `if 'file' not in request.files:`
+      `return json.dumps({ "success": False, "error": "No file part"})`
+
+    `file = request.files.get("file")`
+    `if file and self.allowed_file(file.filename):`
+      `filename = secure_filename(file.filename)`
+      `upload_folder = "static/files"`
+      `if not os.path.exists(upload_folder):`
+        `os.makedirs(upload_folder)`
+      `local_file_path = os.path.join(upload_folder, filename)`
+      `file.save(local_file_path)`
+
+      `return f"File {filename} uploaded successfully to folder: {upload_folder}"`
+
+`api.add_resource(UploadHandler, "/")`
+
+`if __name__ == '__main__':`
+  `app.run(debug=True)`
+
+The `UploadHandler` class above is defined as a Flask RESTful resource to handle file uploads. The class contains two methods:
+
+- The `allowed_file` method checks whether the file extension is allowed for upload. In this case, only `.png` files are allowed.
+
+- The `post` method handles HTTP POST requests for file uploads. It saves the uploaded `.png` file to the `static/files` folder.
+
+Finally, the application returns a text response informing us that the file has been uploaded successfully.
+
+#### Implementing the REST API in Python
+
+To implement image analysis in your REST API, open the starter project template in your terminal, [create a virtual environment](https://docs.python.org/3/library/venv.html), and [activate it](https://docs.python.org/3/library/venv.html#how-venvs-work).
+
+Next, install the Azure AI Vision SDK:
+
+`pip install azure-ai-vision`
+
+Then, add the following line to the `requirements.txt` file to include the `azure-ai-vision` package:
+
+`azure-ai-vision==0.13.0b1`
+
+Now, create an `ocr_helper.py` file in the project’s root folder. This file is a Python module that provides functions for processing images using OCR. Add the following code to the file:
+
+`import os`
+`from statistics import median`
+`from decimal import Decimal`
+`import azure.ai.vision as sdk`
+
+`def process_ocr(source_image):`
+  `service_options = sdk.VisionServiceOptions(os.environ["VISION_ENDPOINT"],`
+                       `os.environ["VISION_KEY"])`
+
+  `vision_source = sdk.VisionSource(filename=source_image)`
+
+  `analysis_options = sdk.ImageAnalysisOptions()`
+
+  `analysis_options.features = (`
+    `sdk.ImageAnalysisFeature.CAPTION |`
+    `sdk.ImageAnalysisFeature.TEXT`
+  `)` 
+
+  `analysis_options.language = "en"`
+
+  `analysis_options.gender_neutral_caption = True`
+
+  `image_analyzer = sdk.ImageAnalyzer(service_options, vision_source, analysis_options)`
+
+  `result = image_analyzer.analyze()`
+
+  `ocr_result = get_ocr_result(result)`
+
+  `return ocr_result`
+
+`def get_ocr_result(result):`
+  `string_list = []`
+
+  `if result.reason != sdk.ImageAnalysisResultReason.ANALYZED:`
+    `return sdk.ImageAnalysisErrorDetails.from_result(result)`
+  `else:`
+    `if result.text is not None:`
+      `for line in result.text.lines:`
+        `for word in line.words:`
+          `string_list.append(word.content)`
+
+  `number_list = convert_to_decimal_list(string_list)`
+
+  `aggregate_result = aggregate_operations(number_list)`
+
+  `return {`
+    `"aggregate_result": aggregate_result,`
+    `"numbers_read": string_list`
+  } 
+
+`def convert_to_decimal_list(string_list):`
+  `return list(map(Decimal, string_list))`
+
+`def aggregate_operations(numbers):`
+  `result = {`
+    `'sum': sum(numbers),`
+    `'average': sum(numbers) / len(numbers),`
+    `'median': median(numbers),`
+    `'min': min(numbers),`
+    `'max': max(numbers)`
+  `}`
+  `return result`
+
+This module uses the [azure-ai-vision](https://learn.microsoft.com/python/api/azure-ai-vision/?view=azure-python-preview?WT.mc_id=javascript-99907-ninarasi) package to analyze images, including capturing captions and extracting text from the image. The `process_ocr` function inputs an image file and performs the OCR analysis. The module is a convenient tool for analyzing text-based data in pictures and performing numerical computations based on that data.
+
+Let’s review the different components of the `ocr_helper.py` module listed above and explore how its functions help our Intelligent App process images and perform aggregate operations:
+
+- The `process_ocr` function takes the parameter `source_image`, which is the path of the image to be processed. The function then initializes the `VisionServiceOptions` using environment variables `VISION_ENDPOINT` and `VISION_KEY` to connect to the Azure AI for Vision API.
+- The `process_ocr` function creates a `VisionSource` object with the specified `source_image` file name. `ImageAnalysisOptions` specify the features to be analyzed, including `CAPTION` and `TEXT`. The language is set to English (`"en"`), and gender-neutral captions are enabled.
+- Finally, an `ImageAnalyzer` object is created with the service options, vision source, and analysis options. The image is then analyzed using the `image_analyzer.analyze` method to retrieve OCR results. The recognized text from the OCR result is extracted, with numerical values stored in the `string_list` variable.
+- The `convert_to_decimal_list` function converts the list of strings to a list of decimal numbers, which helps process numeric values extracted from the text.
+- The `aggregate_operations` function calculates various aggregate statistics (sum, average, median, minimum, maximum) from a list of numbers and returns the results in a dictionary.
+
+Note that you must have the appropriate credentials (`VISION_KEY`) and endpoint (`VISION_ENDPOINT`) configured for the Azure AI for Vision API to use this module.
+
+Finally, we must modify the `app.py` file so our code can use the `process_ocr` function of the `ocr_helper.py` file.
+
+Add the following import statement to the `app.py` file: 
+
+`from ocr_helper import process_ocr`
+
+Then, replace this line:
+
+`return f"File {filename} uploaded successfully to folder: {upload_folder}"`
+
+With these two lines:
+
+`aggregates = process_ocr(local_file_path)`
+`return json.dumps(aggregates, default=str)`
+
+Doing so allows our application to perform aggregate operations (sum, average, median, minimum, maximum) of any numeric values found in the text and return the operation’s result as a JSON response.
+
+### Running the Intelligent App Locally
+
+Our final goal is to deploy the sample app to AKS, which will run the app in a container. However, as a good practice, let’s run the app in a container locally before moving it to AKS. Doing so ensures that our application and its dependencies are encapsulated and can be run consistently across different environments.
+
+#### Deploying to Docker Desktop
+
+For our application to run on Docker, it needs two additional files: a Dockerfile and `docker-compose.yml`. A Dockerfile creates a single container image by specifying the steps to build it, and a `docker-compose.yml` file manages multiple containers as a cohesive application, defining their configurations and relationships. Dockerfile builds the image, while `docker-compose.yml` orchestrates multi-container applications.
+
+In the project root folder, add a file named `Dockerfile` with the content below:
+
+`# syntax=docker/dockerfile:1`
+
+`FROM python:3.8-slim-buster`
+
+`WORKDIR /intelligentapp`
+
+`COPY requirements.txt requirements.txt`
+`RUN pip3 install -r requirements.txt`
+
+`RUN pip install debugpy`
+
+`COPY . .`
+
+`CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]`
+
+Now create a file named `docker-compose.yml` file in the project’s root folder with the following code, replacing the `VISION_KEY` and the `VISION_ENDPOINT` according to the environment variables you configured earlier:
+
+`version: '3.8'`
+`services:`
+  `intelligentapp:`
+    `build:`
+      `context: .`
+      `dockerfile: Dockerfile`
+    `image: intelligent-app`
+    `ports:`
+      `- 5000:5000`
+    `container_name: intelligent-app`
+    `environment:`
+      `- VISION_KEY=<THE-KEY-1-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
+      `- VISION_ENDPOINT=<THE-ENDPOINT-VALUE-FROM-YOUR-AZURE-AI-SERVICE>`
+
+Then, run the following command in the terminal to build the image and start a container for the Intelligent App services defined in the `docker-compose.yml` file: 
+
+`docker-compose up --build --force-recreate`
+
+Next, open a new terminal and run the command below to list the image deployed to your local Docker:
+
+`docker images`
+
+#### Testing the Intelligent App Locally
+
+Now, we’ll test the Intelligent App’s functionality using the following test image:
+
+This image is provided as `sample1.png` in the sample app source files, so you can easily use it in the next step.
+
+The Intelligent App will read the image above using OCR to extract numbers in the image and perform five aggregate functions:
+
+- Sum
+- Average
+- Median
+- Min
+- Max
+
+To test the API, open Postman and fill out the fields as follows:
+
+- **URL:** http://localhost:5000/
+- **Method:** POST
+- **Body:**
+--  **Form-data**
+-- -  **Key**: File — Click the right end of the **Key** field and select **File** from the dropdown list.
+-- -  **Value**: Click **Select Files**, then select the **sample1.png** file provided in the sample code.
+
+Now click the **Send** button and review the result body:
+
+`"{\"aggregate_result\": {\"sum\": \"25821\", \"average\": \"5164.2\", \"median\": \"5622\", \"min\": \"1447\", \"max\": \"9802\"}, \"numbers_read\": [\"3049\", \"5901\", \"5622\", \"1447\", \"9802\"]}"`
+
+As we can see, the app running on a local container returned the correct results based on the sample image. So, we’re ready to prepare our Azure resources to run the Intelligent App on AKS.
 
 ## Exercise
 
+ * Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-1/tree/main/Microsoft_Series17-18_Code/intelligent-app-after) to build your first intelligent app.
  * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
- * Complete the **[AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc)** to build on your AI skills.
- * Register for **[Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)** of the serverless edition Learn Live session to learn how to build, test and deploy an end-to-end intelligent app solution.
- * Register for **[Ask the Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
+ * Watch the **[Ask the Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
+
+ ## Next Steps
+
+In this article, we explored the creation of an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently test this API locally.
+
+Head to the [next part](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-2), to deploy this API via Azure Kubernetes Service.
