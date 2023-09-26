@@ -301,9 +301,7 @@ from ocr_helper import process_ocr
 
 Then, replace this line:
 
-```
-return f"File {filename} uploaded successfully to folder: {upload_folder}"
-```
+`return f"File {filename} uploaded successfully to folder: {upload_folder}"`
 
 With these two lines:
 
