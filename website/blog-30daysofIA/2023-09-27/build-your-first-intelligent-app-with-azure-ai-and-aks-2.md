@@ -36,8 +36,6 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 </head>
 
 <!-- End METADATA -->
-Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions.
-
 In the last article, we created an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. Develop an API to perform optical character recognition (OCR) on uploaded images and testing this API locally. 
 
 In this article, we will deploy the web API to the cloud platform using Azure Kubernetes Service. 
@@ -175,6 +173,12 @@ az aks create --resource-group computer-vision --name aks-intelligent-app --node
 The command above specifies the target resource group: `computer-vision`. The [node pool](https://learn.microsoft.com/en-us/azure/aks/use-multiple-node-pools?WT.mc_id=javascript-99907-ninarasi) is configured with one virtual machine (VM), and the secure shell (SSH) keys for secure node access are generated automatically.
 
 Next, run the following command to update the AKS cluster you created by attaching it to your ACR. Doing so allows the AKS cluster to pull container images from the specified ACR when deploying workloads to the cluster.
+
+```
+az aks update -n aks-intelligent-app -g computer-vision --attach-acr <name-of-azure-container-registry>
+```
+
+Then, run the command below to configure kubectl to work with our AKS cluster in the computer-vision resource group. 
 
 ```
 az aks get-credentials --resource-group computer-vision --name aks-intelligent-app
