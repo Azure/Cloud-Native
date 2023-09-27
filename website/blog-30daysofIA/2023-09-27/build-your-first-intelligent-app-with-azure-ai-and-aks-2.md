@@ -42,7 +42,7 @@ In this article, we will deploy the web API to the cloud platform using Azure Ku
 
 ## What We'll Cover:
 
- * Understanding Azure AI Service for Vision and Azure Kubernetes Service
+ * Understanding Azure AI Vision and Azure Kubernetes Service
  * Build a Python Web API to perform OCR
  * Test the API locally
 
@@ -303,7 +303,7 @@ As we can see, our Intelligent App has successfully deployed to AKS and is funct
 
 * Complete this **hands-on** sample [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-1/tree/main/Microsoft_Series17-18_Code/intelligent-app-after) to build your first intelligent app.
 * Complete the [Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc) to build on your app dev and AI skills.
-* Register for [Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/) session for live Q&A with the Product Engineering team on building intelligent serverless apps.
+* Register for [Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/) session for live Q&A with the Product Engineering team on building intelligent apps.
 
 ## Next Steps
 

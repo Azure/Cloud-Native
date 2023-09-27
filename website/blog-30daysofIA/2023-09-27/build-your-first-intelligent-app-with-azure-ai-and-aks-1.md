@@ -40,7 +40,7 @@ Delve into creating an Intelligent App that leverages Azure AI Vision to analyze
 
 ## What We'll Cover:
 
- * Understanding Azure AI Service for Vision and Azure Kubernetes Service
+ * Understanding Azure AI Vision and Azure Kubernetes Service
  * Build a Python Web API to perform OCR
  * Test the API locally
 
@@ -56,7 +56,7 @@ To explore the power of Intelligent Apps, let’s build a Python app that perfor
 
 Let’s get started!
 
-## Understanding Azure AI Service for Vision and Azure Kubernetes Service
+## Understanding Azure AI Vision and Azure Kubernetes Service
 
 Azure AI Vision is a cloud-based service that offers a range of advanced computer vision capabilities enabling applications to interpret content, such as images and videos, using ML and other AI algorithms. Azure computer vision lets users integrate powerful vision features into their projects without ML experience.
 
@@ -408,7 +408,7 @@ As we can see, the app running on a local container returned the correct results
 
  * Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-1/tree/main/Microsoft_Series17-18_Code/intelligent-app-after) to build your first intelligent app.
  * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
- * Watch the **[Ask the Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
+ * Watch the **[Ask the Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent apps.
 
  ## Next Steps
 
