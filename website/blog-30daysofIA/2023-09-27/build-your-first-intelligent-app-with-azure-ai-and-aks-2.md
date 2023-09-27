@@ -100,8 +100,8 @@ az acr show --name <name-of-azure-container-registry> --query loginServer --outp
 
 This returns an endpoint URL as follows: 
 
-`Result`
-`----------------------------------`
+Result
+----------------------------------
 `<name-of-azure-container-registry>.azurecr.io`
 
 Now, run the following command to show all container images, their repository, tags, and size:
@@ -111,7 +111,7 @@ docker images
 ```
 
 | REPOSITORY       | TAG       | IMAGE ID       | CREATED       | SIZE       |
-|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+|:--------------|:--------------|:--------------|:--------------|:--------------|
 | intelligent-app  | latest  | a7bf9f753617  | 16 hours ago  | 197MB  |
 
 Tags are necessary to push Docker images to a remote registry like Azure Container Registry. They also let you differentiate between different versions of the same image and upload or download the one you want.
@@ -128,7 +128,7 @@ docker images
 ```
 
 | REPOSITORY       | TAG       | IMAGE ID       | CREATED       | SIZE       |
-|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+|:--------------|:--------------|:--------------|:--------------|:--------------|
 | intelligent-app  | latest  | c52168039265  | About a minute ago  | 197MB  |
 | <name-of-azure-container-registry>.azurecr.io/intelligent-app  | v1  | c52168039265  | About a minute ago  | 197MB  |
 
@@ -281,7 +281,7 @@ kubectl get services
 This command lists the Services and their corresponding details, including the Service name, cluster IP address, external IP, and ports.
 
 | NAME       | TYPE       | CLUSTER-IP       | EXTERNAL-IP       | PORT(S)       | AGE       |
-|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+|:--------------|:--------------|:--------------|:--------------|:--------------|:--------------|
 | intelligent-app-service  | LoadBalancer  | 10.0.77.60  | 20.121.76.153  | 80:30936/TCP  | 47s  |
 | kubernetes  | ClusterIP  | 10.0.0.1  | &lt;none&gt;  | 443/TCP  | 14m  |
 
