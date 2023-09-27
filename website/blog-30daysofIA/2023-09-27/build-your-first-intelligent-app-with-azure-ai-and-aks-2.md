@@ -48,93 +48,261 @@ In this article, we will deploy the web API to the cloud platform using Azure Ku
  * Build a Python Web API to perform OCR
  * Test the API locally
 
-![image of modernizing AI solutions for intelligent apps](../../static/img/fallforia/blogs/2023-09-22/blog-image-1-5.png)
+![image depicting an Intelligent App using AI](../../static/img/fallforia/blogs/2023-09-27/blog-image-2-1.jpeg)
 
-## Preparing the Path for Intelligent Apps: Transitioning from On-Premises/IaaS to Cloud-Native Applications
+## Jumpstart Your AI Journey: Building Your First Intelligent App with Azure AI and AKS (2)
 
-The proliferation of generative AI is paving the way for intelligent applications, software that leverages AI capabilities to deliver unparalleled functionality and user experience. As we covered in a previous article, “[Demystifying Intelligent Applications: Leveraging AI in App Development](https://azure.github.io/Cloud-Native/30daysofIA/demystifying-intelligent-applications),” intelligent Apps aren’t just products of advanced coding. They interact, learn, and evolve thanks to modern AI and machine learning (ML) breakthroughs.  
+In the previous article we explored the creation of an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently test this API locally.  
 
-The paradigm shift from traditional to intelligent apps demands that we change our approach to the technical challenges of software and architecture design. It also necessitates adopting new ways of thinking and operating within an organization, which we explore in greater depth in “[Cultivating a Culture for Intelligent Apps: Organizational Readiness and Change Management](https://azure.github.io/Cloud-Native/30daysofIA/cultivating-a-culture-for-intelligent-apps).”  
+In this article we will use [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service?WT.mc_id=javascript-99907-ninarasi) (AKS) to develop, publish, and maintain our app in the cloud on Azure. 
 
-This article explores the technical infrastructure powering intelligent apps, providing a roadmap to transition traditional on-premises or Infrastructure as a Service (IaaS) solutions to intelligent apps deployed to cloud native platforms and services. We’ll discover the differences between conventional and intelligent apps, options for re-architecting existing applications, and critical strategic considerations integral to modernizing the application-building approach.  
+Let’s get started!
 
-## Understanding the Shift: Traditional vs. Intelligent Applications
+### Prerequisites
 
-Intelligent apps are more than just an incremental evolution from traditional apps. They involve a fundamental shift in software solution design, development, and deployment. A clear understanding of how each paradigm differs is crucial for comprehending the impact of this transition.  
+To follow this tutorial, ensure you have completed [Jumpstart Your AI Journey: Building Your First Intelligent App with Azure AI and AKS (1)](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1).
 
-### Functionality and User Experience
+## Pushing a Container Image to Azure Container Registry (ACR)
 
-Traditional applications, often rule-based and rigid, rely on preprogrammed operations. A traditional weather app, for example, typically presents structured, location-based forecasts using a predetermined data source. Meanwhile, an intelligent app leverages AI for data-driven decision-making and personalization. Rather than merely displaying the forecast, it integrates ML with additional data sources—like a user’s calendar and fitness data—to determine their favorite outdoor activities, provide relevant clothing suggestions, and even automatically design ideal vacations and times based on the user’s optimal weather preferences.  
+To start, open your CLI or terminal and type the following command:
 
-Similarly, while traditional applications tend to offer a one-size-fits-all UI, intelligent apps use AI to create tailored interactions. For instance, an intelligent banking app might use generative AI to provide a voice-enabled UI that lets customers use natural language to ask about transactions and receive personalized financial advice.
+```
+az login
+```
 
-### Infrastructure
+Follow the instructions displayed on your browser to enter your Azure credentials.
 
-Intelligent apps integrating these sophisticated features require highly scalable, flexible infrastructure optimized for AI functionality and able to manage large volumes of real-time data. Unlike traditional applications deployed on-premises or in infrastructure as a service (IaaS) environments, intelligent apps demand the flexibility and scalability of cloud native architectures.
+Once authenticated, you’ll initiate a secure connection between your local environment and Azure. This process grants you access to cloud services and resources.
 
-An on-premises or IaaS-based e-commerce application may struggle with connecting its data to AI services or scaling to accommodate voluminous real-time data and requests. But an intelligent app built with a cloud native approach and scalability at its core can handle variable demand much more efficiently. It also maintains its infrastructure components on demand, whether for collecting data for AI/ML consumption or user-facing features like AI-enabled customer support and personalization.
+Next, type the command below in your terminal to set up a new Azure Container Registry (ACR) to store your container images:
 
-Consider an intelligent app built on Azure that creates ChatGPT-like experiences with custom data. It might connect [Azure Open AI](https://azure.microsoft.com/en-us/products/ai-services/openai-service?WT.mc_id=javascript-99907-ninarasi) and [Azure Cognitive Search](https://azure.microsoft.com/en-us/products/ai-services/cognitive-search?WT.mc_id=javascript-99907-ninarasi) to an app running on [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps/?WT.mc_id=javascript-99907-ninarasi) or [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi).  
+```
+az acr create --resource-group computer-vision --name <name-of-azure-container-registry> --sku Basic
+```
 
-The architecture might look like the following diagram based on this [demo app](https://github.com/Azure-Samples/azure-search-openai-demo-csharp):
+Remember to replace `<name-of-azure-container-registry>` with your container registry name. The name must be unique within Azure and comply with [these rules](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules#microsoftcontainerregistry).
 
-![diagram of a demo app architecture](../../static/img/fallforia/blogs/2023-09-22/diagram-of-a-demo-app-architecture.png)
+The command above creates an [Azure Container Registry](https://azure.microsoft.com/products/container-registry?WT.mc_id=javascript-99907-ninarasi) (ACR) in the `computer-vision` resource group under the [Basic SKU](https://learn.microsoft.com/azure/container-registry/container-registry-skus?WT.mc_id=javascript-99907-ninarasi). This ACR is your secure and private repository for storing container images within Azure.
 
-While the cloud is well-equipped to handle the challenges associated with shifting to AI-centric infrastructure—handling real-time data processing and storage, integrating and managing AI services, configuring event-driven and microservices architectures, and ensuring security across the distributed environment—re-architecting a traditional app to an intelligent app requires careful planning and execution to ensure it benefits fully from the capabilities of AI and cloud computing.
+Next, log in to the registry with the following command:
 
-### On-Premises/IaaS vs. Cloud-Native Platforms
+```
+az acr login -n <name-of-azure-container-registry>
+```
 
-While on-premises and IaaS solutions provide substantial control over data and processes, this fine-grained control comes with setup and maintenance costs and may lack the scalability necessary for AI-driven Intelligent Apps. On-premises hosting involves purchasing and maintaining hardware, including servers and storage systems. IaaS involves leasing virtual hardware and then hiring and training IT personnel for the infrastructure’s operation, maintenance, and security.
+The `az acr login` command above lets you securely authenticate and access the specified ACR without providing their Azure credentials each time.
 
-Conversely, infrastructure built on cloud native app services with [Microsoft Azure](https://azure.microsoft.com/?WT.mc_id=javascript-99907-ninarasi) offers virtually unlimited scalability without ongoing hardware and maintenance costs. This feature is ideal for intelligent apps that need to adapt and scale to accommodate fluctuating workloads and data streams. And because these cloud infrastructures typically operate on a pay-as-you-go model, traditionally substantial upfront costs turn into predictable operating expenses, lowering both the cost and risk of launching applications.
+Now, run the following command in your terminal. It will display the endpoint URL to log in to and interact with the ACR for pushing and pulling container images.
 
-Moreover, cloud service providers continually update their offerings, so building on sophisticated AI tools and services through the cloud, like the [Azure AI Platform](https://azure.microsoft.com/en-us/solutions/ai/?WT.mc_id=javascript-99907-ninarasi) and orchestration capabilities with [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi), ensures that you have access to the latest AI and most advanced AI models and technologies.
+```
+az acr show --name <name-of-azure-container-registry> --query loginServer --output table
+```
 
-### Strategic Considerations for Transitioning to Intelligent Apps
+This returns an endpoint URL as follows: 
 
-When developing a strategy for transitioning to intelligent apps, you must consider costs, personnel skill development, and data management.
+`Result`
+`----------------------------------`
+`<name-of-azure-container-registry>.azurecr.io`
 
-Monolithic architectures are unlikely to support the scale and ease of iteration required by intelligent apps, so you’ll likely need to implement code changes to support the transition. Your chosen hosting solution and the amount of data your app will handle affect cost and performance, in addition to determining privacy and compliance requirements.
+Now, run the following command to show all container images, their repository, tags, and size:
 
-An app that manages or stores terabytes or petabytes of data will require storage-optimized virtual machines or a managed database service hosting. Meanwhile, an app that processes video content or performs resource-intensive calculations should prioritize high-performance computing. Maximizing storage and performance can become extraordinarily costly.
+```
+docker images
+```
 
-Finally, existing applications shifting towards intelligent apps may encounter compatibility conflicts, depending on database type or the existing system’s underlying programming language. As you might imagine, a traditional app running on-premises and using a shared local database may need significant restructuring to support a cloud native architecture. You need plans for data migration, potential downtime, and training.
+| REPOSITORY       | TAG       | IMAGE ID       | CREATED       | SIZE       |
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+| intelligent-app  | latest  | a7bf9f753617  | 16 hours ago  | 197MB  |
 
-Next, let’s look at this transformation process.
+Tags are necessary to push Docker images to a remote registry like Azure Container Registry. They also let you differentiate between different versions of the same image and upload or download the one you want.
 
-### Re-Architecting Monolithic Apps into Microservices
+Run the following command to tag your Docker image:
 
-Shifting from [monolithic applications](https://learn.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/monolithic-applications?WT.mc_id=javascript-99907-ninarasi) to microservices is pivotal for transitioning to Intelligent Apps, and you can use this shift as an opportunity to transform your legacy software into intelligent apps that leverage the flexibility and power of microservices-enabled AI solutions.
+```
+docker tag intelligent-app <name-of-azure-container-registry>.azurecr.io/intelligent-app:v1
+```
+Then, run the `docker images` command again to check your tagged image:
 
-Traditionally, a monolithic application (let’s use an online marketplace as an example) might handle all activities—from serving webpages to processing payments—within an on-premises server or a cloud server. However, this approach is challenging to scale and remains vulnerable to network failures or cyberattacks.
+```
+docker images
+```
 
-Breaking these applications into multiple services with specific responsibilities, such as authentication or notifications, can overcome these limitations. These services are typically deployed as microservices within container environments like [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi) or serverless platforms like [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps?WT.mc_id=javascript-99907-ninarasi) or [Azure Functions](https://azure.microsoft.com/en-us/products/functions/?WT.mc_id=javascript-99907-ninarasi) using automated processes. This approach offers scalability, robustness, and improved performance, as each microservice can run independently and use its own database.
+| REPOSITORY       | TAG       | IMAGE ID       | CREATED       | SIZE       |
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+| intelligent-app  | latest  | c52168039265  | About a minute ago  | 197MB  |
+| <name-of-azure-container-registry>.azurecr.io/intelligent-app  | v1  | c52168039265  | About a minute ago  | 197MB  |
 
-Shifting towards smaller, independent microservices in app architectures allows us to reap the benefits of AI-powered intelligent apps, for example, by using microservices to handle AI tasks such as processing natural language input, analyzing behavioral data, or personalizing content.
+Now run the following command so Docker can securely upload the image to your Azure Container Registry:
+
+```
+docker push <name-of-azure-container-registry>.azurecr.io/intelligent-app:v1
+```
+
+Once we've deployed the image to the container registry, AKS can access it during deployment.
 
 :::info
-Watch [Episode 1](https://aka.ms/learnlive-contoso-app-deconstructed-Ep1) and [Episode 2](https://aka.ms/learnlive-contoso-app-deconstructed-Ep2) of the [Learn Live series](https://aka.ms/contoso-real-estate/learn-live) on how to build, test and deploy an end-to-end intelligent app solution using the [Contoso Real Estate Sample](https://github.com/Azure-Samples/contoso-real-estate).
+Watch **[Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)** for the Learn Live session to experience a guided session on how to build, test and deploy an end-to-end intelligent app solution.
 :::
 
-### Event-Driven Architectures: Knowing When to Use Them
+## Deploying the Intelligent App on Azure Kubernetes Service (AKS)
 
-[Event-Driven Architectures](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven?WT.mc_id=javascript-99907-ninarasi) (EDAs) can significantly enhance the performance and cost-effectiveness of intelligent apps. EDAs, typically implemented with microservices, respond in real time to events or state changes ranging from user interactions to real-time analytics.
+Before we deploy our Intelligent App to AKS, we need to provision an AKS cluster and define Kubernetes manifests.
 
-Consider an intelligent app designed for personalized customer engagement. Instead of designing the application to check continuously for changes in user data, an EDA can react to such changes immediately, triggering appropriate microservices. For example, if users modify their preferences, an event could trigger an AI-driven recommendation microservice to update its suggestions immediately. This real-time responsiveness, enabled by services like [Azure Event Grid](https://azure.microsoft.com/en-us/products/event-grid/?WT.mc_id=javascript-99907-ninarasi), can improve user experiences and make intelligent apps more adaptive and proactive.
+To provision an AKS cluster to host our application, we specify the desired configurations for the cluster, such as the number of nodes, node size, and networking options. But first, download and install the Kubernetes command-line tools (kubectl), a client credential plugin implementing Azure authentication:
 
-However, it’s worth noting that while EDAs provide significant benefits, they can introduce unique complexities, such as maintaining event consistency and debugging issues in event chains across multiple microservices. Therefore, it’s important to assess your application’s needs so you can understand where it can benefit from an EDA.
+```
+az aks install-cli
+```
 
-## Conclusion
+If you’re using Linux, [review this tutorial](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt?WT.mc_id=javascript-99907-ninarasi). Then run the following: 
 
-Transitioning to intelligent apps represents a shift in strategy, architecture, and infrastructure. By designing and re-architecting for cloud-based infrastructure, your apps gain scalability, cost-effectiveness, robust data management, access to sophisticated AI tools, enhanced security, and reduced operational overhead.   
+```
+sudo az aks install-cli
+```
 
-But this transition extends well beyond its technical components. Organizations and the people working within them need equal attention. You can explore these facets in greater depth in “Cultivating a Culture for Intelligent Apps: Organizational Readiness and Change Management.”  
+Next, run the following command in your terminal to enable access to the networking-related resources and services provided by the `Microsoft.Network`` namespace in Azure: 
 
-The power of generative AI is here, and preparing for the move toward cloud-based intelligent applications will ensure that your apps remain performative and scalable and—most importantly—that your business is ready for the newest era of app innovation.
+```
+az provider register --namespace Microsoft.Network
+```
+
+Now, we must create an AKS cluster. Run the following command to create an AKS cluster named `aks-intelligent-app` in the `computer-vision` resource group.
+
+```
+az aks create --resource-group computer-vision --name aks-intelligent-app --node-count 1 --generate-ssh-keys
+```
+
+The command above specifies the target resource group: `computer-vision`. The [node pool](https://learn.microsoft.com/en-us/azure/aks/use-multiple-node-pools?WT.mc_id=javascript-99907-ninarasi) is configured with one virtual machine (VM), and the secure shell (SSH) keys for secure node access are generated automatically.
+
+Next, run the following command to update the AKS cluster you created by attaching it to your ACR. Doing so allows the AKS cluster to pull container images from the specified ACR when deploying workloads to the cluster.
+
+```
+az aks get-credentials --resource-group computer-vision --name aks-intelligent-app
+```
+
+The command above retrieves the necessary credentials and context information required for kubectl to communicate with the AKS cluster.
+
+We still have to define the Kubernetes manifests written in YAML, describing the desired state of our application deployment, including containers, networking, and scaling rules. We’ll prepare these manifests, including [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) and [Service](https://kubernetes.io/docs/concepts/services-networking/service/) configurations, to define how our application should be deployed and exposed.
+
+Create a folder named `Deployment` in the project root directory. Next, create two files in the deployment folder: `deployment.yml` and `service.yml`.
+
+Add the following configuration to the `deployment.yml` file, replacing the `<name-of-azure-container-registry>` placeholder with your registry’s name:
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: intelligent-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: intelligent-app
+  template:
+    metadata:
+      labels:
+        app: intelligent-app
+    spec:
+      nodeSelector:
+        kubernetes.io/os: linux
+      containers:
+        - name: intelligent-app
+          image: <name-of-azure-container-registry>.azurecr.io/intelligent-app:v1
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 256Mi
+              cpu: "0.2"
+          ports:
+            - containerPort: 5000
+          env:
+            - name: FLASK_DEBUG
+              value: "1"
+            - name: VISION_KEY
+              value: <THE-KEY-1-VALUE-FROM-YOUR-AZURE-AI-SERVICE>
+            - name: VISION_ENDPOINT
+              value: <THE-ENDPOINT-VALUE-FROM-YOUR-AZURE-AI>
+```
+
+Additionally, edit the `VISION_KEY` and `VISION_ENDPOINT` environment variables above according to the API key and endpoint of your Azure AI Services instance.
+
+Then, add the following configuration to the `service.yml` file:
+
+```
+apiVersion: v1
+kind: Service 
+metadata:
+  name: intelligent-app-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+      name: port5000
+  selector:
+    app: intelligent-app
+```
+
+Now, we’ll deploy our application using kubectl. Applying the Kubernetes manifests creates the necessary resources and deploys our containerized application to the AKS cluster.
+
+First, change the terminal to the `deployment` folder: 
+
+```
+cd Deployment 
+```
+
+Then, run the following command to create or update Kubernetes resources defined in the `deployment.yml` file:
+
+```
+kubectl apply -f deployment.yml
+```
+
+Create a Kubernetes Service resource in a Kubernetes cluster based on the configuration defined in the `service.yml` file using the code below: 
+
+```
+kubectl apply -f service.yml
+```
+
+Once you’ve applied the resource definition and the service configuration contained in the `deployment.yml` and the `service.yml` files, open the **aks-intelligent-app** Kubernetes Service in the Azure Portal, select **Workloads** under **Kubernetes resources** on the sidebar, and find the deployment named **intelligent-app**. It must have the status “Ready 1/1”. If you encounter an issue with this status, check out these [troubleshooting resources](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/node-not-ready-basic-troubleshooting?WT.mc_id=javascript-99907-ninarasi).
+
+![image of selecting the deployment in Azure Portal](../../static/img/fallforia/blogs/2023-09-27/blog-image-2-2.png)
+
+## Testing the Intelligent App on AKS
+
+To test the app on AKS, first, run the command below:
+
+```
+kubectl get services
+```
+
+This command lists the Services and their corresponding details, including the Service name, cluster IP address, external IP, and ports.
+
+| NAME       | TYPE       | CLUSTER-IP       | EXTERNAL-IP       | PORT(S)       | AGE       |
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+| intelligent-app-service  | LoadBalancer  | 10.0.77.60  | 20.121.76.153  | 80:30936/TCP  | 47s  |
+| kubernetes  | ClusterIP  | 10.0.0.1  | <none>  | 443/TCP  | 14m  |
+
+The output above shows a Kubernetes Service named `intelligent-app-service` with a type set to `LoadBalancer`. It’s reachable from within the cluster using the cluster IP `10.0.77.60` and accessible externally via the external IP `20.121.76.153` on port 80 (mapped to port 30936).
+
+**Note**: Your set of IP addresses will differ. Remember to use your unique external IP address when testing with Postman. 
+
+To test the deployed app, go to Postman, replace the URL with the external IP of the Kubernetes Service you just deployed, and click **Send**:
+
+![mage of sending the app in Postman](../../static/img/fallforia/blogs/2023-09-27/blog-image-2-3.png)
+
+As we can see, our Intelligent App has successfully deployed to AKS and is functioning on the cloud as expected.
 
 ## Exercise
 
- * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
- * Complete the **[AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc)** to build on your AI skills.
- * Register for **[Episode 03](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)** of the serverless edition Learn Live session to learn how to build, test and deploy an end-to-end intelligent app solution.
- * Register for **[Ask the Expert: Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
+* Complete this **hands-on** sample [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-1/tree/main/Microsoft_Series17-18_Code/intelligent-app-after) to build your first intelligent app.
+* Complete the [Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc) to build on your app dev and AI skills.
+* Register for [Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/) session for live Q&A with the Product Engineering team on building intelligent serverless apps.
+
+## Next Steps
+
+In this two-part article, we explored the creation of an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently deploy this API via Azure Kubernetes Service.
+
+Besides OCR and Image Analysis, you can continue exploring Azure’s vast array of services and experiment further with Azure AI and AKS by applying various practical uses to your Intelligent Apps, including natural language processing, speech recognition and synthesis, sentiment analysis for customer feedback, and automated content moderation.
