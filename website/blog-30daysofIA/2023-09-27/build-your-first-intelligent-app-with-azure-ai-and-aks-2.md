@@ -100,11 +100,9 @@ az acr show --name <name-of-azure-container-registry> --query loginServer --outp
 
 This returns an endpoint URL as follows: 
 
-```
-Result
-----------------------------------
-<name-of-azure-container-registry>.azurecr.io
-```
+    Result
+    ----------------------------------
+    <name-of-azure-container-registry>.azurecr.io
 
 Now, run the following command to show all container images, their repository, tags, and size:
 
