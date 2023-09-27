@@ -283,7 +283,7 @@ This command lists the Services and their corresponding details, including the S
 | NAME       | TYPE       | CLUSTER-IP       | EXTERNAL-IP       | PORT(S)       | AGE       |
 |:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
 | intelligent-app-service  | LoadBalancer  | 10.0.77.60  | 20.121.76.153  | 80:30936/TCP  | 47s  |
-| kubernetes  | ClusterIP  | 10.0.0.1  | <none>  | 443/TCP  | 14m  |
+| kubernetes  | ClusterIP  | 10.0.0.1  | &lt;none&gt;  | 443/TCP  | 14m  |
 
 The output above shows a Kubernetes Service named `intelligent-app-service` with a type set to `LoadBalancer`. It’s reachable from within the cluster using the cluster IP `10.0.77.60` and accessible externally via the external IP `20.121.76.153` on port 80 (mapped to port 30936).
 
