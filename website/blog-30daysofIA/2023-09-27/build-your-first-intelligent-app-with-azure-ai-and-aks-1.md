@@ -36,7 +36,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 </head>
 
 <!-- End METADATA -->
-Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions.
+Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. Develop an API to perform optical character recognition (OCR) on uploaded images and testing this API locally.
 
 ## What We'll Cover:
 
