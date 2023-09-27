@@ -3,7 +3,7 @@ date: 2023-09-22T09:00
 slug: build-your-first-intelligent-app-with-azure-ai-and-aks-2
 title: 2-2. Build Your First Intelligent App with Azure AI and AKS-2
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
