@@ -128,7 +128,7 @@ docker images
 | REPOSITORY       | TAG       | IMAGE ID       | CREATED       | SIZE       |
 |:--------------|:--------------|:--------------|:--------------|:--------------|
 | intelligent-app  | latest  | c52168039265  | About a minute ago  | 197MB  |
-| <name-of-azure-container-registry>.azurecr.io/intelligent-app  | v1  | c52168039265  | About a minute ago  | 197MB  |
+| &lt;name-of-azure-container-registry&gt.azurecr.io/intelligent-app  | v1  | c52168039265  | About a minute ago  | 197MB  |
 
 Now run the following command so Docker can securely upload the image to your Azure Container Registry:
 
