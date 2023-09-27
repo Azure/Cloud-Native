@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
-description: "Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions." 
+description: "Delve into creating an Intelligent App that leverages Azure AI Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions." 
 tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -17,14 +17,14 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/build-your-first-intelligent-app-with-azure-ai-and-aks-2"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
-<meta property="og:description" content="Create an Intelligent App that leverages Azure AI for Vision to analyze images and extract data."/>
+<meta property="og:description" content="Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-2" />
     <meta name="twitter:title" 
       content="**Fall For Intelligent Apps! 🍂 | Build AI Apps On Azure" />
     <meta name="twitter:description" 
-      content="2-2. Create an Intelligent App that leverages Azure AI for Vision to analyze images and extract data." />
+      content="2-2. Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data." />
     <meta name="twitter:image" 
       content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 </head>
 
 <!-- End METADATA -->
-In the last article, we created an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. Develop an API to perform optical character recognition (OCR) on uploaded images and testing this API locally. 
+In the last article, we created an Intelligent App that leverages Azure AI Vision to analyze images and extract data. Develop an API to perform optical character recognition (OCR) on uploaded images and testing this API locally. 
 
 In this article, we will deploy the web API to the cloud platform using Azure Kubernetes Service. 
 
@@ -50,7 +50,7 @@ In this article, we will deploy the web API to the cloud platform using Azure Ku
 
 ## Jumpstart Your AI Journey: Building Your First Intelligent App with Azure AI and AKS (2)
 
-In the previous article we explored the creation of an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently test this API locally.  
+In the previous article we explored the creation of an Intelligent App that leverages Azure AI Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently test this API locally.  
 
 In this article we will use [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service?WT.mc_id=javascript-99907-ninarasi) (AKS) to develop, publish, and maintain our app in the cloud on Azure. 
 
@@ -307,6 +307,6 @@ As we can see, our Intelligent App has successfully deployed to AKS and is funct
 
 ## Next Steps
 
-In this two-part article, we explored the creation of an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently deploy this API via Azure Kubernetes Service.
+In this two-part article, we explored the creation of an Intelligent App that leverages Azure AI Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently deploy this API via Azure Kubernetes Service.
 
 Besides OCR and Image Analysis, you can continue exploring Azure’s vast array of services and experiment further with Azure AI and AKS by applying various practical uses to your Intelligent Apps, including natural language processing, speech recognition and synthesis, sentiment analysis for customer feedback, and automated content moderation.

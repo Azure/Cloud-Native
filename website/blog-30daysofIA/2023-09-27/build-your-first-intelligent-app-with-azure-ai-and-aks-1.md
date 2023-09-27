@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
-description: "Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions." 
+description: "Delve into creating an Intelligent App that leverages Azure AI Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions." 
 tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -17,14 +17,14 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/build-your-first-intelligent-app-with-azure-ai-and-aks-1"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
-<meta property="og:description" content="Create an Intelligent App that leverages Azure AI for Vision to analyze images and extract data."/>
+<meta property="og:description" content="Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1" />
     <meta name="twitter:title" 
       content="**Fall For Intelligent Apps! 🍂 | Build AI Apps On Azure" />
     <meta name="twitter:description" 
-      content="2-1. Create an Intelligent App that leverages Azure AI for Vision to analyze images and extract data." />
+      content="2-1. Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data." />
     <meta name="twitter:image" 
       content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 </head>
 
 <!-- End METADATA -->
-Delve into creating an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. Develop an API to perform optical character recognition (OCR) on uploaded images and testing this API locally.
+Delve into creating an Intelligent App that leverages Azure AI Vision to analyze images and extract data. Develop an API to perform optical character recognition (OCR) on uploaded images and testing this API locally.
 
 ## What We'll Cover:
 
@@ -58,9 +58,9 @@ Let’s get started!
 
 ## Understanding Azure AI Service for Vision and Azure Kubernetes Service
 
-Azure AI for vision is a cloud-based service that offers a range of advanced computer vision capabilities enabling applications to interpret content, such as images and videos, using ML and other AI algorithms. Azure computer vision lets users integrate powerful vision features into their projects without ML experience.
+Azure AI Vision is a cloud-based service that offers a range of advanced computer vision capabilities enabling applications to interpret content, such as images and videos, using ML and other AI algorithms. Azure computer vision lets users integrate powerful vision features into their projects without ML experience.
 
-OCR is one of the critical functionalities within Azure vision service, allowing applications to extract text from images. Within Azure AI for vision service, OCR offers several features, including text extraction, multilingual support, layout analysis of documents, and integration with Azure services, such as [Azure Functions](https://azure.microsoft.com/en-ca/products/functions) and [Azure Machine Learning](https://azure.microsoft.com/en-ca/products/machine-learning).
+OCR is one of the critical functionalities within Azure vision service, allowing applications to extract text from images. Within Azure AI Vision service, OCR offers several features, including text extraction, multilingual support, layout analysis of documents, and integration with Azure services, such as [Azure Functions](https://azure.microsoft.com/en-ca/products/functions) and [Azure Machine Learning](https://azure.microsoft.com/en-ca/products/machine-learning).
 
 :::info
 Watch the intelligent apps webinar on **[Driving Business Value by Modernizing with Cloud-Native & AI](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?WT.mc_id=javascript-99907-ninarasi)** with *Microsoft* and *Forrester* on **September 26**. 
@@ -68,7 +68,7 @@ Watch the intelligent apps webinar on **[Driving Business Value by Modernizing w
 
 AKS is Microsoft Azure’s container orchestration platform that enables us to quickly and efficiently deploy, manage, and scale containerized applications, such as our Intelligent App.
 
-Let’s explore how to leverage these tools to build an Intelligent App that uses Azure AI for Vision to analyze images and extract data.
+Let’s explore how to leverage these tools to build an Intelligent App that uses Azure AI Vision to analyze images and extract data.
 
 ### Prerequisites
 
@@ -85,7 +85,7 @@ To follow this tutorial, ensure you have the following:
 
 For a preview of this final project, take a look at the [complete project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-1/tree/main/Microsoft_Series17-18_Code/intelligent-app-after).
 
-### Building the API with Azure AI for Vision Service
+### Building the API with Azure AI Vision Service
 
 First, log in to your Azure account and navigate to the [Azure Portal](https://portal.azure.com).
 
@@ -283,13 +283,13 @@ This module uses the [azure-ai-vision](https://learn.microsoft.com/python/api/az
 
 Let’s review the different components of the `ocr_helper.py` module listed above and explore how its functions help our Intelligent App process images and perform aggregate operations:
 
-- The `process_ocr` function takes the parameter `source_image`, which is the path of the image to be processed. The function then initializes the `VisionServiceOptions` using environment variables `VISION_ENDPOINT` and `VISION_KEY` to connect to the Azure AI for Vision API.
+- The `process_ocr` function takes the parameter `source_image`, which is the path of the image to be processed. The function then initializes the `VisionServiceOptions` using environment variables `VISION_ENDPOINT` and `VISION_KEY` to connect to the Azure AI Vision API.
 - The `process_ocr` function creates a `VisionSource` object with the specified `source_image` file name. `ImageAnalysisOptions` specify the features to be analyzed, including `CAPTION` and `TEXT`. The language is set to English (`"en"`), and gender-neutral captions are enabled.
 - Finally, an `ImageAnalyzer` object is created with the service options, vision source, and analysis options. The image is then analyzed using the `image_analyzer.analyze` method to retrieve OCR results. The recognized text from the OCR result is extracted, with numerical values stored in the `string_list` variable.
 - The `convert_to_decimal_list` function converts the list of strings to a list of decimal numbers, which helps process numeric values extracted from the text.
 - The `aggregate_operations` function calculates various aggregate statistics (sum, average, median, minimum, maximum) from a list of numbers and returns the results in a dictionary.
 
-Note that you must have the appropriate credentials (`VISION_KEY`) and endpoint (`VISION_ENDPOINT`) configured for the Azure AI for Vision API to use this module.
+Note that you must have the appropriate credentials (`VISION_KEY`) and endpoint (`VISION_ENDPOINT`) configured for the Azure AI Vision API to use this module.
 
 Finally, we must modify the `app.py` file so our code can use the `process_ocr` function of the `ocr_helper.py` file.
 
@@ -412,6 +412,6 @@ As we can see, the app running on a local container returned the correct results
 
  ## Next Steps
 
-In this article, we explored the creation of an Intelligent App that leverages Azure AI for Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently test this API locally.
+In this article, we explored the creation of an Intelligent App that leverages Azure AI Vision to analyze images and extract data. We learned how to build a Python Web API to perform OCR on uploaded images and subsequently test this API locally.
 
 Head to the [next part](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-2), to deploy this API via Azure Kubernetes Service.
