@@ -222,7 +222,7 @@ const config = {
         },
         {
           name: "twitter:title",
-          content: "#FallForIA is here | Sep-Oct 2023!",
+          content: "#BuildIntelligentApps is here | Sep-Oct 2023!",
         },
         {
           name: "twitter:description",
