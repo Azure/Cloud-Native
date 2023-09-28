@@ -1,5 +1,5 @@
 ---
-date: 2023-09-28T09:00
+date: 2023-09-28T09:01
 slug: powering-intelligent-apps-with-azure-cosmos-db-2
 title: 2-4. Powering Intelligent Apps with Azure Cosmos DB (2)
 authors: [cnteam]
