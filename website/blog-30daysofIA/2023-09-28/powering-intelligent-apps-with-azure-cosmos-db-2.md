@@ -52,6 +52,17 @@ In the [first article of this week](https://azure.github.io/Cloud-Native/30dayso
 
 In continuation of the [previous article](https://azure.github.io/Cloud-Native/30daysofIA/powering-intelligent-apps-with-azure-cosmos-db-1), we’ll continue to explore how Azure Cosmos DB’s support for multi-model databases provides flexibility in data modeling, scalability, and performance optimization—crucial for storing, indexing, and querying data in multiple formats.
 
+## Exploring Real-World Use Cases for Multi-Model Databases
+
+Numerous industries can benefit from leveraging multi-model databases when building Intelligent Apps. Below are just a few real-world examples:
+
+* **E-commerce personalization**—Multi-model databases allow e-commerce platforms to store and manage various data types, such as customer profiles, product details, purchase history, and user-generated content like reviews and images.
+* **Healthcare patient records**—Multi-model databases can help manage diverse patient data in the healthcare sector, like diagnoses and medications, semi-structured data like doctors' notes, and unstructured data like medical images and test results.
+* **Social media analytics**—Multi-model databases find applications in social media platforms for handling the vast and varied data users generate, such as user profiles, connections, posts, images, videos, and textual content. The databases enable social platforms to execute quick and complex queries for real-time analytics.
+* **Cosmos DB’s schema**-agnostic approach helps it seamlessly adapt to this diversity, enabling our Intelligent App to store OCR analysis and aggregation data as JSON documents without predefined structures.
+
+Unlike traditional relational databases, the flexibility of a multi-model database like Cosmos DB for NoSQL ensures that the database can accommodate the ever-evolving OCR data without frequent schema modifications. This quality makes it a robust choice for our Intelligent App, which processes diverse documents and requires rapid adaptability.
+
 ## Exercise
 
 * Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2) to build your intelligent app with multi-modal databases.  
