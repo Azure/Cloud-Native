@@ -248,7 +248,120 @@ Let's examine each function step by step.
 
 The steps above highlight how the diverse and unstructured nature of OCR data, which we obtained from the Azure AI for Vision configured in the first article of this series, fits well with the flexible structure of a multi-model database.
 
+Now, open your terminal and run the command below to reinstall all the packages added in the first part of this series:
 
+`pip install -r requirements.txt`
+
+Then, run the following commands to install the packages related to Azure Cosmos DB:
+
+```
+pip install azure-cosmos
+pip install azure-data-tables
+```
+
+Finally, update the `requirements.txt` file with the current package list:
+
+`pip freeze > requirements.txt`
+
+## Testing the Intelligent App Locally
+
+As in Part 1 of this series, run the following command in the terminal to build the image and start a container for the Intelligent App services defined in `docker-compose.yml`:
+
+```
+docker-compose up --build --force-recreate
+```
+To test the API, open Postman and provide the fields as follows:
+
+* **URL**: http://localhost:5000/
+* **Method**: POST
+* **Body**:
+    * **Form-data**
+        * **Key**: file—Click the right end of the **Key** field and select “File” from the dropdown list.
+        * **Value**: Click **Select Files**, then select the **sample1.png** file provided in the sample code.
+
+![image of test in localhost](../../static/img/fallforia/blogs/2023-09-28/blog-image-4-4.png)
+
+Now click the **Send** button and review the result in **Body**:
+
+`"{\"aggregate_result\": {\"sum\": \"25821\", \"average\": \"5164.2\", \"median\": \"5622\", \"min\": \"1447\", \"max\": \"9802\"}, \"numbers_read\": [\"3049\", \"5901\", \"5622\", \"1447\", \"9802\"], \"analysis_result\": {\"caption\": {\"content\": \"a yellow rectangular sign with black numbers\", \"confidence\": 0.7065904140472412}, \"text\": {\"lines\": [{\"content\": \"3049\", \"bounding_polygon\": [69.0, 14.0, 144.0, 13.0, 143.0, 38.0, 70.0, 39.0], \"words\": [{\"content\": \"3049\", \"bounding_polygon\": [69.0, 14.0, 139.0, 13.0, 140.0, 38.0, 69.0, 39.0], \"confidence\": 0.991}]}, {\"content\": \"5901\", \"bounding_polygon\": [70.0, 54.0, 142.0, 54.0, 141.0, 78.0, 70.0, 79.0], \"words\": [{\"content\": \"5901\", \"bounding_polygon\": [70.0, 54.0, 139.0, 54.0, 139.0, 79.0, 70.0, 79.0], \"confidence\": 0.995}]}, {\"content\": \"5622\", \"bounding_polygon\": [70.0, 94.0, 143.0, 94.0, 142.0, 119.0, 69.0, 119.0], \"words\": [{\"content\": \"5622\", \"bounding_polygon\": [69.0, 94.0, 140.0, 94.0, 140.0, 119.0, 69.0, 119.0], \"confidence\": 0.998}]}, {\"content\": \"1447\", \"bounding_polygon\": [69.0, 136.0, 144.0, 136.0, 144.0, 161.0, 69.0, 161.0], \"words\": [{\"content\": \"1447\", \"bounding_polygon\": [70.0, 137.0, 140.0, 137.0, 139.0, 161.0, 70.0, 161.0], \"confidence\": 0.998}]}, {\"content\": \"9802\", \"bounding_polygon\": [69.0, 176.0, 142.0, 176.0, 143.0, 202.0, 69.0, 202.0], \"words\": [{\"content\": \"9802\", \"bounding_polygon\": [69.0, 176.0, 141.0, 176.0, 141.0, 202.0, 69.0, 202.0], \"confidence\": 0.998}]}]}, \"file_name\": \"static/files/sample1.png\", \"id\": \"sample1\", \"partitionKey\": \"Partition1\"}}"`
+
+As we can see, the app running on a local container returned the correct JSON containing the analysis results and aggregate results based on the sample image.
+
+### Checking the Results in Azure Cosmos DB
+
+Now, it’s time to see how the results were stored in the Azure Cosmos DB for NoSQL multi-model database. 
+
+In the Azure Portal, open your Cosmos DB account resource, click the **Data Explorer** tab, expand the IntelligentAppDB database tree, and click the **Items** node within the **AggregateResultsContainer**. Then click the **sample1** item to see the results on the right-side panel:
+
+![image of sample1 in Data Explorer tab](../../static/img/fallforia/blogs/2023-09-28/blog-image-4-5.png)
+
+Now, click the **Items** node within the **ImageAnalysisContainer** and click the **sample1** item to see the results on the right-side panel:
+
+![image of sample1 in ImageAnalysisContainer](../../static/img/fallforia/blogs/2023-09-28/blog-image-4-6.png)
+
+As we can see, our Intelligent App performs OCR operations that produce results in varied structures. However, through Azure Cosmos DB, we can store these structures effortlessly by separating items into containers without creating complex schemas for each data type.
+
+Before creating version 2 of the app, ensure your Docker container is running. Then, run the following commands to stop and remove the local `intelligent-app` container:
+
+```
+docker container stop intelligent-app
+docker container rm intelligent-app
+```
+
+Then, to recreate the Intelligent App’s image, use the `docker-compose app` command below with the `--build` argument:
+
+```
+docker-compose up --build --force-recreate
+```
+
+Now, use the docker `tag` command to tag the image. Replace `<name-of-azure-container-registry>` below with your ACR login server name or public registry hostname. Be sure to update the image version to `:v2` as follows:
+
+```
+docker tag intelligent-app <name-of-azure-container-registry>.azurecr.io/intelligent-app:v2
+```
+
+Now, run the following command to show your container image with the new tags:
+
+```
+docker images
+```
+
+You’ll get a result similar to the one below:
+
+| REPOSITORY   | TAG   | IMAGE ID  | CREATED  | SIZE  |
+|:------------|:------------|:------------|:------------|:------------|
+| intelligent-app     | latest     | 1ca9eb914279     | 40 minutes ago     | 258MB     |
+| <name-of-azure-container-registry>.azurecr.io/intelligent-app     | v1     | 676ede4aa18c     | About an hour ago     | 197MB     |
+
+Now, use `docker push` to upload the image to your registry. Replace `<name-of-azure-container-registry>` with your ACR login server name.
+
+```
+docker push <name-of-azure-container-registry>.azurecr.io/intelligent-app:v2
+```
+
+To update the application, use the `kubectl` set command. Update `<name-of-azure-container-registry>` with the login server or hostname of your container registry, and specify the v2 application version:
+
+```
+kubectl set image deployment intelligent-app intelligent-app=<name-of-azure-container-registry>.azurecr.io/intelligent-app:v2 
+```
+
+Now, we’ll deploy version 2 of our application using the kubectl command. First, change the terminal to the `Deployment` folder:
+
+```
+cd Deployment
+```
+
+Open the `deployment.yml` file in an editor and update the container image version tag to v2:
+
+```
+image: intelligentapp.azurecr.io/intelligent-app:v2
+```
+
+Then, run the following command to create or update Kubernetes resources defined in the `deployment.yml` file:
+
+```
+kubectl apply -f deployment.yml
+```
 
 ## Exploring Real-World Use Cases for Multi-Model Databases
 
@@ -271,4 +384,4 @@ Unlike traditional relational databases, the flexibility of a multi-model databa
 
 Multi-model databases are invaluable for Intelligent Apps, offering intelligent indexing, caching, and query optimization for swift data access. They accommodate various data structures like documents, graphs, and key-value pairs, enabling cohesive data management, streamlined development, and insightful analysis—promoting limitless scalability and letting us adapt data to numerous formats without compromising efficiency.
 
-Discover [Azure’s Cosmos DB and other services](https://learn.microsoft.com/azure/architecture/data-guide/technology-choices/data-storage#azure-cosmos-db?WT.mc_id=javascript-99907-ninarasi) to unlock even more potential in your Intelligent Apps—and carry on to the third and final topic of this week to learn how to take your Intelligent Apps to the next level with Azure Kubernetes Service in the next article. 
+Discover [Azure’s Cosmos DB and other services](https://learn.microsoft.com/azure/architecture/data-guide/technology-choices/data-storage#azure-cosmos-db?WT.mc_id=javascript-99907-ninarasi) to unlock even more potential in your Intelligent Apps—and carry on to the third and final topic of this week to learn how to take your Intelligent Apps to the next level with Azure Kubernetes Service in the next article.
