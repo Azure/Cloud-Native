@@ -299,7 +299,7 @@ const config = {
       "@docusaurus/plugin-content-blog",
       {
         id: "blog-30daysofIA",
-        routeBasePath: "30daysofIA",
+        routeBasePath: "30DaysOfIA",
         path: "./blog-30daysofIA",
         blogTitle: "Learn in #30DaysOfIA",
         blogDescription:
