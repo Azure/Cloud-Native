@@ -20,7 +20,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/Fall-For-IA/"
           >
-            Fall For Intelligent Apps
+            Build Intelligent Apps
           </Link>
         </div>
       </div>

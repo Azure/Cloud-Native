@@ -107,11 +107,11 @@ function CampaignHeader() {
           <div className="col col--6">
             <h1 className="hero__title">🍂 Fall For Intelligent Apps!</h1>
             <p>
-            Join us this fall on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure for your users.
+            Join us on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure for your users.
             </p>
             <div className={styles.buttonsFFIA}>
               <Link className="button button--secondary button--lg" to="/30DaysOfIA">
-              #FallforIntelligentApps
+              #BuildIntelligentApps
               </Link>
             </div>
           </div>
