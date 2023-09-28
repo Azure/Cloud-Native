@@ -149,11 +149,11 @@ Now, select the **IntelligentAppDB** database, click the ellipsis (...) icon, an
 
 Provide “ImageAnalysisContainer” as the **Container id** and “Partition1” as the partition key. Then, click **OK** to save the container.
 
-![image of entering container id and partition key](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-12.png)
+![image of entering container id and partition key](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-12-v2.png)
 
 Repeat the previous step to create a new container. Provide “AggregateResultsContainer” as the **Container id** and “/id” as the **Partition key**. Then click **OK** to save the database.
 
-![image of saving the new database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-13.png)
+![image of saving the new database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-13-v2.png)
 
 Now, your database and container structure should appear like the image below:
 
