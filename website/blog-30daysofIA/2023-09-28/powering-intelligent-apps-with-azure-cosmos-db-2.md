@@ -287,6 +287,10 @@ Now click the **Send** button and review the result in **Body**:
 
 As we can see, the app running on a local container returned the correct JSON containing the analysis results and aggregate results based on the sample image.
 
+## Updating the Version of the Intelligent App on AKS
+
+Now that we’ve learned how to implement and test the new Cosmos DB-powered app version locally, let’s explore how to update and deploy this new version of our Intelligent App in AKS using Docker and Kubernetes command-line tools. This process ensures that the latest version of the application is deployed and running in the Kubernetes cluster.
+
 ### Checking the Results in Azure Cosmos DB
 
 Now, it’s time to see how the results were stored in the Azure Cosmos DB for NoSQL multi-model database. 
@@ -331,6 +335,7 @@ You’ll get a result similar to the one below:
 | REPOSITORY   | TAG   | IMAGE ID  | CREATED  | SIZE  |
 |:------------|:------------|:------------|:------------|:------------|
 | intelligent-app     | latest     | 1ca9eb914279     | 40 minutes ago     | 258MB     |
+| <name-of-azure-container-registry>.azurecr.io/intelligent-app     | v2     | 1ca9eb914279     | 40 minutes ago        | 258MB     |
 | <name-of-azure-container-registry>.azurecr.io/intelligent-app     | v1     | 676ede4aa18c     | About an hour ago     | 197MB     |
 
 Now, use `docker push` to upload the image to your registry. Replace `<name-of-azure-container-registry>` with your ACR login server name.
@@ -376,7 +381,7 @@ Unlike traditional relational databases, the flexibility of a multi-model databa
 
 ## Exercise
 
-* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2) to build your intelligent app with multi-modal databases.  
+* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2) to build your intelligent app with multi-modal databases and AKS.  
 * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.  
 * Register for **[Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
 
@@ -384,4 +389,4 @@ Unlike traditional relational databases, the flexibility of a multi-model databa
 
 Multi-model databases are invaluable for Intelligent Apps, offering intelligent indexing, caching, and query optimization for swift data access. They accommodate various data structures like documents, graphs, and key-value pairs, enabling cohesive data management, streamlined development, and insightful analysis—promoting limitless scalability and letting us adapt data to numerous formats without compromising efficiency.
 
-Discover [Azure’s Cosmos DB and other services](https://learn.microsoft.com/azure/architecture/data-guide/technology-choices/data-storage#azure-cosmos-db?WT.mc_id=javascript-99907-ninarasi) to unlock even more potential in your Intelligent Apps—and carry on to the third and final topic of this week to learn how to take your Intelligent Apps to the next level with Azure Kubernetes Service in the next article.
+Discover [Azure’s Cosmos DB and other services](https://learn.microsoft.com/azure/architecture/data-guide/technology-choices/data-storage?WT.mc_id=javascript-99907-ninarasi#azure-cosmos-db) to unlock even more potential in your Intelligent Apps—and carry on to the third and final topic of this week to learn how to take your Intelligent Apps to the next level with Azure Kubernetes Service in the next article.
