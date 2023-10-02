@@ -18,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/Fall-For-IA/"
+            to="/Build-IA/"
           >
             Build Intelligent Apps
           </Link>
