@@ -15,7 +15,7 @@ import React, {
   } from 'react';
   import {useHistory, useLocation} from '@docusaurus/router';
   import {toggleListItem} from '../../../../src/utils/jsUtils';
-  import {prepareUserState} from '../../../../src/pages//Fall-For-IA/CommunityGallery';
+  import {prepareUserState} from '../../../../src/pages//Build-IA/CommunityGallery';
   import {
     type TagType,
   } from '../../../../src/data/tags';

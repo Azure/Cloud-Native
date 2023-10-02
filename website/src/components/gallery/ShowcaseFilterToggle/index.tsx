@@ -8,7 +8,7 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import {useHistory, useLocation} from '@docusaurus/router';
 
-import {prepareUserState} from '../../../../src/pages//Fall-For-IA/CommunityGallery';
+import {prepareUserState} from '../../../../src/pages//Build-IA/CommunityGallery';
 
 import styles from './styles.module.css';
 import clsx from 'clsx';

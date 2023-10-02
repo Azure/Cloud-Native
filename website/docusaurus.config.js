@@ -87,7 +87,7 @@ const config = {
         },
         items: [
           {
-            to: "/Fall-For-IA/",
+            to: "/Build-IA/",
             label: "Home",
             position: "left",
           },
@@ -97,7 +97,7 @@ const config = {
             position: "left",
           },
           {
-            to: "/Fall-For-IA/calendar",
+            to: "/Build-IA/calendar",
             label: "Calendar",
             position: "left",
           },
@@ -107,8 +107,8 @@ const config = {
             position: "right",
             items: [
               {
-                label: "🍂 | FallForIA 2023",
-                href: "/Fall-For-IA/",
+                label: "Build Intelligent Apps | 2023",
+                href: "/Build-IA/",
               },
               {
                 label: "#30DaysOfIA",
