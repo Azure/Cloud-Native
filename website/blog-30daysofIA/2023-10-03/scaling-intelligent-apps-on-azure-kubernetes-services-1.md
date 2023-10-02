@@ -36,52 +36,38 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 </head>
 
 <!-- End METADATA -->
-In this article, explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS).
+In this article, dive into how to harness AKS’ powerful features like auto-scaling and high availability to manage variable workloads and monitoring to maintain continuous service.
 
 ## What We'll Cover:
 
- * What is a multi-model database?
- * Concepts of Azure Cosmos DB
- * Creating a Multi-Model Database with Cosmos DB and AKS
+ * Deploying on Azure Kubernetes Service (AKS) 
+ * Configuring AKS for dynamic application scaling
+ * Ensuring High Availability with Azure Load Balancer and AKS
 
 ![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
 
-## Powering Intelligent Apps with a Multi-Model Database Using Cosmos DB and Azure Kubernetes Service (1) 
+## Scaling Intelligent Apps on Azure Kubernetes Services (1) 
 
-In the [first topic of this week](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1), we created an Intelligent App that helped us analyze images and extract valuable data. We constructed a Python web API to execute [optical character recognition](https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr?WT.mc_id=javascript-99907-ninarasi) (OCR) on images uploaded to the application using [Azure AI Vision](https://azure.microsoft.com/products/cognitive-services/vision-services?WT.mc_id=javascript-99907-ninarasi) and [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service?WT.mc_id=javascript-99907-ninarasi) (AKS) for hosting the application.  
+In the [first topic of this week](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1), we explored how to use Azure Cognitive Services for Vision within Azure Kubernetes Service (AKS) to create an Intelligent App capable of analyzing images and extracting valuable data through optical character recognition (OCR). The week’s [second article](https://azure.github.io/Cloud-Native/30DaysOfIA/build-your-first-intelligent-app-with-azure-ai-and-aks-2), focused on the advantages of Azure Cosmos DB, highlighting its multi-model database and ability to handle diverse data resulting from OCR analysis in our Intelligent App. 
 
-In this second topic for the week, we’ll explore how Azure Cosmos DB’s support for multi-model databases provides flexibility in data modeling, scalability, and performance optimization—crucial for storing, indexing, and querying data in multiple formats.   
+In this third topic, we’ll configure [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/?WT.mc_id=javascript-99907-ninarasi) to manage varying workloads and smoothly scale our Intelligent App, ensuring it can handle intense and fluctuating workloads without compromising performance or availability. 
 
-## Unraveling Multi-Model Databases and Cosmos DB
+### Mastering Azure Kubernetes Services (AKS) for Intelligent App
 
-Multi-model databases let us store and work with data in multiple formats, including relational data, JSON documents, key-value pairs, spatial data, and graphs. They simplify development, reduce data integration issues, and support a more comprehensive data analysis, leading to valuable insights.
+At the core of the Azure ecosystem lies AKS. It plays a crucial role in optimizing application performance and efficient resource use. We can deploy, manage, and scale applications across different environments by precisely orchestrating containerized workloads.  
 
-Below are some of the benefits of using a multi-model database:
+AKS offers several robust features that help applications scale smoothly and stay available even during heavy demand, including the following: 
 
-* **Scalability and performance**—Multi-model databases allow us to shape data to fit different formats. We can tailor these databases to our applications, spreading data across clusters to support efficient, smooth scaling. Additionally, they support intelligent indexing, caching, and query optimization to ensure fast and efficient data access, even when handling complex queries.
-* **Versatility**—Multi-model databases support versatility by accommodating diverse data types and structures within a unified platform. Unlike traditional databases, they seamlessly integrate storing and retrieving various data formats, enabling us to dynamically model and manage complex information.
-* **Data handling and transformation advantages**—Because a multi-model database supports different data structures, it can easily handle structured, semi-structured, and unstructured data. These databases offer a transformative advantage in applications dealing with diverse and unstructured data. Their ability to manage various data types ensures a holistic and agile data storage, retrieval, and analysis approach. As such, multi-model databases enable streamlined development, simplified integration, and flexible querying.
-* **OCR analysis**—Multi-model databases are invaluable assets for managing the complex needs of diverse data from OCR analysis. This flexibility in data handling means efficient storage and retrieval of OCR results, enabling complex queries that reveal deeper insights across various data types.
+ * The [cluster autoscaler](https://learn.microsoft.com/en-us/azure/aks/cluster-autoscalerhttps:/learn.microsoft.com/en-us/azure/aks/?WT.mc_id=javascript-99907-ninarasi) adjusts the number of nodes in your cluster based on how much work you have. This way, it uses resources efficiently and keeps costs in check.  
+ * The [Azure Load Balancer](https://azure.microsoft.com/en-ca/products/load-balancer?WT.mc_id=javascript-99907-ninarasi) is created automatically with AKS and acts like an intelligent traffic controller. It ensures incoming network traffic is distributed well across your cluster’s nodes, optimizing resource usage.  
 
-[Azure Cosmos DB](https://azure.microsoft.com/products/cosmos-db?WT.mc_id=javascript-99907-ninarasi) is Azure’s top-tier multi-model database service, compatible with various popular data models and APIs. It effortlessly handles numerous data types, providing developers a unified platform for various application purposes.
+Together, these features give your applications a solid base to handle different workloads and keep running nonstop.  
 
-Supporting several APIs, including native NoSQL, and open-source APIs for MongoDB, Apache Cassandra, Gremlin, and Table, Cosmos DB enable smooth transition and integration of current apps and aids in building new ones. This adaptability in data modeling ensures quick adjustments to evolving needs, maintaining low latency, global distribution, and high availability.
+The following sections provide hands-on demonstrations of setting up, monitoring, and optimizing AKS to drive application efficiency and performance
 
-Let’s explore the power of multi-model databases for Intelligent Apps.
+#### Prerequisites
 
-### Creating a Multi-Model Database with Cosmos DB and AKS
-
-In the following sections, we’ll walk through how Azure Cosmos DB can handle the unstructured data from the OCR analysis and provide multi-model databases for our Intelligent App while hosting it in AKS.
-
-:::info
-Watch the intelligent apps webinar on **[Driving Business Value by Modernizing with Cloud-Native & AI](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?lcid=en-us)** with *Microsoft* and *Forrester*.
-
-Explore how modernization sets the stage for incorporating AI/ML into existing applications and how building new, intelligent applications can drive innovation and competitive advantage across a range of industries. Walkthrough a showcase of real-world use cases that demonstrate how AI can be seamlessly integrated into cloud-native environments driving tangible business value.  
-:::
-
-### Prerequisites
-
-To follow this tutorial, ensure you have:  
+To follow this tutorial, ensure you have the following:  
 
 * Read through the [first topic of this week](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1). 
 * [Python 3.7](https://www.python.org/downloads/) or later installed  
@@ -93,7 +79,15 @@ To follow this tutorial, ensure you have: 
 
 For a look at the final project from this tutorial, review the [complete code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2).
 
-### Creating an Azure Cosmos DB for NoSQL Account
+Check out the [complete project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-3/tree/main/Microsoft_21_Code/Deployment) for a preview of the final project.
+
+:::info
+Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your AKS app dev skills.  
+
+To start with the basics for developing [Kubernetes](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi) applications, explore [#30DaysOfCloudNative](https://azure.github.io/Cloud-Native/cnny-2023). 
+:::
+
+#### Configuring AKS for Dynamic App Scaling
 
 This section provides step-by-step instructions for setting up a multi-model database with Cosmos DB in your AKS environment. We’ll focus on the preparation, design, and configuration stages.  
 
