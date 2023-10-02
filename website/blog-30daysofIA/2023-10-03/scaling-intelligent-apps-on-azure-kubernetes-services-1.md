@@ -89,75 +89,88 @@ To start with the basics for developing [Kubernetes](https://azure.microsoft.c
 
 #### Configuring AKS for Dynamic App Scaling
 
-This section provides step-by-step instructions for setting up a multi-model database with Cosmos DB in your AKS environment. We’ll focus on the preparation, design, and configuration stages.  
+The cluster autoscaler and Kubernetes Horizontal Pod Autoscaling (HPA) are essential in achieving dynamic app scaling within an AKS environment.
 
-Note that an Azure Cosmos DB for NoSQL account isn’t related to your Azure account. An Azure Cosmos DB for NoSQL account is a database service provided by Microsoft Azure for creating, managing, and scaling globally distributed, multi-model databases.  
+The cluster autoscaler ensures our cluster scales its resources intelligently based on workload demand. It optimizes cost-effectiveness by adding or removing nodes dynamically, thus efficiently managing resources.
 
-An Azure Cosmos DB account provides a collection of Azure Cosmos DB assets, such as databases, containers, and items. It also offers an endpoint that facilitates connections for various tools and SDKs, enabling actions within Azure Cosmos DB. For deeper insight into the assets within Azure Cosmos DB, refer to the [Azure Cosmos DB resource model](https://learn.microsoft.com/azure/cosmos-db/resource-model?WT.mc_id=javascript-99907-ninarasi).  
+The HPA complements this by automatically scaling individual Pods within the cluster, monitoring metrics like CPU usage or custom metrics and adjusting the number of running pods to match application demand.
 
-Let’s create an Azure Cosmos DB account using the API for NoSQL. First, [sign](https://portal.azure.com/) in to the Azure portal. From the Azure portal menu or the [homepage](https://portal.azure.com/#home), select **Create a resource**.  
+To understand how these two concepts work seamlessly to provide a comprehensive scaling solution, let’s now get into the details of cluster autoscaler configuration. Later, we’ll discuss how to set up HPA in our AKS cluster.
 
-On the **Create a resource** page, search for **Azure Cosmos DB**.
+##### Setting Up the Cluster Autoscaler in AKS
 
-![image of a searching for Azure Cosmos DB in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-2.png)
+Setting up the cluster autoscaler in AKS involves a combination of Azure CLI and kubectl commands. Here’s a step-by-step guide to help you through the process, including initial setup, configuring minimum and maximum node counts per node pool, and monitoring the cluster autoscaler’s performance.
 
-When the results appear, locate the **Azure Cosmos DB** service, then click **Create**.
+To follow along, ensure you’re logged in to your Azure account. To log in, run the following command in your terminal:
 
-![image of creating an Azure Cosmos DB in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-3.png)
+```
+az login
+```
 
-Next, you’ll see the **Azure Cosmos DB** service page as follows:
+In the first part of this series, we created an AKS cluster named `aks-intelligent-app`. The picture below shows that AKS creates a single node pool named `nodepool1` by default. We can access the AKS cluster nodes and visualize the default `nodepool1` by clicking the **Node pools** menu in the **Settings** section:
 
-![image of Azure Cosmos DB service page](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-4.png)
+![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
 
-The API determines the type of account to create. Select **Azure Cosmos DB API for NoSQL** and click **Create**.
+In the image above, “Node count: 1/1 ready” indicates that we have one virtual machine (node) allocated in the node pool nodepool1 within our AKS cluster. That node is currently healthy and operational, meaning it’s ready to accept and execute workloads.
 
-![image of creating Azure Cosmos DB API for NoSQL](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-5.png)
+In the context of an AKS cluster, a node pool is a set of virtual machines with similar configurations and capacities. These node pools are distinct virtual machine (VM) groups forming the cluster’s computing resources. Node pools allow for workload segregation and resource allocation optimization, as we can tailor each pool to handle specific tasks or workloads. This modular approach enhances flexibility and resource management within the AKS cluster.
 
-When you reach the Create **Azure Cosmos DB Account** page, enter the settings below for the new account, then click **Review + create**.
+Using kubectl, retrieve information on the current nodes by running the command below:
 
- * **Resource Group**: computer-vision
- * **Account Name**: This should be unique to you.
- * **Capacity mode**: Serverless
+```
+kubectl get nodes 
+```
 
-![image of adding settings for the new account in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-6.png)
+This command above should retrieve results similar to those below:
 
-Finally, review your settings and click the **Create** button.
+| NAME   | STATUS   | ROLES  | AGE  | VERSION   |
+|:------------|:------------|:------------|:------------|:------------|
+| aks-nodepool1-27122202-vmss000000     | Ready     | agent     | 59m     | v1.26.6     |
 
-![image of reviewing settings for the new account in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-7.png)
+Let’s say we want our app to support more than one node. In this case, we have two options: customize `nodepool1` or add more node pools as needed. In this guide, we’ll review how to update the existing `nodepool1` node pool to support multiple nodes. 
 
-Next, wait a few minutes until Azure creates the account and click the **Go to resource** button. Wait for the portal to display your new Cosmos DB account’s overview.
+Run the following command in your terminal to update the existing node pool:
 
-![image of the new Cosmos DB account's overview](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-8.png)
+```
+az aks update --resource-group computer-vision --name aks-intelligent-app --enable-cluster-autoscaler --min-count 2 --max-count 3
+```
 
-We still need to create the NoSQL database. So, select **Data Explorer** on the sidebar. Then select the **New Container** dropdown menu and select **New Database**:
+This change ensures the node pool will always have at least two nodes available and can scale up to a maximum of three nodes, depending on the workload demand. This approach helps manage resource allocation based on varying needs within the AKS cluster.
 
-![image of selecting a new database to create the NoSQL database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-9.png)
+Now, run the `kubectl` get nodes command again to retrieve the new node count:
 
-Next, provide “IntelligentAppDB” as the **Database id** and click **OK**:
+```
+kubectl get nodes
+```
 
-![image of adding the new Database id](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-10.png)
+| NAME   | STATUS   | ROLES  | AGE  | VERSION   |
+|:------------|:------------|:------------|:------------|:------------|
+| aks-nodepool1-27122202-vmss000000     | Ready     | agent     | 2d5h     | v1.26.6     |
+| aks-nodepool1-27122202-vmss000001     | Ready     | agent     | 2d54    | v1.26.6     |
 
-Now, select the **IntelligentAppDB** database, click the ellipsis (...) icon, and click the **New Container** option:
+Refresh the **Node pools** page of your `aks-intelligent-app` AKS cluster in the Azure Portal: 
 
-![image of adding a new container](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-11.png)
+![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
 
-Provide “ImageAnalysisContainer” as the **Container id** and “Partition1” as the partition key. Then, click **OK** to save the container.
+The “Node count: 2/2 ready” above indicates that you now have two nodes allocated, both in a healthy and operational state.
 
-![image of entering container id and partition key](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-12-v2.png)
+To view more information about the node in your cluster, select the **Nodes** tab on the **Node pools** page:
 
-Repeat the previous step to create a new container. Provide “AggregateResultsContainer” as the **Container id** and “/id” as the **Partition key**. Then click **OK** to save the database.
+![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
 
-![image of saving the new database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-13-v2.png)
+Here, the CPU, memory, disks, and Pods information provide a comprehensive view of the cluster’s resource utilization and workload distribution.
 
-Now, your database and container structure should appear like the image below:
+##### How the Cluster Autoscaler Dynamically Scales Resources
 
-![image of database and container structure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-14.png)
+The cluster autoscaler is pivotal in maintaining the optimal performance and cost-effectiveness of Intelligent Apps within cloud environments.
 
-Let’s review the elements of this Cosmos DB setup:  
+The cluster autoscaler in AKS continuously monitors the cluster’s resource use, including CPU and memory, and compares it to the resource requests and limits defined in the Pod specifications. When the autoscaler detects that additional resources are required to meet the workloads’ demands, it automatically provisions new nodes, expanding the cluster’s capacity. Conversely, when there’s a decrease in resource demands, the cluster autoscaler scales in by removing underused nodes, optimizing cost efficiency.
 
-* **IntelligentAppDB** is a database within Cosmos DB, serving as a high-level container for grouping related data relevant to our Intelligent App.  
-* **AggregateResultsContainer** is a container within the IntelligentAppDB database. Containers are where data is stored in Cosmos DB, and this particular container holds data related to aggregate results generated from the Intelligent App.  
-* **ImageAnalysisContainer** is another container within the same IntelligentAppDB database. It’s dedicated to storing data pertaining to OCR analysis generated by Azure AI Vision.  
+By dynamically scaling resources in response to fluctuations in workload demand, the autoscaler ensures they are efficiently allocated, preventing overprovisioning during periods of low activity and scaling up when demand peaks. This adaptive approach enhances the responsiveness of Intelligent Apps and mitigates unnecessary expenses by rightsizing the infrastructure.
+
+##### Configuring the Horizontal Pod Autoscaler
+
+...
 
 ## Exercise
 
