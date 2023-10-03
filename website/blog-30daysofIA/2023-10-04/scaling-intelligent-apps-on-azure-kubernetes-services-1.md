@@ -44,7 +44,7 @@ In this article, dive into how to harness AKS’ powerful features like auto-sca
  * Configuring AKS for dynamic application scaling
  * Ensuring High Availability with Azure Load Balancer and AKS
 
-![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
+![image of node settings in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-1.png)
 
 ## Scaling Intelligent Apps on Azure Kubernetes Services (1) 
 
@@ -109,7 +109,7 @@ az login
 
 In the first part of this series, we created an AKS cluster named `aks-intelligent-app`. The picture below shows that AKS creates a single node pool named `nodepool1` by default. We can access the AKS cluster nodes and visualize the default `nodepool1` by clicking the **Node pools** menu in the **Settings** section:
 
-![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
+![image of node pools in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-2.png)
 
 In the image above, “Node count: 1/1 ready” indicates that we have one virtual machine (node) allocated in the node pool nodepool1 within our AKS cluster. That node is currently healthy and operational, meaning it’s ready to accept and execute workloads.
 
@@ -150,13 +150,13 @@ kubectl get nodes
 
 Refresh the **Node pools** page of your `aks-intelligent-app` AKS cluster in the Azure Portal: 
 
-![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
+![image of refreshed node pools in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-3.png)
 
 The “Node count: 2/2 ready” above indicates that you now have two nodes allocated, both in a healthy and operational state.
 
 To view more information about the node in your cluster, select the **Nodes** tab on the **Node pools** page:
 
-![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
+![image of nodes tab results in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-4.png)
 
 Here, the CPU, memory, disks, and Pods information provide a comprehensive view of the cluster’s resource utilization and workload distribution.
 
