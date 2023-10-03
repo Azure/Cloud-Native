@@ -316,6 +316,42 @@ const config = {
     // ---- End Multiple Blogs
 
     ["docusaurus-plugin-clarity", {}],
+
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/Build-IA/',
+            from: '/Fall-For-IA',
+          },
+          {
+            to: '/Build-IA/LearnLive/',
+            from: '/Fall-For-IA/LearnLive',
+          },
+          {
+            to: '/Build-IA/AskTheExpert/',
+            from: '/Fall-For-IA/AskTheExpert',
+          },
+          {
+            to: '/Build-IA/HackTogether/',
+            from: '/Fall-For-IA/HackTogether',
+          },
+          {
+            to: '/Build-IA/CloudSkills/',
+            from: '/Fall-For-IA/CloudSkills',
+          },
+          {
+            to: '/Build-IA/calendar/',
+            from: '/Fall-For-IA/calendar',
+          },
+          {
+            to: '/Build-IA/CommunityGallery/',
+            from: '/Fall-For-IA/CommunityGallery',
+          },
+        ],
+      },
+    ],
   ],
 };
 
