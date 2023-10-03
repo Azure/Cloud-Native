@@ -335,8 +335,8 @@ You’ll get a result similar to the one below:
 | REPOSITORY   | TAG   | IMAGE ID  | CREATED  | SIZE  |
 |:------------|:------------|:------------|:------------|:------------|
 | intelligent-app     | latest     | 1ca9eb914279     | 40 minutes ago     | 258MB     |
-| <name-of-azure-container-registry>.azurecr.io/intelligent-app     | v2     | 1ca9eb914279     | 40 minutes ago        | 258MB     |
-| <name-of-azure-container-registry>.azurecr.io/intelligent-app     | v1     | 676ede4aa18c     | About an hour ago     | 197MB     |
+| &lt;name-of-azure-container-registry&gt;.azurecr.io/intelligent-app     | v2     | 1ca9eb914279     | 40 minutes ago        | 258MB     |
+| &lt;name-of-azure-container-registry&gt;.azurecr.io/intelligent-app     | v1     | 676ede4aa18c     | About an hour ago     | 197MB     |
 
 Now, use `docker push` to upload the image to your registry. Replace `<name-of-azure-container-registry>` with your ACR login server name.
 
