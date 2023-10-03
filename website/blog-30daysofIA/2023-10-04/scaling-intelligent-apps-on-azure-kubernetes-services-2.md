@@ -36,134 +36,103 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 </head>
 
 <!-- End METADATA -->
-In this article, explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS).
+In this article, dive into how to harness AKS’ powerful features like auto-scaling and high availability to manage variable workloads and monitoring to maintain continuous service.
 
 ## What We'll Cover:
 
- * What is a multi-model database?
- * Concepts of Azure Cosmos DB
- * Creating a Multi-Model Database with Cosmos DB and AKS
+ * Monitoring AKS for scalability and availability improvements
+ * Real-world use cases for scaling and high availability
 
-![image of a multi-model database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-1.png)
+![image of node settings in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-1.jpg)
 
-## Powering Intelligent Apps with a Multi-Model Database Using Cosmos DB and Azure Kubernetes Service (1) 
+## Scaling Intelligent Apps on Azure Kubernetes Services (2) 
 
-In the [first topic of this week](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1), we created an Intelligent App that helped us analyze images and extract valuable data. We constructed a Python web API to execute [optical character recognition](https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr?WT.mc_id=javascript-99907-ninarasi) (OCR) on images uploaded to the application using [Azure AI Vision](https://azure.microsoft.com/products/cognitive-services/vision-services?WT.mc_id=javascript-99907-ninarasi) and [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service?WT.mc_id=javascript-99907-ninarasi) (AKS) for hosting the application.  
-
-In this second topic for the week, we’ll explore how Azure Cosmos DB’s support for multi-model databases provides flexibility in data modeling, scalability, and performance optimization—crucial for storing, indexing, and querying data in multiple formats.   
-
-## Unraveling Multi-Model Databases and Cosmos DB
-
-Multi-model databases let us store and work with data in multiple formats, including relational data, JSON documents, key-value pairs, spatial data, and graphs. They simplify development, reduce data integration issues, and support a more comprehensive data analysis, leading to valuable insights.
-
-Below are some of the benefits of using a multi-model database:
-
-* **Scalability and performance**—Multi-model databases allow us to shape data to fit different formats. We can tailor these databases to our applications, spreading data across clusters to support efficient, smooth scaling. Additionally, they support intelligent indexing, caching, and query optimization to ensure fast and efficient data access, even when handling complex queries.
-* **Versatility**—Multi-model databases support versatility by accommodating diverse data types and structures within a unified platform. Unlike traditional databases, they seamlessly integrate storing and retrieving various data formats, enabling us to dynamically model and manage complex information.
-* **Data handling and transformation advantages**—Because a multi-model database supports different data structures, it can easily handle structured, semi-structured, and unstructured data. These databases offer a transformative advantage in applications dealing with diverse and unstructured data. Their ability to manage various data types ensures a holistic and agile data storage, retrieval, and analysis approach. As such, multi-model databases enable streamlined development, simplified integration, and flexible querying.
-* **OCR analysis**—Multi-model databases are invaluable assets for managing the complex needs of diverse data from OCR analysis. This flexibility in data handling means efficient storage and retrieval of OCR results, enabling complex queries that reveal deeper insights across various data types.
-
-[Azure Cosmos DB](https://azure.microsoft.com/products/cosmos-db?WT.mc_id=javascript-99907-ninarasi) is Azure’s top-tier multi-model database service, compatible with various popular data models and APIs. It effortlessly handles numerous data types, providing developers a unified platform for various application purposes.
-
-Supporting several APIs, including native NoSQL, and open-source APIs for MongoDB, Apache Cassandra, Gremlin, and Table, Cosmos DB enable smooth transition and integration of current apps and aids in building new ones. This adaptability in data modeling ensures quick adjustments to evolving needs, maintaining low latency, global distribution, and high availability.
-
-Let’s explore the power of multi-model databases for Intelligent Apps.
-
-### Creating a Multi-Model Database with Cosmos DB and AKS
-
-In the following sections, we’ll walk through how Azure Cosmos DB can handle the unstructured data from the OCR analysis and provide multi-model databases for our Intelligent App while hosting it in AKS.
-
-:::info
-Watch the intelligent apps webinar on **[Driving Business Value by Modernizing with Cloud-Native & AI](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?lcid=en-us)** with *Microsoft* and *Forrester*.
-
-Explore how modernization sets the stage for incorporating AI/ML into existing applications and how building new, intelligent applications can drive innovation and competitive advantage across a range of industries. Walkthrough a showcase of real-world use cases that demonstrate how AI can be seamlessly integrated into cloud-native environments driving tangible business value.  
-:::
+In the [first topic of this week](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1), we explored how to use Azure Cognitive Services for Vision within Azure Kubernetes Service (AKS) to create an Intelligent App capable of analyzing images and extracting valuable data through optical character recognition (OCR). The week’s [second topic](https://azure.github.io/Cloud-Native/30daysofIA/powering-intelligent-apps-with-azure-cosmos-db-1) focused on the advantages of Azure Cosmos DB, highlighting its multi-model database and ability to handle diverse data resulting from OCR analysis in our Intelligent App.
+ 
+In the [part one of this third topic](https://azure.github.io/Cloud-Native/30daysofIA/scaling-intelligent-apps-on-azure-kubernetes-services-1), we configured [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/?WT.mc_id=javascript-99907-ninarasi) to manage varying workloads and smoothly scale our Intelligent App, ensuring it can handle intense and fluctuating workloads. Let us now explore how to monitor and scale without compromising performance or availability.
 
 ### Prerequisites
 
-To follow this tutorial, ensure you have:  
+To follow this tutorial, ensure you have read through the [first](https://azure.github.io/Cloud-Native/30daysofIA/scaling-intelligent-apps-on-azure-kubernetes-services-1) part of this topic.
 
-* Read through the [first topic of this week](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1). 
-* [Python 3.7](https://www.python.org/downloads/) or later installed  
-* [VS Code](https://code.visualstudio.com/download) or another integrated development environment (IDE) for writing Python code  
-* The [sample Python application](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-before-pt2) downloaded  
-* [pip](https://pip.pypa.io/en/stable/installing/), the package manager for Python, installed  
-* A [free Azure account](https://azure.microsoft.com/free/?WT.mc_id=javascript-99907-ninarasi). Sign up if you don’t have one yet. 
-* The [Azure command-line interface](https://learn.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=javascript-99907-ninarasi) (CLI)
+### Monitoring AKS for Scalability and Availability Improvements
 
-For a look at the final project from this tutorial, review the [complete code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2).
+Let’s review how to set up and use [Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/overview?WT.mc_id=javascript-99907-ninarasi) and [Azure Log Analytics](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-overview?WT.mc_id=javascript-99907-ninarasi) to monitor AKS effectively.
+ 
+First, let’s create a Log Analytics workspace. In Azure Log Analytics, a workspace is a centralized repository and analytics platform that collects, stores, and provides insights into log and telemetry data generated by Azure services, applications, and resources.
+ 
+Click **Create a resource**, search for “Log Analytics workspaces,” then click **Create**.
 
-### Creating an Azure Cosmos DB for NoSQL Account
+![image of log analytics workspace results in Azure resources search](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-2.png)
 
-This section provides step-by-step instructions for setting up a multi-model database with Cosmos DB in your AKS environment. We’ll focus on the preparation, design, and configuration stages.  
+Next, select the resource group “computer-vision” and, in **Instance details**, set the workspace name as “DefaultLAWorkspace”:
 
-Note that an Azure Cosmos DB for NoSQL account isn’t related to your Azure account. An Azure Cosmos DB for NoSQL account is a database service provided by Microsoft Azure for creating, managing, and scaling globally distributed, multi-model databases.  
+![image of log analytics workspace settings in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-3.png)
 
-An Azure Cosmos DB account provides a collection of Azure Cosmos DB assets, such as databases, containers, and items. It also offers an endpoint that facilitates connections for various tools and SDKs, enabling actions within Azure Cosmos DB. For deeper insight into the assets within Azure Cosmos DB, refer to the [Azure Cosmos DB resource model](https://learn.microsoft.com/azure/cosmos-db/resource-model?WT.mc_id=javascript-99907-ninarasi).  
+Now, open the `aks-intelligent-app` AKS cluster in the Azure Portal. Open **Diagnostic settings** under the **Monitoring** section and click **Add diagnostic setting**:
 
-Let’s create an Azure Cosmos DB account using the API for NoSQL. First, [sign](https://portal.azure.com/) in to the Azure portal. From the Azure portal menu or the [homepage](https://portal.azure.com/#home), select **Create a resource**.  
+![image of location for diagnostics settings in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-4.png)
 
-On the **Create a resource** page, search for **Azure Cosmos DB**.
+Next, give the diagnostic setting a name, like “diagnostic-setting-intelligent-app”. Check all Kubernetes-related log categories, check **AllMetrics**, check **Send to Log Analytics workspace**, and then select the **DefaultLAWorkspace** as the destination. Click the Save button.
 
-![image of a searching for Azure Cosmos DB in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-2.png)
+![image of diagnostics settings in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-5.png)
 
-When the results appear, locate the **Azure Cosmos DB** service, then click **Create**.
+Now, let’s view the logs generated by our AKS cluster. Click the **Logs** item under **Monitoring**, then locate the **Container memory** query under the **Alerts** section and click **Run**:
 
-![image of creating an Azure Cosmos DB in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-3.png)
+![image of location for diagnostics logs in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-5.png)
 
-Next, you’ll see the **Azure Cosmos DB** service page as follows:
+You’ll see that Azure automatically creates the query below for you. This query is written in [Kusto Query Language (KQL)](https://learn.microsoft.com/azure/data-explorer/kusto/query/?WT.mc_id=javascript-99907-ninarasi), which is widely used in Azure Portal:
 
-![image of Azure Cosmos DB service page](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-4.png)
+```
+let threshold = 75000000; // choose a threshold 
+Perf
+| where ObjectName == "K8SContainer" and CounterName == "memoryRssBytes"
+| summarize AvgUsedRssMemoryBytes = avg(CounterValue) by bin(TimeGenerated, 30m), InstanceName, _ResourceId
+| where AvgUsedRssMemoryBytes > threshold 
+| render timechart
+```
+ 
+KQL queries are vital in monitoring an AKS cluster, as they provide a powerful and flexible means to extract, analyze, and visualize data from AKS clusters. These queries allow administrators and DevOps teams to get insights into the cluster's health, performance, and security by querying telemetry and logs collected from various sources within the AKS environment.
+ 
+When you click the **Run** button to execute the log query, you get the following chart:
 
-The API determines the type of account to create. Select **Azure Cosmos DB API for NoSQL** and click **Create**.
+![image of chart after running diagnostics settings in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-6.png)
 
-![image of creating Azure Cosmos DB API for NoSQL](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-5.png)
+To view the tabular logs, click the **Results** tab as follows:
 
-When you reach the Create **Azure Cosmos DB Account** page, enter the settings below for the new account, then click **Review + create**.
+![image of log results after running diagnostics settings in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-7.png)
 
- * **Resource Group**: computer-vision
- * **Account Name**: This should be unique to you.
- * **Capacity mode**: Serverless
+Next, let’s review how to view key metrics related to the usage of our AKS cluster. Click **Metrics** under **Monitoring**.
 
-![image of adding settings for the new account in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-6.png)
+![image of Metrics location under Monitoring in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-8.png)
 
-Finally, review your settings and click the **Create** button.
+Here, we can create one or more charts using predefined metrics to monitor, such as CPU, disk, memory usage, network traffic, and Pod disruption events.
+ 
+[Azure Kubernetes Service Diagnostics](https://learn.microsoft.com/azure/aks/aks-diagnostics?WT.mc_id=javascript-99907-ninarasi) plays a vital role in enhancing the management and performance of Kubernetes clusters within the Azure environment. By enabling diagnostics, we can gain valuable insights into Kubernetes cluster health, availability, and efficiency.
+ 
+Click **Diagnose and solve problems** in the left menu to visualize the many troubleshooting categories.
 
-![image of reviewing settings for the new account in Azure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-7.png)
+![image of Diagnose and solve problems location in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-9.png)
 
-Next, wait a few minutes until Azure creates the account and click the **Go to resource** button. Wait for the portal to display your new Cosmos DB account’s overview.
+These categories provide detailed information about issues related to various cluster aspects, including performance, connectivity, scalability, security, node health, and best practices.
+ 
+Now, let’s explore the details of one of these AKS cluster issues. Click the **Cluster and Control Plane Availability and Performance** blade:
 
-![image of the new Cosmos DB account's overview](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-8.png)
+![image of AKS cluster options in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-10.png)
 
-We still need to create the NoSQL database. So, select **Data Explorer** on the sidebar. Then select the **New Container** dropdown menu and select **New Database**:
+Here, you can verify the existence of many possible issues regarding cluster availability and performance:
 
-![image of selecting a new database to create the NoSQL database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-9.png)
+![image of possible cluster issues in Azure](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-6-11.png)
 
-Next, provide “IntelligentAppDB” as the **Database id** and click **OK**:
+Azure Kubernetes Service Diagnostics is a critical tool for monitoring, maintaining, and optimizing AKS clusters. AKS Diagnostics lets you identify potential issues and make data-driven improvements by offering real-time insights and recommendations across various facets of cluster health, performance, and security.
 
-![image of adding the new Database id](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-10.png)
+:::info
+Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your AKS app dev skills. 
+ 
+To start with the basics for developing [Kubernetes](https://azure.microsoft.com/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi) applications, explore [#30DaysOfCloudNative](https://azure.github.io/Cloud-Native/cnny-2023).
+:::
 
-Now, select the **IntelligentAppDB** database, click the ellipsis (...) icon, and click the **New Container** option:
 
-![image of adding a new container](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-11.png)
-
-Provide “ImageAnalysisContainer” as the **Container id** and “Partition1” as the partition key. Then, click **OK** to save the container.
-
-![image of entering container id and partition key](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-12-v2.png)
-
-Repeat the previous step to create a new container. Provide “AggregateResultsContainer” as the **Container id** and “/id” as the **Partition key**. Then click **OK** to save the database.
-
-![image of saving the new database](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-13-v2.png)
-
-Now, your database and container structure should appear like the image below:
-
-![image of database and container structure](../../static/img/fallforia/blogs/2023-09-28/blog-image-3-14.png)
-
-Let’s review the elements of this Cosmos DB setup:  
-
-* **IntelligentAppDB** is a database within Cosmos DB, serving as a high-level container for grouping related data relevant to our Intelligent App.  
-* **AggregateResultsContainer** is a container within the IntelligentAppDB database. Containers are where data is stored in Cosmos DB, and this particular container holds data related to aggregate results generated from the Intelligent App.  
-* **ImageAnalysisContainer** is another container within the same IntelligentAppDB database. It’s dedicated to storing data pertaining to OCR analysis generated by Azure AI Vision.  
 
 ## Exercise
 
