@@ -132,14 +132,51 @@ Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)*
 To start with the basics for developing [Kubernetes](https://azure.microsoft.com/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi) applications, explore [#30DaysOfCloudNative](https://azure.github.io/Cloud-Native/cnny-2023).
 :::
 
+### Real-World Use Cases: Scaling and High Availability in Intelligent Apps
 
+The cluster autoscaler, Azure Load Balancer, and Azure availability zones promote cost-efficiency for Intelligent Apps, evenly distributing traffic and optimizing service performance, ensuring uninterrupted user experiences.
+ 
+These versatile tools have broad applicability across industries, including finance, healthcare, e-commerce, and beyond, particularly for mission-critical applications with variable workloads and high uptime demands.
+
+#### E-Commerce Businesses
+
+E-commerce businesses must handle traffic that varies dramatically during special events or holiday seasons. Their websites require high uptime and disaster recovery capabilities.
+ 
+These businesses can experience significant setbacks during periods of heavy user traffic or technical glitches, potentially leading to customer dissatisfaction, abandoned shopping carts, and lost sales.
+ 
+By implementing a high availability strategy with Intelligent Apps, e-commerce businesses can ensure uninterrupted service, website responsiveness, and seamless online shopping experience, ultimately boosting customer satisfaction and revenue. Tools like the cluster autoscaler and Azure Load Balancer ensure that e-commerce businesses have the resources and capacity to handle high traffic effortlessly.
+
+#### Healthcare Institutions
+
+Healthcare institutions require data reliability and disaster recovery capabilities. In healthcare, applications often need to process large volumes of patient data and images, especially during diagnostic procedures.
+ 
+By strategically implementing and managing Intelligent Apps with tools like Azure Load Balancer, availability zones, and cluster autoscaler, healthcare organizations ensure that their digital infrastructure aligns with operational goals. Moreover, they can enhance patient care and regulatory compliance while containing costs and mitigating risks.
+
+#### Financial Services
+
+Financial services organizations often have applications that handle trading, analytics, and customer transactions. These organizations require high availability and data residency compliance.
+ 
+For example, banking apps face challenges during heavy usage or technical hiccups. A surge in users accessing their accounts simultaneously, such as during peak hours or special events, can strain the app's servers, causing slowdowns or timeouts.
+ 
+Together, tools like Azure Load Balancer, availability zones, and the cluster autoscaler help banking apps keep data in the required regions, handle surges in activity, stay resilient, and provide customers with a smooth and reliable banking experience.
+
+### Optimizing Our Intelligent App
+
+To optimize the Intelligent App from [Topic 1](https://azure.github.io/Cloud-Native/30DaysOfIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1) for dynamic scaling and uninterrupted service when processing images with OCR and storing unstructured results in Cosmos DB, you could follow these strategies:
+ 
+* Configure the cluster autoscaler to adjust the AKS cluster’s node count based on workload fluctuations. During surges in image processing, it scales out by provisioning additional nodes for efficient handling. Conversely, during low-demand periods, it scales in to reduce operational costs while maintaining performance.
+* Use the AKS HPA to scale application pods dynamically within the cluster. HPA monitors custom metrics like queue length or processing time. When thresholds are exceeded, it automatically adjusts the number of pods, ensuring that OCR processing workloads are efficiently distributed across multiple pods for uninterrupted service.
+* Leverage the Azure Load Balancer to distribute image processing requests evenly across app instances, optimizing performance and preventing overloads. Deploy app instances across Azure availability zones for redundancy and fault tolerance. Health probes actively monitor instance health, directing traffic away from unhealthy instances to maintain high availability.
+* Optimize your containers’ resource use. Fine-tune resource requests and limits for app containers to ensure efficient resource use and stability. Continuously monitor container resource use and adjust resource allocation based on observed usage patterns using tools like Prometheus and Grafana.
 
 ## Exercise
 
-* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2) to build your intelligent app with multi-modal databases.  
-* Complete the **[AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc)** to build on your app dev and AI skills.  
-* Register for **[Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
+* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-3/tree/main/Microsoft_21_Code/Deployment) to scale and monitor your intelligent app on AKS.  
+* Register for the **[Learn Live: Kubernetes Edition](https://learn.microsoft.com/events/learn-events/learnlive-intelligent-apps-with-azure-kubernetes-service/?WT.mc_id=javascript-99907-ninarasi)** starting Oct 12 - a live SME guided walkthrough on a reference architecture to build intelligent apps with AKS and Azure Open AI  
+* Register for [Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/reactor/series/S-1037/) session for live Q&A with the Product Engineering team on building intelligent apps with AKS.
 
 ## Next Steps
 
-Continue to the [next part of this topic](https://azure.github.io/Cloud-Native/30daysofIA/powering-intelligent-apps-with-azure-cosmos-db-2) to further explore loading OCR data into the multi-model database with Azure Cosmos DB, testing the app locally and deploying new version of the intelligent app to Azure Kubernetes Service. Furthermore, learn more about the real-world use cases for multi-model databases.
+Azure Kubernetes Service offers a robust solution for scaling and ensuring high availability in intelligent applications. It provides automated tools for setting up, managing, and expanding containerized applications using Kubernetes. Its support for scalability and availability prevents disruptions, supports downtime-free updates, and enables you to create a high-performance Intelligent App.
+ 
+[Dive deeper](https://azure.microsoft.com/products/kubernetes-service#get-started?WT.mc_id=javascript-99907-ninarasi) into the features of Azure Kubernetes Services to fully realize its potential in scaling and managing your Intelligent Apps.
