@@ -44,7 +44,7 @@ In this article, dive into how to harness AKS’ powerful features like auto-sca
  * Configuring AKS for dynamic application scaling
  * Ensuring High Availability with Azure Load Balancer and AKS
 
-![image of node settings in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-1.png)
+![image of node settings in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-1.jpg)
 
 ## Scaling Intelligent Apps on Azure Kubernetes Services (1) 
 
