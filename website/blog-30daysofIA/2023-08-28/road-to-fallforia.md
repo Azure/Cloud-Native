@@ -1,6 +1,6 @@
 ---
 slug: road-to-fallforIA
-title: It's Time to #BuildIntelligentApps
+title: "It's Time to #BuildIntelligentApps"
 authors: [cnteam]
 draft: false
 hide_table_of_contents: false
