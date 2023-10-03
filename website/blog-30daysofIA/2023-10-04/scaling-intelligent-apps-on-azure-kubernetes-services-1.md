@@ -1,5 +1,5 @@
 ---
-date: 2023-10-03T09:00
+date: 2023-10-04T09:00
 slug: scaling-intelligent-apps-on-azure-kubernetes-services-1
 title: 2-5. Scaling Intelligent Apps on Azure Kubernetes Services (1)
 authors: [cnteam]
@@ -336,14 +336,14 @@ Events:                   <none>
 
 Now let’s analyze the output:
 
-* **Name and namespace—**The PDB is named “intelligent-app” and belongs to the “default” namespace. 
-* **Min available—**The PDB specifies that at least three Pods must always be available. So, even during planned disruptions, there will always be at least three application Pods running. 
-* **Selector—**The PDB applies to Pods labeled `app=intelligent-app`. 
-* **Status —**
-  * **Allowed disruptions—**The value 0 means that the PDB doesn’t allow any disruptions or evictions of Pods that match its selector. In this example, it ensures that at least three healthy Pods are always available and no disruptions are permitted.
-  * **Current—**Shows the current number of available healthy replicas that match the PDB’s selector. In this case, it’s 1, meaning there is currently one healthy Pod.
-  * **Desired—**Indicates the desired number of replicas that should be available. It’s also set to 3, meaning the PDB wants to maintain three replicas.
-  * **otal—**The total number of replicas matching the PDB's selector. It’s 1, indicating that there is one replica.
+* **Name and namespace**—The PDB is named “intelligent-app” and belongs to the “default” namespace. 
+* **Min available**—The PDB specifies that at least three Pods must always be available. So, even during planned disruptions, there will always be at least three application Pods running. 
+* **Selector**—The PDB applies to Pods labeled `app=intelligent-app`. 
+* **Status** —
+  * **Allowed disruptions**—The value 0 means that the PDB doesn’t allow any disruptions or evictions of Pods that match its selector. In this example, it ensures that at least three healthy Pods are always available and no disruptions are permitted.
+  * **Current**—Shows the current number of available healthy replicas that match the PDB’s selector. In this case, it’s 1, meaning there is currently one healthy Pod.
+  * **Desired**—Indicates the desired number of replicas that should be available. It’s also set to 3, meaning the PDB wants to maintain three replicas.
+  * **Total**—The total number of replicas matching the PDB's selector. It’s 1, indicating that there is one replica.
 * Events—The `<none>` entry under `Events` indicates no recent events or changes associated with this PDB.
 
 By implementing these budgets, AKS ensures a gradual and controlled update process, minimizing service disruption and providing a reliable user experience. It’s a strategic approach to balance necessary updates with keeping the service responsive and available to users.
@@ -362,14 +362,14 @@ The Azure CLI command above updates the `aks-intelligent-app` AKS cluster, setti
 
 To configure Azure Load Balancer in AKS for high availability, consider implementing the following additional measures: 
 
-* **Use Azure AZs—**Deploy your AKS cluster across multiple [Azure AZs](https://azure.microsoft.com/explore/global-infrastructure/availability-zones?WT.mc_id=javascript-99907-ninarasi) to ensure redundancy and fault tolerance.
-* **Configure health probes—**Define [health probes](https://learn.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview?WT.mc_id=javascript-99907-ninarasi) for your Azure Load Balancer to regularly check the health of backend pods or nodes.
-* **Load Balancer rules—**Configure [load balancing rules](https://learn.microsoft.com/azure/load-balancer/manage-rules-how-to?WT.mc_id=javascript-99907-ninarasi) to distribute traffic efficiently.
-* **Backend pool scaling—**Adjust the [backend pool scaling](https://learn.microsoft.com/azure/load-balancer/backend-pool-management?WT.mc_id=javascript-99907-ninarasi) based on traffic patter
-* **Network security rules—**Implement [network security groups (NSGs)](https://learn.microsoft.com/security/benchmark/azure/baselines/azure-load-balancer-security-baseline?WT.mc_id=javascript-99907-ninarasi) to control inbound and outbound traffic to and from the Load Balancer.
-* **Azure monitoring and diagnostics—**Set up [monitoring and diagnostics](https://learn.microsoft.com/azure/aks/monitor-aks?WT.mc_id=javascript-99907-ninarasi) to gain insights into the Load Balancer’s performance and traffic distribution.
-* **Backup and Recovery—**Implement [backup and disaster recovery](https://learn.microsoft.com/azure/backup/azure-kubernetes-service-backup-overview?WT.mc_id=javascript-99907-ninarasi) strategies for your AKS cluster and Load Balancer configurations.
-* **Scaling and autoscaling—**Use [AKS horizontal Pod autoscaling](https://learn.microsoft.com/azure/aks/concepts-scale?WT.mc_id=javascript-99907-ninarasi) for your applications to adjust the number of pods automatically based on resource usage.
+* **Use Azure AZs**—Deploy your AKS cluster across multiple [Azure AZs](https://azure.microsoft.com/explore/global-infrastructure/availability-zones?WT.mc_id=javascript-99907-ninarasi) to ensure redundancy and fault tolerance.
+* **Configure health probes**—Define [health probes](https://learn.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview?WT.mc_id=javascript-99907-ninarasi) for your Azure Load Balancer to regularly check the health of backend pods or nodes.
+* **Load Balancer rules**—Configure [load balancing rules](https://learn.microsoft.com/azure/load-balancer/manage-rules-how-to?WT.mc_id=javascript-99907-ninarasi) to distribute traffic efficiently.
+* **Backend pool scaling**—Adjust the [backend pool scaling](https://learn.microsoft.com/azure/load-balancer/backend-pool-management?WT.mc_id=javascript-99907-ninarasi) based on traffic patter
+* **Network security rules**—Implement [network security groups (NSGs)](https://learn.microsoft.com/security/benchmark/azure/baselines/azure-load-balancer-security-baseline?WT.mc_id=javascript-99907-ninarasi) to control inbound and outbound traffic to and from the Load Balancer.
+* **Azure monitoring and diagnostics**—Set up [monitoring and diagnostics](https://learn.microsoft.com/azure/aks/monitor-aks?WT.mc_id=javascript-99907-ninarasi) to gain insights into the Load Balancer’s performance and traffic distribution.
+* **Backup and Recovery**—Implement [backup and disaster recovery](https://learn.microsoft.com/azure/backup/azure-kubernetes-service-backup-overview?WT.mc_id=javascript-99907-ninarasi) strategies for your AKS cluster and Load Balancer configurations.
+* **Scaling and autoscaling**—Use [AKS horizontal Pod autoscaling](https://learn.microsoft.com/azure/aks/concepts-scale?WT.mc_id=javascript-99907-ninarasi) for your applications to adjust the number of pods automatically based on resource usage.
 
 You can [explore this topic further](https://learn.microsoft.com/azure/aks/load-balancer-standard?WT.mc_id=javascript-99907-ninarasi) on Microsoft Learn. 
 
