@@ -1,7 +1,7 @@
 ---
-date: 2023-10-03T09:01
-slug: scaling-intelligent-apps-on-azure-kubernetes-services-2
-title: 2-6. Scaling Intelligent Apps on Azure Kubernetes Services (2)
+date: 2023-10-03T14:30
+slug: powering-intelligent-apps-with-azure-cosmos-db-1
+title: 2-3. Powering Intelligent Apps with Azure Cosmos DB (1)
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
@@ -14,17 +14,17 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 ---
 
 <head>
-<meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/scaling-intelligent-apps-on-azure-kubernetes-services-2"/>
+<meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/powering-intelligent-apps-with-azure-cosmos-db-1"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
-<meta property="og:description" content="Dive into how to harness AKS’ powerful features like auto-scaling and high availability to manage variable workloads and maintain continuous service."/>
+<meta property="og:description" content="Explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS)."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
-      content="https://azure.github.io/Cloud-Native/30daysofIA/scaling-intelligent-apps-on-azure-kubernetes-services-2" />
+      content="https://azure.github.io/Cloud-Native/30daysofIA/powering-intelligent-apps-with-azure-cosmos-db-1" />
     <meta name="twitter:title" 
       content="**Fall For Intelligent Apps! 🍂 | Build AI Apps On Azure" />
     <meta name="twitter:description" 
-      content="2-6.Dive into how to harness AKS’ powerful features like auto-scaling and high availability to manage variable workloads and maintain continuous service." />
+      content="2-3. Explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS)" />
     <meta name="twitter:image" 
       content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -32,7 +32,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
       content="@devanshidiaries" />
     <meta name="twitter:site" content="@AzureAdvocates" /> 
     <link rel="canonical" 
-      href="https://azure.github.io/Cloud-Native/30daysofIA/scaling-intelligent-apps-on-azure-kubernetes-services-2" />
+      href="https://azure.github.io/Cloud-Native/30daysofIA/powering-intelligent-apps-with-azure-cosmos-db-1" />
 </head>
 
 <!-- End METADATA -->

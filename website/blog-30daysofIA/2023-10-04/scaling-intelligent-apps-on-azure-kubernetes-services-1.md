@@ -1,5 +1,5 @@
 ---
-date: 2023-10-03T09:00
+date: 2023-10-04T09:00
 slug: scaling-intelligent-apps-on-azure-kubernetes-services-1
 title: 2-5. Scaling Intelligent Apps on Azure Kubernetes Services (1)
 authors: [cnteam]
