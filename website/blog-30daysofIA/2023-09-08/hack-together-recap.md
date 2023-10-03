@@ -1,6 +1,6 @@
 ---
 slug: hacktogether-recap
-title: HackTogether Recap 🍂
+title: HackTogether Recap
 authors: [cnteam]
 draft: false
 hide_table_of_contents: false
@@ -15,13 +15,13 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 <head>
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/hacktogether-recap"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="HackTogether Recap 🍂 | Build Intelligent Apps On Azure"/>
+<meta property="og:title" content="HackTogether Recap | Build Intelligent Apps On Azure"/>
 <meta property="og:description" content="Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!"/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/hacktogether-recap" />
     <meta name="twitter:title" 
-      content="Continue The Learning Journey through **Fall For Intelligent Apps! 🍂" />
+      content="Continue The Learning Journey through **Build Intelligent Apps!" />
     <meta name="twitter:description" 
       content="Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!" />
     <meta name="twitter:image" 
@@ -36,7 +36,7 @@ tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, as
 
 <!-- End METADATA -->
 
-Continue The Learning Journey through **Fall For Intelligent Apps!** 🍂
+Continue The Learning Journey through **Build Intelligent Apps!**
 
 ## What We'll Cover
  * Thank you! ♥️ 
@@ -87,8 +87,8 @@ Day 1️⃣5️⃣: Being in the AI Era, we dive into the [Azure OpenAI Service]
 2. Lets #HackTogether: Javascript On Azure [Keynote](https://dev.to/azure/lets-hacktogether-javascript-on-azure-keynote-nml)
 3. [Step by Step Guide: Migrating v3 to v4 programming model for Azure Functions for Node.Js Application](https://techcommunity.microsoft.com/t5/educator-developer-blog/step-by-step-guide-migrating-v3-to-v4-programming-model-for/ba-p/3897691?WT.mc_id=academic-98351-juliamuiruri)
 
-## Continue your journey with #FallForIntelligentApps
-Join us this Fall on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-native app development, and cloud-scale data to build highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure. Engage in a self-paced learning adventure by following along the <a href="https://aka.ms/FallForIA/30days" target="_blank">#30Days of Intelligent Apps</a> series, completing the <a href="https://aka.ms/FallForIA/csc" target="_blank">Intelligent Apps Skills Challenge</a>, joining the Product Group for a live <a href="http://aka.ms/FallforIA/ATE-series" target="_blank">Ask The Expert</a> series or building an end to end solution architecture with a live guided experience through the <a href="http://aka.ms/FallforIA/LearnLive" target="_blank">Learn Live</a> series. Discover more <a href="https://aka.ms/FallForIA" target="_blank">here</a>.
+## Continue your journey with #BuildIntellgentApps
+Join us on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-native app development, and cloud-scale data to build highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure. Engage in a self-paced learning adventure by following along the <a href="https://aka.ms/FallForIA/30days" target="_blank">#30Days of Intelligent Apps</a> series, completing the <a href="https://aka.ms/FallForIA/csc" target="_blank">Intelligent Apps Skills Challenge</a>, joining the Product Group for a live <a href="http://aka.ms/FallforIA/ATE-series" target="_blank">Ask The Expert</a> series or building an end to end solution architecture with a live guided experience through the <a href="http://aka.ms/FallforIA/LearnLive" target="_blank">Learn Live</a> series. Discover more <a href="https://aka.ms/FallForIA" target="_blank">here</a>.
 
 ## Hands-on practice: Make your first contribution to open source!
 Join our GitHUb Discussion Forum to connect with developers from every part of world, see contributions from other, find collaborators and make your first contribution to a real-world project!
