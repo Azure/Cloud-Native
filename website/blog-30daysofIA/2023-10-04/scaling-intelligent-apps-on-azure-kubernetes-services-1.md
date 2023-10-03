@@ -239,7 +239,7 @@ You should receive an output similar to the following:
 | NAME  | TYPE  | CLUSTER-IP | EXTERNAL-IP | PORT(S)  | AGE  |
 |:------------|:------------|:------------|:------------|:------------|:------------|
 | intelligent-app-service     | LoadBalancer     | 10.0.77.60    | 20.121.76.153     | 80:30936/TCP   | 47s    |
-| kubernetes     | ClusterIP    | 10.0.0.1   | <none>     | 443/TCP   | 14m     |
+| kubernetes     | ClusterIP    | 10.0.0.1   | &lt;none&gt;     | 443/TCP   | 14m     |
 
 In this output, we can see a Kubernetes Service named `intelligent-app-service` with a type of `LoadBalancer`, reachable from the cluster through the IP `10.0.77.60`. It’s accessible via `20.121.76.153` on port 80, mapped to port 30936.
 
