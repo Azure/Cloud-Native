@@ -9,7 +9,8 @@
         "tags": [
             "video",
             "azurekubernetesservice",
-            "kubernetes"
+            "kubernetes",
+            "featured"
         ]
     },
     {
@@ -64,7 +65,8 @@
             "azurecontainerapps",
             "azureopenai",
             "ai",
-            "kubernetes"
+            "kubernetes",
+            "featured"
         ]
     },
     {
@@ -78,7 +80,8 @@
             "video",
             "azurekubernetesservice",
             "cosmosdb",
-            "kubernetes"
+            "kubernetes",
+            "featured"
         ]
     },
     {
@@ -94,7 +97,8 @@
             "azureopenai",
             "github",
             "ai",
-            "kubernetes"
+            "kubernetes",
+            "featured"
         ]
     },
     {
@@ -131,7 +135,8 @@
         "tags": [
             "video",
             "azurekubernetesservice",
-            "kubernetes"
+            "kubernetes",
+            "featured"
         ]
     },
     {
@@ -144,7 +149,8 @@
         "tags": [
             "video",
             "azurekubernetesservice",
-            "kubernetes"
+            "kubernetes",
+            "featured"
         ]
     },
     {
@@ -159,7 +165,8 @@
             "azurekubernetesservice",
             "azurecontainerapps",
             "azurefunctions",
-            "kubernetes"
+            "kubernetes",
+            "featured"
         ]
     },
     {
@@ -271,7 +278,8 @@
             "azurefunctions",
             "azurecontainerapps",
             "github",
-            "cosmosdb"
+            "cosmosdb",
+            "featured"
         ]
     },
     {
@@ -284,7 +292,8 @@
         "tags": [
             "codesample",
             "azurecontainerapps",
-            "azureopenai"
+            "azureopenai",
+            "featured"
         ]
     }
 ]

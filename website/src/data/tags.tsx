@@ -130,8 +130,8 @@ export const Tags: {[type in TagType]: Tag} = {
          color: '#5A57E6',
     },
     cosmosdb: {
-        label: 'Cosmos DB',
-        description: 'Cosmos DM',
+        label: 'Azure Cosmos DB',
+        description: 'Azure Cosmos DB',
         color: '#5A57E6',
     },
 
