@@ -344,7 +344,7 @@ Now let’s analyze the output:
   * **Current**—Shows the current number of available healthy replicas that match the PDB’s selector. In this case, it’s 1, meaning there is currently one healthy Pod.
   * **Desired**—Indicates the desired number of replicas that should be available. It’s also set to 3, meaning the PDB wants to maintain three replicas.
   * **Total**—The total number of replicas matching the PDB's selector. It’s 1, indicating that there is one replica.
-* Events—The `<none>` entry under `Events` indicates no recent events or changes associated with this PDB.
+* **Events**—The `<none>` entry under `Events` indicates no recent events or changes associated with this PDB.
 
 By implementing these budgets, AKS ensures a gradual and controlled update process, minimizing service disruption and providing a reliable user experience. It’s a strategic approach to balance necessary updates with keeping the service responsive and available to users.
 
