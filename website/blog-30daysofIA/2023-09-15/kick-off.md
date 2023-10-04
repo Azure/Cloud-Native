@@ -46,7 +46,7 @@ Let’s ride the buzz of AI with the focus on building intelligent apps using cl
  * **Exercise:** Take the [Build Intelligent Apps Skills Challenge](https://aka.ms/FallForIA/apps-csc)
  * **Resources:** [#30DaysOfIA Collection](https://aka.ms/fallforIA/collection/?WT.mc_id=javascript-99907-ninarasi)
 
-![image](../../static/img/fallforia/blogs/2023-09-17/FallForIA_Key_visual.jpg)
+![image](../../static/img/fallforia/blogs/2023-09-17/Build_IA_Key_visual.jpg)
 
 ## Get Ready To #BuildIntelligentApps starting September 18!
 
