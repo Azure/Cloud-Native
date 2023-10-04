@@ -69,15 +69,13 @@ The following sections provide hands-on demonstrations of setting up, monitoring
 
 To follow this tutorial, ensure you have the following:  
 
-* Read through the [first topic of this week](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1). 
+* Read through the [first](https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1) and [second](https://azure.github.io/Cloud-Native/30DaysOfIA/powering-intelligent-apps-with-azure-cosmos-db-1) topics of this week
 * [Python 3.7](https://www.python.org/downloads/) or later installed  
 * [VS Code](https://code.visualstudio.com/download) or another integrated development environment (IDE) for writing Python code  
-* The [sample Python application](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-before-pt2) downloaded  
+* The [sample Python application](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-before-pt2) from the second article of this series downloaded. Open the project before getting started. 
 * [pip](https://pip.pypa.io/en/stable/installing/), the package manager for Python, installed  
 * A [free Azure account](https://azure.microsoft.com/free/?WT.mc_id=javascript-99907-ninarasi). Sign up if you don’t have one yet. 
 * The [Azure command-line interface](https://learn.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=javascript-99907-ninarasi) (CLI)
-
-For a look at the final project from this tutorial, review the [complete code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2).
 
 Check out the [complete project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-3/tree/main/Microsoft_21_Code/Deployment) for a preview of the final project.
 
@@ -142,6 +140,8 @@ Now, run the `kubectl` get nodes command again to retrieve the new node count:
 ```
 kubectl get nodes
 ```
+
+Your results should appear similar to those below:
 
 | NAME   | STATUS   | ROLES  | AGE  | VERSION   |
 |:------------|:------------|:------------|:------------|:------------|
