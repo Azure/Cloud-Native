@@ -10,19 +10,19 @@ toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
 description: "Delve into creating an Intelligent App that leverages Azure AI Vision to analyze images and extract data. We guide readers through crafting an API to perform optical character recognition (OCR) on uploaded images, and subsequently deploying this API via Azure Kubernetes Service, helping them discover the power of these tools to create innovative, AI-driven solutions." 
-tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
 <head>
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/build-your-first-intelligent-app-with-azure-ai-and-aks-2"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
+<meta property="og:title" content="**Build Intelligent Apps! | Build AI Apps On Azure"/>
 <meta property="og:description" content="Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-2" />
     <meta name="twitter:title" 
-      content="**Fall For Intelligent Apps! 🍂 | Build AI Apps On Azure" />
+      content="**Build Intelligent Apps! | Build AI Apps On Azure" />
     <meta name="twitter:description" 
       content="2-2. Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data." />
     <meta name="twitter:image" 

@@ -9,7 +9,7 @@ toc_max_heading_level: 3
 keywords: [Cloud-Scale, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, hack-together]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
 description: "Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!" 
-tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
 <head>
