@@ -10,19 +10,19 @@ toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
 description: "In the part of our series on intelligent apps, we’ll explore how AI is transforming application development, from design and architecture to building." 
-tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
 <head>
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/reimagine-app-development-with-ai"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
+<meta property="og:title" content="**Build Intelligent Apps! | Build AI Apps On Azure"/>
 <meta property="og:description" content="In the part of our series on intelligent apps, we’ll explore how AI is transforming application development, from design and architecture to building."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/reimagine-app-development-with-ai" />
     <meta name="twitter:title" 
-      content="**Fall For Intelligent Apps! 🍂 | Build AI Apps On Azure" />
+      content="**Build Intelligent Apps! | Build AI Apps On Azure" />
     <meta name="twitter:description" 
       content="1-3. Explore how AI is transforming application development, from design and architecture to building." />
     <meta name="twitter:image" 
@@ -136,4 +136,4 @@ The future of development is automated and AI-driven, and it’s here today. Get
 ## Exercise
 
  * **Watch** the “[Develop and Deconstruct](https://aka.ms/learnlive-contoso-app-deconstructed-Ep2)” episode of our Learn Live series, a live guided experience on building end-to-end intelligent apps architecture with SMEs from Microsoft.
- * **Complete** the [Fall For Intelligent Apps Skills Challenges](https://aka.ms/FallForIA/csc) – ends on October 31!
+ * **Complete** the [Build Intelligent Apps Skills Challenges](https://aka.ms/FallForIA/csc) – ends on October 31!

@@ -10,19 +10,19 @@ toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
 description: "This article explores real-world examples of how Intelligent Apps revolutionize logistics, retail, finance, manufacturing, tech, and medicine." 
-tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
 <head>
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/harnessing-the-power-of-intelligent-apps"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="**Fall For Intelligent Apps! 🍂| Build AI Apps On Azure"/>
+<meta property="og:title" content="**Build Intelligent Apps! | Build AI Apps On Azure"/>
 <meta property="og:description" content="Explore the concept of intelligent applications for readers and gain a clear understanding of the role of AI capabilities in modern applications."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/harnessing-the-power-of-intelligent-apps" />
     <meta name="twitter:title" 
-      content="**Fall For Intelligent Apps! 🍂 | Build AI Apps On Azure" />
+      content="**Build Intelligent Apps! | Build AI Apps On Azure" />
     <meta name="twitter:description" 
       content="1-2.Explore real-world examples of how Intelligent Apps revolutionize logistics, retail, finance, manufacturing, tech, and medicine." />
     <meta name="twitter:image" 
