@@ -27,7 +27,7 @@ Join us on a learning journey to skill up on your core skills for developing int
 Join Cloud Skills Challenges to compete against your peers, showcase your skills, and gain access to offers for industry-recognized certifications. Everyone is welcome to participate in 30-day online challenges.
 
 
-![About Cloud Skills](./../../../static/img/banners/cloud-skills-icons.png)
+![Compete, Learn and Skill Up](./../../../static/img/banners/cloud-skills-icons-v2.png)
 
 You'll work your way through [learning modules](https://learn.microsoft.com) that skill you up on relevant technologies - while collecting points that place you on a Leaderboard.
 
