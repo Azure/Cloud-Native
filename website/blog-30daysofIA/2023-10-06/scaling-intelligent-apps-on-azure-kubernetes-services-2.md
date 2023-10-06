@@ -160,6 +160,10 @@ For example, banking apps face challenges during heavy usage or technical hiccup
  
 Together, tools like Azure Load Balancer, availability zones, and the cluster autoscaler help banking apps keep data in the required regions, handle surges in activity, stay resilient, and provide customers with a smooth and reliable banking experience.
 
+:::info
+Join the team of Microsoft Azure experts in-person at [Azure Day with Kubernetes for KubeCon](https://aka.ms/aks-day). Learn best practices for building cloud-native and intelligent apps with Kubernetes on Azure.
+:::
+
 ### Optimizing Our Intelligent App
 
 To optimize the Intelligent App from [Topic 1](https://azure.github.io/Cloud-Native/30DaysOfIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1) for dynamic scaling and uninterrupted service when processing images with OCR and storing unstructured results in Cosmos DB, you could follow these strategies:
@@ -171,7 +175,7 @@ To optimize the Intelligent App from [Topic 1](https://azure.github.io/Cloud-Nat
 
 ## Exercise
 
-* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-3/tree/main/Microsoft_21_Code/Deployment) to scale and monitor your intelligent app on AKS.  
+* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Scaling-Intelligent-Apps-on-Azure-Kubernetes-Services/tree/main/Microsoft_21_Code/Deployment) to scale and monitor your intelligent app on AKS.  
 * Register for the **[Learn Live: Kubernetes Edition](https://learn.microsoft.com/events/learn-events/learnlive-intelligent-apps-with-azure-kubernetes-service/?WT.mc_id=javascript-99907-ninarasi)** starting Oct 12 - a live SME guided walkthrough on a reference architecture to build intelligent apps with AKS and Azure Open AI  
 * Register for [Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/reactor/series/S-1037/) session for live Q&A with the Product Engineering team on building intelligent apps with AKS.
 
