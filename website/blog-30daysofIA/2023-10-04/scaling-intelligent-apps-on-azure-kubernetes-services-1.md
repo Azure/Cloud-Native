@@ -109,7 +109,7 @@ In the first part of this series, we created an AKS cluster named `aks-intellige
 
 ![image of node pools in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-2.png)
 
-In the image above, “Node count: 1/1 ready” indicates that we have one virtual machine (node) allocated in the node pool nodepool1 within our AKS cluster. That node is currently healthy and operational, meaning it’s ready to accept and execute workloads.
+In the image above, “Node count: 1/1 ready” indicates that we have one virtual machine (node) allocated in the node pool `nodepool1` within our AKS cluster. That node is currently healthy and operational, meaning it’s ready to accept and execute workloads.
 
 In the context of an AKS cluster, a node pool is a set of virtual machines with similar configurations and capacities. These node pools are distinct virtual machine (VM) groups forming the cluster’s computing resources. Node pools allow for workload segregation and resource allocation optimization, as we can tailor each pool to handle specific tasks or workloads. This modular approach enhances flexibility and resource management within the AKS cluster.
 
