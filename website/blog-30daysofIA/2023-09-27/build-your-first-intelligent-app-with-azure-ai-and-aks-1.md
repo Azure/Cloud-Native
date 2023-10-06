@@ -16,13 +16,13 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, communi
 <head>
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/build-your-first-intelligent-app-with-azure-ai-and-aks-1"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="**Build Intelligent Apps! | Build AI Apps On Azure"/>
+<meta property="og:title" content="Build Intelligent Apps! | Build AI Apps On Azure"/>
 <meta property="og:description" content="Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1" />
     <meta name="twitter:title" 
-      content="**Build Intelligent Apps! | Build AI Apps On Azure" />
+      content="Build Intelligent Apps! | Build AI Apps On Azure" />
     <meta name="twitter:description" 
       content="2-1. Create an Intelligent App that leverages Azure AI Vision to analyze images and extract data." />
     <meta name="twitter:image" 

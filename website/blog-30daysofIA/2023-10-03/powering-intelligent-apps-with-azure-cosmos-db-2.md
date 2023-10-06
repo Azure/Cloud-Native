@@ -16,13 +16,13 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, communi
 <head>
 <meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/powering-intelligent-apps-with-azure-cosmos-db-2"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="**Build Intelligent Apps! | Build AI Apps On Azure"/>
+<meta property="og:title" content="Build Intelligent Apps! | Build AI Apps On Azure"/>
 <meta property="og:description" content="Explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS)."/>
 <meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/powering-intelligent-apps-with-azure-cosmos-db-2" />
     <meta name="twitter:title" 
-      content="**Build Intelligent Apps! | Build AI Apps On Azure" />
+      content="Build Intelligent Apps! | Build AI Apps On Azure" />
     <meta name="twitter:description" 
       content="2-4. Explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS)" />
     <meta name="twitter:image" 

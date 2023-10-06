@@ -21,7 +21,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, communi
     <meta name="twitter:url" 
       content="https://azure.github.io/Cloud-Native/30daysofIA/hacktogether-recap" />
     <meta name="twitter:title" 
-      content="Continue The Learning Journey through **Build Intelligent Apps!" />
+      content="Continue The Learning Journey through Build Intelligent Apps!" />
     <meta name="twitter:description" 
       content="Exciting news! As we approach the close of #JavaScript on #Azure Global Hack today, we are thrilled to announce another exciting opportunity for all JavaScript developers!! Find a recap of Hack together and read all about the upcoming #FallIntoIA on this post!" />
     <meta name="twitter:image" 
