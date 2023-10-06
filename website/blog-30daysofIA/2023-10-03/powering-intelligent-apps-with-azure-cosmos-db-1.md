@@ -91,7 +91,13 @@ To follow this tutorial, ensure you have: 
 * A [free Azure account](https://azure.microsoft.com/free/?WT.mc_id=javascript-99907-ninarasi). Sign up if you don’t have one yet. 
 * The [Azure command-line interface](https://learn.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=javascript-99907-ninarasi) (CLI)
 
-For a look at the final project from this tutorial, review the [complete code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2).
+For a look at the final project from this tutorial, review the [complete code](https://github.com/contentlab-io/Microsoft-Powering-Intelligent-Apps-with-Cosmos-DB-and-Azure-Kubernetes-Service/tree/main/PartTwo_IntelligentApp_After).
+
+### Solution Architecture
+
+The image below shows the architecture of the solution we’re aiming for in this article.
+
+![Image of solution architecture](../../static/img/fallforia/blogs/2023-09-28/blog-image-2-3-sa.png)
 
 ### Creating an Azure Cosmos DB for NoSQL Account
 
@@ -167,7 +173,7 @@ Let’s review the elements of this Cosmos DB setup: 
 
 ## Exercise
 
-* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2) to build your intelligent app with multi-modal databases.  
+* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Powering-Intelligent-Apps-with-Cosmos-DB-and-Azure-Kubernetes-Service/tree/main/PartTwo_IntelligentApp_After) to build your intelligent app with multi-modal databases.  
 * Complete the **[AI Cloud Skills Challenge](https://aka.ms/fallforIA/ai-csc)** to build on your app dev and AI skills.  
 * Register for **[Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
 

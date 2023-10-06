@@ -381,7 +381,7 @@ Unlike traditional relational databases, the flexibility of a multi-model databa
 
 ## Exercise
 
-* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Using-Azure-Kubernetes-Service-to-Deploy-an-Intelligent-App-for-Analyzing-Images-2/tree/main/Microsoft_Series_19-20_Code/intelligent-app-after-pt2) to build your intelligent app with multi-modal databases and AKS.  
+* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Powering-Intelligent-Apps-with-Cosmos-DB-and-Azure-Kubernetes-Service/tree/main/PartTwo_IntelligentApp_After) to build your intelligent app with multi-modal databases and AKS.  
 * Complete the **[Apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.  
 * Register for **[Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/reactor/series/S-1037/)** session for live Q&A with the Product Engineering team on building intelligent serverless apps.
 
