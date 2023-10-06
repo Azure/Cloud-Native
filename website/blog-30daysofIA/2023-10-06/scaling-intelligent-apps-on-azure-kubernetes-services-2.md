@@ -1,5 +1,5 @@
 ---
-date: 2023-10-04T09:01
+date: 2023-10-06T09:01
 slug: scaling-intelligent-apps-on-azure-kubernetes-services-2
 title: 2-6. Scaling Intelligent Apps on Azure Kubernetes Services (2)
 authors: [cnteam]
@@ -10,7 +10,7 @@ toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
 description: "Explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS)." 
-tags: [Fall-For-IA, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
 <head>
