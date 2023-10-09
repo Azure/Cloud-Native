@@ -18,7 +18,7 @@ Join us on a learning journey to skill up on your core skills for developing int
 
 * [**Data Skills Challenge**](https://aka.ms/fallforIA/data-csc?WT.mc_id=javascript-99907-ninarasi) - It is time to activate our enormous data stores for building data driven intelligent solutions. Explore the capabilities of cloud-scale data with Microsoft Fabric in this Cloud Skills Challenge! Follow along with the Fabric Community @ https://aka.ms/fabriccommunity. [Register now to compete–Ends Oct 31 PST!](https://aka.ms/fallforIA/data-csc)
 
-* [**AI Skills Challenge**](https://aka.ms/fallforIA/ai-csc?WT.mc_id=javascript-99907-ninarasi) - The world of generative AI is rapidly evolving. Learn how to create intelligent solutions that extract semantic meaning from text and support common computer vision scenarios. Explore how to take advantage of large-scale, generative AI models with deep understandings of language and code to enable new reasoning and comprehension capabilities for building cutting-edge applications responsibly. [Register now to compete–Ends Oct 31 PST!](https://aka.ms/fallforIA/a-csc)
+* [**AI Skills Challenge**](https://aka.ms/fallforIA/ai-csc?WT.mc_id=javascript-99907-ninarasi) - The world of generative AI is rapidly evolving. Learn how to create intelligent solutions that extract semantic meaning from text and support common computer vision scenarios. Explore how to take advantage of large-scale, generative AI models with deep understandings of language and code to enable new reasoning and comprehension capabilities for building cutting-edge applications responsibly. [Register now to compete–Ends Oct 31 PST!](https://aka.ms/fallforia/ai-csc)
 
 ---
 
