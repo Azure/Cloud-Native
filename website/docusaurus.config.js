@@ -92,7 +92,7 @@ const config = {
             position: "left",
           },
           {
-            to: "/30daysofIA",
+            to: "/30DaysOfIA",
             label: "Blog",
             position: "left",
           },
