@@ -34,7 +34,7 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 - 🎙 Oct 18 | #AskTheExpert - [Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
 - 👩🏽‍💻 Oct 19 | #LearnLive Kubernetes – Ep 02: Securing Access to Azure Open AI Services with AKS Workload Identity  
 - 🎙 Oct 25 | #AskTheExpert – [Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
-- 👩🏽‍💻 Oct 26 | #LearnLive Kubernetes – Ep 02: Designing Intelligent Application Deployment for Scale, Resilience, and Observability.
+- 👩🏽‍💻 Oct 26 | #LearnLive Kubernetes – Ep 03: Designing Intelligent Application Deployment for Scale, Resilience, and Observability.
 
 ## Nov 2023
 ### #BuildIntelligentApps
