@@ -175,11 +175,15 @@ h1, h2, h3 {
   font-weight: 600!important;
 }
 
-.button--primary{
+.button--primary {
+  color: white!important;
+  background-color: transparent!important;
+  border: 1px solid white!important;
+}
+
+.button--primary:hover {
   color: #ffb3bb!important;
-  background: linear-gradient(#140035, #140035) padding-box,
-  linear-gradient(to right, #ffb3bb, #8661c5) border-box;
-  border: 2px solid transparent;
+  border: 1px solid #ffb3bb!important;
 }
 
 .button--secondary {
