@@ -197,6 +197,14 @@ h1, h2, h3 {
   background-color: #005A9E;
 }
 
+.button-spacer {
+  margin-right:1rem;
+}
+
+.mobile-block-buttons {
+  min-width: 211px;
+}
+
 #showcase_filter_toggle {
   display: none;
 }
@@ -243,4 +251,17 @@ hr {
     display: none;
   }
 
+}
+
+@media screen and (max-width: 572px) {
+  .mobile-block-buttons {
+    display: block;
+    min-width: 0;
+  }
+  .mobile-block-button-padding {
+    margin-bottom:1rem;
+  }
+  .button-spacer {
+    margin-right:0
+  }
 }
