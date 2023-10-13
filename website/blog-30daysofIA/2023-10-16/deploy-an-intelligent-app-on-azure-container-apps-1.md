@@ -168,7 +168,7 @@ To configure the database connection for our application, install the following 
  
  * `Microsoft.EntityFrameworkCore` <mark>Marked text</mark>
  * ==Microsoft.EntityFrameworkCore.Tools==
- * <mark style="background-color:lightblue">Microsoft.EntityFrameworkCore.SqlServer</mark>
+ * <mark style="background-color:lightblue">Microsoft.EntityFrameworkCore.SqlServer</mark> <span style="background-color:lightblue">Microsoft.EntityFrameworkCore.SqlServer</span>
 
 ![image of installed packages](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-11.png)
 
