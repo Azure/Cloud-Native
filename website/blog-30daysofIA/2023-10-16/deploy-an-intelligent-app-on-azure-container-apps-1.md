@@ -44,7 +44,7 @@ In this article, explore how to create a user feedback analysis application by s
  * Setting up your Azure environment
  * Designing the intelligent application
 
-![image of node settings in Azure portal](../../static/img/fallforia/blogs/2023-10-05/blog-image-2-5-1.jpg)
+![image of an intelligent app on Azure](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-1.png)
 
 ## Deploy an Intelligent App on Azure Container Apps with Azure AI (1)
 
@@ -58,7 +58,7 @@ In this article—the first of a series on building Intelligent Apps with [Azure
 
 The image below shows the architecture of the solution we’re aiming for in this article.
 
-todo: image goes here
+![image showing architecture of the solution described in this article](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-2.png)
 
 AKS offers several robust features that help applications scale smoothly and stay available even during heavy demand, including the following: 
 
@@ -100,11 +100,11 @@ Before we design our application, we need to configure our Azure environment, Vi
  
 First, we need an Azure account with a resource group ready to deploy our application. We’ll start by creating a new resource group to hold all our project items. Log in, click **Resource Groups**, and hit **Create**.
 
-todo: image goes here
+![image of Azure services within Azure](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-3.png)
 
 Now, name your resource group and set the location. For this demo, we’ll name the resource group “UserFeedbackApp” and select **East US** as the default region. Next, click **Review + create**.
 
-todo: image goes here
+![image of set up of an Azure service](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-4.png)
 
 Now, navigate to the resource group section in Azure Portal on the left. Open it and create a new Azure AI multi-service instance. To do this, search for “Azure AI” in the Azure Marketplace and add it. 
  
@@ -116,21 +116,29 @@ We also need to create an SQL Database to store our data. Back in the Azure Mark
  
 This demonstration uses the development tier and a basic server to keep costs low. Name the SQL database “UserFeedbackDatabase” and use a local administrator account rather than the identity-based access option.
 
-todo: image goes here
+![image SQL database settings at set up](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-5.png)
 
 Next, we need to create several resources for the container application itself. Open Visual Studio and select **Create a new project**. Go with the new, standard **ASP.NET Core Web App (Model-View-Controller)** option for this tutorial. Find that template, name your project, and select a location to save it.
 
-todo: image goes here
+![image of project templates](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-6.png)
 
 To containerize our application, we need to select **Enable Docker** on the next screen. This option bundles our application with a Dockerfile, which is essential for building the infrastructure to support it. Leave the default Linux OS selected for the Docker container. 
 
-todo: image goes here
+![image of additional settings for project](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-7.png)
 
 Now, allow Visual Studio to build the templated project.
  
 Next, run the application using Docker from Visual Studio. Once there, click **play** to build and run the application, push it to your local Docker environment, and launch a web browser to view the static opening page.
 
-todo: image goes here
+![image of the opening page](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-8.png)
+
+With our application running locally, it’s time to publish it. We do this so we can create the required container resources and have Visual Studio keep the configuration in our publishing profile. Right-click on the project, choose **Publish**, add a profile for publishing, click **Azure**, and name it **Azure Container Apps (Linux)**.
+ 
+On the Container App screen, double-check that you’re logged into your Azure account and that your subscription name is populated. Click **Create new**. Give your application and container a name, ensuring the right subscription and resource group are selected. You can also specify/name the Container Apps environment by selecting **New**. Otherwise, keep the default name. 
+ 
+Finally, click **Create** to finalize the Container App setup.
+
+![image of container app setup](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-9.png)
 
 We also need to specify a [Container Registry]() to store the application and its configuration that we’ll publish into the container. Name the registry a name (let’s say, “UserFeedbackAppRegistry”) and click **Create**. 
  
@@ -138,7 +146,7 @@ During the container-building process, you’ll have to enable admin rights for 
  
 Now, you can use the publish profile to push your Azure Web App to your Container App on Azure. Check out the infrastructure you’ve created by opening the Azure Portal and navigating to the **Resource** folder.
 
-todo: image goes here
+![image of resources list in Azure](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-10.png)
 
 ## Designing the Intelligent App
 
@@ -162,9 +170,9 @@ To configure the database connection for our application, install the following 
  * `Microsoft.EntityFrameworkCore.Tools`
  * `Microsoft.EntityFrameworkCore.SqlServer`
 
-todo: image goes here
+![image of installed packages](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-11.png)
 
-todo: image goes here
+![image of browsing packages in Azure](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-12.png)
 
 Next, create two models for your data—a `Product` and a `Review`—by adding the following code to the Models folder. First, create a `Product.cs` file with the following code: 
 
@@ -228,7 +236,7 @@ namespace UserFeedbackApp.Models
 
 The next step is to configure a connection to the Azure SQL database we just created. Double-click **Connected Services** in your project hierarchy and add a new **Service Dependency**. Select **Azure SQL database** and locate the one you created earlier. Then, edit the dependency details, ensuring you assign a database connection string name — you’ll use it shortly. Click **Finish**.
 
-todo: image goes here
+![image of dependency setup in Azure SQL database](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-13.png)
 
 This action creates the connection details for our database. 
  
@@ -263,7 +271,7 @@ With the code configured, we can now use Entity Framework tools to build our dat
 `dotnet ef migrations add Initial`
 `dotnet ef database update`
 
-todo: image goes here
+![image of commands in Developer PowerShell window](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-14.png)
 
 These three commands will create our basic database structure using the previously defined models for `Products` and `Review`.  
  
@@ -282,13 +290,13 @@ After executing this query, we have about 30 products in our database ready to u
 
 With the data configured, let’s create a basic [MVC Controller](https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs) with views. Right-click on the `Controllers` folder and select **Add New Scaffold Item**. Choose the **MVC Controller with views, using the Entity Framework**, and click **Add**. Select the `Model` class as `Product`, give the controller a name, and click Add. Repeat this process with the `Reviews Model`.
 
-todo: image goes here
+![image of MVC Controller set up](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-15.png)
 
 Now, run your application both locally and after publishing it to the Azure Container application to ensure everything is functioning correctly. 
  
 When you run your application locally, your web browser will open with the base URL. Add `/Products` to the end of the URL to see a list of the manually entered pre-populated data.
 
-todo: image goes here
+![image of page open in web browser](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-16.png)
 
 With the framework established, you can replace `/Products` at the end of the URL with `/Reviews` to look at any reviews you have. Alternatively, you can use `/Reviews/Create` to create new reviews. However, currently, a review doesn’t align with the model we’ve provided, as we expect our product list to populate the `Products` field. To fix this, we’ll need to adjust the reviews view to better align with our requirements.
  
@@ -382,7 +390,7 @@ public async Task<IActionResult> Create([Bind("Id,ProductId,ProductName,ReviewTe
 
 Now, run the application and go to the `/Reviews/Create` endpoint. You’ll see your newly written page. If you select a product and fill out a review, the database will save the review sans any sentiment information.
 
-todo: image goes here
+![image of the application Index](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-17.png)
 
 Finally, publish your changes to your Azure instance.
 
