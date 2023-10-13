@@ -267,9 +267,9 @@ This code uses an if statement to check the application’s environment, either 
 
 With the code configured, we can now use Entity Framework tools to build our database structure. Open a Developer PowerShell window at the bottom of Visual Studio by selecting **View > Terminal**. Ensure you select **Developer PowerShell** in the drop-down and navigate to your project directory. Run the following commands:
  
-`dotnet tool install dotnet-ef –global`
-`dotnet ef migrations add Initial`
-`dotnet ef database update`
+`dotnet tool install dotnet-ef –global`  
+`dotnet ef migrations add Initial`  
+`dotnet ef database update`  
 
 ![image of commands in Developer PowerShell window](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-14.png)
 
