@@ -166,9 +166,9 @@ The initial function on our checklist is the capability to retrieve various prod
  
 To configure the database connection for our application, install the following packages using the Package Manager in Visual Studio:
  
- * `Microsoft.EntityFrameworkCore` 
- * `Microsoft.EntityFrameworkCore.Tools`
- * `Microsoft.EntityFrameworkCore.SqlServer`
+ * `Microsoft.EntityFrameworkCore` <mark>Marked text</mark>
+ * ==Microsoft.EntityFrameworkCore.Tools==
+ * <mark style="background-color:lightblue">Microsoft.EntityFrameworkCore.SqlServer</mark>
 
 ![image of installed packages](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-11.png)
 
