@@ -17,10 +17,10 @@ function SectionHeader({title, description}) {
             </h1>
             <p> {description} </p>
             <div className={styles.buttons}>
-                <Link className="button button--secondary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://learn.microsoft.com/en-us/events/learn-events/learnlive-intelligent-apps-with-azure-kubernetes-service/" target="_blank">
+                <Link className="button button--secondary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://learn.microsoft.com/en-us/events/learn-events/learnlive-intelligent-apps-with-azure-kubernetes-service/?WT.mc_id=javascript-99907-ninarasi" target="_blank">
                     Build Kubernetes
                 </Link>
-                <Link className="button button--primary button--lg mobile-block-buttons" to="https://aka.ms/contoso-real-estate/learn-live" target="_blank">
+                <Link className="button button--primary button--lg mobile-block-buttons" to="https://aka.ms/contoso-real-estate/learn-live?WT.mc_id=javascript-99907-ninarasi" target="_blank">
                     Learn to build
                 </Link>
             </div>
