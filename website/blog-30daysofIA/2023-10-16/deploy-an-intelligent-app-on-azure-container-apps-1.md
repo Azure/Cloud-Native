@@ -60,15 +60,6 @@ The image below shows the architecture of the solution we’re aiming for in thi
 
 ![image showing architecture of the solution described in this article](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-2.png)
 
-AKS offers several robust features that help applications scale smoothly and stay available even during heavy demand, including the following: 
-
- * The [cluster autoscaler](https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler?WT.mc_id=javascript-99907-ninarasi) adjusts the number of nodes in your cluster based on how much work you have. This way, it uses resources efficiently and keeps costs in check.  
- * The [Azure Load Balancer](https://azure.microsoft.com/en-ca/products/load-balancer?WT.mc_id=javascript-99907-ninarasi) is created automatically with AKS and acts like an intelligent traffic controller. It ensures incoming network traffic is distributed well across your cluster’s nodes, optimizing resource usage.  
-
-Together, these features give your applications a solid base to handle different workloads and keep running nonstop.  
-
-The following sections provide hands-on demonstrations of setting up, monitoring, and optimizing AKS to drive application efficiency and performance
-
 ## Understanding Azure AI and Azure Container Apps
 
 In this tutorial, we’ll use a combination of [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service?WT.mc_id=javascript-99907-ninarasi)—a tool for creating Intelligent Apps using large language models (LLMs)—and [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps?WT.mc_id=javascript-99907-ninarasi)—a fully managed Kubernetes-based platform that helps us deploy from containers and code. These two dynamic tools will serve as the backbone of our app’s functionality. 
@@ -140,7 +131,7 @@ Finally, click **Create** to finalize the Container App setup.
 
 ![image of container app setup](../../static/img/fallforia/blogs/2023-10-16/blog-image-4-1-9.png)
 
-We also need to specify a [Container Registry]() to store the application and its configuration that we’ll publish into the container. Name the registry a name (let’s say, “UserFeedbackAppRegistry”) and click **Create**. 
+We also need to specify a [Container Registry](https://azure.microsoft.com/en-ca/products/container-registry) to store the application and its configuration that we’ll publish into the container. Name the registry a name (let’s say, “UserFeedbackAppRegistry”) and click **Create**. 
  
 During the container-building process, you’ll have to enable admin rights for the container. Click **Yes** and wait for the infrastructure to build.
  
@@ -300,7 +291,7 @@ When you run your application locally, your web browser will open with the base 
 
 With the framework established, you can replace `/Products` at the end of the URL with `/Reviews` to look at any reviews you have. Alternatively, you can use `/Reviews/Create` to create new reviews. However, currently, a review doesn’t align with the model we’ve provided, as we expect our product list to populate the `Products` field. To fix this, we’ll need to adjust the reviews view to better align with our requirements.
  
-In the ReviewsController file, change the GET Create Action as follows:
+In the `ReviewsController` file, change the `GET Create Action` as follows:
  
 ```
 public async Task<IActionResult> Create()
@@ -319,7 +310,7 @@ public async Task<IActionResult> Create()
 }
 ```
 
-This code fetches products from the database and places them into a select list or drop-down on the Review creation page. We’re focusing on having users select a single product and write a review, ensuring the sentiment analysis we perform later aligns with each product. So, let’s also modify the `Create` page within the `Views/Reviews` directory:
+This code fetches products from the database and places them into a select list or drop-down on the `Review` creation page. We’re focusing on having users select a single product and write a review, ensuring the sentiment analysis we perform later aligns with each product. So, let’s also modify the `Create` page within the `Views/Reviews` directory:
 
 ```
 @model UserFeedbackApp.Models.Review
@@ -364,7 +355,7 @@ This code fetches products from the database and places them into a select list 
 
 This confines the page to a product drop-down list and an area for entering a review. 
  
-Finally, let’s adjust the `POST Create Action` in the Reviews controller to handle the two received values. Add placeholder values for elements we’re currently generating:
+Finally, let’s adjust the `POST Create Action` in the `Reviews` controller to handle the two received values. Add placeholder values for elements we’re currently generating:
 
 ```
 [HttpPost]
@@ -397,8 +388,8 @@ Finally, publish your changes to your Azure instance.
 ## Exercise
 
 * Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208/UserFeedbackApp/Models) to build your intelligent app with multi-modal databases.
-* Complete the [Intelligent apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc) to build on your app dev and AI skills.
-* Register for [Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi) session for live Q&A with the Product Engineering team on building intelligent apps using Azure Container Apps.
+* Complete the **[Intelligent apps Cloud Skills Challenge]**(https://aka.ms/fallforIA/apps-csc) to build on your app dev and AI skills.
+* Register for **[Ask the Expert: Azure Container Apps]**(https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi) session for live Q&A with the Product Engineering team on building intelligent apps using Azure Container Apps.
 
 ## Next Steps
 
