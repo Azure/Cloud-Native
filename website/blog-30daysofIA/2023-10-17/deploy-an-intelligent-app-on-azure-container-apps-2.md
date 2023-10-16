@@ -1,0 +1,103 @@
+---
+date: 2023-10-16T09:00
+slug: deploy-an-intelligent-app-on-azure-container-apps-2
+title: 4.2 Deploy an Intelligent App on Azure Container Apps (2)
+authors: [cnteam]
+draft: true
+hide_table_of_contents: false
+toc_min_heading_level: 2
+toc_max_heading_level: 3
+keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
+image: https://azure.github.io/Cloud-Native/img/ogImage.png
+description: "Explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS)." 
+tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+---
+
+<head>
+<meta property="og:url" content="https://azure.github.io/cloud-native/30daysofia/deploy-an-intelligent-app-on-azure-container-apps-2"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Build Intelligent Apps!| Build AI Apps On Azure"/>
+<meta property="og:description" content="Create a user feedback analysis application by setting up an Azure environment to deploy and manage the app using Azure Container Apps and Azure AI"/>
+<meta property="og:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png"/>
+    <meta name="twitter:url" 
+      content="https://azure.github.io/Cloud-Native/30daysofIA/deploy-an-intelligent-app-on-azure-container-apps-2" />
+    <meta name="twitter:title" 
+      content="Build Intelligent Apps! | Build AI Apps On Azure" />
+    <meta name="twitter:description" 
+      content="4-2. Create a user feedback analysis application by setting up an Azure environment to deploy and manage the app using Azure Container Apps and Azure AI." />
+    <meta name="twitter:image" 
+      content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" 
+      content="@devanshidiaries" />
+    <meta name="twitter:site" content="@AzureAdvocates" /> 
+    <link rel="canonical" 
+      href="https://azure.github.io/Cloud-Native/30daysofIA/deploy-an-intelligent-app-on-azure-container-apps-2" />
+</head>
+
+<!-- End METADATA -->
+In this article, explore how to create a user feedback analysis application by setting up an Azure environment to deploy and manage the app using [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/?WT.mc_id=javascript-99907-ninarasi) and [Azure AI](https://learn.microsoft.com/en-us/azure/ai-services/?WT.mc_id=javascript-99907-ninarasi).
+
+## What We'll Cover:
+
+ * Building and containerizing the intelligent app 
+ * Analysing user feedback
+
+![image of intelligent apps on Azure Container Apps with Azure AI](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-1.jpeg)
+
+## Deploy an Intelligent App on Azure Container Apps with Azure AI (2)
+
+In the [first part of this article](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1),we explored the concepts of Azure Container Apps and Azure AI, setup an Azure environment to deploy an intelligent app on Azure Container Apps as well as designed the intelligent app.
+
+This article is a continuation to now build the intelligent app, containerize it and analyse user feedback.
+
+## Building the Intelligent App
+
+Now that we’ve set up our basic application, let’s add some intelligence to it. Our initial step involves adding two NuGet packages: `Azure.AI.TextAnalytics` for granting access to Azure AI and `Microsoft.Extensions.Azure` for seamlessly injecting the SDK.
+
+![image of Azure.AI.TextAnalytics NuGet packages](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-2.jpeg)
+
+![image of Microsoft.Extensions.Azure NuGet package](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-3.gif)
+
+Next, we need to register our text analytics client for dependency injection into our application. Before we can do that, the Text Analytics client requires two secrets: 
+
+* An endpoint address
+* An access key
+
+We need to add these into both our development and production environments. In both environments, `AI_EndPoint` is the endpoint variable name while `AI_Key` is the access key variable name.
+
+To add these two items to your development environment, right-click on your project and select **Manage User Secrets**. Next, open your Publish profile, click the three dots ( … ) next to Hosting, and select **Manage container app settings** to verify that these variables are accessible within your container. Finally, you can add these secrets to your Azure container.
+
+Now, open the `Program.cs` file and modify the section where we initialize the database context to include the text analytics initialization:
+
+```
+if (builder.Environment.IsDevelopment())
+{ 
+    builder.Services.AddDbContext<DatabaseContext>(options =>
+
+        options.UseSqlServer(builder.Configuration["userfeedbackdatabaseconnection"]));
+
+
+    builder.Services.AddAzureClients(clientBuilder =>
+        clientBuilder.AddTextAnalyticsClient(new Uri(builder.Configuration["AI_EndPoint"]),
+        new Azure.AzureKeyCredential(builder.Configuration["AI_Key"])) 
+        ); 
+} 
+else 
+{
+    builder.Services.AddDbContext<DatabaseContext>(options => 
+
+        options.UseSqlServer(Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING"))); 
+
+    builder.Services.AddAzureClients(clientBuilder => 
+        clientBuilder.AddTextAnalyticsClient(new Uri(builder.Configuration["AI_EndPoint"]), 
+        new Azure.AzureKeyCredential(builder.Configuration["AI_Key"])) 
+        );
+}
+```
+
+## Exercise
+
+* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208/UserFeedbackApp/Models) to build your intelligent app with multi-modal databases.
+* Complete the **[Intelligent apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
+* Register for **[Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi)** session for live Q&A with the Product Engineering team on building intelligent apps using Azure Container Apps.
