@@ -35,7 +35,7 @@ function SectionContent(){
         <section className={styles.features}>
             <div className="container">
                 <div>
-                    <h2>Azure Kubernetes Service</h2>
+                    <h2>Kubernetes</h2>
                 </div>
                 <div className="row" style={{ paddingBottom: '1rem' }}>
                     {ContentItemsKubernetes.map((props, idx) => (
@@ -46,7 +46,7 @@ function SectionContent(){
                     <hr />
                 </div>
                 <div>
-                    <h2>Learn Live</h2>
+                    <h2>Serverless</h2>
                 </div>
                 <div className="row">
                     {ContentItemsLearnLive.map((props, idx) => (
