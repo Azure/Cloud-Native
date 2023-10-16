@@ -388,8 +388,8 @@ Finally, publish your changes to your Azure instance.
 ## Exercise
 
 * Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208/UserFeedbackApp/Models) to build your intelligent app with multi-modal databases.
-* Complete the **[Intelligent apps Cloud Skills Challenge]**(https://aka.ms/fallforIA/apps-csc) to build on your app dev and AI skills.
-* Register for **[Ask the Expert: Azure Container Apps]**(https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi) session for live Q&A with the Product Engineering team on building intelligent apps using Azure Container Apps.
+* Complete the **[Intelligent apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
+* Register for **[Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi)** session for live Q&A with the Product Engineering team on building intelligent apps using Azure Container Apps.
 
 ## Next Steps
 
