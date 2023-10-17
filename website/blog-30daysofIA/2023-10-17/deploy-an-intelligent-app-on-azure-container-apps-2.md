@@ -47,7 +47,7 @@ In this article, explore how to create a user feedback analysis application by s
 
 ## Deploy an Intelligent App on Azure Container Apps with Azure AI (2)
 
-In the [first part of this article](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1),we explored the concepts of Azure Container Apps and Azure AI, setup an Azure environment to deploy an intelligent app on Azure Container Apps as well as designed the intelligent app.
+In the [first part of this article](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1), we explored the concepts of Azure Container Apps and Azure AI, setup an Azure environment to deploy an intelligent app on Azure Container Apps as well as designed the intelligent app.
 
 This article is a continuation to now build the intelligent app, containerize it and analyse user feedback.
 
