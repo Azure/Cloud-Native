@@ -93,6 +93,18 @@ else
         );
 }
 ```
+Finally, let’s configure our `Review Create` method to retrieve sentiment analysis results from the Azure AI services API. To do this, add the following to your `Review` controller constructor:
+
+```
+private readonly TextAnalyticsClient _textClient;
+
+        public ReviewsController(DatabaseContext context, TextAnalyticsClient textClient)
+        { 
+            _context = context;
+            _textClient = textClient;
+        } 
+```
+
 Then, modify the `POST Create Action` in your `Reviews` controller to incorporate a call to the Azure AI services API for analyzing the review text:
 
 ```
