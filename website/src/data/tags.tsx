@@ -91,7 +91,7 @@ export const Tags: {[type in TagType]: Tag} = {
     featured: {
         label: ' ♥️ Featured',
         description:
-        'This tag is used for admin-curated templates that represent high-quality (community) or official (Microsoft) azd templates.',
+        'Most popular',
         color: 'red', //'#e9669e',
     },
     azurekubernetesservice: {
