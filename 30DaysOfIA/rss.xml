@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[4.1 Deploy an Intelligent App on Azure Container Apps (1)]]></title>
+            <title><![CDATA[4-1. Deploy an Intelligent App on Azure Container Apps (1)]]></title>
             <link>https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1</link>
             <guid>https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1</guid>
             <pubDate>Mon, 16 Oct 2023 09:00:00 GMT</pubDate>
@@ -121,7 +121,7 @@
             <category>github-actions</category>
         </item>
         <item>
-            <title><![CDATA[2-2. Build Your First Intelligent App with Azure AI and AKS-2]]></title>
+            <title><![CDATA[2-2. Build Your First Intelligent App with Azure AI and AKS (2)]]></title>
             <link>https://azure.github.io/Cloud-Native/30DaysOfIA/build-your-first-intelligent-app-with-azure-ai-and-aks-2</link>
             <guid>https://azure.github.io/Cloud-Native/30DaysOfIA/build-your-first-intelligent-app-with-azure-ai-and-aks-2</guid>
             <pubDate>Wed, 27 Sep 2023 09:30:00 GMT</pubDate>
@@ -143,7 +143,7 @@
             <category>github-actions</category>
         </item>
         <item>
-            <title><![CDATA[2-1. Build Your First Intelligent App with Azure AI and AKS-1]]></title>
+            <title><![CDATA[2-1. Build Your First Intelligent App with Azure AI and AKS (1)]]></title>
             <link>https://azure.github.io/Cloud-Native/30DaysOfIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1</link>
             <guid>https://azure.github.io/Cloud-Native/30DaysOfIA/build-your-first-intelligent-app-with-azure-ai-and-aks-1</guid>
             <pubDate>Wed, 27 Sep 2023 09:00:00 GMT</pubDate>
