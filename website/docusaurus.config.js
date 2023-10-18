@@ -160,6 +160,12 @@ const config = {
             className: "header-github-link",
             "aria-label": "GitHub repository",
           },
+          {
+            href: "https://azure.github.io/Cloud-Native/30DaysOfIA/rss.xml",
+            position: "right",
+            className: "header-rss-link",
+            "aria-label": "Subscribe to RSS",
+          },
         ],
       },
 
