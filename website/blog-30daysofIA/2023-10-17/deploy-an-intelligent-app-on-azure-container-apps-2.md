@@ -1,7 +1,7 @@
 ---
 date: 2023-10-16T09:00
 slug: deploy-an-intelligent-app-on-azure-container-apps-2
-title: 4.2 Deploy an Intelligent App on Azure Container Apps (2)
+title: 4-2. Deploy an Intelligent App on Azure Container Apps (2)
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
@@ -47,7 +47,7 @@ In this article, explore how to create a user feedback analysis application by s
 
 ## Deploy an Intelligent App on Azure Container Apps with Azure AI (2)
 
-In the [first part of this article](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1),we explored the concepts of Azure Container Apps and Azure AI, setup an Azure environment to deploy an intelligent app on Azure Container Apps as well as designed the intelligent app.
+In the [first part of this article](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1), we explored the concepts of Azure Container Apps and Azure AI, setup an Azure environment to deploy an intelligent app on Azure Container Apps as well as designed the intelligent app.
 
 This article is a continuation to now build the intelligent app, containerize it and analyse user feedback.
 
@@ -74,7 +74,6 @@ Now, open the `Program.cs` file and modify the section where we initialize the d
 if (builder.Environment.IsDevelopment())
 { 
     builder.Services.AddDbContext<DatabaseContext>(options =>
-
         options.UseSqlServer(builder.Configuration["userfeedbackdatabaseconnection"]));
 
 
@@ -86,7 +85,6 @@ if (builder.Environment.IsDevelopment())
 else 
 {
     builder.Services.AddDbContext<DatabaseContext>(options => 
-
         options.UseSqlServer(Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING"))); 
 
     builder.Services.AddAzureClients(clientBuilder => 
@@ -95,6 +93,18 @@ else
         );
 }
 ```
+Finally, let’s configure our `Review Create` method to retrieve sentiment analysis results from the Azure AI services API. To do this, add the following to your `Review` controller constructor:
+
+```
+private readonly TextAnalyticsClient _textClient;
+
+        public ReviewsController(DatabaseContext context, TextAnalyticsClient textClient)
+        { 
+            _context = context;
+            _textClient = textClient;
+        } 
+```
+
 Then, modify the `POST Create Action` in your `Reviews` controller to incorporate a call to the Azure AI services API for analyzing the review text:
 
 ```
@@ -151,9 +161,129 @@ This time, the AI scores the review as negative, with no positive score and a sl
 
 ![image of review index after a second review](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-5.gif)
 
+By incorporating this AI-based scoring, you gain insights into customer feedback trends and can initiate specific actions based on positive or negative feedback. For example, we might want to understand how our product reviews have performed over the last seven days. Let’s update our review list page to present the average reviews during that period.
 
+To achieve this, we’ll navigate to the **ReviewContoller** and summarize our data to display on the **Index** page. Then, we’ll load our products and reviews from the database, iterate through them, and average them over eight days (including the current day). Finally, we’ll compile the summarized data in a list and create a table based on the list.
 
+Begin by creating a `SentimentTrends` model (a cut-down version of our review data) with this code:
 
+```
+namespace UserFeedbackApp.Models
+{ 
+    public class SentimentTrends
+    { 
+        public int Id { get; set; }
+        public string ProductName { get; set; }
+        public float PositiveValue { get; set; }
+        public float NeutralValue { get; set; }
+        public float NegativeValue { get; set; }
+     public string PostDate { get; set; }
+    }
+} 
+```
+
+Next, update the `Index` method in our `ReviewController` file using the following code:
+
+```
+public async Task<IActionResult> Index()
+{ 
+    var reviewList = await _context.Reviews.ToListAsync();
+    var productList = await _context.Products.ToListAsync();
+  
+    List<SentimentTrends> trends = new List<SentimentTrends>();
+
+    foreach(var product in productList)
+    { 
+         var productReviews = reviewList
+        .Where(d => d.ProductId == product.Id)
+        .Where(d => DateTime.ParseExact(d.PostDate, "yyyy-MM-dd", CultureInfo.InvariantCulture) >= (DateTime.Now.AddDays(-8)))
+        .ToList();
+
+        if (productReviews.Count() > 0)
+        { 
+
+            float positiveValue = 0;
+            float neutralValue = 0;
+            float negativeValue = 0;
+
+            foreach (var review in productReviews) 
+            {
+                 positiveValue += review.PositiveValue;
+                 neutralValue += review.NeutralValue;
+                 negativeValue += review.NegativeValue;
+            }
+
+             positiveValue = (float)Math.Round(positiveValue / productReviews.Count(), 2);
+             neutralValue = (float)Math.Round(neutralValue / productReviews.Count(), 2);
+             negativeValue = (float)Math.Round(negativeValue / productReviews.Count(), 2);
+
+             SentimentTrends trend = new SentimentTrends();
+
+             trend.Id = productReviews.First().ProductId;
+             trend.ProductName = productReviews.First().ProductName;
+             trend.PostDate = DateTime.Now.AddDays(-8).ToString("yyyy-MM-dd");
+             trend.PositiveValue = positiveValue;
+             trend.NeutralValue = neutralValue;
+             trend.NegativeValue = negativeValue;
+
+             trends.Add(trend);
+        } 
+    } 
+
+    ViewBag.Trends = trends;
+    return reviewList != null ?
+            View(reviewList) :
+            Problem("Entity set 'DatabaseContext.Reviews'  is null.");
+} 
+```
+
+This code filters our recent reviews, averages them by the number of reviews received, and creates the list before passing it to the view in the **ViewBag**. To display this data, update the `Index.cshtml` file in our `Views/Reviews` folder with the following code:
+
+```
+ <h2>Seven Day Trend</h2> 
+<table class="table"> 
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Positive</th>
+            <th>Neutral</th>
+            <th>Negative</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SentimentTrends item in ViewBag.trends) 
+        {
+        <tr>
+              <td>@item.Id</td>
+              <td>@item.ProductName</td>
+              <td>@item.PositiveValue</td>
+              <td>@item.NeutralValue</td>
+              <td>@item.NegativeValue</td>
+        </tr>
+        }
+    </tbody>
+</table>
+```
+
+This displays our data in a simple table on our reviews page. If we run our code now and navigate to the reviews page, we’ll see the table at the top of the page. Averaging product sentiments this way offers valuable insights into potential product issues based on real user feedback.
+
+![image of the table on the reviews page](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-6.gif)
+
+## Conclusion
+
+Intelligent Apps can add more data and insights into your applications, opening possibilities for even more functionality.
+
+In this two-part article, we built a simple web application using [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview?WT.mc_id=javascript-99907-ninarasi). Then, we incorporated sentiment analysis through Azure AI, extending our application’s capabilities to analyze user feedback. This application architecture on Azure enables seamless scalability for both the application and the AI components. This automatic scalability ensures your application can efficiently meet rising demands and scale back down when that demand subsides.
+
+However, sentiment analysis is just one small component of the entire Azure AI suite. Azure AI includes several AI-driven APIs using pre-built models, such as:
+
+* Language understanding for translation, question answering, or conversational language comprehension
+* Image processing for image recognition or image and video analysis
+* Speech processing, including speech-to-text, text-to-speech, or speech translation
+* Anomaly detection, offensive content detection, and personalization
+
+Begin your journey into [Intelligent Apps with Azure](https://azure.microsoft.com/en-us/products/ai-services?WT.mc_id=javascript-99907-ninarasi), then delve into the next topic to learn how to level up your Intelligent Apps.
 
 ## Exercise
 
