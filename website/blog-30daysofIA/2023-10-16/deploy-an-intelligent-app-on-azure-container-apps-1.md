@@ -1,7 +1,7 @@
 ---
 date: 2023-10-16T09:00
 slug: deploy-an-intelligent-app-on-azure-container-apps-1
-title: 4-1. Deploy an Intelligent App on Azure Container Apps (1)
+title: 3-1. Deploy an Intelligent App on Azure Container Apps (1)
 authors: [cnteam]
 draft: false
 hide_table_of_contents: false
@@ -24,7 +24,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, communi
     <meta name="twitter:title" 
       content="Build Intelligent Apps! | Build AI Apps On Azure" />
     <meta name="twitter:description" 
-      content="4-1. Create a user feedback analysis application by setting up an Azure environment to deploy and manage the app using Azure Container Apps and Azure AI." />
+      content="3-1. Create a user feedback analysis application by setting up an Azure environment to deploy and manage the app using Azure Container Apps and Azure AI." />
     <meta name="twitter:image" 
       content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
     <meta name="twitter:card" content="summary_large_image" />
