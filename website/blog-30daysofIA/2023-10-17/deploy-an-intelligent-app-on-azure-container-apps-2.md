@@ -1,5 +1,5 @@
 ---
-date: 2023-10-16T09:00
+date: 2023-10-19T09:00
 slug: deploy-an-intelligent-app-on-azure-container-apps-2
 title: 3-2. Deploy an Intelligent App on Azure Container Apps (2)
 authors: [cnteam]
