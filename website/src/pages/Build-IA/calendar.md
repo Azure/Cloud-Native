@@ -40,6 +40,9 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 ### #BuildIntelligentApps
 - Nov 2 | #LearnLive Kubernetes – Ep 04: Network Security and Access for Intelligent Applications on Azure Kubernetes Service
 
+### KubeCon, NA
+- Nov 6 | [KubeCon, NA + Azure Day](https://aka.ms/aks-day)
+
 ### 🔥#MSIgnite
 Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the community in-person at Seattle, or online from anywhere in the world! 
  - 👩🏽‍💻 Nov 14 | [Pre-Day Labs](https://ignite.microsoft.com/en-US/home) (Seattle Only)
