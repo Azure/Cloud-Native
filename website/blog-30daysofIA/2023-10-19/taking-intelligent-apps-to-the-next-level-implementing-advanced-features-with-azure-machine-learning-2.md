@@ -220,7 +220,7 @@ dotnet ef database update
 
 ![image of PowerShell terminal](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-9.jpeg)
 
-With this new field in place, update your `Review Index.cshtml` page by adding the `CustomSentinent` value, which lists our reviews when we go to the URL `/reviews`:
+With this new field in place, update your `Review Index.cshtml` page by adding the `CustomSentiment` value, which lists our reviews when we go to the URL `/reviews`:
 
 ```
 <td>
