@@ -36,7 +36,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, communi
 </head>
 
 <!-- End METADATA -->
-In this article, explore how to level up your Intelligent Apps by training a custom model using your own dataset with [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2?WT.mc_id=javascript-99907-ninarasi) and [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview?WT.mc_id=javascript-99907-ninarasi).
+In this article, explore how to level up your Intelligent Apps by training a custom model using your own dataset with [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2&WT.mc_id=javascript-99907-ninarasi) and [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview?WT.mc_id=javascript-99907-ninarasi).
 
 ## What We'll Cover:
 
@@ -87,7 +87,7 @@ To follow this tutorial, we need:
 * The [project created in part one](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208) downloaded
 * An [Azure account](https://azure.microsoft.com/free/)
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/) version 3.5.1 or higher
-* [Visual Studio installed](https://visualstudio.microsoft.com/downloads/). This demonstration uses Community Edition 2022.
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) installed. This demonstration uses Community Edition 2022.
 
 For a peek at the final application, check out the [complete project code](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services).
 
@@ -115,7 +115,7 @@ If a GPU-based VM isn’t available, you can go for a high-RAM instance in the m
 ![image of cluster setup](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-3-4.png)
 
 :::info
-Register to meet the Azure team at [KubeCon and Azure Day](https://aka.ms/aks-day) in Chicago on **November 6, 2023**. The Azure Product Engineering Team along with the Cloud Advocates team will be there to dive deep with you on developing intelligent apps with Azure Kubernetes Service.
+Register to meet the Azure team at **[KubeCon and Azure Day](https://aka.ms/aks-day)** in Chicago on **November 6, 2023**. The Azure Product Engineering Team along with the Cloud Advocates team will be there to dive deep with you on developing intelligent apps with Azure Kubernetes Service.
 :::
 
 ### Training the Model in Azure Machine Learning
@@ -175,7 +175,7 @@ Now, we’re all set to train our model with the pipeline. Click **Configure and
 
 ![Image of settings for pipeline job set up](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-3-9.png)
 
-Note that building the model can take time, especially with larger datasets. The simplified dataset we’re using here takes about 8.5 hours to train. So, remember that you’ll be incurring the cost of the compute instance you selected during this time. If you’d rather not wait, [download the model](https://www.google.com/url?q=https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%2520-%2520Article%25207%2520%252B%25208/UserFeedbackApp/Models&sa=D&source=docs&ust=1695845650198752&usg=AOvVaw0FjwIIz2QvQ0uagVGiaFlQ) and proceed with the tutorial. Later, we’ll review where you can upload a pre-trained model instead of using the one that the pipeline generates.
+Note that building the model can take time, especially with larger datasets. The simplified dataset we’re using here takes about 8.5 hours to train. So, remember that you’ll be incurring the cost of the compute instance you selected during this time. If you’d rather not wait, [download the model](https://github.com/contentlab-io/Microsoft-Intelligent-Apps-With-Azure-AI-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208/UserFeedbackApp/Models) and proceed with the tutorial. Later, we’ll review where you can upload a pre-trained model instead of using the one that the pipeline generates.
 
 Now, go to the **Jobs** menu to see the pipelines you have running. At this stage, you’ll have to wait for the job to finish for the model to train fully. This will take around 8.5 hours. Just remember that Azure ML restricts learning pipelines to a 24-hour runtime. If you have larger pipelines, you’ll need to tweak your job settings to prevent timeouts.
 
