@@ -52,7 +52,7 @@ In the [previous part](https://azure.github.io/Cloud-Native/30daysofIA/taking-in
 
 ### Prerequisites
 
-To follow this tutorial, ensure you have completed the [first](https://azure.github.io/Cloud-Native/30daysofIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) part of this topic.
+To follow this tutorial, ensure you have completed the [first](https://azure.github.io/Cloud-Native/30daysofIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) part of this topic.
 
 ### Testing and Validating the ML Model with the Intelligent App
 
