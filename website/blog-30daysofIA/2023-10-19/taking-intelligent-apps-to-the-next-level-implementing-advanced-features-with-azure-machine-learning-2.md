@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps, data]
 image: https://azure.github.io/Cloud-Native/img/ogImage.png
-description: "Explore the power of multi-model databases for Intelligent Apps and their integration with Azure Cosmos DB and Azure Kubernetes Service (AKS)." 
+description: "Explore how to level up your Intelligent Apps by training a custom model using your own dataset with Azure Machine Learning and Azure Container Apps." 
 tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -36,261 +36,303 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, hack-together, communi
 </head>
 
 <!-- End METADATA -->
-In this article, explore how to create a user feedback analysis application by setting up an Azure environment to deploy and manage the app using [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/?WT.mc_id=javascript-99907-ninarasi) and [Azure AI](https://learn.microsoft.com/en-us/azure/ai-services/?WT.mc_id=javascript-99907-ninarasi).
+In this article, continue to explore how to level up your Intelligent Apps by training a custom model using your own dataset with Azure Machine Learning and Azure Container Apps.
 
 ## What We'll Cover:
 
- * Building and containerizing the intelligent app 
- * Analysing user feedback
+ * Testing and validating the ML model with the intelligent app 
+ * Integrating the Machine Learning Model into the intelligent app
+ * Testing and validating the enhanced intelligent app 
 
-![image of intelligent apps on Azure Container Apps with Azure AI](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-1.jpeg)
+![image of Azure learning center and intelligent apps](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-1.jpeg)
 
-## Deploy an Intelligent App on Azure Container Apps with Azure AI (2)
+## Taking Intelligent Apps to the Next Level: Implementing Advanced Features with Azure Machine Learning (2)
 
-In the [first part of this article](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1), we explored the concepts of Azure Container Apps and Azure AI, setup an Azure environment to deploy an intelligent app on Azure Container Apps as well as designed the intelligent app.
+In the [previous part](https://azure.github.io/Cloud-Native/30daysofIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) of this tutorial, we explored creating Azure Machine Learning workspace and training the machine learning model. This part continues onto integrating the ML model into the app, and then testing and validating the enhanced intelligent app to get better results from the [Azure AI Sentiment Analysis API](https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/overview?tabs=prebuilt?WT.mc_id=javascript-99907-ninarasi).
 
-This article is a continuation to now build the intelligent app, containerize it and analyse user feedback.
+### Prerequisites
 
-## Prerequisites
+To follow this tutorial, ensure you have completed the [first](https://azure.github.io/Cloud-Native/30daysofIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) part of this topic.
 
-To follow this tutorial, ensure you have read through the [first](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1) part of this topic.
+### Testing and Validating the ML Model with the Intelligent App
 
-## Building the Intelligent App
+Next, we need to register our model for use with a managed endpoint. To do so, click on the **Models** menu item to view a list of models in your environment.
 
-Now that we’ve set up our basic application, let’s add some intelligence to it. Our initial step involves adding two NuGet packages: `Azure.AI.TextAnalytics` for granting access to Azure AI and `Microsoft.Extensions.Azure` for seamlessly injecting the SDK.
+If you didn’t train your model or prefer a pre-built one, unzip the example model file into its own directory and select **From local files**. Ensure the model type is **MLflow**, which matches the type of model we trained.
 
-![image of Azure.AI.TextAnalytics NuGet packages](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-2.jpeg)
+Upload all these files from the unzipped folder. Your folder should be simple and without spaces, as you’ll need to reference this in the code later. Pick a name and version for your model and register it.
 
-![image of Microsoft.Extensions.Azure NuGet package](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-3.gif)
+![image of upload model folder](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-2.png)
 
-Next, we need to register our text analytics client for dependency injection into our application. Before we can do that, the Text Analytics client requires two secrets: 
+For certain models, you can use the built-in endpoint creation process. However, as of writing this article, our model requires some customization for both the endpoint and environment before launching.
 
-* An endpoint address
-* An access key
+First, let’s build a custom environment using a minimal endpoint container. Go to **Environments** in the left menu. You’ll find two options for the environment type: **curated** and **custom**. In this tutorial, we’re turning a curated image into a custom one, so click the **curated** tab. Find the minimal inference server image. At the time of this writing, it was called `minimal-ubuntu20.04-py38-cpu-inference`, but the version may have changed. It’s a minimal Docker image that supports ML endpoints for some pipelines.
 
-We need to add these into both our development and production environments. In both environments, `AI_EndPoint` is the endpoint variable name while `AI_Key` is the access key variable name.
+Click on the image’s **Context** tab to get its Dockerfile and Conda dependencies file. Download these configuration files using the **Download Content** option. This will download a .zip archive with these files, so unzip them and place them in their own directory for customization.
 
-To add these two items to your development environment, right-click on your project and select **Manage User Secrets**. Next, open your Publish profile, click the three dots ( … ) next to Hosting, and select **Manage container app settings** to verify that these variables are accessible within your container. Finally, you can add these secrets to your Azure container.
+![image of Context tab](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-3.png)
 
-Now, open the `Program.cs` file and modify the section where we initialize the database context to include the text analytics initialization:
+Return to the **custom** tab in the environments screen and hit **Create** to make a new custom environment. Give this environment a name. For “Select environment source,” choose **Upload existing docker context** and select the minimal server folder you downloaded previously.
 
-```
-if (builder.Environment.IsDevelopment())
-{ 
-    builder.Services.AddDbContext<DatabaseContext>(options =>
-        options.UseSqlServer(builder.Configuration["userfeedbackdatabaseconnection"]));
-
-
-    builder.Services.AddAzureClients(clientBuilder =>
-        clientBuilder.AddTextAnalyticsClient(new Uri(builder.Configuration["AI_EndPoint"]),
-        new Azure.AzureKeyCredential(builder.Configuration["AI_Key"])) 
-        ); 
-} 
-else 
-{
-    builder.Services.AddDbContext<DatabaseContext>(options => 
-        options.UseSqlServer(Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING"))); 
-
-    builder.Services.AddAzureClients(clientBuilder => 
-        clientBuilder.AddTextAnalyticsClient(new Uri(builder.Configuration["AI_EndPoint"]), 
-        new Azure.AzureKeyCredential(builder.Configuration["AI_Key"])) 
-        );
-}
-```
-Finally, let’s configure our `Review Create` method to retrieve sentiment analysis results from the Azure AI services API. To do this, add the following to your `Review` controller constructor:
+Click on **Next**. Azure ML will allow you to modify the environment. To add dependencies, update the list under line 8. Here’s what the configuration file should look like:
 
 ```
-private readonly TextAnalyticsClient _textClient;
-
-        public ReviewsController(DatabaseContext context, TextAnalyticsClient textClient)
-        { 
-            _context = context;
-            _textClient = textClient;
-        } 
+name: minimal
+channels:
+- anaconda
+- conda-forge
+dependencies:
+- python=3.8.13
+- pip=22.1.2
+- pip:
+  - torch
+  - pandas==1.1.5
+  - psutil>=5.2.2,<6.0.0
+  - mlflow-skinny
+  - inference-schema
+  - azureml-defaults~=1.51.0
+  - azureml.automl.dnn.nlp
 ```
 
-Then, modify the `POST Create Action` in your `Reviews` controller to incorporate a call to the Azure AI services API for analyzing the review text:
+![image of environment settings](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-4.jpeg)
+
+Because this is a YAML file, we’ll need to ensure that the tabs on each line item are correct. This updated configuration file adds essential Python data science libraries for our model, including:
+
+* `mlflow-skinny`, a “runtime” version of the [MLFlow](https://mlflow.org/) machine learning library 
+* `inference-schema`, which drives inputs and outputs to our inference server 
+* `azureml-defaults`, which includes some default code and libraries to run AzureML libraries 
+* `azureml.automl.dnn.nlp`, which we use to train our model 
+
+With our environment set up, we can now create an endpoint for our application. Open the **Endpoints** menu, then hit **Create** for a new one. In the first window, choose the model you registered previously and click **Select**. Then, click **More options** to configure the endpoint. Give your endpoint a name, leave **managed** selected, and ensure your model is selected in the next window.
+
+The deployment screen lets you tweak live probes, score timeouts, and change other configurations. But for now, let’s stick with the defaults.
+
+![image of deployment screen](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-5.jpeg)
+
+Next, we can customize our environment and scoring script. Select the toggle that enables you to customize, pick the environment that you created, and add a scoring script—custom code that runs when you send data to the endpoint.
+
+Create a new script named `score.py` and paste this code:
 
 ```
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ProductId,ProductName,ReviewText,PostDate,Sentiment,PositiveValue,NeutralValue,NegativeValue")] Review review) 
-        {
-            var selectedProductId = int.Parse(HttpContext.Request.Form["Products"].ToString());
-            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == selectedProductId);
-
-            var sentimentResult = await _textClient.AnalyzeSentimentAsync(review.ReviewText);
-
-            review.ProductId = selectedProductId;
-            review.ProductName = product.Name;
-            review.PostDate = DateTime.Now.ToString("yyyy-MM-dd");
-            review.Sentiment = sentimentResult.Value.Sentiment.ToString();
-            review.PositiveValue = (float)sentimentResult.Value.ConfidenceScores.Positive;
-            review.NeutralValue = (float)sentimentResult.Value.ConfidenceScores.Neutral;
-            review.NegativeValue = (float)sentimentResult.Value.ConfidenceScores.Negative;
+from cmath import log
+import logging
+import os
+import json
+import mlflow
+from io import StringIO
+from mlflow.pyfunc.scoring_server import infer_and_parse_json_input, predictions_to_json
   
-            _context.Add(review);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        } 
+def init():
+    global model
+    global input_schema 
+
+    model_path = os.getenv("AZUREML_MODEL_DIR") + "/ReviewSentiment"
+    model = mlflow.pyfunc.load_model(model_path)
+    input_schema = model.metadata.get_input_schema()
+
+def run(raw_data):
+    json_data = json.loads(raw_data)
+    if "review" not in json_data.keys():
+        raise Exception("Request must contain a top level key named 'review'")
+
+    serving_input = { "inputs": json_data["review"] }
+    data = infer_and_parse_json_input(serving_input, input_schema)
+    predictions = model.predict(data)
+    return predictions
 ```
 
-In this tutorial, we use the simpler `AnalyzeSentimentAsync` method. It takes our review text and produces an overall sentiment analysis, assigning positive, neutral, and negative scores.
+This code has two functions: `init`, which loads and prepares the model, and `run`, which uses our data input against the model.
 
-Azure’s text analytics service also supports [opinion mining](https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/quickstart?tabs=macos&pivots=programming-language-csharp), a more advanced use case. Opinion mining goes beyond the basics, providing sentiment analysis for specific subjects or keywords within a text.
+In the `init` function, we use the environment variable `"AZUREML_MODEL_DIR"` to reference where Azure ML stores our model files. You should also see an additional folder after this variable—this is the base folder that stores our model file when we upload or retrieve a model job.
 
-For instance, if a review reads, “This was a really good product, but the delivery times were way too long. I also had a hard time understanding the manual,” the opinion mining option might break this into distinct subjects and offer sentiment analysis for each:
+Next, we load the model using the `load_model` function in the `mlflow` library and the input schema, which enables input validation. This preloads all the components for our endpoint so that when a client requests an analysis, we don’t need to wait for items to start up.
 
-* “Product” with a sentiment of positive
-* “Delivery time” with a sentiment of negative
-* “Manual” with a sentiment of negative
+Now, look at the run function. It takes in raw data as a JSON object, loads it into a variable called `json_data`, and checks if the JSON data contains a review key, which allows you to do a basic review of your input.
+
+Next, we need to format our input according to the `mlflow` model’s requirements. In this case, we’re expecting the API to accept an object formatted as follows:
+
+```
+{ "inputs": <JSON-Object> }.
+```
+
+We send this input to the model for predictions using the `infer_and_parse_json_input` method. 
+
+With the scoring script ready and our environment selected, it’s time to select **Compute** to run our endpoint container. In this demonstration, we use a memory-optimized compute instance so that the endpoint has enough space to load and use the model. Depending on the model, you might need different compute sizes, especially if you’re not using a pre-trained model. If you encounter resource errors during deployment, adjust the size as required.
 
 :::info
-Watch the [on-demand Learn Live serverless series](https://azure.github.io/Cloud-Native/Build-IA/LearnLive/?WT.mc_id=javascript-99907-ninarasi) that deconstructs a reference architecture for building intelligent apps using Azure Container Apps and Azure AI.
+Register to meet the Azure team at **[KubeCon and Azure Day](https://aka.ms/aks-day)** in Chicago on **November 6, 2023**. The Azure Product Engineering Team along with the Cloud Advocates team will be there to dive deep with you on developing intelligent apps with Azure Kubernetes Service.
 :::
 
-## Using Your Intelligent App to Analyze User Feedback
+We can also define the traffic sent to this deployment. Azure ML sets up a load balancer for managed endpoints with multiple deployments, often for tasks like A/B testing or rolling out new model versions.
 
-Now that we have our AI connected to our application, let’s create a review and see what the AI responds with.
+![image of compute settings under deploy](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-6.jpeg)
 
-Run the application, navigate to the `/Reviews/Create` folder to create a review, and click **Submit**. Select **Clippers & Trimmers** from the drop-down and write: “This was a really good trimmer for cutting my hair, but it gets caught in my beard.”
+Once you set the configurations, click **Create** to start the deployment. This takes around five to ten minutes while Azure ML assembles the resources and environment. 
 
-Upon inspecting the review you just posted, you’ll notice that Azure AI scored it as positive, albeit with slightly negative and neutral components.
+With the endpoint deployed, we can test the payloads our model can score. As referenced in our code, we need to ensure this input is in a key/value pair called `review`, and the input type is expected to be an array.
 
-![image of review index](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-4.jpeg)
-
-Now, try another review. This time, select the **Headphones** product from the drop-down and write the following review: “These headphones were passable. The foam on the outside was not thick enough and can hurt your head. The price is really cheap.”
-
-This time, the AI scores the review as negative, with no positive score and a slight neutral score.
-
-![image of review index after a second review](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-5.gif)
-
-By incorporating this AI-based scoring, you gain insights into customer feedback trends and can initiate specific actions based on positive or negative feedback. For example, we might want to understand how our product reviews have performed over the last seven days. Let’s update our review list page to present the average reviews during that period.
-
-To achieve this, we’ll navigate to the **ReviewContoller** and summarize our data to display on the **Index** page. Then, we’ll load our products and reviews from the database, iterate through them, and average them over eight days (including the current day). Finally, we’ll compile the summarized data in a list and create a table based on the list.
-
-Begin by creating a `SentimentTrends` model (a cut-down version of our review data) with this code:
+Let’s try a simple example. Open the endpoint, click **Test**, and enter the following code in the **Input data to test endpoint** box:
 
 ```
-namespace UserFeedbackApp.Models
-{ 
-    public class SentimentTrends
-    { 
-        public int Id { get; set; }
-        public string ProductName { get; set; }
-        public float PositiveValue { get; set; }
-        public float NeutralValue { get; set; }
-        public float NegativeValue { get; set; }
-     public string PostDate { get; set; }
+{
+    "review": ["This Product was so awesome"]
+}
+```
+
+After running this test, you should receive a JSON object with a predictions key containing an array with a single value of True, signifying the positive review we just left.
+
+![image of Input data to test](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-7.png)
+
+Although our endpoint is for real-time usage, we can still batch requests by specifying them in the input array. But if real-time performance isn’t crucial, we can gather reviews at set intervals, like every 15 minutes, and make this an asynchronous workflow.
+
+To demonstrate, let’s try a larger payload. Enter the following test data:
+
+```
+{
+    "review": [
+        "This Product was so awesome",
+        "I really did like this product",
+        "I'm a little bit disappointed by this item"
+        ]
+} 
+```
+
+This time, the endpoint will take a little bit longer to respond, but the array should contain two positives (`True`) and one negative (`False`).
+
+You can observe these predictions in action by checking your deployment logs.
+
+![image of deployment logs](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-8.png)
+
+### Integrating the Machine Learning Model into Your App
+
+With our model trained and endpoint ready, we can now call the endpoint from our existing application. First, add a new field to your database to store the new model predictions. Open the project in Visual Studio and add the following line to your `Review.cs` file in the `Models` directory:
+
+```
+public string CustomSentiment { get; set; }
+```
+
+Next, in the developer PowerShell terminal window, run these commands from your project folder to update your database:
+
+```
+dotnet ef migrations add NewReviewField
+dotnet ef database update
+```
+
+![image of PowerShell terminal](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-9.jpeg)
+
+With this new field in place, update your `Review Index.cshtml` page by adding the `CustomSentinent` value, which lists our reviews when we go to the URL `/reviews`:
+
+```
+<td>
+    @Html.DisplayFor(modelItem => item.CustomSentiment)
+</td>
+```
+
+Now, let’s incorporate the endpoint’s boilerplate code into our application to process a review.
+
+Return to the Azure ML Studio, open **Endpoints** from the left menu, click on your deployed endpoint, and select **Consume**. You’ll see code snippets for Python, C#, and R. Copy everything from the `InvokeRequestResponseService` method and switch back to your application. Paste the code into the `Create` method in the `Review` controller, right after retrieving the sentiment from the Azure AI services API.
+
+![image of Consume tab in ML Studio](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-10.png)
+
+Now, trim the code to look like this:
+
+```
+var handler = new HttpClientHandler()
+{
+    ClientCertificateOptions = ClientCertificateOption.Manual,
+    ServerCertificateCustomValidationCallback =
+            (httpRequestMessage, cert, cetChain, policyErrors) => { return true; }
+};
+using (var client = new HttpClient(handler))
+{
+    var reviewModel = new AIModel();
+    reviewModel.review.Add(review.ReviewText);
+    var requestBody = JsonConvert.SerializeObject(reviewModel);
+
+    const string apiKey = "endpoint-key";
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+    client.BaseAddress = new Uri("https://userreviewsentimentendpoint.eastus.inference.ml.azure.com/score");
+
+    var content = new StringContent(requestBody);
+    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+    HttpResponseMessage response = await client.PostAsync("", content);
+
+    if (response.IsSuccessStatusCode)
+    {
+        string result = await response.Content.ReadAsStringAsync();
+        var data = JsonConvert.DeserializeObject<List<string>>(result);
+
+        review.CustomSentiment = data.First();
     }
+}
+```
+
+With these modifications and cleanup in the boilerplate code, this block now:
+
+* Populates a new class, `AIModel`, with our review text
+* Creates a standard .NET HTTP client
+* Sends the review information to the endpoint
+* Waits for the array of values and passes on to be written to the database
+
+Now, to ensure the model receives the same types of values the API expects (an array of strings), we need to create the `AIModel` class as follows:
+
+```
+public class AIModel
+{
+   public List<string> review { get; set; }
+
+   public AIModel()
+   {
+        review = new List<string>();
+   }
 } 
 ```
 
-Next, update the `Index` method in our `ReviewController` file using the following code:
+This will send an array of JSON-converted review strings to the model.
 
-```
-public async Task<IActionResult> Index()
-{ 
-    var reviewList = await _context.Reviews.ToListAsync();
-    var productList = await _context.Products.ToListAsync();
-  
-    List<SentimentTrends> trends = new List<SentimentTrends>();
+### Testing and Validating the Enhanced Intelligent App
 
-    foreach(var product in productList)
-    { 
-         var productReviews = reviewList
-        .Where(d => d.ProductId == product.Id)
-        .Where(d => DateTime.ParseExact(d.PostDate, "yyyy-MM-dd", CultureInfo.InvariantCulture) >= (DateTime.Now.AddDays(-8)))
-        .ToList();
+Finally, let’s build and run our application to test the result. When the web page opens, navigate to **/Reviews/Create** and enter a sample review to have the application generate a response from both Azure AI services and our Custom AI endpoint. Pick a category and enter the text “This product is awesome.”
 
-        if (productReviews.Count() > 0)
-        { 
+![image of sample review](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-11.png)
 
-            float positiveValue = 0;
-            float neutralValue = 0;
-            float negativeValue = 0;
+Click **Create**. The process will take a little longer this time as we’re calling both the Azure AI services API and our Custom AI API. But once the process completes and you return to the Reviews screen, you’ll see both the Azure AI Analysis and the custom sentiment marked as positive (`True`).
 
-            foreach (var review in productReviews) 
-            {
-                 positiveValue += review.PositiveValue;
-                 neutralValue += review.NeutralValue;
-                 negativeValue += review.NegativeValue;
-            }
+![image of sample review in Index](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-12.png)
 
-             positiveValue = (float)Math.Round(positiveValue / productReviews.Count(), 2);
-             neutralValue = (float)Math.Round(neutralValue / productReviews.Count(), 2);
-             negativeValue = (float)Math.Round(negativeValue / productReviews.Count(), 2);
+Comparing the results for our tutorial example, you might notice a negligible difference between the Azure AI model and our custom one. This could be due to various reasons.
 
-             SentimentTrends trend = new SentimentTrends();
+* The phrase we used was pretty generic and didn’t supply much detail.
+* The data we used to train the model is pretty broad, similar to Azure AI.
+* The data is open source and may have also been used to train the Azure AI model.
 
-             trend.Id = productReviews.First().ProductId;
-             trend.ProductName = productReviews.First().ProductName;
-             trend.PostDate = DateTime.Now.AddDays(-8).ToString("yyyy-MM-dd");
-             trend.PositiveValue = positiveValue;
-             trend.NeutralValue = neutralValue;
-             trend.NegativeValue = negativeValue;
+However, for our demonstration, we’re expecting longer reviews that are more specific. So, let’s try a review that resembles real-life feedback: “This would have been a good product, but there were some issues related to the battery life. Delivery times were quick though, and the price was reasonable.”
 
-             trends.Add(trend);
-        } 
-    } 
+![image of several reviews in Index](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-13.png)
 
-    ViewBag.Trends = trends;
-    return reviewList != null ?
-            View(reviewList) :
-            Problem("Entity set 'DatabaseContext.Reviews'  is null.");
-} 
-```
+This time, our custom model shows a sentiment of true, whereas Azure AI categorizes it as mixed. Thanks to the training data we used, our model makes a clearer decision regarding the review’s sentiment.
 
-This code filters our recent reviews, averages them by the number of reviews received, and creates the list before passing it to the view in the **ViewBag**. To display this data, update the `Index.cshtml` file in our `Views/Reviews` folder with the following code:
+Let’s try another one: “The price was cheap and it did the job, but I should have bought the bigger model.”
 
-```
- <h2>Seven Day Trend</h2> 
-<table class="table"> 
-    <thead>
-        <tr>
-            <th>Product ID</th>
-            <th>Product Name</th>
-            <th>Positive</th>
-            <th>Neutral</th>
-            <th>Negative</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (SentimentTrends item in ViewBag.trends) 
-        {
-        <tr>
-              <td>@item.Id</td>
-              <td>@item.ProductName</td>
-              <td>@item.PositiveValue</td>
-              <td>@item.NeutralValue</td>
-              <td>@item.NegativeValue</td>
-        </tr>
-        }
-    </tbody>
-</table>
-```
+![image of multiple reviews in Index after adding more feedback](../../static/img/fallforia/blogs/2023-10-19/blog-image-3-4-14.png)
 
-This displays our data in a simple table on our reviews page. If we run our code now and navigate to the reviews page, we’ll see the table at the top of the page. Averaging product sentiments this way offers valuable insights into potential product issues based on real user feedback.
+Now, Azure AI analyzes this review as generally neutral, while our AI service analyzes it as negative. Both Azure AI and our custom-trained model offer excellent sentiment analysis for text. However, custom models can also provide specialized analysis or additional features based on data collected over time.
 
-![image of the table on the reviews page](../../static/img/fallforia/blogs/2023-10-17/blog-image-4-2-6.gif)
+If your applications have broader features and data, you can construct more complex models that analyze multi-columnar data or make decisions based on historical actions, further integrating AI into your workflows.
 
 ## Conclusion
 
-Intelligent Apps can add more data and insights into your applications, opening possibilities for even more functionality.
+In this article, we expanded our application by training our custom AI model in Azure Machine Learning. We covered how to train a sentiment analysis model based on our own application data and incorporate this into our application. We also compared our custom-built model to Azure AI and briefly explored expanding AI capabilities with larger applications and datasets.
 
-In this two-part article, we built a simple web application using [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview?WT.mc_id=javascript-99907-ninarasi). Then, we incorporated sentiment analysis through Azure AI, extending our application’s capabilities to analyze user feedback. This application architecture on Azure enables seamless scalability for both the application and the AI components. This automatic scalability ensures your application can efficiently meet rising demands and scale back down when that demand subsides.
+Azure ML allows you to build upon Azure AI’s existing AI functionalities, enabling you to train, publish, and seamlessly use AI services within applications. With the newfound ability to train custom models, the possibilities for AI capabilities are boundless.
 
-However, sentiment analysis is just one small component of the entire Azure AI suite. Azure AI includes several AI-driven APIs using pre-built models, such as:
+While off-the-shelf solutions offer general utility, the power to customize models allows for fine-tuning to specific tasks. For instance, you can use this knowledge to create a bespoke recommendation system for a niche e-commerce platform, catering to subtle buying patterns that traditional models might overlook. With the capacity to train tailored models, you’re ready to venture beyond generalized solutions and unlock AI’s true potential for specialized applications.
 
-* Language understanding for translation, question answering, or conversational language comprehension
-* Image processing for image recognition or image and video analysis
-* Speech processing, including speech-to-text, text-to-speech, or speech translation
-* Anomaly detection, offensive content detection, and personalization
-
-Begin your journey into [Intelligent Apps with Azure](https://azure.microsoft.com/en-us/products/ai-services?WT.mc_id=javascript-99907-ninarasi), then delve into the next topic to learn how to level up your Intelligent Apps.
+Take a look at [Azure Machine Learning](https://ml.azure.com/) to integrate more advanced AI features and take your Intelligent Applications to the next level.
 
 ## Exercise
 
 * Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208/UserFeedbackApp/Models) to build your intelligent app with multi-modal databases.
 * Complete the **[Intelligent apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
-* Register for **[Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi)** session for live Q&A with the Product Engineering team on building intelligent apps using Azure Container Apps.
+* Watch the **[Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi)** session where the Product Engineering team goes deep with demos while addressing the concepts for building intelligent apps using Azure Container Apps.
