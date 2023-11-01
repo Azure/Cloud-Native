@@ -1,7 +1,7 @@
 ---
 date: 2023-10-19T09:02
 slug: taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-2
-title: 3.4 Taking Intelligent Apps to the Next Level - Implementing Advanced Features with Azure Machine Learning (2)
+title: 3-4 Taking Intelligent Apps to the Next Level - Implementing Advanced Features with Azure Machine Learning (2)
 authors: [cnteam]
 draft: false
 hide_table_of_contents: false
