@@ -48,7 +48,7 @@ In this article, explore how to level up your Intelligent Apps by training a cus
 
 ## Taking Intelligent Apps to the Next Level: Implementing Advanced Features with Azure Machine Learning (1)
 
-In the [first topic of this series](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1), we explored the process of constructing an Intelligent App using [Azure Container Apps](https://azure.microsoft.com/en-ca/products/container-apps) that incorporated [Azure AI](https://azure.microsoft.com/en-ca/solutions/ai/) to perform sentiment analysis on user feedback.
+In the [first topic of this series](https://azure.github.io/Cloud-Native/30DaysOfIA/deploy-an-intelligent-app-on-azure-container-apps-1), we explored the process of constructing an Intelligent App using [Azure Container Apps](https://azure.microsoft.com/products/container-apps?WT.mc_id=javascript-99907-ninarasi) that incorporated [Azure AI](https://azure.microsoft.com/solutions/ai/?WT.mc_id=javascript-99907-ninarasi) to perform sentiment analysis on user feedback.
 
 In this second topic tutorial, we’ll enhance the [Intelligent App we created](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208/UserFeedbackApp) by training a custom AI model using targeted data. We’ll walk through how you can incorporate these custom models, trained within Azure Machine Learning (ML), into your application. Just as we used Azure AI, we’ll deploy and leverage an endpoint to make the most of this integration.
 
