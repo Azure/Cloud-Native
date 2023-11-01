@@ -3,7 +3,7 @@ date: 2023-10-19T09:02
 slug: taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-2
 title: 3.4 Taking Intelligent Apps to the Next Level - Implementing Advanced Features with Azure Machine Learning (2)
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -48,11 +48,11 @@ In this article, continue to explore how to level up your Intelligent Apps by tr
 
 ## Taking Intelligent Apps to the Next Level: Implementing Advanced Features with Azure Machine Learning (2)
 
-In the [previous part](https://azure.github.io/Cloud-Native/30daysofIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) of this tutorial, we explored creating Azure Machine Learning workspace and training the machine learning model. This part continues onto integrating the ML model into the app, and then testing and validating the enhanced intelligent app to get better results from the [Azure AI Sentiment Analysis API](https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/overview?tabs=prebuilt?WT.mc_id=javascript-99907-ninarasi).
+In the [previous part](https://azure.github.io/Cloud-Native/30DaysOfIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) of this tutorial, we explored creating Azure Machine Learning workspace and training the machine learning model. This part continues onto integrating the ML model into the app, and then testing and validating the enhanced intelligent app to get better results from the [Azure AI Sentiment Analysis API](https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/overview?tabs=prebuilt?WT.mc_id=javascript-99907-ninarasi).
 
 ### Prerequisites
 
-To follow this tutorial, ensure you have completed the [first](https://azure.github.io/Cloud-Native/30daysofIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) part of this topic.
+To follow this tutorial, ensure you have completed the [first](https://azure.github.io/Cloud-Native/30DaysOfIA/taking-intelligent-apps-to-the-next-level-implementing-advanced-features-with-azure-machine-learning-1) part of this topic.
 
 ### Testing and Validating the ML Model with the Intelligent App
 
