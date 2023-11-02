@@ -199,11 +199,202 @@ Join the Azure team at **[KubeCon and Azure Day](https://aka.ms/aks-day)** in Ch
 
 ## Building a Web Interface
 
+The next step in our app is creating a simple web interface that lets users upload an image of a logo, enter a text prompt with instructions on how to vary the logo, and view the results that DALL-E returns. We’ll use HTML and plain JavaScript with some Tailwind CSS to add visual appeal.
 
+Start by creating a `static` subdirectory, and inside it, generate an HTML file named `index.html`. This file will contain the basic layout of our webpage, such as the title, navigation bar, input box for entering a text prompt, and container for displaying the results. It’s also essential to link to the Tailwind CSS CDN and our custom CSS file that we’ll create later.
 
+Add the following HTML to the `index.html` file:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Variation Generator</title>
+  <!-- Link to Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Link to our custom CSS file -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Navigation bar -->
+    <nav class="bg-blue-500 p-4 flex justify-between items-center fixed top-0 left-0 w-full z-10">
+    <h1 class="text-white text-xl font-bold">Logo Variation Generator</h1>
+  </nav>
+  <!-- Main content -->
+  <main class="container mx-auto p-4 pt-16">
+    <!-- Create a grid layout with two columns -->
+    <div id="logo-input" class="flex flex-col items-center justify-center space-y-4 mt-20">
+        <input id="logo-text" type="text" placeholder="Describe the logo you'd like to create..." class="w-3/4 text-2xl text-center border border-gray-300 px-4 py-2 rounded" required>
+        <button id="logo-generate" type="button" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Generate</button>
+      </div>
+    <div id="logo-results" class="mt-10 hidden"></div>
+  </main>
+  <!-- Script for handling user input and fetch requests -->
+  <script src="/script.js"></script>
+</body>
+</html>
+```
+
+Next, create a file named `style.css` in the static directory and add a few styles to enhance the UI:
+
+```
+.logo-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-input-moved {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+/* Grid layout for displaying logos */ 
+
+#logo-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Change '3' according to desired columns */
+    gap: 20px;
+} 
+
+#logo-text {
+    font-size: 2rem;
+    border-color: #e5e7eb;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+} 
+
+#logo-generate {
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}   
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fade-out 0.5s forwards;
+} 
+
+@keyframes fade-out {
+    from {
+    opacity: 1;
+    }
+    to {
+    opacity: 0;
+    }
+}
+```
+
+Now, we just need some JavaScript to tie it all together. Create a file named `script.js` in the `static` directory, and add the following:
+
+```
+const logoGenerateButton = document.getElementById("logo-generate");
+const logoInput = document.getElementById("logo-input");
+const logoResults = document.getElementById("logo-results");
+const logoText = document.getElementById("logo-text");
+
+logoGenerateButton.addEventListener("click", function () {
+    // Disable the input and button
+    logoText.disabled = true;
+    logoGenerateButton.disabled = true;
+    // Change the button text
+    logoGenerateButton.textContent = "Generating...";
+
+    // Get the input value
+    const text = logoText.value;
+
+    fetch("/logos", {
+        method: "POST",
+        // send the input value as JSON
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text }),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        // Fade out the input and button
+        logoInput.classList.add("opacity-0");
+        // Re-enable the input and button
+        logoText.disabled = false;
+        logoGenerateButton.disabled = false;
+        // Reset the button text
+        logoGenerateButton.textContent = "Generate";
+        // Adjust the input and button styles
+        logoInput.classList.remove("flex-col", "items-center", "justify-center", "space-y-4", "mt-20", "opacity-0");
+        logoInput.classList.add("flex-row", "justify-between", "mt-4");
+        logoText.classList.add("w-3/5");
+        logoGenerateButton.classList.add("w-1/3");
+
+        // Clear the results container
+        logoResults.innerHTML = "";
+
+        // Loop through each image URL in the data array
+        data.forEach((url) => { 
+
+            // Create an image element for each URL
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = "Logo variant";
+
+        // Append the image element to the results container
+            logoResults.appendChild(img);
+        }); 
+
+        // Show the results container
+        logoResults.classList.remove("hidden");
+
+        // Fade in the input, button, and images
+        logoInput.classList.add("opacity-100");
+    })
+    .catch((error) => {
+        // Log any errors to the console
+        console.error(error);
+    });
+}); 
+```
+
+And with that, you’ve successfully built an Azure OpenAI-powered logo creation web interface.
+
+To test it, run the following command in your terminal from the app’s root directory.
+
+```
+uvicorn main:app --reload
+```
+
+Then, open a web browser and navigate to `http://localhost:8000`. You should see the web page you just created. Describe the kind of logo you’d like to create and click Generate. In a few seconds, you should see the images DALL-E generated for you:
+
+![image of logo generator](../../static/img/fallforia/blogs/2023-10-23/blog-image-4-1-3.png)
+
+DALL-E will display the original logo on the left column and the logo variants on the right one.
+
+Try experimenting with different prompts to see what you come up with!
 
 ## Exercise
 
-* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Building-Your-First-Intelligent-App-with-Azure-Cognitive-Services/tree/main/Microsoft_Series_2_Code/Source%20-%20Article%207%20%2B%208/UserFeedbackApp/Models) to build your intelligent app with multi-modal databases.
-* Complete the **[Intelligent apps Cloud Skills Challenge](https://aka.ms/fallforIA/apps-csc)** to build on your app dev and AI skills.
-* Watch the **[Ask the Expert: Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi)** session where the Product Engineering team goes deep with demos while addressing the concepts for building intelligent apps using Azure Container Apps.
+* Complete this **hands-on sample** [project code](https://github.com/contentlab-io/Microsoft-Building-an-AI-Powered-Logo-Variation-Generator-with-Azure-OpenAI) to build your intelligent app with multi-modal databases.
+* Watch the **[Ask the Expert: Azure Kubernetes Service](https://reactor.microsoft.com/reactor/events/20732/?WT.mc_id=javascript-99907-ninarasi)** session where the Product Engineering team goes dives into the concepts for building intelligent apps using Azure Kubernetes Service.
+* To revise core concepts on cloud-native or Azure Kubernetes Service, go to **[30 Days of Cloud Native](https://azure.github.io/Cloud-Native/cnny-2023/cloud-native-fundamentals?WT.mc_id=javascript-99907-ninarasi)**.
