@@ -1,7 +1,7 @@
 ---
 date: 2023-10-23T09:00
 slug: building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-1
-title: 4-1 - Building an AI-Powered Logo Variation Generator with Azure OpenAI and AKS (1)
+title: 4-1. Building an AI-Powered Logo Variation Generator with Azure OpenAI and AKS (1)
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
