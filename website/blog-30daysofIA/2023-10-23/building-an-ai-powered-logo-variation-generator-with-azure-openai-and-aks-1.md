@@ -122,7 +122,7 @@ Now, we need to alter a few settings to get the OpenAI Python library to work wi
 
 ```
 openai.api_key = "AZURE_OPENAI_KEY"
-openai.api_base = "AZURE_OPENAI_ENDPOINT
+openai.api_base = "AZURE_OPENAI_ENDPOINT"
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
 ```
