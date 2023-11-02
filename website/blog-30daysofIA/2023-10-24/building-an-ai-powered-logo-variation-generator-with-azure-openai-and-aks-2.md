@@ -97,31 +97,31 @@ To store and manage our Docker images, we need to use a container registry, whic
 Start by creating an Azure Container Registry using the `az acr create` command. Use a descriptive name for your registry instead of the placeholder:
 
 ```
-az acr create --resource-group dalleResourceGroup --name &lt;registry-name&gt; --sku Basic
+az acr create --resource-group dalleResourceGroup --name <registry-name> --sku Basic
 ```
 
 This will create a container registry in the resource group named `dalleResourceGroup` with the Basic service tier.
 
-Log in to your container registry using the `az acr` login command. Replace `&lt;registry-name&gt;` with the name of your registry:
+Log in to your container registry using the `az acr` login command. Replace `<registry-name>` with the name of your registry:
 
 ```
-az acr login --name &lt;registry-name&gt; 
+az acr login --name <registry-name> 
 ```
 
 This command authenticates you with the container registry using your Azure credentials.
 
-Build your Docker image using the `az acr build` command. Replace `&lt;image-name&gt;` with the name of your registry and a name for your image:
+Build your Docker image using the `az acr build` command. Replace `<image-name>` with the name of your registry and a name for your image:
 
 ```
-az acr build --registry &lt;registry-name&gt; --image &lt;image-name&gt;
+az acr build --registry <registry-name> --image <image-name>
 ```
 
 This command builds your Docker image from the Dockerfile in the current directory and pushes it to your container registry.
 
-Verify that your image is in your container registry using the `az acr repository` list command, replacing `&lt;registry-name&gt;` with the name of your registry:
+Verify that your image is in your container registry using the `az acr repository` list command, replacing `<registry-name>` with the name of your registry:
 
 ```
-az acr repository list --name &lt;registry-name&gt; --output table
+az acr repository list --name <registry-name> --output table
 ```
 
 :::info
@@ -132,10 +132,10 @@ Join the Azure team at **[KubeCon and Azure Day](https://aka.ms/aks-day)** in Ch
 
 To run our app on AKS, we need to create an AKS cluster, a group of [nodes](https://kubernetes.io/docs/concepts/architecture/nodes/) hosting our containers. A node is a virtual machine that runs one or more containers. An AKS cluster also has a control plane that manages the nodes and orchestrates the containers.
 
-Replace `&lt;cluster-name&gt;` with a name for your cluster and `&lt;registry-name&gt;` with the name of your container registry:
+Replace `<cluster-name>` with a name for your cluster and `<registry-name>` with the name of your container registry:
 
 ```
-az aks create --resource-group dalleResourceGroup --name &lt;cluster-name&gt; --node-count 1 --generate-ssh-keys --attach-acr &lt;registry-name&gt;
+az aks create --resource-group dalleResourceGroup --name <cluster-name> --node-count 1 --generate-ssh-keys --attach-acr <registry-name>
 ```
 
 This command action creates an AKS cluster in the resource group named `dalleResourceGroup` with the following parameters:
@@ -144,10 +144,10 @@ This command action creates an AKS cluster in the resource group named `dalleRes
  * `--generate-ssh-keys` — This generates SSH keys to access the nodes if needed.
  * `--attach-acr` — This attaches the container registry to the cluster, allowing the cluster to pull images from the registry.
 
-Next, connect to your cluster using the `az aks get-credentials` command. Replace `&lt;cluster-name&gt;` with the name of your cluster:
+Next, connect to your cluster using the `az aks get-credentials` command. Replace `<cluster-name>` with the name of your cluster:
 
 ```
-az aks get-credentials --resource-group dalleResourceGroup --name &lt;cluster-name&gt;
+az aks get-credentials --resource-group dalleResourceGroup --name <cluster-name>
 ```
 
 This action downloads the credentials and configures `kubectl`, a command-line tool for interacting with Kubernetes clusters.
@@ -188,7 +188,7 @@ spec:
     spec:
       containers:
       - name: dall-e-app # The name of the container
-        image: &lt;registry-name&gt;.azurecr.io/&lt;image-name&gt; # The image to run in the container
+        image: <registry-name>.azurecr.io/<image-name> # The image to run in the container
         ports:
         - containerPort: 8000 # The port that the container exposes to other services
         resources:
@@ -234,7 +234,7 @@ This manifest file tells Kubernetes to do the following:
  * Create a Service for the app that exposes port 80 and forwards traffic to port 8000 on the app instances. The Service also assigns a public IP address and load balances traffic across instances.
  * Create an Ingress for the app that routes incoming requests on path / to port 80 on the Service.
 
-As in previous examples, replace `&lt;registry-name&gt;` and `&lt;image-name&gt;` with your own values in the manifest file.
+As in previous examples, replace `<registry-name>` and `<image-name>` with your own values in the manifest file.
 
 Now, let’s deploy the app to the AKS cluster. Apply your manifest file using the `kubectl apply` command:
 
@@ -260,7 +260,7 @@ kubectl get ingress dall-e-app
 
 This command provides information about your Ingress, such as the host and the address. You should see the same public IP address as your Service.
 
-Now that you’ve deployed your app on AKS, you can test it again and see how it works on AKS. Open a web browser and load `http://&lt;web&gt;/index.html`, where `&lt;web&gt;` is the public IP address of your service or ingress. You should see the same web page as before.
+Now that you’ve deployed your app on AKS, you can test it again and see how it works on AKS. Open a web browser and load `http://<web>/index.html`, where `<web>` is the public IP address of your service or ingress. You should see the same web page as before.
 
 Enter a text prompt describing the logos you would like to create. For example, you might enter “vector art that includes a dancing cat.”
 
