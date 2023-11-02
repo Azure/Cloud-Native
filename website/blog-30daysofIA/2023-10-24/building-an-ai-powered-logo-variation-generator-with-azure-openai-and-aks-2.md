@@ -48,11 +48,11 @@ In this article, explore how to develop an AI-powered logo generator using DALL-
 
 ## Building an AI-Powered Logo Variation Generator with Azure OpenAI and AKS (2)
 
-In the [previous part](https://azure.github.io/Cloud-Native/30daysofIA/https://azure.github.io/Cloud-Native/30DaysOfIA/building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-1) of this tutorial, we explored creating an AI-powered logo variation generator with DALL-E and building a web interface for the app. This part continues onto deploying and testing the application on Azure Kubernetes Service.
+In the [previous part](https://azure.github.io/Cloud-Native/30DaysOfIA/building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-1) of this tutorial, we explored creating an AI-powered logo variation generator with DALL-E and building a web interface for the app. This part continues onto deploying and testing the application on Azure Kubernetes Service.
 
 ### Prerequisites
 
-To follow this tutorial, ensure you have completed the first [part](https://azure.github.io/Cloud-Native/30daysofIA/https://azure.github.io/Cloud-Native/30DaysOfIA/building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-1) of this topic. 
+To follow this tutorial, ensure you have completed the first [part](https://azure.github.io/Cloud-Native/30DaysOfIA/building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-1) of this topic. 
 
 ## Deploying and Testing on Azure Kubernetes Service
 
