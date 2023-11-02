@@ -239,6 +239,12 @@ As in previous examples, replace `<registry-name>` and `<image-name>` with your 
 Now, let’s deploy the app to the AKS cluster. Apply your manifest file using the `kubectl apply` command:
 
 ```
+kubectl apply -f manifest.yaml
+```
+
+This creates or updates all resources defined in your manifest file. Next, check the status of your Deployment using the `kubectl get deployment` command:
+
+```
 kubectl get deployment dall-e-app
 ```
 
