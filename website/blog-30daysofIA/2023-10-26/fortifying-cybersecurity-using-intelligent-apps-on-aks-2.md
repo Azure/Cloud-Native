@@ -90,7 +90,7 @@ First, we need to make some adjustments. To facilitate calls to the anomaly dete
 
 ```
 .alter cluster policy callout
-&#96;&#96;&#96;
+\ ```
 [
     {
         "CalloutType": "webapi",
@@ -98,7 +98,7 @@ First, we need to make some adjustments. To facilitate calls to the anomaly dete
         "CanCall": true
     }
 ]
-&#96;&#96;&#96;
+\ ```
 ```
 
 We’re now ready to analyze our data and plot the anomalies on a graph. Paste the following code into the query editor. It’s an adapted version of a [Microsoft tutorial](https://learn.microsoft.com/azure/ai-services/anomaly-detector/tutorials/azure-data-explorer?WT.mc_id=javascript-99907-ninarasi), tailored to our dataset. Remember to replace `<your AD instance URL>` and `<your AD key>` with the Anomaly Detection instance URL and key that we used previously.
