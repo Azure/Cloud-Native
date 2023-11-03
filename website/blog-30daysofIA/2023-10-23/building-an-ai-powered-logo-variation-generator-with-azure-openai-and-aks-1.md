@@ -3,7 +3,7 @@ date: 2023-10-23T09:00
 slug: building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-1
 title: 4-1. Building an AI-Powered Logo Variation Generator with Azure OpenAI and AKS (1)
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -41,7 +41,7 @@ In this article, explore how to develop an AI-powered logo generator using DALL-
 ## What We'll Cover:
 
  * Generating images with [DALL-E](https://openai.com/dall-e-2)
- * Environment setup in Azure Machine Learning
+ * Building a web interface
 
 ![image of logos on web interface](../../static/img/fallforia/blogs/2023-10-23/blog-image-4-1-1.jpeg)
 
@@ -154,7 +154,7 @@ async def generate_logos(text_prompt: str):
 Here’s what the function does:
 
 * It reads the image file as bytes and encodes it as base64.
-* It uses the 'openai.Image.create()' method to generate images from the user’s prompt, passing in the image file as an input parameter along with the text prompt.
+* It uses the `openai.Image.create()` method to generate images from the user’s prompt, passing in the image file as an input parameter along with the text prompt.
 * It returns a list of image URLs from the response.
 
 Note that we’re adding additional detail to the prompt the user provided to help ensure it generates logos as we expect. This technique is worth remembering because [prompt engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=javascript-99907-ninarasi) is important when working with modern AI models.
