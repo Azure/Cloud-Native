@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[4.2 - Building an AI-Powered Logo Variation Generator with Azure OpenAI and AKS (2)]]></title>
+            <title><![CDATA[4-2. - Building an AI-Powered Logo Variation Generator with Azure OpenAI and AKS (2)]]></title>
             <link>https://azure.github.io/Cloud-Native/30DaysOfIA/building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-2</link>
             <guid>https://azure.github.io/Cloud-Native/30DaysOfIA/building-an-ai-powered-logo-variation-generator-with-azure-openai-and-aks-2</guid>
             <pubDate>Tue, 24 Oct 2023 09:00:00 GMT</pubDate>
