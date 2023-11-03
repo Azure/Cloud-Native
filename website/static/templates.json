@@ -1,5 +1,91 @@
 [
     {
+        "title": "Ask the Expert: Build Intelligent Apps",
+        "description": "Join the Azure Functions Product Group this season to learn about FaaS or Functions-as-a-Service in Azure serverless computing. It is time to focus on the pieces of code that matter most to you while Azure Functions handles the rest. Discuss with the experts on how to combine the power of AI, cloud-scale data, and serverless app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Functions.",
+        "preview": "",
+        "website": "https://azure.microsoft.com/products/functions",
+        "author": "Azure Functions",
+        "source": "https://www.youtube.com/watch?v=dWXy1IkhfBk",
+        "tags": [
+            "video",
+            "azurefunctions",
+            "azureopenai",
+            "featured",
+            "ai"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Build Intelligent Microservices with Azure Container Apps",
+        "description": "Join the Azure Container Apps Product Group to learn about combining the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences with microservices. Azure Container Apps is an app-centric service, empowering developers to focus on the differentiating business logic of their apps rather than on cloud infrastructure management. Discuss with the experts on how to develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Container Apps.",
+        "preview": "",
+        "website": "https://azure.microsoft.com/products/functions",
+        "author": "Azure Functions",
+        "source": "https://www.youtube.com/watch?v=8HsNpCkYV5o",
+        "tags": [
+            "video",
+            "azurecontainerapps",
+            "azureopenai",
+            "featured",
+            "ai"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Define and get started with the Contoso Real Estate Application",
+        "description": "Learn about the Contoso Real Estate sample, fork the repo, launch GitHub Codespaces - and build/preview the application to validate environment.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://developer.microsoft.com/en-us/reactor/events/20698/?WT.mc_id=javascript-99907-ninarasi&WT.mc_id=javascript-99907-ninarasi",
+        "tags": [
+            "video",
+            "serverless",
+            "github",
+            "featured"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live: Develop and Deconstruct the Contoso Real Estate Portal App",
+        "description": "Learn about micro-frontends and API-first design. Deconstruct the portal app, blog app, and serverless API.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://developer.microsoft.com/en-us/reactor/events/20699/?WT.mc_id=javascript-99907-ninarasi",
+        "tags": [
+            "video",
+            "serverless",
+            "github",
+            "featured"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Develop and Deconstruct the Authentication, Payments & Search",
+        "description": "Integrate authentication to support user profiles. Integrate payments and search features using 3rd party API.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://developer.microsoft.com/en-us/reactor/events/20700/?WT.mc_id=javascript-99907-ninarasi",
+        "tags": [
+            "video",
+            "serverless",
+            "github",
+            "featured"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | DevOps and Deconstruct the E2E Workflow for Testing and Deploy",
+        "description": "Learn to design and run end-to-end tests with Playwright. Provision and deploy solution to Azure with AZD.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://developer.microsoft.com/en-us/reactor/events/20701/?WT.mc_id=javascript-99907-ninarasi",
+        "tags": [
+            "video",
+            "serverless",
+            "github",
+            "featured"
+        ]
+    },
+    {
         "title": "Cloud-Native New Year - Azure Kubernetes Service",
         "description": "Join the Azure Kubernetes Service Product Group this New Year to learn about cloud-native development using Kubernetes on Azure computing. It is time to accelerate your cloud-native application development leveraging the de-facto container platform, Kubernetes. Discuss with the experts on how to develop, manage, scale and secure managed Kubernetes clusters on Azure with an end-to-end development and management experience using Azure Kubernetes Service and Azure Fleet Manager.",
         "preview": "",
