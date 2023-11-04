@@ -88,9 +88,8 @@ Now that our data resides in the cluster, we can start querying and analyzing it
 
 First, we need to make some adjustments. To facilitate calls to the anomaly detection API, we need to enable HTTP requests. Execute `.enable plugin http_request` in the query editor. Next, run the following command to enable web API calls:
 
-```
-.alter cluster policy callout
 ````
+.alter cluster policy callout
 ```
 [
     {
@@ -101,7 +100,6 @@ First, we need to make some adjustments. To facilitate calls to the anomaly dete
 ]
 ```
 ````
-```
 
 We’re now ready to analyze our data and plot the anomalies on a graph. Paste the following code into the query editor. It’s an adapted version of a [Microsoft tutorial](https://learn.microsoft.com/azure/ai-services/anomaly-detector/tutorials/azure-data-explorer?WT.mc_id=javascript-99907-ninarasi), tailored to our dataset. Remember to replace `<your AD instance URL>` and `<your AD key>` with the Anomaly Detection instance URL and key that we used previously.
 
