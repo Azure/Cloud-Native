@@ -3,7 +3,7 @@ date: 2023-10-26T09:00
 slug: fortifying-cybersecurity-using-intelligent-apps-on-aks-2
 title: 4-4. Fortifying Cybersecurity Using Intelligent Apps on AKS (2)
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
