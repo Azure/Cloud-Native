@@ -56,7 +56,7 @@ To follow this tutorial, ensure you have completed the [first](https://azure.g
 
 [Azure Data Explorer](https://learn.microsoft.com/azure/ai-services/anomaly-detector/tutorials/azure-data-explorer?WT.mc_id=javascript-99907-ninarasi) is a powerful tool for data analysis and querying. We’ll now set up an Azure Data Explorer cluster and import our dataset to visualize the anomalies. Graphically representing them can make it easier to spot patterns.
 
-First, we need to create an Azure Data Explorer cluster. Return to Azure and search for “Azure Data Explorer Clusters.” Select it, click **Create**, and pick the same resource group used for the anomaly detection instance. Assign a unique name, such as anomalydetectioncluster. Within the **COMPUTE SPECIFICATION** section, opt for the **Dev/test** workload and disable the **Availability zones** option. This choice will provide a modest, budget-friendly cluster for our demo. For production workloads, you may want to use another size.
+First, we need to create an Azure Data Explorer cluster. Return to Azure and search for “Azure Data Explorer Clusters.” Select it, click **Create**, and pick the same resource group used for the anomaly detection instance. Assign a unique name, such as `anomalydetectioncluster`. Within the **COMPUTE SPECIFICATION** section, opt for the **Dev/test** workload and disable the **Availability zones** option. This choice will provide a modest, budget-friendly cluster for our demo. For production workloads, you may want to use another size.
 
 ![image of Azure Data Explorer Cluster setup](../../static/img/fallforia/blogs/2023-10-26/blog-image-4-4-2.png)
 
