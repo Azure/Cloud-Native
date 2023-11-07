@@ -31,47 +31,6 @@ function SectionContent(){
     return (
         <section className={styles.features}>
             <div className="container">
-                <div>
-                    <h2>How does it work?</h2>
-                    <hr></hr>
-                </div>
-                <div className="row" style={{paddingLeft: '1rem', paddingRight: '1rem' }}>
-                    <p>The live broadcast will have a moderated chat session where you can submit questions in real time. We also have a custom <a href="https://github.com/Azure/Cloud-Native/issues/new?assignees=&labels=ask+the+expert&template=---ask-the-expert-.md&title=%5BAsk+The+Expert%5D++" target="_blank" className='fw600'>Ask The Expert</a> issue you can use to submit questions ahead of time as mentioned earlier.</p>
-                </div>
-                <div className="row" style={{paddingLeft: '1rem', paddingRight: '1rem' }}>
-                    <ul>
-                        <li>
-                        <strong>We strongly encourage you to submit questions early</strong> using that issue
-                        </li>
-                        <li>
-                        Browse <strong><a href="https://github.com/Azure/Cloud-Native/issues?q=+is%3Aissue+label%3A%22ask+the+expert%22+" target="_blank" className='fw600'>previously posted questions</a></strong> to reduce duplication.
-                        </li>
-                        <li>
-                        Upvote existing questions of interest to <strong>help us prioritize them</strong> for the live show.
-                        </li>
-                    </ul>
-                </div>
-                <div className="row" style={{paddingLeft: '1rem', paddingRight: '1rem' }}>
-                    <p>Doing this will help us all in a few ways:</p>
-                </div>
-                <div className="row" style={{ paddingBottom: '1rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
-                    <ul>
-                        <li>
-                        We can ensure that <em>all</em> questions get answered here, even if we run out of time on the live broadcast.
-                        </li>
-                        <li>
-                        Others can vote on your question - helping us prioritize them live based on popularity.
-                        </li>
-                        <li>
-                        We can update them with responses post-event for future readers.
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>When is it?</h2>
-                    <hr></hr>
-                    <p>Visit the <a href="https://aka.ms/fallforIA/ATE" target="_blank" className='fw600'>ATE : Build Intelligent Apps</a> page to see the latest schedule and registration links! For convenience, we've replicated some information here. Please click the <strong>REGISTER TO ATTEND</strong> links to save the date and get notified of key details like links to the livestream (pre-event) and recording (post-event.)</p>
-                </div>
                 <div className="row" style={{ paddingBottom: '1rem' }}>
                     {ContentItemsATE.map((props, idx) => (
                         <ContentItemATE key={idx} {...props} />
@@ -138,11 +97,11 @@ const ContentItemsATE = [
   },
 ];
 
-export default function LearnLive() {
+export default function AskTheExperts() {
     const {siteConfig} = useDocusaurusContext();
     const pageProps = {
         title: "Ask The Expert",
-        description: "Ask the Expert is a series of scheduled 30-minute LIVE broadcasts where you can connect with experts to get your questions answered! You an also visit the site later, to view sessions on demand - and view answers to questions you may have submitted ahead of time."
+        description: "Ask the Expert is a series of scheduled 30-minute LIVE broadcasts where you can connect with experts to get your questions answered."
     };
     return (
       <Layout
