@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -203,20 +204,20 @@ const config = {
             label: "Python",
             to: "https://docs.microsoft.com/azure/developer/python/?WT.mc_id=javascript-99907-ninarasi",
           },
-          {
-            label: "Privacy Statement ",
-            to: "https://privacy.microsoft.com/privacystatement",
-          },
-          {
-            label: `© ${new Date().getFullYear()} Microsoft`,
-            to: "https://microsoft.com",
-          },
+          // {
+          //   label: "Privacy Statement ",
+          //   to: "https://privacy.microsoft.com/privacystatement",
+          // },
+          // {
+          //   label: `© ${new Date().getFullYear()} Microsoft`,
+          //   to: "https://microsoft.com",
+          // },
         ],
       },
 
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
 
       image: "https://azure.github.io/Cloud-Native/img/ogImage.png",
@@ -254,14 +255,14 @@ const config = {
         },
       ],
       /* Banner Announcements */
-      announcementBar: {
-        id: "Call To Action",
-        content:
-        'Meet the Azure team at <a target="_blank" href="https://aka.ms/aks-day" style="color:#ffb3bb; font-weight:600;">KubeCon + Azure Day</a> - Give us <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">🌟 on GitHub</a>',
-        backgroundColor: "#140035",
-        textColor: "#ffffff",
-        isCloseable: false,
-      },
+      // announcementBar: {
+      //   id: "Call To Action",
+      //   content:
+      //   'Meet the Azure team at <a target="_blank" href="https://aka.ms/aks-day" style="color:#ffb3bb; font-weight:600;">KubeCon + Azure Day</a> - Give us <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">🌟 on GitHub</a>',
+      //   backgroundColor: "#140035",
+      //   textColor: "#ffffff",
+      //   isCloseable: false,
+      // },
 
       /* Clarity Config */
       clarity: {
@@ -359,6 +360,11 @@ const config = {
       },
     ],
   ],
+  scripts: [
+    {
+      src: 'https://code.jquery.com/jquery-3.7.1.min.js'
+    }
+  ]
 };
 
 module.exports = config;

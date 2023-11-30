@@ -151,7 +151,7 @@ Visual Studio Code integrates with the Azure Functions Core tools to let you run
   ...
   ```
 
-2. Copy the URL of your HttpExample function from this output to a browser and append the query string **?name=<YOUR_NAME>**, making the full URL something like `http://localhost:7071/api/HttpExample?name=Functions`. The browser should display a message that echoes back your query string value. The terminal in which you started your project also shows log output as you make requests.
+2. Copy the URL of your HttpExample function from this output to a browser and append the query string **?name=&lt;YOUR_NAME&lt;**, making the full URL something like `http://localhost:7071/api/HttpExample?name=Functions`. The browser should display a message that echoes back your query string value. The terminal in which you started your project also shows log output as you make requests.
 
 :::success 🎉 CONGRATULATIONS
 You created and ran a function app locally!

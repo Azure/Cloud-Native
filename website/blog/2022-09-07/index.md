@@ -174,7 +174,7 @@ Now the real fun begins. We just loaded the last bit of fire data into a databas
 
 As I mentioned before, our Cosmos DB data is also stored in Azure, which means that we can deploy Azure Functions [to trigger when new data is added](https://docs.microsoft.com/azure/azure-functions/functions-bindings-cosmosdb-v2?tabs=in-process%2Cfunctionsv2&pivots=programming-language-python&WT.mc_id=javascript-99907-cxa). Perhaps you can use this to check for fires near you and use a [Logic App](https://docs.microsoft.com/azure/logic-apps/logic-apps-overview?WT.mc_id=javascript-99907-cxa) to send an alert to your phone or email.
 
-Another option is to create a web application that talks to the database and displays the data. I've created an example of this using FastAPI – <https://jm-func-us-fire-notify.azurewebsites.net>.
+Another option is to create a web application that talks to the database and displays the data. I've created an example of this using FastAPI – [https://jm-func-us-fire-notify.azurewebsites.net](https://jm-func-us-fire-notify.azurewebsites.net).
 
 ![Website that Checks for Fires](img/Check%20for%20Fires.gif)
 
