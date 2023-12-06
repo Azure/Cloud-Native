@@ -10,16 +10,14 @@ const UHFHeader = () => {
   let { headerHtml } = globalState || {};
 
   if (ExecutionEnvironment.canUseDOM && !headerHtml) {
-    console.log('uhf header no html');
     let div = document.getElementById("headerHtmlDiv");
     if (div) {
       headerHtml = atob(div.getAttribute("data-html-content"));
-      console.log(headerHtml);      
     }
   }
 
   useEffect(() => {
-    setIsHeaderHtmlProcessed(true); // Signal that processing is complete
+    setIsHeaderHtmlProcessed(true);
   }, [setIsHeaderHtmlProcessed]);
 
   return (

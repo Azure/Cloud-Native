@@ -11,11 +11,8 @@ export const MyGlobalProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = () => {
       try {
-
-        console.log("in fetchData()");
         let div = document.getElementById("footerHtmlDiv");
         if (div) {
-          console.log("fetchData return");
           return;
         }
       
@@ -24,17 +21,12 @@ export const MyGlobalProvider = ({ children }) => {
         request.send(null);
 
         var parser = new xml2js.Parser();
-        parser.parseString(request.responseText, function(err,result){
+        parser.parseString(request.responseText, function(err,result) {
           let cssIncludes = result.shell.cssIncludes[0];
-          let javascriptIncludes = result.shell.javascriptIncludes[0]; // xmlDoc.getElementsByTagName('javascriptIncludes')[0].textContent
-          let footerHtml = result.shell.footerHtml[0]; // xmlDoc.getElementsByTagName('footerHtml')[0].textContent
-          let headerHtml = result.shell.headerHtml[0].replace(/(^\s+|\s+)$/gm, "").replace(/(\n|\r)/gm, ""); // xmlDoc.getElementsByTagName('headerHtml')[0].textContent
-          console.log("headerHtml", headerHtml);
+          let javascriptIncludes = result.shell.javascriptIncludes[0];
+          let footerHtml = result.shell.footerHtml[0];
+          let headerHtml = result.shell.headerHtml[0].replace(/(^\s+|\s+)$/gm, "").replace(/(\n|\r)/gm, "");
 
-          // let parser = new DOMParser();
-          // let xmlDoc = parser.parseFromString(request.responseText, "text/xml");
-          //let cssIncludes = xmlDoc.getElementsByTagName('cssIncludes')[0].textContent;
-    
           let tempDiv = document.createElement('div');
           tempDiv.innerHTML = cssIncludes;
     
@@ -50,6 +42,7 @@ export const MyGlobalProvider = ({ children }) => {
           storageDiv.style.display = 'none';
           document.body.appendChild(storageDiv);
 
+          // Search has not been working. Just remove for now.
           let $headerHtmlObj = $(headerHtml);
           $headerHtmlObj.find('#search').remove();
           headerHtml = $headerHtmlObj.html();
@@ -68,8 +61,8 @@ export const MyGlobalProvider = ({ children }) => {
 
           setGlobalState(prevState => ({
             ...prevState,
-            footerHtml: footerHtml, // xmlDoc.getElementsByTagName('footerHtml')[0].textContent,
-            headerHtml: headerHtml //xmlDoc.getElementsByTagName('headerHtml')[0].textContent
+            footerHtml: footerHtml,
+            headerHtml: headerHtml
           }));
         });
       } catch (error) {
@@ -83,17 +76,16 @@ export const MyGlobalProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  // The idea was to insert JS last but it didn't seem to matter so far.
   useEffect(() => {
-    console.log("global use effect.");
     // Insert JavaScript into the head only after header and footer HTML are processed
     if (isHeaderHtmlProcessed && isFooterHtmlProcessed) {
-      console.log("now add header.");
-      //debugger;
       let div = document.getElementById("javascriptHtmlDiv");
       if (!div) {
         return;
       }
 
+      // Don't keep adding UHF javascript on page navigation.
       if (div.getAttribute('ranonce') === 'true') {
         return;
       }
@@ -110,7 +102,6 @@ export const MyGlobalProvider = ({ children }) => {
           document.getElementsByTagName('head')[0].appendChild(node);
         }
       });
-      console.log("end add header.");
     }
   }, [isHeaderHtmlProcessed, isFooterHtmlProcessed]);
 

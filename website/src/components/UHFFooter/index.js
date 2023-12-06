@@ -17,7 +17,7 @@ const UHFFooter = () => {
   }
 
   useEffect(() => {
-    setIsFooterHtmlProcessed(true); // Signal that processing is complete
+    setIsFooterHtmlProcessed(true);
   }, [setIsFooterHtmlProcessed]);
 
   return (
