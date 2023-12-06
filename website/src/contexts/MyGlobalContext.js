@@ -50,6 +50,10 @@ export const MyGlobalProvider = ({ children }) => {
           storageDiv.style.display = 'none';
           document.body.appendChild(storageDiv);
 
+          let $headerHtmlObj = $(headerHtml);
+          $headerHtmlObj.find('#search').remove();
+          headerHtml = $headerHtmlObj.html();
+
           storageDiv = document.createElement('div');
           storageDiv.id = 'headerHtmlDiv';
           storageDiv.setAttribute('data-html-content', btoa(headerHtml));
@@ -89,6 +93,13 @@ export const MyGlobalProvider = ({ children }) => {
       if (!div) {
         return;
       }
+
+      if (div.getAttribute('ranonce') === 'true') {
+        return;
+      }
+
+      div.setAttribute('ranonce', 'true');
+
       let javascriptIncludes = atob(div.getAttribute("data-html-content"));
 
       let tempDiv = document.createElement('div');

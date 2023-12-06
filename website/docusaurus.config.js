@@ -272,6 +272,7 @@ const config = {
 
   // --- CONFIG-30DAYS #7: Activate and configure plugins here
   plugins: [
+    'my-loaders',
     [
       "@docusaurus/plugin-ideal-image",
       {
