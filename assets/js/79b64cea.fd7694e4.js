@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[54202],{36905:e=>{e.exports=JSON.parse('{"label":"persistent-volume-claims","permalink":"/Cloud-Native/cnny-2023/tags/persistent-volume-claims","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":1,"unlisted":false}')}}]);

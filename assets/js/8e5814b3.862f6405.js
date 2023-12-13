@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[16590],{23243:e=>{e.exports=JSON.parse('{"label":"persistent-storage","permalink":"/Cloud-Native/cnny-2023/tags/persistent-storage","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":1,"unlisted":false}')}}]);

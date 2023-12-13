@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[34594],{32149:e=>{e.exports=JSON.parse('{"label":"power-platform","permalink":"/Cloud-Native/blog/tags/power-platform","allTagsPath":"/Cloud-Native/blog/tags","count":1,"unlisted":false}')}}]);

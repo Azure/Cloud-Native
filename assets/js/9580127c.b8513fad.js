@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7706],{64265:e=>{e.exports=JSON.parse('{"label":"azure-event-grid","permalink":"/Cloud-Native/blog/tags/azure-event-grid","allTagsPath":"/Cloud-Native/blog/tags","count":3}')}}]);

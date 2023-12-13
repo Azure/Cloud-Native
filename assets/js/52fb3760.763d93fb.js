@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[86440],{38121:e=>{e.exports=JSON.parse('{"label":"docker-compose","permalink":"/Cloud-Native/blog/tags/docker-compose","allTagsPath":"/Cloud-Native/blog/tags","count":1}')}}]);

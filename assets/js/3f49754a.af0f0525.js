@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[14899],{57748:e=>{e.exports=JSON.parse('{"label":"azure-logic-apps","permalink":"/Cloud-Native/blog/tags/azure-logic-apps","allTagsPath":"/Cloud-Native/blog/tags","count":3,"unlisted":false}')}}]);

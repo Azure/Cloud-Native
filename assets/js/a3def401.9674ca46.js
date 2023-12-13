@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2453],{45805:e=>{e.exports=JSON.parse('{"label":"devtools","permalink":"/Cloud-Native/blog/tags/devtools","allTagsPath":"/Cloud-Native/blog/tags","count":2}')}}]);

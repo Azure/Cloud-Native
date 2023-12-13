@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[25481],{82929:e=>{e.exports=JSON.parse('{"label":"workload-identity","permalink":"/Cloud-Native/cnny-2023/tags/workload-identity","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":1}')}}]);

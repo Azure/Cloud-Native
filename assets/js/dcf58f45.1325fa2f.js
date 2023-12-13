@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[99450],{53066:e=>{e.exports=JSON.parse('{"label":"azure-dns","permalink":"/Cloud-Native/cnny-2023/tags/azure-dns","allTagsPath":"/Cloud-Native/cnny-2023/tags","count":1}')}}]);

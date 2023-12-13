@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[81722],{55018:e=>{e.exports=JSON.parse('{"label":"community-buzz","permalink":"/Cloud-Native/30DaysOfIA/tags/community-buzz","allTagsPath":"/Cloud-Native/30DaysOfIA/tags","count":23,"unlisted":false}')}}]);
