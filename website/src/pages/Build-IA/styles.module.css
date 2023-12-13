@@ -41,7 +41,7 @@
 .filterCheckbox > div:first-child {
   display: flex;
   flex: 1 1 auto;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .filterCheckbox > div > * {

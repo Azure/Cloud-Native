@@ -93,14 +93,14 @@ The `az acr login` command above lets you securely authenticate and access the s
 Now, run the following command in your terminal. It will display the endpoint URL to log in to and interact with the ACR for pushing and pulling container images.
 
 ```
-az acr show --name <name-of-azure-container-registry> --query loginServer --output table
+az acr show --name &lt;name-of-azure-container-registry&gt --query loginServer --output table
 ```
 
 This returns an endpoint URL as follows: 
 
     Result
     ----------------------------------
-    <name-of-azure-container-registry>.azurecr.io
+    &lt;name-of-azure-container-registry&gt;.azurecr.io
 
 Now, run the following command to show all container images, their repository, tags, and size:
 

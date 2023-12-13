@@ -45,6 +45,7 @@
   --ifm-color-primary-lightest: #b7a2dd;
   --ifm-navbar-background-color: #f5f6f7!important;
   --ifm-link-color: #b638ba!important;
+  --ifm-footer-background-color: #ffffff!important;
   /* --ifm-card-background-color: #f5f6f7!important; */
 
 }
@@ -134,6 +135,16 @@
 
 .header-rss-link:hover {
   opacity: 0.6;
+}
+
+.navbar__title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.navbar__link, .dropdown__link {
+  font-weight: 400!important;
+  font-size: 13px!important;
 }
 
 .navbar__link--active {
@@ -293,4 +304,20 @@ hr {
   .button-spacer {
     margin-right:0
   }
+}
+
+.navbar--fixed-top {
+  padding: 0 5%!important;
+}
+
+.footer__links {
+  margin-bottom:0!important;
+}
+
+.c-uhff {
+  margin-top: 0!important;
+}
+
+#uhf-shopping-cart, #meControl {
+  display: none!important;
 }

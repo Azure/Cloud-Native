@@ -16,7 +16,7 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 ### #BuildIntelligentApps 
 - 👩🏽‍💻 Sep 14 | #LearnLive Serverless - Deconstruct Contoso Real Estate (Architecture)
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/vArX2WPWTmE?si=63KtRVpL07h9LQBq&amp;controls=0" title="Contoso Real Estate App Deconstructed Ep01: Define and get started with the Contoso Real Estate Application" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/vArX2WPWTmE?si=63KtRVpL07h9LQBq&amp;controls=0" title="Contoso Real Estate App Deconstructed Ep01: Define and get started with the Contoso Real Estate Application" allowFullScreen></iframe>
 
 - 🎯 Sep 15 | #CloudSkillsChallenge - [Apps](https://aka.ms/fallforIA/apps-csc), [Data](https://aka.ms/fallforIA/data-csc) and [AI](https://aka.ms/fallforIA/ai-csc)
 - ✍🏽 Sep 18 | #30DaysOfIA - [Power Of Intelligent Applications](https://azure.github.io/Cloud-Native/30daysofIA/demystifying-intelligent-applications) 
