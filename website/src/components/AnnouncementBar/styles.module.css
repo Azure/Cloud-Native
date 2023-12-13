@@ -1,0 +1,18 @@
+.announcementBarContainer {
+    display: flex;
+    align-items: center;
+    background-color: #5b3797;
+    color: #ffffff;
+}
+
+.announcementBarContent {
+    flex: 1 1 auto;
+    font-size: 13px;
+    text-align:center;
+    padding: .5rem 1rem;
+}
+
+.announcementLink {
+    color: #ffb3bb;
+    font-weight: 600;
+}

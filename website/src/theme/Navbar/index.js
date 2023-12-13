@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '@theme-original/Navbar';
+import AnnouncementBar from '../../components/AnnouncementBar'
 import UHFHeader from '../../components/UHFHeader';
 
 export default function NavbarWrapper(props) {
@@ -7,6 +8,7 @@ export default function NavbarWrapper(props) {
     <>
       <UHFHeader />
       <Navbar {...props} />
+      <AnnouncementBar />
     </>
   );
 }
