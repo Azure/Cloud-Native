@@ -17,52 +17,71 @@ export const MyGlobalProvider = ({ children }) => {
         }
       
         const request = new XMLHttpRequest();
-        request.open('GET', 'https://uhf.microsoft.com/en-us/shell/xml/MSNativeMaturity/?headerId=MSNativeMaturityHeader&footerId=MSNativeMaturityFooter&CookieComplianceEnabled=true%22', false);
+        request.open('GET', 'https://uhf.microsoft.com/en-us/shell/xml/MSNativeMaturity?headerId=MSNativeMaturityHeader&footerId=MSNativeMaturityFooter&CookieComplianceEnabled=true', false);
         request.send(null);
 
         var parser = new xml2js.Parser();
         parser.parseString(request.responseText, function(err,result) {
-          let cssIncludes = result.shell.cssIncludes[0];
-          let javascriptIncludes = result.shell.javascriptIncludes[0];
-          let footerHtml = result.shell.footerHtml[0];
-          let headerHtml = result.shell.headerHtml[0].replace(/(^\s+|\s+)$/gm, "").replace(/(\n|\r)/gm, "");
 
+          let cssIncludes = result.shell.cssIncludes[0];
+          let headerHtml = result.shell.headerHtml[0].replace(/(^\s+|\s+)$/gm, "").replace(/(\n|\r)/gm, "");
+          let footerHtml = result.shell.footerHtml[0];
+          let javascriptIncludes = result.shell.javascriptIncludes[0];
+          let javascriptBlock;
+
+          // Add CSS Includes into head.
           let tempDiv = document.createElement('div');
           tempDiv.innerHTML = cssIncludes;
-    
           Array.from(tempDiv.childNodes).forEach(function(node) {
             if (node.nodeType === Node.ELEMENT_NODE) {
                 document.getElementsByTagName('head')[0].appendChild(node);
             }
           });
-    
+
+          // Add header html in div data.
           let storageDiv = document.createElement('div');
+          storageDiv.id = 'headerHtmlDiv';
+          storageDiv.setAttribute('data-html-content', btoa(headerHtml));
+          storageDiv.style.display = 'none';
+          document.body.appendChild(storageDiv);
+          
+          // Copy script block from footer html.
+          let scriptRegex = /<script(?:\s+id="uhf-footer-ccpa")?.*?>([\s\S]*?)<\/script>/;
+          let match = footerHtml.match(scriptRegex);
+          if (match) {
+            javascriptBlock = match[1];
+          }
+
+          // Remove useless script block from footer html.
+          scriptRegex = /(<script(?:\s+id="uhf-footer-ccpa")?.*?>[\s\S]*?<\/script>)/;
+          match = footerHtml.match(scriptRegex);
+          if (match) {
+            footerHtml = footerHtml.replace(scriptRegex, '');
+          }
+
+          // Add footer html in div data.
+          storageDiv = document.createElement('div');
           storageDiv.id = 'footerHtmlDiv';
           storageDiv.setAttribute('data-html-content', btoa(footerHtml));
           storageDiv.style.display = 'none';
           document.body.appendChild(storageDiv);
 
-          // Search has not been working. Just remove for now.
-          let $headerHtmlObj = $(headerHtml);
-          $headerHtmlObj.find('#search').remove();
-          headerHtml = $headerHtmlObj.html();
-
+          // Add javascript includes in div data.
           storageDiv = document.createElement('div');
-          storageDiv.id = 'headerHtmlDiv';
-          storageDiv.setAttribute('data-html-content', btoa(headerHtml));
-          storageDiv.style.display = 'none';
-          document.body.appendChild(storageDiv);
-
-          storageDiv = document.createElement('div');
-          storageDiv.id = 'javascriptHtmlDiv';
+          storageDiv.id = 'javascriptIncludesDiv';
           storageDiv.setAttribute('data-html-content', btoa(javascriptIncludes));
           storageDiv.style.display = 'none';
           document.body.appendChild(storageDiv);
 
+          // Add javascript block to end of body. Did not need to add this block on every page navigation.
+          let scriptElement = document.createElement('script');
+          scriptElement.innerHTML = javascriptBlock;
+          document.body.appendChild(scriptElement);
+
           setGlobalState(prevState => ({
             ...prevState,
-            footerHtml: footerHtml,
-            headerHtml: headerHtml
+            headerHtml: headerHtml,
+            footerHtml: footerHtml
           }));
         });
       } catch (error) {
@@ -76,35 +95,43 @@ export const MyGlobalProvider = ({ children }) => {
     fetchData();
   }, []);
 
-  // The idea was to insert JS last but it didn't seem to matter so far.
   useEffect(() => {
-    // Insert JavaScript into the head only after header and footer HTML are processed
     if (isHeaderHtmlProcessed && isFooterHtmlProcessed) {
-      let div = document.getElementById("javascriptHtmlDiv");
-      if (!div) {
+
+      // Add JS Includes as script elements into body. InnerHTML method was causing JS to not work. 
+      // Must be added for every page navigation for JS to work (possible due to JQuery dependencies?).
+
+      // Process JS Includes.
+      let scriptIncludesDiv = document.getElementById("javascriptIncludesDiv");
+      if (!scriptIncludesDiv) {
         return;
       }
 
-      // Don't keep adding UHF javascript on page navigation.
-      if (div.getAttribute('ranonce') === 'true') {
-        return;
+      let scriptIncludes = atob(scriptIncludesDiv.getAttribute("data-html-content"));
+      let scriptRegex = /<script.*?src=['"](.*?)['"].*?<\/script>/g;
+      let scriptReferences = [];
+      let match;
+      while ((match = scriptRegex.exec(scriptIncludes)) !== null) {
+        scriptReferences.push(match[1]);
       }
 
-      div.setAttribute('ranonce', 'true');
-
-      let javascriptIncludes = atob(div.getAttribute("data-html-content"));
-
-      let tempDiv = document.createElement('div');
-      tempDiv.innerHTML = javascriptIncludes;
-
-      Array.from(tempDiv.childNodes).forEach(function(node) {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-          document.getElementsByTagName('head')[0].appendChild(node);
-        }
+      const scriptElements = [];
+      scriptReferences.forEach(function (src) {
+        let scriptElement = document.createElement('script');
+        scriptElement.src = src;
+        scriptElements.push(scriptElement);
+        document.body.appendChild(scriptElement);
       });
+
+      return () => {
+        // Remove script elements when component is unmounted to prevent duplicate script insertions.
+        scriptElements.forEach(function (scriptElement) {
+          document.body.removeChild(scriptElement);
+        });
+      }
     }
   }, [isHeaderHtmlProcessed, isFooterHtmlProcessed]);
-
+  
   return (
     <MyGlobalContext.Provider value={{ globalState, setGlobalState, setIsHeaderHtmlProcessed, setIsFooterHtmlProcessed }}>
       {children}
