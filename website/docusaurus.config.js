@@ -229,7 +229,7 @@ const config = {
         },
         {
           name: "twitter:title",
-          content: "#BuildIntelligentApps is here | Sep-Oct 2023!",
+          content: "#BuildIntelligentApps start today | Microsoft Azure",
         },
         {
           name: "twitter:description",
