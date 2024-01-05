@@ -224,6 +224,19 @@ const config = {
 
       metadata: [
         {
+          name: "og:title",
+          content: "#BuildIntelligentApps start today | Microsoft Azure",
+        },
+        {
+          name: "og:description",
+          content:
+            "Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure!",
+        },
+        {
+          name: "og:url",
+          content: "https://aka.ms/FallForIA",
+        },
+        {
           name: "twitter:url",
           content: "https://aka.ms/FallForIA",
         },
