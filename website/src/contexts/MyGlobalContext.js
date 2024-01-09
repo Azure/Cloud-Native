@@ -123,6 +123,36 @@ export const MyGlobalProvider = ({ children }) => {
         document.body.appendChild(scriptElement);
       });
 
+      // Reload 1DS Script with each page navigation to pick up current GPC_DataSharingOptIn which can change in between page changes.
+      let script1dsInit = document.createElement('script');
+      script1dsInit.innerHTML = 
+      'var analytics =  new oneDS.ApplicationInsights();' + 
+      'var config = {' +
+      '    instrumentationKey: "879d5e86926e435286a819ff03ec3d24-24bae527-c978-4bca-bfe0-5d925b52453f-7251",' +
+      '   propertyConfiguration: {' +
+      '       gpcDataSharingOptIn: GPC_DataSharingOptIn,' + 
+      '    },' +
+      '    webAnalyticsConfiguration: {' +
+      '        coreData: {' +
+      '        },' +
+      '    autoCapture: {' +
+      '            scroll: true,' +
+      '            pageView: true,' +
+      '            onLoad: true,' +
+      '            onUnload: true,' +
+      '            click: true,' +
+      '            resize: true,' +
+      '            jsError: true,' +
+      '        },' +
+      '        urlCollectQuery: true,' +
+      '        urlCollectHash: true, ' +
+      '        useShortNameForContentBlob: true' +
+      '    }' +
+      '};' +
+      'analytics.initialize(config, []);';
+      scriptElements.push(script1dsInit);
+      document.body.appendChild(script1dsInit);
+
       return () => {
         // Remove script elements when component is unmounted to prevent duplicate script insertions.
         scriptElements.forEach(function (scriptElement) {
