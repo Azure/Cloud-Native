@@ -266,6 +266,10 @@ const config = {
           name: "twitter:site",
           content: "@AzureAdvocates",
         },
+        {
+          name: "awa-env",
+          content: "Production",
+        },
       ],
       /* Banner Announcements */
       // announcementBar: {
@@ -377,6 +381,9 @@ const config = {
   scripts: [
     {
       src: 'https://code.jquery.com/jquery-3.7.1.min.js'
+    },
+    {
+      src: 'https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js'
     }
   ]
 };
