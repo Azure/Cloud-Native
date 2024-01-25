@@ -130,7 +130,7 @@ export const MyGlobalProvider = ({ children }) => {
       'var config = {' +
       '    instrumentationKey: "879d5e86926e435286a819ff03ec3d24-24bae527-c978-4bca-bfe0-5d925b52453f-7251",' +
       '   propertyConfiguration: {' +
-      '       gpcDataSharingOptIn: GPC_DataSharingOptIn,' + 
+      '       gpcDataSharingOptIn: false,' + 
       '    },' +
       '    webAnalyticsConfiguration: {' +
       '        coreData: {' +
