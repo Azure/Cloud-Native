@@ -189,6 +189,22 @@ body, html {
   height: fit-content!important;
 }
 
+a {
+  font-weight: 600;
+}
+
+.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
+  font-weight: 400;
+}
+
+.table-of-contents__link {
+  font-weight: 400;
+}
+
+.footer__link-item {
+  font-weight: 400;
+}
+
 /* GitHub-style Themed Images
   https://docusaurus.io/docs/markdown-features/assets#github-style-themed-images
  */
@@ -288,6 +304,7 @@ body, html {
   height:100%;
   box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
   transition: box-shadow 200ms ease-in-out;
+  font-weight: 400;
 }
 
 .card-body {
