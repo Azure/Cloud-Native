@@ -381,10 +381,6 @@ const config = {
             from: '/Fall-For-IA/AskTheExpert',
           },
           {
-            to: '/Build-IA/HackTogether/',
-            from: '/Fall-For-IA/HackTogether',
-          },
-          {
             to: '/Build-IA/CloudSkills/',
             from: '/Fall-For-IA/CloudSkills',
           },
