@@ -11,14 +11,14 @@ title: Cloud Skills
 Join us on a learning journey to skill up on your core skills for developing intelligent apps. Explore how to combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences.
 
 
-![Build intelligent apps](./../../../static/img/banners/banner-bia.jpg)
+![Build intelligent apps](./../../../static/img/60-days-of-ia/60-days-of-ia-cloud-skills-banner.jpg)
 
 
-* [**Intelligent Apps Skills Challenge**](https://aka.ms/fallforIA/apps-csc?WT.mc_id=javascript-99907-ninarasi) - Applications are at the core of intelligent solution development. Cloud-native app development empowers you to create modern containerized and serverless apps to build innovative solutions. Explore how to get started with building intelligent apps using Azure Kubernetes Service, Azure Functions and GitHub. [Register now to compete–Ends Oct 31 PST!](https://aka.ms/fallforIA/apps-csc)
+* [**Intelligent Apps Skills Challenge**](https://aka.ms/intelligent-apps/apps-csc) - Applications are at the core of intelligent solution development. Cloud-native app development empowers you to create modern containerized and serverless apps to build innovative solutions. Explore how to get started with building intelligent apps using Azure Kubernetes Service, Azure Functions and GitHub. [Register now to compete and earn your #IntelligentApps skills badge - Ends on April 15!](https://aka.ms/intelligent-apps/apps-csc)
 
-* [**Data Skills Challenge**](https://aka.ms/fallforIA/data-csc?WT.mc_id=javascript-99907-ninarasi) - It is time to activate our enormous data stores for building data driven intelligent solutions. Explore the capabilities of cloud-scale data with Microsoft Fabric in this Cloud Skills Challenge! Follow along with the Fabric Community @ https://aka.ms/fabriccommunity. [Register now to compete–Ends Oct 31 PST!](https://aka.ms/fallforIA/data-csc)
+* [**Data Skills Challenge**](https://aka.ms/intelligent-apps/data-csc) - It is time to activate our enormous data stores for building data driven intelligent solutions. Compete to skill up on your core skills for cloud-scale databases. Explore how to build, scale, and optimize modern applications on Azure with Azure Cosmos DB. [Register now to compete and earn your #IntelligentApps skills badge - Ends on April 15!](https://aka.ms/intelligent-apps/data-csc)
 
-* [**AI Skills Challenge**](https://aka.ms/fallforIA/ai-csc?WT.mc_id=javascript-99907-ninarasi) - The world of generative AI is rapidly evolving. Learn how to create intelligent solutions that extract semantic meaning from text and support common computer vision scenarios. Explore how to take advantage of large-scale, generative AI models with deep understandings of language and code to enable new reasoning and comprehension capabilities for building cutting-edge applications responsibly. [Register now to compete–Ends Oct 31 PST!](https://aka.ms/fallforia/ai-csc)
+* [**AI Skills Challenge**](https://aka.ms/intelligent-apps/ai-csc) - The world of generative AI is rapidly evolving. Learn how to create intelligent solutions that extract semantic meaning from text and support common computer vision scenarios. Explore how to take advantage of large-scale, generative AI models with deep understandings of language and code to enable new reasoning and comprehension capabilities for building cutting-edge applications responsibly. [Register now to compete and earn your #IntelligentApps skills badge - Ends on April 15!](https://aka.ms/intelligent-apps/ai-csc)
 
 ---
 

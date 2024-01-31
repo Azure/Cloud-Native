@@ -13,7 +13,7 @@ const CampaignFeatures = [
   {
     title: '#30DaysOfCloudNative',
     linkTitle: '#30DaysOfCloudNative',
-    svgpath: "../img/svg/azure-icon-30-days.svg",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-blog.svg",
     fillColor: "#f25022",
     link: "/Cloud-Native/cnny-2023",
     description: (
@@ -25,7 +25,7 @@ const CampaignFeatures = [
   {
     title: 'Ask The Experts',
     linkTitle: 'Ask The Experts',
-    svgpath: "../img/svg/azure-icon-ask-the-experts.svg",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-ask-the-experts.svg",
     fillColor: "#7fba00",
     link: "/Cloud-Native/New-Year/ate",
     description: (
@@ -37,7 +37,7 @@ const CampaignFeatures = [
   {
     title: 'Cloud Skills',
     linkTitle: 'Cloud Skills',
-    svgpath: "../img/svg/azure-icon-cloud-skills.svg",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-cloud-skills.svg",
     fillColor: "#ffb900",
     link: "https://aka.ms/cnny/challenge",
     description: (

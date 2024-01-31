@@ -17,11 +17,8 @@ function SectionHeader({title, description}) {
             </h1>
             <p> {description} </p>
             <div className={styles.buttons}>
-                <Link className="button button--secondary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://developer.microsoft.com/en-us/reactor/series/S-1229/?WT.mc_id=javascript-99907-ninarasi" target="_blank">
+                <Link className="button button--primary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://aka.ms/intelligent-apps/aks-learnlive?ocid=buildia24_CSC_website" target="_blank" data-bi-area="Hero" data-bi-name="Build Kubernetes">
                     Build Kubernetes
-                </Link>
-                <Link className="button button--primary button--lg mobile-block-buttons" to="https://aka.ms/contoso-real-estate/learn-live?WT.mc_id=javascript-99907-ninarasi" target="_blank">
-                    Learn to build
                 </Link>
             </div>
         </div>
@@ -42,17 +39,6 @@ function SectionContent(){
                         <ContentItemKubernetes key={idx} {...props} />
                     ))}
                 </div>
-                <div className="row" style={{ display: 'contents' }}>
-                    <hr />
-                </div>
-                <div>
-                    <h2>Serverless</h2>
-                </div>
-                <div className="row">
-                    {ContentItemsLearnLive.map((props, idx) => (
-                        <ContentItemLearnLive key={idx} {...props} />
-                    ))}
-                </div>
             </div>
         </section>
     );
@@ -62,22 +48,18 @@ function SectionContent(){
 function ContentItemKubernetes({title, description, link, imglink, cta}){
     return (
         <div className={clsx('col col--6 card-col', styles.contentItem)}>
-            <div className="card">
-                <div className="card__image">
-                    <Image alt={"Thumbnail Image for"+title} img={useBaseUrl(imglink)}/>
-                </div>
-                <div className="card-body">
-                    <div className="text--center padding-horiz--md">
-                        <h3>{title}</h3>
-                        <p>{description}</p>
+            <Link className="card-link" to={link} target="_blank" data-bi-area="BodyGrid" data-bi-name={description}>
+                <div className="card">
+                    <div className="card__image">
+                        <Image alt={"Thumbnail Image for"+title} img={useBaseUrl(imglink)}/>
                     </div>
-                    <div className={styles.buttons}>
-                        <Link className="button button--block button--secondary button--lg" to={link} target="_blank">
-                            {cta}
-                        </Link>
+                    <div className="card-body">
+                        <div className="text--center padding-horiz--md">
+                            <p>{description}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 }
@@ -109,73 +91,40 @@ function ContentItemLearnLive({title, description, link, imglink, cta}){
 const ContentItemsKubernetes = [
 
   {
-    title: 'Get Started with Open AI and AKS',
-    imglink: '/img/fallforia/learn-live-kubernetes-ep1.png',
-    link: "https://aka.ms/learnlive-intelligent-apps-with-azure-kubernetes-service-Ep1?WT.mc_id=javascript-99907-ninarasi",
-    description: "Learn how to integrate Azure Open AI with the AKS Store demo application.",
+    title: 'Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service',
+    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-1.png',
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_CSC_website",
+    description: "Learn how to leverage Azure OpenAI with the AKS Store Demo app.",
     cta: "Build Kubernetes"
   },
   {
-    title: 'Security with AKS Workload Identity',
-    imglink: '/img/fallforia/learn-live-kubernetes-ep2.png',
-    link: "https://aka.ms/learnlive-intelligent-apps-with-azure-kubernetes-service-Ep2?WT.mc_id=javascript-99907-ninarasi",
-    description: "Learn how to use Workload Identity to better secure access to your Azure OpenAI service.",
+    title: 'Bring Your Own AI Models to Intelligent Apps on AKS with Kaito',
+    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-2.png',
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_CSC_website",
+    description: "Use AKS to run your own AI Models with Kaito.",
     cta: "Build Kubernetes"
   },
   {
-    title: 'Fault Tolerant Intelligent Apps',
-    imglink: '/img/fallforia/learn-live-kubernetes-ep3.png',
-    link: "https://aka.ms/learnlive-intelligent-apps-with-azure-kubernetes-service-Ep3?WT.mc_id=javascript-99907-ninarasi",
-    description: "Use open source and Azure-based tools to find faults and improve resilience.",
+    title: 'Enhance Observability of Your Intelligent Apps on AKS',
+    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-3.png',
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_CSC_website",
+    description: "Learn how OpenCost, Prometheus, and Grafana can improve intelligent apps.",
     cta: "Build Kubernetes"
   },
   {
-    title: 'Secure Network Access',
-    imglink: '/img/fallforia/learn-live-kubernetes-ep4.png',
-    link: "https://aka.ms/learnlive-intelligent-apps-with-azure-kubernetes-service-Ep4?WT.mc_id=javascript-99907-ninarasi",
-    description: "Enhance the network security of intelligent apps in AKS.",
+    title: 'Taking Your Intelligent App Global with AKS',
+    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-4.png',
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_CSC_website",
+    description: "Use AKS and Azure to take your intelligent app global.",
     cta: "Build Kubernetes"
   },
 ];
-
-const ContentItemsLearnLive = [
-
-    {
-      title: 'Get Started With Contoso Real Estate',
-      imglink: '/img/fallforia/learn-live-contoso.jpg',
-      link: "https://aka.ms/contoso-real-estate/learn-live/Ep1?WT.mc_id=javascript-99907-ninarasi",
-      description: "Learn about the Contoso Real Estate sample, fork the repo, launch GitHub Codespaces - and build/preview the application to validate environment.",
-      cta: "Learn live"
-    },
-    {
-      title: 'Develop The Portal Application',
-      imglink: '/img/fallforia/learn-live-portal-app.jpg',
-      link: "https://aka.ms/contoso-real-estate/learn-live/Ep2?WT.mc_id=javascript-99907-ninarasi",
-      description: "Learn about micro-frontends and API-first design. Deconstruct the portal app, blog app, and serverless API.",
-      cta: "Learn live"
-    },
-    {
-      title: 'Integrate Auth, Payments, Search',
-      imglink: '/img/fallforia/learn-live-third-party-payments.jpg',
-      link: "https://aka.ms/contoso-real-estate/learn-live/Ep3?WT.mc_id=javascript-99907-ninarasi",
-      description: "Integrate authentication to support user profiles. Integrate payments and search features using 3rd party API.",
-      cta: "Learn live"
-    },
-    {
-      title: 'Automate, Test & Deploy to Azure',
-      imglink: '/img/fallforia/learn-live-azure-developer.png',
-      link: "https://aka.ms/contoso-real-estate/learn-live/Ep4?WT.mc_id=javascript-99907-ninarasi",
-      description: "Learn to design and run end-to-end tests with Playwright. Provision and deploy solution to Azure with AZD.",
-      cta: "Learn live"
-    },
-  ];
-
 
 export default function LearnLive() {
     const {siteConfig} = useDocusaurusContext();
     const pageProps = {
         title: "Learn Live",
-        description: "Learn to build an enterprise-grade solution on Azure by deconstructing an open-source reference sample."
+        description: "Learn to build an enterprise-grade  solution on Azure by deconstructing an open-source reference sample."
     };
     return (
       <Layout

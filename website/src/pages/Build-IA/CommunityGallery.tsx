@@ -44,7 +44,7 @@ import Link from '@docusaurus/Link';
 
 import styles from './styles.module.css';
 
-const TITLE = '#FallForIA | Community Gallery';
+const TITLE = 'Community Gallery';
 const DESCRIPTION = 'A community-contributed showcase gallery';
 // const ADD_URL = 'https://aka.ms/awesome-azd-contribute'
 

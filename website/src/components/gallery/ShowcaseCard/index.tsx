@@ -99,39 +99,36 @@ function ShowcaseMultipleAuthorsDropdown({user}: {user: User}) {
 
 function ShowcaseCard({user}: {user: User}) {
   return (
-    <li key={user.title} className="card">
-      {/* Image goes here */}
-      {/* <Link href={user.source}>
-       <div className={clsx('card__image', styles.showcaseCardImage)}>
-         <Image img={user.preview} alt={user.title} />
-       </div>
-      </Link> */}
-      <div className="card__body">
-        <div>
-          <h3>
-              {user.title}
-          </h3>
-          {user.source && (
-            <ShowcaseMultipleAuthorsDropdown user={user}/>   
-          )}
-          
+    <Link className="card-link"  to={user.source} data-bi-area="BodyGrid" data-bi-name={user.title}>
+      <li key={user.title} className="card">
+        {/* Image goes here */}
+        {/* <Link href={user.source}>
+        <div className={clsx('card__image', styles.showcaseCardImage)}>
+          <Image img={user.preview} alt={user.title} />
         </div>
-        <p>{user.description}</p>
-        {/* {user.tags.includes('featured') && (
-            <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
-          )} */}
-      </div>
-      <div className={clsx('card__footer', styles.cardFooter)}>
-        <div className="margin-bottom--md">
-        <ShowcaseCardTag tags={user.tags} />
+        </Link> */}
+        <div className="card__body">
+          <div>
+            <h3>
+                {user.title}
+            </h3>
+            {user.source && (
+              <ShowcaseMultipleAuthorsDropdown user={user}/>   
+            )}
+            
+          </div>
+          <p>{user.description}</p>
+          {/* {user.tags.includes('featured') && (
+              <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
+            )} */}
         </div>
-        <div className={styles.buttons}>
-            <Link className="button button--block button--secondary button--md"  href={user.source}>
-            View this post
-            </Link>
+        <div className={clsx('card__footer', styles.cardFooter)}>
+          <div className="margin-bottom--md">
+          <ShowcaseCardTag tags={user.tags} />
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </Link>
   );
 }
 

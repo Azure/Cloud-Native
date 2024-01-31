@@ -3,21 +3,29 @@
  * and scoped locally.
  */
 
-.heroBanner {
+ .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #140035;
+  background-color: #163A95;
 }
 
 .heroBannerImg {
-  padding: 4rem 0;
+  padding: 1rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
-  background-color: #140035!important;
-  /* background-image: url(../img/fallforia/herobg.png); */
+  background: linear-gradient(to right, 
+    #163A95 20%,
+    #1172B0 60%,
+    #8DC8E8 70%,
+    #FFB3BB 80%,
+    #FFB900 90%,
+    #FFE399 100%
+    /* Add more color stops or adjust percentages as needed */
+  );
+
 }
 .featureImg {
   width: 100%;
@@ -55,11 +63,10 @@
   }
 
   .heroBannerImg {
-    padding: 4rem 0;
+    padding: 2rem 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    background-color: #140035!important;
+    background-color: #163A95 !important;
+    background: #163A95 !important;
   }
 
   .buttonsFFIA {
