@@ -85,24 +85,19 @@ const MoreServices = [
 function Feature({svgpath, title, description, link, style}) {
   return (
     <div className={clsx('col col--4 card-col')}>
+      <Link className="card-link" to={link} target="_blank" data-bi-area="BodyGrid" data-bi-name={title}>
       <div className="card">
         <div className="card-body text--center">
-          {/* <a href={link} title={title} target="_blank"> */}
             <div>
               <img width="150px" height="150px" className={style} src={svgpath} alt="" role="presentation" />
             </div>
-          {/* </a> */}
           <div className="padding-horiz--md">
             <h2>{title}</h2>
             <p>{description}</p>
           </div>
-          <div className={styles.buttons}>
-            <Link className="button button--block button--secondary button--lg" to={link} target="_blank">
-              {title}
-            </Link>
-          </div>
         </div>
       </div>
+      </Link>
     </div>
   );
 }

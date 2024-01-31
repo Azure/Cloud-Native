@@ -77,14 +77,14 @@ const config = {
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
-        respectPrefersColorScheme: false,
+        respectPrefersColorScheme: true,
       },
 
       navbar: {
         title: "Cloud-Native",
         logo: {
           alt: "Azure Cloud Logo",
-          src: "img/logo-ms-cn.png",
+          src: "img/logo-2024.png",
         },
         items: [
           {
@@ -93,23 +93,27 @@ const config = {
             position: "left",
           },
           {
-            to: "/30DaysOfIA",
+            to: "/60DaysOfIA",
             label: "Blog",
             position: "left",
           },
-          {
-            to: "/Build-IA/calendar",
-            label: "Calendar",
-            position: "left",
-          },
+          // {
+          //   to: "/Build-IA/calendar",
+          //   label: "Calendar",
+          //   position: "left",
+          // },
           {
             type: "dropdown",
-            label: "🆕 Intelligent Apps",
+            label: "Intelligent Apps",
             position: "right",
             items: [
               {
-                label: "Build Intelligent Apps | 2023",
+                label: "Build Intelligent Apps | 2024",
                 href: "/Build-IA/",
+              },
+              {
+                label: "#60DaysOfIA",
+                href: "/60DaysOfIA",
               },
               {
                 label: "#30DaysOfIA",
@@ -162,7 +166,7 @@ const config = {
             "aria-label": "GitHub repository",
           },
           {
-            href: "https://azure.github.io/Cloud-Native/30DaysOfIA/rss.xml",
+            href: "https://azure.github.io/Cloud-Native/60DaysOfIA/rss.xml",
             position: "right",
             className: "header-rss-link",
             "aria-label": "Subscribe to RSS",
@@ -225,7 +229,7 @@ const config = {
       metadata: [
         {
           name: "og:title",
-          content: "#BuildIntelligentApps start today | Microsoft Azure",
+          content: "#IntelligentApps start today | Microsoft Azure",
         },
         {
           name: "og:description",
@@ -242,7 +246,7 @@ const config = {
         },
         {
           name: "twitter:title",
-          content: "#BuildIntelligentApps start today | Microsoft Azure",
+          content: "#IntelligentApps start today | Microsoft Azure",
         },
         {
           name: "twitter:description",
@@ -331,6 +335,24 @@ const config = {
           "Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure!",
         blogSidebarCount: "ALL",
         blogSidebarTitle: "#30DaysOfIA",
+        tagsBasePath: "tags",
+        archiveBasePath: "archive",
+        postsPerPage: 1,
+        showReadingTime: true,
+        sortPosts: "ascending",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "blog-60daysofIA",
+        routeBasePath: "60DaysOfIA",
+        path: "./blog-60daysofIA",
+        blogTitle: "Learn in #60DaysOfIA",
+        blogDescription:
+          "Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure!",
+        blogSidebarCount: "ALL",
+        blogSidebarTitle: "#60DaysOfIA",
         tagsBasePath: "tags",
         archiveBasePath: "archive",
         postsPerPage: 1,

@@ -17,7 +17,7 @@ function SectionHeader({title, description}) {
             </h1>
             <p> {description} </p>
             <div className={styles.buttons}>
-                <Link className="button button--secondary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://docs.microsoft.com/shows/Ask-the-Expert/?WT.mc_id=javascript-99907-ninarasi" target="_blank">
+                <Link className="button button--primary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://aka.ms/intelligent-apps/ate?ocid=buildia24_AE_website" target="_blank" data-bi-area="Hero" data-bi-name="Ask the Expert">
                     Ask the Expert
                 </Link>
             </div>
@@ -45,22 +45,19 @@ function SectionContent(){
 function ContentItemATE({title, description, link, imglink, cta}){
     return (
         <div className={clsx('col col--6 card-col', styles.contentItem)}>
-            <div className="card">
-                <div className="card__image">
-                    <Image alt={"Thumbnail Image for"+title} img={useBaseUrl(imglink)}/>
-                </div>
-                <div className="card-body">
-                    <div className="text--left">
-                        <h3>{title}</h3>
-                        <p>{description}</p>
+            <Link className="card-link" to={link} target="_blank" data-bi-area="BodyGrid" data-bi-name={title}>
+                <div className="card">
+                    <div className="card__image">
+                        <Image alt={"Thumbnail Image for"+cta} img={useBaseUrl(imglink)}/>
                     </div>
-                    <div className={styles.buttons}>
-                        <Link className="button button--block button--secondary button--lg" to={link} target="_blank">
-                            {cta}
-                        </Link>
+                    <div className="card-body">
+                        <div className="text--left">
+                            <h3>{cta}</h3>
+                            <p>{description}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 }
@@ -68,32 +65,32 @@ function ContentItemATE({title, description, link, imglink, cta}){
 // Update this dataset with links to the last 20 roundups
 const ContentItemsATE = [
 {
-    title: 'Build Intelligent Apps with Azure Kubernetes Service',
-    imglink: '/img/fallforia/ate-azure-kubernetes-service.jpg',
-    link: "https://reactor.microsoft.com/en-us/reactor/events/20732/?WT.mc_id=javascript-99907-ninarasi",
+    title: 'Intelligent Apps with Azure Kubernetes Service',
+    imglink: '/img/60-days-of-ia/ate-2024-02-29.jpg',
+    link: "https://aka.ms/intelligent-apps/ate-aks?ocid=buildia24_AE_website",
     description: "Join the Azure Kubernetes Service Product Group to learn about developing cloud-native apps for high scale and resilience with Azure Kubernetes Service clusters. Discuss with the experts on how to combine the power of AI with Kubernetes app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Kubernetes Service (AKS).",
-    cta: "Watch on-demand"
+    cta: "Register to attend"
     },
   {
-    title: 'Build Intelligent Apps with Azure Functions',
-    imglink: '/img/fallforia/ate-azure-functions.jpg',
-    link: "https://reactor.microsoft.com/en-us/reactor/events/20730/?WT.mc_id=javascript-99907-ninarasi",
+    title: 'Intelligent Apps with Azure Cosmos DB',
+    imglink: '/img/60-days-of-ia/ate-2024-03-07.jpg',
+    link: "https://aka.ms/intelligent-apps/ate-cosmos?ocid=buildia24_AE_website",
+    description: "Join the Azure Cosmos DB team for an engaging session on the versatile vector database capabilities of Azure Cosmos DB. Discover the seamless integration of your operational and transactional data with native vector indexing and search functionalities, specifically tailored for AI applications. Learn how to build RAG pattern solutions and manage chat history by seamlessly connecting with Azure OpenAI. Explore the power of Azure Cosmos DB's Copilot in simplifying complex query writing, enhancing accuracy, and improving performance. Additionally, we'll showcase our seamless integrations with Semantic Kernel, Langchain, and LlamaIndex.",
+    cta: "Register to attend"
+  },
+  {
+    title: 'Intelligent Apps with Azure AI',
+    imglink: '/img/60-days-of-ia/ate-2024-03-21.jpg',
+    link: "https://aka.ms/intelligent-apps/ate-ai?ocid=buildia24_AE_website",
+    description: "Want to build an enterprise AI application with your data, and run it in production? Join us as we build Contoso Chat, an AI-based support agent that implements Retrieval Augmented Generation (RAG) to ground the copilot responses in your product data. Streamline your development workflow with PromptFlow, and manage your Azure AI platform interactions with the Azure AI Studio, SDK and CLI. Learn about Responsible AI practices, and learn how to evaluate your application, and calibrate it for content safety, using built-in capabilities of the Azure AI platform.",
+    cta: "Register to attend"
+  },
+  {
+    title: 'Intelligent Apps with Azure Functions',
+    imglink: '/img/60-days-of-ia/ate-2024-04-04.jpg',
+    link: "https://aka.ms/intelligent-apps/ate-functions?ocid=buildia24_AE_website",
     description: "Join the Azure Functions Product Group to learn about FaaS or Functions-as-a-Service in Azure serverless computing. It is time to focus on the pieces of code that matter most to you while Azure Functions handles the rest. Discuss with the experts on how to combine the power of AI, cloud-scale data, and serverless app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Functions.",
-    cta: "Watch on-demand"
-  },
-  {
-    title: 'Build Intelligent Apps with Azure Container Apps',
-    imglink: '/img/fallforia/ate-azure-container-apps.jpg',
-    link: "https://reactor.microsoft.com/en-us/reactor/events/20728/?WT.mc_id=javascript-99907-ninarasi",
-    description: "Join the Azure Container Apps Product Group to learn about combining the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences with microservices. Azure Container Apps is an app-centric service, empowering developers to focus on the differentiating business logic of their apps rather than on cloud infrastructure management. Discuss with the experts on how to develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Container Apps.",
-    cta: "Watch on-demand"
-  },
-  {
-    title: 'Build Intelligent Apps with Azure App Service',
-    imglink: '/img/fallforia/ate-azure-apps-service.jpg',
-    link: "https://reactor.microsoft.com/en-us/reactor/events/20734/?WT.mc_id=javascript-99907-ninarasi",
-    description: "Join the Azure App Service Product Group to learn about PaaS or Platform-as-a-Service app development on Azure. Quickly build, deploy, and scale web apps and APIs on your terms. Discuss with the experts on how to combine the power of AI, web app development, and cloud-scale data to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure App Service.",
-    cta: "Watch on-demand"
+    cta: "Register to attend"
   },
 ];
 

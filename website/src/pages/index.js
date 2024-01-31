@@ -17,8 +17,10 @@ function HomepageHeader() {
         <p>{siteConfig.customFields.description}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--primary button--lg"
             to="/Build-IA/"
+            data-bi-area="Hero"
+            data-bi-name="Build Intelligent Apps"
           >
             Build Intelligent Apps
           </Link>

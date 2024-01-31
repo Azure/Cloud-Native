@@ -1,7 +1,7 @@
 .announcementBarContainer {
     display: flex;
     align-items: center;
-    background-color: #5b3797;
+    background-color: #133486;
     color: #ffffff;
 }
 
@@ -13,6 +13,11 @@
 }
 
 .announcementLink {
+    color: #ffb3bb;
+    font-weight: 600;
+}
+
+.announcementLink:hover {
     color: #ffb3bb;
     font-weight: 600;
 }
