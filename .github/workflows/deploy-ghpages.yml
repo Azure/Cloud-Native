@@ -5,11 +5,20 @@ on:
     branches: [main]
     paths: [website/**]
 
+  permissions:
+  contents: write
+
 jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    permissions: read-all
+      permissions:
+      actions: write
+      contents: write
+      deployments: write
+      packages: none
+      pull-requests: write
+      security-events: write
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
