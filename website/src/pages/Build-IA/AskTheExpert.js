@@ -45,7 +45,7 @@ function SectionContent(){
 function ContentItemATE({title, description, link, imglink, cta}){
     return (
         <div className={clsx('col col--6 card-col', styles.contentItem)}>
-            <Link className="card-link" to={link} target="_blank" data-bi-area="BodyGrid" data-bi-cN={title}>
+            <Link className="card-link" to={link} target="_blank" data-bi-area="BodyGrid" data-bi-name={title}>
                 <div className="card">
                     <div className="card__image">
                         <Image alt={"Thumbnail Image for"+cta} img={useBaseUrl(imglink)}/>
