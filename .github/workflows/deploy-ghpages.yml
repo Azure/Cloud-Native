@@ -12,7 +12,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-      permissions:
+    permissions:
       actions: write
       contents: write
       deployments: write
