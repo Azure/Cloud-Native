@@ -6,14 +6,13 @@ import styles from './../index.module.css';
 
 const CampaignFeatures = [
   {
-    title: "#60DaysOfIA",
+    title: "#60Days Of IA",
     linkTitle: "#60DaysOfIA",
     svgpath: "../img/svg/60-days-of-IA-azure-icon-blog.svg",
     link: "/Cloud-Native/60DaysOfIA",
     description: (
       <>
-        Join us on a #60Day journey that starts by demystifying Intelligent Apps
-        and ends with you Building a Copilot!
+        Join us on a #60Day journey that starts by demystifying Intelligent Apps and ends with you building on Azure OpenAI.
       </>
     ),
   },
@@ -35,8 +34,7 @@ const CampaignFeatures = [
     link: "/Cloud-Native/Build-IA/AskTheExpert",
     description: (
       <>
-        Join us for online conversations with the product teams - submit
-        questions ahead of time or ask them live!
+        Join us for online conversations with the product teams on building intelligent apps architectures - ask your questions live.
       </>
     ),
   },
@@ -52,14 +50,13 @@ const CampaignFeatures = [
   //   ),
   // },
   {
-    title: "Cloud Skills",
-    linkTitle: "Cloud Skills",
+    title: "Cloud Skills Challenge",
+    linkTitle: "Cloud Skills Challenge",
     svgpath: "../img/svg/60-days-of-IA-azure-icon-cloud-skills.svg",
     link: "/Cloud-Native/Build-IA/CloudSkills",
     description: (
       <>
-        Skill up on key cloud technologies with these free, self-guided learning
-        courses - and make the leaderboard!
+        Join us on a learning journey to skill up on your core skills for developing intelligent apps and earn a badge in your Microsoft Learn profile.
       </>
     ),
   },
@@ -70,7 +67,7 @@ const CampaignFeatures = [
     link: "/Cloud-Native/Build-IA/CommunityGallery",
     description: (
       <>
-        Explore the Community Showcase for videos, blog posts and open-source projects for the community!
+        Explore the Community Showcase for videos, blog posts and open-source projects for the community.
       </>
     ),
   },
@@ -108,7 +105,7 @@ function CampaignHeader() {
             </p>
             <div className={styles.buttonsFFIA}>
               <Link className="button button--primary button--lg" to="/60DaysOfIA" data-bi-area="Hero" data-bi-name="#IntelligentApps">
-              #IntelligentApps
+              Get Started
               </Link>
             </div>
           </div>

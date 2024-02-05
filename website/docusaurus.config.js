@@ -178,35 +178,35 @@ const config = {
         links: [
           {
             label: `AI`,
-            to: "https://learn.microsoft.com/ai?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://learn.microsoft.com/ai?ocid=buildia24_website",
           },
           {
             label: `Cloud-Native`,
-            to: "https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://azure.microsoft.com/solutions/cloud-native-apps/?ocid=buildia24_website",
           },
           {
             label: `Serverless`,
-            to: "https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://azure.microsoft.com/solutions/serverless/?ocid=buildia24_website",
           },
           {
             label: "Collection",
-            to: "https://aka.ms/fallforIA/collection/?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://aka.ms/CNNY/collection?ocid=buildia24_website",
           },
           {
             label: "Java",
-            to: "https://developer.microsoft.com/java/?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://developer.microsoft.com/java/?ocid=buildia24_website",
           },
           {
             label: "JavaScript",
-            to: "https://docs.microsoft.com/javascript/?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://docs.microsoft.com/javascript/?ocid=buildia24_website",
           },
           {
             label: ".NET",
-            to: "https://dotnet.microsoft.com/?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://dotnet.microsoft.com/?ocid=buildia24_website",
           },
           {
             label: "Python",
-            to: "https://docs.microsoft.com/azure/developer/python/?WT.mc_id=javascript-99907-ninarasi",
+            to: "https://docs.microsoft.com/azure/developer/python/?ocid=buildia24_website",
           },
           // {
           //   label: "Privacy Statement ",
