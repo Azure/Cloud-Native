@@ -114,23 +114,20 @@ function ShowcaseMultipleAuthorsDropdown({ user }: { user: User }) {
 
 function ShowcaseCard({user}: {user: User}) {
   return (
-    <Link className="card-link"  to={`${user.source}?ocid=buildia24_gallery_website`} data-bi-area="BodyGrid" data-bi-name={user.title}>
-      <li key={user.title} className="card">
+    <li key={user.title} className="card">
+      <Link className="card-link" to={user.source} data-bi-area="BodyGrid" data-bi-name={user.title}>
         {/* Image goes here */}
-        {/* <Link href={user.source}>
-        <div className={clsx('card__image', styles.showcaseCardImage)}>
+        {/* <div className={clsx('card__image', styles.showcaseCardImage)}>
           <Image img={user.preview} alt={user.title} />
-        </div>
-        </Link> */}
+        </div> */}
         <div className="card__body">
           <div>
             <h3>
-                {user.title}
+              {user.title}
             </h3>
             {user.source && (
               <ShowcaseMultipleAuthorsDropdown user={user}/>   
             )}
-            
           </div>
           <p>{user.description}</p>
           {/* {user.tags.includes('featured') && (
@@ -139,12 +136,13 @@ function ShowcaseCard({user}: {user: User}) {
         </div>
         <div className={clsx('card__footer', styles.cardFooter)}>
           <div className="margin-bottom--md">
-          <ShowcaseCardTag tags={user.tags} />
+            <ShowcaseCardTag tags={user.tags} />
           </div>
         </div>
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 }
+
 
 export default React.memo(ShowcaseCard);
