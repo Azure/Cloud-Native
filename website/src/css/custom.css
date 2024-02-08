@@ -328,6 +328,10 @@ a {
   text-decoration: none!important; /* Remove underline if needed */
 }
 
+.card__body {
+  font-weight: 400;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
