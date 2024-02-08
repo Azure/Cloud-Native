@@ -67,52 +67,70 @@ function ShowcaseMultipleWebsites(authorName:string, websiteLink:string) {
        </li>;
 }
 
-function ShowcaseMultipleAuthorsDropdown({user}: {user: User}) {
- const authors = user.author;
- const websites = user.website;
+function ShowcaseMultipleAuthorsDropdown({ user }: { user: User }) {
+  const authors = user.author;
+  const websites = user.website;
 
- if (authors.includes("|")){
-   var multiWebsites = websites.split("|"); 
-   var multiAuthors = authors.split("|"); 
-   const links = [];
+  if (authors.includes("|")) {
+    var multiWebsites = websites.split("|");
+    var multiAuthors = authors.split("|");
+    const links = [];
 
-   return (
-     <div className="dropdown dropdown--right dropdown--hoverable">
-       <button className={clsx(
-                'button button--secondary button--sm',
-                styles.showcaseCardSrcBtn,
-              )}>Author</button>
-       <ul className="dropdown__menu">
-         {multiWebsites.map((value, index) => {
-           return ShowcaseMultipleWebsites(multiAuthors[index], multiWebsites[index])
-         })}
-       </ul>
-     </div>
-   )    
- }
+    return (
+      <div className="dropdown dropdown--right dropdown--hoverable">
+        <button
+          className={clsx(
+            'button button--secondary button--sm',
+            styles.showcaseCardSrcBtn,
+          )}
+        >
+          Author
+        </button>
+        <ul className="dropdown__menu">
+          {multiWebsites.map((value, index) => {
+            // Append tracking parameter to URL
+            const trackedUrl = `${value}?ocid=buildia24_gallery_website`;
+            return ShowcaseMultipleWebsites(
+              multiAuthors[index],
+              trackedUrl // Use the tracked URL
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
 
-   return <div className='author'>
-    <p className="margin-bottom--none">Author</p>
-    <a href={websites}>{authors}</a>
-  </div>
+  // Append tracking parameter to single URL
+  const trackedUrl = `${websites}?ocid=buildia24_gallery_website`;
+
+  return (
+    <div className="author">
+      <p className="margin-bottom--none">Author</p>
+      <a href={trackedUrl}>{authors}</a>
+    </div>
+  );
 }
+
 
 function ShowcaseCard({user}: {user: User}) {
   return (
-    <li key={user.title} className="card">
-      <Link className="card-link" to={user.source} data-bi-area="BodyGrid" data-bi-name={user.title}>
+    <Link className="card-link"  to={`${user.source}?ocid=buildia24_gallery_website`} data-bi-area="BodyGrid" data-bi-name={user.title}>
+      <li key={user.title} className="card">
         {/* Image goes here */}
-        {/* <div className={clsx('card__image', styles.showcaseCardImage)}>
+        {/* <Link href={user.source}>
+        <div className={clsx('card__image', styles.showcaseCardImage)}>
           <Image img={user.preview} alt={user.title} />
-        </div> */}
+        </div>
+        </Link> */}
         <div className="card__body">
           <div>
             <h3>
-              {user.title}
+                {user.title}
             </h3>
             {user.source && (
               <ShowcaseMultipleAuthorsDropdown user={user}/>   
             )}
+            
           </div>
           <p>{user.description}</p>
           {/* {user.tags.includes('featured') && (
@@ -121,11 +139,11 @@ function ShowcaseCard({user}: {user: User}) {
         </div>
         <div className={clsx('card__footer', styles.cardFooter)}>
           <div className="margin-bottom--md">
-            <ShowcaseCardTag tags={user.tags} />
+          <ShowcaseCardTag tags={user.tags} />
           </div>
         </div>
-      </Link>
-    </li>
+      </li>
+    </Link>
   );
 }
 
