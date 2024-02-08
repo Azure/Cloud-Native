@@ -93,28 +93,28 @@ const ContentItemsKubernetes = [
   {
     title: 'Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service',
     imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-1.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_CSC_website",
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_LL_website",
     description: "Learn how to leverage Azure OpenAI with the AKS Store Demo app.",
     cta: "Build Kubernetes"
   },
   {
     title: 'Bring Your Own AI Models to Intelligent Apps on AKS with Kaito',
     imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-2.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_CSC_website",
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_LL_website",
     description: "Use AKS to run your own AI Models with Kaito.",
     cta: "Build Kubernetes"
   },
   {
     title: 'Enhance Observability of Your Intelligent Apps on AKS',
     imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-3.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_CSC_website",
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_LL_website",
     description: "Learn how OpenCost, Prometheus, and Grafana can improve intelligent apps.",
     cta: "Build Kubernetes"
   },
   {
     title: 'Taking Your Intelligent App Global with AKS',
     imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-4.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_CSC_website",
+    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_LL_website",
     description: "Use AKS and Azure to take your intelligent app global.",
     cta: "Build Kubernetes"
   },
