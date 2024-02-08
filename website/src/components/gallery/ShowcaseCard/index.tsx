@@ -115,7 +115,7 @@ function ShowcaseMultipleAuthorsDropdown({ user }: { user: User }) {
 function ShowcaseCard({user}: {user: User}) {
   return (
     <li key={user.title} className="card">
-      <Link className="card-link" to={user.source} data-bi-area="BodyGrid" data-bi-name={user.title}>
+      <Link className="card-link" to={`${user.source}?ocid=buildia24_gallery_website`} data-bi-area="BodyGrid" data-bi-name={user.title}>
         {/* Image goes here */}
         {/* <div className={clsx('card__image', styles.showcaseCardImage)}>
           <Image img={user.preview} alt={user.title} />
