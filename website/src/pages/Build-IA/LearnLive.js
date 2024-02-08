@@ -17,7 +17,7 @@ function SectionHeader({title, description}) {
             </h1>
             <p> {description} </p>
             <div className={styles.buttons}>
-                <Link className="button button--primary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://aka.ms/intelligent-apps/aks-learnlive?ocid=buildia24_CSC_website" target="_blank" data-bi-area="Hero" data-bi-name="Build Kubernetes">
+                <Link className="button button--primary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://aka.ms/intelligent-apps/aks-learnlive?ocid=buildia24_LL_website" target="_blank" data-bi-area="Hero" data-bi-name="Build Kubernetes">
                     Build Kubernetes
                 </Link>
             </div>
