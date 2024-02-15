@@ -1,7 +1,7 @@
 ---
 date: 2024-02-19T09:00
 slug: harnessing-the-power-of-intelligent-apps
-title: "1-1. Harnessing the power of Intelligent Apps"
+title: "1. Harnessing the power of Intelligent Apps"
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
