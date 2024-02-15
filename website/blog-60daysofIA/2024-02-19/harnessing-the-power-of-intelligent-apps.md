@@ -17,7 +17,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
   <meta property="og:url" content="https://azure.github.io/cloud-native/60daysofia/harnessing-the-power-of-intelligent-apps"/>
   <meta property="og:type" content="website"/> 
   <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/> 
-  <meta property="og:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!"/> 
+  <meta property="og:description" content="In this article, we’ll spotlight the success stories of some organizations that have leveraged Microsoft Azure to create and deploy intelligent apps in their workflows and products."/> 
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/> 
   <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/harnessing-the-power-of-intelligent-apps" /> 
   <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" /> 
@@ -29,8 +29,6 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 </head> 
 
 <!-- End METADATA -->
-
-In this article, we’ll spotlight the success stories of some organizations that have leveraged Microsoft Azure to create and deploy intelligent apps in their workflows and products.
 
 ![intelligent apps on Azure](../../static/img/60-days-of-ia/blogs/2024-02-19/harnessing-the-power-of-intelligent-apps.jpg)
 
@@ -100,4 +98,4 @@ Azure’s impact extends beyond immediate efficiency gains, empowering developer
 
 Explore Microsoft [Customer Stories](https://customers.microsoft.com/en-us/home?sq=aks&ff=&p=1&so=story_publish_date%20desc&ocid=buildia24_60days_blogs) for deeper insights into transformative, AI-powered solutions. Finally, don’t forget to mark your calendar for [Azure Kubernetes Day](https://aka.ms/aks-day?ocid=buildia24_60days_blogs) at [KubeCon EU 2024](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/) to get the latest on cutting-edge developments in cloud technology.
 
-<sup>1</sup> Source: [Gartner, Demand Grows for Intelligent Applications Powered by AI, September 27,2023](https://www.gartner.com/en/articles/demand-grows-for-intelligent-applications-powered-by-ai). GARTNER is a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally and is used herein with permission. All rights reserved.
+<sup>1</sup> Source: [Gartner, Demand Grows for Intelligent Applications Powered by AI, September 27, 2023](https://www.gartner.com/en/articles/demand-grows-for-intelligent-applications-powered-by-ai). GARTNER is a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally and is used herein with permission. All rights reserved.
