@@ -54,7 +54,7 @@ function ContentItemKubernetes({title, description, link, imglink, cta}){
                         <Image alt={"Thumbnail Image for"+title} img={useBaseUrl(imglink)}/>
                     </div>
                     <div className="card-body">
-                        <div className="text--center padding-horiz--md">
+                        <div className="text--left padding-horiz--md">
                             <h2>{cta}</h2>
                             <p>{description}</p>
                         </div>
