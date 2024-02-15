@@ -98,7 +98,7 @@ Bring your applications to a modern application platform in the cloud, which lev
 
 ![intelligent apps](../../static/img/60-days-of-ia/blogs/2024-02-15/intelligent-apps.png)
 
-**Containers** on Azure services offer you a wide range of capabilities, from simplicity to control to suit your different needs.
+**Containers on Azure** services offer you a wide range of capabilities, from simplicity to control to suit your different needs.
 
 ![containers on azure](../../static/img/fallforia/blogs/2023-09-17/Containers-on-Azure.jpg)
 
