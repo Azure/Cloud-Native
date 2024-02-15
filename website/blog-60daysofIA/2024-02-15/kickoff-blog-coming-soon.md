@@ -98,6 +98,12 @@ Bring your applications to a modern application platform in the cloud, which lev
 
 ![intelligent apps](../../static/img/60-days-of-ia/blogs/2024-02-15/intelligent-apps.png)
 
+**Containers** on Azure services offer you a wide range of capabilities, from simplicity to control to suit your different needs.
+
+![containers on azure](../../static/img/fallforia/blogs/2023-09-17/Containers-on-Azure.jpg)
+
+![containers on azure](../../static/img/fallforia/blogs/2023-09-17/Containers-on-Azure-2.jpg)
+
 To start with the basics for developing [Kubernetes](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi&ocid=buildia24_60days_blogs) applications, explore [#30Days of CloudNative](https://azure.github.io/Cloud-Native/cnny-2023).
 
 Cloud-native development when paired with **serverless computing** enhances your solution architecture for building cost optimized, resilient applications.
