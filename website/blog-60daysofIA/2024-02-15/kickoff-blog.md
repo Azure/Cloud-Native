@@ -32,7 +32,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 Let’s ride the buzz of AI with the focus on building intelligent apps using cloud-native technologies. Build '#IntelligentApps' brings to you a learning journey to build your skills on creating differentiated experiences while modernizing your applications. It’s time to 'learn it all'. 
 
-### What We’ll Cover
+## What We’ll Cover
 
 * What is Build Intelligent Apps?
 * How Can I *participate*?
@@ -41,11 +41,11 @@ Let’s ride the buzz of AI with the focus on building intelligent apps using cl
 
 ![Build intelligent apps](../../static/img/60-days-of-ia/60-days-of-ia-cloud-skills-banner.jpg)
 
-### Get Ready To Build #IntelligentApps starting February 19!
+## Get Ready To Build #IntelligentApps starting February 19!
 
 Today, we kick off with content and activities for you to skill up on all things Intelligent Apps or AI Apps on Azure with content, events, and community interactions! Read on to learn about what is coming!
 
-### Explore Our Initiatives
+## Explore Our Initiatives
 
 We have a number of initiatives planned for the month to help you learn and skill up on relevant technologies. Click on the links to visit the relevant pages for each.
 
@@ -57,7 +57,7 @@ We have a number of initiatives planned for the month to help you learn and skil
 ![Build intelligent apps](../../static/img/60-days-of-ia/60-days-of-ia-cloud-skills-modules.png)
 
 :::info
-### Register for the events!
+## Register for the events!
 
 What are 4 things you can do today, to jumpstart your learning journey?
 
@@ -75,7 +75,7 @@ What are 4 things you can do today, to jumpstart your learning journey?
 * **Complete** the [Cloud Skills Challenge](https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs) to earn a Microsoft Learn badge – ends on *April 15*!
 :::
 
-### #60Days Of Intelligent Apps
+## #60Days Of Intelligent Apps
 
 [#60Days of IA](https://aka.ms/build-ia/60days) is a series of blog posts grouped into themed weeks - taking you from core concepts to end-to-end solution examples in 60 days. Each blog will provide conceptual lessons paired with exercises and resources to help you reinforce learnings and take next steps.
 
@@ -112,6 +112,6 @@ Cloud-native development when paired with **serverless computing** enhances your
 
 To start with the basics for [serverless computing](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-99907-ninarasi&?ocid=buildia24_60days_blogs), explore [#30DaysOfServerless](https://azure.github.io/Cloud-Native/blog).
 
-### Let’s Get Started
+## Let’s Get Started
 
 Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/60DaysOfIA/rss.xml) for updates in your favorite feed reader. **And, look out for our first Intelligent Apps blog on Monday, February 19!**
