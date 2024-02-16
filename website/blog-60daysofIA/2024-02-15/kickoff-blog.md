@@ -16,12 +16,12 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 <head> 
   <meta property="og:url" content="https://azure.github.io/cloud-native/60daysofia/kick-off"/>
   <meta property="og:type" content="website"/> 
-  <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/> 
+  <meta property="og:title" content="Build Intelligent Apps | AI Apps on Azure"/> 
   <meta property="og:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!"/> 
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/> 
   <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/kick-off" /> 
-  <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" /> 
-  <meta name="twitter:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!” /> 
+  <meta name="twitter:title" content="Build Intelligent Apps | AI Apps on Azure" /> 
+  <meta name="twitter:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!" /> 
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" /> 
   <meta name="twitter:card" content="summary_large_image" /> 
   <meta name="twitter:creator" content="@devanshidiaries" /> 
