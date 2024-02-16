@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[93327],{12753:e=>{e.exports=JSON.parse('{"title":"#60DaysOfIA","items":[{"title":"Kick-off #60Days of IA","permalink":"/Cloud-Native/60DaysOfIA/kick-off","unlisted":false},{"title":"Kickoff blog coming soon!","permalink":"/Cloud-Native/60DaysOfIA/kickoff-blog-coming-soon","unlisted":false}]}')}}]);

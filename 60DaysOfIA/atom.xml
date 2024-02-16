@@ -99,31 +99,4 @@
         <category label="github-codespaces" term="github-codespaces"/>
         <category label="github-actions" term="github-actions"/>
     </entry>
-    <entry>
-        <title type="html"><![CDATA[Kickoff blog coming soon!]]></title>
-        <id>https://azure.github.io/Cloud-Native/60DaysOfIA/kickoff-blog-coming-soon</id>
-        <link href="https://azure.github.io/Cloud-Native/60DaysOfIA/kickoff-blog-coming-soon"/>
-        <updated>2024-02-16T17:06:28.000Z</updated>
-        <summary type="html"><![CDATA[Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure.]]></summary>
-        <content type="html"><![CDATA[
-<p>Check back soon for the kickoff blog in this series.</p>]]></content>
-        <author>
-            <name>It's 60DaysOfIA</name>
-            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
-        </author>
-        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
-        <category label="60-days-of-IA" term="60-days-of-IA"/>
-        <category label="learn-live" term="learn-live"/>
-        <category label="hack-together" term="hack-together"/>
-        <category label="community-buzz" term="community-buzz"/>
-        <category label="ask-the-expert" term="ask-the-expert"/>
-        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
-        <category label="azure-functions" term="azure-functions"/>
-        <category label="azure-openai" term="azure-openai"/>
-        <category label="azure-container-apps" term="azure-container-apps"/>
-        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
-        <category label="github-copilot" term="github-copilot"/>
-        <category label="github-codespaces" term="github-codespaces"/>
-        <category label="github-actions" term="github-actions"/>
-    </entry>
 </feed>

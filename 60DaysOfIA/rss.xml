@@ -96,28 +96,5 @@
             <category>github-codespaces</category>
             <category>github-actions</category>
         </item>
-        <item>
-            <title><![CDATA[Kickoff blog coming soon!]]></title>
-            <link>https://azure.github.io/Cloud-Native/60DaysOfIA/kickoff-blog-coming-soon</link>
-            <guid>https://azure.github.io/Cloud-Native/60DaysOfIA/kickoff-blog-coming-soon</guid>
-            <pubDate>Fri, 16 Feb 2024 17:06:28 GMT</pubDate>
-            <description><![CDATA[Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure.]]></description>
-            <content:encoded><![CDATA[
-<p>Check back soon for the kickoff blog in this series.</p>]]></content:encoded>
-            <category>Build-Intelligent-Apps</category>
-            <category>60-days-of-IA</category>
-            <category>learn-live</category>
-            <category>hack-together</category>
-            <category>community-buzz</category>
-            <category>ask-the-expert</category>
-            <category>azure-kubernetes-service</category>
-            <category>azure-functions</category>
-            <category>azure-openai</category>
-            <category>azure-container-apps</category>
-            <category>azure-cosmos-db</category>
-            <category>github-copilot</category>
-            <category>github-codespaces</category>
-            <category>github-actions</category>
-        </item>
     </channel>
 </rss>
