@@ -3,7 +3,7 @@ date: 2024-02-15T09:00
 slug: kick-off
 title: "Kick-off #60Days of IA"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -97,6 +97,12 @@ We will start with defining intelligent apps and then expand on how to build wit
 Bring your applications to a modern application platform in the cloud, which leverages a cloud data platform at scale and agile development methods with DevOps is the best way to prime the customer and employee experiences. Azure offers the latest apps, data, AI and is the most comprehensive, trusted cloud.
 
 ![intelligent apps](../../static/img/60-days-of-ia/blogs/2024-02-15/intelligent-apps.png)
+
+**Containers on Azure** services offer you a wide range of capabilities, from simplicity to control to suit your different needs.
+
+![containers on azure](../../static/img/fallforia/blogs/2023-09-17/Containers-on-Azure.jpg)
+
+![containers on azure](../../static/img/fallforia/blogs/2023-09-17/Containers-on-Azure-2.jpg)
 
 To start with the basics for developing [Kubernetes](https://azure.microsoft.com/en-us/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi&ocid=buildia24_60days_blogs) applications, explore [#30Days of CloudNative](https://azure.github.io/Cloud-Native/cnny-2023).
 
