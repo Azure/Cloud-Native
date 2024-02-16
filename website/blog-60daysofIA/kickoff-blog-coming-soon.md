@@ -2,7 +2,7 @@
 slug: kickoff-blog-coming-soon
 title: "Kickoff blog coming soon!"
 authors: [cnteam]
-draft: false
+draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
