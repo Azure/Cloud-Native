@@ -32,7 +32,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ![intelligent apps on Azure](../../static/img/60-days-of-ia/blogs/2024-02-19/harnessing-the-power-of-intelligent-apps.jpg)
 
-### Harnessing the Power of Intelligent Apps
+## Harnessing the Power of Intelligent Apps
 
 Organizations are increasingly adopting advanced technologies to drive innovation and elevate operational efficiency. Intelligent apps—applications that integrate machine learning (ML), data analytics, and predictive or generative artificial intelligence (AI) to create differentiated digital experiences—are one way to achieve this. According to Gartner®, “by 2026, 30% of new applications will use AI to drive personalized adaptive user interfaces, up from less than 5% today”<sup>1</sup>.
 
@@ -46,11 +46,11 @@ Because Intelligent apps help organizations leverage business intelligence and o
 
 ___
 
-### Intelligent Apps in Action
+## Intelligent Apps in Action
 
 Intelligent Apps offer tangible business outcomes by automating complex processes, enhancing decision-making, and providing personalized experiences. By leveraging Azure services, the organizations discussed below have experienced a paradigm shift in their operations — and a boost in productivity and agility.
 
-#### How Intelligent Apps Power the Ultimate LEGO Experience
+### How Intelligent Apps Power the Ultimate LEGO Experience
 
 Denmark’s ultimate LEGO experience center, LEGO House, found challenges in maintaining its on-premises data center. To keep serving its custom-built digital experiences, the business upgraded its facilities with [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service/?ocid=buildia24_60days_blogs) (AKS) in 2023.
 
@@ -60,7 +60,7 @@ LEGO House continued its partnership with Microsoft to launch experiences like C
 
 The results were remarkable — improved stability, higher uptime, and positive visitor feedback. Azure services made life easier for LEGO House’s developers and gave the entire LEGO ecosystem a strong foundation for growth. Specifically, by allowing the reuse of elements, AKS provides a common foundation for all LEGO experience builds. The organization’s next move is to rebuild the entire House on the [Azure AI](https://azure.microsoft.com/en-us/solutions/ai?ocid=buildia24_60days_blogs) platform and AKS. Read more about how LEGO [modernized interactive experiences across LEGO House with Azure Kubernetes Service](https://customers.microsoft.com/en-us/story/1703088157691224129-lego-house-azure-kubernetes-service-media-and-entertainment-denmark?ocid=buildia24_60days_blogs).
 
-#### Using Intelligent Apps to Make Cars Smarter With TomTom
+### Using Intelligent Apps to Make Cars Smarter With TomTom
 
 TomTom’s navigation solutions have a proven track record of innovating the driving experience. Today, the company continues to adapt to drivers’ evolving needs. Using [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service/?ocid=buildia24_60days_blogs), [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction?ocid=buildia24_60days_blogs), and [AKS](https://azure.microsoft.com/en-us/products/kubernetes-service/?ocid=buildia24_60days_blogs) to develop Digital Cockpit, TomTom has created smarter, AI-powered vehicles, facilitating huge advancements in user experience.
 
@@ -78,7 +78,7 @@ Internally, integrating Azure services resulted in a significant improvement in 
 Try the [Intelligent Apps Skills Challenges](https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs) to compete for the leaderboard and earn a Microsoft Learn Badge.
 :::
 
-#### How Gluwa Leverages Intelligent Apps to Make Banking More Accessible
+### How Gluwa Leverages Intelligent Apps to Make Banking More Accessible
 
 San Francisco-based startup Gluwa is on a mission to address the financial gap for the unbanked and underbanked, estimated at 1.4 billion people globally. Combining blockchain technology and Azure services, Gluwa connects investors with individuals in emerging markets. 
 
@@ -90,7 +90,7 @@ Gluwa’s decentralized financial platform, Gluwa Invest, encourages stable coin
 
 ___
 
-### Summary
+## Summary
 
 Azure services have empowered organizations developing intelligent apps by offering scalability, flexibility, and seamless integration of ML, data analytics, and AI.
 
