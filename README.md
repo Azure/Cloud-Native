@@ -15,7 +15,7 @@ This is the repository hosting content for cloud-native and serverless community
 ## Feb 2024 ✨ #IntelligentApps
 
 Excited for the new era of AI? So are we!! It's time to **Build Intelligent Apps** as we explore the tools, technologies and opportunities for _developing AI integrated apps_ that can create differentiated digital experiences for your customers, using the power of Azure and AI!
- - [#60DaysOfIA blog posts](https://azure.github.io/Cloud-Native/60DaysOfIA)
+ - [#60Days Of IA blog posts](https://azure.github.io/Cloud-Native/60DaysOfIA)
  - [Learn Live training sessions](https://azure.github.io/Cloud-Native/Build-IA/LearnLive)
  - [Ask The Expert Sessions](https://azure.github.io/Cloud-Native/Build-IA/AskTheExpert)
  - [Cloud Skills Challenges](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills)
