@@ -12,18 +12,17 @@ This is the repository hosting content for cloud-native and serverless community
 <br/>
 
 
-## Sep 2023 ✨ #FallForIA 🍁
+## Feb 2024 ✨ #IntelligentApps
 
-Excited for the new era of AI? So are we!! It's time to **Fall For Intelligent Apps** as we explore the tools, technologies and opportunities for _Building Intelligent Apps_ that can create differentiated digital experiences for your customers, using the power of Azure and AI!
- - #30DaysOfIA blog posts
- - Learn Live training sessions
- - Ask The Expert Sessions
- - Cloud Skills Challenges
- - Enterprise Workshops 
+Excited for the new era of AI? So are we!! It's time to **Build Intelligent Apps** as we explore the tools, technologies and opportunities for _developing AI integrated apps_ that can create differentiated digital experiences for your customers, using the power of Azure and AI!
+ - [#60DaysOfIA blog posts](https://azure.github.io/Cloud-Native/60DaysOfIA)
+ - [Learn Live training sessions](https://azure.github.io/Cloud-Native/Build-IA/LearnLive)
+ - [Ask The Expert Sessions](https://azure.github.io/Cloud-Native/Build-IA/AskTheExpert)
+ - [Cloud Skills Challenges](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills)
 
-.. and more! 
+ [Get started](https://azure.github.io/Cloud-Native/Build-IA/)
 
-👆👆 WATCH THIS SPACE FOR UPDATES! 👆👆
+ ![Build Intelligent Apps](./assets/60-days-readme.jpg)
 
 <br/>
 
