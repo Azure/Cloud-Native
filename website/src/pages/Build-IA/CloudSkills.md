@@ -28,21 +28,6 @@ By completing at least one of the four eligible challenges before **April 15, 20
 
 ---
 
-## About Cloud Skills
-
-Join Cloud Skills Challenges to compete against your peers, showcase your skills, and gain access to offers for industry-recognized certifications. Everyone is welcome to participate in 30-day online challenges.
-
-
-![Compete, Learn and Skill Up](./../../../static/img/banners/cloud-skills-icons-v2.png)
-
-You'll work your way through [learning modules](https://learn.microsoft.com/?ocid=buildia24_website) that skill you up on relevant technologies - while collecting points that place you on a Leaderboard.
-
- 1. 🎯 **Compete** - Benchmark your progress against friends and peers.
- 2. 🎓 **Learn** - Increase your understanding by completing learning modules.
- 3. 🏆 **Skill Up** - Gain useful technical skills and prep for certifications.
-
----
-
 ## About Microsoft Learn
 
 Completed the Cloud Skills Challenge, and want to keep going on your learning journey?  Or, perhaps there are other Cloud+AI topics you want to skill up in? Check out these three resources for building your professional profile!
