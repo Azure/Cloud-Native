@@ -3,7 +3,7 @@ date: 2024-02-27T09:00
 slug: power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service
 title: "2. Power Up: Crafting an Intelligent Energy Forecasting Application Using Azure Kubernetes Service"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
