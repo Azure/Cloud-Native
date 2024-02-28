@@ -53,7 +53,7 @@ This seamless integration enables developers to focus more on the application lo
 AKS and KAITOcreate a robust, flexible, and efficient environment for developing and deploying intelligent applications. This combination not only leverages the cloud’s power and scalability but also optimizes the deployment of AI models, making it easier for developers to bring complex, data-driven applications to life.
 
 :::info
-Register for **[Intelligent Apps on AKS: Episode 2](https://aka.ms/learn-live-building-intelligent-apps-aks-ep2https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs)** , a live hands-on training with an expert on how to use AKS to run your own AI models with KAITO.
+Register for **[Intelligent Apps on AKS: Episode 2](https://developer.microsoft.com/en-us/reactor/events/21815/?ocid=buildia24_60days_blogs)**, a live hands-on training with an expert on how to use AKS to run your own AI models with KAITO.
 :::
 
 ## Laying the Groundwork with Azure Kubernetes Service
