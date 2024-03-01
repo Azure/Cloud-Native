@@ -44,13 +44,13 @@ Whether you’re an experienced developer or new to the AI and ML sphere, this s
 
 Using AKS as the backbone of intelligent apps has numerous benefits — especially when deploying your AI-driven application. AKS provides a managed, cloud-based container orchestration service that simplifies deploying, managing, and scaling AI-backed applications, making it ideal for a project like the one you’ll create in this series.
 
-One of the primary advantages of AKS is its ability to handle distributed applications with evolvingdemands. For AI-driven apps, the ability to scale resources based on computational demands is crucial. Because AKS allows for automatic scaling, intelligent apps have the necessary resources during peak analysis times without wasting resources during quieter periods. But this dynamic scalability isn’t just about handling loads efficiently: It’s also cost-effective, ensuring that you pay only for the resources you use.
+One of the primary advantages of AKS is its ability to handle distributed applications with evolving demands. For AI-driven apps, the ability to scale resources based on computational demands is crucial. Because AKS allows for automatic scaling, intelligent apps have the necessary resources during peak analysis times without wasting resources during quieter periods. But this dynamic scalability isn’t just about handling loads efficiently: It’s also cost-effective, ensuring that you pay only for the resources you use.
 
 Integrating the Kaito operator with AKS further enhances the deployment of AI models like LLaMA 2 by simplifying the complexities of managing AI workloads. Kaito, designed specifically for Kubernetes environments, acts as a bridge between the advanced AI models and the scalable, managed infrastructure provided by AKS. It offers custom resource definitions (CRDs) tailored for AI applications, facilitating the deployment, updating, and management of AI models within the Kubernetes ecosystem.
 
 This seamless integration enables developers to focus more on the application logic and less on the underlying infrastructure, accelerating the development cycle and reducing the time to market for innovative AI solutions.
 
-AKS and KAITOcreate a robust, flexible, and efficient environment for developing and deploying intelligent applications. This combination not only leverages the cloud’s power and scalability but also optimizes the deployment of AI models, making it easier for developers to bring complex, data-driven applications to life.
+AKS and KAITO create a robust, flexible, and efficient environment for developing and deploying intelligent applications. This combination not only leverages the cloud’s power and scalability but also optimizes the deployment of AI models, making it easier for developers to bring complex, data-driven applications to life.
 
 :::info
 Register for **[Intelligent Apps on AKS: Episode 2](https://developer.microsoft.com/en-us/reactor/events/21815/?ocid=buildia24_60days_blogs)**, a live hands-on training with an expert on how to use AKS to run your own AI models with KAITO.
