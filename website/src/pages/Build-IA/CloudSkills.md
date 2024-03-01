@@ -24,7 +24,7 @@ Join us on a learning journey to skill up on your core skills for developing int
 
 ## Earn a Microsoft Learn badge 
 
-By completing at least one of the four eligible challenges before **April 15, 2024**, you will receive a Microsoft Learn **badge** on your Learn profile. These will be delivered to the email address associated with your Microsoft Learn profile. Confirm or add a contact email [here](https://learn.microsoft.com/users/me/settings?ocid=buildia24_website) to ensure emails are delivered.
+By completing at least one of the three eligible challenges before **April 15, 2024**, you will receive a Microsoft Learn **badge** on your Learn profile. These will be delivered to the email address associated with your Microsoft Learn profile. Confirm or add a contact email [here](https://learn.microsoft.com/users/me/settings?ocid=buildia24_website) to ensure emails are delivered.
 
 ---
 
