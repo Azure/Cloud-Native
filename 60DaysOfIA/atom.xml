@@ -81,7 +81,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="lets-get-started">Let’s Get Started<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/kick-off#lets-get-started" class="hash-link" aria-label="Direct link to Let’s Get Started" title="Direct link to Let’s Get Started">​</a></h2>
 <p>Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to <a href="https://azure.github.io/Cloud-Native/60DaysOfIA/rss.xml" target="_blank" rel="noopener noreferrer">subscribe</a> for updates in your favorite feed reader. <strong>And, look out for our first Intelligent Apps blog on Monday, February 19!</strong></p>]]></content>
         <author>
-            <name>It's 60DaysOfIA</name>
+            <name>#60Days Of IA</name>
             <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
@@ -147,7 +147,7 @@
 <p>Explore Microsoft <a href="https://customers.microsoft.com/en-us/home?sq=aks&amp;ff=&amp;p=1&amp;so=story_publish_date%20desc&amp;ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Customer Stories</a> for deeper insights into transformative, AI-powered solutions. Finally, don’t forget to mark your calendar for <a href="https://aka.ms/aks-day?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure Kubernetes Day</a> at <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/" target="_blank" rel="noopener noreferrer">KubeCon EU 2024</a> to get the latest on cutting-edge developments in cloud technology.</p>
 <p><sup>1</sup> Source: <a href="https://www.gartner.com/en/articles/demand-grows-for-intelligent-applications-powered-by-ai" target="_blank" rel="noopener noreferrer">Gartner, Demand Grows for Intelligent Applications Powered by AI, September 27, 2023</a>. GARTNER is a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally and is used herein with permission. All rights reserved.</p>]]></content>
         <author>
-            <name>It's 60DaysOfIA</name>
+            <name>#60Days Of IA</name>
             <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
@@ -201,7 +201,7 @@
 <p>Together, these three articles guide you through creating an innovative, AI-driven energy forecasting app. Setting up a scalable AKS environment with integrated cutting-edge AI models, processing open-source energy data for insightful predictions, and deploying a user-friendly web interface will equip you with the tools you need to build your own Intelligent Apps.</p>
 <p>Stay tuned for each part of the series and get ready to dive into the world of Azure, AI, and application development with us. Join us in this exciting venture and harness the power of technology to make a difference. Register for the <strong><a href="https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Intelligent Apps on AKS: Episode 2</a></strong>  to experience live hands-on training with an expert on how to use AKS to run your own AI models with KAITO.</p>]]></content>
         <author>
-            <name>It's 60DaysOfIA</name>
+            <name>#60Days Of IA</name>
             <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
