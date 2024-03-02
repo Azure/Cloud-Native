@@ -91,7 +91,7 @@ If it's a new cluster, we can use:
 ```shell
 RESOURCE_GROUP=<YOUR RESOURCE GROUP NAME>
 CLUSTER_NAME=<YOUR AKS CLUSTER NAME>
-az aks get-credentials az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME
+az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME
 ```
 
 #### Open the command palette 
