@@ -17,11 +17,11 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
   <meta property="og:url" content="https://azure.github.io/cloud-native/60daysofia/forecasting-energy-usage-with-intelligent-apps-1"/>
   <meta property="og:type" content="website"/> 
   <meta property="og:title" content="Build Intelligent Apps | AI Apps on Azure"/> 
-  <meta property="og:description" content="In this article, we’ll spotlight the success stories of some organizations that have leveraged Microsoft Azure to create and deploy intelligent apps in their workflows and products."/> 
+  <meta property="og:description" content="In this series, you'll create an Intelligent App powered by Azure Kubernetes Service (AKS) to forecast energy usage and cost."/> 
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/> 
   <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/forecasting-energy-usage-with-intelligent-apps-1" /> 
   <meta name="twitter:title" content="Build Intelligent Apps | AI Apps on Azure" />
- <meta name="twitter:description" content="In this article, we’ll spotlight the success stories of some organizations that have leveraged Microsoft Azure to create and deploy intelligent apps in their workflows and products." />
+ <meta name="twitter:description" content="In this series, you'll create an Intelligent App powered by Azure Kubernetes Service (AKS) to forecast energy usage and cost." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" /> 
   <meta name="twitter:card" content="summary_large_image" /> 
   <meta name="twitter:creator" content="@devanshidiaries" /> 
