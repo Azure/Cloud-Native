@@ -128,3 +128,42 @@ Kubernetes uses this YAML code to instantiate a workspace resource with the spec
 
 You can monitor the workspace status by executing the command below. The model deployment has been completed once the `WORKSPACEREADY` column becomes `True`:
 
+```
+$ kubectl get workspace workspace-llama-2-7b 
+| NAME | INSTANCE | RESOURCEREADY | INFERENCEREADY | WORKSPACEREADY | AGE |
+| workspace-llama-2-7b | Standard_NC12s_v3 | True | True | True | 10m |
+```
+
+**Note**: Achieving machine and workspace readiness may take up to 20 minutes.
+
+Now, run the command below to find the inference service’s cluster IP:
+
+```
+$ kubectl get svc workspace-llama-2-7b 
+| NAME | TYPE | CLUSTER-IP | EXTERNAL-IP | PORT(S) | AGE |
+| workspace-llama-2-7b | ClusterIP | <CLUSTERIP> | <none> | 80/TCP,29500/TCP | 10m |
+```
+
+Finally, run a curl pod to test the service endpoint in the cluster:
+
+```
+export CLUSTERIP=$(kubectl get svc workspace-llama-2-7b -o jsonpath="{.spec.clusterIPs[0]}")
+
+$ kubectl run -it --rm --restart=Never curl --image=curlimages/curl -- curl -X POST http://$CLUSTERIP/generate -H "accept: application/json" -H "Content-Type: application/json" -d "{\"prompts\":[\"What is the capital of India?\"],\"parameters\": {\"temperature\": 0, \"max_gen_len\": 64 }}"
+```
+
+You should receive these results:
+
+```
+{"results":[{"prompt":"What is the capital of India?","response":"\nWhat is the capital of India? New Delhi is the capital of India. It is located in the northern part of the country. It is also the home of the President of India.\nWhat is the"}]}
+```
+
+**Note**: You can test with your own questions, but there may be inaccuracies within the response. This is because AKS hasn’t fine-tuned the model for your scenario.
+
+That’s it! You’ve successfully established your AKS environment and familiarized yourself with setting up Kaito to deploy the LLaMA 2 model within your Kubernetes environment. You’re now ready to analyze a model and make predictions using Azure’s AI services.
+
+## Next Steps
+
+In this article, you established an AKS cluster and configured Kaito to integrate with the LLaMA 2 model for advanced ML capabilities. In part 2, you’ll use AKS and Kaito to analyze historical energy consumption data with advanced ML models. You’ll create a dynamic web interface for users to input data, generate predictions, and visualize results seamlessly.
+
+Be sure to join the [Cloud Skill Challenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills) to level up your cloud computing skills and gain hands-on experience. You can also register for the [next episode](https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_60days_blogs) on **Intelligent Apps with Azure Kubernetes Service**, an instructor led live learning experience to deploy your app on AKS. And, join the AKS product and engineering team at *KubeCon EU 2024*—the premier conference for cloud-native technologies, for **AKS [Customer](https://aka.ms/aks-day) and [Lab](https://aka.ms/aks-lab-day) Days**.
