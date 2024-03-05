@@ -1,7 +1,7 @@
 ---
 date: 2024-03-05T09:00
 slug: forecasting-energy-usage-with-intelligent-apps-1
-title: "2.1 Forecasting Energy Usage with Intelligent Apps Part 1: Laying the Groundwork with AKS, Kaito, and LLaMA"
+title: "2.1 Forecasting Energy Usage with Intelligent Apps Part 1: Laying the Groundwork with AKS, KAITO, and LLaMA"
 authors: [cnteam]
 draft: false
 hide_table_of_contents: false
