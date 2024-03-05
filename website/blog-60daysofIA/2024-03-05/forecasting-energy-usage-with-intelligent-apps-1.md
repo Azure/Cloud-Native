@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud-Scale, Data, AI, AI/ML, intelligent apps, cloud-native, 60-days, enterprise apps, digital experiences, app modernization]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "In this article, we’ll will guide you through creating an intelligent app that leverages Azure technologies, including Azure Kubernetes Service (AKS), to build an application that forecasts energy usage and pricing." 
+description: "In this series, you’ll create an Intelligent App powered by Azure Kubernetes Service (AKS) to forecast energy usage and cost." 
 tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
