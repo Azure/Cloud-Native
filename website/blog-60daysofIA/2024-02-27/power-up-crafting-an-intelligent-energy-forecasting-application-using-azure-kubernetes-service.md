@@ -58,7 +58,7 @@ Register for **[Intelligent Apps on AKS: Episode 2](https://developer.microsoft.
 
 ## Laying the Groundwork with Azure Kubernetes Service
 
-In the [first installment of this series](https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service), you’ll roll up your sleeves and set up an AKS environment. This step is foundational to the rest of the series, laying the groundwork for deploying and managing your application — and accessing the full scalability and flexibility that AKS offers.
+In the [first installment of this series](https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-1), you’ll roll up your sleeves and set up an AKS environment. This step is foundational to the rest of the series, laying the groundwork for deploying and managing your application — and accessing the full scalability and flexibility that AKS offers.
 
 The article starts with a straightforward step-by-step guide on establishing the AKS environment, ensuring you have a solid base for the exciting journey ahead. This tutorial is succinct to maintain clarity and speedy development, offering links to additional resources for well-documented steps. 
 
@@ -82,7 +82,7 @@ As the concluding installment of our series, part 3 assembles all the pieces by 
 
 This web front end serves as the direct point of interaction with your AKS-hosted application, seamlessly displaying the reports and predictions the AI model produces.
 
-After deploying this interface in the AKS environment established in [part 1](https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service), you’ll experience the complete cycle of developing an intelligent, data-driven application and appreciate how straightforward it is to engineer intelligent apps that can deliver tangible, user-centric outcomes.
+After deploying this interface in the AKS environment established in [part 1](https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-1), you’ll experience the complete cycle of developing an intelligent, data-driven application and appreciate how straightforward it is to engineer intelligent apps that can deliver tangible, user-centric outcomes.
 
 ## Ready to Get Started?
 
