@@ -220,7 +220,7 @@
         <category label="github-actions" term="github-actions"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[2.1 Forecasting Energy Usage with Intelligent Apps Part 1: Laying the Groundwork with AKS, Kaito, and LLaMA]]></title>
+        <title type="html"><![CDATA[2.1 Forecasting Energy Usage with Intelligent Apps Part 1: Laying the Groundwork with AKS, KAITO, and LLaMA]]></title>
         <id>https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-1</id>
         <link href="https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-1"/>
         <updated>2024-03-05T09:00:00.000Z</updated>
