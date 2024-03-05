@@ -82,7 +82,7 @@ As the concluding installment of our series, part 3 assembles all the pieces by 
 
 This web front end serves as the direct point of interaction with your AKS-hosted application, seamlessly displaying the reports and predictions the AI model produces.
 
-After deploying this interface in the AKS environment established in part 1, you’ll experience the complete cycle of developing an intelligent, data-driven application and appreciate how straightforward it is to engineer intelligent apps that can deliver tangible, user-centric outcomes.
+After deploying this interface in the AKS environment established in [part 1](https://azure.github.io/Cloud-Native/60DaysOfIA/harnessing-the-power-of-intelligent-apps), you’ll experience the complete cycle of developing an intelligent, data-driven application and appreciate how straightforward it is to engineer intelligent apps that can deliver tangible, user-centric outcomes.
 
 ## Ready to Get Started?
 
