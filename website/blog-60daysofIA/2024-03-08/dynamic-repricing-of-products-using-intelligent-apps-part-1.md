@@ -69,10 +69,12 @@ Although you already have an Azure account, you also need to create an Azure Cos
 
 3. Search for “Azure Cosmos DB” and select it. On the **Azure Cosmos DB** page, select **Create**.
 
-4. Enter the settings for your new account: 
+4. Enter the settings for your new account:
+
     - Select your desired subscription.
 
     - Create a new resource group or select an existing one if you have one you’d like to use.
+
     - Enter a unique account name.
 
     - Select **SQL (Core)** as the API. This is the default API for Azure Cosmos DB and allows you to use SQL syntax to query and manage your data.
@@ -140,16 +142,17 @@ Now, upload the CSV file:
 To verify that the data in the container is correct and consistent, you can use the SQL query editor in the Data Explorer.
 
 1. Select **New SQL Query**.
+
 2. The query editor lets you execute SQL queries against the data in the container. For example, run the following query to get the container’s item count:
 
     ```SELECT VALUE COUNT(1) FROM c```
 
     You should get a result of `10000`, which matches the number of rows in the CSV file.
 
-  3. You can also run queries to check the data quality and integrity, like the following: 
+  3. You can also run queries to check the data quality and integrity, like the following:
       - **Get the distinct values of ITEM_ID** — `SELECT DISTINCT VALUE c.ITEM_ID FROM c`
-      - **Get the average price of each product** — `SELECT c.ITEM_ID, c.ITEM_DESC,
-AVG(c.PRICE) AS avg_price FROM c GROUP BY c.ITEM_ID, c.ITEM_DESC`
+      
+      - **Get the average price of each product** — `SELECT c.ITEM_ID, c.ITEM_DESC, AVG(c.PRICE) AS avg_price FROM c GROUP BY c.ITEM_ID, c.ITEM_DESC`
       - **Get the price trend of a product over time** — `SELECT c.QUOTE_DATE, c.PRICE FROM c WHERE c.ITEM_ID = '210102' ORDER BY c.QUOTE_DATE`
 4. You can also use the built-in charts to visualize the query results. In the top-right corner of the query editor, select **Chart** and choose the chart type you want to use, such as line, bar, or pie.
 
