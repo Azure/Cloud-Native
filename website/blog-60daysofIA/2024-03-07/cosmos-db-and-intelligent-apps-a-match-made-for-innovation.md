@@ -1,5 +1,5 @@
 ---
-date: 2024-03-05T09:00
+date: 2024-03-07T09:00
 slug: cosmos-db-and-intelligent-apps-a-match-made-for-innovation
 title: "Cosmos DB and Intelligent Apps: A Match Made for Innovation"
 authors: [cnteam]
