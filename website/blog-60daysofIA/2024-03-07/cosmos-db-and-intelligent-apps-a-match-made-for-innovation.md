@@ -62,6 +62,14 @@ This stage is all about bridging the gap between raw data and actionable insight
 
 This hands-on exploration will equip you with the skills to implement intelligent forecasting within your own e-commerce platforms—something that helps you make data-driven decisions on inventory pricing. By the end of part 2, you’ll have a fully operational forecasting model capable of predicting price trends based on historical data.
 
+### Analyzing Data with Azure AI Services
+
+In part 2 of this series, the spotlight turns to Azure AI Services. You’ll explore how to harness Azure’s powerful AI capabilities to sift through the dataset, identifying patterns and trends that are key to understanding future price fluctuations.
+
+This stage is all about bridging the gap between raw data and actionable insights, demonstrating how to apply AI capabilities to accurately forecast prices. We’ll walk step-by-step through integrating Azure AI Services with Cosmos DB, helping you create a seamless workflow that brings the dynamic repricing model to life.
+
+This hands-on exploration will equip you with the skills to implement intelligent forecasting within your own e-commerce platforms—something that helps you make data-driven decisions on inventory pricing. By the end of part 2, you’ll have a fully operational forecasting model capable of predicting price trends based on historical data.
+
 ### Building the Web Interface
 
 In part 3 of this series, you’ll create a simple, yet effective web interface for the Intelligent App. This interface will serve as the window through which you can easily view and interact with the results of the dynamic repricing tool. We’ll guide you through the development process, showcasing how to use popular web technologies to build an interface.
