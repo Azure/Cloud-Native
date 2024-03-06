@@ -32,8 +32,6 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ![Cosmos DB and Intelligent Apps: A Match Made for Innovation](../../static/img/60-days-of-ia/blogs/2024-03-07/3-1.jpeg)
 
-*This three-part series demonstrates how to create an Intelligent App that forecasts future energy consumption and pricing based on historical data. In this first article, you’ll set up an Azure Kubernetes Service (AKS) environment, install KAITO, and set up KAITO to work with the LLaMA 2 model.*
-
 ## Cosmos DB and Intelligent Apps: A Match Made for Innovation
 
 Intelligent Apps represent the next frontier in application development. Merging machine learning (ML), data analytics, and artificial intelligence (AI), Intelligent Apps help drive and automate informed decisions within everyday workflows. These applications can offer predictive insights and personalized experiences by understanding user intent, making predictions, and automating tasks.
