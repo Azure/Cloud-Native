@@ -85,10 +85,6 @@ Next, you’ll create a database and container within Azure Cosmos DB. Databases
 
 To create a database and container, follow the steps below:
 
-Next, you’ll create a database and container within Azure Cosmos DB. Databases facilitate management, billing, and scaling, while a container is a schema-agnostic grouping of items (documents) with a partition key and a provisioned throughput. The partition property determines how the data is distributed across physical partitions for scalability and performance.
-
-To create a database and container, follow the steps below:
-
 1. From the Azure portal, navigate to your Azure Cosmos DB account and select **Data Explorer** on the left menu. In the **Data Explorer**, select **New Database** on the top menu.
 2. In the **Add Database** panel, enter a name for the new database, like “ProductsDB.”
 3. Check **Provision database throughput** if you want to enable shared throughput for the database. This shares the throughput (RU/s) you provision among all containers in the database. You can also activate or deactivate autoscale, which automatically adjusts the throughput based on your application’s usage patterns.
