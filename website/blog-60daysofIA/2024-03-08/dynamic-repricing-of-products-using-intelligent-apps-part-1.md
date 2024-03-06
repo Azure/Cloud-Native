@@ -89,12 +89,57 @@ Next, you’ll create a database and container within Azure Cosmos DB. Databases
 
 To create a database and container, follow the steps below:
 
-1. From the Azure portal, navigate to your Azure Cosmos DB account and select Data Explorer on the left menu. In the Data Explorer, select New Database on the top menu.
-2. In the Add Database panel, enter a name for the new database, like “ProductsDB.”
-3. Check Provision database throughput if you want to enable shared throughput for the database. This shares the throughput (RU/s) you provision among all containers in the database. You can also activate or deactivate autoscale, which automatically adjusts the throughput based on your application’s usage patterns.
-4. Select OK to create the database.
-5. In Data Explorer, expand the ProductsDB database and select New Container on the top menu. Then, open the Add Container panel and create a new container:
+1. From the Azure portal, navigate to your Azure Cosmos DB account and select **Data Explorer** on the left menu. In the **Data Explorer**, select **New Database** on the top menu.
+2. In the **Add Database** panel, enter a name for the new database, like “ProductsDB.”
+3. Check **Provision database throughput** if you want to enable shared throughput for the database. This shares the throughput (RU/s) you provision among all containers in the database. You can also activate or deactivate autoscale, which automatically adjusts the throughput based on your application’s usage patterns.
+4. Select **OK** to create the database.
+5. In **Data Explorer**, expand the **ProductsDB** database and select **New Container** on the top menu. Then, open the **Add Container** panel and create a new container:
     - Enter “Products” as the container name.
-    - Enter “/ITEM_ID” as the container’s partition key. This will partition the data by its ITEM_ID property, since columns with a wide range of values make excellent partition keys.
+    - Enter “/ITEM_ID” as the container’s partition key. This will [partition](https://learn.microsoft.com/en-us/azure/cosmos-db/partitioning-overview) the data by its `ITEM_ID` property, since columns with a wide range of values make excellent partition keys.
     - Use the default value of 400 throughput units. If you’d like, you can also deactivate autoscale for the container.
-6. Select OK to create the container.
+6. Select **OK** to create the container.
+
+#### Populate the Container
+
+Now that you’ve created your database and container, you need to populate them with some data. For this demonstration, you’ll use a CSV file that contains [UK inflation data](https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/consumerpriceindicescpiandretailpricesindexrpiitemindicesandpricequotes). The dataset contains over 100,000 rows of data representing 600 products sold in UK shops over 12 months.
+
+To populate the container with this data, follow these steps:
+
+1. Download the [CSV file](https://www.kaggle.com/datasets/sujaykapadnis/price-quote-data/data).
+2. In the Azure portal, navigate to your Azure Cosmos DB account and select **Data Explorer** on the left menu.
+3. In **Data Explorer**, expand the **ProductsDB** database and the **Products** container, and select **Items**.
+
+##### *Upload the CSV File*
+
+Now, upload the CSV file:
+
+1. From the top menu, select **Upload Item**.
+2. In the **Upload Item** panel, select **Browse**, and choose the CSV file you downloaded previously.
+3. Select **Upload** to upload the file to the container.
+4. After the upload finishes, you should see the items in the container, each representing a row in the CSV file. You can select an item to view its properties and values in JSON format.
+
+##### *Verify the Data in the Container*
+
+To verify that the data in the container is correct and consistent, you can use the SQL query editor in the Data Explorer.
+
+1. Select **New SQL Query**.
+2. The query editor lets you execute SQL queries against the data in the container. For example, run the following query to get the container’s item count:
+
+    ```SELECT VALUE COUNT(1) FROM c```
+
+    You should get a result of `10000`, which matches the number of rows in the CSV file.
+
+  3. You can also run queries to check the data quality and integrity, like the following: 
+      - **Get the distinct values of ITEM_ID** — `SELECT DISTINCT VALUE c.ITEM_ID FROM c`
+      - **Get the average price of each product** — `SELECT c.ITEM_ID, c.ITEM_DESC,
+AVG(c.PRICE) AS avg_price FROM c GROUP BY c.ITEM_ID, c.ITEM_DESC`
+      - **Get the price trend of a product over time** — `SELECT c.QUOTE_DATE, c.PRICE FROM c WHERE c.ITEM_ID = '210102' ORDER BY c.QUOTE_DATE`
+4. You can also use the built-in charts to visualize the query results. In the top-right corner of the query editor, select **Chart** and choose the chart type you want to use, such as line, bar, or pie.
+
+### Next Steps
+
+In this article, you configured an Azure Cosmos DB database and populated it with data about product price changes. You also verified the data in the container using SQL queries and charts.
+
+In the next part of the series, you’ll learn how to use Azure’s AI and ML capabilities to analyze the data and suggest product price forecasts. 
+
+If you want to challenge yourself and learn more about Azure, Cosmos DB, and AI/ML, we encourage you to participate in the **[Data Cloud Skill Challenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills)**. You can also register for **AKS [Customer](https://aka.ms/aks-day) and [Lab](https://aka.ms/aks-lab-day) Days** at the premier conference for cloud-native technologies, *KubeCon EU 2024*.
