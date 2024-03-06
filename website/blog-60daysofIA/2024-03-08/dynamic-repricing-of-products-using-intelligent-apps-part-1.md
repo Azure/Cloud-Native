@@ -84,3 +84,17 @@ Complete the **[Data Skills Challenge](https://aka.ms/intelligent-apps/data-csc?
 Next, you’ll create a database and container within Azure Cosmos DB. Databases facilitate management, billing, and scaling, while a container is a schema-agnostic grouping of items (documents) with a partition key and a provisioned throughput. The partition property determines how the data is distributed across physical partitions for scalability and performance.
 
 To create a database and container, follow the steps below:
+
+Next, you’ll create a database and container within Azure Cosmos DB. Databases facilitate management, billing, and scaling, while a container is a schema-agnostic grouping of items (documents) with a partition key and a provisioned throughput. The partition property determines how the data is distributed across physical partitions for scalability and performance.
+
+To create a database and container, follow the steps below:
+
+1. From the Azure portal, navigate to your Azure Cosmos DB account and select Data Explorer on the left menu. In the Data Explorer, select New Database on the top menu.
+2. In the Add Database panel, enter a name for the new database, like “ProductsDB.”
+3. Check Provision database throughput if you want to enable shared throughput for the database. This shares the throughput (RU/s) you provision among all containers in the database. You can also activate or deactivate autoscale, which automatically adjusts the throughput based on your application’s usage patterns.
+4. Select OK to create the database.
+5. In Data Explorer, expand the ProductsDB database and select New Container on the top menu. Then, open the Add Container panel and create a new container:
+    - Enter “Products” as the container name.
+    - Enter “/ITEM_ID” as the container’s partition key. This will partition the data by its ITEM_ID property, since columns with a wide range of values make excellent partition keys.
+    - Use the default value of 400 throughput units. If you’d like, you can also deactivate autoscale for the container.
+6. Select OK to create the container.
