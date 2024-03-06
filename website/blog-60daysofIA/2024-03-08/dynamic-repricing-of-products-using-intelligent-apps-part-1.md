@@ -36,3 +36,12 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ## Dynamic Repricing of Products Using Intelligent Apps Part 1: Setting Up and Populating Cosmos DB with Data
 
+Intelligent Apps leverage data and artificial intelligence (AI) to provide smart, personalized, and adaptive experiences for users. AI and machine learning (ML) techniques like natural language processing (NLP), computer vision, and deep learning help understand context, intent, and user preferences to deliver relevant and timely insights and actions.
+
+Some examples of Intelligent Apps include:
+
+- Virtual assistants—Interactive applications that understand and execute user commands
+- Chatbots—Automated messaging systems that provide information or assistance
+- Recommendation systems—Algorithms that suggest relevant items based on user preferences and behavior
+
+In this three-part series, you’ll create an Intelligent App powered by Azure Cosmos DB and AI/ML capabilities that dynamically suggests changes to product prices based on demand and historical trends. This app will help optimize revenue and customer satisfaction by adjusting product prices according to market conditions and customer behavior.
