@@ -64,15 +64,23 @@ Azure Cosmos DB is a fully managed multi-model database that ensures fast access
 Although you already have an Azure account, you also need to create an Azure Cosmos DB account by following the steps below:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
+
 2. Click **Create a resource** on the upper-left side of the page.
+
 3. Search for “Azure Cosmos DB” and select it. On the **Azure Cosmos DB** page, select **Create**.
+
 4. Enter the settings for your new account: 
     - Select your desired subscription.
+
     - Create a new resource group or select an existing one if you have one you’d like to use.
     - Enter a unique account name.
+
     - Select **SQL (Core)** as the API. This is the default API for Azure Cosmos DB and allows you to use SQL syntax to query and manage your data.
+
     - Select a **Location** for the account.
+
     - Click **Review + create**.
+
 5. Review your account settings and click **Create** to create the account.
 
 :::info
@@ -86,13 +94,21 @@ Next, you’ll create a database and container within Azure Cosmos DB. Databases
 To create a database and container, follow the steps below:
 
 1. From the Azure portal, navigate to your Azure Cosmos DB account and select **Data Explorer** on the left menu. In the **Data Explorer**, select **New Database** on the top menu.
+
 2. In the **Add Database** panel, enter a name for the new database, like “ProductsDB.”
+
 3. Check **Provision database throughput** if you want to enable shared throughput for the database. This shares the throughput (RU/s) you provision among all containers in the database. You can also activate or deactivate autoscale, which automatically adjusts the throughput based on your application’s usage patterns.
+
 4. Select **OK** to create the database.
+
 5. In **Data Explorer**, expand the **ProductsDB** database and select **New Container** on the top menu. Then, open the **Add Container** panel and create a new container:
+
     - Enter “Products” as the container name.
+
     - Enter “/ITEM_ID” as the container’s partition key. This will [partition](https://learn.microsoft.com/en-us/azure/cosmos-db/partitioning-overview) the data by its `ITEM_ID` property, since columns with a wide range of values make excellent partition keys.
+
     - Use the default value of 400 throughput units. If you’d like, you can also deactivate autoscale for the container.
+
 6. Select **OK** to create the container.
 
 #### Populate the Container
@@ -102,7 +118,9 @@ Now that you’ve created your database and container, you need to populate them
 To populate the container with this data, follow these steps:
 
 1. Download the [CSV file](https://www.kaggle.com/datasets/sujaykapadnis/price-quote-data/data).
+
 2. In the Azure portal, navigate to your Azure Cosmos DB account and select **Data Explorer** on the left menu.
+
 3. In **Data Explorer**, expand the **ProductsDB** database and the **Products** container, and select **Items**.
 
 ##### *Upload the CSV File*
@@ -110,8 +128,11 @@ To populate the container with this data, follow these steps:
 Now, upload the CSV file:
 
 1. From the top menu, select **Upload Item**.
+
 2. In the **Upload Item** panel, select **Browse**, and choose the CSV file you downloaded previously.
+
 3. Select **Upload** to upload the file to the container.
+
 4. After the upload finishes, you should see the items in the container, each representing a row in the CSV file. You can select an item to view its properties and values in JSON format.
 
 ##### *Verify the Data in the Container*
