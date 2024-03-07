@@ -1,9 +1,9 @@
 ---
 date: 2024-03-08T09:00
 slug: dynamic-repricing-of-products-using-intelligent-apps-part-1
-title: "Cosmos DB and Intelligent Apps: A Match Made for Innovation"
+title: "3.1 Dynamic Repricing of Products Using Intelligent Apps Part 1"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

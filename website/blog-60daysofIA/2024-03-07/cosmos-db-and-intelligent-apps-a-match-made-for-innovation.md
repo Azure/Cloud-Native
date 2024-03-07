@@ -1,9 +1,9 @@
 ---
 date: 2024-03-07T09:00
 slug: cosmos-db-and-intelligent-apps-a-match-made-for-innovation
-title: "Cosmos DB and Intelligent Apps: A Match Made for Innovation"
+title: "3. Cosmos DB and Intelligent Apps: A Match Made for Innovation"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
