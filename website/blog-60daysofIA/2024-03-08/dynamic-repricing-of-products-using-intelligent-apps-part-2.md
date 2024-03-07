@@ -66,3 +66,148 @@ Check out the Azure **[Cosmos DB Ask The Expert](https://aka.ms/intelligent-apps
 
 #### Extract Historical Pricing Data from Cosmos DB
 
+Start by extracting historical pricing data from Cosmos DB, where you stored it in Part 1. For this tutorial, you’ll extract items with names ending in `JACKET`. Because the dataset is relatively small, a simple `like` query will do. However, when working with larger data sets, you should consider additional upfront data cleaning and categorizing, to ensure you can query your database efficiently.
+
+Run the code below to extract the data:
+
+```
+from azure.cosmos import CosmosClient, exceptions
+import pandas as pd
+```
+```
+# Initialize a Cosmos client
+endpoint = "your_cosmos_db_endpoint"
+key = 'your_cosmos_db_key'
+client = CosmosClient(endpoint, key)
+```
+```
+# Connect to the database and container
+database_name = 'your_database_name'
+container_name = 'your_container_name'
+database = client.get_database_client(database_name)
+container = database.get_container_client(container_name)
+```
+```
+# Query these items using the SQL query syntax
+query = "SELECT * FROM c where ITEM_DESC like '%JACKET'"
+items = list(container.query_items(query=query, enable_cross_partition_query=True))
+```
+```
+# Convert the query result to a DataFrame
+pricing_data = pd.DataFrame(items)
+```
+
+#### Preprocess Data and Split into Training and Testing
+
+Before feeding the data into an ML model, preprocess it and split it into training and testing sets using the code below:
+
+```
+from sklearn.model_selection import train_test_split
+```
+```
+# Assume the DataFrame `pricing_data` has columns: 'quote_date', 'price', 'price_relative', 'item_id', etc.
+```
+```
+# Convert 'quote_date' from string to datetime for proper chronological splitting
+pricing_data['QUOTE_DATE'] = pd.to_datetime(pricing_data['QUOTE_DATE'], format='%Y%m')
+```
+```
+# Selecting the features and target for the model
+X = pricing_data[['QUOTE_DATE', 'ITEM_ID', 'PRICE_RELATIVE','STRATUM_WEIGHT', 'SHOP_WEIGHT']]
+y = pricing_data['price']
+```
+```
+# Split the data into training and testing sets
+# We'll use a chronological split rather than a random split to maintain the time series integrity
+split_date = pd.Timestamp('YYYY-MM-DD')  # replace with the appropriate date
+train = pricing_data.loc[pricing_data['QUOTE_DATE'] <= split_date]
+test = pricing_data.loc[pricing_data['QUOTE_DATE'] > split_date]
+```
+```
+X_train, y_train = train[['ITEM_ID', 'PRICE_RELATIVE', 'STRATUM_WEIGHT', 'SHOP_WIGHT']], train['PRICE']
+X_test, y_test = test[['ITEM_ID', 'PRICE_RELATIVE', 'STRATUM_WEIGHT', 'SHOP_WEIGHT']], test['PRICE']
+```
+
+#### Train a Forecasting Model Using Azure Machine Learning
+
+Next, you’ll build and train the forecasting model using Azure Machine Learning. Note that in the code below, you’re using a local compute target, which works on simple datasets like the one used for this tutorial. However, Azure Machine Learning offers more powerful compute targets for more complex models.
+
+```
+from azureml.core import Workspace, Experiment, Environment
+from azureml.train.automl import AutoMLConfig
+```
+```
+# Connect to your Azure ML workspace
+ws = Workspace.from_config()
+```
+```
+# Configure the automated ML job 
+
+automl_config = AutoMLConfig(
+    task='forecasting',
+    primary_metric='normalized_root_mean_squared_error',
+    experiment_timeout_minutes=30,
+    training_data=train,
+    label_column_name='PRICE',
+    n_cross_validations=5,
+    enable_early_stopping=True,
+    verbosity=logging.INFO,
+    compute_target='local'
+) 
+```
+```
+# Submit the experiment
+run = experiment.submit(automl_config, show_output=True)
+```
+
+#### Evaluate and Integrate the Model
+
+Next, check the results of the model by running the following:
+
+```
+from azureml.widgets import RunDetails
+```
+```
+# Show run details while running
+RunDetails(run).show()
+```
+```
+# Wait for the run to complete
+run.wait_for_completion()
+```
+```
+# Retrieve the best model from the AutoML run
+best_run, fitted_model = run.get_output()
+print(best_run)
+print(fitted_model)
+```
+```
+# Evaluate the best model's accuracy using the test data
+# Assuming test data is a Pandas DataFrame with the same structure as the training data
+X_test = test_data.drop('PRICE', axis=1)  # Features (drop the target column)
+y_test = test_data['PRICE']  # True values of the target column
+```
+```
+# Predict using the fitted model
+y_pred = fitted_model.predict(X_test)
+```
+```
+# Calculate the accuracy or any other performance metrics
+from sklearn.metrics import mean_squared_error, r2_score
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+```
+```
+print(f"Mean Squared Error: {mse}")
+print(f"R-squared: {r2}")
+```
+
+With the performance metrics calculated, you can now determine whether the model’s predictions are accurate enough for your needs. If they are, you can integrate the model with a hypothetical e-commerce platform. The easiest way to integrate a model is to deploy it using an Azure Machine Learning endpoint:
+
+```
+ws = Workspace.from_config() 
+```
+```
+# Register the model from the best run
+model = best_run.register_model(model_name='price_forecast_model', model_path='outputs/model.pkl') 
+```
