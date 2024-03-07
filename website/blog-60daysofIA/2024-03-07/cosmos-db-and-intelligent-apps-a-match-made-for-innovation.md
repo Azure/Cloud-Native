@@ -56,11 +56,11 @@ At the heart of this project is Azure Cosmos DB, chosen for its robust data mana
 
 ### Laying the Groundwork with Cosmos DB
 
-In part 2 of this series, the spotlight turns to Azure AI Services. You’ll explore how to harness Azure’s powerful AI capabilities to sift through the dataset, identifying patterns and trends that are key to understanding future price fluctuations.
+[Part 1 of our series](https://azure.github.io/Cloud-Native/60DaysOfIA/dynamic-repricing-of-products-using-intelligent-apps-part-1) starts with the foundation: setting up an Azure Cosmos DB environment tailored for the intelligent forecasting application. We’ll guide you through the initial steps of creating and configuring your Cosmos DB instance to ensure it’s ready to handle the complexities of historical pricing data.
 
-This stage is all about bridging the gap between raw data and actionable insights, demonstrating how to apply AI capabilities to accurately forecast prices. We’ll walk step-by-step through integrating Azure AI Services with Cosmos DB, helping you create a seamless workflow that brings the dynamic repricing model to life.
+This installment reviews how to populate your database with relevant data that will serve as the backbone for the dynamic repricing model. Once the Cosmos DB environment is established and filled with historical pricing data, you’ll be in a strong position to start leveraging Azure AI Services to analyze this data and predict future price trends.
 
-This hands-on exploration will equip you with the skills to implement intelligent forecasting within your own e-commerce platforms—something that helps you make data-driven decisions on inventory pricing. By the end of part 2, you’ll have a fully operational forecasting model capable of predicting price trends based on historical data.
+But the first article isn’t just about setting up a database: It’s about preparing the stage for a sophisticated application that can dynamically adjust e-commerce prices. Through this exercise, you’ll learn the importance of a well-structured data foundation and how it enables the creation of more responsive and intelligent e-commerce platforms.
 
 ### Analyzing Data with Azure AI Services
 
