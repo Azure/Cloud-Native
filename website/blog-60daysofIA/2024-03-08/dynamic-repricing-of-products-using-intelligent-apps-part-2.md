@@ -1,5 +1,5 @@
 ---
-date: 2024-03-08T09:00
+date: 2024-03-08T09:01
 slug: dynamic-repricing-of-products-using-intelligent-apps-part-2
 title: "3.2 Dynamic Repricing of Products Using Intelligent Apps Part 2"
 authors: [cnteam]
