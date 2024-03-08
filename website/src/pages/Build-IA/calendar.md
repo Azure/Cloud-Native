@@ -14,41 +14,41 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 ## Feb 2024
 ### Build #IntelligentApps
 
-* 🎯 Feb 15 | #CloudSkillsChallenge begins
-* ✍🏽 Feb 19 | #60Daysof Intelligent Apps begins
-* 👩🏽‍💻 Feb 21 | #LearnLive Kubernetes – Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service
-* 👩🏽‍💻 Feb 28 | #LearnLive Kubernetes – Ep 02: Bring Your Own AI Models to Intelligent Apps on AKS with Kaito
-* 🎙 Feb 29 | #AskTheExpert – Azure Kubernetes Service 
+* 🎯 Feb 15 | [#CloudSkillsChallenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills) begins
+* ✍🏽 Feb 19 | [#60Daysof](https://aka.ms/build-ia/60days) Intelligent Apps begins
+* 👩🏽‍💻 Feb 21 | #LearnLive Kubernetes – [Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service](https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_LL_website)
+* 👩🏽‍💻 Feb 28 | #LearnLive Kubernetes – [Ep 02: Bring Your Own AI Models to Intelligent Apps on AKS with Kaito](https://developer.microsoft.com/en-us/reactor/events/21815/?ocid=buildia24_LL_website)
+* 🎙 Feb 29 | #AskTheExpert – [Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/events/21693/?ocid=buildia24_AE_website) 
 
 ## March 2024
 ### Build #IntelligentApps
 
-* 👩🏽‍💻 Mar 6 | #LearnLive Kubernetes – Ep 03: Enhance Observability of Your Intelligent Apps on AKS
-* 🎙 Mar 7 | #AskTheExpert – Azure Cosmos DB
-* 👩🏽‍💻 Mar 13 | #LearnLive Kubernetes – Ep 04: Taking Your Intelligent App Global with AKS
+* 👩🏽‍💻 Mar 6 | #LearnLive Kubernetes – [Ep 03: Enhance Observability of Your Intelligent Apps on AKS](https://developer.microsoft.com/en-us/reactor/events/21816/?ocid=buildia24_LL_website)
+* 🎙 Mar 7 | #AskTheExpert – [Azure Cosmos DB](https://reactor.microsoft.com/en-us/reactor/events/21692/?ocid=buildia24_AE_website)
+* 👩🏽‍💻 Mar 13 | #LearnLive Kubernetes – [Ep 04: Taking Your Intelligent App Global with AKS](https://developer.microsoft.com/en-us/reactor/events/21817/?ocid=buildia24_LL_website)
 * Mar 20 | Learn Live Serverless – Ep 01
-* 🎙 Mar 21 | #AskTheExpert – Azure AI
+* 🎙 Mar 21 | #AskTheExpert – [Azure AI](https://reactor.microsoft.com/en-us/reactor/events/21694/?ocid=buildia24_AE_website)
 * Mar 27 | Learn Live Serverless – Ep 02 (Registration Coming Soon)
 
 ### KubeCon EU
 
-* Mar 18 | AKS Lab Day
-* Mar 19 | AKS Customer Day
+* Mar 18 | [AKS Lab Day](https://aka.ms/aks-lab-day)
+* Mar 19 | [AKS Customer Day](https://aka.ms/aks-day)
 
 ## April 2024​
 ### Build #IntelligentApps
 
 * Apr 3 | Learn Live Serverless – Ep 03 (Registration Coming Soon)
-* 🎙 Apr 4 | #AskTheExpert – Azure Functions
+* 🎙 Apr 4 | #AskTheExpert – [Azure Functions](https://reactor.microsoft.com/en-us/reactor/events/21691/?ocid=buildia24_AE_website)
 * Apr 10 | Learn Live Serverless – Ep 04 (Registration Coming Soon)
-* 🎯 Apr 15 | #CloudSkillsChallenge ends
+* 🎯 Apr 15 | [#CloudSkillsChallenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills) ends
 * ✍🏽 Apr 15 | #60Days of Intelligent Apps ends
 
 ## May 2024
 ### #MSBuild
 Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the developer community in-person at Seattle, or online from anywhere in the world!
 
-* May 21-23 | Seattle, Online  
+* May 21-23 | [Seattle, Online](https://build.microsoft.com/home)
 
 ---
 ## Previously on Build Intelligent Apps
@@ -70,11 +70,11 @@ Experience the latest innovations around AI, learn from product and partner expe
 ## Oct 2023
 ### #BuildIntelligentApps
 - 👩🏽‍💻 Oct 05 | #LearnLive Serverless - [Ep 04: Deconstruct Contoso Real Estate (Testing & Deployment)](https://aka.ms/learnlive-contoso-app-deconstructed-Ep4)
-- 🎙 Oct 11 | #AskTheExpert - [Azure App Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 🎙 Oct 11 | #AskTheExpert - [Azure App Service](https://learn.microsoft.com/shows/ask-the-expert/fall-for-intelligent-apps-with-azure-app-service-part-1)
 - 👩🏽‍💻 Oct 12 | #LearnLive Kubernetes – Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service  
-- 🎙 Oct 18 | #AskTheExpert - [Azure Container Apps](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 🎙 Oct 18 | #AskTheExpert - [Azure Container Apps](https://learn.microsoft.com/shows/ask-the-expert/build-intelligent-microservices-with-azure-container-apps-part-1)
 - 👩🏽‍💻 Oct 19 | #LearnLive Kubernetes – Ep 02: Securing Access to Azure Open AI Services with AKS Workload Identity  
-- 🎙 Oct 25 | #AskTheExpert – [Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 🎙 Oct 25 | #AskTheExpert – [Azure Kubernetes Service](https://learn.microsoft.com/shows/ask-the-expert/build-intelligent-apps-with-azure-kubernetes-service-part-1)
 - 👩🏽‍💻 Oct 26 | #LearnLive Kubernetes – Ep 03: Designing Intelligent Application Deployment for Scale, Resilience, and Observability.
 
 ## Nov 2023
