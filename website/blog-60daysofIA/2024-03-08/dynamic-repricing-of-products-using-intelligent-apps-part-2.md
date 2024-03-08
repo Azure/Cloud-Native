@@ -32,7 +32,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ![Dynamic Repricing of Products Using Intelligent Apps Part 2: Price Forecasting with AI/ML](../../static/img/60-days-of-ia/blogs/2024-03-08/3-2-1.jpeg)
 
-*This three-part series demonstrates how to use Azure Cosmos DB to build an Intelligent App that uses historical pricing and product data to forecast future price fluctuations for specific products. In the first article of this series, you’ll set up and populate the Cosmos DB database with data to use in the later parts of the series.*
+*This three-part series demonstrates how to use Azure Cosmos DB to build an Intelligent App that uses historical pricing and product data to forecast future price fluctuations for specific products. In this installment, you’ll use artificial intelligence and machine learning to build the price forecasting model.*
 
 ## Dynamic Repricing of Products Using Intelligent Apps Part 2: Price Forecasting with AI/ML
 
@@ -139,6 +139,11 @@ from azureml.train.automl import AutoMLConfig
 ```
 # Connect to your Azure ML workspace
 ws = Workspace.from_config()
+```
+```
+# Define your experiment
+experiment_name = 'price_forecasting_experiment'
+experiment = Experiment(ws, experiment_name)
 ```
 ```
 # Configure the automated ML job 
