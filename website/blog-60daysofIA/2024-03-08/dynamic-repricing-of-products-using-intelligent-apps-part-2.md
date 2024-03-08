@@ -211,3 +211,43 @@ ws = Workspace.from_config()
 # Register the model from the best run
 model = best_run.register_model(model_name='price_forecast_model', model_path='outputs/model.pkl') 
 ```
+```
+# Download the scoring file produced by AutoML
+best_run.download_file('outputs/scoring_file_v_1_0_0.py', 'score.py')
+```
+```
+# Download the environment file produced by AutoML
+best_run.download_file(constants.CONDA_ENV_FILE_PATH, 'environment.yml')
+```
+```
+# Create the environment
+env = Environment.from_conda_specification(name='forecasting_environment', file_path='environment.yml')
+```
+```
+# Create the inference configuration
+inference_config = InferenceConfig(entry_script='score.py', environment=env)
+```
+```
+# Create the deployment configuration
+deployment_config = AciWebservice.deploy_configuration(cpu_cores=1, memory_gb=1)
+```
+```
+# Deploy the model as a web service
+service_name = 'price-forecast-service'
+service = Model.deploy(ws, service_name, [model], inference_config, deployment_config) 
+service.wait_for_deployment(show_output=True)
+```
+```
+# The web service endpoint URL
+print(service.scoring_uri)
+```
+
+And with that, you’ve deployed your Azure ML endpoint and are ready for Part 3!
+
+### Conclusion
+
+In this tutorial, you extracted data from Cosmos DB, preprocessed it, performed a train/test split, initiated a model training pipeline using Azure Machine Learning, and, finally, tested and deployed the model. These are crucial steps to building a system that can intelligently forecast product prices.
+
+In the third and final article of this series, you’ll build a web interface that displays the generated price forecasts using approachable, simple graphs that help businesses easily make data-informed decisions.
+
+To challenge yourself, learn more about Azure’s AI and ML tooling, and put the skills you’ve learned in this tutorial to work, participate in the [Data Cloud Skill Challenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills). You can also register for **AKS [Customer](https://aka.ms/aks-day) and [Lab](https://aka.ms/aks-lab-day) Days** at the premier conference for cloud-native technologies, *KubeCon EU 2024*.
