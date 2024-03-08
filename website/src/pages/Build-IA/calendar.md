@@ -10,6 +10,47 @@
 Read on to learn where you can tune into livestreams, catch up on replays, and participate by making your first open-source contributions!
 
 ---
+
+## Feb 2024
+### Build #IntelligentApps
+
+* 🎯 Feb 15 | #CloudSkillsChallenge begins
+* ✍🏽 Feb 19 | #60Daysof Intelligent Apps begins
+* 👩🏽‍💻 Feb 21 | #LearnLive Kubernetes – Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service
+* 👩🏽‍💻 Feb 28 | #LearnLive Kubernetes – Ep 02: Bring Your Own AI Models to Intelligent Apps on AKS with Kaito
+* 🎙 Feb 29 | #AskTheExpert – Azure Kubernetes Service 
+
+## March 2024
+### Build #IntelligentApps
+
+* 👩🏽‍💻 Mar 6 | #LearnLive Kubernetes – Ep 03: Enhance Observability of Your Intelligent Apps on AKS
+* 🎙 Mar 7 | #AskTheExpert – Azure Cosmos DB
+* 👩🏽‍💻 Mar 13 | #LearnLive Kubernetes – Ep 04: Taking Your Intelligent App Global with AKS
+* Mar 20 | Learn Live Serverless – Ep 01
+* 🎙 Mar 21 | #AskTheExpert – Azure AI
+* Mar 27 | Learn Live Serverless – Ep 02 (Registration Coming Soon)
+
+### KubeCon EU
+
+* Mar 18 | AKS Lab Day
+* Mar 19 | AKS Customer Day
+
+## April 2024​
+### Build #IntelligentApps
+
+* Apr 3 | Learn Live Serverless – Ep 03 (Registration Coming Soon)
+* 🎙 Apr 4 | #AskTheExpert – Azure Functions
+* Apr 10 | Learn Live Serverless – Ep 04 (Registration Coming Soon)
+* 🎯 Apr 15 | #CloudSkillsChallenge ends
+* ✍🏽 Apr 15 | #60Days of Intelligent Apps ends
+
+## May 2024
+### #MSBuild
+Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the developer community in-person at Seattle, or online from anywhere in the world!
+
+* May 21-23 | Seattle, Online  
+
+---
 ## Previously on Build Intelligent Apps
 
 ## Sep 2023
