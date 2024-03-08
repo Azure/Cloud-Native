@@ -47,11 +47,10 @@ _Ready? Let's go!_
  * **Azure resources**: Provisioning Azure for the Contoso Chat AI project
  * **Hands-on lab**: Step-by-step tutorial to build & deploy Contoso Chat
  * **Exercise**: [_Fork the sample_](https://aka.ms/aitour/contoso-chat) then work through the hands-on tutorial.
- * **Resources**: [_Explore this collection_](https://aka.ms/ai-studio/collection) for samples, docs and training resources.
+ * **Resources**: [_Explore this collection_](https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs) for samples, docs and training resources.
 
 <br/>
 
-<!-- FIXME: banner image -->
 ![Build Contoso Chat - from prompt-engineering to LLM Ops](../../static/img/60-days-of-ia/blogs/2024-03-11/banner.png)
 
 ---
@@ -87,7 +86,7 @@ The answer is then returned to the user, who now sees a response that is more re
 Implementing the RAG pattern requires a number of interactions between the language model deployments and the data sources used (e.g., search index for products, cusomer database for purchase history), and _coordination_ of intermediate steps before the final response can be delivered. This is where frameworks like Prompt flow, LangChain and Semantic kernel come in.
 
 
-The Contoso Chat sample makes extensive use of Prompt flow - an [open-source project](https://github.com/microsoft/promptflow) on GitHub, with its own SDK and VS Code extension. Prompt flow provides a comprehensive solution that simplifies the process of prototyping, experimenting, iterating, and deploying your AI applications. It is [recommended for use as a feature within Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/how-to/prompt-flow), making it a natural first choice for building our Contoso Chat application. The figure shows a high-level architecture diagram showcasing the Azure components used with Prompt flow as the orchestration layer.
+The Contoso Chat sample makes extensive use of Prompt flow - an [open-source project](https://github.com/microsoft/promptflow) on GitHub, with its own SDK and VS Code extension. Prompt flow provides a comprehensive solution that simplifies the process of prototyping, experimenting, iterating, and deploying your AI applications. It is [recommended for use as a feature within Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/how-to/prompt-flow?ocid=buildia24_60days_blogs), making it a natural first choice for building our Contoso Chat application. The figure shows a high-level architecture diagram showcasing the Azure components used with Prompt flow as the orchestration layer.
 
 ![Prompt Flow Architecture](../../static/img/60-days-of-ia/blogs/2024-03-11/contoso-chat-flow.png)
 
@@ -133,4 +132,4 @@ Congratulations! You made it to the end of this whirlwind tour of the Contoso Ch
 
 ## Resources
 
-We've referenced a number of links and samples in this post. Bookmark the [_Azure AI Studio: Code-First Collection_](https://aka.ms/ai-studio/collection) and revisit it regularly for an updated list of resources for code-first development of generative AI applications on Azure.
+We've referenced a number of links and samples in this post. Bookmark the [_Azure AI Studio: Code-First Collection_](https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs) and revisit it regularly for an updated list of resources for code-first development of generative AI applications on Azure.
