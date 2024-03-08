@@ -1,16 +1,16 @@
-# Build Intelligent Apps
+# Hi Build Intelligent Apps
 
-#BuildIntelligentApps kicked off **mid-September** with initiatives to help you learn the tools, technologies and skills you need to *modernize your applications and build differentiated experiences with AI*! Look for these signature events & more:
+#BuildIntelligentApps kicked off **mid-February** with initiatives to help you learn the tools, technologies and skills you need to modernize your applications and build differentiated experiences with AI! Look for these signature events & more:
 
  * 🎙 **Ask The Expert** - (free, online) with the Azure Product Group across two time zones–Americas + EMEA and APAC + ANZ
  * 👩🏽‍💻 **Learn Live** - live training series on building intelligent apps end-to-end on Azure with AI.
- * ✍🏽 **#30DaysOfIA** - series of daily blog posts organized in 4 themed weeks focused on intelligent apps.
+ * ✍🏽 **#60Days of Intelligent Apps** - series of blog posts organized in themed weeks focused on intelligent apps.
  * 🎯 **Cloud Skills Challenge** - curated collection of Learn modules in Apps, Data & AI - for self-skilling!
- * 🐝 **Community Buzz** - activities to showcase _your_ projects and contributions - including a gallery!
 
 Read on to learn where you can tune into livestreams, catch up on replays, and participate by making your first open-source contributions!
 
 ---
+## Previously on Build Intelligent Apps
 
 ## Sep 2023
 ### #BuildIntelligentApps 
