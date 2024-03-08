@@ -160,6 +160,6 @@ To verify that the data in the container is correct and consistent, you can use 
 
 In this article, you configured an Azure Cosmos DB database and populated it with data about product price changes. You also verified the data in the container using SQL queries and charts.
 
-In the next part of the series, you’ll learn how to use Azure’s AI and ML capabilities to analyze the data and suggest product price forecasts. 
+In the [next part of the series](https://azure.github.io/Cloud-Native/60DaysOfIA/dynamic-repricing-of-products-using-intelligent-apps-part-2), you’ll learn how to use Azure’s AI and ML capabilities to analyze the data and suggest product price forecasts. 
 
 If you want to challenge yourself and learn more about Azure, Cosmos DB, and AI/ML, we encourage you to participate in the **[Data Cloud Skill Challenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills)**. You can also register for **AKS [Customer](https://aka.ms/aks-day) and [Lab](https://aka.ms/aks-lab-day) Days** at the premier conference for cloud-native technologies, *KubeCon EU 2024*.
