@@ -1,9 +1,9 @@
 ---
 date: 2024-03-11T09:00
-slug: kicking-off-azure-ai-week
-title: "4.0 Kicking Off Azure AI Week!"
+slug: fuel-your-intelligent-apps-with-azure-ai
+title: "4. Fuel Your Intelligent Apps with Azure AI"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -14,18 +14,18 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 ---
 
 <head> 
-  <meta property="og:url" content="https://azure.github.io/cloud-native/60daysofia/kicking-off-azure-ai-week"/>
+  <meta property="og:url" content="https://azure.github.io/cloud-native/60daysofia/fuel-your-intelligent-apps-with-azure-ai"/>
   <meta property="og:type" content="website"/> 
   <meta property="og:title" content="Build Intelligent Apps | AI Apps on Azure"/> 
   <meta property="og:description" content="In this kickoff post, we'll set the stage for the week of posts by describing the application scenario (motivation) and introducing core terminology (LLM Ops), developer tools (Azure AI Studio, frameworks) and design patterns (RAG) to help you jumpstart your journey building and deploying generative AI solutions in the enterprise. By the end of this week, you should have a good understanding of how to build a copilot app end-to-end on the Azure AI platform, how to deploy it for integration with real-world applications, and how to incorporate responsible AI principles into your development workflow."/> 
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/> 
-  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/kicking-off-azure-ai-week" /> 
+  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/fuel-your-intelligent-apps-with-azure-ai" /> 
   <meta name="twitter:title" content="Build Intelligent Apps | AI Apps on Azure" />
  <meta name="twitter:description" content="In this kickoff post, we'll set the stage for the week of posts by describing the application scenario (motivation) and introducing core terminology (LLM Ops), developer tools (Azure AI Studio, frameworks) and design patterns (RAG) to help you jumpstart your journey building and deploying generative AI solutions in the enterprise. By the end of this week, you should have a good understanding of how to build a copilot app end-to-end on the Azure AI platform, how to deploy it for integration with real-world applications, and how to incorporate responsible AI principles into your development workflow." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" /> 
   <meta name="twitter:card" content="summary_large_image" /> 
   <meta name="twitter:creator" content="@devanshidiaries" /> 
-  <link rel="canonical" href="https://azure.github.io/Cloud-Native/60daysofIA/kicking-off-azure-ai-week" /> 
+  <link rel="canonical" href="https://azure.github.io/Cloud-Native/60daysofIA/fuel-your-intelligent-apps-with-azure-ai" /> 
 </head> 
 
 <!-- End METADATA -->
