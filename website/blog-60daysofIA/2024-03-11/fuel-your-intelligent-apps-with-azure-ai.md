@@ -32,7 +32,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 # Kicking Off Azure AI Week!
 
-Welcome to the `Azure AI` week on **#60DaysOfIA**. Over the next 5 days, we'll share a series of blog posts that give you a comprehensive look at the tools and end-to-end development workflow reequired to build intelligent applications [code-first on the Azure AI platform](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/a-code-first-experience-for-building-a-copilot-with-azure-ai/ba-p/4058659?ocid=buildia24_60days_blogs). 
+Welcome to the `Azure AI` week on **#60Days Of IA**. Over the next 5 days, we'll share a series of blog posts that give you a comprehensive look at the tools and end-to-end development workflow reequired to build intelligent applications [code-first on the Azure AI platform](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/a-code-first-experience-for-building-a-copilot-with-azure-ai/ba-p/4058659?ocid=buildia24_60days_blogs). 
 
 In this kickoff post, we'll set the stage for the week of posts by describing the application scenario (motivation) and introducing core terminology (LLM Ops), developer tools (Azure AI Studio, frameworks) and design patterns (RAG) to help you jumpstart your journey building and deploying generative AI solutions in the enterprise. By the end of this week, you should have a good understanding of how to build a copilot app end-to-end on the Azure AI platform, how to deploy it for integration with real-world applications, and how to incorporate responsible AI principles into your development workflow.
 

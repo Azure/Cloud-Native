@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
-**Welcome to Day 1️⃣ of Azure AI week on #60DaysOfIA** 
+**Welcome to Day 1️⃣ of Azure AI week on ##60Days Of IA** 
 
 In today's post, we'll introduce you to the [Contoso Chat](https://aka.ms/aitour/contoso-chat) sample - a comprehensive end-to-end reference sample that walks you through the journey of building the customer support AI application we talked about in our kickoff post yesterday. By the end of this tutorial, you will be able to:
  - explain how to build a copilot app end-to-end on Azure AI
