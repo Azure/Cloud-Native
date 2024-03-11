@@ -57,7 +57,7 @@ _Ready? Let's go!_
 
 ## Contoso Chat Sample
 
-The [Contoso Chat](https://aka.ms/aitour/contoso-chat) sample provides a comprehensive end-to-end reference example for using Azure AI Studio and Prompt flow, to build a copilot application end-to-end. The sample implements a _customer support chat AI_ experience - allowing customers on the Contoso Outdoors website to ask questions about related products and receive relevant responses based on their query and purchase history. The illustrated guide below gives you a high-level overview of the steps involved in building the application - from provisioning Azure resources to deploying and using the chat AI endpoint. To learn more about the application scenario, refer to our [kickoff post](./index.md) for this week.
+The [Contoso Chat](https://aka.ms/aitour/contoso-chat) sample provides a comprehensive end-to-end reference example for using Azure AI Studio and Prompt flow, to build a copilot application end-to-end. The sample implements a _customer support chat AI_ experience - allowing customers on the Contoso Outdoors website to ask questions about related products and receive relevant responses based on their query and purchase history. The illustrated guide below gives you a high-level overview of the steps involved in building the application - from provisioning Azure resources to deploying and using the chat AI endpoint. To learn more about the application scenario, refer to our [kickoff post](https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai) for this week.
 
 ![Sketchnote](../../static/img/60-days-of-ia/blogs/2024-03-11/contoso-chat-sketchnote.png)
 
