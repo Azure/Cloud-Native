@@ -600,5 +600,212 @@
             <category>github-codespaces</category>
             <category>github-actions</category>
         </item>
+        <item>
+            <title><![CDATA[4. Fuel Your Intelligent Apps with Azure AI]]></title>
+            <link>https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai</link>
+            <guid>https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai</guid>
+            <pubDate>Mon, 11 Mar 2024 09:00:00 GMT</pubDate>
+            <description><![CDATA[In this kickoff post, we'll set the stage for the week of posts by describing the application scenario (motivation) and introducing core terminology (LLM Ops), developer tools (Azure AI Studio, frameworks) and design patterns (RAG) to help you jumpstart your journey building and deploying generative AI solutions in the enterprise. By the end of this week, you should have a good understanding of how to build a copilot app end-to-end on the Azure AI platform, how to deploy it for integration with real-world applications, and how to incorporate responsible AI principles into your development workflow.]]></description>
+            <content:encoded><![CDATA[
+<p>Welcome to the<code>Azure AI</code> week on <strong>#60DaysOfIA</strong>. Over the next 5 days, we'll share a series of blog posts that give you a comprehensive look at the tools and end-to-end development workflow reequired to build intelligent applications <a href="https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/a-code-first-experience-for-building-a-copilot-with-azure-ai/ba-p/4058659?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">code-first on the Azure AI platform</a>.</p>
+<p>In this kickoff post, we'll set the stage for the week of posts by describing the application scenario (motivation) and introducing core terminology (LLM Ops), developer tools (Azure AI Studio, frameworks) and design patterns (RAG) to help you jumpstart your journey building and deploying generative AI solutions in the enterprise. By the end of this week, you should have a good understanding of how to build a copilot app end-to-end on the Azure AI platform, how to deploy it for integration with real-world applications, and how to incorporate responsible AI principles into your development workflow.</p>
+<p>Ready? Let's get started!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-well-cover-today">What We'll Cover Today<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai#what-well-cover-today" class="hash-link" aria-label="Direct link to What We'll Cover Today" title="Direct link to What We'll Cover Today">​</a></h2>
+<ul>
+<li><strong>Application Scenario |</strong> What is Contoso Chat?</li>
+<li><strong>Paradigm Shift |</strong> What is LLM Ops?</li>
+<li><strong>Unified Platform |</strong> What is Azure AI Studio?</li>
+<li><strong>Copilot Experience |</strong> What is the development workflow?</li>
+<li><strong>The Week Ahead |</strong> What will we cover?</li>
+<li><strong>Resources:</strong> <a href="https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Explore the Code-First Azure AI Collection</a></li>
+</ul>
+<hr>
+<p><img loading="lazy" alt="Roadmap" src="https://azure.github.io/Cloud-Native/assets/images/banner-6dc91900960e8cdf2fbeece64e5fc877.png" width="1000" height="420" class="img_ev3q"></p>
+<br>
+<p>Generative AI applications are transforming the user experience and accelerating adoption of AI tools and solutions in the enterprise. But as developers, we face new challenges in building solutions <strong>end-to-end</strong> - from prompt engineering to LLM Ops. We need new tools, frameworks, and guidance to help us navigate and streamline a fast-growing ecosystem.</p>
+<p>In <a href="https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/a-code-first-experience-for-building-a-copilot-with-azure-ai/ba-p/4058659?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">a recent blog post</a> we described how the Azure AI platform is addressing these challanges with a <em>code-first experience for building a copilot application end-to-end</em> with your data and APIs. This week, we unpack that post in more detail - walking you through a end-to-end application sample, and several <em>quickstart</em> options, to get you started on your own generative AI solutions.</p>
+<p>To kick things off, let's set the stage by describing a common generative AI application scenario ("Contoso Chat") and introduce core terminology, tools and processes that we will be using throughout the week, on our development journey.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1--the-application-scenario">1 | The Application Scenario<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai#1--the-application-scenario" class="hash-link" aria-label="Direct link to 1 | The Application Scenario" title="Direct link to 1 | The Application Scenario">​</a></h2>
+<p>Say hello to <em>Contoso Outdoor Company</em> - an online retailer of outdoor adventuring equipment with a loyal and growing customer base. Your website has a rich catalog of items organized into categories like <em>tents</em>, <em>backpacks</em>, <em>hiking boots</em> and more. Customers visit the site looking to find the best gear for their next adventure, and often have questions about the products, or how they might fit with their previous purchases.</p>
+<p><img loading="lazy" alt="Contoso Outdoors site" src="https://azure.github.io/Cloud-Native/assets/images/app-contoso-outdoors-2e49c3ff8b9705669d3e5f144b6aef09.png" width="2734" height="2008" class="img_ev3q"></p>
+<p>The company has a customer support line, but it is getting overwhelmed with calls and you don't have the resources to meet the demand. You hear about generative AI applications and decide to build a <em>customer support chat AI</em> agent that knows your catalog and customers. You can then integrate it into the site as shown, to improve customer satisfaction and drive follow-up actions.</p>
+<p><img loading="lazy" alt="Contoso Chat concept" src="https://azure.github.io/Cloud-Native/assets/images/app-contoso-chat-concept-1e6a568ef26af525237d5b3df58804c8.png" width="1457" height="529" class="img_ev3q"></p>
+<p>You identify three requirements for your chat AI application:</p>
+<ul>
+<li><strong>Custom Data</strong>. The application responses must prioritize your catalog data.</li>
+<li><strong>Responsible AI</strong>. The application must follow responsible AI principles.</li>
+<li><strong>LLM Ops</strong>. The end-to-end development workflow must be operationalizable.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2--the-paradigm-shift">2 | The Paradigm Shift<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai#2--the-paradigm-shift" class="hash-link" aria-label="Direct link to 2 | The Paradigm Shift" title="Direct link to 2 | The Paradigm Shift">​</a></h2>
+<p>Building generative AI applications requires a different mindset from traditional ML applications. The latter are trained on finite custom data, deploying an endpoint that makes <em>predictions</em>. By contrast, generative AI applications are trained on massive amounts of data, using large language models (LLM) and natural language processing (NLP) to <em>generate</em> new content.</p>
+<p>The focus now moves from <strong>MLOps</strong> (workflow for building ML apps) to <strong>LLMOps</strong> (workflow for building generative AI apps) - starting with <em>prompt engineering</em>, a process where we refine the inputs to the LLM ("prompts") through a process of trial-and-error (build-run-evaluate) till the responses meet our quality, cost and performance requirements. The generative AI application lifecycle now looks more like this:</p>
+<p><img loading="lazy" alt="LLM App Lifecyle" src="https://azure.github.io/Cloud-Native/assets/images/llm-app-lifecycle-6509347ca42b47d5c7ae425b890e5efe.png" width="1147" height="646" class="img_ev3q"></p>
+<ol>
+<li><strong>Ideation Phase</strong>: Start by building the basic AI application (copilot) for your scenario. At this stage, you define the architectural elements (AI resources, design patterns) and language models (chat completion, chat evaluation, text embeddings) that you will need to build-run-evaluate the basic experience. And have sample data to test against.</li>
+<li><strong>Augmentation Phase</strong>: Iteratively refine the quality and performance of your application by <em>engineering</em> the prompts, <em>tuning</em> the models, and <em>evaluating</em> the responses with sample data (smal) and batch runs (large). Use relevant metrics (groundedness, coherence, relevance, fluency) to guide decisions on what to change, and when to stop iterating.</li>
+<li><strong>Operationalization Phase:</strong> Now, you're ready to deploy the application to a production environment so that the endpoint can be accessed by others, for integrating into user-facing experiences. This is also a good time to review the entire workflow for responsible AI practices, and explore automation and monitoring solutions for efficiency and performance.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3--the-azure-ai-platform">3 | The Azure AI Platform<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai#3--the-azure-ai-platform" class="hash-link" aria-label="Direct link to 3 | The Azure AI Platform" title="Direct link to 3 | The Azure AI Platform">​</a></h2>
+<p>Implementing this end-to-end workflow and managing the various phases of the application lifecycle can be challenging for developers. Azure AI Studio addresses these challenges with a <a href="https://ai.azure.com/?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer"><strong>unified platform</strong></a> for building generative AI applications and custom copilot experiences.</p>
+<p>Use the platform to <strong>explore</strong> language models from Microsoft and the broader community, and experiment with them in a built-in playground. Then <strong>build</strong> your
+AI project by seamlessly integrating with deployed models and built-in AI services - and <strong>manage</strong> your AI resources (for compute, access, billing and more) from the unified UI.</p>
+<p><img loading="lazy" alt="Azure AI Studio" src="https://azure.github.io/Cloud-Native/assets/images/azure-ai-c35fed704147614a7f607c699852d602.png" width="1147" height="633" class="img_ev3q"></p>
+<p>As a developer, you have both low-code and code-first options for engaging with the platform. Use the <a href="https://ai.azure.com/?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Studio UI</a> for a browser-based low-code experience, and the <a href="https://learn.microsoft.com/azure/ai-studio/how-to/sdk-generative-overview?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI SDK</a> for a Python-based code-first experience. In our posts this week, we'll focus on the code-first experience, and show you how to build a copilot app on Azure AI using the Python SDK and popular frameworks.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4--the-copilot-experience">4 | The Copilot Experience<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai#4--the-copilot-experience" class="hash-link" aria-label="Direct link to 4 | The Copilot Experience" title="Direct link to 4 | The Copilot Experience">​</a></h2>
+<p>So how do we get started on the end-to-end development journey using the Azure AI platform? Let's start by defining what we mean by a <em>copilot</em> experience for enterprise-grade generative AI applications. A copilot is:</p>
+<ul>
+<li>a generative AI application that uses large language models (LLM) and natural language processing (NLP)</li>
+<li>to assist customers in completing complex cognitive tasks <strong>using your data</strong></li>
+<li>typically using conversational “chat” interactions (request-reponse)</li>
+</ul>
+<p>The copilot (generative AI application) is deployed in the cloud to expose an interaction endpoint (API) that can be integrated into customer-facing experiences (e.g,, web or mobile apps) for real-world use. For our specific application scenario, the implementation will involve two components:</p>
+<ul>
+<li>Contoso Chat (copilot API) as the backend component with the chat AI</li>
+<li>Contoso Outdoors (web App) as the frontend component with the chat UI</li>
+</ul>
+<p><img loading="lazy" alt="Azure Copilot" src="https://azure.github.io/Cloud-Native/assets/images/copilot-architecture-a14ddb6e2ac8e5ded7e544f1093325fc.png" width="2856" height="1292" class="img_ev3q"></p>
+<p>The figure shows the high-level application architecture for <a href="https://www.youtube.com/watch?v=UbJg7RNLi7E" target="_blank" rel="noopener noreferrer">building generative AI applications using custom code with Azure AI</a>, where the <strong>App</strong> represents the front-end component and the blue box encloses the components of the <strong>Copilot</strong> implementation exposed through the managed online endpoint (API). The copilot experience now involves the following steps:</p>
+<ul>
+<li>The user (customer) asks a question from the chat UI (web app)</li>
+<li>The web app sends the question to the chat API (copilot endpoint)</li>
+<li>The chat API invokes our custom Python code (chat function) which:<!-- -->
+<ul>
+<li>converts the user question (prompt) into a machine-friendly format (vector)</li>
+<li>uses the vectorized prompt to find matches in our custom data (search index)</li>
+<li>combines the user question with custom results for an enhanced prompt</li>
+<li>sends this prompt to the chat model to get the completion (answer)</li>
+</ul>
+</li>
+<li>The chat API now returns the answer as a response to the chat UI request</li>
+</ul>
+<p>To build this workflow requires us to complete the following steps:</p>
+<ol>
+<li>Provision the necessary resources on Azure</li>
+<li>Create the search index using our custom data</li>
+<li>Deploy chat and embedding models for use by the chat function</li>
+<li>Configure connections between chat function and models, resources</li>
+<li>Write the code to <em>orchestrate</em> the steps for the chat function</li>
+<li>Deploy our chat function to expose the API endpoint online</li>
+<li>Integrate the API endpoint with our front-end application for usage</li>
+</ol>
+<p>From an LLM Ops perspective, we also need to consider two additional steps:</p>
+<ol>
+<li>Evaluation of the chat function using sample data - to assess quality</li>
+<li>Automation of the workflow steps - for iteration and operationalization</li>
+</ol>
+<p>This is a non-trivial set of requirements for building, running, evaluating, and deploying a generative AI application. Thankfully, the Azure AI platform and related ecosystem of tools and services, helps streamline the process for developers - allowing us to focus on our chat function logic and user experience.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5--the-week-ahead">5 | The Week Ahead!<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai#5--the-week-ahead" class="hash-link" aria-label="Direct link to 5 | The Week Ahead!" title="Direct link to 5 | The Week Ahead!">​</a></h2>
+<p>In the upcoming week, we'll dive into the implementation details of these processes in the context of a signature reference sample (Contoso Chat) and as quickstart templates that showcase usage with popular frameworks. Here's what we'll cover:</p>
+<ul>
+<li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end" target="_blank" rel="noopener noreferrer"><strong>Day 1:</strong></a> Build the Contoso Chat app on Azure AI (end-to-end reference sample)</li>
+<li><strong>Day 2:</strong> Build a Copilot app on Azure AI with the Python SDK (quickstart)</li>
+<li><strong>Day 3:</strong> Build a Copilot app on Azure AI with promptflow (framework)</li>
+<li><strong>Day 4:</strong> Build a Copilot app on Azure AI with LangChain (framework)</li>
+<li><strong>Day 5:</strong> Deploy your Copilot app responsibly on Azure AI (advanced topics)</li>
+</ul>]]></content:encoded>
+            <category>Build-Intelligent-Apps</category>
+            <category>60-days-of-IA</category>
+            <category>learn-live</category>
+            <category>hack-together</category>
+            <category>community-buzz</category>
+            <category>ask-the-expert</category>
+            <category>azure-kubernetes-service</category>
+            <category>azure-functions</category>
+            <category>azure-openai</category>
+            <category>azure-container-apps</category>
+            <category>azure-cosmos-db</category>
+            <category>github-copilot</category>
+            <category>github-codespaces</category>
+            <category>github-actions</category>
+        </item>
+        <item>
+            <title><![CDATA[4.1 Build Contoso Chat End-to-End]]></title>
+            <link>https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end</link>
+            <guid>https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end</guid>
+            <pubDate>Mon, 11 Mar 2024 09:01:00 GMT</pubDate>
+            <description><![CDATA[Building generative AI applications poses new challenges for streamlining end-to-end application development - from prompt engineering, to LLM Ops. In this post we introduce Contoso Chat, a sample application for building a copilot with your data - using the Azure AI platform with prompt flow.]]></description>
+            <content:encoded><![CDATA[
+<p><strong>Welcome to Day 1️⃣ of Azure AI week on #60DaysOfIA</strong></p>
+<p>In today's post, we'll introduce you to the <a href="https://aka.ms/aitour/contoso-chat" target="_blank" rel="noopener noreferrer">Contoso Chat</a> sample - a comprehensive end-to-end reference sample that walks you through the journey of building the customer support AI application we talked about in our kickoff post yesterday. By the end of this tutorial, you will be able to:</p>
+<ul>
+<li>explain how to build a copilot app end-to-end on Azure AI</li>
+<li>explain what Retrieval Augmented Generation does for copilot apps</li>
+<li>explain what prompt flow is and how it streamlines your workflow</li>
+<li>describe the Azure AI platform and Azure AI SDK capabilities</li>
+</ul>
+<p><em>Ready? Let's go!</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-youll-learn-today">What You'll Learn Today<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#what-youll-learn-today" class="hash-link" aria-label="Direct link to What You'll Learn Today" title="Direct link to What You'll Learn Today">​</a></h2>
+<ul>
+<li><strong>Contoso Chat Sample</strong>: Building a copilot with Azure AI and Prompt flow</li>
+<li><strong>Retrieval Augmented Generation</strong>: Design pattern for using custom data</li>
+<li><strong>Prompt flow</strong>: Open-source tooling for orchestrating end-to-end workflow</li>
+<li><strong>Azure resources</strong>: Provisioning Azure for the Contoso Chat AI project</li>
+<li><strong>Hands-on lab</strong>: Step-by-step tutorial to build &amp; deploy Contoso Chat</li>
+<li><strong>Exercise</strong>: <a href="https://aka.ms/aitour/contoso-chat" target="_blank" rel="noopener noreferrer"><em>Fork the sample</em></a> then work through the hands-on tutorial.</li>
+<li><strong>Resources</strong>: <a href="https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer"><em>Explore this collection</em></a> for samples, docs and training resources.</li>
+</ul>
+<br>
+<p><img loading="lazy" alt="Build Contoso Chat - from prompt-engineering to LLM Ops" src="https://azure.github.io/Cloud-Native/assets/images/banner-6dc91900960e8cdf2fbeece64e5fc877.png" width="1000" height="420" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="contoso-chat-sample">Contoso Chat Sample<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#contoso-chat-sample" class="hash-link" aria-label="Direct link to Contoso Chat Sample" title="Direct link to Contoso Chat Sample">​</a></h2>
+<p>The <a href="https://aka.ms/aitour/contoso-chat" target="_blank" rel="noopener noreferrer">Contoso Chat</a> sample provides a comprehensive end-to-end reference example for using Azure AI Studio and Prompt flow, to build a copilot application end-to-end. The sample implements a <em>customer support chat AI</em> experience - allowing customers on the Contoso Outdoors website to ask questions about related products and receive relevant responses based on their query and purchase history. The illustrated guide below gives you a high-level overview of the steps involved in building the application - from provisioning Azure resources to deploying and using the chat AI endpoint. To learn more about the application scenario, refer to our <a href="https://azure.github.io/Cloud-Native/60DaysOfIA/fuel-your-intelligent-apps-with-azure-ai" target="_blank" rel="noopener noreferrer">kickoff post</a> for this week.</p>
+<p><img loading="lazy" alt="Sketchnote" src="https://azure.github.io/Cloud-Native/assets/images/contoso-chat-sketchnote-d9a7a4995f13f09e9a5a9ef860d7e366.png" width="3840" height="2160" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="rag-design-pattern">RAG Design Pattern<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#rag-design-pattern" class="hash-link" aria-label="Direct link to RAG Design Pattern" title="Direct link to RAG Design Pattern">​</a></h2>
+<p>Our first step is to define the application architecture for Contoso Chat. We know we want to have our copilot <em>grounded in our data</em> so that customer queries return responses that reflect the product catalog or customer purchase history.</p>
+<p>The challenge is that Large Language Models (LLM) are trained on massive datasets so the default responses may not be <em>relevant</em> or <em>accurate</em> with respect to your data. This is where prompt engineering and design patterns like Retrieval Augmented Generation (RAG) come in. RAG is a design pattern that uses an information <em>retrieval</em> component to get data relevant to the user prompt, then <em>augments</em> the prompt with that context before sending it to the LLM, as illustrated below.</p>
+<p><img loading="lazy" alt="RAG" src="https://azure.github.io/Cloud-Native/assets/images/rag-e3cc68e747ef64a374c15357852679f4.png" width="2452" height="1190" class="img_ev3q"></p>
+<p>We can break down the workflow into the following steps:</p>
+<ol>
+<li>User asks a question ("User prompt")</li>
+<li>The question is sent to an information retrieval component ("AI Search")</li>
+<li>This vectorizes the query ("Embedding Model")</li>
+<li>And uses the vector to retrieve relevant results ("Product Index")</li>
+<li>Results are used to augment User prompt ("Model prompt")</li>
+<li>The enhanced prompt is sent to the LLM ("Chat completion")</li>
+</ol>
+<p>The answer is then returned to the user, who now sees a response that is more relevant to the products in your catalog, and personalized to their purchase history. Note that this basic copilot workflow requires us to deploy two large language models:</p>
+<ol>
+<li>Text-Embedding model (e.g., <code>text-embedding-ada-002</code>) that vectories the user query</li>
+<li>Text-Generation model (e.g., <code>gpt-35-turbo</code>) that generates the final response</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prompt-flow-orchestration">Prompt flow Orchestration<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#prompt-flow-orchestration" class="hash-link" aria-label="Direct link to Prompt flow Orchestration" title="Direct link to Prompt flow Orchestration">​</a></h2>
+<p>Implementing the RAG pattern requires a number of interactions between the language model deployments and the data sources used (e.g., search index for products, cusomer database for purchase history), and <em>coordination</em> of intermediate steps before the final response can be delivered. This is where frameworks like Prompt flow, LangChain and Semantic kernel come in.</p>
+<p>The Contoso Chat sample makes extensive use of Prompt flow - an <a href="https://github.com/microsoft/promptflow" target="_blank" rel="noopener noreferrer">open-source project</a> on GitHub, with its own SDK and VS Code extension. Prompt flow provides a comprehensive solution that simplifies the process of prototyping, experimenting, iterating, and deploying your AI applications. It is <a href="https://learn.microsoft.com/azure/ai-studio/how-to/prompt-flow?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">recommended for use as a feature within Azure AI Studio</a>, making it a natural first choice for building our Contoso Chat application. The figure shows a high-level architecture diagram showcasing the Azure components used with Prompt flow as the orchestration layer.</p>
+<p><img loading="lazy" alt="Prompt Flow Architecture" src="https://azure.github.io/Cloud-Native/assets/images/contoso-chat-flow-93b5445266637eae6aefcc9e85678a8d.png" width="2582" height="866" class="img_ev3q"></p>
+<p>With Prompt flow, your application is defined as a a directed acyclic graph of <em>nodes</em> (<code>flow.dag.yaml</code>) that connect <em>input</em> (prompt) and final <em>output</em> (response) - with intermediate nodes implemented as Python <em>functions</em> (tools) that process or transform the data flowing through them. The Prompt flow extension in VS Code provides a rich <em>visual editor</em> capability as shown below, making it easy to define, debug, run, and test, your application in a local development environment. <em>This view also helps us see how the RAG pattern is implemented in practice, in our copilot</em>.</p>
+<p><img loading="lazy" alt="Contoso Chat Flow" src="https://azure.github.io/Cloud-Native/assets/images/promptflow-visual-21dff741b41220833a6add4946da83ab.png" width="1436" height="905" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="azure-provisioning">Azure Provisioning<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#azure-provisioning" class="hash-link" aria-label="Direct link to Azure Provisioning" title="Direct link to Azure Provisioning">​</a></h2>
+<p>The Contoso Chat sample comes with a <a href="https://github.com/Azure-Samples/contoso-chat/blob/main/provision.sh" target="_blank" rel="noopener noreferrer"><code>provision.sh</code></a> script that will pre-provision many of the Azure resources for you, for use in the development workflow. To get started with the implementation, follow the instructions in the <a href="https://github.com/Azure-Samples/contoso-chat/blob/main/README.md" target="_blank" rel="noopener noreferrer">README</a> file in the repo by doing the following:</p>
+<ol>
+<li><a href="https://github.com/Azure-Samples/contoso-chat/fork" target="_blank" rel="noopener noreferrer">Fork the sample</a> to your own GitHub account</li>
+<li><a href="https://github.com/Azure-Samples/contoso-chat/blob/main/README.md#3-development-environment" target="_blank" rel="noopener noreferrer">Setup development environment</a> using GitHub Codespaces</li>
+<li><a href="https://github.com/Azure-Samples/contoso-chat/tree/main#41-authenticate-with-azure" target="_blank" rel="noopener noreferrer">Authenticate</a> with your Azure subscription</li>
+<li><a href="https://github.com/Azure-Samples/contoso-chat/tree/main#42-run-provisioning-script" target="_blank" rel="noopener noreferrer">Run the Provisioning script</a> and verify your setup is complete</li>
+</ol>
+<p>At this point, you should have an Azure resource group created for your project with the following resources created for your application. Note that in order to complete this step, you must have a valid Azure subscription that has been given access to the relevant Azure OpenAI services. You must also have available quota for model deployments in the specific regions that we use in the provisioning script.</p>
+<p><img loading="lazy" alt="Provisioning Azure" src="https://azure.github.io/Cloud-Native/assets/images/provision-azure-86013b78767740531d53ab8efc7fb697.png" width="2622" height="1302" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hands-on-lab">Hands-on Lab<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#hands-on-lab" class="hash-link" aria-label="Direct link to Hands-on Lab" title="Direct link to Hands-on Lab">​</a></h2>
+<p>You can now complete the step-by-step tutorial in the <a href="https://github.com/Azure-Samples/contoso-chat/blob/main/README.md" target="_blank" rel="noopener noreferrer">README</a> to build, evaluate and deploy the application. Let's quickly review the main steps involved in the end-to-end workflow.</p>
+<table><thead><tr><th style="text-align:left">Stage</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left">1. Build a Copilot.</td><td style="text-align:left">Get familiar with the application codebase. Check out the <code>data/</code> folder to see the data we will be using for customer order (history) and product catalog (index).</td></tr><tr><td style="text-align:left">2. Provision Azure.</td><td style="text-align:left">Run the <code>./provision.sh</code> script or manually provision the required resources. This should setup an Azure AI hub (manage), an Azure AI project (build), an Azure Cosmos DB resource  (customer data) and an Azure AI Search resource (product index). Verify you have a <code>config.json</code> created (for local Azure configuration) and an <code>.env</code> file (for relevant keys and endpoints for access).</td></tr><tr><td style="text-align:left">3. Add Models &amp; Data.</td><td style="text-align:left">The provisioning script does the model deployments - but review them now. Make sure you have a chat completion model (gpt-35-turbo), a chat evaluation model (gpt-4) and a text-embeddings model (text-embedding-ada-02). Use the provided notebooks to populate the data in Azure Cosmos DB and Azure AI Search.</td></tr><tr><td style="text-align:left">4. Add Connections</td><td style="text-align:left">The <code>devcontainer</code> configuration ensures you have the Prompt flow extension installed in VS Code, and the <code>pf</code> too for command-line, by default. Use the provided notebooks to setup <em>connection configurations</em> from prompt flow to key services (Azure OpenAI, Azure AI Search, Azure Cosmos DB) for use in related notes of the prompt flow graph. Use the <code>pf</code> tool to validate these were setup correctly (on VS Code). The provision script may have setup some of these for you in the cloud (Azure) for use in later stages (deploy) - take a minute to verify and correct these as described in README.</td></tr><tr><td style="text-align:left">5. Build Prompt Flow</td><td style="text-align:left">You are all set to run the prompt flow with your data in Azure.  Explore the components of the prompt flow. Click the <em>stylized P</em> icon in the sidebar to see the Prompt Flow extension activity menu. Open the <code>contoso-chat/flow.dag.yaml</code> file in VS Code, then click the <em>Visual Editor</em> option to see the view shown in the earlier screeshot above. Run it to validate it works - then explore the nodes, outputs and code.</td></tr><tr><td style="text-align:left">6. Evaluate Prompt Flow</td><td style="text-align:left">You can complete a local evaluation by opening the relevant notebook and running it <em>cell-by-cell</em>. Review the code in each cell of the notebook, then analyze the output to understand what the relevant metrics are telling you about the quality of the basic flow. The <em>batch run</em> step takes a while and requires Azure connection setup so consider that an optional step. Switch periodically to the <em>Azure AI Studio</em> website view to see how the relevant Azure AI project pages are updated to show the status of various activities or configurations.</td></tr><tr><td style="text-align:left">7. Deploy Prompt Flow</td><td style="text-align:left">Deploying the prompt flow is a 2-step process. First, we need to upload the flow (code, assets) to Azure AI Studio. Do this using the provided notebook, or you can try to do this manually using the <em>import</em> option in Azure AI Studio under the <em>Prompt Flow</em> section. Once uploaded, you need to select a runtime ("automatic") and start it to get a compute instance provisioned to execute your flow. Use that to <em>test</em> that your flow was imported successfully. Then click the <em>Deploy</em> option to deploy the flow. This will take a while - refresh the <em>Deployments</em> page to get updates. Once deployment is successful, use the built-in testing feature to try a simple question against the hosted API endpoint. <strong>Congratulations</strong> Your chat AI endpoint is ready for use!</td></tr><tr><td style="text-align:left">8. Summary &amp; Clean up</td><td style="text-align:left">This was a lot. Note that almost every step of this process can be achieved using code (SDK), command-line (CLI) or UI (Studio website) so explore the documentation. <em>Note that Azure AI Studio is in preview</em> so the features are constantly evolving and things may break unexpectedly - send feedback if so! Finally, don't forget to <strong>delete your codespaces and your Azure resources for this lab</strong> to avoid unnecessary charges. And watch the sample repo for updates on workshop content and exercises to extend this further.</td></tr><tr><td style="text-align:left"></td><td style="text-align:left"></td></tr></tbody></table>
+<p>Completing this workshop can take 60-90 minutes based on your level of familiarity with the tools. In the <em>next</em> blog post, we'll dive a bit deeper into the process with specific focus on the <strong>Azure AI SDK</strong> to understand <em>how</em> you can implement core steps of the workflow from your Python application. And, in the <em>final</em> post of this week, we'll return to the Contoso Chat sample to explore deployment and evaluation in more detail - with additional guidance for ensuring responsible AI usage in your generative AI applications.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise">Exercise<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#exercise" class="hash-link" aria-label="Direct link to Exercise" title="Direct link to Exercise">​</a></h2>
+<p>Congratulations! You made it to the end of this whirlwind tour of the Contoso Chat sample. Now it's time for you to do the hard work of building this yoursel!! Start by <a href="https://aka.ms/aitour/contoso-chat" target="_blank" rel="noopener noreferrer"><em>forking the sample</em></a> - then follow the step-by-step instructions in the README.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end#resources" class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources">​</a></h2>
+<p>We've referenced a number of links and samples in this post. Bookmark the <a href="https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer"><em>Azure AI Studio: Code-First Collection</em></a> and revisit it regularly for an updated list of resources for code-first development of generative AI applications on Azure.</p>]]></content:encoded>
+            <category>Build-Intelligent-Apps</category>
+            <category>60-days-of-IA</category>
+            <category>learn-live</category>
+            <category>hack-together</category>
+            <category>community-buzz</category>
+            <category>ask-the-expert</category>
+            <category>azure-kubernetes-service</category>
+            <category>azure-functions</category>
+            <category>azure-openai</category>
+            <category>azure-container-apps</category>
+            <category>azure-cosmos-db</category>
+            <category>github-copilot</category>
+            <category>github-codespaces</category>
+            <category>github-actions</category>
+        </item>
     </channel>
 </rss>
