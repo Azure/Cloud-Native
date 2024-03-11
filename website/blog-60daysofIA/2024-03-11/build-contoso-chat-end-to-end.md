@@ -1,5 +1,5 @@
 ---
-date: 2024-03-11T09:00
+date: 2024-03-11T09:01
 slug: build-contoso-chat-end-to-end
 title: "4.1 Build Contoso Chat End-to-End"
 authors: [cnteam]
