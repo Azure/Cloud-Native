@@ -15,7 +15,7 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 ### Build #IntelligentApps
 
 * 🎯 Feb 15 | [#CloudSkillsChallenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills) begins
-* ✍🏽 Feb 19 | [#60Daysof](https://aka.ms/build-ia/60days) Intelligent Apps begins
+* ✍🏽 Feb 19 | [#60Days of Intelligent Apps](https://aka.ms/build-ia/60days) begins
 * 👩🏽‍💻 Feb 21 | #LearnLive Kubernetes – [Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service](https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_LL_website)
 * 👩🏽‍💻 Feb 28 | #LearnLive Kubernetes – [Ep 02: Bring Your Own AI Models to Intelligent Apps on AKS with Kaito](https://developer.microsoft.com/en-us/reactor/events/21815/?ocid=buildia24_LL_website)
 * 🎙 Feb 29 | #AskTheExpert – [Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/events/21693/?ocid=buildia24_AE_website) 
@@ -63,7 +63,7 @@ Experience the latest innovations around AI, learn from product and partner expe
 - ✍🏽 Sep 18 | #30DaysOfIA - [Power Of Intelligent Applications](https://azure.github.io/Cloud-Native/30daysofIA/demystifying-intelligent-applications) 
 - 👩🏽‍💻 Sep 21 | #LearnLive Serverless - [Ep 02: Deconstruct Contoso Real Estate (Frontend Apps)](https://aka.ms/learnlive-contoso-app-deconstructed-Ep2)
 - ✍🏽 Sep 25 | #30DaysOfIA - Build Intelligent Apps
-- 🎙 Sep 26 | #AskTheExpert - [Azure Functions](https://reactor.microsoft.com/en-us/reactor/series/S-1037/)
+- 🎙 Sep 26 | #AskTheExpert - [Azure Functions](https://reactor.microsoft.com/reactor/events/21691/?ocid=buildia24_AE_website)
 - 💻Sept 26 | **[Driving Business Value by Modernizing with Cloud-Native & AI webinar](https://info.microsoft.com/ww-landing-driving-business-value-by-modernizing-with-cloud-native-and-ai.html?lcid=en-us)** with Microsoft and Forrester
 - 👩🏽‍💻 Sep 28 | #LearnLive Serverless - [Ep 03: Deconstruct Contoso Real Estate (Backend Integrations)](https://aka.ms/learnlive-contoso-app-deconstructed-Ep3)
 
@@ -71,22 +71,15 @@ Experience the latest innovations around AI, learn from product and partner expe
 ### #BuildIntelligentApps
 - 👩🏽‍💻 Oct 05 | #LearnLive Serverless - [Ep 04: Deconstruct Contoso Real Estate (Testing & Deployment)](https://aka.ms/learnlive-contoso-app-deconstructed-Ep4)
 - 🎙 Oct 11 | #AskTheExpert - [Azure App Service](https://learn.microsoft.com/shows/ask-the-expert/fall-for-intelligent-apps-with-azure-app-service-part-1)
-- 👩🏽‍💻 Oct 12 | #LearnLive Kubernetes – Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service  
+- 👩🏽‍💻 Oct 12 | #LearnLive Kubernetes – [Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service](https://learn.microsoft.com/shows/learn-live/intelligent-apps-with-azure-kubernetes-service-ep01-deploying-intelligent-apps-with-openai-on-azure-kubernetes-service)  
 - 🎙 Oct 18 | #AskTheExpert - [Azure Container Apps](https://learn.microsoft.com/shows/ask-the-expert/build-intelligent-microservices-with-azure-container-apps-part-1)
-- 👩🏽‍💻 Oct 19 | #LearnLive Kubernetes – Ep 02: Securing Access to Azure Open AI Services with AKS Workload Identity  
+- 👩🏽‍💻 Oct 19 | #LearnLive Kubernetes – [Ep 02: Securing Access to Azure Open AI Services with AKS Workload Identity](https://learn.microsoft.com/shows/learn-live/intelligent-apps-with-azure-kubernetes-service-ep02-securing-access-to-azure-open-ai-services-with-aks-workload-identity)  
 - 🎙 Oct 25 | #AskTheExpert – [Azure Kubernetes Service](https://learn.microsoft.com/shows/ask-the-expert/build-intelligent-apps-with-azure-kubernetes-service-part-1)
-- 👩🏽‍💻 Oct 26 | #LearnLive Kubernetes – Ep 03: Designing Intelligent Application Deployment for Scale, Resilience, and Observability.
+- 👩🏽‍💻 Oct 26 | #LearnLive Kubernetes – [Ep 03: Designing Intelligent Application Deployment for Scale, Resilience, and Observability](https://learn.microsoft.com/shows/learn-live/intelligent-apps-with-azure-kubernetes-service-ep03-designing-intelligent-application-deployment-for-scale-resilience-and-observability).
 
 ## Nov 2023
 ### #BuildIntelligentApps
-- Nov 2 | #LearnLive Kubernetes – Ep 04: Network Security and Access for Intelligent Applications on Azure Kubernetes Service
+- Nov 2 | #LearnLive Kubernetes – [Ep 04: Network Security and Access for Intelligent Applications on Azure Kubernetes Service](https://learn.microsoft.com/shows/learn-live/intelligent-apps-with-azure-kubernetes-service-ep04-network-security-and-access-for-intelligent-applications-on-azure-kubernetes-service)
 
 ### KubeCon, NA
 - Nov 6 | [KubeCon, NA + Azure Day](https://aka.ms/aks-day)
-
-### 🔥#MSIgnite
-Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the community in-person at Seattle, or online from anywhere in the world! 
- - 👩🏽‍💻 Nov 14 | [Pre-Day Labs](https://ignite.microsoft.com/en-US/home) (Seattle Only)
- - 🎙 Nov 15 | [Day 1 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
- - 🎙 Nov 16 | [Day 2 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
- - 🎙 Nov 17 | [Day 2 Sessions](https://ignite.microsoft.com/en-US/home)  (Seattle, Online)
