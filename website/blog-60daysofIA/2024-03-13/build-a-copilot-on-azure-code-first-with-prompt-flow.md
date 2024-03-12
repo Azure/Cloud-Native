@@ -42,7 +42,7 @@ In the previous post, we learned about how to get started with the Azure AI SDK 
  * Evaluate and Test your flow
  * Deploy the Copilot
  * Challenge: [Try this Quickstart sample](https://github.com/Azure-Samples/aistudio-python-promptflow-sample)
- * Resources: [To learn more](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/prompt-flow)
+ * Resources: [To learn more](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/prompt-flow?ocid=buildia24_60days_blog)
 
 <br/>
 
@@ -81,16 +81,16 @@ Prompt Flow is a tool that simplifies the process of building a fully-fledged AI
 
 Completing the [tutorial](https://github.com/Azure-Samples/aistudio-python-promptflow-sample) requires the following:
 
-1. An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services)
-2. Access to Azure OpenAI in the Azure Subscription - [Request access here](https://aka.ms/oai/access)
+1. An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services?ocid=buildia24_60days_blog)
+2. Access to Azure OpenAI in the Azure Subscription - [Request access here](https://aka.ms/oai/access?ocid=buildia24_60days_blog)
 3. Custom data to ground the copilot - [Sample product-info data is provided](./../data/3-product-info/)
 4. A GitHub account - [Create one for free](https://github.com/signup)
 5. Access to GitHub Codespaces - [Free quota should be sufficient](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts)
 
 The tutorial uses Azure AI Studio which is currently in public preview.
 
- - Read [the documentation](https://learn.microsoft.com/azure/ai-studio/reference/region-support#azure-public-regions) to learn about regional availability of Azure AI Studio (preview)
- - Read the [Azure AI Studio FAQ](https://learn.microsoft.com/azure/ai-studio/faq) for answers to some commonly-asked questions.
+ - Read [the documentation](https://learn.microsoft.com/azure/ai-studio/reference/region-support#azure-public-regions?ocid=buildia24_60days_blog) to learn about regional availability of Azure AI Studio (preview)
+ - Read the [Azure AI Studio FAQ](https://learn.microsoft.com/azure/ai-studio/faq?ocid=buildia24_60days_blog?ocid=buildia24_60days_blog) for answers to some commonly-asked questions.
 
 ## Components of our Prompt Flow
 
@@ -155,4 +155,4 @@ We have covered the building blocks of PromptFlow and how you can ground your da
 
 * [AI Studio Prompt Flow Quickstart Sample:](https://github.com/Azure-Samples/aistudio-promptflow-quickstart-sample) Code-first approach to building, running, evaluating, and deploying, a **prompt flow based** Copilot application _using your own data_.
 * [AI Tour Workshop 4:](https://aka.ms/aitour/contoso-chat/workshop) Comprehensive step-by-step instructions for building the Contoso Chat production RAG app with Prompt Flow and Azure AI Studio
-* [Azure AI Studio - Documentation:](https://learn.microsoft.com/en-us/azure/ai-studio/) Build cutting-edge, market-ready, responsible applications for your organization with AI
+* [Azure AI Studio - Documentation:](https://learn.microsoft.com/en-us/azure/ai-studio/?ocid=buildia24_60days_blog) Build cutting-edge, market-ready, responsible applications for your organization with AI
