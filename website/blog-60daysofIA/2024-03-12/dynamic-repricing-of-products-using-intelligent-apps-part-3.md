@@ -246,3 +246,72 @@ You’re now ready to build the container and push it to the registry.
 
 #### Build and Push the Container Image
 
+Build the container image using the following command:
+
+```
+docker build -t my-app-image .
+```
+
+Then, push the image to your container registry:
+
+```
+docker push my-registry.azurecr.io/my-app-image
+```
+
+#### Create an AKS Cluster
+
+Now, it’s time to create an AKS cluster. Run the following:
+
+```
+az aks create --name my-aks-cluster --resource-group my-resource-group --node-count 3 --node-vm-size Standard_B2s --location eastus
+```
+
+It may take a few minutes for Azure to spin up your cluster. Once it’s ready, you can deploy the Flask app.
+
+#### Deploy the Application to AKS
+
+Create a Kubernetes deployment file named `deployment.yaml` in the project’s root folder with the following contents. Update the image field to match the name of your registry and container image.
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: my-registry.azurecr.io/my-app-image
+        ports:
+        - containerPort: 5000
+```
+
+Finally, deploy the application to the AKS cluster using the following command:
+
+```
+kubectl get pods
+```
+
+You should see a pod named `my-app` in the `Running` state.
+
+To access the application, port-forward the service using the following command: 
+
+```
+kubectl port-forward svc/my-app-service 5000:5000
+```
+
+Finally, navigate to `http://localhost:5000` in a web browser to verify the application is running.
+
+### Conclusion
+
+In the final part of this series, you learned how to create a simple Flask web app that interacts with the Azure Machine Learning endpoint to provide real-time price predictions and visualize them. By integrating cloud-based artificial intelligence (AI) models with a web interface like this, businesses can dynamically adjust their pricing—helping them remain competitive and stand out from the rest.
+
+If you like what you’ve seen in this series, try the **[Intelligent Apps Cloud Skill Challenge](https://aka.ms/intelligent-apps/csc)**. You can also register for **AKS [Customer](https://aka.ms/aks-day) and [Lab](https://aka.ms/aks-lab-day) Days** at the premier conference for cloud-native technologies, *KubeCon EU 2024*.
