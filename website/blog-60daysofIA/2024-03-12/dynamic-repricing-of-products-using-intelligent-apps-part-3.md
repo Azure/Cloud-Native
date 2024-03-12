@@ -45,9 +45,9 @@ In this final article of the series, you’ll create a web application using Fla
 Before proceeding, ensure you have the following:  
 
 - [Python](https://www.python.org/downloads/) version 3.10 or greater
-- Flask (pip install flask)
-- Requests (pip install requests)
-- Matplotlib (pip install matplotlib)
+- Flask (`pip install flask`)
+- Requests (`pip install requests`)
+- Matplotlib (`pip install matplotlib`)
 - Access to the Azure Machine Learning endpoint created in Part 2
 - [Docker](https://docs.docker.com/get-docker/), including the [Docker command-line interface](https://docs.docker.com/engine/reference/commandline/cli/) (CLI), installed. You’ll use this to build a container image to run the web app on Azure Kubernetes Service (AKS).
 - The [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?ocid=buildia24_60days_blogs) installed. You’ll use this for deployment to AKS.
@@ -61,3 +61,4 @@ Complete the **[Data Skills Challenge](https://aka.ms/intelligent-apps/data-csc?
 ### Building the Web Interface
 
 It only takes a few steps to create a simple web app that queries the Azure Machine Learning endpoint, retrieves predictions, and displays the resulting prediction in a graph. Let’s dive in!
+
