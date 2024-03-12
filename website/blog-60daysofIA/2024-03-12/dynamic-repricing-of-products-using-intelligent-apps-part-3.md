@@ -1,7 +1,7 @@
 ---
 date: 2024-03-12T09:00
 slug: dynamic-repricing-of-products-using-intelligent-apps-part-3
-title: "3.3 Dynamic Repricing of Products Using Intelligent Apps Part 3: Graphing and Displaying Price Forecasts in a Web Interface  "
+title: "3.3 Dynamic Repricing of Products Using Intelligent Apps Part 3: Graphing and Displaying Price Forecasts in a Web Interface"
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
@@ -61,6 +61,8 @@ Complete the **[Data Skills Challenge](https://aka.ms/intelligent-apps/data-csc?
 ### Building the Web Interface
 
 It only takes a few steps to create a simple web app that queries the Azure Machine Learning endpoint, retrieves predictions, and displays the resulting prediction in a graph. Let’s dive in!
+
+Start by creating a new folder for your web application. Then, create these files and folders in it:
 
 ```
 /your-flask-app
@@ -295,6 +297,13 @@ spec:
 ```
 
 Finally, deploy the application to the AKS cluster using the following command:
+
+```
+kubectl apply -f deployment.yaml
+```
+#### Verify the Deployment
+
+Once deployed, verify that the application is running using the following command:
 
 ```
 kubectl get pods
