@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
-**Welcome to Day 2️⃣ of the Azure AI week on #60DaysOfIA** 
+**Welcome to Day 2️⃣ of the Azure AI week on #60Days Of IA** 
 
 Let's recap what we learned so far. In our _kickoff_ post we set the stage by describing our application scenario (Contoso Chat), the paradigm shift for generative AI apps (LLM Ops) and the unified platform for streamlining development (Azure AI Studio). In the next post we walked through the signature [Contoso Chat](https://aka.ms/aitour/contoso-chat) application sample to understand how we can implement that scenario using Azure AI Studio and Prompt flow - from building the chat function, to evaluating it, deploying it to a hosted endpoint, then testing that API in a chat client.
 
