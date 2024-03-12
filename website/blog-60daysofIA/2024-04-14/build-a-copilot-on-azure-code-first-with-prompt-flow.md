@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [AzureAlStudio, copilot, RAG, Langchain]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "This blog walks you through how you can build, evaluate, and test a custom copilot implementation using Prompt Flow and Azure AI SDK." 
+description: "This project uses the AI Search service to create a vector store for a custom department store data.  To enable the user to ask questions our data in a conversational format, we'll using Langchain to connect our prompt template with our Azure Open AI LLM." 
 tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -17,11 +17,11 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
   <meta property="og:url" content="https://azure.github.io/cloud-native/60daysofia/build-a-copilot-on-azure-code-first-with-langchain"/>
   <meta property="og:type" content="website"/> 
   <meta property="og:title" content="Build Intelligent Apps | AI Apps on Azure"/> 
-  <meta property="og:description" content="This blog walks you through how you can build, evaluate, and test a custom copilot implementation using Prompt Flow and Azure AI SDK."/> 
+  <meta property="og:description" content="This project uses the AI Search service to create a vector store for a custom department store data.  To enable the user to ask questions our data in a conversational format, we'll using Langchain to connect our prompt template with our Azure Open AI LLM."/> 
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/> 
   <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/build-a-copilot-on-azure-code-first-with-langchain" /> 
   <meta name="twitter:title" content="Build Intelligent Apps | AI Apps on Azure" />
- <meta name="twitter:description" content="This blog walks you through how you can build, evaluate, and test a custom copilot implementation using Prompt Flow and Azure AI SDK." />
+ <meta name="twitter:description" content="This project uses the AI Search service to create a vector store for a custom department store data.  To enable the user to ask questions our data in a conversational format, we'll using Langchain to connect our prompt template with our Azure Open AI LLM." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" /> 
   <meta name="twitter:card" content="summary_large_image" /> 
   <meta name="twitter:creator" content="@devanshidiaries" /> 
