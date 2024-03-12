@@ -40,5 +40,24 @@ In [​​Part 1](https://azure.github.io/Cloud-Native/60DaysOfIA/dynamic-repric
 
 In this final article of the series, you’ll create a web application using Flask that interacts with the Azure Machine Learning endpoint to retrieve predictions and display them using a simple graph.
 
+### Prerequisites
 
+Before proceeding, ensure you have the following:  
 
+- [Python](https://www.python.org/downloads/) version 3.10 or greater
+- Flask (pip install flask)
+- Requests (pip install requests)
+- Matplotlib (pip install matplotlib)
+- Access to the Azure Machine Learning endpoint created in Part 2
+- [Docker](https://docs.docker.com/get-docker/), including the [Docker command-line interface](https://docs.docker.com/engine/reference/commandline/cli/) (CLI), installed. You’ll use this to build a container image to run the web app on Azure Kubernetes Service (AKS).
+- The [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?ocid=buildia24_60days_blogs) installed. You’ll use this for deployment to AKS.
+
+For a preview of the completed Intelligent App, take a look at the [​project code](https://aka.ms/intelligent-apps/60daysofIA/3.3projectcode).
+
+:::info
+Complete the **[Data Skills Challenge](https://aka.ms/intelligent-apps/data-csc?ocid=buildia24_60days_blogs)** to compete for the leaderboard and earn a Microsoft Learn Badge.
+:::
+
+### Building the Web Interface
+
+It only takes a few steps to create a simple web app that queries the Azure Machine Learning endpoint, retrieves predictions, and displays the resulting prediction in a graph. Let’s dive in!
