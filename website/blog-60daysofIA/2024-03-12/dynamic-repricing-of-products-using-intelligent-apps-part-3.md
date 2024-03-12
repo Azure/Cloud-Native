@@ -62,3 +62,187 @@ Complete the **[Data Skills Challenge](https://aka.ms/intelligent-apps/data-csc?
 
 It only takes a few steps to create a simple web app that queries the Azure Machine Learning endpoint, retrieves predictions, and displays the resulting prediction in a graph. Let’s dive in!
 
+```
+/your-flask-app
+    /templates
+        index.html
+    app.py
+```
+
+The `app.py` file is the backbone of the Flask application. So, add the following code to it:
+
+```
+from flask import Flask, render_template, request
+import requests
+import json
+import matplotlib.pyplot as plt
+import io
+import base64
+from datetime import datetime, timedelta
+```
+
+```
+app = Flask(__name__)
+```
+
+```
+# Replace with your actual Azure ML endpoint and key
+scoring_uri = '<your_azure_ml_endpoint>'
+api_key = '<your_api_key>'  # Replace with your actual key if needed
+```
+```
+def generate_future_dates(start_date, periods=3, freq='M'):
+    # Generate future dates for the next 'periods' months
+    future_dates = [(start_date + timedelta(days=30 * i)).strftime('%Y%m') for i in range(1, periods + 1)]
+    return future_dates
+```
+
+```
+def get_predictions(dates):
+    # Prepare the data in JSON format
+    data = {"data": [[date] for date in dates]}
+    headers = {'Content-Type': 'application/json'}
+    if api_key:
+        headers['Authorization'] = f'Bearer {api_key}'
+
+    # Send the request to the Azure ML endpoint
+    response = requests.post(scoring_uri, json=data, headers=headers)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        raise Exception(f"Failed to fetch prediction: {response.text}")
+```
+
+```
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    graph_url = None
+    if request.method == 'POST':
+        start_date = datetime.utcnow()
+        future_dates = generate_future_dates(start_date)
+        predictions = get_predictions(future_dates)
+```
+
+```
+        # Plotting the predictions
+        plt.figure(figsize=(10, 5))
+        plt.plot(future_dates, predictions, marker='o', linestyle='-')
+        plt.title('Future Price Predictions for Jackets')
+        plt.xlabel('Date (YYYYMM)')
+        plt.ylabel('Predicted Price')
+        plt.grid(True)
+
+        # Save plot to a BytesIO buffer
+        img = io.BytesIO()
+        plt.savefig(img, format='png', bbox_inches='tight')
+        img.seek(0)
+        graph_url = base64.b64encode(img.getvalue()).decode('utf8')
+        plt.close()
+```
+```
+    return render_template('index.html', graph_url=graph_url)
+```
+```
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+This simple Flask app accepts incoming requests and queries the Azure Machine Learning endpoint for the next few months of price forecasts for jackets. When it receives the predictions, it generates a graph using `matplotlib`, encoding it with base64 so it can display it in the HTML template. In a larger app, you could save the image to disk and then load it in the web page instead of base64 encoding it—but we’ve skipped that here to keep things simple.
+
+Next, create an `index.html` file in the templates directory. Add the following code for the user interface:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Forecast Visualization</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col justify-center items-center min-h-screen">
+    <div class="w-full bg-blue-800 text-white">
+        <div class="container mx-auto py-4">
+            <h1 class="text-center text-xl md:text-3xl font-bold">Price Forecast for Jackets</h1>
+        </div>
+    </div>
+
+    <div class="mt-8 mb-4">
+        <form method="post">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Get Future Price Predictions
+            </button>
+        </form>
+    </div>
+
+    {% if graph_url %}
+        <div class="shadow-xl bg-white rounded-lg p-8">
+            <h2 class="text-lg md:text-xl font-semibold mb-4 text-center">Price Prediction Graph</h2>
+            <div class="flex justify-center">
+                <img src="data:image/png;base64,{{ graph_url }}" alt="Price Prediction Graph" class="max-w-full h-auto rounded-lg">
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>
+```
+
+To run your Flask app, navigate to the directory containing your `app.py` file and execute the following command:
+
+```
+flask run
+```
+
+Your web application should now be accessible at `http://127.0.0.1:5000`. Users can input feature data, submit it, and see both the predicted price and a simple graph comparing the current and predicted prices.
+
+:::info
+Check out the **[Azure Cosmos DB Ask The Expert](https://aka.ms/intelligent-apps/ate-cosmos?ocid=buildia24_60days_blogs)** session to learn how to build RAG solutions, manage chat history by seamlessly connecting with *Azure OpenAI*, as well as explore the power of *Azure Cosmos DB's copilot*.
+
+The experts also cover how to seamlessly integrate your operational and transactional data with AI frameworks and sdks like Semantic Kernel, Langchain, and LlamaIndex.
+:::
+
+### Deploying to Azure Kubernetes Service (AKS)
+
+Running locally is great, but in production, you’ll probably want to deploy to the cloud. Fortunately, Azure makes this easy. Let’s review how to deploy your Flask app using AKS.
+
+First, you need to containerize the Flask app and push it to an Azure Container Registry. Then, you’ll create an AKS cluster and deploy the container image to it.
+
+#### Create a Dockerfile
+
+Start by creating a file named `Dockerfile` in the Flask app’s root folder. Add the following contents:
+
+```
+FROM python:3.11-slim
+```
+```
+WORKDIR /usr/src/app
+```
+```
+RUN pip install --no-cache-dir Flask
+```
+```
+COPY . .
+```
+```
+CMD ["flask", "run"]
+```
+
+#### Create a Container Registry
+
+Next, create a container registry to store the container image. Use the Azure CLI to create a new resource group if you don’t already have one you’d like to use:
+
+```
+az group create --name my-container-resources --location eastus
+```
+
+Then, create a container registry in the resource group:
+
+```
+az acr create --resource-group my-container-resources --name my-registry --sku Basic
+```
+
+You’re now ready to build the container and push it to the registry.
+
+#### Build and Push the Container Image
+
