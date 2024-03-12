@@ -9,20 +9,23 @@ const UHFHeader = () => {
   const { globalState, setIsHeaderHtmlProcessed } = useContext(MyGlobalContext) || {};
   let { headerHtml } = globalState || {};
 
-  if (ExecutionEnvironment.canUseDOM && !headerHtml) {
-    let div = document.getElementById("headerHtmlDiv");
-    if (div) {
-      headerHtml = atob(div.getAttribute("data-html-content"));
-    }
+  //console.log('in UHFHeader');
+
+  let displayHeaderHtml =null;
+  if (ExecutionEnvironment.canUseDOM && headerHtml) {
+    displayHeaderHtml = headerHtml;
   }
+  
+  //console.log('set HTML in UHFHeader');
 
   useEffect(() => {
     setIsHeaderHtmlProcessed(true);
+    //console.log('set setIsHeaderHtmlProcessed in UHFHeader to true');
   }, [setIsHeaderHtmlProcessed]);
 
   return (
     <header>
-      <div dangerouslySetInnerHTML={{ __html: headerHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: displayHeaderHtml }} />
     </header>
   );
 };
