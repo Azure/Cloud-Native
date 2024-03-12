@@ -698,7 +698,7 @@ AI project by seamlessly integrating with deployed models and built-in AI servic
 <p>In the upcoming week, we'll dive into the implementation details of these processes in the context of a signature reference sample (Contoso Chat) and as quickstart templates that showcase usage with popular frameworks. Here's what we'll cover:</p>
 <ul>
 <li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end" target="_blank" rel="noopener noreferrer"><strong>Day 1:</strong></a> Build the Contoso Chat app on Azure AI (end-to-end reference sample)</li>
-<li><strong>Day 2:</strong> Build a Copilot app on Azure AI with the Python SDK (quickstart)</li>
+<li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-code-first-with-the-azure-ai-python-sdk" target="_blank" rel="noopener noreferrer"><strong>Day 2:</strong></a> Build a Copilot app on Azure AI with the Python SDK (quickstart)</li>
 <li><strong>Day 3:</strong> Build a Copilot app on Azure AI with promptflow (framework)</li>
 <li><strong>Day 4:</strong> Build a Copilot app on Azure AI with LangChain (framework)</li>
 <li><strong>Day 5:</strong> Deploy your Copilot app responsibly on Azure AI (advanced topics)</li>
