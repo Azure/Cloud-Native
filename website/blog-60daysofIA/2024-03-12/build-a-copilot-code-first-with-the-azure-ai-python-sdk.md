@@ -3,7 +3,7 @@ date: 2024-03-12T09:00
 slug: build-a-copilot-code-first-with-the-azure-ai-python-sdk
 title: "4.2 Build A Copilot Code-First with the Azure AI Python SDK"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
