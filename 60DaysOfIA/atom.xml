@@ -849,7 +849,7 @@ AI project by seamlessly integrating with deployed models and built-in AI servic
         <updated>2024-03-12T09:00:00.000Z</updated>
         <summary type="html"><![CDATA[Have a generative AI application you want to build, but don't know where to start? In this blog post, we introduce the Azure AI Studio Python Quickstart Sample, explain the end-to-end development workflow, then show you how you can get started customizing it, to explore your own application requirements.]]></summary>
         <content type="html"><![CDATA[
-<p><strong>Welcome to Day 2️⃣ of the Azure AI week on #60DaysOfIA</strong></p>
+<p><strong>Welcome to Day 2️⃣ of the Azure AI week on #60Days Of IA</strong></p>
 <p>Let's recap what we learned so far. In our <em>kickoff</em> post we set the stage by describing our application scenario (Contoso Chat), the paradigm shift for generative AI apps (LLM Ops) and the unified platform for streamlining development (Azure AI Studio). In the next post we walked through the signature <a href="https://aka.ms/aitour/contoso-chat" target="_blank" rel="noopener noreferrer">Contoso Chat</a> application sample to understand how we can implement that scenario using Azure AI Studio and Prompt flow - from building the chat function, to evaluating it, deploying it to a hosted endpoint, then testing that API in a chat client.</p>
 <p>But what if you want to get started building your own application scenario? Over the next three posts, we'll look at <em>starter samples</em> that will get you from ideation (define chat function) to operationalization (deploy chat API) using different tools and frameworks to simplify orchestration.</p>
 <p>Ready? Let's go!</p>
