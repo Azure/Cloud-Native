@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
-![Dynamic Repricing of Products Using Intelligent Apps Part 2: Price Forecasting with AI/ML](../../static/img/60-days-of-ia/blogs/2024-03-08/3-2-1.jpeg)
+![Dynamic Repricing of Products Using Intelligent Apps: Graphing and Displaying Price Forecasts in a Web Interface](../../static/img/60-days-of-ia/blogs/2024-03-12/3-3-1.png)
 
 *This three-part series demonstrates how to use Azure Cosmos DB to build an Intelligent App that uses historical pricing and product data to forecast future price fluctuations for specific products. In the final article of the series, you’ll build a web interface to graph and display the Intelligent App’s price forecasts.*
 
