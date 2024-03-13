@@ -12,7 +12,6 @@ export const MyGlobalProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = () => {
-
       try {
         if (fetchedData) {
           // If data has already been fetched, no need to fetch again.
@@ -69,7 +68,7 @@ export const MyGlobalProvider = ({ children }) => {
     };
 
     fetchData();
-  }, [fetchedData]); // useEffect will run only when fetchedData changes.
+  }, []); // useEffect will run only once when the component mounts
 
   useEffect(() => {
 
@@ -108,6 +107,7 @@ export const MyGlobalProvider = ({ children }) => {
           headerHtml: fetchedData.headerHtml,
           footerHtml: fetchedData.footerHtml
         }));
+
         return;
       }
 
@@ -127,6 +127,20 @@ export const MyGlobalProvider = ({ children }) => {
             // All CSS files have been loaded.
             setCssLoaded(true); // Mark CSS as loaded.
 
+            // Add header html in div data. Prevents redraw of header on page change.
+            let storageDiv = document.createElement('div');
+            storageDiv.id = 'headerHtmlDiv';
+            storageDiv.setAttribute('data-html-content', btoa(fetchedData.headerHtml));
+            storageDiv.style.display = 'none';
+            document.body.appendChild(storageDiv);
+
+            // Add footer html in div data. Prevents redraw of footer on page change.
+            storageDiv = document.createElement('div');
+            storageDiv.id = 'footerHtmlDiv';
+            storageDiv.setAttribute('data-html-content', btoa(fetchedData.footerHtml));
+            storageDiv.style.display = 'none';
+            document.body.appendChild(storageDiv);
+
             // Set headerHtml and footerHtml in global state.
             setGlobalState(prevState => ({
               ...prevState,
@@ -138,7 +152,6 @@ export const MyGlobalProvider = ({ children }) => {
         document.head.appendChild(cssLink);
       });
 
-      
       //console.log('MyGlobalContext: add javascript block to end of body.');
 
       // Add javascript block to end of body. Did not need to add this block on every page navigation.

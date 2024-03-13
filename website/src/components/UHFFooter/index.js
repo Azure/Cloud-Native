@@ -9,9 +9,11 @@ const UHFFooter = () => {
   const { globalState, setIsFooterHtmlProcessed } = useContext(MyGlobalContext) || {};
   let { footerHtml } = globalState || {};
 
-  let displayFooterHtml =null;
-  if (ExecutionEnvironment.canUseDOM && footerHtml) {
-    displayFooterHtml = footerHtml;
+  if (ExecutionEnvironment.canUseDOM && !footerHtml) {
+    let div = document.getElementById("footerHtmlDiv");
+    if (div) {
+      footerHtml = atob(div.getAttribute("data-html-content"));
+    }
   }
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const UHFFooter = () => {
 
   return (
     <footer>
-        <div dangerouslySetInnerHTML={{ __html: displayFooterHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: footerHtml }} />
     </footer>
   );
 };
