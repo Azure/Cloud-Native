@@ -3,7 +3,7 @@ date: 2024-03-13T09:00
 slug: build-a-copilot-on-azure-code-first-with-prompt-flow
 title: "4.3 Build a Copilot on Azure Code-First with Prompt Flow"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
