@@ -59,7 +59,7 @@ A fundamental piece in your Intelligent App’s architecture is the target model
 
 LLaMA 2 is a large-scale training and inference framework for ML models. It provides a distributed computing infrastructure that enables executing ML tasks across multiple nodes or clusters, using parallelism and optimization techniques to improve performance.
 
-To configure your model, download LLaMA 2 by following the instructions in [this document](https://github.com/Azure/kaito/tree/main/presets/models/llama2). Ensure you download the **llama2-7b** model.
+To configure your model, download LLaMA 2 by following the instructions in [this document](https://github.com/Azure/kaito/tree/main/presets/models/llama2).  Ensure you download the LLaMA 2 7B Chat (llama2-7b-chat) model.
 
 #### Configuring the AKS Cluster and KAITO
 
@@ -74,10 +74,10 @@ KAITO is an open-source operator that transforms how you deploy AI models on Kub
 To set up an AKS cluster and install KAITO, follow [this tutorial](https://github.com/Azure/kaito/blob/main/docs/installation.md), adjusting the KAITO installation steps to match the **llama2-7b** model you downloaded earlier.
 
 :::info
-Register for **[Intelligent Apps on AKS: Episode 3](https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_60days_blogs)**, a live hands-on training with an expert on how OpenCost, Prometheus, and Grafana with AKS can improve intelligent apps. 
+Checkout the **[Intelligent Apps on AKS: Episode 2](https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_60days_blogs)**, a hands-on training with an expert on how to use AKS to run your own AI Models with KAITO.
 :::
 
-#### Pushing LLaMA 2 Model to Azure Container Registry
+#### Pushing LLaMA 2 Chat Model to Azure Container Registry
 
 Now that you have AKS with the KAITO installation, you need to push the local model image to the AKS cluster.
 
@@ -90,7 +90,7 @@ az acr create --name <YOUR-ACR-NAME> --resource-group $RESOURCE_GROUP --sku Stan
 Now, push your local LLaMA 2 model’s Docker image to the ACR hosted at `<YOUR-ACR-NAME>.azurecr.io` by running:
 
 ```
-docker push <YOUR-ACR-NAME>.azurecr.io/llama2_model:latest
+docker push <YOUR-ACR-NAME>.azurecr.io/llama2_7b_chat_model:latest
 ```
 
 Finally, run the command to update the AKS cluster to attach it to your ACR, allowing the cluster to pull the model container image from `<YOUR-ACR-NAME>.azurecr.io`:
@@ -113,15 +113,17 @@ resource:
   instanceType: "Standard_NC12s_v3"
   labelSelector:
     matchLabels:
-      apps: llama-2-7b
+      apps: llama-2-7b-chat
 inference:
   preset:
-    name: "llama-2-7b"
+    name: "llama-2-7b-chat"
     accessMode: private
     presetOptions:
-      image: <YOUR-ACR-NAME>.azurecr.io/llama2_model:latest
+      image: <YOUR-ACR-NAME>.azurecr.io/llama2_chat_model:latest
+      imagePullSecrets:
+        - energy-usage-secret
 
-$ kubectl apply -f examples/kaito_workspace_llama2_7b.yaml
+$ kubectl apply -f examples/kaito_workspace_llama2_7b-chat.yaml
 ```
 
 Kubernetes uses this YAML code to instantiate a workspace resource with the specified configurations. This enables deploying and managing inference workloads within the cluster.
@@ -129,9 +131,9 @@ Kubernetes uses this YAML code to instantiate a workspace resource with the spec
 You can monitor the workspace status by executing the command below. The model deployment has been completed once the `WORKSPACEREADY` column becomes `True`:
 
 ```
-$ kubectl get workspace workspace-llama-2-7b 
+$ kubectl get workspace workspace-llama-2-7b-chat
 | NAME | INSTANCE | RESOURCEREADY | INFERENCEREADY | WORKSPACEREADY | AGE |
-| workspace-llama-2-7b | Standard_NC12s_v3 | True | True | True | 10m |
+| workspace-llama-2-7b-chat | Standard_NC12s_v3 | True | True | True | 4d2h |
 ```
 
 **Note**: Achieving machine and workspace readiness may take up to 20 minutes.
@@ -139,23 +141,23 @@ $ kubectl get workspace workspace-llama-2-7b
 Now, run the command below to find the inference service’s cluster IP:
 
 ```
-$ kubectl get svc workspace-llama-2-7b 
+$ kubectl get svc workspace-llama-2-7b-chat
 | NAME | TYPE | CLUSTER-IP | EXTERNAL-IP | PORT(S) | AGE |
-| workspace-llama-2-7b | ClusterIP | <CLUSTERIP> | <none> | 80/TCP,29500/TCP | 10m |
+| workspace-llama-2-7b-chat | ClusterIP | <CLUSTERIP> | <none> | 80/TCP,29500/TCP | 4d2h |
 ```
 
 Finally, run a curl pod to test the service endpoint in the cluster:
 
 ```
-export CLUSTERIP=$(kubectl get svc workspace-llama-2-7b -o jsonpath="{.spec.clusterIPs[0]}")
+export CLUSTERIP=$(kubectl get svc workspace-llama-2-7b-chat -o jsonpath="{.spec.clusterIPs[0]}")
 
-$ kubectl run -it --rm --restart=Never curl --image=curlimages/curl -- curl -X POST http://$CLUSTERIP/generate -H "accept: application/json" -H "Content-Type: application/json" -d "{\"prompts\":[\"What is the capital of India?\"],\"parameters\": {\"temperature\": 0, \"max_gen_len\": 64 }}"
+$ kubectl run -it --rm --restart=Never curl --image=curlimages/curl -- curl -X POST http://$CLUSTERIP/generate -H "accept: application/json" -H "Content-Type: application/json" -d "{\"input_data\": {\"input_string\":[[ {\"role\": \"user\", \"content\": \"What is the capital of India?\"}]]}, \"parameters\": {\"max_gen_len\": 64, \"temperature\": 0}}"
 ```
 
 You should receive these results:
 
 ```
-{"results":[{"prompt":"What is the capital of India?","response":"\nWhat is the capital of India? New Delhi is the capital of India. It is located in the northern part of the country. It is also the home of the President of India.\nWhat is the"}]}
+{"results":[[{"role":"User","content":"What is the capital of India?"},{"role":"Assistant","content":" The capital of India is New Delhi."}]]}
 ```
 
 **Note**: You can test with your own questions, but there may be inaccuracies within the response. This is because AKS hasn’t fine-tuned the model for your scenario.
