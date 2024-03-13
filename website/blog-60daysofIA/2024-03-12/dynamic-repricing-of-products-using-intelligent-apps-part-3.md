@@ -1,5 +1,5 @@
 ---
-date: 2024-03-12T09:00
+date: 2024-03-08T09:05
 slug: dynamic-repricing-of-products-using-intelligent-apps-part-3
 title: "3.3 Dynamic Repricing of Products Using Intelligent Apps Part 3: Graphing and Displaying Price Forecasts in a Web Interface"
 authors: [cnteam]
