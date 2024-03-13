@@ -1,5 +1,5 @@
 ---
-date: 2024-03-12T09:00
+date: 2024-03-13T09:00
 slug: build-a-copilot-on-azure-code-first-with-prompt-flow
 title: "4.3 Build a Copilot on Azure Code-First with Prompt Flow"
 authors: [cnteam]
@@ -153,6 +153,6 @@ We have covered the building blocks of PromptFlow and how you can ground your da
 
 ## Resources
 
-* [AI Studio Prompt Flow Quickstart Sample:](https://github.com/Azure-Samples/aistudio-promptflow-quickstart-sample) Code-first approach to building, running, evaluating, and deploying, a **prompt flow based** Copilot application _using your own data_.
+* [AI Studio Prompt Flow Quickstart Sample:](https://github.com/Azure-Samples/aistudio-python-promptflow-sample) Code-first approach to building, running, evaluating, and deploying, a **prompt flow based** Copilot application _using your own data_.
 * [AI Tour Workshop 4:](https://aka.ms/aitour/contoso-chat/workshop) Comprehensive step-by-step instructions for building the Contoso Chat production RAG app with Prompt Flow and Azure AI Studio
 * [Azure AI Studio - Documentation:](https://learn.microsoft.com/en-us/azure/ai-studio/?ocid=buildia24_60days_blog) Build cutting-edge, market-ready, responsible applications for your organization with AI
