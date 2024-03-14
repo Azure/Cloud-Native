@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[65394],{21249:e=>{e.exports=JSON.parse('{"label":"Build-Intelligent-Apps","permalink":"/Cloud-Native/60DaysOfIA/tags/build-intelligent-apps","allTagsPath":"/Cloud-Native/60DaysOfIA/tags","count":13,"unlisted":false}')}}]);

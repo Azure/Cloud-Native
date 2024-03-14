@@ -2,11 +2,117 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/60DaysOfIA</id>
     <title>Build Intelligent Apps On Azure Blog</title>
-    <updated>2024-03-13T09:00:00.000Z</updated>
+    <updated>2024-03-14T09:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/60DaysOfIA"/>
     <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[4.4 Build a Copilot on Azure Code-First with Langchain]]></title>
+        <id>https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain</id>
+        <link href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain"/>
+        <updated>2024-03-14T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This project uses the AI Search service to create a vector store for a custom department store data.  To enable the user to ask questions our data in a conversational format, we'll using Langchain to connect our prompt template with our Azure Open AI LLM.]]></summary>
+        <content type="html"><![CDATA[
+<p><strong>Welcome to Day 4️⃣ of the Azure AI week on #60Days Of IA</strong>
+In the previous post, we learned about how to get started with the Azure AI SDK and Prompt Flow to build a Copilot. In today's post we'll be covering <code>building a copilot with custom code and data using Langchain</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-youll-learn-today">What You'll Learn Today<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#what-youll-learn-today" class="hash-link" aria-label="Direct link to What You'll Learn Today" title="Direct link to What You'll Learn Today">​</a></h2>
+<ul>
+<li>Quickstart Sample: Using Langchain to build a copilot.</li>
+<li>What is "Langchain" ?</li>
+<li>Build the Copilot</li>
+<li>Evaluate the Copilot</li>
+<li>Deploy the Copilot</li>
+<li><strong>Challenge</strong>: <a href="https://github.com/Azure-Samples/aistudio-python-langchain-sample/tree/main" target="_blank" rel="noopener noreferrer">Try this quickstart sample</a></li>
+<li><strong>Resources</strong>: To learn more<!-- -->
+<ul>
+<li><a href="https://aka.ms/azureaistudio?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Studio</a> - UI to explore, build &amp; manage AI solutions.</li>
+<li><a href="https://learn.microsoft.com/azure/ai-studio?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Studio Docs</a> - Azure AI Studio documentation.</li>
+<li><a href="https://learn.microsoft.com/azure/ai-services/what-are-ai-services?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Services</a> - Azure AI Services documentation.</li>
+<li><a href="https://learn.microsoft.com/training/modules/improve-search-results-vector-search?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Training: Using vector search in Azure Cognitive Search</a></li>
+<li><a href="https://learn.microsoft.com/azure/ai-studio/tutorials/deploy-chat-web-app?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Tutorial: Deploy a web app for chat on your data</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<p><img loading="lazy" alt="Build a Copilot on Azure Code-First with Langchain" src="https://azure.github.io/Cloud-Native/assets/images/BIA-4-ba7753c8afc145c9b84459b07a5132c6.png" width="1000" height="420" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1--introduction">1 | Introduction<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#1--introduction" class="hash-link" aria-label="Direct link to 1 | Introduction" title="Direct link to 1 | Introduction">​</a></h2>
+<p>This project use the AI Search service to create a vector store for a custom department store data.  We will be using Azure Open AI's text-embedding-ada-002 deployment for embedding the data in vectors. The vector representation of your data is stored in <a href="https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Search</a> (formerly known as "Azure Cognitive Search").</p>
+<p>To enable the user to ask questions our data in a conversational format, we'll using Langchain to connect our prompt template with our Azure Open AI LLM.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/rag-pattern-9258e32b911bad45b26e89185e972eb1.png" width="800" height="101" class="img_ev3q"></p>
+<p>We'll use Retrieval Augmented Generation (RAG), a pattern used in AI which uses an LLM to generate answers with your own data. In addition, we'll  construct prompt template to provide the scope of our dataset, as well as the context to the submit questions. Lastly, we'll maintain the state of the conversation by store the chat history in the prompt.</p>
+<p><strong>Custom Data:</strong> The sample data that we'll be using in this project is a department store dataset.  The dataset contains a list of customers, orders, products and their descriptions, and their prices.  We'll be using this dataset to create a copilot that can answer questions about the products in the dataset.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-langchain">What is Langchain?<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#what-is-langchain" class="hash-link" aria-label="Direct link to What is Langchain?" title="Direct link to What is Langchain?">​</a></h2>
+<p>Langchain is a framework for developing applications powered by language models. It enables you to connect a language model such as Azure OpenAI to a prompt template including: prompt instructions, chat history, context of the chat conversation, few shot examples, content to ground its response in, etc.).  This helps facilitate end-users to interact with the application to ask questions and language models to generate responses in a conversational format.</p>
+<p>In this exercise, we'll be using ConversationalRetrievalChain, which is a subclass of langchain that handles chats that are based on retrieving data from documents or vector datasources. We will use it to connect the Azure OpenAI model, retriever, prompt template and chat memory in order to search the AI Search database to retrieve the most relevant response. To activate the instance you need an LLM model (ex. gpt-35-turbo) to retrieve response, the prompt template rules, and chat history.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2--pre-requisites">2 | Pre-Requisites<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#2--pre-requisites" class="hash-link" aria-label="Direct link to 2 | Pre-Requisites" title="Direct link to 2 | Pre-Requisites">​</a></h2>
+<p>Completing the <a href="https://github.com/Azure-Samples/aistudio-python-langchain-sample/tree/main" target="_blank" rel="noopener noreferrer">tutorial</a> requires the following:</p>
+<ol>
+<li>An Azure subscription - <a href="https://azure.microsoft.com/free/cognitive-services?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Create one for free</a></li>
+<li>Access to Azure OpenAI in the Azure Subscription - <a href="https://aka.ms/oai/access?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Request access here</a></li>
+<li>Custom data to ground the copilot - <a href="https://github.com/Azure-Samples/aistudio-python-langchain-sample/tree/main/data/3-product-info" target="_blank" rel="noopener noreferrer">Sample product-info data is provided</a></li>
+<li>A GitHub account - <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">Create one for free</a></li>
+<li>Access to GitHub Codespaces - <a href="https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts" target="_blank" rel="noopener noreferrer">Free quota should be sufficient</a></li>
+</ol>
+<p>The tutorial uses Azure AI Studio which is currently in public preview.</p>
+<ul>
+<li>Read <a href="https://learn.microsoft.com/azure/ai-studio/reference/region-support#azure-public-regions?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">the documentation</a> to learn about regional availability of Azure AI Studio (preview)</li>
+<li>Read the <a href="https://learn.microsoft.com/azure/ai-studio/faq?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Studio FAQ</a> for answers to some commonly-asked questions.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-the-copilot-with-jupiter-notebook">Open the copilot with Jupiter notebook<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#open-the-copilot-with-jupiter-notebook" class="hash-link" aria-label="Direct link to Open the copilot with Jupiter notebook" title="Direct link to Open the copilot with Jupiter notebook">​</a></h2>
+<p>We'll be using Python SDK to create our copilot for the Contoso outdoor/camping gear AI Chat application.</p>
+<p>Let's begin by opening the <code>copilot_langchain.ipynb</code> notebook in the visual studio code (VS code) editor.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/3-select-kernel-4a590a2678ea34d42043775763a364f1.png" width="800" height="539" class="img_ev3q"></p>
+<p>In VS code, click on <strong>Select Kernel</strong>. Then under Python Environments, select the <strong>Python 3.10.13</strong> environment you just created</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/3-python-env-9c38c584f04ed4365a4a09c5d9a3c217.png" width="800" height="561" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="connect-to-azure-resources">Connect to azure resources<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#connect-to-azure-resources" class="hash-link" aria-label="Direct link to Connect to azure resources" title="Direct link to Connect to azure resources">​</a></h2>
+<p>In order to access the resources you created in your project in AI studio, we'll use the python SDK to authenticate and connect to them.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/conn-to-azure-d3f47ba3b62c95931dd3c5319bc3c667.png" width="800" height="271" class="img_ev3q"></p>
+<p>To find the most relevant results from the vector database, we'll be using Langchain's retriever to search content from Azure AI Search.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/langchain-retriever-db15974322e58790f909b7cd71030445.png" width="1020" height="73" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="create-prompt-template">Create Prompt Template<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#create-prompt-template" class="hash-link" aria-label="Direct link to Create Prompt Template" title="Direct link to Create Prompt Template">​</a></h2>
+<p>Prompt engineering is an integral part of providing good user experience and relevant answers.  To achieve that you'll need to define a prompt template that includes system prompt rules, restrictions, chat history, input questions and context of conversation.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/prompt-template-94991e9e825cc5911bf333ceafa621b8.png" width="799" height="398" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="add-langchain-to-connect-azure-openai-and-prompt-template">Add Langchain to connect Azure OpenAI and Prompt template<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#add-langchain-to-connect-azure-openai-and-prompt-template" class="hash-link" aria-label="Direct link to Add Langchain to connect Azure OpenAI and Prompt template" title="Direct link to Add Langchain to connect Azure OpenAI and Prompt template">​</a></h2>
+<p>To process the search results and apply the system rules, you need it initialize the LLM.  In our case, we'll using AzureChatOpenAI class to specify the GPT-35-Turbo model deployment and settings we need for the chat.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/init-azure-openai-0b30056ffa1d37a6fb768c1a6e871e21.png" width="1024" height="118" class="img_ev3q"></p>
+<p>All the dialogue that the end-user has with the chat needs retained to maintain the context of the conversation.  That's why we are using the ConversationMemoryBuffer class to store the chat history.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/store-convo-e7af9adef38f169dfad207e47071fa59.png" width="1023" height="54" class="img_ev3q"></p>
+<p>To search the AI search database, we'll use a subclass of langchain to connect the Azure OpenAI, datasource retriever, prompt template and memory together.  When an instance of the langchain is invoke with an user input prompt, the retriever is used to search your data in AI Search.  The Azure OpenAI uses the prompt rules to process the response back to the user.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/config-langchain-b91e705d342577484133aaee2854f6f1.png" width="1024" height="141" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="run-the-copilot-with-jupiter-notebook">Run the copilot with Jupiter notebook<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#run-the-copilot-with-jupiter-notebook" class="hash-link" aria-label="Direct link to Run the copilot with Jupiter notebook" title="Direct link to Run the copilot with Jupiter notebook">​</a></h2>
+<p>To run a single question &amp; answer through the sample copilot:</p>
+<p>Click on <strong>Run All</strong> to run the notebook.</p>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/4-run-all-6e800f7c782b2de0e96bbff73f3ef27d.png" width="800" height="557" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="validate-your-copilot-by-asking-a-question-about-your-custom-data">Validate your copilot by asking a question about your custom data.<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#validate-your-copilot-by-asking-a-question-about-your-custom-data" class="hash-link" aria-label="Direct link to Validate your copilot by asking a question about your custom data." title="Direct link to Validate your copilot by asking a question about your custom data.">​</a></h2>
+<p>Enter a question about the outdoor/camping gear and clothing products. For example:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Which of your sleeping bags are polyester?</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/5-question-7db74565dc1c2dbd15113ac7e853f154.png" width="800" height="92" class="img_ev3q"></p>
+<p><code>The CozyNights Sleeping Bag (item_number: 7) and the MountainDream Sleeping Bag (item_number: 14) are both made of polyester.</code></p>
+<p>Try asking another question. For example:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">which tent is the most waterproof?</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>In this exercise you learned how to use Azure AI Search to create and load your data into a vector store.  Next, you learned how to use prompt engineering by constructing <em>System Prompt</em> with instructions on how to engage with the user, the scope of the subject area to enforce grounding which prevents the LLM from providing responses that are not relevent to your data.  You should now be able to build AI applications using Lanchain to connect Azure OpenAI, your prompts, chat history, context and retriever of your data source.  You've now gained the knowledge on how to use the Retrieval Augmented Generation (RAG) pattern in AI which uses LLMs to generate answers with your own data.</p>]]></content>
+        <author>
+            <name>#60Days Of IA</name>
+            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
+        </author>
+        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
+        <category label="60-days-of-IA" term="60-days-of-IA"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="hack-together" term="hack-together"/>
+        <category label="community-buzz" term="community-buzz"/>
+        <category label="ask-the-expert" term="ask-the-expert"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[4.3 Build a Copilot on Azure Code-First with Prompt Flow]]></title>
         <id>https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-prompt-flow</id>
