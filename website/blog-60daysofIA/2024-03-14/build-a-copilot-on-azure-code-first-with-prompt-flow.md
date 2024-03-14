@@ -85,7 +85,7 @@ Completing the [tutorial]([https://github.com/Azure-Samples/aistudio-python-prom
 
 1. An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services?ocid=buildia24_60days_blogs)
 2. Access to Azure OpenAI in the Azure Subscription - [Request access here](https://aka.ms/oai/access?ocid=buildia24_60days_blogs)
-3. Custom data to ground the copilot - [Sample product-info data is provided](./../data/3-product-info/)
+3. Custom data to ground the copilot - [Sample product-info data is provided](https://github.com/Azure-Samples/aistudio-python-langchain-sample/tree/main/data/3-product-info)
 4. A GitHub account - [Create one for free](https://github.com/signup)
 5. Access to GitHub Codespaces - [Free quota should be sufficient](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts)
 
