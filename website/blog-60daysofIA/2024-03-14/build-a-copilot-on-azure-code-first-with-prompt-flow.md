@@ -81,7 +81,7 @@ In this exercise, we'll be using ConversationalRetrievalChain, which is a subcla
 
 ## 2 | Pre-Requisites
 
-Completing the [tutorial]([https://github.com/Azure-Samples/aistudio-python-promptflow-sample](https://github.com/Azure-Samples/aistudio-python-langchain-sample/tree/main)) requires the following:
+Completing the [tutorial](https://github.com/Azure-Samples/aistudio-python-langchain-sample/tree/main) requires the following:
 
 1. An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services?ocid=buildia24_60days_blogs)
 2. Access to Azure OpenAI in the Azure Subscription - [Request access here](https://aka.ms/oai/access?ocid=buildia24_60days_blogs)
