@@ -709,7 +709,7 @@ AI project by seamlessly integrating with deployed models and built-in AI servic
 <li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-code-first-with-the-azure-ai-python-sdk" target="_blank" rel="noopener noreferrer"><strong>Day 2:</strong></a> Build a Copilot app on Azure AI with the Python SDK (quickstart)</li>
 <li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-prompt-flow" target="_blank" rel="noopener noreferrer"><strong>Day 3:</strong></a> Build a Copilot app on Azure AI with promptflow (framework)</li>
 <li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain" target="_blank" rel="noopener noreferrer"><strong>Day 4:</strong></a> Build a Copilot app on Azure AI with LangChain (framework)</li>
-<li><strong>Day 5:</strong> Deploy your Copilot app responsibly on Azure AI (advanced topics)</li>
+<li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure" target="_blank" rel="noopener noreferrer"><strong>Day 5:</strong></a> Deploy your Copilot app responsibly on Azure AI (advanced topics)</li>
 </ul>]]></content:encoded>
             <category>Build-Intelligent-Apps</category>
             <category>60-days-of-IA</category>
