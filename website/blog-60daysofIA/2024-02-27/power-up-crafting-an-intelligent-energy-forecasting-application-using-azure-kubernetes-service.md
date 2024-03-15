@@ -34,11 +34,11 @@ At the forefront of recent technological innovation are intelligent apps: apps t
 
 Our upcoming series will guide you through creating an intelligent app that leverages Azure technologies, including [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service?ocid=buildia24_60days_blogs) (AKS), to build an application that forecasts energy usage and pricing. 
 
-Your app will harness AKS for hosting and AI to analyze historical energy consumption data. Then, you’ll integrate the Kubernetes AI Toolchain Operator (KAITO) with advanced analytical tools—such as LLaMA 2, Langchain, and pandas—to build an intelligent app that underscores the importance of green energy practices and demonstrates the versatility and efficacy of Azure services.
+Your app will harness AKS for hosting and AI to analyze historical energy consumption data. Then, you’ll integrate the Kubernetes AI Toolchain Operator (KAITO) with with XGBoost and LLaMA 2 to build an intelligent app that underscores the importance of green energy practices and demonstrates the versatility and efficacy of Azure services.
 
-We invite you to join us on this three-part educational series, where you’ll learn the skills needed to construct your own intelligent apps. This series is more than a technical walkthrough: It’s an opportunity to engage with cutting-edge technologies and contribute to meaningful advancements in energy management.
+We invite you to join us on this three-part educational series, where you’ll learn the skills needed to construct your own intelligent apps. But, this series is more than a technical walkthrough: It’s an opportunity to engage with cutting-edge technologies and contribute to meaningful advancements in energy management.
 
-Whether you’re an experienced developer or new to the AI and ML sphere, this series will give you a glimpse into the future of application development and the strategic impact of cloud technologies in driving forward-thinking solutions.
+Whether you’re an experienced developer or new to the AI and ML sphere, this series will give you a glimpse into the future of application development and the strategic impact of Azure technologies in driving forward-thinking solutions.
 
 ## The Synergy of Azure Kubernetes Service and Intelligent Apps
 
@@ -46,7 +46,7 @@ Using AKS as the backbone of intelligent apps has numerous benefits — especial
 
 One of the primary advantages of AKS is its ability to handle distributed applications with evolving demands. For AI-driven apps, the ability to scale resources based on computational demands is crucial. Because AKS allows for automatic scaling, intelligent apps have the necessary resources during peak analysis times without wasting resources during quieter periods. But this dynamic scalability isn’t just about handling loads efficiently: It’s also cost-effective, ensuring that you pay only for the resources you use.
 
-Integrating the Kaito operator with AKS further enhances the deployment of AI models like LLaMA 2 by simplifying the complexities of managing AI workloads. Kaito, designed specifically for Kubernetes environments, acts as a bridge between the advanced AI models and the scalable, managed infrastructure provided by AKS. It offers custom resource definitions (CRDs) tailored for AI applications, facilitating the deployment, updating, and management of AI models within the Kubernetes ecosystem.
+Integrating the KAITO operator with AKS further enhances the deployment of AI models like LLaMA 2 by simplifying the complexities of managing AI workloads. KAITO, designed specifically for Kubernetes environments, acts as a bridge between the advanced AI models and the scalable, managed infrastructure provided by AKS. It offers custom resource definitions (CRDs) tailored for AI applications, facilitating the deployment, updating, and management of AI models within the Kubernetes ecosystem.
 
 This seamless integration enables developers to focus more on the application logic and less on the underlying infrastructure, accelerating the development cycle and reducing the time to market for innovative AI solutions.
 
@@ -66,9 +66,9 @@ Next, you’ll meet KAITO, a tool that streamlines deploying AI applications in 
 
 ## Adding Intelligence to the App
 
-The second part of this series dives into the more practical aspects of building the Intelligent App. You’ll leverage an open-source energy dataset alongside powerful tools like LangChain and a pandas Python agent to craft a forecasting model that predicts future energy demands with speed and precision.
+The second part of this series dives into the more practical aspects of building the Intelligent App. You’ll leverage an open-source energy dataset alongside powerful tools like XGBoost and a custom Python API to craft a forecasting model that predicts future energy demands with speed and precision.
 
-Integrating these tools with AKS highlights the high-impact relationship between robust data processing capabilities and scalable cloud infrastructure. Hands-on examples and streamlined code will guide you through setting up the environment, processing the dataset, and deploying the forecasting model.
+Integrating these tools with AKS and Azure Container Registry highlights the high-impact relationship between robust data processing capabilities and scalable cloud infrastructure. Hands-on examples and streamlined code will guide you through setting up the environment, processing the dataset, and deploying the forecasting model.
 
 This practical application reinforces the theoretical foundations laid in Part 1 and sets the stage for advanced analytics and AI-driven predictions. As you progress through the tutorial, the focus will remain on simplicity and efficiency, ensuring that even complex AI-related processes become accessible.
 
