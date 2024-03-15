@@ -140,6 +140,6 @@ This is a non-trivial set of requirements for building, running, evaluating, and
 In the upcoming week, we'll dive into the implementation details of these processes in the context of a signature reference sample (Contoso Chat) and as quickstart templates that showcase usage with popular frameworks. Here's what we'll cover:
 - [**Day 1:**](https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end) Build the Contoso Chat app on Azure AI (end-to-end reference sample)
 - [**Day 2:**](https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-code-first-with-the-azure-ai-python-sdk) Build a Copilot app on Azure AI with the Python SDK (quickstart)
-- **Day 3:** Build a Copilot app on Azure AI with promptflow (framework)
-- **Day 4:** Build a Copilot app on Azure AI with LangChain (framework)
+- [**Day 3:**](https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-prompt-flow) Build a Copilot app on Azure AI with promptflow (framework)
+- [**Day 4:**](https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain) Build a Copilot app on Azure AI with LangChain (framework)
 - **Day 5:** Deploy your Copilot app responsibly on Azure AI (advanced topics)

@@ -3,7 +3,7 @@ date: 2024-03-15T09:00
 slug: deploying-your-copilot-on-azure
 title: "4.5 Deploying Your Copilot On Azure"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -104,7 +104,7 @@ Note that the Contoso Chat sample is a _demo application_ sample that is designe
 
 ## 5. Enterprise Architecture Options
 
-The objective of this series was to familiarize you with the Azure AI Studio (preview) platform and the capabilities it provides for building generative AI applications. And to give you a sense of how to build, run, test and deploy, your chat AI application for real-world use. But the platform is still in preview (and evolving rapidly). So what are your options if you want to build and deploy generative AI solutions at enterprise scale **today**? How can you design it using a well-architected cloud framework with **cloud-native technologies** like Azure Container Apps or Azure Kubernetes Service? 
+The objective of this series was to familiarize you with the Azure AI Studio (preview) platform and the capabilities it provides for building generative AI applications. And to give you a sense of how to build, run, test and deploy, your chat AI application for real-world use. But the platform is still in preview (and evolving rapidly). So what are your options if you want to build and deploy generative AI solutions at enterprise scale **today**? How can you design it using a well-architected cloud framework with **cloud-native technologies** like [Azure Container Apps](https://learn.microsoft.com/azure/container-apps/overview?ocid=buildia24_60days_blogs) or [Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/intro-kubernetes?ocid=buildia24_60days_blogs)? 
 
 Here are some open-source samples and guidance you can explore to start with:
 1. [ChatGPT + Enterprise data with Azure Open AI and AI Search (Python)](https://github.com/Azure-Samples/azure-search-openai-demo/) - open-source sample that uses Azure App Service, Azure Open AI, Azure AI Search and Azure Blob Storage, for an enterprise-grade solution grounded in your (documents) data.
