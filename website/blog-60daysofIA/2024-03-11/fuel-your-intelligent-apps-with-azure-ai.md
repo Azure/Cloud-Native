@@ -142,4 +142,4 @@ In the upcoming week, we'll dive into the implementation details of these proces
 - [**Day 2:**](https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-code-first-with-the-azure-ai-python-sdk) Build a Copilot app on Azure AI with the Python SDK (quickstart)
 - [**Day 3:**](https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-prompt-flow) Build a Copilot app on Azure AI with promptflow (framework)
 - [**Day 4:**](https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain) Build a Copilot app on Azure AI with LangChain (framework)
-- **Day 5:** Deploy your Copilot app responsibly on Azure AI (advanced topics)
+- [**Day 5:**](https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure) Deploy your Copilot app responsibly on Azure AI (advanced topics)
