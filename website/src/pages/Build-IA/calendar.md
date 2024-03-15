@@ -29,7 +29,6 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 * 👩🏽‍💻 Mar 6 | #LearnLive Kubernetes – [Ep 03: Enhance Observability of Your Intelligent Apps on AKS](https://developer.microsoft.com/en-us/reactor/events/21816/?ocid=buildia24_website)
 * 🎙 Mar 7 | #AskTheExpert – [Azure Cosmos DB](https://reactor.microsoft.com/en-us/reactor/events/21692/?ocid=buildia24_website)
 * 👩🏽‍💻 Mar 13 | #LearnLive Kubernetes – [Ep 04: Taking Your Intelligent App Global with AKS](https://developer.microsoft.com/en-us/reactor/events/21817/?ocid=buildia24_website)
-* Mar 20 | Learn Live Serverless – Ep 01
 * 🎙 Mar 21 | #AskTheExpert – [Azure AI](https://reactor.microsoft.com/en-us/reactor/events/21694/?ocid=buildia24_website)
 
 ### KubeCon EU
