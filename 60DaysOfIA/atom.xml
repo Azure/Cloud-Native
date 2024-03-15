@@ -2,11 +2,166 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/60DaysOfIA</id>
     <title>Build Intelligent Apps On Azure Blog</title>
-    <updated>2024-03-14T09:00:00.000Z</updated>
+    <updated>2024-03-15T09:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/60DaysOfIA"/>
     <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[4.5 Deploying Your Copilot On Azure]]></title>
+        <id>https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure</id>
+        <link href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure"/>
+        <updated>2024-03-15T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You've build a RAG-based copilot application on Azure AI with Prompt flow. Now it's time to deploy it, test it, and integrated it into your chat UI experience. Let's dive in!]]></summary>
+        <content type="html"><![CDATA[
+<p>Welcome to <code>Day 5️⃣</code> of our journey <strong>Building An AI App End-to-End On Azure!</strong>. It's time to wrap-up the week with a look at two key topics - <em>deployment</em> and <em>responsible AI</em>! Ready? Let's go!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-youll-learn-in-this-post">What You'll Learn In This Post<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#what-youll-learn-in-this-post" class="hash-link" aria-label="Direct link to What You'll Learn In This Post" title="Direct link to What You'll Learn In This Post">​</a></h2>
+<ul>
+<li>Deploying the chat AI (Contoso Chat)</li>
+<li>Deploying the chat UI (Contoso Web)</li>
+<li>Automate Deployments (CI/CD)</li>
+<li>Accelerate Solutions (Enterprise)</li>
+<li>Evaluate &amp; Mitigate Harms (Responsible AI)</li>
+<li>Exercise: Explore training resources.</li>
+<li>Resources: <a href="https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer"><strong>Azure AI Studio Code-First Collection</strong></a></li>
+</ul>
+<br>
+<p><img loading="lazy" alt="Deploy with Responsible AI" src="https://azure.github.io/Cloud-Native/assets/images/banner-48e9ec5b9267e589628dd0902ff81a70.png" width="1000" height="420" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-revisiting-contoso-chat">1. Revisiting Contoso Chat<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#1-revisiting-contoso-chat" class="hash-link" aria-label="Direct link to 1. Revisiting Contoso Chat" title="Direct link to 1. Revisiting Contoso Chat">​</a></h2>
+<p>We started the week by talking about LLM Ops, and identifying the three core phases of the end-to-end lifecycle for a generative AI application. In the previous posts, we've mostly focused on the first two phases: <strong>ideating</strong> (building &amp; validating a starter app) and <strong>augmenting</strong> (evaluating &amp; iterating app for quality). In this post, we'll focus on phase 3: <strong>operationalizing</strong> the application to get it ready for real-world usage.</p>
+<p><img loading="lazy" alt="LLM Ops" src="https://azure.github.io/Cloud-Native/assets/images/llm-app-lifecycle-6509347ca42b47d5c7ae425b890e5efe.png" width="1147" height="646" class="img_ev3q"></p>
+<p>First, let's remind ourselves of the high-level architecture for a copilot application. Our solution has two components:</p>
+<ul>
+<li><strong>Backend</strong>: The <em>chat AI</em> app that is deployed to provide a hosted API endpoint.</li>
+<li><strong>Frontend</strong>: The <em>chat UI</em> app that is deployed to support user interactions with API.</li>
+</ul>
+<p>Let's look at what deployment means in each case:</p>
+<p><img loading="lazy" alt="Copilot Arch" src="https://azure.github.io/Cloud-Native/assets/images/copilot-architecture-a14ddb6e2ac8e5ded7e544f1093325fc.png" width="2856" height="1292" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-deploy-your-chat-ai-app">2. Deploy your chat AI app<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#2-deploy-your-chat-ai-app" class="hash-link" aria-label="Direct link to 2. Deploy your chat AI app" title="Direct link to 2. Deploy your chat AI app">​</a></h2>
+<p>In our example, the chat AI is implemented by the <a href="https://aka.ms/aitour/contoso-chat?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Contoso Chat</a> sample. Deploying this chat AI solution involves <a href="https://learn.microsoft.com/azure/ai-studio/concepts/deployments-overview?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer"><strong>three steps</strong></a>.</p>
+<ol>
+<li>Deploy the Models</li>
+<li>Deploy the Flows</li>
+<li>Deploy the Web App</li>
+</ol>
+<p>Let's look at the first two in this section, starting with <strong><a href="https://learn.microsoft.com/azure/ai-studio/concepts/deployments-overview?ocid=buildia24_60days_blogs#deploying-models" target="_blank" rel="noopener noreferrer">model deployment</a></strong>. Azure AI Studio has a rich model catalog from providers including OpenAI, HuggingFace, Meta and Microsoft Research. Some models can be deployed <em>as a service</em> (with a pay-as-you-go subscription) while others require <em>hosted, managed infra</em> (with a standard Azure subscription). Our chat AI uses three models, all of which used the hosted, managed option.</p>
+<ul>
+<li><code>gpt-35-turbo</code> - for chat completion (core function)</li>
+<li><code>text-embedding-ada-002</code> - for embeddings (query vectorization)</li>
+<li><code>gpt-4</code> - for chat evaluation (responsible AI)</li>
+</ul>
+<p>Next, let's talk about <strong><a href="https://learn.microsoft.com/azure/ai-studio/how-to/flow-deploy?tabs=azure-studio?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">deploying flows</a></strong>. There are two kinds of flows we'll use in our chat AI - <em>completion flows</em> (that we'll use for real-time inference) and <em>evaluation flows</em> (that we'll use for quality assessment). Azure AI Studio provides <a href="https://learn.microsoft.com/azure/ai-studio/how-to/flow-deploy?tabs=azure-studio?ocid=buildia24_60days_blogs#create-an-online-deployment" target="_blank" rel="noopener noreferrer">low-code deployment</a> via the UI and <a href="https://learn.microsoft.com/azure/ai-studio/how-to/flow-deploy?tabs=python?ocid=buildia24_60days_blogs#create-an-online-deployment" target="_blank" rel="noopener noreferrer">code-first deployment</a> using the Azure AI SDK. In our Contoso Chat sample, we use the SDK to <a href="https://github.com/Azure-Samples/contoso-chat/blob/main/deployment/push_and_deploy_pf.ipynb" target="_blank" rel="noopener noreferrer">upload the flow</a> to Azure, then deploy it using the UI as shown.
+<img loading="lazy" alt="Deploy Contoso Chat" src="https://azure.github.io/Cloud-Native/assets/images/contoso-chat-deploy-ce382b4dd234aba8c6112f5d5b11d6a2.png" width="2956" height="1388" class="img_ev3q"></p>
+<p>Finally, let's talk about <strong><a href="https://learn.microsoft.com/azure/ai-studio/concepts/deployments-overview?ocid=buildia24_60days_blogs#deploying-web-apps" target="_blank" rel="noopener noreferrer">deploying web apps</a></strong>. Here, the web app is a <em>chat UI</em> that can invoke requests on the deployed chat AI and validate the functionality in production. There are three options to consider:</p>
+<ol>
+<li><strong>Built-in Testing UI</strong>. When you deploy your flow via Azure AI Studio, you can visit the deployment details page and navigate to the <em>Test</em> tab, to get a built-in testing sandbox as shown. This provides a quick way to test prompts with each new iteration, in a manual (interactive) way.
+<img loading="lazy" alt="Deployment Testing" src="https://azure.github.io/Cloud-Native/assets/images/contoso-chat-test-4674309cf7c90e44d1e64a4f2ec95721.png" width="3558" height="2060" class="img_ev3q"></li>
+<li><strong>Deploy as Web App</strong>. Azure AI Studio also provides a <em>Playground</em> where you can deploy models directly (for chat completion) and <em>add your data (preview)</em> (for grounding responses) using Azure AI Search and Blob Storage resources, to customize that chat experience. Then <em>deploy a new web app</em> directly from that interface, to an Azure App Service resource.
+<img loading="lazy" src="https://learn.microsoft.com/azure/ai-studio/media/tutorials/chat-web-app/deploy-web-app.png?ocid=buildia24_60days_blogs" alt="Deploy as web app" class="img_ev3q"></li>
+<li><strong>Dedicated Web App</strong>. This is the option we'll explore in the next section.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-deploy-your-chat-ui-app">3. Deploy your chat UI app<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#3-deploy-your-chat-ui-app" class="hash-link" aria-label="Direct link to 3. Deploy your chat UI app" title="Direct link to 3. Deploy your chat UI app">​</a></h2>
+<p>The Contoso Chat sample comes with a dedicated <a href="https://github.com/Azure-Samples/contoso-web" target="_blank" rel="noopener noreferrer">Contoso Web</a> application that is implemented using the Next.js framework with support for static site generation. This provides a rich "Contoso Outdoors" website experience for users as shown below.</p>
+<p><img loading="lazy" alt="Contoso Web" src="https://azure.github.io/Cloud-Native/assets/images/app-contoso-chat-concept-1e6a568ef26af525237d5b3df58804c8.png" width="1457" height="529" class="img_ev3q"></p>
+<p>To use that application, simply <a href="https://github.com/Azure-Samples/contoso-web?tab=readme-ov-file#setting-up-endpoints" target="_blank" rel="noopener noreferrer">setup the endpoint variables</a> for Contoso Chat and deploy the app to Azure App Service. Alternatively, you can use <a href="https://github.com/nitya/contoso-web/tree/main-codespaces-swa?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">this fork of the application</a> to explore a version that can be run in GitHub Codespaces (for development) and deployed to Azure Static Web Apps (for production) using GitHub Actions for automated deploys. Once deployed, you can click the <em>chat</em> icon onscreen *bottom right) to see the chat dialog as shown in the screenshot above, and interact with the deployed Contoso chat AI.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-automate-your-chat-ai-deployment">4. Automate your chat AI deployment<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#4-automate-your-chat-ai-deployment" class="hash-link" aria-label="Direct link to 4. Automate your chat AI deployment" title="Direct link to 4. Automate your chat AI deployment">​</a></h2>
+<p>The <a href="https://github.com/Azure-Samples/contoso-chat" target="_blank" rel="noopener noreferrer">Contoso Chat sample</a> is a <strong>constantly-evolving</strong> application sample that is updated regularly to reflect both the changes to Azure AI Studio (preview) and showcase new capabilities for end-to-end development workflows. You can currently explore two additional capabilities implemented in the codebase, to streamline your deployment process further.</p>
+<ol>
+<li><strong>Using GitHub Actions</strong>. The sample has instructions to <a href="https://github.com/Azure-Samples/contoso-chat?tab=readme-ov-file#9-deploy-with-github-actions" target="_blank" rel="noopener noreferrer">Deploy with GitHub Actions</a> instead of the manual Azure AI Studio based deployment step we showed earlier. By setting up the actions workflow, you can automated deployments on every commit or PR, and get a baseline CI/CD pipeline for your chat AI, to build on later.</li>
+<li><strong>Using Azure Developer CLI</strong>. The sample was <a href="https://github.com/Azure-Samples/contoso-chat/pull/74" target="_blank" rel="noopener noreferrer">just azd-enabled</a> recently, making it possible to use the <a href="https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-templates?tabs=csharp?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure Developer CLI</a> as a unified tool to accelerate the end-to-end process from <em>provisioning</em> the resources to <em>deploying</em> the solution. The <a href="https://github.com/Azure-Samples/contoso-chat/blob/main/azure.yaml" target="_blank" rel="noopener noreferrer">azd template</a> adds support for <em>infrastructure-as-code</em>, allowing your application to have a consistent and repeatable deployment blueprint for all users. You can also <a href="https://azure.github.io/awesome-azd/?tags=ai&amp;tags=chatgpt" target="_blank" rel="noopener noreferrer">browse the azd template gallery</a> for other <em>ChatGPT</em> style application examples.</li>
+</ol>
+<p>Note that the Contoso Chat sample is a <em>demo application</em> sample that is designed to showcase the capabilities of Azure AI Studio and Azure AI services. It is not a production-ready application, and should be used primarily as a learning tool and starting point for your own development.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-enterprise-architecture-options">5. Enterprise Architecture Options<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#5-enterprise-architecture-options" class="hash-link" aria-label="Direct link to 5. Enterprise Architecture Options" title="Direct link to 5. Enterprise Architecture Options">​</a></h2>
+<p>The objective of this series was to familiarize you with the Azure AI Studio (preview) platform and the capabilities it provides for building generative AI applications. And to give you a sense of how to build, run, test and deploy, your chat AI application for real-world use. But the platform is still in preview (and evolving rapidly). So what are your options if you want to build and deploy generative AI solutions at enterprise scale <strong>today</strong>? How can you design it using a well-architected cloud framework with <strong>cloud-native technologies</strong> like <a href="https://learn.microsoft.com/azure/container-apps/overview?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure Container Apps</a> or <a href="https://learn.microsoft.com/azure/aks/intro-kubernetes?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service</a>?</p>
+<p>Here are some open-source samples and guidance you can explore to start with:</p>
+<ol>
+<li><a href="https://github.com/Azure-Samples/azure-search-openai-demo/" target="_blank" rel="noopener noreferrer">ChatGPT + Enterprise data with Azure Open AI and AI Search (Python)</a> - open-source sample that uses Azure App Service, Azure Open AI, Azure AI Search and Azure Blob Storage, for an enterprise-grade solution grounded in your (documents) data.</li>
+<li><a href="https://github.com/Azure-Samples/azure-search-openai-demo-csharp" target="_blank" rel="noopener noreferrer">ChatGPT + Enterprise data with Azure Open AI and AI Search (.NET)</a> - open-source sample chat AI for a fictitious company called "Contoso Electronics" using the application architecture shown below. <a href="https://devblogs.microsoft.com/dotnet/transform-business-smart-dotnet-apps-azure-chatgpt/?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">This blog post</a> provides more details.
+<img loading="lazy" alt="Chat GPT Enterprise" src="https://azure.github.io/Cloud-Native/assets/images/chatgpt-enterprise-14564c996d2c974885d0832005ee72b8.png" width="1280" height="720" class="img_ev3q"></li>
+<li><a href="https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator" target="_blank" rel="noopener noreferrer">Chat with your data Solution Accelerator</a> - uses Azure App Service, Azure Open AI, Azure AI Search and Azure Blob Storage, for an end-to-end baseline RAG sample that goes beyond the <a href="https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/on-your-data-is-now-generally-available-in-azure-openai-service/ba-p/4059514?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure OpenAI Service On Your Data</a> feature (GA in Feb 2024).''</li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-mechanics-blog/build-your-own-private-chatgpt-style-app-with-enterprise-ready/ba-p/4069529?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Built a private ChatGPT style app with enterprise-ready architecture</a> - a blog post from the Microsoft Mechanics team that uses an <a href="https://aka.ms/GitHubChatBotUI?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">open-source chat UI sample</a> and discusses how to <a href="https://www.youtube.com/watch?v=IKcuod-JFYU&amp;t=252s" target="_blank" rel="noopener noreferrer">enhance the chat experience with Azure AI Studio</a> and streamline setup by <a href="https://www.youtube.com/watch?v=IKcuod-JFYU&amp;t=404s" target="_blank" rel="noopener noreferrer">using Azure Landing Zones</a>.</li>
+</ol>
+<p>We covered a lot today - but there's one last thing we should talk about before we wrap up. <strong>Responsible AI</strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-responsible-ai-in-practice">6. Responsible AI In Practice<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#6-responsible-ai-in-practice" class="hash-link" aria-label="Direct link to 6. Responsible AI In Practice" title="Direct link to 6. Responsible AI In Practice">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="61-principles-of-responsible-ai">6.1 Principles of Responsible AI<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#61-principles-of-responsible-ai" class="hash-link" aria-label="Direct link to 6.1 Principles of Responsible AI" title="Direct link to 6.1 Principles of Responsible AI">​</a></h3>
+<p>By <a href="https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">one definition</a>, Responsible AI is <em>approach to developing, assessing, and deploying AI systems in a safe, trustworthy, and ethical way</em>. The <a href="https://www.microsoft.com/ai/principles-and-approach?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Responsible AI standard</a> was developed by Microsoft as a framework for building AI systems, using 6 principles to guide our design thinking.</p>
+<p><img loading="lazy" src="https://learn.microsoft.com/en-us/azure/machine-learning/media/concept-responsible-ai/concept-responsible-ml.png?view=azureml-api-2?ocid=buildia24_60days_blogs" alt="Responsible AI Standard" class="img_ev3q"></p>
+<table><thead><tr><th>Principle</th><th>Description</th></tr></thead><tbody><tr><td>Fairness</td><td>How might an AI system allocate opportunities, resources, or information in ways that are fair to the humans who use it?</td></tr><tr><td>Reliability &amp; Safety</td><td>How might the system function well for people across different use conditions and contexts, including ones it was not originally intended for?</td></tr><tr><td>Privacy &amp; Security</td><td>How might the system be designed to support privacy and security?.</td></tr><tr><td>Inclusiveness</td><td>How might the system be designed to be inclusive of people of all abilities?</td></tr><tr><td>Transparency</td><td>How might people misunderstand, misuse, or incorrectly estimate the capabilities of the system?</td></tr><tr><td>Accountability</td><td>How can we create oversight so that humans can be accountable and in control?</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="62-implications-for-generative-ai">6.2 Implications for Generative AI<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#62-implications-for-generative-ai" class="hash-link" aria-label="Direct link to 6.2 Implications for Generative AI" title="Direct link to 6.2 Implications for Generative AI">​</a></h3>
+<p>The <a href="https://learn.microsoft.com/en-us/training/modules/responsible-generative-ai/?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Fundamentals of Responsible Generative AI</a> describes core guidelines for building  generative AI solutions <em>responsibly</em> as a 4-step process:</p>
+<ol>
+<li><strong>Identify</strong> potential harms relevant to your solution.</li>
+<li><strong>Measure</strong> presence of these harms in outputs generated by your solution.</li>
+<li><strong>Mitigate</strong> harms at multiple layers to minimize impact, and ensure transparent communication about potential risks to users.</li>
+<li><strong>Operate</strong> your solution responsibly by defining and following a deployment and operational readiness plan.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="63-identify-potential-harms">6.3 Identify Potential Harms<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#63-identify-potential-harms" class="hash-link" aria-label="Direct link to 6.3 Identify Potential Harms" title="Direct link to 6.3 Identify Potential Harms">​</a></h3>
+<p>The first step of the process is to identify potential harms in your application domain using a 4-step process:</p>
+<ol>
+<li>Identify potential harms (offensive, unethical, fabrication) that may occur in generated content.</li>
+<li>Assess likelihood of each occurrence, and severity of impact.</li>
+<li>Test and verify if harms occur, and under what conditions.</li>
+<li>Document and communicate potential harms to stakeholders.</li>
+</ol>
+<p><img loading="lazy" src="https://learn.microsoft.com/en-us/training/wwl-data-ai/responsible-generative-ai/media/identify-harms.png" alt="4 steps" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="64-measure-presence-of-harms">6.4 Measure Presence of Harms<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#64-measure-presence-of-harms" class="hash-link" aria-label="Direct link to 6.4 Measure Presence of Harms" title="Direct link to 6.4 Measure Presence of Harms">​</a></h3>
+<p><a href="https://learn.microsoft.com/en-us/azure/ai-studio/concepts/evaluation-approach-gen-ai?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Evaluation of generative AI applications</a> is the process of measuring the presence of identified harms in the generated output. Think of it as a 3-step process:</p>
+<ol>
+<li>Prepare a diverse selection of input prompts that may result in the potential harms documented.</li>
+<li>Submit prompts to your AI application and retrieve generated output</li>
+<li><strong>Evaluate</strong> those responses using pre-defined criteria.</li>
+</ol>
+<p>Azure AI Studio provides many features and pathways to support evaluation. Start with <em>manual evaluation</em> (small set of inputs, interactive) to ensure coverage and consistency. Then scale to <em>automated evaluation</em> (larger set of inputs, flows) for increased coverage and operationalization.</p>
+<p><img loading="lazy" src="https://learn.microsoft.com/en-us/azure/ai-studio/media/evaluations/evaluation-monitor-flow.png" alt="Evaluation" class="img_ev3q"></p>
+<p>But what <em>metrics</em> can we use to quantify the quality of generated output? Quantifying accuracy is now complicated <em>because we don't have access to a ground truth or deterministic answer</em> that can serve as a baseline. Instead, we can use <a href="https://learn.microsoft.com/en-us/azure/ai-studio/concepts/evaluation-metrics-built-in?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">AI-assisted metrics</a> - where we <em>instruct</em> another LLM to score your generated output <strong>for quality and safety</strong> using the guidelines and criteria you provide.</p>
+<ul>
+<li><strong>Quality</strong> is measured using metrics like <em>relevance, coherence and fluency</em>.</li>
+<li><strong>Safety</strong> is measured using metrics like <em>groundedness and content harms</em>.</li>
+</ul>
+<p>In our <em>Contoso Chat</em> app sample, we <a href="https://github.com/Azure-Samples/contoso-chat/blob/main/eval/evaluate-chat-prompt-flow.ipynb" target="_blank" rel="noopener noreferrer">show examples</a> of local evaluation (with single and multiple metrics) and batch runs (for automated evaluation in the cloud). Here's an exmaple of what the output from the local evaluation looks like:</p>
+<p><img loading="lazy" alt="Local Eval" src="https://azure.github.io/Cloud-Native/assets/images/eval-local-9e0829a951099ad318f8667ec90a7099.png" width="2894" height="678" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="65-content-safety-for-mitigation">6.5 Content Safety for Mitigation<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#65-content-safety-for-mitigation" class="hash-link" aria-label="Direct link to 6.5 Content Safety for Mitigation" title="Direct link to 6.5 Content Safety for Mitigation">​</a></h3>
+<p>One of the most effective ways to mitigate harmful responses from generative AI models in Azure OpenAI is to use <a href="https://learn.microsoft.com/en-us/azure/ai-studio/concepts/content-filtering?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Content Filtering</a> powered by the <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Content Safety</a> service. The service works by running the user input (prompt) and the generated output (completion) through <em>an ensemble of classification models</em> that are trained to detect, and act on, identified caegories of harmful content.</p>
+<p>Azure AI Studio provides a default content safety filter, and allows you to create custom content filters with more tailored configurations if you opt-in to that capability first. These filters can then be <em>applied</em> to a model or app deployment to ensure that inputs and outputs are gated to meet your content safety requirements.</p>
+<p><img loading="lazy" src="https://learn.microsoft.com/en-us/azure/ai-studio/media/content-safety/content-filter/configure-threshold.png#lightbox" alt="Create Filter" class="img_ev3q"></p>
+<p>The screenshot shows the <a href="https://learn.microsoft.com/azure/ai-studio/concepts/content-filtering?ocid=buildia24_60days_blogs#content-filtering-categories-and-configurability" target="_blank" rel="noopener noreferrer">different content filtering categories</a> and the level of configurability each provides. This allows us to identify and mitigate different categories of issues (Violence, Hate, Sexual and Self-harm) by <strong>automatically detecting</strong> these in both user prompts (input) and model completions (output). An additional filter (optional) lets you enable filters for more advanced usage scenarios including <em>jailbreaks, protected content or code</em> as <a href="https://learn.microsoft.com/en-us/azure/ai-studio/concepts/content-filtering?ocid=buildia24_60days_blogs#more-filters-for-generative-ai-scenarios" target="_blank" rel="noopener noreferrer">described here</a>.</p>
+<p><img loading="lazy" src="https://learn.microsoft.com/en-us/azure/ai-studio/media/content-safety/content-filter/additional-models.png" alt="Content Filter" class="img_ev3q"></p>
+<p>Once the filters are applied, the deployment can be opened up in the Playground, or using an integrated web app, to validate that the filters work. Check out <a href="https://ignite.microsoft.com/en-US/sessions/5db0e51a-d8b1-4234-b149-31671a633ffc?source=sessions?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">this #MSIgnite session</a> from the Responsible AI team for strategies and examples for responsible AI practices with prompt engineering and retrieval augmented generation patterns in context.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-exercise">7. Exercise:<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#7-exercise" class="hash-link" aria-label="Direct link to 7. Exercise:" title="Direct link to 7. Exercise:">​</a></h2>
+<p>We covered a lot today - and that also brings us to the end of our journey into Azure AI in this series. Want to get hands-on experience with some of these concepts? Here are some suggestions:</p>
+<ol>
+<li>Walk through the <a href="https://aka.ms/aitour/contoso-chat?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Contoso Chat</a> sample end-to-end, and get familiar with the Azure AI Studio platform and the LLM Ops workflow for generative AI solutions.</li>
+<li>Explore the <a href="https://aka.ms/rai-hub/website?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Responsible AI Developer Hub</a> and try out the Content Safety and Prompt flow Evaluation workshops to get familiar with the Responsible AI principles and practices for generative AI.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-resources">8. Resources<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/deploying-your-copilot-on-azure#8-resources" class="hash-link" aria-label="Direct link to 8. Resources" title="Direct link to 8. Resources">​</a></h2>
+<p>We covered a lot this week!! But your learning journey with Generative AI development and Azure AI is just beginning. Want to keep going? Here are three resources to help you:</p>
+<ol>
+<li><a href="https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Studio for Developers</a></li>
+<li><a href="https://aka.ms/rai-hub/collection?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Responsible AI For Developers</a></li>
+<li><a href="https://aka.ms/aitour/contoso-chat?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Contoso Chat Sample</a></li>
+</ol>]]></content>
+        <author>
+            <name>#60Days Of IA</name>
+            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
+        </author>
+        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
+        <category label="60-days-of-IA" term="60-days-of-IA"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="hack-together" term="hack-together"/>
+        <category label="community-buzz" term="community-buzz"/>
+        <category label="ask-the-expert" term="ask-the-expert"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[4.4 Build a Copilot on Azure Code-First with Langchain]]></title>
         <id>https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain</id>
@@ -571,8 +726,8 @@ AI project by seamlessly integrating with deployed models and built-in AI servic
 <ul>
 <li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-contoso-chat-end-to-end" target="_blank" rel="noopener noreferrer"><strong>Day 1:</strong></a> Build the Contoso Chat app on Azure AI (end-to-end reference sample)</li>
 <li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-code-first-with-the-azure-ai-python-sdk" target="_blank" rel="noopener noreferrer"><strong>Day 2:</strong></a> Build a Copilot app on Azure AI with the Python SDK (quickstart)</li>
-<li><strong>Day 3:</strong> Build a Copilot app on Azure AI with promptflow (framework)</li>
-<li><strong>Day 4:</strong> Build a Copilot app on Azure AI with LangChain (framework)</li>
+<li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-prompt-flow" target="_blank" rel="noopener noreferrer"><strong>Day 3:</strong></a> Build a Copilot app on Azure AI with promptflow (framework)</li>
+<li><a href="https://azure.github.io/Cloud-Native/60DaysOfIA/build-a-copilot-on-azure-code-first-with-langchain" target="_blank" rel="noopener noreferrer"><strong>Day 4:</strong></a> Build a Copilot app on Azure AI with LangChain (framework)</li>
 <li><strong>Day 5:</strong> Deploy your Copilot app responsibly on Azure AI (advanced topics)</li>
 </ul>]]></content>
         <author>
