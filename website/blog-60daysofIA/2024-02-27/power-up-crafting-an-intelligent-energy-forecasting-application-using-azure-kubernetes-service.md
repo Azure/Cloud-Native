@@ -66,7 +66,7 @@ Next, you’ll meet KAITO, a tool that streamlines deploying AI applications in 
 
 ## Adding Intelligence to the App
 
-The second part of this series dives into the more practical aspects of building the Intelligent App. You’ll leverage an open-source energy dataset alongside powerful tools like XGBoost and a custom Python API to craft a forecasting model that predicts future energy demands with speed and precision.
+The [second part of this series](https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-2) dives into the more practical aspects of building the Intelligent App. You’ll leverage an open-source energy dataset alongside powerful tools like XGBoost and a custom Python API to craft a forecasting model that predicts future energy demands with speed and precision.
 
 Integrating these tools with AKS and Azure Container Registry highlights the high-impact relationship between robust data processing capabilities and scalable cloud infrastructure. Hands-on examples and streamlined code will guide you through setting up the environment, processing the dataset, and deploying the forecasting model.
 
