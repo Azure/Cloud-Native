@@ -54,7 +54,7 @@ To follow this tutorial, ensure you:
 For a sneak peek of the final product, check out the [complete project code](https://github.com/contentlab-io/Microsoft-Forecasting-Energy-Usage-with-Intelligent-Apps/tree/main/Part%202).
 
 :::info
-Checkout the Intelligent Apps on AKS: Episode 3, a technical deep dive hands-on training with an expert on how OpenCost, Prometheus, and Grafana with AKS can improve intelligent apps. 
+Checkout the [Intelligent Apps on AKS: Episode 3](https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_60days_blogs), a technical deep dive hands-on training with an expert on how OpenCost, Prometheus, and Grafana with AKS can improve intelligent apps. 
 :::
 
 ### Predicting Energy Consumption and Pricing with an Intelligent App
