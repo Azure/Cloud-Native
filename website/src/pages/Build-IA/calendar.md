@@ -1,6 +1,6 @@
 # Events Calendar
 
-#BuildIntelligentApps kicked off **mid-February** with initiatives to help you learn the tools, technologies and skills you need to modernize your applications and build differentiated experiences with AI! Look for these signature events & more:
+Build Intelligent Apps kicked off **mid-February** with initiatives to help you learn the tools, technologies and skills you need to modernize your applications and build differentiated experiences with AI! Look for these signature events & more:
 
  * 🎙 **Ask The Expert** - (free, online) with the Azure Product Group across two time zones–Americas + EMEA and APAC + ANZ
  * 👩🏽‍💻 **Learn Live** - live training series on building intelligent apps end-to-end on Azure with AI.
@@ -45,7 +45,7 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 * Apr 10 | Learn Live Serverless – [Ep 03: Azure Container Apps Uncovered: Scenarios, Workloads, and Portability](https://aka.ms/serverless-learn-live/ep3?ocid=buildia24_website)
 * Apr 17 | Learn Live Serverless – [Ep 04: Build Intelligent Apps with .NET and Serverless on Azure](https://aka.ms/serverless-learn-live/ep4?ocid=buildia24_website)
 * 🎯 Apr 15 | [#CloudSkillsChallenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills) ends
-* ✍🏽 Apr 15 | #60Days of Intelligent Apps ends
+* ✍🏽 Apr 15 | [#60Days of Intelligent Apps](https://aka.ms/build-ia/60days) ends
 
 ## May 2024
 
