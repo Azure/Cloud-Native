@@ -97,6 +97,11 @@ const config = {
             label: "Blog",
             position: "left",
           },
+          {
+            to: "/Build-IA/calendar/",
+            label: "Calendar",
+            position: "left",
+          },
           // {
           //   to: "/Build-IA/calendar",
           //   label: "Calendar",
