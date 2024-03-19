@@ -58,7 +58,7 @@ For a sneak peek of the final product, check out the [complete project code](htt
 In this tutorial, you’ll create a basic web interface that enables the user to input or upload energy usage data and parameters to generate future predictions of usage/pricing. Then, you’ll output the results and the report generated from the model into the web interface for easy viewing. Finally, you’ll deploy the Intelligent App using the AKS environment you set up in Part 1.
 
 :::info
-Checkout the [Intelligent Apps on AKS: Episode 4](https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_60days_blogs), a technical deep dive hands-on training with an expert on how to use AKS and Azure to take your intelligent app global.
+Checkout the **[Intelligent Apps on AKS: Episode 4](https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_60days_blogs)**, a technical deep dive hands-on training with an expert on how to use AKS and Azure to take your intelligent app global.
 :::
 
 #### Creating the Web Interface
@@ -239,7 +239,7 @@ kubectl apply -f service.yaml
 **Note:** After the deployment commands have been applied, the Forecast web app may take a few minutes to get up and running.
 
 :::info
-Complete the [Intelligent Apps Skills Challenge](https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs) to compete for the leaderboard and earn a Microsoft Learn Badge. 
+Complete the **[Intelligent Apps Skills Challenge](https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs)** to compete for the leaderboard and earn a Microsoft Learn Badge. 
 :::
 
 ##### Running the Web App
