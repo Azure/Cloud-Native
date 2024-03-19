@@ -3,7 +3,7 @@ date: 2024-03-195T09:00
 slug: forecasting-energy-usage-with-intelligent-apps-2
 title: "Forecasting Energy Usage with Intelligent Apps Part 2"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
