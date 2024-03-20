@@ -29,7 +29,6 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 * 👩🏽‍💻 Mar 6 | #LearnLive Kubernetes – [Ep 03: Enhance Observability of Your Intelligent Apps on AKS](https://developer.microsoft.com/en-us/reactor/events/21816/?ocid=buildia24_website)
 * 🎙 Mar 7 | #AskTheExpert – [Azure Cosmos DB](https://reactor.microsoft.com/en-us/reactor/events/21692/?ocid=buildia24_website)
 * 👩🏽‍💻 Mar 13 | #LearnLive Kubernetes – [Ep 04: Taking Your Intelligent App Global with AKS](https://developer.microsoft.com/en-us/reactor/events/21817/?ocid=buildia24_website)
-* 🎙 Mar 21 | #AskTheExpert – [Azure AI](https://reactor.microsoft.com/en-us/reactor/events/21694/?ocid=buildia24_website)
 
 ### KubeCon EU
 
@@ -39,6 +38,7 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 ## April 2024​
 ### Build #IntelligentApps
 
+* 🎙 Apr 1 | #AskTheExpert – [Azure AI](https://reactor.microsoft.com/en-us/reactor/events/21694/?ocid=buildia24_website)
 * Apr 2 | Learn Live Serverless – [Ep 01: Build Intelligent Apps with Serverless Containers on Azure Container Apps](https://aka.ms/serverless-learn-live/ep1?ocid=buildia24_website)
 * Apr 3 | Learn Live Serverless – [Ep 02: From Day Zero To Production with Azure Container Apps](https://aka.ms/serverless-learn-live/ep2?ocid=buildia24_website)​
 * 🎙 Apr 4 | #AskTheExpert – [Azure Functions](https://reactor.microsoft.com/en-us/reactor/events/21691/?ocid=buildia24_AE_website)
