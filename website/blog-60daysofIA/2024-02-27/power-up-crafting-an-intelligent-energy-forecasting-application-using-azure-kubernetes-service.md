@@ -78,7 +78,7 @@ Complete the **[Intelligent Apps Skills Challenge](https://aka.ms/intelligent-ap
 
 ## Building a Web Interface
 
-As the concluding installment of our series, part 3 assembles all the pieces by introducing a user-friendly web interface. Here, users can input or upload their energy usage data and parameters, after which the Intelligent App will generate future predictions on usage and pricing.
+As the concluding installment of our series, [part 3](https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-3) assembles all the pieces by introducing a user-friendly web interface. Here, users can input or upload their energy usage data and parameters, after which the Intelligent App will generate future predictions on usage and pricing.
 
 This web front end serves as the direct point of interaction with your AKS-hosted application, seamlessly displaying the reports and predictions the AI model produces.
 
