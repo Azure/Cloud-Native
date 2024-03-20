@@ -1,5 +1,5 @@
 ---
-date: 2024-03-20T09:00
+date: 2024-03-05T09:10
 slug: forecasting-energy-usage-with-intelligent-apps-3
 title: "2.3 Forecasting Energy Usage with Intelligent Apps Part 3"
 authors: [cnteam]
@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
-![Graphic with a bar chart in a computer-like window in the top-right corner. To the left of the graph is a circle with a lightning bolt in it. At the bottom of the graphic is text that reads, "Forecasting Energy Usage with Intelligent Apps: Adding a Website Interface."](../../static/img/60-days-of-ia/blogs/2024-03-20/2-3-1.png)
+![Graphic with a bar chart in a computer-like window in the top-right corner. To the left of the graph is a circle with a lightning bolt in it. At the bottom of the graphic is text that reads, "Forecasting Energy Usage with Intelligent Apps: Adding a Website Interface."](../../static/img/60-days-of-ia/blogs/2024-03-05/2-3-1.png)
 
 *This three-part series demonstrates how to create an Intelligent App that forecasts future energy consumption and pricing based on historical data. In this final installment of the series, you’ll create a basic web interface that enables the user to input energy usage data and parameters, output the results and the model-generated report into the web interface for easy viewing. Finally, you’ll deploy using the AKS environment set up in Part 1. *
 
@@ -257,7 +257,7 @@ forecast-web-service   LoadBalancer   10.0.81.68   <EXTERNAL-IP>   80:30805/TCP
 
 Now, paste the `<External-IP>` into a new web browser tab to test your Forecast web app:
 
-![Screenshot of the Predicting Energy Pricing app open in a browser.](../../static/img/60-days-of-ia/blogs/2024-03-20/2-3-2.png)
+![Screenshot of the Predicting Energy Pricing app open in a browser.](../../static/img/60-days-of-ia/blogs/2024-03-05/2-3-2.png)
 
 Fill in the form with the energy fields, plus the date and time, and hit **Submit**.
 
@@ -265,7 +265,7 @@ Once you submit the form, you’ll see predictions for energy prices categorized
 
 Once the form is submitted, the Forecast web queries the model trained in Part 2 and obtains the forecast price. Then, it accesses the Forecast API service, which is hosted in your AKS cluster, to produce the summary report using the generative capabilities of the Llama2 Chat model:
 
-![Screenshot of the results in the Forecast  app. It includes an analysis of generation sources and their respective usage, a total for the actual load, and a price forecast.](../../static/img/60-days-of-ia/blogs/2024-03-20/2-3-3.png)
+![Screenshot of the results in the Forecast  app. It includes an analysis of generation sources and their respective usage, a total for the actual load, and a price forecast.](../../static/img/60-days-of-ia/blogs/2024-03-05/2-3-3.png)
 
 ### Why Build Intelligent Apps with KAITO?
 

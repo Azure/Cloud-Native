@@ -1,5 +1,5 @@
 ---
-date: 2024-03-19T09:00
+date: 2024-03-05T09:05
 slug: forecasting-energy-usage-with-intelligent-apps-2
 title: "2.2 Forecasting Energy Usage with Intelligent Apps Part 2"
 authors: [cnteam]
@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
-![Graphic of a bar chart with a magnifying glass in front of it. To the left of the magnifying glass is a lightning bolt. At the bottom of the graphic is text that reads, "Forecasting Energy Usage with Intelligent Apps: Making Predictions."](../../static/img/60-days-of-ia/blogs/2024-03-19/2-2-1.png)
+![Graphic of a bar chart with a magnifying glass in front of it. To the left of the magnifying glass is a lightning bolt. At the bottom of the graphic is text that reads, "Forecasting Energy Usage with Intelligent Apps: Making Predictions."](../../static/img/60-days-of-ia/blogs/2024-03-05/2-2-1.png)
 
 *This three-part series demonstrates how to create an Intelligent App that forecasts future energy consumption and pricing based on historical data. In this second article, you’ll build out an app that analyzes historical data on energy consumption to build a forecasting model that forecasts future energy usage/pricing based on parameters input by the user.*
 
@@ -151,7 +151,7 @@ The output of the code snippet above should look like the following:
 
 ![Screenshot of output code in the terminal. It reads, "Fitting 5 folds for each of 6 candidates, totalling 30 fits
 Test RMSW: 5.738308690044228
-Test R2 Score: 0.8378464489048971](../../static/img/60-days-of-ia/blogs/2024-03-19/2-2-2.png)
+Test R2 Score: 0.8378464489048971](../../static/img/60-days-of-ia/blogs/2024-03-05/2-2-2.png)
 
 After fitting the model with cross-validation and hyperparameter tuning, you’ll see an average root mean squared error (RMSE) of approximately 5.74 and an R-squared (R2) score of about 0.84 on the test data. So, the R-squared values show promising performance in predicting energy prices!
 
