@@ -59,10 +59,10 @@ Often embracing an “everything as code” philosophy, platform engineering ens
 Platform engineering supports the entire lifecycle of Intelligent Apps, from conceptualization to deployment and scaling:
 
 * **Conceptualization and design**—Platform engineering teams collaborate with app developers, data scientists, and stakeholders to grasp Intelligent Apps’ requirements. They offer tech insights, aiding in tech selection and architecture design for scalability, reliability, and performance. Platform engineers help design data architecture, encompassing pipelines, storage, and processing frameworks. They also provide start-right templates that ensure you can start the development process correctly, adhering to policy, following best practices, and utilizing the most relevant technologies.
-* **Development and testing**—Platform engineers configure development environments, giving you tools for efficient coding. They also establish continuous integration and continuous delivery (CI/CD) pipelines for automated processes and offer testing infrastructures. Tools like Azure Pipelines and Azure Test Plans help. By putting the right infrastructure in place—and empowering you with enough self-service autonomy to utilize this infrastructure—platform engineering allows for more focused and consistent development and testing cycles.
+* **Development and testing**—Platform engineers configure development environments, giving you tools for efficient coding. They also establish continuous integration and continuous delivery (CI/CD) pipelines for automated processes and offer testing infrastructures. Tools like [Azure Pipelines](https://azure.microsoft.com/products/devops/pipelines/?ocid=buildia24_60days_blogs) and [Azure Test Plans](https://azure.microsoft.com/products/devops/test-plans/?ocid=buildia24_60days_blogs) help. By putting the right infrastructure in place—and empowering you with enough self-service autonomy to utilize this infrastructure—platform engineering allows for more focused and consistent development and testing cycles.
 * **Model training and optimization**—Using technologies like distributed computing and GPU acceleration, platform engineers work with data scientists to establish scalable infrastructure for model training. They enhance training efficiency by adjusting hardware setups, refining data pipelines, and employing parallel processing methods. Additionally, they integrate model monitoring tools for performance tracking and retraining.
 * **Deployment and scaling**—Platform engineers create automated deployment pipelines and infrastructure templates for deploying Intelligent Apps across various environments. They guarantee reliable, scalable processes, monitor performance, and use tools like Kubernetes for containerized workloads, ensuring scalability, resilience, and portability.
-* **Monitoring and maintenance**—Platform engineers deploy monitoring and observability tools, like Azure Monitor, for real-time tracking of Intelligent Apps’ health, performance, and usage. They set up alert systems and automated responses, ensuring proactive issue detection and minimizing downtime. Regular performance tuning, capacity planning, and security audits optimize infrastructure efficiency.
+* **Monitoring and maintenance**—Platform engineers deploy monitoring and observability tools, like [Azure Monitor](https://azure.microsoft.com/products/monitor/?ocid=buildia24_60days_blogs), for real-time tracking of Intelligent Apps’ health, performance, and usage. They set up alert systems and automated responses, ensuring proactive issue detection and minimizing downtime. Regular performance tuning, capacity planning, and security audits optimize infrastructure efficiency.
 
 Platform engineering ensures scalability, improves reliability through optimized performance, and fosters efficiency by automating workflows—aspects that make for more powerful, performant Intelligent Apps.
 
@@ -76,7 +76,7 @@ To illustrate the impact of platform engineering on developing Intelligent Apps,
 
 ##### The Initial Phase
 
-In the traditional software development approach, the initial phase typically involves requirements gathering followed by siloed development stages. Comparatively, a platform engineering approach involves embracing integrated planning and development stages. Teams collaborate from the beginning, leveraging Azure’s cloud capabilities for streamlined workflows. Azure services, such as Azure DevOps, facilitate seamless coordination between development, operations, and product teams, ensuring alignment with business objectives.
+In the traditional software development approach, the initial phase typically involves requirements gathering followed by siloed development stages. Comparatively, a platform engineering approach involves embracing integrated planning and development stages. Teams collaborate from the beginning, leveraging Azure’s cloud capabilities for streamlined workflows. Azure services, such as [Azure DevOps](https://azure.microsoft.com/products/devops/?ocid=buildia24_60days_blogs), facilitate seamless coordination between development, operations, and product teams, ensuring alignment with business objectives.
 
 From the outset, platform engineering supports your development efforts with a templated approach to creating new apps or services. Platform engineers often create start-right templates based on best practices, industry standards, or organizational guidelines to ensure consistency, efficiency, and quality from the project’s conception. These templates may encompass IaC templates, service catalogs, or repositories containing pre-built components and libraries you can use to accelerate development.
 
@@ -88,9 +88,9 @@ Traditionally, development progresses linearly with limited flexibility for adap
 
 By empowering you with self-service platforms and powerful automation, a well-engineered platform expedites your development efforts. Self-service interfaces simplify provisioning infrastructure resources such as virtual machines, containers, databases, storage, and networking for use in these phases. You can request and provision the resources you need on-demand without waiting for manual intervention from infrastructure teams.
 
-Leveraging Azure services like Azure Kubernetes Service (AKS) and Azure App Service makes deployment automated and scalable, ensuring consistent performance across environments.
+Leveraging Azure services like [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service?ocid=buildia24_60days_blogs) (AKS) and [Azure App Service](https://azure.microsoft.com/products/app-service?ocid=buildia24_60days_blogs) makes deployment automated and scalable, ensuring consistent performance across environments.
 
-Additionally, Azure’s AI-specific tools—including Azure Machine Learning, Data Science Virtual Machines (DSVMs), and Azure AI Language—make developing and deploying robust Intelligent Apps straightforward.
+Additionally, Azure’s AI-specific tools—including [Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?ocid=buildia24_60days_blogs), [Data Science Virtual Machines](https://azure.microsoft.com/products/virtual-machines/data-science-virtual-machines/?ocid=buildia24_60days_blogs#overview) (DSVMs), and [Azure AI Language](https://azure.microsoft.com/products/ai-services/ai-language/?ocid=buildia24_60days_blogs)—make developing and deploying robust Intelligent Apps straightforward.
 
 ##### The Maintenance Phase
 
@@ -98,9 +98,9 @@ During the maintenance phase, the benefits of platform engineering shine even br
 
 Platform engineering selects, deploys, and configures infrastructure monitoring tools that provide visibility into the underlying infrastructure components’ health and performance. By letting you access these metrics directly, platform engineering arms you with the information you need to make informed decisions for maintenance and optimization.
 
-Platform engineering enables teams to iterate rapidly based on real-time insights, leveraging Azure’s analytics and monitoring tools to gather actionable data. For instance, Azure Monitor and Application Insights enable proactive monitoring and efficient troubleshooting, minimizing downtime and optimizing performance. Additionally, Azure DevOps facilitates iterative improvements through feature flags and A/B testing, so teams can gather feedback and iterate quickly.
+Platform engineering enables teams to iterate rapidly based on real-time insights, leveraging Azure’s analytics and monitoring tools to gather actionable data. For instance, [Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/overview?ocid=buildia24_60days_blogs) and [Application Insights](https://learn.microsoft.com/azure/azure-monitor/app/app-insights-overview?ocid=buildia24_60days_blogs) enable proactive monitoring and efficient troubleshooting, minimizing downtime and optimizing performance. Additionally, Azure DevOps facilitates iterative improvements through feature flags and A/B testing, so teams can gather feedback and iterate quickly.
 
-Furthermore, Azure’s AI-powered tools—including AI Anomaly Detector and Azure AI Metrics Advisor—support analytics and anomaly detection, allowing teams to address issues before they impact users.
+Furthermore, Azure’s AI-powered tools—including [AI Anomaly Detector](https://azure.microsoft.com/products/ai-services/ai-anomaly-detector/?ocid=buildia24_60days_blogs) and [Azure AI Metrics Advisor](https://azure.microsoft.com/products/ai-services/ai-metrics-advisor/?ocid=buildia24_60days_blogs)—support analytics and anomaly detection, allowing teams to address issues before they impact users.
 
 #### The Benefits of Platform Engineering
 
@@ -113,7 +113,7 @@ Let’s review some of the benefits of using platform engineering over tradition
 * **Operational efficiency**—Platform engineering improves efficiency through automation, standardized processes, and centralized management. This contrasts with traditional methods, where operational tasks are more manual, leading to inefficiencies and increased costs.
 
 :::info
-Complete the Intelligent Apps Skills Challenge to compete for the leaderboard and earn a Microsoft Learn Badge.
+Complete the **[Intelligent Apps Skills Challenge](https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs)** to compete for the leaderboard and earn a Microsoft Learn Badge.
 :::
 
 ### Conclusion
