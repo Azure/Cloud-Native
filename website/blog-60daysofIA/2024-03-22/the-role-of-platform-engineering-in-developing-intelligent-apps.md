@@ -7,7 +7,7 @@ draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-keywords: [azure, ai-studio, automation, accelerator]
+keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 60-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
 description: "Azure and platform engineering pave the way for the efficient development, deployment, and maintenance of Intelligent Apps, triumphing over traditional approaches." 
 tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
@@ -30,175 +30,96 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
+![The Role of Platform Engineering in Developing Intelligent Apps](../../static/img/60-days-of-ia/blogs/2024-03-22/5-1.png)
 
-Welcome to `Day 5️⃣` of our journey **Building An AI App End-to-End On Azure!**. It's time to wrap-up the week with a look at two key topics - _deployment_ and _responsible AI_! Ready? Let's go!
+## The Role of Platform Engineering in Developing Intelligent Apps
 
-## What You'll Learn In This Post
- * Deploying the chat AI (Contoso Chat)
- * Deploying the chat UI (Contoso Web)
- * Automate Deployments (CI/CD)
- * Accelerate Solutions (Enterprise)
- * Evaluate & Mitigate Harms (Responsible AI)
- * Exercise: Explore training resources.   
- * Resources: [**Azure AI Studio Code-First Collection**](https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs) 
+Intelligent Apps leverage advanced technologies like machine learning (ML), data analytics, and artificial intelligence (AI) to enhance decision-making, content generation, and user experiences. These apps incorporate AI and ML components to process data, derive insights, and adapt to user behavior to boost efficiency and personalization. 
 
-<br/>
+  
 
-![Deploy with Responsible AI](../../static/img/60-days-of-ia/blogs/2024-03-15/banner.png)
+Platform engineering is integral to building robust Intelligent Apps. It’s the DevOps-inspired practice of designing, building, and maintaining the infrastructure and systems that underpin software applications. This includes strengthening security, maintaining compliance, controlling costs, and enhancing business value within a governed framework and via an internal developer platform.
 
----
-## 1. Revisiting Contoso Chat
+Intelligent Apps require careful planning and execution as they necessitate complex processes like data management, model optimization and training, algorithm selection, and development. Fortunately, platform engineering helps with these tasks.
 
-We started the week by talking about LLM Ops, and identifying the three core phases of the end-to-end lifecycle for a generative AI application. In the previous posts, we've mostly focused on the first two phases: **ideating** (building & validating a starter app) and **augmenting** (evaluating & iterating app for quality). In this post, we'll focus on phase 3: **operationalizing** the application to get it ready for real-world usage.
+Coupled with Azure services, platform engineering creates a robust foundation for developing, deploying, and maintaining Intelligent Apps. With the help of platform engineering, you’re free to focus on what you do best as a developer. Instead of worrying about the details of infrastructure, ensuring compliance, or navigating the maze of underlying technologies that support modern apps, you can put your efforts toward designing, implementing, and iterating on their Intelligent Apps.
 
-![LLM Ops](../../static/img/60-days-of-ia/blogs/2024-03-15/llm-app-lifecycle.png)
+With platform engineering practices, Azure’s scalable infrastructure streamlines the development lifecycle, enabling rapid prototyping and iteration. Azure services—including Azure’s AI portfolio and Azure OpenAI Service—enhance app intelligence. Furthermore, Azure’s DevOps-supporting tools automate deployment and maintenance tasks, ensuring seamless updates and operational efficiency.
 
-First, let's remind ourselves of the high-level architecture for a copilot application. Our solution has two components:
- - **Backend**: The _chat AI_ app that is deployed to provide a hosted API endpoint.
- - **Frontend**: The _chat UI_ app that is deployed to support user interactions with API.
+Let’s explore how Azure and platform engineering pave the way for the efficient development, deployment, and maintenance of Intelligent Apps.
 
-Let's look at what deployment means in each case:
+### How Platform Engineering Paves the Way for Intelligent Apps
 
-![Copilot Arch](../../static/img/60-days-of-ia/blogs/2024-03-15/copilot-architecture.png)
+The rise of cloud computing and microservices has laid the groundwork for platform engineering techniques.
 
-## 2. Deploy your chat AI app
+As applications have become more advanced in their functionality, so too has the underlying ecosystem necessary to deploy, manage, and maintain them. This shift necessitated creating specialized platforms to manage deployment complexities using platform engineering processes. Cloud resources and Infrastructure as Code (IaC) further revolutionized platform engineering by automating infrastructure provisioning and management via code. This streamlined resource deployment, improved scalability, and boosted reliability across environments.
 
-In our example, the chat AI is implemented by the [Contoso Chat](https://aka.ms/aitour/contoso-chat?ocid=buildia24_60days_blogs) sample. Deploying this chat AI solution involves [**three steps**](https://learn.microsoft.com/azure/ai-studio/concepts/deployments-overview?ocid=buildia24_60days_blogs).
- 1. Deploy the Models
- 1. Deploy the Flows
- 1. Deploy the Web App
+While these technologies provide substantial benefits to developers, they require a careful strategy to be truly effective. This is where platform engineering truly shines. A well-engineered platform supports developer efforts through the concept of self-service with guardrails. It facilitates the autonomy you need in your workflows while simultaneously offering a set of organizational constraints that free you from unnecessary context switching, helping dissolve silos between teams.
 
-Let's look at the first two in this section, starting with **[model deployment](https://learn.microsoft.com/azure/ai-studio/concepts/deployments-overview?ocid=buildia24_60days_blogs#deploying-models)**. Azure AI Studio has a rich model catalog from providers including OpenAI, HuggingFace, Meta and Microsoft Research. Some models can be deployed _as a service_ (with a pay-as-you-go subscription) while others require _hosted, managed infra_ (with a standard Azure subscription). Our chat AI uses three models, all of which used the hosted, managed option.
-  - `gpt-35-turbo` - for chat completion (core function)
-  - `text-embedding-ada-002` - for embeddings (query vectorization)
-  - `gpt-4` - for chat evaluation (responsible AI)
+Often embracing an “everything as code” philosophy, platform engineering ensures that everything from infrastructure to deployment is easily managed. The “as code” concept allows for infrastructure, policy, security, and all cloud configurations to be maintained like any other form of code using familiar tools and repositories. This approach offers a powerful method for achieving self-service autonomy, enabling you to make changes in a format you’re already familiar with.
 
-Next, let's talk about **[deploying flows](https://learn.microsoft.com/azure/ai-studio/how-to/flow-deploy?tabs=azure-studio?ocid=buildia24_60days_blogs)**. There are two kinds of flows we'll use in our chat AI - _completion flows_ (that we'll use for real-time inference) and _evaluation flows_ (that we'll use for quality assessment). Azure AI Studio provides [low-code deployment](https://learn.microsoft.com/azure/ai-studio/how-to/flow-deploy?tabs=azure-studio?ocid=buildia24_60days_blogs#create-an-online-deployment) via the UI and [code-first deployment](https://learn.microsoft.com/azure/ai-studio/how-to/flow-deploy?tabs=python?ocid=buildia24_60days_blogs#create-an-online-deployment) using the Azure AI SDK. In our Contoso Chat sample, we use the SDK to [upload the flow](https://github.com/Azure-Samples/contoso-chat/blob/main/deployment/push_and_deploy_pf.ipynb) to Azure, then deploy it using the UI as shown.
-  ![Deploy Contoso Chat](../../static/img/60-days-of-ia/blogs/2024-03-15/contoso-chat-deploy.png)
+Platform engineering supports the entire lifecycle of Intelligent Apps, from conceptualization to deployment and scaling:
 
-Finally, let's talk about **[deploying web apps](https://learn.microsoft.com/azure/ai-studio/concepts/deployments-overview?ocid=buildia24_60days_blogs#deploying-web-apps)**. Here, the web app is a _chat UI_ that can invoke requests on the deployed chat AI and validate the functionality in production. There are three options to consider:
-1. **Built-in Testing UI**. When you deploy your flow via Azure AI Studio, you can visit the deployment details page and navigate to the _Test_ tab, to get a built-in testing sandbox as shown. This provides a quick way to test prompts with each new iteration, in a manual (interactive) way.
-  ![Deployment Testing](../../static/img/60-days-of-ia/blogs/2024-03-15/contoso-chat-test.png)
-1. **Deploy as Web App**. Azure AI Studio also provides a _Playground_ where you can deploy models directly (for chat completion) and _add your data (preview)_ (for grounding responses) using Azure AI Search and Blob Storage resources, to customize that chat experience. Then _deploy a new web app_ directly from that interface, to an Azure App Service resource.
-  ![Deploy as web app](https://learn.microsoft.com/azure/ai-studio/media/tutorials/chat-web-app/deploy-web-app.png?ocid=buildia24_60days_blogs)
-3. **Dedicated Web App**. This is the option we'll explore in the next section.
+* **Conceptualization and design**—Platform engineering teams collaborate with app developers, data scientists, and stakeholders to grasp Intelligent Apps’ requirements. They offer tech insights, aiding in tech selection and architecture design for scalability, reliability, and performance. Platform engineers help design data architecture, encompassing pipelines, storage, and processing frameworks. They also provide start-right templates that ensure you can start the development process correctly, adhering to policy, following best practices, and utilizing the most relevant technologies.
+* **Development and testing**—Platform engineers configure development environments, giving you tools for efficient coding. They also establish continuous integration and continuous delivery (CI/CD) pipelines for automated processes and offer testing infrastructures. Tools like Azure Pipelines and Azure Test Plans help. By putting the right infrastructure in place—and empowering you with enough self-service autonomy to utilize this infrastructure—platform engineering allows for more focused and consistent development and testing cycles.
+* **Model training and optimization**—Using technologies like distributed computing and GPU acceleration, platform engineers work with data scientists to establish scalable infrastructure for model training. They enhance training efficiency by adjusting hardware setups, refining data pipelines, and employing parallel processing methods. Additionally, they integrate model monitoring tools for performance tracking and retraining.
+* **Deployment and scaling**—Platform engineers create automated deployment pipelines and infrastructure templates for deploying Intelligent Apps across various environments. They guarantee reliable, scalable processes, monitor performance, and use tools like Kubernetes for containerized workloads, ensuring scalability, resilience, and portability.
+* **Monitoring and maintenance**—Platform engineers deploy monitoring and observability tools, like Azure Monitor, for real-time tracking of Intelligent Apps’ health, performance, and usage. They set up alert systems and automated responses, ensuring proactive issue detection and minimizing downtime. Regular performance tuning, capacity planning, and security audits optimize infrastructure efficiency.
 
-## 3. Deploy your chat UI app
+Platform engineering ensures scalability, improves reliability through optimized performance, and fosters efficiency by automating workflows—aspects that make for more powerful, performant Intelligent Apps.
 
-The Contoso Chat sample comes with a dedicated [Contoso Web](https://github.com/Azure-Samples/contoso-web) application that is implemented using the Next.js framework with support for static site generation. This provides a rich "Contoso Outdoors" website experience for users as shown below.
+:::info
+Explore the [Platform Engineering Guide](https://learn.microsoft.com/platform-engineering/?ocid=buildia24_60days_blogs) to learn how platform engineering teams can use building blocks from Microsoft and other vendors to create deeply personalized, optimized, and secure developer experiences.
+:::
 
-![Contoso Web](../../static/img/60-days-of-ia/blogs/2024-03-15/app-contoso-chat-concept.png)
+#### Platform Engineering in Action
 
-To use that application, simply [setup the endpoint variables](https://github.com/Azure-Samples/contoso-web?tab=readme-ov-file#setting-up-endpoints) for Contoso Chat and deploy the app to Azure App Service. Alternatively, you can use [this fork of the application](https://github.com/nitya/contoso-web/tree/main-codespaces-swa?tab=readme-ov-file) to explore a version that can be run in GitHub Codespaces (for development) and deployed to Azure Static Web Apps (for production) using GitHub Actions for automated deploys. Once deployed, you can click the _chat_ icon onscreen *bottom right) to see the chat dialog as shown in the screenshot above, and interact with the deployed Contoso chat AI.
+To illustrate the impact of platform engineering on developing Intelligent Apps, let’s compare the journey of developing one such app using a traditional software development methodology versus using an Azure-supported platform engineering approach.
 
+##### The Initial Phase
 
-## 4. Automate your chat AI deployment
+In the traditional software development approach, the initial phase typically involves requirements gathering followed by siloed development stages. Comparatively, a platform engineering approach involves embracing integrated planning and development stages. Teams collaborate from the beginning, leveraging Azure’s cloud capabilities for streamlined workflows. Azure services, such as Azure DevOps, facilitate seamless coordination between development, operations, and product teams, ensuring alignment with business objectives.
 
-The [Contoso Chat sample](https://github.com/Azure-Samples/contoso-chat) is a **constantly-evolving** application sample that is updated regularly to reflect both the changes to Azure AI Studio (preview) and showcase new capabilities for end-to-end development workflows. You can currently explore two additional capabilities implemented in the codebase, to streamline your deployment process further.
- 1. **Using GitHub Actions**. The sample has instructions to [Deploy with GitHub Actions](https://github.com/Azure-Samples/contoso-chat?tab=readme-ov-file#9-deploy-with-github-actions) instead of the manual Azure AI Studio based deployment step we showed earlier. By setting up the actions workflow, you can automated deployments on every commit or PR, and get a baseline CI/CD pipeline for your chat AI, to build on later.
- 1. **Using Azure Developer CLI**. The sample was [just azd-enabled](https://github.com/Azure-Samples/contoso-chat/pull/74) recently, making it possible to use the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-templates?tabs=csharp?ocid=buildia24_60days_blogs) as a unified tool to accelerate the end-to-end process from _provisioning_ the resources to _deploying_ the solution. The [azd template](https://github.com/Azure-Samples/contoso-chat/blob/main/azure.yaml) adds support for _infrastructure-as-code_, allowing your application to have a consistent and repeatable deployment blueprint for all users. You can also [browse the azd template gallery](https://azure.github.io/awesome-azd/?tags=ai&tags=chatgpt) for other _ChatGPT_ style application examples.
+From the outset, platform engineering supports your development efforts with a templated approach to creating new apps or services. Platform engineers often create start-right templates based on best practices, industry standards, or organizational guidelines to ensure consistency, efficiency, and quality from the project’s conception. These templates may encompass IaC templates, service catalogs, or repositories containing pre-built components and libraries you can use to accelerate development.
 
-Note that the Contoso Chat sample is a _demo application_ sample that is designed to showcase the capabilities of Azure AI Studio and Azure AI services. It is not a production-ready application, and should be used primarily as a learning tool and starting point for your own development. 
+Platform engineers help to define the core policies that govern resource provisioning and configuration. These policies might include restrictions on resource types, sizes, or regions, as well as rules for security, compliance, and cost management. With these guardrails in place, you can work without constantly looking over your shoulder to ensure you’re adhering to policy and best practices.
 
----
+##### Development and Deployment Phases
 
-## 5. Enterprise Architecture Options
+Traditionally, development progresses linearly with limited flexibility for adaptation. Deployment may encounter challenges due to disparate environments, leading to inconsistencies. Moreover, in traditional methods, siloing commonly occurs across design, development, testing, and deployment stages, hampering communication, slowing progress, creating inefficiencies, and hindering collaboration—ultimately resulting in disjointed outcomes.
 
-The objective of this series was to familiarize you with the Azure AI Studio (preview) platform and the capabilities it provides for building generative AI applications. And to give you a sense of how to build, run, test and deploy, your chat AI application for real-world use. But the platform is still in preview (and evolving rapidly). So what are your options if you want to build and deploy generative AI solutions at enterprise scale **today**? How can you design it using a well-architected cloud framework with **cloud-native technologies** like [Azure Container Apps](https://learn.microsoft.com/azure/container-apps/overview?ocid=buildia24_60days_blogs) or [Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/intro-kubernetes?ocid=buildia24_60days_blogs)? 
+By empowering you with self-service platforms and powerful automation, a well-engineered platform expedites your development efforts. Self-service interfaces simplify provisioning infrastructure resources such as virtual machines, containers, databases, storage, and networking for use in these phases. You can request and provision the resources you need on-demand without waiting for manual intervention from infrastructure teams.
 
-Here are some open-source samples and guidance you can explore to start with:
-1. [ChatGPT + Enterprise data with Azure Open AI and AI Search (Python)](https://github.com/Azure-Samples/azure-search-openai-demo/) - open-source sample that uses Azure App Service, Azure Open AI, Azure AI Search and Azure Blob Storage, for an enterprise-grade solution grounded in your (documents) data.
-1. [ChatGPT + Enterprise data with Azure Open AI and AI Search (.NET)](https://github.com/Azure-Samples/azure-search-openai-demo-csharp) - open-source sample chat AI for a fictitious company called "Contoso Electronics" using the application architecture shown below. [This blog post](https://devblogs.microsoft.com/dotnet/transform-business-smart-dotnet-apps-azure-chatgpt/?ocid=buildia24_60days_blogs) provides more details.
-  ![Chat GPT Enterprise](../../static/img/60-days-of-ia/blogs/2024-03-15/chatgpt-enterprise.png)
-1. [Chat with your data Solution Accelerator](https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator) - uses Azure App Service, Azure Open AI, Azure AI Search and Azure Blob Storage, for an end-to-end baseline RAG sample that goes beyond the [Azure OpenAI Service On Your Data](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/on-your-data-is-now-generally-available-in-azure-openai-service/ba-p/4059514?ocid=buildia24_60days_blogs) feature (GA in Feb 2024).''
-1. [Built a private ChatGPT style app with enterprise-ready architecture](https://techcommunity.microsoft.com/t5/microsoft-mechanics-blog/build-your-own-private-chatgpt-style-app-with-enterprise-ready/ba-p/4069529?ocid=buildia24_60days_blogs) - a blog post from the Microsoft Mechanics team that uses an [open-source chat UI sample](https://aka.ms/GitHubChatBotUI?ocid=buildia24_60days_blogs) and discusses how to [enhance the chat experience with Azure AI Studio](https://www.youtube.com/watch?v=IKcuod-JFYU&t=252s) and streamline setup by [using Azure Landing Zones](https://www.youtube.com/watch?v=IKcuod-JFYU&t=404s).
+Leveraging Azure services like Azure Kubernetes Service (AKS) and Azure App Service makes deployment automated and scalable, ensuring consistent performance across environments.
 
-We covered a lot today - but there's one last thing we should talk about before we wrap up. **Responsible AI**.
+Additionally, Azure’s AI-specific tools—including Azure Machine Learning, Data Science Virtual Machines (DSVMs), and Azure AI Language—make developing and deploying robust Intelligent Apps straightforward.
 
----
+##### The Maintenance Phase
 
-## 6. Responsible AI In Practice
+During the maintenance phase, the benefits of platform engineering shine even brighter. Traditional methods often struggle with managing ongoing updates and addressing user feedback promptly. Moreover, post-deployment maintenance using traditional methodology requires dedicated resources for ongoing support and updates.
 
-### 6.1 Principles of Responsible AI
+Platform engineering selects, deploys, and configures infrastructure monitoring tools that provide visibility into the underlying infrastructure components’ health and performance. By letting you access these metrics directly, platform engineering arms you with the information you need to make informed decisions for maintenance and optimization.
 
-By [one definition](https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2?ocid=buildia24_60days_blogs), Responsible AI is _approach to developing, assessing, and deploying AI systems in a safe, trustworthy, and ethical way_. The [Responsible AI standard](https://www.microsoft.com/ai/principles-and-approach?ocid=buildia24_60days_blogs) was developed by Microsoft as a framework for building AI systems, using 6 principles to guide our design thinking.
+Platform engineering enables teams to iterate rapidly based on real-time insights, leveraging Azure’s analytics and monitoring tools to gather actionable data. For instance, Azure Monitor and Application Insights enable proactive monitoring and efficient troubleshooting, minimizing downtime and optimizing performance. Additionally, Azure DevOps facilitates iterative improvements through feature flags and A/B testing, so teams can gather feedback and iterate quickly.
 
-![Responsible AI Standard](https://learn.microsoft.com/en-us/azure/machine-learning/media/concept-responsible-ai/concept-responsible-ml.png?view=azureml-api-2?ocid=buildia24_60days_blogs)
+Furthermore, Azure’s AI-powered tools—including AI Anomaly Detector and Azure AI Metrics Advisor—support analytics and anomaly detection, allowing teams to address issues before they impact users.
 
-|Principle|Description|
-|---|---|
-|Fairness|How might an AI system allocate opportunities, resources, or information in ways that are fair to the humans who use it?|
-|Reliability & Safety|How might the system function well for people across different use conditions and contexts, including ones it was not originally intended for?|
-|Privacy & Security|How might the system be designed to support privacy and security?.|
-|Inclusiveness|How might the system be designed to be inclusive of people of all abilities?|
-|Transparency|How might people misunderstand, misuse, or incorrectly estimate the capabilities of the system?|
-|Accountability|How can we create oversight so that humans can be accountable and in control?|
+#### The Benefits of Platform Engineering
 
-### 6.2 Implications for Generative AI
+Let’s review some of the benefits of using platform engineering over traditional development methods for your Intelligent Apps:
 
-The [Fundamentals of Responsible Generative AI](https://learn.microsoft.com/en-us/training/modules/responsible-generative-ai/?ocid=buildia24_60days_blogs) describes core guidelines for building  generative AI solutions _responsibly_ as a 4-step process:
-1. **Identify** potential harms relevant to your solution.
-1. **Measure** presence of these harms in outputs generated by your solution.
-1. **Mitigate** harms at multiple layers to minimize impact, and ensure transparent communication about potential risks to users.
-1. **Operate** your solution responsibly by defining and following a deployment and operational readiness plan.
+* **Reduced time to market**—Platform engineering accelerates software development through reusable infrastructure components, automation tools, and standardized workflows. This contrasts with traditional methods, which prolong development cycles due to manual processes and lack of automation.
+* **Improved app quality**—Platform engineering ensures consistency, repeatability, and reliability with standardized configurations, security policies, and automated testing. With traditional approaches, quality may suffer due to manual testing, ad-hoc configurations, and inconsistent environments.
+* **Scalability and resilience**—Intelligent Apps designed with platform engineering in mind have resilient infrastructure that supports seamless scalability thanks to automated scaling and fault-tolerant architecture. Traditional, manual development methods can’t compete.
+* **Enhanced ability to iterate based on user feedback**—Traditional methods face the constraints of manual processes and lengthy deployment cycles. Comparatively, platform engineering facilitates rapid iteration and experimentation with flexible platform infrastructure.
+* **Operational efficiency**—Platform engineering improves efficiency through automation, standardized processes, and centralized management. This contrasts with traditional methods, where operational tasks are more manual, leading to inefficiencies and increased costs.
 
-### 6.3 Identify Potential Harms
+:::info
+Complete the Intelligent Apps Skills Challenge to compete for the leaderboard and earn a Microsoft Learn Badge.
+:::
 
-The first step of the process is to identify potential harms in your application domain using a 4-step process:
- 1. Identify potential harms (offensive, unethical, fabrication) that may occur in generated content.
- 1. Assess likelihood of each occurrence, and severity of impact.
- 1. Test and verify if harms occur, and under what conditions.
- 1. Document and communicate potential harms to stakeholders.
+### Conclusion
 
-![4 steps](https://learn.microsoft.com/en-us/training/wwl-data-ai/responsible-generative-ai/media/identify-harms.png)
+Azure services and platform engineering have revolutionized the landscape of Intelligent Apps development, offering organizations unprecedented scalability, flexibility, and efficiency. And with Azure’s robust suite of tools, you can deliver intelligent solutions that drive growth and enhance customer experiences.
 
-
-### 6.4 Measure Presence of Harms
-
-[Evaluation of generative AI applications](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/evaluation-approach-gen-ai?ocid=buildia24_60days_blogs) is the process of measuring the presence of identified harms in the generated output. Think of it as a 3-step process:
-
- 1. Prepare a diverse selection of input prompts that may result in the potential harms documented.
- 1. Submit prompts to your AI application and retrieve generated output
- 1. **Evaluate** those responses using pre-defined criteria.
-
-Azure AI Studio provides many features and pathways to support evaluation. Start with _manual evaluation_ (small set of inputs, interactive) to ensure coverage and consistency. Then scale to _automated evaluation_ (larger set of inputs, flows) for increased coverage and operationalization.
-
-![Evaluation](https://learn.microsoft.com/en-us/azure/ai-studio/media/evaluations/evaluation-monitor-flow.png)
-
-But what _metrics_ can we use to quantify the quality of generated output? Quantifying accuracy is now complicated _because we don't have access to a ground truth or deterministic answer_ that can serve as a baseline. Instead, we can use [AI-assisted metrics](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/evaluation-metrics-built-in?ocid=buildia24_60days_blogs) - where we _instruct_ another LLM to score your generated output **for quality and safety** using the guidelines and criteria you provide.
-- **Quality** is measured using metrics like _relevance, coherence and fluency_.
-- **Safety** is measured using metrics like _groundedness and content harms_.
-
-In our _Contoso Chat_ app sample, we [show examples](https://github.com/Azure-Samples/contoso-chat/blob/main/eval/evaluate-chat-prompt-flow.ipynb) of local evaluation (with single and multiple metrics) and batch runs (for automated evaluation in the cloud). Here's an exmaple of what the output from the local evaluation looks like:
-
-![Local Eval](../../static/img/60-days-of-ia/blogs/2024-03-15/eval-local.png)
-
-
-### 6.5 Content Safety for Mitigation
-
-One of the most effective ways to mitigate harmful responses from generative AI models in Azure OpenAI is to use [Content Filtering](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/content-filtering?ocid=buildia24_60days_blogs) powered by the [Azure AI Content Safety](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview?ocid=buildia24_60days_blogs) service. The service works by running the user input (prompt) and the generated output (completion) through _an ensemble of classification models_ that are trained to detect, and act on, identified caegories of harmful content. 
-
-Azure AI Studio provides a default content safety filter, and allows you to create custom content filters with more tailored configurations if you opt-in to that capability first. These filters can then be _applied_ to a model or app deployment to ensure that inputs and outputs are gated to meet your content safety requirements.
-
-![Create Filter](https://learn.microsoft.com/en-us/azure/ai-studio/media/content-safety/content-filter/configure-threshold.png#lightbox)
-
-The screenshot shows the [different content filtering categories](https://learn.microsoft.com/azure/ai-studio/concepts/content-filtering?ocid=buildia24_60days_blogs#content-filtering-categories-and-configurability) and the level of configurability each provides. This allows us to identify and mitigate different categories of issues (Violence, Hate, Sexual and Self-harm) by **automatically detecting** these in both user prompts (input) and model completions (output). An additional filter (optional) lets you enable filters for more advanced usage scenarios including _jailbreaks, protected content or code_ as [described here](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/content-filtering?ocid=buildia24_60days_blogs#more-filters-for-generative-ai-scenarios).
-
-![Content Filter](https://learn.microsoft.com/en-us/azure/ai-studio/media/content-safety/content-filter/additional-models.png)
-
-Once the filters are applied, the deployment can be opened up in the Playground, or using an integrated web app, to validate that the filters work. Check out [this #MSIgnite session](https://ignite.microsoft.com/en-US/sessions/5db0e51a-d8b1-4234-b149-31671a633ffc?source=sessions?ocid=buildia24_60days_blogs) from the Responsible AI team for strategies and examples for responsible AI practices with prompt engineering and retrieval augmented generation patterns in context.
-
-## 7. Exercise: 
-
-We covered a lot today - and that also brings us to the end of our journey into Azure AI in this series. Want to get hands-on experience with some of these concepts? Here are some suggestions:
-
-1. Walk through the [Contoso Chat](https://aka.ms/aitour/contoso-chat?ocid=buildia24_60days_blogs) sample end-to-end, and get familiar with the Azure AI Studio platform and the LLM Ops workflow for generative AI solutions.
-1. Explore the [Responsible AI Developer Hub](https://aka.ms/rai-hub/website?ocid=buildia24_60days_blogs) and try out the Content Safety and Prompt flow Evaluation workshops to get familiar with the Responsible AI principles and practices for generative AI.
-
-## 8. Resources
-
-We covered a lot this week!! But your learning journey with Generative AI development and Azure AI is just beginning. Want to keep going? Here are three resources to help you:
-
-1. [Azure AI Studio for Developers](https://aka.ms/ai-studio/collection?ocid=buildia24_60days_blogs)
-1. [Responsible AI For Developers](https://aka.ms/rai-hub/collection?ocid=buildia24_60days_blogs)
-1. [Contoso Chat Sample](https://aka.ms/aitour/contoso-chat?ocid=buildia24_60days_blogs)
+As we look to the future, the potential of Intelligent Apps to provide substantial business value only continues to grow, promising even greater insights, automation, and competitive advantages. To learn more about the transformative power of Azure, join us at [Microsoft Build](https://build.microsoft.com/en-US/home?ocid=buildia24_60days_blogs).
