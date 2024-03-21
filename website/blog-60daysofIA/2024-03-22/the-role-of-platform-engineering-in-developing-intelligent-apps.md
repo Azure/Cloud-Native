@@ -34,17 +34,15 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ## The Role of Platform Engineering in Developing Intelligent Apps
 
-Intelligent Apps leverage advanced technologies like machine learning (ML), data analytics, and artificial intelligence (AI) to enhance decision-making, content generation, and user experiences. These apps incorporate AI and ML components to process data, derive insights, and adapt to user behavior to boost efficiency and personalization. 
+Intelligent Apps leverage advanced technologies like machine learning (ML), data analytics, and artificial intelligence (AI) to enhance decision-making, content generation, and user experiences. These apps incorporate AI and ML components to process data, derive insights, and adapt to user behavior to boost efficiency and personalization.
 
-  
-
-Platform engineering is integral to building robust Intelligent Apps. It’s the DevOps-inspired practice of designing, building, and maintaining the infrastructure and systems that underpin software applications. This includes strengthening security, maintaining compliance, controlling costs, and enhancing business value within a governed framework and via an internal developer platform.
+[Platform engineering](https://learn.microsoft.com/platform-engineering/what-is-platform-engineering?ocid=buildia24_60days_blogs) is integral to building robust Intelligent Apps. It’s the DevOps-inspired practice of designing, building, and maintaining the infrastructure and systems that underpin software applications. This includes strengthening security, maintaining compliance, controlling costs, and enhancing business value within a governed framework and via an internal developer platform.
 
 Intelligent Apps require careful planning and execution as they necessitate complex processes like data management, model optimization and training, algorithm selection, and development. Fortunately, platform engineering helps with these tasks.
 
 Coupled with Azure services, platform engineering creates a robust foundation for developing, deploying, and maintaining Intelligent Apps. With the help of platform engineering, you’re free to focus on what you do best as a developer. Instead of worrying about the details of infrastructure, ensuring compliance, or navigating the maze of underlying technologies that support modern apps, you can put your efforts toward designing, implementing, and iterating on their Intelligent Apps.
 
-With platform engineering practices, Azure’s scalable infrastructure streamlines the development lifecycle, enabling rapid prototyping and iteration. Azure services—including Azure’s AI portfolio and Azure OpenAI Service—enhance app intelligence. Furthermore, Azure’s DevOps-supporting tools automate deployment and maintenance tasks, ensuring seamless updates and operational efficiency.
+With platform engineering practices, Azure’s scalable infrastructure streamlines the development lifecycle, enabling rapid prototyping and iteration. Azure services—including Azure’s [AI portfolio](https://azure.microsoft.com/solutions/ai?ocid=buildia24_60days_blogs) and [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?ocid=buildia24_60days_blogs)—enhance app intelligence. Furthermore, [Azure’s DevOps-supporting tools](https://azure.microsoft.com/products?ocid=buildia24_60days_blogs#devops) automate deployment and maintenance tasks, ensuring seamless updates and operational efficiency.
 
 Let’s explore how Azure and platform engineering pave the way for the efficient development, deployment, and maintenance of Intelligent Apps.
 
