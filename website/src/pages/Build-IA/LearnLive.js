@@ -136,28 +136,28 @@ const ContentItemsServerless = [
 
     {
       title: 'Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep1.png',
+      imglink: '/img/60-days-of-ia/serverless-learnlive-ep1.PNG',
       link: "https://aka.ms/serverless-learn-live/ep1",
-      description: "Leverage Azure Developer CLI (azd) to deploy intelligent apps on ACA​.",
+      description: "Leverage Azure Developer CLI (azd) to deploy intelligent apps on ACA.",
       cta: "April 2, 2024"
     },
     {
       title: 'Bring Your Own AI Models to Intelligent Apps on AKS with Kaito',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep2.png',
+      imglink: '/img/60-days-of-ia/serverless-learnlive-ep2.PNG',
       link: "https://aka.ms/serverless-learn-live/ep2",
       description: "Take your intelligent apps to production with ACA using Bicep and GitHub Actions.",
       cta: "April 3, 2024"
     },
     {
       title: 'Enhance Observability of Your Intelligent Apps on AKS',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep3.png',
+      imglink: '/img/60-days-of-ia/serverless-learnlive-ep3.PNG',
       link: "https://aka.ms/serverless-learn-live/ep3",
       description: "Learn how to build portable, intelligent cloud native apps with ACA and Dapr.",
       cta: "April 10, 2024"
     },
     {
       title: 'Taking Your Intelligent App Global with AKS',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep4.png',
+      imglink: '/img/60-days-of-ia/serverless-learnlive-ep4.PNG',
       link: "https://aka.ms/serverless-learn-live/ep4",
       description: "Leverage the power of Serverless on Azure and Azure OpenAI with .NET.",
       cta: "April 17, 2024"
