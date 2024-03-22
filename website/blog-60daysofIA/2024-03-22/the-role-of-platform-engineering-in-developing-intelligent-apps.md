@@ -3,7 +3,7 @@ date: 2024-03-22T09:00
 slug: the-role-of-platform-engineering-in-developing-intelligent-apps
 title: "5 The Role of Platform Engineering in Developing Intelligent Apps"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
