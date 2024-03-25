@@ -88,3 +88,12 @@ When the page loads, choose an existing storage account if you already have one.
 
 Next, select the `styles.csv` file from the fashion dataset downloaded from Kaggle.
 
+![image of file upload](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-4.png)
+
+If you have an existing storage container you’d like to use, select it from the dropdown menu. Otherwise, click the link to create a new one. Either way, ensure the container is empty before proceeding. The `styles.csv` file you upload should be the only file in the container.
+
+Now, you’re ready to create the AI Search service. Look it up using the Azure Portal search box:
+
+![image of searching for AI Search service in Azure Portal](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-5.png)
+
+When the AI Search page loads, click **+ Create** to create a new AI Search instance.
