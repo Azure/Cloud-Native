@@ -346,4 +346,4 @@ Join the Azure Functions product group for an **[Ask The Expert](https://aka.ms/
 
 In this article, you learned how to create a virtual stylist chatbot that can analyze clothing styles in an image and identify the best match from a dataset of clothing options — leveraging Azure Functions and Azure OpenAI Service to do so. You also learned how to use Azure AI Search feature to index, store, and retrieve entries from a search index. Next, you discovered how to use Azure OpenAI Service to generate natural language descriptions and recommendations based on the user’s input image.
 
-In the next part of this series, you’ll learn how to add a chatbot interface to the app using React and an [Azure Static Web App](https://azure.microsoft.com/products/app-service/static?ocid=buildia24_60days_blogs).  
+In the next part of this series, you’ll learn how to add a chatbot interface to the app using React and an [Azure Static Web App](https://azure.microsoft.com/products/app-service/static?ocid=buildia24_60days_blogs).
