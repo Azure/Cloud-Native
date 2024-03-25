@@ -97,3 +97,155 @@ Now, you’re ready to create the AI Search service. Look it up using the Azure 
 ![image of searching for AI Search service in Azure Portal](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-5.png)
 
 When the AI Search page loads, click **+ Create** to create a new AI Search instance.
+
+![image of create in AI services](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-6.png)
+
+Select the subscription and resource group you’d like to use to create the search service. Then, enter a unique name of your choice — this demonstration uses “stylist-search-service.”
+
+![image of fields for creating a new search service in AI services](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-7.png)
+
+Use the defaults for all remaining settings and click **Create** to create the search service. This may take a few minutes. The Azure Portal will let you know when the service is ready.
+
+Now, it’s time to index the data in the `styles.csv` file you uploaded to Blob Storage earlier. From the main page of your new search index, click **Import data**.
+
+![image of import data option for indexing data](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-8.jpeg)
+
+In the first data import screen, select **Azure Blob Storage** as the data source and enter “fashion-images” as the data source name. Choose **Delimited text** as the parsing mode, and enter a comma as the delimiter character. For the connection string, click **Choose an existing connection** and select the storage container where you uploaded `styles.csv`. Delete the forward slash in the Blob folder input box. Azure will auto-populate the connection string.
+
+![image of fields for importing data](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-9.png)
+
+Click **Next** until Azure prompts you to customize the target index, and then update the field settings as follows:
+
+![image of field settings for importing data](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-10.png)
+
+Click **Next**. On the final screen, enter a name for the indexer and click **Submit**.
+
+![image of final screen when importing data](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-11.png)
+
+Azure will create a search index and then run the ingester to import the data. It should finish in under two minutes. When it does, you’re done with search index creation.
+
+:::info
+Register for the new learning series on **[Intelligent Apps with Serverless on Azure](https://aka.ms/serverless-learn-live?ocid=buildia24_60days_blogs)**. Join the community along with MVPs, and the Azure Product Group on how to leverage AI with Serverless on Azure technologies –Azure Functions and Azure Container Apps – to build intelligent applications.
+:::
+
+#### Create the Azure Function
+
+The next step is to create the Azure Function that will perform image analysis, matching logic, and recommendation generation. You’ll use Python as the programming language and Flask as the web framework.
+
+To create and deploy the Azure Functions app, use the Azure Functions CLI. Open a terminal and create a new directory to store your app. Then, run:
+
+```
+func init --python
+```
+
+The app generator will run. Open the directory in Visual Studio Code or your text editor of choice. You should see several files:
+
+![the directory in Visual Studio Code](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-12.png)
+
+Open `requirements.txt` and add the following:
+
+```
+azure-functions
+requests
+azure-search-documents
+```
+
+This change ensures Azure will install all the dependencies the function needs before trying to run it.
+
+Next, open `function_app.py` and replace its contents with the following:
+
+```
+import base64
+import os
+import json
+import requests
+import azure.functions as func
+from azure.search.documents import SearchClient
+from azure.core.credentials import AzureKeyCredential
+
+app = func.FunctionApp()
+
+# Get the environment variables
+OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
+OPENAI_ENDPOINT = os.environ['OPENAI_ENDPOINT']
+OPENAI_DEPLOYMENT_NAME = os.environ['OPENAI_DEPLOYMENT_NAME']
+SEARCH_API_KEY = os.environ['SEARCH_API_KEY']
+SEARCH_ENDPOINT = os.environ['SEARCH_ENDPOINT']
+SEARCH_INDEX_NAME = os.environ['SEARCH_INDEX_NAME']
+
+# Initialize the Azure OpenAI headers
+openai_headers = {
+    'Authorization': 'Bearer {}'.format(OPENAI_API_KEY),
+    'Content-Type': 'application/json'
+}
+
+# Initialize the Azure Search client
+search_credentials = AzureKeyCredential(SEARCH_API_KEY)
+search_client = SearchClient(SEARCH_ENDPOINT, SEARCH_INDEX_NAME, search_credentials)
+
+@app.route(route="stylist", methods=["post"], auth_level=func.AuthLevel.FUNCTION)
+def stylist(req: func.HttpRequest) -> func.HttpResponse:
+    # get image from request and convert to a base64 string
+    image = req.files["image"]
+    image_bytes = image.read()
+    image_base64 = base64.b64encode(image_bytes).decode("utf-8")
+
+    # Generate a text description from the image using Azure OpenAI
+    base_url = f"{OPENAI_ENDPOINT}openai/deployments/{OPENAI_DEPLOYMENT_NAME}"
+    endpoint = f"{base_url}/chat/completions?api-version=2023-12-01-preview"
+    data = {
+        "messages": [
+            { "role": "system", "content": "You are a helpful assistant." },
+            { "role": "user", "content": [
+                {
+                    "type": "text",
+                    "text": "Describe the main fashion item in this picture. Make sure you include the type of item (e.g., Shirt, T-Shirt, Shorts, Pants, Dress, Purse, Clutch), the color of the item, and 'Men' or 'Women' if the fashion item appears to be specific to either of those genders."
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": image_base64
+                    }
+                }
+            ] }
+        ],
+        "max_tokens": 2000
+    }
+
+    response = requests.post(endpoint, headers=openai_headers, data=json.dumps(data))
+    result = response.json()
+    image_description = result['text']
+
+    # Find the closest match from the search index using Azure OpenAI
+    search_result = search_client.search(
+        search_text=image_description,
+        select=["id", "productDisplayName"],
+        top=1
+    )
+    match_id = search_result["id"]
+    match_name = search_result["productDisplayName"]
+
+    # Generate a natural language recommendation based on the match result using Azure OpenAI
+    data = {
+        "messages": [
+            { "role": "system", "content": "You are a helpful assistant." },
+            { "role": "user", "content": [
+                {
+                    "type": "text",
+                    "text": f"Please generate a natural language recommendation based on the matching item: {match_id}, {match_name}. For example: The best match for your clothing item is: Peter England Men Party Blue Jeans. This is a pair of jeans for men in blue color, suitable for casual occasions. You can pair it with a shirt or a t-shirt of your choice."
+                }
+            ] }
+        ],
+        "max_tokens": 2000
+    }
+    response = requests.post(endpoint, headers=openai_headers, data=json.dumps(data))
+    result = response.json()
+    recommendation = result['text']
+
+    # Return the recommendation as a JSON response
+    return func.HttpResponse(json.dumps({
+        'image_id': match_id,
+        'recommendation': recommendation
+    })) 
+```
+
