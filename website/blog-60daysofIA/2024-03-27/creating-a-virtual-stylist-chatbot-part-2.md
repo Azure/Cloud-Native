@@ -95,18 +95,62 @@ virtual-stylist-chat
 
 Next, add a few dependencies:
 
+* [vue-advanced-chat](https://github.com/advanced-chat/vue-advanced-chat), a feature-rich and highly customizable Vue chat component library that provides many out-of-the-box features for chat interfaces. These include images, videos, files, voice messages, emojis, link previews, typing indicators, reactions, markdown text formatting, online presence indicators, delivery and read receipts, theming and customization options, and responsive design.
+* [Tailwind CSS](https://tailwindcss.com/), [PostCSS](https://postcss.org/), and [autoprefixer](https://www.npmjs.com/package/autoprefixer) to simplify styling the app
+* [uuid](https://www.npmjs.com/package/uuid) to generate unique IDs for each message
 
+To install the required packages, run the following command:
 
+```
+npm install --save vue-advanced-chat tailwindcss@latest postcss@latest autoprefixer@latest uuid @types/uuid 
+```
 
+This command adds vue-advanced-chat, Tailwind, and PostCSS as dependencies in the `package.json` file.
 
+Now that you’ve set up the project and installed the dependencies, check that it builds as expected by running `npm run dev`. The app should build and provide an address to view it in a web browser. Load it, and you should see the default welcome screen:
 
+![the Vite + Vue welcome page displays both logos and provides links to create-vue and Volar.](../../static/img/60-days-of-ia/blogs/2024-03-27/6-2-2.png)
 
+Next, generate the `tailwind.config.js` and `postcss.config.js` files using the following command:
 
+```
+npx tailwindcss init -p
+```
 
+Edit the `tailwind.config.js` file and add the paths to your template files in the `content` property:
 
+```
+// tailwind.config.js
+export default {
+  content: ["./index.html", "./src/**/*. {vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
+Then, replace the content of `style.css` file in the `src` folder with the following code to import Tailwind CSS using the `@tailwind` directives:
 
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
+Then, import the `styles.css` file in the `main.ts` file and remove the unused import:
+
+```
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./styles.css"; // import Tailwind CSS
+
+createApp(App).mount("#app");
+```
+
+Finally, copy the images from the [dataset](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small) you downloaded in the first part of this series. Using your preferred CLI or file manager, create a new folder called `Images` inside the project’s `public` folder, and then copy all the images from the dataset’s `images_compressed` folder to the `Images` folder. The stylist bot will use these images to make recommendations based on the image IDs it returns.
+
+The result should look like this:
 
 ```
 virtual-stylist-chat 
@@ -135,3 +179,6 @@ virtual-stylist-chat
 │   └── shims-vue.d.ts
 └── tsconfig.json
 ```
+
+Now, it’s time to start coding the chatbot interface.
+
