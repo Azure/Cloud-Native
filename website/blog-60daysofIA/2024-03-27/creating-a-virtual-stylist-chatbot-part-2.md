@@ -77,20 +77,20 @@ npm init vite@latest virtual-stylist-chat -- --template vue-ts
 This builds a new folder, `virtual-stylist-chat`, with the following structure:
 
 ```
-virtual-stylist-chat 
-├── index.html 
-├── package.json 
-├── public 
-│   └── favicon.svg 
-├── src 
-│   ├── App.vue 
-│   ├── assets 
-│   │   └── logo.svg 
-│   ├── components 
-│   │   └── HelloWorld.vue 
-│   ├── main.ts 
-│   └── shims-vue.d.ts 
-└── tsconfig.json 
+virtual-stylist-chat
+├── index.html
+├── package.json
+├── public
+│   └── favicon.svg
+├── src
+│   ├── App.vue
+│   ├── assets
+│   │   └── logo.svg
+│   ├── components
+│   │   └── HelloWorld.vue
+│   ├── main.ts
+│   └── shims-vue.d.ts
+└── tsconfig.json
 ```
 
 Next, add a few dependencies:
@@ -153,19 +153,19 @@ Finally, copy the images from the [dataset](https://www.kaggle.com/datasets/para
 The result should look like this:
 
 ```
-virtual-stylist-chat 
-├── index.html 
-├── package.json 
-├── public 
-│   ├── favicon.svg 
-│   └── images 
-│       ├── 10001.jpg 
-│       ├── 10002.jpg 
-│       ├── 10003.jpg 
-│       ├── ... 
-│       ├── 19998.jpg 
-│       ├── 19999.jpg 
-│       └── 20000.jpg 
+virtual-stylist-chat
+├── index.html
+├── package.json
+├── public
+│   ├── favicon.svg
+│   └── images
+│       ├── 10001.jpg
+│       ├── 10002.jpg
+│       ├── 10003.jpg
+│       ├── ...
+│       ├── 19998.jpg
+│       ├── 19999.jpg
+│       └── 20000.jpg
 ├── src
 │   ├── App.vue
 │   ├── assets
