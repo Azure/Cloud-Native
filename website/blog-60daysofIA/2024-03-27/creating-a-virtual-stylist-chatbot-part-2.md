@@ -42,7 +42,7 @@ In this second installment, you’ll create a chatbot interface for your virtual
 
 ### Prerequisites
 
-Before you start, ensure you have:
+Before you begin, ensure you have:
 
 * An Azure subscription with access to [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?ocid=buildia24_60days_blogs)
 * [Azure command-line interface (CLI)](https://learn.microsoft.com/cli/azure/?ocid=buildia24_60days_blogs) installed
@@ -53,7 +53,7 @@ Before you start, ensure you have:
 * [Node.js 20](https://nodejs.org/en/download/) or later installed on your local machine 
 * A text editor that supports Vue and TypeScript. If you use Visual Studio Code, consider installing the [TypeScript Vue Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to ensure the editor understands all the files you’re about to create. 
 
-For a preview, refer to the complete code for [part 1 available on GitHub](https://github.com/rogerwinter/Microsoft-Creating-a-Virtual-Stylist-Chatbot/tree/main/stylist-backend).
+For a preview of this tutorial, check out the [project code available on GitHub](https://github.com/rogerwinter/Microsoft-Creating-a-Virtual-Stylist-Chatbot/tree/main/stylist-backend).
 
 
 ### Creating a Chatbot Interface for Your Virtual Stylist
