@@ -451,3 +451,78 @@ The `options` object contains the configuration options for the vue-advanced-cha
 
 You can learn more about the options and their meanings in the [documentation](https://github.com/advanced-chat/vue-advanced-chat).
 
+The `onInputSubmit` method is the event handler for the input submit event. It’s triggered when the user types a text message and presses the **Enter** key or clicks the **Send** button. This method creates a new message object with the text content and the current user, then pushes it to the messages array.
+
+If the message contains an attached image file, the function loads it into a base64-encoded string, which is what the back-end Azure function expects to receive. Finally, it calls the back-end function to prompt a response from the stylist bot. 
+
+The `callBackendFunction` method calls the back-end Azure function to retrieve the stylist bot’s reply. It takes the prompt and the image as parameters and sends a POST request to the back-end function URL with the data and the options. The data object contains the prompt, image, and context.
+
+The context is an array of objects that store the previous prompts and responses from the `messages` array. The options object contains the headers for the request, such as the content type. The `response` object contains the response data from the back-end function, including the response, images, and context. 
+
+Finally, the function creates a new `message` object with the response data and the stylist bot’s ID, and then adds it to the `messages` array.
+
+:::info
+Register for [Episode 2](https://aka.ms/serverless-learn-live/ep2?ocid=buildia24_60days_blogs) of the new learning series on **Intelligent Apps with Serverless on Azure**. Join the community along with MVPs, and the Azure Product Group on how to leverage AI with Serverless on Azure technologies—Azure Functions and Azure Container Apps—to build intelligent applications.
+:::
+
+#### Integrating Components into the App Component
+
+In this section, you’ll integrate the components you just created into the `src/App.vue` file—your main app component. You’ll import the header, footer, chat window, and image upload button components and display them in a simple layout.
+
+To start, open the `App.vue` file in the project’s `src` folder and replace the existing code with the following:
+
+```
+<template>
+  <div class="app">
+    <Header />
+    <div class="main">
+      <ChatWindow ref="chat" />
+      <ImageUploadButton :chat="chat" />
+    </div>
+    <Footer />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from "vue";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+import ChatWindow from "./components/ChatWindow.vue";
+
+export default defineComponent({
+  name: "App",
+  components: {
+    Header,
+    Footer,
+    ChatWindow
+  },
+  setup() {
+    // Define a ref for the chat component
+    const chat = ref(ChatWindow);
+    // Return the ref
+    return {
+      chat,
+    };
+  },
+});
+</script>
+<style>
+.app {
+  @apply min-h-screen flex flex-col;
+}
+
+.main {
+  @apply flex-1 flex flex-col;
+}
+</style>
+```
+
+This code defines the app component that uses the header, footer, chat window, and image upload button components. It also defines a [`ref`](https://vuejs.org/guide/essentials/template-refs) for the chat component and passes it as a prop to the image upload button component. This action allows the image upload button component to access the chat component’s methods, such as `onFileUpload`.
+
+With that, you’re ready to deploy!
+
+### Next Steps
+
+Part 2 of this series equipped you with the necessary skills to create a dynamic chatbot interface for your virtual stylist app. By setting up your project, installing dependencies, and coding the chatbot interface, you laid the groundwork for the final deployment and testing phase. Now, you’re ready to see your virtual stylist in action.
+
+Jump to the third part of this series, where you’ll deploy and test your Intelligent App.
