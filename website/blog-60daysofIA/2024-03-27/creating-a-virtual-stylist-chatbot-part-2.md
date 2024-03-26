@@ -30,6 +30,37 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
+```
+virtual-stylist-chat 
+├── index.html 
+├── package.json 
+├── public 
+│   ├── favicon.svg 
+│   └── images 
+│       ├── 10001.jpg 
+│       ├── 10002.jpg 
+│       ├── 10003.jpg 
+│       ├── ... 
+│       ├── 19998.jpg 
+│       ├── 19999.jpg 
+│       └── 20000.jpg 
+├── src
+│   ├── App.vue
+│   ├── assets
+│   │   └── logo.svg
+│   ├── components
+│   │   └── HelloWorld.vue
+│   ├── main.ts
+│   ├── styles.css
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   └── shims-vue.d.ts
+└── tsconfig.json
+```
+
+
+
+
 ![virtual stylist chatbot that uses AI to analyze images and suggest clothing items](../../static/img/60-days-of-ia/blogs/2024-03-26/6-1-1.jpeg)
 
 ## Creating a Virtual Stylist Chatbot — Part 1: Analyzing Images with AI
