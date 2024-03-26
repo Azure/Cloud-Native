@@ -416,3 +416,38 @@ export default defineComponent({
 </style> 
 ```
 
+This code defines a chat window component that uses the vue-advanced-chat component to display the messages between the user and the stylist bot. It also defines some data and methods to handle the chat logic, such as the current user, messages, options, input submit event, file upload event, and the back-end function call.
+
+`currentUser` and `messages` are reactive objects that store information about the chat participant and chat history. The `currentUser` object represents the app user while the `messages` array contains the Message objects with the following properties:
+
+* `_id`—A unique identifier for the message
+* `content`—The text content of the message (optional)
+* `files`—Contains any files attached to the image (optional)
+* `senderId`—The ID of the message sender
+* `date`—The date of the message
+* `timestamp`—The time and date that appear with every message
+
+The `options` object contains the configuration options for the vue-advanced-chat component. It allows you to enable or disable various features of the chat interface, including:
+
+* Voice messages
+* Reactions
+* Seen by
+* Link preview
+* Uploads and attachments
+* Reply and send button
+* Edit and delete
+* Group and search
+* Options
+* Scroll to bottom and scroll to top
+* Load more
+* Composer
+* Input
+* Emojis
+* Recording
+* Markdown
+* Typing indicator
+* Online presence/status
+* Custom theme
+
+You can learn more about the options and their meanings in the [documentation](https://github.com/advanced-chat/vue-advanced-chat).
+
