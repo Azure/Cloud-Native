@@ -355,121 +355,64 @@ export default defineComponent({
       }
     };
 
-    const callBackendFunction = async (prompt: string, image: string) => { 
+    const callBackendFunction = async (prompt: string, image: string) => {
+      // Get the previous prompts and responses from the messages array
+      const context = messages.value
+        .filter((message) => message.content || message.replyMessage)
+        .map((message) => ({
+          prompt: message.content,
+          response: message.replyMessage,
+        }));
+      // Create a JSON object with the prompt, the image, and the context
+      const data = {
+        prompt,
+        image,
+        context,
+      };
+      // Send a POST request to the backend function URL with the data
+      const response = await fetch("<backend function URL>", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      // Get the response data from the fetch response
+      const responseData = await response.json();
+      // Create a new message object with the response data and the stylist bot
+      const newMessage: Message = {
+        _id: uuidv4(),
+        content: responseData.response,
+        files: responseData.images,
+        senderId: "stylist-bot",
+        date: new Date().toLocaleString('default', { year: 'numeric', month: 'short', day: 'numeric' }),
+        timestamp: toTimeString(new Date()),
+      };
+      // Push the new message to the messages array
+      messages.value = [...messages.value, newMessage];
+    };
 
-      // Get the previous prompts and responses from the messages array 
+    // Return the current user, the messages, the options, and the event handlers
+    return {
+      currentUser,
+      messages,
+      options,
+      onInputSubmit,
+    };
+  },
 
-      const context = messages.value 
+  mounted() {
+    // Add a welcome message from the stylist bot when the component is mounted
+    this.messages = [...this.messages, { _id: "stylist-bot", content: "Hello! I'm your virtual stylist chatbot. You can ask me for fashion advice, recommendations, and more. You can also upload images of clothing items and accessories to get personalized suggestions. How can I help you today?", senderId: "stylist-bot", date: new Date().toTimeString()}];
+  },
+});
 
-        .filter((message) => message.content || message.replyMessage) 
+</script>
 
-        .map((message) => ({ 
-
-          prompt: message.content, 
-
-          response: message.replyMessage, 
-
-        })); 
-
-      // Create a JSON object with the prompt, the image, and the context 
-
-      const data = { 
-
-        prompt, 
-
-        image, 
-
-        context, 
-
-      }; 
-
-      // Send a POST request to the backend function URL with the data 
-
-      const response = await fetch("<backend function URL>", { 
-
-        method: 'POST', 
-
-        headers: { 
-
-          'Content-Type': 'application/json', 
-
-        }, 
-
-        body: JSON.stringify(data), 
-
-      }); 
-
-      // Get the response data from the fetch response 
-
-      const responseData = await response.json(); 
-
-      // Create a new message object with the response data and the stylist bot 
-
-      const newMessage: Message = { 
-
-        _id: uuidv4(), 
-
-        content: responseData.response, 
-
-        files: responseData.images, 
-
-        senderId: "stylist-bot", 
-
-        date: new Date().toLocaleString('default', { year: 'numeric', month: 'short', day: 'numeric' }), 
-
-        timestamp: toTimeString(new Date()), 
-
-      }; 
-
-      // Push the new message to the messages array 
-
-      messages.value = [...messages.value, newMessage]; 
-
-    }; 
-
-  
-
-    // Return the current user, the messages, the options, and the event handlers 
-
-    return { 
-
-      currentUser, 
-
-      messages, 
-
-      options, 
-
-      onInputSubmit, 
-
-    }; 
-
-  }, 
-
-   
-
-  mounted() { 
-
-    // Add a welcome message from the stylist bot when the component is mounted 
-
-    this.messages = [...this.messages, { _id: "stylist-bot", content: "Hello! I'm your virtual stylist chatbot. You can ask me for fashion advice, recommendations, and more. You can also upload images of clothing items and accessories to get personalized suggestions. How can I help you today?", senderId: "stylist-bot", date: new Date().toTimeString()}]; 
-
-  }, 
-
-}); 
-
-  
-
-</script> 
-
-   
-
-<style scoped> 
-
-.chat-window { 
-
-  @apply h-screen flex-1 overflow-y-auto; 
-
-} 
-
+<style scoped>
+.chat-window {
+  @apply h-screen flex-1 overflow-y-auto;
+}
 </style> 
 ```
+
