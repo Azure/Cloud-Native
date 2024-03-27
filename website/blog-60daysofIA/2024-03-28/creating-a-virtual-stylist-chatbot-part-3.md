@@ -34,7 +34,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ## Creating a Virtual Stylist Chatbot—Part 3: Deploying the App
 
-In part 1 of this series, you used AI to analyze images of clothing and generate a text description of each piece. Then, in part 2, you designed the chatbot’s interface.
+In [part 1](https://azure.github.io/Cloud-Native/60DaysOfIA/creating-a-virtual-stylist-chatbot-part-1) of this series, you used AI to analyze images of clothing and generate a text description of each piece. Then, in [part 2](https://azure.github.io/Cloud-Native/60DaysOfIA/creating-a-virtual-stylist-chatbot-part-2), you designed the chatbot’s interface.
 
 In this third and final installment, you’ll deploy the app as an Azure Static Web App using the Azure command-line interface (CLI). The Azure Static Web Apps service provides a hassle-free means of hosting static web apps with serverless APIs. It also features global distribution, custom domains, SSL certificates, authentication, authorization, and GitHub integration.
 
