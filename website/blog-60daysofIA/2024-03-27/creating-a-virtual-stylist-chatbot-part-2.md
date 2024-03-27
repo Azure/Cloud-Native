@@ -3,7 +3,7 @@ date: 2024-03-27T09:00
 slug: creating-a-virtual-stylist-chatbot-part-2
 title: "6.2 Creating a Virtual Stylist Chatbot — Part 2: Adding a Chatbot Interface"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
