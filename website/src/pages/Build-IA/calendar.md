@@ -38,11 +38,11 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 ## April 2024​
 ### Build #IntelligentApps
 
-* 🎙 Apr 1 | #AskTheExpert – [Azure AI](https://reactor.microsoft.com/en-us/reactor/events/21694/?ocid=buildia24_website)
 * Apr 2 | Learn Live Serverless – [Ep 01: Build Intelligent Apps with Serverless Containers on Azure Container Apps](https://aka.ms/serverless-learn-live/ep1?ocid=buildia24_website)
 * Apr 3 | Learn Live Serverless – [Ep 02: From Day Zero To Production with Azure Container Apps](https://aka.ms/serverless-learn-live/ep2?ocid=buildia24_website)​
 * 🎙 Apr 4 | #AskTheExpert – [Azure Functions](https://reactor.microsoft.com/en-us/reactor/events/21691/?ocid=buildia24_AE_website)
 * Apr 10 | Learn Live Serverless – [Ep 03: Azure Container Apps Uncovered: Scenarios, Workloads, and Portability](https://aka.ms/serverless-learn-live/ep3?ocid=buildia24_website)
+* 🎙 Apr 11 | #AskTheExpert – [Azure AI](https://reactor.microsoft.com/en-us/reactor/events/21694/?ocid=buildia24_website)
 * Apr 17 | Learn Live Serverless – [Ep 04: Build Intelligent Apps with .NET and Serverless on Azure](https://aka.ms/serverless-learn-live/ep4?ocid=buildia24_website)
 * 🎯 Apr 15 | [#CloudSkillsChallenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills) ends
 * ✍🏽 Apr 15 | [#60Days of Intelligent Apps](https://aka.ms/build-ia/60days) ends
