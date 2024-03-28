@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[22883],{32367:s=>{s.exports=JSON.parse('{"label":"github-actions","permalink":"/Cloud-Native/60DaysOfIA/tags/github-actions","allTagsPath":"/Cloud-Native/60DaysOfIA/tags","count":20,"unlisted":false}')}}]);
