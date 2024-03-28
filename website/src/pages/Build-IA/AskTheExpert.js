@@ -79,18 +79,18 @@ const ContentItemsATE = [
     cta: "March 7, 2024 | Register to attend"
   },
   {
-    title: 'Intelligent Apps with Azure AI',
-    imglink: '/img/60-days-of-ia/ate-2024-03-21.jpg',
-    link: "https://aka.ms/intelligent-apps/ate-ai?ocid=buildia24_AE_website",
-    description: "Want to build an enterprise AI application with your data, and run it in production? Join us as we build Contoso Chat, an AI-based support agent that implements Retrieval Augmented Generation (RAG) to ground the copilot responses in your product data. Streamline your development workflow with PromptFlow, and manage your Azure AI platform interactions with the Azure AI Studio, SDK and CLI. Learn about Responsible AI practices, and learn how to evaluate your application, and calibrate it for content safety, using built-in capabilities of the Azure AI platform.",
-    cta: "April 1, 2024 | Register to attend"
-  },
-  {
     title: 'Intelligent Apps with Azure Functions',
     imglink: '/img/60-days-of-ia/ate-2024-04-04.jpg',
     link: "https://aka.ms/intelligent-apps/ate-functions?ocid=buildia24_AE_website",
     description: "Join the Azure Functions Product Group to learn about FaaS or Functions-as-a-Service in Azure serverless computing. It is time to focus on the pieces of code that matter most to you while Azure Functions handles the rest. Discuss with the experts on how to combine the power of AI, cloud-scale data, and serverless app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Functions.",
     cta: "April 4, 2024 | Register to attend"
+  },
+  {
+    title: 'Intelligent Apps with Azure AI',
+    imglink: '/img/60-days-of-ia/ate-2024-03-21.jpg',
+    link: "https://aka.ms/intelligent-apps/ate-ai?ocid=buildia24_AE_website",
+    description: "Want to build an enterprise AI application with your data, and run it in production? Join us as we build Contoso Chat, an AI-based support agent that implements Retrieval Augmented Generation (RAG) to ground the copilot responses in your product data. Streamline your development workflow with PromptFlow, and manage your Azure AI platform interactions with the Azure AI Studio, SDK and CLI. Learn about Responsible AI practices, and learn how to evaluate your application, and calibrate it for content safety, using built-in capabilities of the Azure AI platform.",
+    cta: "April 11, 2024 | Register to attend"
   },
 ];
 
