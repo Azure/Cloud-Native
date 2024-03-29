@@ -172,3 +172,119 @@ After you have completed these steps, your Azure Functions project will be set u
 
 #### Installing the Necessary Packages
 
+Now it’s time to add the packages necessary for integrating Azure Communication Services:
+
+  1. Open the integrated terminal in Visual Studio Code by clicking on 'Terminal' in the top menu and then selecting 'New Terminal'.
+  2. Add the Azure Communication Services packages to your project:
+
+`bash`
+```
+dotnet add package Azure.Communication.Email
+dotnet add package Azure.Communication.Sms
+dotnet add package Azure.Communication.Messages --prerelease
+```
+
+#### Setting Up Environment Variables
+
+You should store configuration details like connection strings and phone numbers as environment variables instead of hardcoding them into your functions. To do so in Azure Functions, add them to the `local.settings.json` file, which is used for local development.
+
+Edit the `local.settings.json` file to include your Azure Communication Services (ACS) connection string and phone numbers:
+
+`json`
+```
+{ 
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "COMMUNICATION_SERVICES_CONNECTION_STRING": "<acs_connection_string>",
+    "SENDER_PHONE_NUMBER": "<acs_sms_phone_number>",
+    "WHATSAPP_NUMBER": "<acs_whatsapp_number>", 
+    "SENDER_EMAIL_ADDRESS": "<acs_email_address>"
+  }
+}
+```
+
+Be sure to replace `<acs_connection_string>`, `<acs_sms_phone_number>`, `<acs_whatsapp_number>`, and `<acs_email_address>` with your actual Azure storage account connection string, Azure Communication Services connection string, SMS phone number, WhatsApp number, and sending email address. 
+
+Remember not to commit the `local.settings.json` file to source control if it contains sensitive information. Configure similar settings in the Application Settings for your Azure Function when you deploy to Azure.
+
+### Coding the EmailTrigger
+
+Creating a functional `EmailTrigger` Azure Function involves starting from the default template provided by Azure Functions for C# and enhancing it with the necessary logic and services to handle email sending. In this section, we guide you through the steps to transform the default template into the finished `EmailTrigger` function.
+
+#### Step 1: Set Up the Function Template
+
+Start by using the default HTTP triggered function template provided by Visual Studio Code for creating an Azure Functions project. It will have the necessary usings, function name attribute, and a simple HTTP trigger that returns a welcome message. Select your project in the Workspace pane and click on the 'Create Function' button in the Azure Functions extension. Choose 'HTTP trigger' as the template and provide a name for the function, such as `EmailTrigger`. Set the authorization level to anonymous or function, depending on your security preference.
+
+![image of creating a new function in Visio Studio Code](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-10.png)
+
+#### Step 2: Add Azure Communication Services Email Reference
+
+Add a reference to using Azure.Communication.Email then create a property in the EmailTrigger class to hold an instance of EmailClient and a property to hold the email sender address.
+
+`csharp`
+```
+private readonly EmailClient _emailClient;
+private string? sender = Environment.GetEnvironmentVariable("SENDER_EMAIL_ADDRESS");
+```
+
+#### Step 3: Read Configuration and Initialize EmailClient
+
+Within the `EmailTrigger` class constructor, read the Azure Communication Services connection string from the environment variables using `Environment.GetEnvironmentVariable()` method and initialize an instance of `EmailClient` with the connection string.
+
+Make sure to handle the possibility that the environment variable may be null and throw an appropriate exception if it is not set.
+
+`csharp`
+```
+string? connectionString = Environment.GetEnvironmentVariable("COMMUNICATION_SERVICES_CONNECTION_STRING");
+if (connectionString is null)
+{
+    throw new InvalidOperationException("COMMUNICATION_SERVICES_CONNECTION_STRING environment variable is not set.");
+}
+_emailClient = new EmailClient(connectionString);
+```
+
+#### Step 4: Define the Request Model
+
+Create a request model class `EmailRequest` inside the `EmailTrigger` class to represent the expected payload. This model includes the subject, HTML content, and recipient email address.
+
+`csharp`
+```
+public class EmailRequest 
+
+{
+    public string Subject { get; set; } = string.Empty;
+    public string HtmlContent { get; set; } = string.Empty;
+    public string Recipient { get; set; } = string.Empty;
+}
+```
+
+#### Step 5: Parse the Request Body
+
+Modify the `Run` function to be async since we'll be performing asynchronous operations.
+
+`csharp`
+```
+public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req)
+```
+
+Use `StreamReader` to read the request body and deserialize it into the `EmailRequest` object using `System.Text.Json.JsonSerializer`. 
+
+Handle the case where the deserialization fails by returning a `BadRequestResult`.
+
+`csharp`
+```
+string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+EmailRequest? data = JsonSerializer.Deserialize<EmailRequest>(requestBody, new JsonSerializerOptions() {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            });
+if (data is null)
+{
+    return new BadRequestResult();
+}
+```
+
+#### Step 6: Define the Sender and Send the Email
+
+
