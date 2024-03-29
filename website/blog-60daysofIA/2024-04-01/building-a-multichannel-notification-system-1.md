@@ -38,3 +38,21 @@ Leveraging serverless architecture and the reach of Azure Communication Services
 
 ![image of email composer assist from Chat GPT](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-1.gif)
 
+Architecture Diagram
+
+![Architecture Diagram](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-2.png)
+
+Here are some practical scenarios where a multichannel notification system is valuable: 
+
+  1. Financial Alerts: Banks and financial services can send fraud alerts, transaction confirmations, and account balance updates.
+  2. Healthcare Reminders: Clinics and pharmacies can notify patients about appointment schedules, vaccinations, or prescription refills.
+  3. Security Verification: Services requiring secure authentication can utilize two-factor authentication prompts sent via SMS or WhatsApp.
+  4. Marketing and Promotions: Retailers can craft and distribute targeted marketing messages and promotions, thereby driving customer engagement.
+  5. Infrastructure Notifications: Utility companies can alert customers about service disruptions, maintenance schedules, or conservation tips.
+  6. E-commerce Updates: Online retailers can inform customers about order confirmations, shipping details, and delivery tracking.
+
+The foundation of this solution is [Azure Functions](https://docs.microsoft.com/azure/azure-functions/?ocid=buildia24_60days_blogs), a flexible, event-driven platform for running scalable applications with minimal overhead. We will utilize [Azure Communication Services](https://docs.microsoft.com/azure/communication-services/?ocid=buildia24_60days_blogs), which provides reliable APIs for Email, SMS, and WhatsApp messaging. To generate content, we use [OpenAI GPTs](https://openai.com/blog/introducing-gpts), which enables the creation of sophisticated, context-aware text that can be used in notifications.
+
+By following this tutorial, you will gain the knowledge and practical experience necessary to implement a scalable multichannel notification platform that can serve a wide array of communication needs. Let's get started on your path to building a cutting-edge, serverless messaging system on Azure.
+
+### Prerequisites
