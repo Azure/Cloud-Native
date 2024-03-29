@@ -68,3 +68,107 @@ Before we dive into building our multichannel notification system with Azure Fun
 
 With the prerequisites in place, you're ready to set up your development environment, which we will cover in the following section.
 
+:::info
+Register for **[Episode 4](https://aka.ms/serverless-learn-live/ep4?ocid=buildia24_60days_blogs)** of the new hands-on live learning series with an SME **on Intelligent Apps with Serverless on Azure**.
+:::
+
+Join the community along with MVPs, and the Azure Product Group on how to leverage AI with Serverless on Azure technologies –Azure Functions and Azure Container Apps –to build intelligent applications.
+
+### Creating Resources
+
+To get started with building a multichannel notification system, we'll need to create several resources within Azure. This section will walk you through setting up your Azure environment using the Azure CLI. Ensure that you have the Azure CLI installed on your machine and that you're logged into your Azure account.
+
+#### Azure Communication Services
+
+  1. Azure Communication Services (ACS) provides the backbone for our notification system, allowing us to send SMS, Email, and WhatsApp messages. The steps below create resources for all three communication channels. However, you can choose one or more depending upon your preference. **Log in to Azure**:
+
+`bash`
+  
+```
+az login 
+```
+
+  2. **Create a Resource Group (if necessary)**: This groups all your resources in one collection.
+
+`bash`
+
+```
+az group create --name <YourResourceGroupName> --location <PreferredLocation>
+```
+
+  3. **Create ACS Resource**: This will be the main ACS resource where we manage communications capabilities.
+
+`bash`
+
+```
+az communication create --name <YourACSResourceName> --location Global --data-location UnitedStates --resource-group <YourResourceGroupName>
+```
+
+Replace `<YourACSResourceName>` with a unique name for your ACS resource and `<YourResourceGroupName>` with the name of your resource group.
+
+After creating the resource, retrieve the connection string as you will need it to connect your Azure Function to ACS. Copy the one marked as primary.
+
+`bash`
+
+```
+az communication list-key --name <YourACSResourceName> --resource-group <YourResourceGroupName>
+```
+
+#### Azure Communication Services for Email
+
+To set up Azure Communication Services Email, you'll need to follow a few steps in the Azure Portal:
+
+  1. **Create the Email Communications Service resource using the portal**: Provision a new Email Communication Services resource in [Azure portal](https://portal.azure.com/) using the instructions [here](https://learn.microsoft.com/azure/communication-services/quickstarts/email/create-email-communication-resource?ocid=buildia24_60days_blogs). Make sure to select the same resource group as your ACS resource.
+
+![image of Email Communication Services in Azure](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-3.png)
+
+![image of Email Communication Services resource fields in Azure](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-4.png)
+
+  2. **Configure the Email Communications Service**: You will need to configure domains and sender authentication for email. Provision an [Azure Managed Domain](https://learn.microsoft.com/azure/communication-services/quickstarts/email/add-azure-managed-domains?ocid=buildia24_60days_blogs) or set up your [Custom Verified Domain](https://learn.microsoft.com/azure/communication-services/quickstarts/email/add-custom-verified-domains?ocid=buildia24_60days_blogs) depending on your use case.
+
+![image of Email Communication Services configurations in Azure](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-5.png)
+
+#### Azure Communication Services for SMS
+
+To send SMS messages, you will need to acquire a phone number through ACS. The phone number has a cost associated with it. If you want to avoid that, continue with Email and WhatsApp only.
+
+  1. **Get a Phone Number**: Navigate to the **Phone Numbers** blade in your ACS resource on the [Azure portal](https://portal.azure.com/) and follow the steps to [get a phone number](https://learn.microsoft.com/azure/communication-services/quickstarts/telephony/get-phone-number?ocid=buildia24_60days_blogs) that's capable of sending and receiving SMS.
+
+![image of Email Communication Services phone number features in Azure](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-6.png)
+
+  2. **Note the Phone Number**: After acquiring a phone number, note it down as it will be used to send SMS messages from your Azure Function.
+
+![image of Email Communication Services resource once configured in Azure](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-7.png)
+
+#### WhatsApp for Business
+
+Sending WhatsApp messages requires setting up a WhatsApp Business account. 
+
+  1. **Set up a WhatsApp Business Account**: Follow the instructions for connecting a [WhatsApp business account](https://learn.microsoft.com/azure/communication-services/quickstarts/advanced-messaging/whatsapp/connect-whatsapp-business-account?ocid=buildia24_60days_blogs) with Azure Communication Services.
+  2. **Note the WhatsApp Configuration**: Once set up, make a note of the necessary configuration details such as the phone number and WhatsApp Business API credentials, as they will be needed in your Azure Function.
+
+![image of Email Communication Services configuration channels in Azure](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-8.png)
+
+By following these steps, you will have created the necessary resources to build a multichannel notification system that can reach users through SMS, Email, and WhatsApp. Next, we'll proceed with setting up your Azure Function and integrating these services into it.
+
+### Setting Up Environment
+
+With the prerequisites out of the way, let's prepare our environment to develop our multichannel notification system using Azure Functions and Azure Communication Services.
+
+#### Creating the Function App Project
+
+Open Visual Studio Code and follow these steps to create a new Azure Functions project:
+
+  1. Click on the Azure icon in the Activity Bar on the side of Visual Studio Code to open the Azure Functions extension.
+  2. In the Azure Functions extension, click on the 'Create New Project' icon, choose a directory for your project, and select 'Create New Project Here'.
+
+![mage of a new Azure Functions project in Visual Studio Code](../../static/img/60-days-of-ia/blogs/2024-04-01/6-4-9.png)
+
+  3. Choose the language for your project. We will select C# for this tutorial.
+  4. Select the template for your first function. For this project, an HTTP-triggered function is a good starting point since we want to receive HTTP requests to send out notifications.
+  5. Provide a function name, such as `EmailTrigger`, and set the authorization level to anonymous or function, depending on your security preference.
+
+After you have completed these steps, your Azure Functions project will be set up with all the necessary files in the chosen directory.
+
+#### Installing the Necessary Packages
+
