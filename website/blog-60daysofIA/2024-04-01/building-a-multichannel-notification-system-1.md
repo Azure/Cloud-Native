@@ -1,7 +1,7 @@
 ---
 date: 2024-04-01T09:00
 slug: building-a-multichannel-notification-system-1
-title: "6.4 Building a Multichannel Notification System with Azure Functions and Azure Communication Services (1)"
+title: "6.4 Building a Multichannel Notification System (1)"
 authors: [cnteam]
 draft: true
 hide_table_of_contents: false
