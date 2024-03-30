@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
-## Building a Multichannel Notification System 1
+## Building a Multichannel Notification System with Azure Functions and Azure Communication Services (1)
 
 In the interconnected digital era, it's crucial for businesses and services to communicate effectively with their audience. A robust notification system that spans various communication channels can greatly enhance user engagement and satisfaction. This blog post outlines a step-by-step guide on building such a multichannel notification system with Azure Functions and Azure Communication Services.
 
