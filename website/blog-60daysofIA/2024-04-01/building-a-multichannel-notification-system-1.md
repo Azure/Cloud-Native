@@ -287,4 +287,111 @@ if (data is null)
 
 #### Step 6: Define the Sender and Send the Email
 
+Instantiate a sender email address string that will be passed to the `SendAsync` method of the EmailClient instance. Replace the static email 'DoNotReply@effaa622-a003-4676-b27e-6b9e7a783581.azurecomm.net' with your configured sender address in the actual implementation. 
+
+Use a try-catch block to send the email using the `SendAsync` method and catch any `RequestFailedException` to log any errors.
+
+#### Step 7: Return a Success Response
+
+Once the email send operation is completed, return an `OkObjectResult` indicating the success of the operation.
+
+`csharp`
+```
+return new OkObjectResult("Email sent successfully!");
+}
+```
+
+#### Final Code
+
+After completing all the above steps, your `EmailTriggerAzure Function` should look as follows:
+
+`csharp`
+```
+using System;
+using System.IO;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Azure;
+using Azure.Communication.Email;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
+
+namespace ACSGPTFunctions
+{ 
+    public class EmailTrigger
+    { 
+        private readonly ILogger<EmailTrigger> _logger;
+        private readonly EmailClient _emailClient;
+
+        public EmailTrigger(ILogger<EmailTrigger> logger)
+        {
+            _logger = logger;
+            string? connectionString = Environment.GetEnvironmentVariable("COMMUNICATION_SERVICES_CONNECTION_STRING");
+            if (connectionString is null)
+            {
+                throw new InvalidOperationException("COMMUNICATION_SERVICES_CONNECTION_STRING environment variable is not set.");
+            }
+            _emailClient = new EmailClient(connectionString);
+        } 
+
+        public class EmailRequest
+        {
+            public string Subject { get; set; } = string.Empty;
+            public string HtmlContent { get; set; } = string.Empty;
+            public string Recipient { get; set; } = string.Empty;
+        }
+
+        [Function("EmailTrigger")]
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req) 
+        {
+            _logger.LogInformation("Processing request.");
+
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            EmailRequest? data = JsonSerializer.Deserialize<EmailRequest>(requestBody, new JsonSerializerOptions() {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            });
+
+            if (data is null)
+            {
+                return new BadRequestResult();
+            }
+
+            var sender = "DoNotReply@effaa622-a003-4676-b27e-6b9e7a783581.azurecomm.net";
+
+            try 
+            {
+                _logger.LogInformation("Sending email...");
+                EmailSendOperation emailSendOperation = await _emailClient.SendAsync(
+                    Azure.WaitUntil.Completed,
+                    sender,
+                    data.Recipient,
+                    data.Subject,
+                    data.HtmlContent
+                );  
+
+                _logger.LogInformation($"Email Sent. Status = {emailSendOperation.Value.Status}");
+                _logger.LogInformation($"Email operation id = {emailSendOperation.Id}");
+            }
+            catch (RequestFailedException ex)
+            {
+                _logger.LogInformation($"Email send operation failed with error code: {ex.ErrorCode}, message: {ex.Message}");
+                return new ObjectResult(new { error = ex.Message }) { StatusCode = 500 };
+            }
+
+            return new OkObjectResult("Email sent successfully!");
+        }
+    }
+}
+```
+
+This completed `EmailTriggerAzure` Function is now ready to be part of a multichannel notification system, handling the email communication channel.
+
+### Next Steps
+
+Continue to the next part of this topic to further explore building, deploying and testing your intelligent app for a multichannel notification system.
+
+
+
+
 
