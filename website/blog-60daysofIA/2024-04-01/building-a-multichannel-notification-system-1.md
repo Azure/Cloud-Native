@@ -72,8 +72,6 @@ With the prerequisites in place, you're ready to set up your development environ
 Register for **[Episode 4](https://aka.ms/serverless-learn-live/ep4?ocid=buildia24_60days_blogs)** of the new hands-on live learning series with an SME **on Intelligent Apps with Serverless on Azure**.
 :::
 
-Join the community along with MVPs, and the Azure Product Group on how to leverage AI with Serverless on Azure technologies –Azure Functions and Azure Container Apps –to build intelligent applications.
-
 ### Creating Resources
 
 To get started with building a multichannel notification system, we'll need to create several resources within Azure. This section will walk you through setting up your Azure environment using the Azure CLI. Ensure that you have the Azure CLI installed on your machine and that you're logged into your Azure account.
