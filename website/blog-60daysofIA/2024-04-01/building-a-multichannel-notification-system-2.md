@@ -118,8 +118,7 @@ Retrieve the sender's phone number from the environment variables with `Environm
 
 `csharp`
 ```
-try 
-
+try
 {
     _logger.LogInformation("Sending SMS...");
     SmsSendResult smsSendResult = await _smsClient.SendAsync(
