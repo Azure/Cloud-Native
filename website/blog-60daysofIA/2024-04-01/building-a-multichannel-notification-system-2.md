@@ -233,11 +233,62 @@ namespace ACSGPTFunctions
 }
 ```
 
+The `WhatsAppTrigger` Azure Function is now ready to send WhatsApp template messages. Be sure to test it extensively and remember to handle any issues related to input validation and communicate with the Azure Communication Services API correctly.
 
+### Deployment and Testing
+
+After developing the multichannel notification system using Azure Functions, the next step is to deploy and test the functions. This section will guide you through deploying your Azure Function to the cloud and testing the Email, SMS, and WhatsApp triggers.
+
+#### Deploying the Azure Function
+
+Deployment of your Azure Function can be done right from Visual Studio Code with the Azure Functions extension.
+
+  1. **Publish the Function App**: In Visual Studio Code, sign in to Azure if you haven't already. In the Azure Functions extension tab, find the 'Deploy to Function App...' button and select it. 
 
 ![image of the Deploy to Function App button](../../static/img/60-days-of-ia/blogs/2024-04-01/6-5-1.png)
 
+  1. **Choose Your Function App**: You can either create a new Function App or deploy it to an existing one. If it's the first time you are deploying, choose 'Create New Function App in Azure...'.
+
+  2. **Set the Configuration**: Provide a unique name for your Function App, select a runtime stack (.NET Core in this case), choose the appropriate region, and confirm your selections.
+
+  3. **Wait for Deployment**: The deployment process will take a few minutes. Monitor the output window for completion status and any potential errors.
+
+#### Set Up Application Settings
+
+fter deployment, you need to configure the application settings (environment variables) in Azure.
+
+  1. **Open the Function App**: Navigate to the [Azure Portal](https://portal.azure.com/), and find your Function App under 'All Resources' or by searching the name you provided.
+  2. **Access Application Settings**: In the Function App's menu, go to 'Configuration' under the 'Settings' section.
+  3. **Add the Settings**: Click on 'New application setting' and add the key-value pairs for the environment variables specified in your `local.settings.json`: `COMMUNICATION_SERVICES_CONNECTION_STRING`, `SENDER_EMAIL_ADDRESS`, `SENDER_PHONE_NUMBER`, `WHATSAPP_NUMBER`, etc.,
+
+`json`
+```
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "COMMUNICATION_SERVICES_CONNECTION_STRING": "<<connection string>>",
+    "SENDER_PHONE_NUMBER": "<<phone number>>",
+    "SENDER_EMAIL_ADDRESS": "<<email address>>",
+    "WHATSAPP_NUMBER":"<<WhatsApp id>>"
+  }
+}
+```
+
+  4. **Save and Restart**: After adding the required settings, make sure to save the configurations and restart the Function App to ensure the new settings take effect.
+
+Alternatively, when the Function has finished deploying, you can click on 'Upload settings' to upload your settings from local.settings.json. Don't forget to restart the Function App after uploading the settings.
+
 ![image of stream logs settings selection](../../static/img/60-days-of-ia/blogs/2024-04-01/6-5-2.png)
+
+#### Testing the Function
+
+With the deployment complete and the environment configured, it's time to verify that your function works as intended through each communication channel.
+
+##### Testing Email Notifications
+
+
 
 ![image of email composer in Chat GPT configuration](../../static/img/60-days-of-ia/blogs/2024-04-01/6-5-3.png)
 
