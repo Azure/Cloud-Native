@@ -288,8 +288,125 @@ With the deployment complete and the environment configured, it's time to verify
 
 ##### Testing Email Notifications
 
+To test the `EmailTrigger` function:
 
+  1. **Send an HTTP POST Request**: Use a tool like Postman to send a POST request to the Function App's URL suffixed with `/api/EmailTrigger`. The body should contain JSON with keys for `subject`, `htmlContent`, and `recipient`.
+  2. **Verify Email Receipt**: Check the recipient's email inbox for the message. Ensure that the subject and content match what you sent through the POST request.
+
+##### Testing SMS Notifications
+
+To test the `SMSTrigger` function:
+
+  1. **Send an HTTP POST Request**: Using Postman, send a POST request to the Function App's URL with `/api/SMSTrigger` at the end. The body of your request should contain JSON with `message` and `phoneNumberkeys`. 
+  2. **Check for SMS**: Ensure that the specified phone number receives the SMS and the message content matches the request.
+
+##### Testing WhatsApp Notifications
+
+To test the `WhatsAppTrigger` function:
+
+  1. **Send an HTTP POST Request**: Use Postman again to POST to the Function URL, this time ending with `/api/WhatsAppTrigger`. Include a JSON body with keys for `phoneNumber`, `templateName`, `templateLanguage`, and `templateParameters`.
+  2. **Confirm WhatsApp Message**: Verify that the WhatsApp message reaches the intended recipient with correct template filling.
+
+### Integrate with OpenAI GPTs
+
+In [OpenAI GPTs editor](https://chat.openai.com/gpts/editor), click 'new GPT' and 'configure'. Name it "Email Sender" and set the description and instructions as mentioned.
+
+```
+Compose wonderful emails and send them
+
+Help author short and delightful emails. Ask for details on the nature of the email content and include creative ideas for topics. Compose the email with placeholders for the sender's name and receiver's name. You do not need a full name. Share a draft of the email and ask for the sender's name, and the receiver's name and email address. Provide a draft of the final email and confirm the user is happy with it. When the user provides a recipient's email address ask if it is correct before sending. Do not send the email until you provide a final draft and you have a confirmed recipient email address.
+```
 
 ![image of email composer in Chat GPT configuration](../../static/img/60-days-of-ia/blogs/2024-04-01/6-5-3.png)
 
+### Add Actions and JSON Schema
+
+Click 'Create new action' in your GPT configuration. Enter the following JSON:
+
+`json`
+```
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Send Message API",
+    "description": "API for sending a message to a specified email address.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://<<function-app-url>>.azurewebsites.net"
+    }
+  ],
+   "paths": {
+    "/api/emailtrigger": {
+      "post": {
+        "description": "Send a message to a given email address",
+        "operationId": "SendMessage",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "recipient": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Email address of the recipient"
+                  },
+                  "subject": {
+                    "type": "string",
+                    "description": "The message subject"
+                  },
+                  "htmlContent": {
+                    "type": "string",
+                    "description": "The body content of the email encoded as escaped HTML"
+                  }
+                },
+                "required": [
+                  "to",
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
+```
+
+Leave Authentication to none, and Privacy Policy blank.
+
+### Test Your GPT
+
+Finally, try out your GPT in the preview pane to see it in action!
+
+By following these steps, you can easily integrate Azure Communication Services with OpenAI GPTs to send emails effortlessly.
+
 ![image of email composer in Chat GPT results](../../static/img/60-days-of-ia/blogs/2024-04-01/6-5-4.png)
+
+### Conclusion and Further Reading
+
+We have successfully walked through the journey of building a serverless multichannel notification system using Azure Functions and Azure Communication Services. This system can send timely and personalized notifications across multiple channels, such as Email, SMS, and WhatsApp. In addition, we have explored how to enhance our system with sophisticated content generation capabilities using OpenAI GPTs.
+
+The modular nature of the Azure Functions framework allows your application to scale and adapt easily to changing requirements and traffic demands. Meanwhile, Azure Communication Services enrich the user experience by meeting customers on their preferred platforms, contributing to a seamless and cohesive communication strategy.
+
+As developers, there's always room to expand our knowledge and add robust features to our applications. Here are some suggestions for further exploration and resources that can assist you in taking your applications to the next level:
+
+  1. **Azure Communication Services AI samples**: One stop shop for GitHub samples for [AI-powered communication solutions](https://aka.ms/acs-ai-index?ocid=buildia24_60days_blogs).
+  2. **Azure Functions Best Practices**: Learn about best practices for designing and implementing Azure Functions by visiting [Azure Functions best practices](https://docs.microsoft.com/azure/azure-functions/functions-best-practices?ocid=buildia24_60days_blogs).
+  3. **Azure Communication Services Documentation**: Explore the full capabilities of Azure Communication Services including chat, phone numbers, video calling, and more on the [Azure Communication Services documentation](https://docs.microsoft.com/azure/communication-services/?ocid=buildia24_60days_blogs).
+  4. **Security and Compliance in Azure**: Understand the best practices for security and compliance in Azure applications, particularly relevant for handling sensitive user communication data. Check the [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/?ocid=buildia24_60days_blogs).
+  5. **OpenAI GPT Documentation**: For more insight into using and customizing OpenAI GPTs, refer to the [OpenAI API documentation](https://beta.openai.com/docs/).
+  6. **Azure AI Services**: Azure offers a range of AI services beyond just communication. Explore Azure AI services for more advanced scenarios such as speech recognition, machine translation, and anomaly detection at [Azure AI services documentation](https://docs.microsoft.com/azure/ai/?ocid=buildia24_60days_blogs).
+  7. **Handling Large-scale Data**: To handle a large amount of data and improve the performance of communication systems, consider learning about Azure's data-handling services like Azure Cosmos DB, Azure SQL Database, and Azure Cache for Redis. Start with the [Azure Data storage documentation](https://docs.microsoft.com/azure/storage/?ocid=buildia24_60days_blogs).
+  8. **Monitoring and Diagnostics**: Improve the reliability of your applications by implementing robust monitoring and diagnostics tools. Azure offers several tools such as Azure Monitor and Application Insights. Dive into [Application Insights for Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring?ocid=buildia24_60days_blogs).
+  9. **Serverless Workflow Automation with Azure Logic Apps**: Enhance your serverless applications using Azure Logic Apps to automate and simplify workflows. Learn more about Azure Logic Apps at [What is Azure Logic Apps?](https://docs.microsoft.com/azure/logic-apps/logic-apps-overview?ocid=buildia24_60days_blogs).
+
+We encourage you to continue exploring and experimenting with Azure services and OpenAI GPTs to build more personalized and efficient communication solutions. Get your hands on the newly released [Azure Functions Flex Consumption Plan](https://aka.ms/flexconsumption/signup?ocid=buildia24_60days_blogs) for private networking, instance size selection, concurrency control, and fast and large scale out features on a serverless compute model. Happy coding!
