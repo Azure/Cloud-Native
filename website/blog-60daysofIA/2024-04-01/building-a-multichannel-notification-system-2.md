@@ -247,9 +247,7 @@ Deployment of your Azure Function can be done right from Visual Studio Code with
 ![image of the Deploy to Function App button](../../static/img/60-days-of-ia/blogs/2024-04-01/6-5-1.png)
 
   1. **Choose Your Function App**: You can either create a new Function App or deploy it to an existing one. If it's the first time you are deploying, choose 'Create New Function App in Azure...'.
-
   2. **Set the Configuration**: Provide a unique name for your Function App, select a runtime stack (.NET Core in this case), choose the appropriate region, and confirm your selections.
-
   3. **Wait for Deployment**: The deployment process will take a few minutes. Monitor the output window for completion status and any potential errors.
 
 #### Set Up Application Settings
