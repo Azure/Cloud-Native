@@ -404,7 +404,7 @@ This completed `EmailTriggerAzure` Function is now ready to be part of a multich
 
 ### Next Steps
 
-Continue to the next part of this topic to further explore building, deploying and testing your intelligent app for a multichannel notification system.
+Continue to the [next part](https://azure.github.io/Cloud-Native/60DaysOfIA/building-a-multichannel-notification-system-2) of this topic to further explore building, deploying and testing your intelligent app for a multichannel notification system.
 
 
 

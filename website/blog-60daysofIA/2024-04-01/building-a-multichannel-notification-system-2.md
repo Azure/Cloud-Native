@@ -32,7 +32,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ## Building a Multichannel Notification System with Azure Functions and Azure Communication Services (2)
 
-In the first part of this topic, we setup all the Azure resources like the Azure Communication Services for Email, SMS, WhatsApp for Business and developed the Azure Functions code for the email trigger. In this second part, we will complete coding the remaining Azure Functions triggers and then go ahead to deploy the multichannel notification system to Azure Functions, testing the Email, SMS, and WhatsApp triggers with OpenAI GPTs. Let’s get started!
+In the [first part](https://azure.github.io/Cloud-Native/60DaysOfIA/building-a-multichannel-notification-system-1) of this topic, we setup all the Azure resources like the Azure Communication Services for Email, SMS, WhatsApp for Business and developed the Azure Functions code for the email trigger. In this second part, we will complete coding the remaining Azure Functions triggers and then go ahead to deploy the multichannel notification system to Azure Functions, testing the Email, SMS, and WhatsApp triggers with OpenAI GPTs. Let’s get started!
 
 ### Prerequisite
 
