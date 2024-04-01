@@ -98,7 +98,7 @@ Change the `Run` function to be `async` as we will perform asynchronous operatio
 public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req)
 ```
 
-If the request body fails to deserialize into SmsRequest, return a BadRequestResult:
+If the request body fails to deserialize into `SmsRequest`, return a `BadRequestResult`:
 
 `csharp`
 ```
