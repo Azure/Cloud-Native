@@ -95,6 +95,7 @@ az login
 ```
 az group create --name <YourResourceGroupName> --location <PreferredLocation>
 ```
+Replace `<YourResourceGroupName>` with a name for your new resource group and `<PreferredLocation>` with the Azure region you prefer (e.g., eastus).
 
   3. **Create ACS Resource**: This will be the main ACS resource where we manage communications capabilities.
 
@@ -290,6 +291,22 @@ if (data is null)
 Instantiate a sender email address string that will be passed to the `SendAsync` method of the EmailClient instance. Replace the static email 'DoNotReply@effaa622-a003-4676-b27e-6b9e7a783581.azurecomm.net' with your configured sender address in the actual implementation. 
 
 Use a try-catch block to send the email using the `SendAsync` method and catch any `RequestFailedException` to log any errors.
+
+`csharp`
+
+```
+_logger.LogInformation("Sending email...");
+EmailSendOperation emailSendOperation = await _emailClient.SendAsync(
+    Azure.WaitUntil.Completed,
+    sender,
+    data.Recipient,
+    data.Subject,
+    data.HtmlContent
+); 
+
+_logger.LogInformation($"Email Sent. Status = {emailSendOperation.Value.Status}");
+_logger.LogInformation($"Email operation id = {emailSendOperation.Id}");
+```
 
 #### Step 7: Return a Success Response
 
