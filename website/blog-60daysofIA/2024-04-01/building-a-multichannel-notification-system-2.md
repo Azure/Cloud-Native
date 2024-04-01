@@ -232,7 +232,119 @@ namespace ACSGPTFunctions
 }
 ```
 
-The `WhatsAppTrigger` Azure Function is now ready to send WhatsApp template messages. Be sure to test it extensively and remember to handle any issues related to input validation and communicate with the Azure Communication Services API correctly.
+This completed `SMSTrigger` Azure Function can now facilitate SMS as part of your multichannel notification system.
+
+### Coding the WhatsAppTrigger
+
+Creating a functional `WhatsAppTrigger` Azure Function involves iterating on the default HTTP-triggered function template provided by Azure Functions for C#. We will modify this template to integrate Azure Communication Services for sending WhatsApp messages via template messages. Follow the steps below to transform this template into a complete `WhatsAppTrigger` function:
+
+#### Step 1: Set Up the Function Template
+
+Follow the instructions in the first step for setting up SMS trigger and name the function as `WhatsAppTrigger`. Set the authorization level to anonymous or function, depending on your security preference.
+
+#### Step 2: Reference the Azure Communication Services Messages Package
+
+Ensure the `Azure.Communication.Messages` NuGet package is included in your project to enable messaging features needed for WhatsApp. Install the package with the following command in Visual Studio Code’s terminal:
+
+`bash`
+```
+dotnet add package Azure.Communication.Messages --prerelease
+```
+
+Add a reference to using `Azure.Communication.Messages` then create a property in the `WhatsApp` Trigger class to hold an instance of `NotificationMessagesClient` and a property to hold the WhatsApp identifier.
+
+`csharp`
+```
+private readonly NotificationMessagesClient _messagesClient;
+private string? sender = Environment.GetEnvironmentVariable("WHATSAPP_NUMBER");
+```
+
+#### Step 3: Read Configuration and Initialize NotificationMessagesClient
+
+Update the `WhatsAppTrigger` class constructor to read the Azure Communication Services connection string from environment variables using `Environment.GetEnvironmentVariable()` and initialize `NotificationMessagesClient` with this connection string:
+
+`csharp`
+
+```
+string? connectionString = Environment.GetEnvironmentVariable("COMMUNICATION_SERVICES_CONNECTION_STRING");
+if (connectionString is null)
+{
+    throw new InvalidOperationException("COMMUNICATION_SERVICES_CONNECTION_STRING environment variable is not set.");
+}
+_messagesClient = new NotificationMessagesClient(connectionString);
+```
+
+#### Step 4: Define the Request Model
+
+Create a request model class named `WhatsAppRequest` within the `WhatsAppTrigger` class, containing properties for the destination phone number, template name, language, and template parameters:
+
+`csharp`
+```
+public class WhatsAppRequest 
+
+{
+    public string PhoneNumber { get; set; } = string.Empty;
+    public string TemplateName { get; set; } = "appointment_reminder";
+    public string TemplateLanguage { get; set; } = "en";
+    public List<string> TemplateParameters { get; set; } = new List<string>();
+}
+```
+
+#### Step 5: Parse the Request Body
+
+Convert the Run function to be `async` to enable asynchronous work. Use `StreamReader` to read the request body and deserialize it to a `WhatsAppRequest` instance using `System.Text.Json.JsonSerializer` with `JsonNamingPolicy.CamelCase`.
+
+`csharp`
+```
+public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req)
+```
+
+Handle potential deserialization failure by returning `BadRequestResult`:
+
+`csharp`
+```
+string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); 
+WhatsAppRequest? data = JsonSerializer.Deserialize<WhatsAppRequest>(requestBody, new JsonSerializerOptions() {
+    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+});
+
+if (data is null)
+{
+    return new BadRequestResult();
+}
+```
+
+#### Step 6: Prepare Template Message and Send WhatsApp Message
+
+Modify the try-catch block to construct a `SendMessageOptions` object using `MessageTemplateWhatsAppBindingsand MessageTemplate`, and then make a call to `_messagesClient.SendMessageAsync(sendTemplateMessageOptions)`:
+
+`csharp`
+```
+try
+{
+    _logger.LogInformation("Sending WhatsApp message...");
+
+    List<string> recipientList = new List<string> { data.PhoneNumber };
+    List<MessageTemplateText> values = data.TemplateParameters
+        .Select((parameter, index) => new MessageTemplateText($"value{index + 1}", parameter))
+        .ToList();
+    MessageTemplateWhatsAppBindings bindings = new MessageTemplateWhatsAppBindings(
+        body: values.Select(value => value.Name).ToList()
+    );
+    MessageTemplate template = new MessageTemplate(data.TemplateName, data.TemplateLanguage, values, bindings);
+    SendMessageOptions sendTemplateMessageOptions = new SendMessageOptions(sender, recipientList, template);
+    Response<SendMessageResult> templateResponse = await _messagesClient.SendMessageAsync(sendTemplateMessageOptions); 
+
+    _logger.LogInformation("WhatsApp message sent successfully!");
+}
+catch (RequestFailedException ex)
+{
+    _logger.LogError($"WhatsApp send operation failed with error code: {ex.ErrorCode}, message: {ex.Message}");
+    return new ObjectResult(new { error = ex.Message }) { StatusCode = 500 };
+}
+```
+
+
 
 ### Deployment and Testing
 
