@@ -3,7 +3,7 @@ date: 2024-04-01T09:01
 slug: building-a-multichannel-notification-system-2
 title: "6.5 Building a Multichannel Notification System (2)"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
