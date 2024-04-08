@@ -52,7 +52,7 @@ To follow this tutorial, ensure you have the following:
 
 * [Python](https://www.python.org/downloads/) 3.10 or later
 * Dave Kuhlman’s open-source [Python knowledge base](https://www.davekuhlman.org/python_book_01.html) downloaded as an HTML file
-* An Azure subscription with access to the [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?ocid=buildia24_60days_blogs). Note that you need to [request access](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUNTZBNzRKNlVQSFhZMU9aV09EVzYxWFdORCQlQCN0PWcu?ocid=buildia24_60days_blogs) to this service.
+* An Azure subscription with access to the [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?ocid=buildia24_60days_blogs). Note that you need to [request access](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUNTZBNzRKNlVQSFhZMU9aV09EVzYxWFdORCQlQCN0PWcu) to this service.
 * The [Azure command-line interface (CLI)](https://learn.microsoft.com/cli/azure/?ocid=buildia24_60days_blogs) installed
 * An Azure [resource group](https://learn.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal?ocid=buildia24_60days_blogs#create-resource-groups)
 
