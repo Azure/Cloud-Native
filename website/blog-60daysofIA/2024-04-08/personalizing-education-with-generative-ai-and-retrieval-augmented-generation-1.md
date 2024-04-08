@@ -91,3 +91,54 @@ Register for **[Episode 4](https://aka.ms/serverless-learn-live/ep4?ocid=build
 Join the community along with MVPs, and the Azure Product Group on how to leverage AI with Serverless on Azure technologies—Azure Container Apps and Azure Functions—to build intelligent applications.
 
 #### Creating an Azure OpenAI Service
+
+With your knowledge base ready, you’ll now set up the core AI component: an Azure OpenAI service that uses RAG to access this knowledge base and generate customized lessons and quizzes.
+
+In the Azure portal search bar, search “Azure OpenAI.” Click + **Create** to start a new service.
+
+![The Azure OpenAI service page lets the user create a new service.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-5.png)
+
+Match the **Basics** tab configurations to the following:
+
+* **Subscription** and **Resource group** — Ensure these match your previous Azure resources for consistency.
+* **Region** — This demonstration uses Sweden Central as the region. Note that some models are only available in [limited regions](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-preview), so be sure to select the right region.
+* **Name** — Create a unique name for your OpenAI resource.
+* **Pricing tier** — Select **Standard S0**.
+
+![The page to create an Azure OpenAI service has four tabs: Basics, Network, Tags, and Review + submit. Basics is open. There are three sections: Project Details, Instance Details, and Content review policy (not visible here). Under Project Details are fields for Subscription (Azure subscription 1) and Resource group (personal-tutor). Under Instance Details are region (Sweden Central), Name (pythontutor), and Pricing tier (Standard S0). At the bottom of the page are Previous and Next buttons.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-6.png)
+
+Click **Next**.
+
+On the **Networking** tab, select **All networks, including the internet, can access this resource**. 
+
+Finally, click **Review + Create**, and then **Create**. 
+
+Once your Azure OpenAI service is ready, you’ll set up the necessary AI models. Within your Azure OpenAI resource, click **Go to Azure OpenAI Studio**. Then, under **Management** on the left pane, select **Deployments**.
+
+![Screenshot of the Deployments page.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-7.png)
+
+Click **+ Create new deployment**. You’ll deploy two models for your application:
+
+* `text-embedding-ada-002` to create the embeddings of the knowledge base
+* GPT-4 to generate personalized courses and quizzes
+
+![The form to deploy a model contains three fields: Select a model (a dropdown menu), Model version (a dropdown menu), and Deployment name. At the bottom are two buttons: Create and Cancel.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-8.png)
+
+#### Creating an Azure AI Search Resource
+
+With your AI models in place, it’s time to make your knowledge base easily accessible to them.
+
+In the Azure OpenAI Studio, navigate to **Playground** and select **Chat**. Locate the **Add your data** option and click + **Add a data source**.
+
+![The Chat playground within Azure OpenAI Studio.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-9.png)
+
+A window will open where you can connect to the Azure Blob Storage you created earlier. Use the following configurations for the data source:
+
+* **Select data source** — Select **Azure Blob Storage**.
+* **Subscription** — Choose the same subscription as your other services.
+* **Select Azure Blob storage resource** — Select the storage account you created.
+* **Select storage container** — Select the container that has your knowledge base.
+* **Select Azure AI Search resource** — Create a new Azure AI Search resource.
+
+![Screenshot of the for to select or add  a data source . It includes the following fields: Select data source, Subscription. Select Azure Blob storage resource, Select storage container, Select Azure AI Search resource, Enter the index name, and Index schedule. There's a checkbox, selected here, for Add vector search to this search resource. Below is an Embedding model heading, with a Select an embedding model field below. Azure OpenAI - embedding-model is selected. Below is a checkbox, selected, for acknowledging you'll incur costs for usage. The bottom of the page has two buttons: Next and Cancel.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-10.png)
+
