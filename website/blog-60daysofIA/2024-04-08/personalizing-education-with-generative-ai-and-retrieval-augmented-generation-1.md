@@ -153,3 +153,29 @@ On the **Basics** tab, configure the resource as follows:
 
 ![The form to create a search service features five tabs: Basics, Scale, Networking, Tags, and Review + create. Basics is open. There are two sections: Project details (containing Subscription and Resource Group) and Instance details (containing Service name, Location, and Pricing tier). At the bottom are three buttons: Review + create, Previous, and Next: Scale.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-11.png)
 
+Click **Review + create**.
+
+Return to the **Select or add data source** window. Configure the rest of the options as follows:
+
+* **Enter the index name** — Provide an index name that will reference your data source.
+* **Indexer schedule** — Choose **Once**.
+* Enable the **Add vector search to this search resource** option.
+* **Select an embedding model** — Choose the text-embedding-ada-002 model that you deployed earlier.
+
+Check the acknowledgment box and click **Next**.
+
+Then, in the **Data management** window, select **Vector** as the **Search type**. Check the acknowledgment and click **Next**.
+
+![The Data management form includes a Search type dropdown, where Vector is selected. Below is a checkbox, selected here, to acknowledge that costs will incur with usage. At the bottom are three buttons: Back, Next, and Cancel.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-12.png)
+
+Finally, click **Save and close**.
+
+![The Review and finish page of the form summarizes the options and data choices from previous steps. At the bottom are three buttons: Back, Save and close, and Cancel.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-13.png)
+
+Now that your data and services are connected, the next tutorial will focus on building the core application logic and creating a web interface to interact with your chatbot.
+
+### Next Steps
+
+And with that, you’ve reached the end of the first tutorial of this series. You’ve established a solid Azure foundation and connected your knowledge base to powerful AI services. In the next part of this series, you’ll use Python to build a chatbot that enables dynamic interaction and personalized learning experiences for your users. See you there!
+
+To build on the skills you’ve gained here, explore more AI and cloud topics by registering for [Serverless on Azure Learn Live](https://aka.ms/intelligent-apps/serverless-learnlive?ocid=buildia24_60days_blogs) series. Then, put your knowledge to the test — and earn a Microsoft Learn badge — by joining our Cloud Skills Challenge.
