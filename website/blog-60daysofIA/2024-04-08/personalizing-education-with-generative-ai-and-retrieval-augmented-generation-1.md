@@ -142,3 +142,14 @@ A window will open where you can connect to the Azure Blob Storage you created e
 
 ![Screenshot of the for to select or add  a data source . It includes the following fields: Select data source, Subscription. Select Azure Blob storage resource, Select storage container, Select Azure AI Search resource, Enter the index name, and Index schedule. There's a checkbox, selected here, for Add vector search to this search resource. Below is an Embedding model heading, with a Select an embedding model field below. Azure OpenAI - embedding-model is selected. Below is a checkbox, selected, for acknowledging you'll incur costs for usage. The bottom of the page has two buttons: Next and Cancel.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-10.png)
 
+Since you don’t have an existing Search resource, select **Create a new Azure AI Search resource**, hyperlinked under the **Select Azure AI Search resource** dropdown. Azure AI Search makes the content of your knowledge base searchable by converting the data into numeric representations called vectors. These vectors capture the meaning and relationships between words.
+
+On the **Basics** tab, configure the resource as follows:
+
+* **Subscription** and **Resource Group** — Choose the same subscription and resource group as your other services.
+* **Service name** — Enter a name for your search service.
+* **Location** — Choose a location according to your preference.
+* **Pricing tier** — Select **Basic**.
+
+![The form to create a search service features five tabs: Basics, Scale, Networking, Tags, and Review + create. Basics is open. There are two sections: Project details (containing Subscription and Resource Group) and Instance details (containing Service name, Location, and Pricing tier). At the bottom are three buttons: Review + create, Previous, and Next: Scale.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-11.png)
+
