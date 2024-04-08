@@ -2,11 +2,139 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/60DaysOfIA</id>
     <title>Build Intelligent Apps On Azure Blog</title>
-    <updated>2024-04-01T09:01:00.000Z</updated>
+    <updated>2024-04-08T09:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/60DaysOfIA"/>
     <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[7.1 Personalizing Education with Generative AI and Retrieval Augmented Generation Part 1]]></title>
+        <id>https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1</id>
+        <link href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1"/>
+        <updated>2024-04-08T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this three-part series, you’ll use Azure Container Apps, Azure OpenAI Service, and Retrieval Augmented Generation to create a personal tutor chatbot that dynamically adjusts educational materials and quizzes based on user interactions. This article shows how to set up the core Azure AI services required to build your Intelligent App.]]></summary>
+        <content type="html"><![CDATA[
+<p><img loading="lazy" alt="Graphic of three blocks, surrounded by a circle in the top right corner. At the bottom of the graphic is text that reads, &amp;quot;Personalizing Education with Generative AI and Retrieval Augmented Generation: Laying the Groundwork with Azure Container Apps." src="https://azure.github.io/Cloud-Native/assets/images/7-1-1-83755df98884493739385db56805a793.jpeg" width="624" height="351" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="personalizing-education-with-generative-ai-and-retrieval-augmented-generation-part-1-laying-the-groundwork-with-azure-container-apps">Personalizing Education with Generative AI and Retrieval Augmented Generation Part 1: Laying the Groundwork with Azure Container Apps<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1#personalizing-education-with-generative-ai-and-retrieval-augmented-generation-part-1-laying-the-groundwork-with-azure-container-apps" class="hash-link" aria-label="Direct link to Personalizing Education with Generative AI and Retrieval Augmented Generation Part 1: Laying the Groundwork with Azure Container Apps" title="Direct link to Personalizing Education with Generative AI and Retrieval Augmented Generation Part 1: Laying the Groundwork with Azure Container Apps">​</a></h2>
+<p>Tired of one-size-fits-all learning? Imagine a virtual tutor that adjusts to your specific needs and helps you understand complex topics. That’s the power of Intelligent Apps — apps that leverage machine learning (ML), data analytics, and predictive/generative artificial intelligence (AI) to create dynamic, interactive user experiences.</p>
+<p>In this three-part series, you’ll build an education app that uses generative AI and Retrieval Augmented Generation (RAG) to create customized lessons, answer users’ questions in detail, and generate quizzes that adapt to their progress. You’ll use several exciting Azure technologies:</p>
+<ul>
+<li><a href="https://azure.microsoft.com/products/ai-services/openai-service?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure OpenAI Service</a> — Provides the core AI capabilities for your app</li>
+<li><a href="https://azure.microsoft.com/products/ai-services/ai-search?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure AI Search</a> — Offers a knowledge base that your app can access using RAG, allowing the large language model (LLM) to provide more accurate explanations</li>
+<li><a href="https://azure.microsoft.com/products/container-apps?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure Container Apps</a> — Lets you easily package and run apps in a flexible and scalable environment.</li>
+</ul>
+<p><img loading="lazy" alt="The Intelligent Application&amp;#39;s architecture comprises Azure OpenAI, Azure AI Search, an Azure Storage Account, and the Knowledge Base." src="https://azure.github.io/Cloud-Native/assets/images/7-1-2-625462287cb5aa0f45c8cad4c6619a6c.png" width="624" height="351" class="img_ev3q"></p>
+<p>Let’s get started!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="prerequisites">Prerequisites<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites">​</a></h3>
+<p>To follow this tutorial, ensure you have the following:</p>
+<ul>
+<li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">Python</a> 3.10 or later</li>
+<li>Dave Kuhlman’s open-source <a href="https://www.davekuhlman.org/python_book_01.html" target="_blank" rel="noopener noreferrer">Python knowledge base</a> downloaded as an HTML file</li>
+<li>An Azure subscription with access to the <a href="https://azure.microsoft.com/products/ai-services/openai-service?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure OpenAI Service</a>. Note that you need to <a href="https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUNTZBNzRKNlVQSFhZMU9aV09EVzYxWFdORCQlQCN0PWcu" target="_blank" rel="noopener noreferrer">request access</a> to this service.</li>
+<li>The <a href="https://learn.microsoft.com/cli/azure/?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure command-line interface (CLI)</a> installed</li>
+<li>An Azure <a href="https://learn.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal?ocid=buildia24_60days_blogs#create-resource-groups" target="_blank" rel="noopener noreferrer">resource group</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="build-a-personal-tutor-with-ai-and-azure-container-apps">Build a Personal Tutor with AI and Azure Container Apps<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1#build-a-personal-tutor-with-ai-and-azure-container-apps" class="hash-link" aria-label="Direct link to Build a Personal Tutor with AI and Azure Container Apps" title="Direct link to Build a Personal Tutor with AI and Azure Container Apps">​</a></h3>
+<p>In this first part of the series, you’ll build the foundation for an AI-powered Python tutor. This tutor will use a knowledge base to answer your Python questions of varying difficulties and create tailored quizzes.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="creating-an-azure-storage-account-for-rag-data">Creating an Azure Storage Account for RAG Data<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1#creating-an-azure-storage-account-for-rag-data" class="hash-link" aria-label="Direct link to Creating an Azure Storage Account for RAG Data" title="Direct link to Creating an Azure Storage Account for RAG Data">​</a></h4>
+<p>Start by creating a space to store the knowledge base that your chatbot will use for RAG. Sign in to the Azure portal and search “Storage accounts” in the search bar. Click + <strong>Create</strong> to start a new storage account.</p>
+<p>On the <strong>Basics</strong> tab, set the following configurations:</p>
+<ul>
+<li><strong>Subscription</strong> — Select the same subscription as your resource group.</li>
+<li><strong>Resource group</strong> — Select the resource group you created earlier.</li>
+<li><strong>Storage account name</strong> — Enter a unique name for your storage account.</li>
+<li><strong>Region</strong> — Choose a region according to your preference.</li>
+<li><strong>Pricing tier</strong> — Select Standard S0.</li>
+</ul>
+<p><img loading="lazy" alt="The storage account creation page has seven tabs: Basics, Advanced, Networking, Data protection, Encryption, Tags, and Review. Basics is open. Below are two sections: Project details and Instance details. Under Project details are fields for Subscription (Azure subscription 1) and Resource group (personal-tutor). Under Instance details are fields for Storage account name (blank) and Region ((US) East US). At the bottom are two buttons: Review and Next: Advanced." src="https://azure.github.io/Cloud-Native/assets/images/7-1-3-bcb4a345d3779a33784e41c211ee752f.png" width="624" height="338" class="img_ev3q"></p>
+<p>For the other tabs, keep the default settings.</p>
+<p>Finally, click <strong>Review + Create</strong>, and then <strong>Create</strong>.</p>
+<p>Next, you’ll upload the knowledge base linked in this tutorial’s prerequisites. Use HTML formatting for this project.</p>
+<p>Once you have created your storage account, navigate to it from the Azure portal and click <strong>Upload</strong>. In the window that appears, create a new container, give it a descriptive name, and check <strong>Private (no anonymous access)</strong>. Select the newly created container and click <strong>Browse for files</strong>. Select the file or folder you want to upload. Then, click <strong>Upload</strong> to upload the blob.</p>
+<p><img loading="lazy" alt="The Edututor storage account page lists menu options including Overview, Activity log, Tags, Diagnose and solve problems, Access Control (IAM), Data migration, Events, and Storage Mover. There are also menus for Data storage (Containers, File shares, Queues, and Tables), and Security + monitoring (Networking, Front Door and CDN), and Access keys. To the right of the page is a window to upload a blob, with the option to drag and drop a file or select an existing container." src="https://azure.github.io/Cloud-Native/assets/images/7-1-4-d2d662c2f42046376aede8ce652d65cf.jpeg" width="624" height="338" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Register for <strong><a href="https://aka.ms/serverless-learn-live/ep4?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Episode 4</a></strong> of the new learning series on <strong>Intelligent Apps with Serverless on Azure</strong>.</p></div></div>
+<p>Join the community along with MVPs, and the Azure Product Group on how to leverage AI with Serverless on Azure technologies—Azure Container Apps and Azure Functions—to build intelligent applications.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="creating-an-azure-openai-service">Creating an Azure OpenAI Service<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1#creating-an-azure-openai-service" class="hash-link" aria-label="Direct link to Creating an Azure OpenAI Service" title="Direct link to Creating an Azure OpenAI Service">​</a></h4>
+<p>With your knowledge base ready, you’ll now set up the core AI component: an Azure OpenAI service that uses RAG to access this knowledge base and generate customized lessons and quizzes.</p>
+<p>In the Azure portal search bar, search “Azure OpenAI.” Click + <strong>Create</strong> to start a new service.</p>
+<p><img loading="lazy" alt="The Azure OpenAI service page lets the user create a new service." src="https://azure.github.io/Cloud-Native/assets/images/7-1-5-7cfd596920bf7bfcf7475e8bd90ed025.png" width="624" height="338" class="img_ev3q"></p>
+<p>Match the <strong>Basics</strong> tab configurations to the following:</p>
+<ul>
+<li><strong>Subscription</strong> and <strong>Resource group</strong> — Ensure these match your previous Azure resources for consistency.</li>
+<li><strong>Region</strong> — This demonstration uses Sweden Central as the region. Note that some models are only available in <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-preview" target="_blank" rel="noopener noreferrer">limited regions</a>, so be sure to select the right region.</li>
+<li><strong>Name</strong> — Create a unique name for your OpenAI resource.</li>
+<li><strong>Pricing tier</strong> — Select <strong>Standard S0</strong>.</li>
+</ul>
+<p><img loading="lazy" alt="The page to create an Azure OpenAI service has four tabs: Basics, Network, Tags, and Review + submit. Basics is open. There are three sections: Project Details, Instance Details, and Content review policy (not visible here). Under Project Details are fields for Subscription (Azure subscription 1) and Resource group (personal-tutor). Under Instance Details are region (Sweden Central), Name (pythontutor), and Pricing tier (Standard S0). At the bottom of the page are Previous and Next buttons." src="https://azure.github.io/Cloud-Native/assets/images/7-1-6-0f2736590ddc1eea28a3cfbe6c5883f8.png" width="624" height="351" class="img_ev3q"></p>
+<p>Click <strong>Next</strong>.</p>
+<p>On the <strong>Networking</strong> tab, select <strong>All networks, including the internet, can access this resource</strong>.</p>
+<p>Finally, click <strong>Review + Create</strong>, and then <strong>Create</strong>.</p>
+<p>Once your Azure OpenAI service is ready, you’ll set up the necessary AI models. Within your Azure OpenAI resource, click <strong>Go to Azure OpenAI Studio</strong>. Then, under <strong>Management</strong> on the left pane, select <strong>Deployments</strong>.</p>
+<p><img loading="lazy" alt="Screenshot of the Deployments page." src="https://azure.github.io/Cloud-Native/assets/images/7-1-7-3896e51b7aa2c7179f64311ce5c23b9c.png" width="584" height="315" class="img_ev3q"></p>
+<p>Click <strong>+ Create new deployment</strong>. You’ll deploy two models for your application:</p>
+<ul>
+<li><code>text-embedding-ada-002</code> to create the embeddings of the knowledge base</li>
+<li>GPT-4 to generate personalized courses and quizzes</li>
+</ul>
+<p><img loading="lazy" alt="The form to deploy a model contains three fields: Select a model (a dropdown menu), Model version (a dropdown menu), and Deployment name. At the bottom are two buttons: Create and Cancel." src="https://azure.github.io/Cloud-Native/assets/images/7-1-8-3c563c95710a49d42748c1a9615b0f3e.png" width="624" height="512" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="creating-an-azure-ai-search-resource">Creating an Azure AI Search Resource<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1#creating-an-azure-ai-search-resource" class="hash-link" aria-label="Direct link to Creating an Azure AI Search Resource" title="Direct link to Creating an Azure AI Search Resource">​</a></h4>
+<p>With your AI models in place, it’s time to make your knowledge base easily accessible to them.</p>
+<p>In the Azure OpenAI Studio, navigate to <strong>Playground</strong> and select <strong>Chat</strong>. Locate the <strong>Add your data</strong> option and click + <strong>Add a data source</strong>.</p>
+<p><img loading="lazy" alt="The Chat playground within Azure OpenAI Studio." src="https://azure.github.io/Cloud-Native/assets/images/7-1-9-605564c0805bbb07977425807a636bab.png" width="624" height="351" class="img_ev3q"></p>
+<p>A window will open where you can connect to the Azure Blob Storage you created earlier. Use the following configurations for the data source:</p>
+<ul>
+<li><strong>Select data source</strong> — Select <strong>Azure Blob Storage</strong>.</li>
+<li><strong>Subscription</strong> — Choose the same subscription as your other services.</li>
+<li><strong>Select Azure Blob storage resource</strong> — Select the storage account you created.</li>
+<li><strong>Select storage container</strong> — Select the container that has your knowledge base.</li>
+<li><strong>Select Azure AI Search resource</strong> — Create a new Azure AI Search resource.</li>
+</ul>
+<p><img loading="lazy" alt="Screenshot of the for to select or add&nbsp; a data source . It includes the following fields: Select data source, Subscription. Select Azure Blob storage resource, Select storage container, Select Azure AI Search resource, Enter the index name, and Index schedule. There&amp;#39;s a checkbox, selected here, for Add vector search to this search resource. Below is an Embedding model heading, with a Select an embedding model field below. Azure OpenAI - embedding-model is selected. Below is a checkbox, selected, for acknowledging you&amp;#39;ll incur costs for usage. The bottom of the page has two buttons: Next and Cancel." src="https://azure.github.io/Cloud-Native/assets/images/7-1-10-dbb693b944f84bf2fd0e148337ad12f7.png" width="624" height="337" class="img_ev3q"></p>
+<p>Since you don’t have an existing Search resource, select <strong>Create a new Azure AI Search resource</strong>, hyperlinked under the <strong>Select Azure AI Search resource</strong> dropdown. Azure AI Search makes the content of your knowledge base searchable by converting the data into numeric representations called vectors. These vectors capture the meaning and relationships between words.</p>
+<p>On the <strong>Basics</strong> tab, configure the resource as follows:</p>
+<ul>
+<li><strong>Subscription</strong> and <strong>Resource Group</strong> — Choose the same subscription and resource group as your other services.</li>
+<li><strong>Service name</strong> — Enter a name for your search service.</li>
+<li><strong>Location</strong> — Choose a location according to your preference.</li>
+<li><strong>Pricing tier</strong> — Select <strong>Basic</strong>.</li>
+</ul>
+<p><img loading="lazy" alt="The form to create a search service features five tabs: Basics, Scale, Networking, Tags, and Review + create. Basics is open. There are two sections: Project details (containing Subscription and Resource Group) and Instance details (containing Service name, Location, and Pricing tier). At the bottom are three buttons: Review + create, Previous, and Next: Scale." src="https://azure.github.io/Cloud-Native/assets/images/7-1-11-afa4e9723f616f68f882d43f892e4cba.png" width="624" height="552" class="img_ev3q"></p>
+<p>Click <strong>Review + create</strong>.</p>
+<p>Return to the <strong>Select or add data source</strong> window. Configure the rest of the options as follows:</p>
+<ul>
+<li><strong>Enter the index name</strong> — Provide an index name that will reference your data source.</li>
+<li><strong>Indexer schedule</strong> — Choose <strong>Once</strong>.</li>
+<li>Enable the <strong>Add vector search to this search resource</strong> option.</li>
+<li><strong>Select an embedding model</strong> — Choose the text-embedding-ada-002 model that you deployed earlier.</li>
+</ul>
+<p>Check the acknowledgment box and click <strong>Next</strong>.</p>
+<p>Then, in the <strong>Data management</strong> window, select <strong>Vector</strong> as the <strong>Search type</strong>. Check the acknowledgment and click <strong>Next</strong>.</p>
+<p><img loading="lazy" alt="The Data management form includes a Search type dropdown, where Vector is selected. Below is a checkbox, selected here, to acknowledge that costs will incur with usage. At the bottom are three buttons: Back, Next, and Cancel." src="https://azure.github.io/Cloud-Native/assets/images/7-1-12-ac31bd8d8fc82dd0e55f4ee229bcfd0b.png" width="624" height="336" class="img_ev3q"></p>
+<p>Finally, click <strong>Save and close</strong>.</p>
+<p><img loading="lazy" alt="The Review and finish page of the form summarizes the options and data choices from previous steps. At the bottom are three buttons: Back, Save and close, and Cancel." src="https://azure.github.io/Cloud-Native/assets/images/7-1-13-0c6613140b2be0a6b1347b14631d4f11.png" width="624" height="338" class="img_ev3q"></p>
+<p>Now that your data and services are connected, the next tutorial will focus on building the core application logic and creating a web interface to interact with your chatbot.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h3>
+<p>And with that, you’ve reached the end of the first tutorial of this series. You’ve established a solid Azure foundation and connected your knowledge base to powerful AI services. In the next part of this series, you’ll use Python to build a chatbot that enables dynamic interaction and personalized learning experiences for your users. See you there!</p>
+<p>To build on the skills you’ve gained here, explore more AI and cloud topics by registering for <a href="https://aka.ms/intelligent-apps/serverless-learnlive?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Serverless on Azure Learn Live</a> series. Then, put your knowledge to the test — and earn a Microsoft Learn badge — by joining our <a href="https://developer.microsoft.com/offers/30-days-to-learn-it?challenge_option=B7BFF832-B9EC-495C-8213-26471EB30B38&amp;wt.mc_id=cloudskillschallenge_B7BFF832-B9EC-495C-8213-26471EB30B38?wt.mc_id=30daystolearnitblog_techcommunity_blog_wwl&amp;ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Cloud Skills Challenge</a>.</p>]]></content>
+        <author>
+            <name>#60Days Of IA</name>
+            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
+        </author>
+        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
+        <category label="60-days-of-IA" term="60-days-of-IA"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="hack-together" term="hack-together"/>
+        <category label="community-buzz" term="community-buzz"/>
+        <category label="ask-the-expert" term="ask-the-expert"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[6.5 Building a Multichannel Notification System (2)]]></title>
         <id>https://azure.github.io/Cloud-Native/60DaysOfIA/building-a-multichannel-notification-system-2</id>
@@ -2263,60 +2391,6 @@ Test R2 Score: 0.8378464489048971" src="https://azure.github.io/Cloud-Native/ass
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-1#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
 <p>In this article, you established an AKS cluster and configured KAITO to integrate with the LLaMA 2 model for advanced ML capabilities. In part 2, you’ll use AKS and KAITO to analyze historical energy consumption data with advanced ML models. You’ll create a dynamic web interface for users to input data, generate predictions, and visualize results seamlessly.</p>
 <p>Be sure to join the <a href="https://azure.github.io/Cloud-Native/Build-IA/CloudSkills" target="_blank" rel="noopener noreferrer">Cloud Skill Challenge</a> to level up your cloud computing skills and gain hands-on experience. You can also register for the <a href="https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">next episode</a> on <strong>Intelligent Apps with Azure Kubernetes Service</strong>, an instructor led live learning experience to deploy your app on AKS. And, join the AKS product and engineering team at <em>KubeCon EU 2024</em>—the premier conference for cloud-native technologies, for <strong>AKS <a href="https://aka.ms/aks-day" target="_blank" rel="noopener noreferrer">Customer</a> and <a href="https://aka.ms/aks-lab-day" target="_blank" rel="noopener noreferrer">Lab</a> Days</strong>.</p>]]></content>
-        <author>
-            <name>#60Days Of IA</name>
-            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
-        </author>
-        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
-        <category label="60-days-of-IA" term="60-days-of-IA"/>
-        <category label="learn-live" term="learn-live"/>
-        <category label="hack-together" term="hack-together"/>
-        <category label="community-buzz" term="community-buzz"/>
-        <category label="ask-the-expert" term="ask-the-expert"/>
-        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
-        <category label="azure-functions" term="azure-functions"/>
-        <category label="azure-openai" term="azure-openai"/>
-        <category label="azure-container-apps" term="azure-container-apps"/>
-        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
-        <category label="github-copilot" term="github-copilot"/>
-        <category label="github-codespaces" term="github-codespaces"/>
-        <category label="github-actions" term="github-actions"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2. Power Up: Crafting an Intelligent Energy Forecasting Application Using Azure Kubernetes Service]]></title>
-        <id>https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service</id>
-        <link href="https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service"/>
-        <updated>2024-02-27T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In this article, we’ll will guide you through creating an intelligent app that leverages Azure technologies, including Azure Kubernetes Service (AKS), to build an application that forecasts energy usage and pricing.]]></summary>
-        <content type="html"><![CDATA[
-<p>At the forefront of recent technological innovation are intelligent apps: apps that use machine learning (ML), artificial intelligence (AI), and data analytics. These apps support smarter, data-driven decisions, making them particularly useful in sectors like energy management, where efficiency and long-term planning are critical.</p>
-<p>Our upcoming series will guide you through creating an intelligent app that leverages Azure technologies, including <a href="https://azure.microsoft.com/products/kubernetes-service?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service</a> (AKS), to build an application that forecasts energy usage and pricing.</p>
-<p>Your app will harness AKS for hosting and AI to analyze historical energy consumption data. Then, you’ll integrate the Kubernetes AI Toolchain Operator (KAITO) with with XGBoost and LLaMA 2 to build an intelligent app that underscores the importance of green energy practices and demonstrates the versatility and efficacy of Azure services.</p>
-<p>We invite you to join us on this three-part educational series, where you’ll learn the skills needed to construct your own intelligent apps. But, this series is more than a technical walkthrough: It’s an opportunity to engage with cutting-edge technologies and contribute to meaningful advancements in energy management.</p>
-<p>Whether you’re an experienced developer or new to the AI and ML sphere, this series will give you a glimpse into the future of application development and the strategic impact of Azure technologies in driving forward-thinking solutions.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-synergy-of-azure-kubernetes-service-and-intelligent-apps">The Synergy of Azure Kubernetes Service and Intelligent Apps<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service#the-synergy-of-azure-kubernetes-service-and-intelligent-apps" class="hash-link" aria-label="Direct link to The Synergy of Azure Kubernetes Service and Intelligent Apps" title="Direct link to The Synergy of Azure Kubernetes Service and Intelligent Apps">​</a></h2>
-<p>Using AKS as the backbone of intelligent apps has numerous benefits — especially when deploying your AI-driven application. AKS provides a managed, cloud-based container orchestration service that simplifies deploying, managing, and scaling AI-backed applications, making it ideal for a project like the one you’ll create in this series.</p>
-<p>One of the primary advantages of AKS is its ability to handle distributed applications with evolving demands. For AI-driven apps, the ability to scale resources based on computational demands is crucial. Because AKS allows for automatic scaling, intelligent apps have the necessary resources during peak analysis times without wasting resources during quieter periods. But this dynamic scalability isn’t just about handling loads efficiently: It’s also cost-effective, ensuring that you pay only for the resources you use.</p>
-<p>Integrating the KAITO operator with AKS further enhances the deployment of AI models like LLaMA 2 by simplifying the complexities of managing AI workloads. KAITO, designed specifically for Kubernetes environments, acts as a bridge between the advanced AI models and the scalable, managed infrastructure provided by AKS. It offers custom resource definitions (CRDs) tailored for AI applications, facilitating the deployment, updating, and management of AI models within the Kubernetes ecosystem.</p>
-<p>This seamless integration enables developers to focus more on the application logic and less on the underlying infrastructure, accelerating the development cycle and reducing the time to market for innovative AI solutions.</p>
-<p>AKS and KAITO create a robust, flexible, and efficient environment for developing and deploying intelligent applications. This combination not only leverages the cloud’s power and scalability but also optimizes the deployment of AI models, making it easier for developers to bring complex, data-driven applications to life.</p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Register for <strong><a href="https://developer.microsoft.com/en-us/reactor/events/21815/?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Intelligent Apps on AKS: Episode 2</a></strong>, a live hands-on training with an expert on how to use AKS to run your own AI models with KAITO.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="laying-the-groundwork-with-azure-kubernetes-service">Laying the Groundwork with Azure Kubernetes Service<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service#laying-the-groundwork-with-azure-kubernetes-service" class="hash-link" aria-label="Direct link to Laying the Groundwork with Azure Kubernetes Service" title="Direct link to Laying the Groundwork with Azure Kubernetes Service">​</a></h2>
-<p>In the <a href="https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-1" target="_blank" rel="noopener noreferrer">first installment of this series</a>, you’ll roll up your sleeves and set up an AKS environment. This step is foundational to the rest of the series, laying the groundwork for deploying and managing your application — and accessing the full scalability and flexibility that AKS offers.</p>
-<p>The article starts with a straightforward step-by-step guide on establishing the AKS environment, ensuring you have a solid base for the exciting journey ahead. This tutorial is succinct to maintain clarity and speedy development, offering links to additional resources for well-documented steps.</p>
-<p>Next, you’ll meet KAITO, a tool that streamlines deploying AI applications in Kubernetes environments. The core of this article is configuring <a href="https://github.com/Azure/kaito" target="_blank" rel="noopener noreferrer">the KAITO operator</a> to work seamlessly with the LLaMA 2 model, providing hands-on instructions, code samples, and screenshots to guide you through each step.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="adding-intelligence-to-the-app">Adding Intelligence to the App<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service#adding-intelligence-to-the-app" class="hash-link" aria-label="Direct link to Adding Intelligence to the App" title="Direct link to Adding Intelligence to the App">​</a></h2>
-<p>The <a href="https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-2" target="_blank" rel="noopener noreferrer">second part of this series</a> dives into the more practical aspects of building the Intelligent App. You’ll leverage an open-source energy dataset alongside powerful tools like XGBoost and a custom Python API to craft a forecasting model that predicts future energy demands with speed and precision.</p>
-<p>Integrating these tools with AKS and Azure Container Registry highlights the high-impact relationship between robust data processing capabilities and scalable cloud infrastructure. Hands-on examples and streamlined code will guide you through setting up the environment, processing the dataset, and deploying the forecasting model.</p>
-<p>This practical application reinforces the theoretical foundations laid in Part 1 and sets the stage for advanced analytics and AI-driven predictions. As you progress through the tutorial, the focus will remain on simplicity and efficiency, ensuring that even complex AI-related processes become accessible.</p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Complete the <strong><a href="https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Intelligent Apps Skills Challenge</a></strong> to compete for the leaderboard and earn a Microsoft Learn Badge.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="building-a-web-interface">Building a Web Interface<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service#building-a-web-interface" class="hash-link" aria-label="Direct link to Building a Web Interface" title="Direct link to Building a Web Interface">​</a></h2>
-<p>As the concluding installment of our series, <a href="https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-3" target="_blank" rel="noopener noreferrer">part 3</a> assembles all the pieces by introducing a user-friendly web interface. Here, users can input or upload their energy usage data and parameters, after which the Intelligent App will generate future predictions on usage and pricing.</p>
-<p>This web front end serves as the direct point of interaction with your AKS-hosted application, seamlessly displaying the reports and predictions the AI model produces.</p>
-<p>After deploying this interface in the AKS environment established in <a href="https://azure.github.io/Cloud-Native/60DaysOfIA/forecasting-energy-usage-with-intelligent-apps-1" target="_blank" rel="noopener noreferrer">part 1</a>, you’ll experience the complete cycle of developing an intelligent, data-driven application and appreciate how straightforward it is to engineer intelligent apps that can deliver tangible, user-centric outcomes.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ready-to-get-started">Ready to Get Started?<a href="https://azure.github.io/Cloud-Native/60DaysOfIA/power-up-crafting-an-intelligent-energy-forecasting-application-using-azure-kubernetes-service#ready-to-get-started" class="hash-link" aria-label="Direct link to Ready to Get Started?" title="Direct link to Ready to Get Started?">​</a></h2>
-<p>Together, these three articles guide you through creating an innovative, AI-driven energy forecasting app. Setting up a scalable AKS environment with integrated cutting-edge AI models, processing open-source energy data for insightful predictions, and deploying a user-friendly web interface will equip you with the tools you need to build your own Intelligent Apps.</p>
-<p>Stay tuned for each part of the series and get ready to dive into the world of Azure, AI, and application development with us. Join us in this exciting venture and harness the power of technology to make a difference. Register for the <strong><a href="https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_60days_blogs" target="_blank" rel="noopener noreferrer">Intelligent Apps on AKS: Episode 2</a></strong>  to experience live hands-on training with an expert on how to use AKS to run your own AI models with KAITO.</p>]]></content>
         <author>
             <name>#60Days Of IA</name>
             <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
