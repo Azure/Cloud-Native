@@ -42,11 +42,52 @@ In this three-part series, you’ll build an education app that uses generative 
 * [Azure AI Search](https://azure.microsoft.com/products/ai-services/ai-search?ocid=buildia24_60days_blogs) — Offers a knowledge base that your app can access using RAG, allowing the large language model (LLM) to provide more accurate explanations
 * [Azure Container Apps](https://azure.microsoft.com/products/container-apps?ocid=buildia24_60days_blogs) — Lets you easily package and run apps in a flexible and scalable environment.
 
+![The Intelligent Application's architecture comprises Azure OpenAI, Azure AI Search, an Azure Storage Account, and the Knowledge Base.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-2.png)
 
+Let’s get started!
 
+### Prerequisites
 
+To follow this tutorial, ensure you have the following:
 
+* Python 3.10 or later
+* Dave Kuhlman’s open-source Python knowledge base downloaded as an HTML file
+* An Azure subscription with access to the Azure OpenAI Service. Note that you need to request access to this service.
+* The Azure command-line interface (CLI) installed
+An Azure resource group
 
+### Build a Personal Tutor with AI and Azure Container Apps
 
+In this first part of the series, you’ll build the foundation for an AI-powered Python tutor. This tutor will use a knowledge base to answer your Python questions of varying difficulties and create tailored quizzes.
 
+#### Creating an Azure Storage Account for RAG Data
 
+Start by creating a space to store the knowledge base that your chatbot will use for RAG. Sign in to the Azure portal and search “Storage accounts” in the search bar. Click + **Create** to start a new storage account.
+
+On the **Basics** tab, set the following configurations:
+
+* **Subscription** — Select the same subscription as your resource group.
+* **Resource group** — Select the resource group you created earlier.
+* **Storage account name** — Enter a unique name for your storage account.
+* **Region** — Choose a region according to your preference.
+* **Pricing tier** — Select Standard S0.
+
+![The storage account creation page has seven tabs: Basics, Advanced, Networking, Data protection, Encryption, Tags, and Review. Basics is open. Below are two sections: Project details and Instance details. Under Project details are fields for Subscription (Azure subscription 1) and Resource group (personal-tutor). Under Instance details are fields for Storage account name (blank) and Region ((US) East US). At the bottom are two buttons: Review and Next: Advanced.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-3.png)
+
+For the other tabs, keep the default settings.
+
+Finally, click **Review + Create**, and then **Create**.
+
+Next, you’ll upload the knowledge base linked in this tutorial’s prerequisites. Use HTML formatting for this project.
+
+Once you have created your storage account, navigate to it from the Azure portal and click **Upload**. In the window that appears, create a new container, give it a descriptive name, and check **Private (no anonymous access)**. Select the newly created container and click **Browse for files**. Select the file or folder you want to upload. Then, click **Upload** to upload the blob.
+
+![The Edututor storage account page lists menu options including Overview, Activity log, Tags, Diagnose and solve problems, Access Control (IAM), Data migration, Events, and Storage Mover. There are also menus for Data storage (Containers, File shares, Queues, and Tables), and Security + monitoring (Networking, Front Door and CDN), and Access keys. To the right of the page is a window to upload a blob, with the option to drag and drop a file or select an existing container.](../../static/img/60-days-of-ia/blogs/2024-04-08/7-1-4.jpeg)
+
+:::info
+Register for **[Episode 4](https://aka.ms/serverless-learn-live/ep4?ocid=buildia24_60days_blogs)** of the new learning series on **Intelligent Apps with Serverless on Azure**.
+:::
+
+Join the community along with MVPs, and the Azure Product Group on how to leverage AI with Serverless on Azure technologies—Azure Container Apps and Azure Functions—to build intelligent applications.
+
+#### Creating an Azure OpenAI Service
