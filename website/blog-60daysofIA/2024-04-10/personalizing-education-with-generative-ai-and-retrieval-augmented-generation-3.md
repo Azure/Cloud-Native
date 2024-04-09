@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 <!-- End METADATA -->
 
-![Graphic with a chat bubble-meets-robot head in the top right corner. At the bottom of the graphic is text that reads, "Personalizing Education with Generative AI and Retrieval Augmented Generation: Creating the Chatbot."](../../static/img/60-days-of-ia/blogs/2024-04-08/7-2-1.jpeg)
+![Graphic with a chat bubble-meets-robot head in the top right corner. At the bottom of the graphic is text that reads, "Personalizing Education with Generative AI and Retrieval Augmented Generation: Creating the Chatbot."](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-1.jpeg)
 
 *In this three-part series, you’ll use Azure Container Apps, Azure OpenAI Service, and Retrieval Augmented Generation to create a personal tutor chatbot that dynamically adjusts educational materials and quizzes based on user interactions. This final article demonstrates how to deploy using Azure Container Apps.*
 
@@ -111,5 +111,41 @@ This command instructs Azure to build a container image named `python-tutor:late
 
 Once you push your image to ACR, open the Azure portal and navigate to your container registry. Enable admin access by selecting **Access keys** under **Settings**, and then clicking **Enable** under **Admin** user.
 
+Alternatively, run the following command from the terminal to enable admin access (again, updating `personaltutor` to reflect your selected registry name):
 
+```
+az acr update -n personaltutor --admin-enabled true
+```
+
+#### Creating an Environment
+
+An [Azure Container Apps environment](https://learn.microsoft.com/azure/container-apps/environment?ocid=buildia24_60days_blogs) acts as a logical boundary for your apps. Think of it as the neighborhood where your chatbot will live.
+
+To create a container app environment, run:
+
+```
+az containerapp env create \
+   --name python-tutor-app-env \
+   --resource-group personal-tutor \
+   --location eastus
+```
+
+This command creates an environment named `python-tutor-app-env` within your existing resource group, located in the `eastus` region.
+
+#### Creating the Container App
+
+Now, you can deploy your application using Azure Container Apps!
+
+Sign in to the Azure portal and search for “Azure Container Apps” in the search bar at the top. Select the service. Then, click **+ Create** to start a new container app.
+
+![The Container Apps page in the Azure portal.](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-2.png)
+
+On the **Basics** tab, configure the settings as follows:
+
+* **Subscription** and **Resource group** — For consistency, ensure these match the resources you set in the first two parts of this series.
+* **Container app name** — Choose a unique name, such as “personaltutor.”
+* **Region** — Select the same region where you created your environment.
+* **Container Apps Environment** — Select the environment you created earlier.
+
+![Screenshot of the page to create the Container App. It has five tabs: Basics, Container, Bindings, Tags, and Review + create. Basics is open.  The page has two sections: Project details (Subscription, Resource group, and Container app name) and Container Apps Environment (Region and Container Apps Environment). At the bottom are two buttons: Review + Create and Next: Container.](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-3.png)
 
