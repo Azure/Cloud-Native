@@ -168,7 +168,7 @@ Then, click **Environment Variables** and add the following, ensuring you replac
 * SearchKey
 * SearchIndex
 
-Your chatbot needs these variables to connect to and interact with your Azure OpenAI and AI Search services. Review the section “Retrieving Environment Variables [“Retrieving API Keys and Endpoints”](https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-2#retrieving-api-keys-and-endpoints) in Part 2 of this series if you need a refresher on how to retrieve these.
+Your chatbot needs these variables to connect to and interact with your Azure OpenAI and AI Search services. Review the section [“Retrieving Environment Variables”](https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-2#retrieving-api-keys-and-endpoints) in Part 2 of this series if you need a refresher on how to retrieve these.
 
 ![The Create Container App page lists the container details (Name, Image source, Registry, Image, Image tag, and Command override), the Container resource allocation (Workload profile and CPU and memory), and Environment variables. At the bottom are three buttons: Review + create, Previous, and Next: Bindings).](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-4.png)
 
