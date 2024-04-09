@@ -168,4 +168,34 @@ Then, click **Environment Variables** and add the following, ensuring you replac
 * SearchKey
 * SearchIndex
 
-Your chatbot needs these variables to connect to and interact with your Azure OpenAI and AI Search services. Review the section “Retrieving Environment Variables”[“Retrieving API Keys and Endpoints”](https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-2#retrieving-api-keys-and-endpoints) in Part 2 of this series if you need a refresher on how to retrieve these.
+Your chatbot needs these variables to connect to and interact with your Azure OpenAI and AI Search services. Review the section “Retrieving Environment Variables [“Retrieving API Keys and Endpoints”](https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-2#retrieving-api-keys-and-endpoints) in Part 2 of this series if you need a refresher on how to retrieve these.
+
+![The Create Container App page lists the container details (Name, Image source, Registry, Image, Image tag, and Command override), the Container resource allocation (Workload profile and CPU and memory), and Environment variables. At the bottom are three buttons: Review + create, Previous, and Next: Bindings).](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-4.png)
+
+Click **Next: Bindings >**. Leave the **Bindings** section with the default settings and click **Next: Ingress >**.
+
+Configure as follows:
+
+* **Ingress** — Select **Enabled** to make your app publicly accessible.
+* **Ingress traffic** — Choose **Accepting traffic from anywhere**.
+* **Ingress type** — Keep HTTP.
+* **Target port** — Enter “8501” (assuming your Dockerfile specifies this).
+* **Session affinity** — Select **Enabled**. This helps maintain user sessions.
+
+![The Create Container App page lists fields for Ingress, Ingress traffic, Ingress type, selecting a Client certificate note, Transport, a checkbox for accepting Insecure connections, the option to enter a Target port, and a checkbox to enable Session affinity. At the bottom are three buttons: Review + create, Previous, and Next: Tags.](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-5.png)
+
+Click **Review + create**.
+
+Double-check your settings. If everything is correct, click **Create**.
+
+![Screenshot of the Create Container App page. Here, you review the settings. At the bottom are two buttons: Create and Previous.](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-6.png)
+
+Azure will now deploy your application as a container app. Once finished, you’ll see a URL in the **Overview** section (**Application Url**) where your app is live!
+
+![The personaltutor app overview shows an application URL indicating that the Intelligent App has been successfully deployed.](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-7.png)
+
+### Next Steps
+
+Congratulations! Over this three-part series, you built an incredible AI-powered educational chatbot using Azure OpenAI, Azure AI Search, and Azure Container Apps for scalable deployment. You’ve seen how simple it is to build a dynamic, scalable, and high-impact Intelligent App with the help of Azure services.
+
+Now that you have some boots-on-the-ground experience building an Intelligent App, test your knowledge by joining our **[Cloud Skills Challenge](https://aka.ms/intelligent-apps/apps-csc?ocid=buildia24_60days_blogs)**. And to keep the learning going, register for an upcoming demo bytes for **[Intelligent Apps with Azure Container Apps](https://developer.microsoft.com/reactor/series/S-1308/?wt.mc_id=blog_S-1308_webpage_reactor&ocid=buildia24_60days_blogs)** where the product engineering team gives a walkthrough on using open source vector databases and building a multi-LLM chat application.
