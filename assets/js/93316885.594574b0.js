@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[75012],{939:e=>{e.exports=JSON.parse('{"label":"ask-the-expert","permalink":"/Cloud-Native/60DaysOfIA/tags/ask-the-expert","allTagsPath":"/Cloud-Native/60DaysOfIA/tags","count":24,"unlisted":false}')}}]);
