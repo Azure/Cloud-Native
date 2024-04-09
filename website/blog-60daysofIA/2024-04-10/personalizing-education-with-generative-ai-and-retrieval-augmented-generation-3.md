@@ -40,3 +40,76 @@ Welcome to the final installment of our three-part tutorial series on building a
 
 In this final tutorial, you’ll take your chatbot from the development environment to a live web application where anyone can interact with it.
 
+### Prerequisites
+
+To follow this tutorial, ensure you have the following:
+
+* The Azure services set up in Part 1
+* The [Python web app](https://github.com/contentlab-io/Personalizing-Education-with-Generative-AI-and-RAG/blob/main/main.py) built in Part 2
+* An active Azure subscription
+* The [Azure command-line interface (CLI)](https://learn.microsoft.com/cli/azure/?ocid=buildia24_60days_blogs) installed
+* [Docker](https://www.docker.com/get-started) installed
+
+To preview the final application, take a look at the [complete project code](https://github.com/contentlab-io/Personalizing-Education-with-Generative-AI-and-RAG).
+
+:::info
+Register for **[Episode 4](https://aka.ms/serverless-learn-live/ep4?ocid=buildia24_60days_blogs)** of the new hands-on live learning series with an SME on **Intelligent Apps with Serverless on Azure**.
+:::
+
+### Deploy the Web Interface for the Educational Chatbot
+
+With the chatbot’s intelligence and functionality in place, it’s time to make it accessible to the world. You’ll use [Azure Container Apps](https://azure.microsoft.com/products/container-apps?ocid=buildia24_60days_blogs) for a smooth and scalable deployment.
+
+Azure Container Apps is a serverless platform designed to streamline the deployment and management of containerized applications. It handles infrastructure complexities for you, letting you focus on your application’s code.
+
+Containerization packages your chatbot’s code, dependencies, and runtime into a self-contained image. This means it will run consistently across different environments. Since it’s lightweight, you can scale up or down based on demand.
+
+#### Creating an Azure Container Registry
+
+[Azure Container Registry](https://azure.microsoft.com/products/container-registry?ocid=buildia24_60days_blogs) (ACR) is your private storage space for container images. To get started with ACR, use the Azure CLI to log in to your Azure account by running:
+
+```
+az login
+```
+
+After authenticating, run the following, ensuring you replace `personaltutor` with your chosen registry name:
+
+```
+az acr login --name personaltutor
+```
+
+#### Building the Container Image
+
+Next, create a file named `Dockerfile` in your project’s root directory. This file provides Docker with instructions for building your image:
+
+```
+FROM python:3.11-slim-bullseye 
+
+WORKDIR /app
+
+# Install Streamlit and other dependencies
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+
+# Copy your application files
+COPY . ./
+
+# Expose the port used by Streamlit
+EXPOSE 8501
+
+# Command to start your app
+CMD streamlit run main.py
+```
+
+Execute the following command to build the image, making sure to use your registry name:
+
+```
+az acr build --registry personaltutor --image python-tutor:latest --file Dockerfile .
+```
+
+This command instructs Azure to build a container image named `python-tutor:latest`, using your Dockerfile and the code in the current directory (indicated by the period). The image is then stored in your ACR.
+
+Once you push your image to ACR, open the Azure portal and navigate to your container registry. Enable admin access by selecting **Access keys** under **Settings**, and then clicking **Enable** under **Admin** user.
+
+
+
