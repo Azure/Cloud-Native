@@ -1,7 +1,7 @@
 ---
 date: 2024-04-08T09:05
 slug: personalizing-education-with-generative-ai-and-retrieval-augmented-generation-2
-title: "7.1 Personalizing Education with Generative AI and Retrieval Augmented Generation Part 2"
+title: "7.2 Personalizing Education with Generative AI and Retrieval Augmented Generation Part 2"
 authors: [cnteam]
 draft: false
 hide_table_of_contents: false
