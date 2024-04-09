@@ -149,3 +149,23 @@ On the **Basics** tab, configure the settings as follows:
 
 ![Screenshot of the page to create the Container App. It has five tabs: Basics, Container, Bindings, Tags, and Review + create. Basics is open.  The page has two sections: Project details (Subscription, Resource group, and Container app name) and Container Apps Environment (Region and Container Apps Environment). At the bottom are two buttons: Review + Create and Next: Container.](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-3.png)
 
+Click **Next: Container >** to proceed.
+
+On the **Container** tab, configure the settings as follows:
+
+* Uncheck **Use quickstart image**, as you’ll use your custom image.
+* **Image Source** — Select **Azure Container Registry**.
+* **Registry** — Choose the ACR you created previously.
+* **Image** — Select the **python-tutor:latest** image you built.
+* **Tag** — Keep the default **latest**.
+
+Then, click **Environment Variables** and add the following, ensuring you replace the placeholders with your actual values:
+
+* AOAIEndpoint
+* AOAIKey
+* AOAIDeploymentId
+* SearchEndpoint
+* SearchKey
+* SearchIndex
+
+Your chatbot needs these variables to connect to and interact with your Azure OpenAI and AI Search services. Review the section “Retrieving Environment Variables”[“Retrieving API Keys and Endpoints”](https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-2#retrieving-api-keys-and-endpoints) in Part 2 of this series if you need a refresher on how to retrieve these.
