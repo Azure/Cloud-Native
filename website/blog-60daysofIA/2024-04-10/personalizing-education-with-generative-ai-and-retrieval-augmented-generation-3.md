@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 60-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "In this three-part series, you’ll use Azure Container Apps, Azure OpenAI Service, and Retrieval Augmented Generation to create a personal tutor chatbot that dynamically adjusts educational materials and quizzes based on user interactions. This article shows how to set up the core Azure AI services required to build your Intelligent App." 
+description: "In this three-part series, you’ll use Azure Container Apps, Azure OpenAI Service, and Retrieval Augmented Generation to create a personal tutor chatbot that dynamically adjusts educational materials and quizzes based on user interactions. This final article demonstrates how to deploy using Azure Container Apps." 
 tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, community-buzz, ask-the-expert, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -32,9 +32,7 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
 
 ![Graphic with a chat bubble-meets-robot head in the top right corner. At the bottom of the graphic is text that reads, "Personalizing Education with Generative AI and Retrieval Augmented Generation: Creating the Chatbot."](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-1.jpeg)
 
-*In this three-part series, you’ll use Azure Container Apps, Azure OpenAI Service, and Retrieval Augmented Generation to create a personal tutor chatbot that dynamically adjusts educational materials and quizzes based on user interactions. This final article demonstrates how to deploy using Azure Container Apps.*
-
-## Personalizing Education with Generative AI and Retrieval Augmented Generation Part 3
+## Personalizing Education with Generative AI and Retrieval Augmented Generation Part 3: Deploying a Web Interface
 
 Welcome to the final installment of our three-part tutorial series on building a personalized Python tutor with Generative AI and Retrieval Augmented Generation (RAG)! If you’re new to this series, be sure to check out [Part 1](https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-1), which shows you how to set up the essential Azure resources, and [Part 2](https://azure.github.io/Cloud-Native/60DaysOfIA/personalizing-education-with-generative-ai-and-retrieval-augmented-generation-2), which explains how to build out the chatbot’s core functionality.
 
