@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[88392],{35010:e=>{e.exports=JSON.parse('{"label":"azure-functions","permalink":"/Cloud-Native/60DaysOfIA/tags/azure-functions","allTagsPath":"/Cloud-Native/60DaysOfIA/tags","count":25,"unlisted":false}')}}]);

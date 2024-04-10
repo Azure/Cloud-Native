@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[75014],{99087:e=>{e.exports=JSON.parse('{"label":"learn-live","permalink":"/Cloud-Native/60DaysOfIA/tags/learn-live","allTagsPath":"/Cloud-Native/60DaysOfIA/tags","count":25,"unlisted":false}')}}]);
