@@ -3,7 +3,7 @@ date: 2024-04-10T09:00
 slug: personalizing-education-with-generative-ai-and-retrieval-augmented-generation-3
 title: "7.3 Personalizing Education with Generative AI and Retrieval Augmented Generation Part 3"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
