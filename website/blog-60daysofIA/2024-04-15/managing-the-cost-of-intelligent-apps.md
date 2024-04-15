@@ -3,7 +3,7 @@ date: 2024-04-15T09:00
 slug: managing-the-cost-of-intelligent-apps
 title: "Managing the Cost of Intelligent Apps"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
