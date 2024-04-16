@@ -19,18 +19,16 @@ tags: [Build-Intelligent-Apps, 60-days-of-IA, learn-live, hack-together, communi
   <meta property="og:title" content="Build Intelligent Apps | AI Apps on Azure"/> 
   <meta property="og:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!"/> 
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/> 
-  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/real-time-voice-sentiment-analysis-system-1 " /> 
+  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/60daysofIA/real-time-voice-sentiment-analysis-system-1" /> 
   <meta name="twitter:title" content="Build Intelligent Apps | AI Apps on Azure" />
  <meta name="twitter:description" content="Azure and platform engineering pave the way for the efficient development, deployment, and maintenance of Intelligent Apps, triumphing over traditional approaches." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" /> 
   <meta name="twitter:card" content="summary_large_image" /> 
   <meta name="twitter:creator" content="@devanshidiaries" /> 
-  <link rel="canonical" href="https://azure.github.io/Cloud-Native/60daysofIA/real-time-voice-sentiment-analysis-system-1 " /> 
+  <link rel="canonical" href="https://azure.github.io/Cloud-Native/60daysofIA/real-time-voice-sentiment-analysis-system-1" /> 
 </head> 
 
 <!-- End METADATA -->
-
-![Graphic with a chat bubble-meets-robot head in the top right corner. At the bottom of the graphic is text that reads, "Personalizing Education with Generative AI and Retrieval Augmented Generation: Creating the Chatbot."](../../static/img/60-days-of-ia/blogs/2024-04-10/7-3-1.jpeg)
 
 ## Real-time Voice Sentiment Analysis System Using Azure Communication Services, Azure AI and Azure OpenAI (Part 1)
 
