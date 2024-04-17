@@ -133,7 +133,7 @@ With the prerequisites set, the next step is to create necessary Azure resources
 
 To enable PSTN calling capabilities (optional), you'll need a phone number. Azure Communication Services offers a free trial phone number for testing purposes. Here's how to obtain one:
 
-1. **Navigate to Your ACS Resource**: Sign in to the [Azure Portal]() and go to your newly created Azure Communication Services resource. 
+1. **Navigate to Your ACS Resource**: Sign in to the [Azure Portal](https://portal.azure.com) and go to your newly created Azure Communication Services resource. 
 
 1. **Phone Numbers Section**: On the left-hand menu of your ACS resource overview page, find and select the **Phone Numbers** option. This section allows you to manage phone numbers associated with your ACS resource. 
 
@@ -222,7 +222,7 @@ Now, let's create the basic structure of our frontend application. This includes
 
 1. **HTML**: Create an index.html file in your project root. This file will serve as the entry point for your application.
 
-    `bash`
+    `html`
     ```
     <!DOCTYPE html> 
     <html lang="en"> 
@@ -275,7 +275,8 @@ Now, let's create the basic structure of our frontend application. This includes
     ```
 
 1. **JavaScript**: Create an `app.js` file. This is where we'll write the logic for initializing voice calling and handling sentiment analysis.
-* Let's start by setting up a basic structure for making and ending calls using the Azure Communication Calling SDK you previously installed. 
+
+Let's start by setting up a basic structure for making and ending calls using the Azure Communication Calling SDK you previously installed. 
 
     `javascript`
     ```
@@ -326,7 +327,7 @@ Now, let's create the basic structure of our frontend application. This includes
     initCallAgent(); 
     ```
 
-* **Note**: Make sure to replace placeholders like `tokenCredential` with actual values obtained from your backend or Azure Communication Services resource.
+**Note**: Make sure to replace placeholders like `tokenCredential` with actual values obtained from your backend or Azure Communication Services resource.
 
 #### Testing and Running Your Application
 
