@@ -1,5 +1,5 @@
 ---
-date: 2024-04-15T09:00
+date: 2024-04-17T09:10
 slug: managing-the-cost-of-intelligent-apps
 title: "Managing the Cost of Intelligent Apps"
 authors: [cnteam]
@@ -85,7 +85,7 @@ Like Azure Functions, Azure OpenAI Service offers [two plans](https://azure.micr
 * **Azure savings plan for compute** — A fixed hourly amount, this model accommodates fluctuations and dynamic workloads, one- or three-year commitment.
 
 :::info
-Checkout the quick demo bytes for [Intelligent Apps with Azure Container Apps](https://developer.microsoft.com/en-us/reactor/series/S-1308/?wt.mc_id=blog_S-1308_webpage_reactor&ocid=buildia24_60days_blogs) for a detailed walkthrough from the product team on using open-source vector database, Qrdrant, and building a multi-LLM chat application. 
+Checkout the quick demo bytes for **[Intelligent Apps with Azure Container Apps](https://developer.microsoft.com/en-us/reactor/series/S-1308/?wt.mc_id=blog_S-1308_webpage_reactor&ocid=buildia24_60days_blogs)** for a detailed walkthrough from the product team on using open-source vector database, Qrdrant, and building a multi-LLM chat application. 
 :::
 
 #### **Azure Machine Learning**
