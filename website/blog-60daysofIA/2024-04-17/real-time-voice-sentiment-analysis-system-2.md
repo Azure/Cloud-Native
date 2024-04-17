@@ -52,7 +52,7 @@ The backend of our real-time voice sentiment analysis application, built with AS
     ```
     dotnet new webapi --no-https 
     ```
-* **Note**: We are turning off HTTPS for simplicity in this guide. For production environments, HTTPS should be enabled and properly configured.
+**Note**: We are turning off HTTPS for simplicity in this guide. For production environments, HTTPS should be enabled and properly configured.
 
 #### Step 2: Add Azure SDK Packages
 
@@ -132,37 +132,38 @@ Our backend needs to interact with Azure Communication Services, Azure AI Langua
     ```
 
 1. **Implement the Token Endpoint**:
-    * In your ASP.NET Core project Program.cs, create a new endpoint to generate and return an access token. We'll call this endpoint from our client later.
 
-    `csharp`
-    ```
-    app.MapGet("api/token", () => 
+In your ASP.NET Core project Program.cs, create a new endpoint to generate and return an access token. We'll call this endpoint from our client later.
+
+`csharp`
+```
+app.MapGet("api/token", () => 
+{ 
+    var identityAndTokenResponse = communicationClient.CreateUserAndToken(scopes: [CommunicationTokenScope.VoIP]); 
+
+
+    var result = new TokenResponse() 
     { 
-        var identityAndTokenResponse = communicationClient.CreateUserAndToken(scopes: [CommunicationTokenScope.VoIP]); 
+        Token = identityAndTokenResponse.Value.AccessToken.Token, 
+        PhoneNumber = "+12533192954", 
+    }; 
 
+    return Results.Json(result); 
+}) 
+.WithName("Token") 
+.WithOpenApi(); 
+```
 
-        var result = new TokenResponse() 
-        { 
-            Token = identityAndTokenResponse.Value.AccessToken.Token, 
-            PhoneNumber = "+12533192954", 
-        }; 
+We'll also need a TokenResponse object to return the token and phone number:
 
-        return Results.Json(result); 
-    }) 
-    .WithName("Token") 
-    .WithOpenApi(); 
-    ```
-
-    * We'll also need a TokenResponse object to return the token and phone number:
-
-    `c sharp`
-    ```
-    public class TokenResponse 
-    { 
-        public string Token { get; set; } 
-        public string PhoneNumber { get; set; } 
-    } 
-    ```
+`c sharp`
+```
+public class TokenResponse 
+{ 
+    public string Token { get; set; } 
+    public string PhoneNumber { get; set; } 
+} 
+```
 
 #### Step 4: Implement Sentiment Analysis Endpoints
 
@@ -412,7 +413,8 @@ async function initCallAgent() {
 Our application should analyze the sentiment of the transcribed call captions. We’ll capture these captions on the frontend, then send them to our backend for sentiment analysis.
 
 1. **Make Sentiment Analysis Request:**
-* In the `captionsReceivedHandler`, make a request to your backend sentiment analysis endpoint whenever captions are received. Update your captions event handler, under `if (captionData.resultType === 'Final')` to include this:
+
+In the `captionsReceivedHandler`, make a request to your backend sentiment analysis endpoint whenever captions are received. Update your captions event handler, under `if (captionData.resultType === 'Final')` to include this:
 
 `javascript`
 ```
@@ -445,7 +447,9 @@ if (captionData.resultType === 'Final') {
 
 Finally, utilize the sentiment analysis data received from the backend to inform the user about the call’s sentiment in real-time.
 
-1. **Update the UI Dynamically**: Enhance your frontend to dynamically display sentiment analysis results as they are received. We'll add an indicator for positive, neutral, or negative sentiment.
+1. **Update the UI Dynamically**:
+
+Enhance your frontend to dynamically display sentiment analysis results as they are received. We'll add an indicator for positive, neutral, or negative sentiment.
 
 `javascript`
 ```
@@ -724,7 +728,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "VoiceSentimentBackend.dll"] 
 ```
 
-* **Note**: Adjust `"VoiceSentimentBackend.csproj"` to match your project's name.
+**Note**: Adjust `"VoiceSentimentBackend.csproj"` to match your project's name.
 
 ##### Create and Test the Docker Image Locally
 
@@ -778,5 +782,5 @@ Over the course of this guide, you've:
 
 While your current application is fully functional, there's always room for improvement and expansion. Consider the following possibilities for future development:
 
-* Language Support: Expand the application to support additional languages, enhancing its accessibility and utility across different geographical locations. 
-* Advanced AI Insights: Explore deeper insights beyond sentiment, such as emotional tone, intent recognition, or specific topic detection, to provide more detailed analysis of voice calls. 
+* **Language Support**: Expand the application to support additional languages, enhancing its accessibility and utility across different geographical locations. 
+* **Advanced AI Insights**: Explore deeper insights beyond sentiment, such as emotional tone, intent recognition, or specific topic detection, to provide more detailed analysis of voice calls. 
