@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[61365],{98e3:e=>{e.exports=JSON.parse('{"label":"azure-cosmos-db","permalink":"/Cloud-Native/60DaysOfIA/tags/azure-cosmos-db","allTagsPath":"/Cloud-Native/60DaysOfIA/tags","count":25,"unlisted":false}')}}]);
