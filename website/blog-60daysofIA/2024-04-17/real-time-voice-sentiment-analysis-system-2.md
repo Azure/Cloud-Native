@@ -3,7 +3,7 @@ date: 2024-04-17T09:05
 slug: real-time-voice-sentiment-analysis-system-2 
 title: "7.5 Real-time Voice Sentiment Analysis System 2"
 authors: [cnteam]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -752,7 +752,7 @@ ENTRYPOINT ["dotnet", "VoiceSentimentBackend.dll"]
 
 Azure Container Apps offers a fully managed serverless container service. It's an excellent choice for deploying containers without managing complex infrastructure. 
 
-1. **Create a Container App Environment**: Use VS Code to create an Azure Container App and deploy your backend. Follow the [official documentation](https://docs.microsoft.com/azure/container-apps/quickstart-dotnet?ocid=buildia24_60days_blogs) for detailed instructions. Type Crtl+Shift+P to open the command palette and type "Azure Container Apps: Create New Container App" and follow the prompts.
+1. **Create a Container App Environment**: Use VS Code to create an Azure Container App and deploy your backend. Follow the [official documentation](https://learn.microsoft.com/azure/container-apps/deploy-visual-studio-code?ocid=buildia24_60days_blogs) for detailed instructions. Type Crtl+Shift+P to open the command palette and type "Azure Container Apps: Create New Container App" and follow the prompts.
 
 1. **Verify Deployment**: Use the FQDN obtained from the previous command to verify your application is accessible via the internet.
 
