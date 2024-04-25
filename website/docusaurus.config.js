@@ -362,7 +362,7 @@ const config = {
         archiveBasePath: "archive",
         postsPerPage: 1,
         showReadingTime: true,
-        sortPosts: "descending",
+        sortPosts: "ascending",
       },
     ],
     // ---- End Multiple Blogs
