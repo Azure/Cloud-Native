@@ -112,27 +112,53 @@ function ShowcaseMultipleAuthorsDropdown({ user }: { user: User }) {
 }
 
 
-function ShowcaseCard({user}: {user: User}) {
+function ShowcaseCard({ user }: { user: User }) {
+  // Function to determine if the URL contains a specific tracking parameter
+  function urlContainsParameter(url, parameter) {
+    return url.includes(parameter);
+  }
+
+  // Determine the URL to use
+  let urlToUse = user.source;
+
+  // Check if the URL contains the tracking parameter "?ocid=buildia24_LL_website"
+  if (!urlContainsParameter(urlToUse, '?ocid=buildia24_LL_website')) {
+    // If the tracking parameter "?ocid=buildia24_LL_website" is not present, append "?ocid=buildia24_gallery_website"
+
+    const trackingParameter = '?ocid=buildia24_gallery_website';
+
+    // Check if the URL already has query parameters
+    if (urlToUse.includes('?')) {
+      // URL already has parameters, use '&' to append the new parameter
+      urlToUse += `&ocid=buildia24_gallery_website`;
+    } else {
+      // URL does not have any parameters, use '?' to append the new parameter
+      urlToUse += trackingParameter;
+    }
+  }
+
+  // Return the card with the determined URL
   return (
     <li key={user.title} className="card">
-      <Link className="card-link" to={`${user.source}?ocid=buildia24_gallery_website`} data-bi-area="BodyGrid" data-bi-name={user.title}>
+      <Link
+        className="card-link"
+        to={urlToUse}
+        data-bi-area="BodyGrid"
+        data-bi-name={user.title}
+      >
         {/* Image goes here */}
         {/* <div className={clsx('card__image', styles.showcaseCardImage)}>
           <Image img={user.preview} alt={user.title} />
         </div> */}
         <div className="card__body">
           <div>
-            <h3>
-              {user.title}
-            </h3>
-            {user.source && (
-              <ShowcaseMultipleAuthorsDropdown user={user}/>   
-            )}
+            <h3>{user.title}</h3>
+            {user.source && <ShowcaseMultipleAuthorsDropdown user={user} />}
           </div>
           <p>{user.description}</p>
           {/* {user.tags.includes('featured') && (
-              <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
-            )} */}
+            <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
+          )} */}
         </div>
         <div className={clsx('card__footer', styles.cardFooter)}>
           <div className="margin-bottom--md">
@@ -143,6 +169,8 @@ function ShowcaseCard({user}: {user: User}) {
     </li>
   );
 }
+
+
 
 
 export default React.memo(ShowcaseCard);
