@@ -1,5 +1,134 @@
 [
     {
+        "title": "Ask the Expert: Learn Live | Build Intelligent Apps with Serverless Containers on Azure Container Apps",
+        "description": "Leverage Azure Developer CLI (azd) to deploy intelligent apps on ACA",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/serverless-learn-live/ep1",
+        "tags": [
+            "featured",
+            "azurecontainerapps",
+            "azureopenai",
+            "ai",
+            "video",
+            "serverless"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | From Day Zero To Production with Azure Container Apps",
+        "description": "Take your intelligent apps to production with ACA using Bicep and GitHub Actions",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/serverless-learn-live/ep2",
+        "tags": [
+            "featured",
+            "azurecontainerapps",
+            "azureopenai",
+            "ai",
+            "video",
+            "serverless"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Azure Container Apps uncovered: Scenarios, workloads, and portability",
+        "description": "Learn how to build portable, intelligent cloud native apps with ACA and Dapr",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/serverless-learn-live/ep3",
+        "tags": [
+            "featured",
+            "azurecontainerapps",
+            "azureopenai",
+            "ai",
+            "video",
+            "serverless"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Build Intelligent Apps with .NET and Serverless on Azure",
+        "description": "Leverage the power of Serverless on Azure and Azure OpenAI with .NET",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/serverless-learn-live/ep4",
+        "tags": [
+            "featured",
+            "azurecontainerapps",
+            "azureopenai",
+            "ai",
+            "video",
+            "serverless"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service",
+        "description": "Learn how to leverage Azure OpenAI with the AKS Store Demo app.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_LL_website",
+        "tags": [
+            "featured",
+            "azurekubernetesservice",
+            "azurefunctions",
+            "ai",
+            "video",
+            "kubernetes"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Bring Your Own AI Models to Intelligent Apps on AKS with Kaito",
+        "description": "Use AKS to run your own AI Models with Kaito.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_LL_website",
+        "tags": [
+            "featured",
+            "azurekubernetesservice",
+            "azurefunctions",
+            "ai",
+            "video",
+            "kubernetes"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Enhance Observability of Your Intelligent Apps on AKS",
+        "description": "Learn how OpenCost, Prometheus, and Grafana can improve intelligent apps.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_LL_website",
+        "tags": [
+            "featured",
+            "azurekubernetesservice",
+            "azurefunctions",
+            "ai",
+            "video",
+            "kubernetes"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Learn Live | Taking Your Intelligent App Global with AKS",
+        "description": "Use AKS and Azure to take your intelligent app global.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_LL_website",
+        "tags": [
+            "featured",
+            "azurekubernetesservice",
+            "azurefunctions",
+            "ai",
+            "cosmosdb",
+            "video",
+            "kubernetes"
+        ]
+    },
+    {
         "title": "Ask the Expert: Build Intelligent Apps",
         "description": "Join the Azure Functions Product Group this season to learn about FaaS or Functions-as-a-Service in Azure serverless computing. It is time to focus on the pieces of code that matter most to you while Azure Functions handles the rest. Discuss with the experts on how to combine the power of AI, cloud-scale data, and serverless app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Functions.",
         "preview": "",
@@ -10,7 +139,6 @@
             "video",
             "azurefunctions",
             "azureopenai",
-            "featured",
             "ai"
         ]
     },
@@ -25,7 +153,6 @@
             "video",
             "azurecontainerapps",
             "azureopenai",
-            "featured",
             "ai"
         ]
     },
@@ -39,8 +166,7 @@
         "tags": [
             "video",
             "serverless",
-            "github",
-            "featured"
+            "github"
         ]
     },
     {
@@ -53,8 +179,7 @@
         "tags": [
             "video",
             "serverless",
-            "github",
-            "featured"
+            "github"
         ]
     },
     {
@@ -67,8 +192,7 @@
         "tags": [
             "video",
             "serverless",
-            "github",
-            "featured"
+            "github"
         ]
     },
     {
@@ -81,8 +205,7 @@
         "tags": [
             "video",
             "serverless",
-            "github",
-            "featured"
+            "github"
         ]
     },
     {
