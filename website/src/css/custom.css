@@ -76,101 +76,6 @@
   );
 }
 
-[data-theme='dark'] {
-  .c-uhff-nav, .c-uhff-base {
-    background-color: #06112c!important;
-  }
-  .c-uhff-nav .c-heading-4, .c-uhff-nav a.c-uhff-link {
-    color: white!important;
-  }
-  .c-uhff-base>a.c-uhff-link.c-uhff-lang-selector {
-    color: white!important;
-  }
-  .context-uhf a:visited {
-    color: white!important;
-  }
-  .c-uhff-base ul.c-list {
-    color: white!important;
-  }
-  .c-uhfh>div:first-child {
-    background-color: #06112c!important;
-  }
-  .c-uhfh>div:first-child .c-logo {
-     color: white!important;
-  }
-  .c-uhfh>div:first-child .c-uhf-nav-link {
-    color: white!important;
-  }
-  .c-uhfh.c-sgl-stck .c-uhfh-actions #search{
-    color: white!important;
-  }
-  .c-uhfh.c-sgl-stck .f-search-opened .cancel-search {
-    color: white!important;
-  }
-  .c-uhfh .c-show-pipe::before {
-    border-left: 2px solid white!important;
-  }
-  .c-uhfh>div:first-child .c-uhf-menu button {
-    color: white!important;
-  }
-  .c-uhfh>div:first-child .c-uhf-menu>button:hover {
-    background-color: #06112c!important;
-  }
-  .c-uhfh>div:first-child .c-uhf-menu>button[aria-expanded="true"] {
-    background-color: #06112c!important;
-  }
-  .c-uhfh .theme-light .f-multi-column .f-multi-column-info {
-    background: #0b1d4a!important;
-  }
-  .c-uhfh .theme-light .f-multi-column .f-multi-column-info a {
-    color: white!important;
-  }
-  .c-uhfh>div:first-child .c-uhf-menu>ul {
-    background-color: #06112c!important;
-  }
-  .c-uhfh>div:first-child .c-uhf-menu a {
-    color: white!important;
-  }
-  .context-uhf .theme-light {
-    color: white!important;
-  }
-  .c-uhfh>div:first-child .c-search input[type="search"] {
-    background-color: #0b1d4a;
-    color: white!important;
-  }
-  .c-uhfh.c-sgl-stck .wf-menu .c-w0-contr {
-    border-bottom: 1px solid #8DC8E8!important;
-  }
-  .context-uhf {
-    background-color: #06112c!important;
-  }
-  .c-uhfh .c-action-trigger.glyph-global-nav-button {
-    color: white!important;
-  }
-  .c-uhfh.c-sgl-stck .cat-logo-button-cont {
-    background-color: #06112c!important;
-  }
-  .c-uhfh.c-sgl-stck .cat-logo-button-cont .c-cat-logo-button {
-    color: white!important;
-  }
-  .c-uhfh.c-sgl-stck nav.c-uhfh-gnav {
-    background-color: #06112c!important;
-  }
-
-  a.c-uhff-link:hover {
-    color: white!important;
-  }
-
-  a.c-uhff-link:active {
-    color: white!important;
-  }
-
-  .c-uhff-base .c-uhff-ccpa {
-    color: white!important;
-  }
-
-}
-
 /* TODO: 
    Currently hardcoded hero banner text color to ensure accessible text on dark background
    Need a better way to make this a dependent version on background color automatically
@@ -461,6 +366,10 @@ hr {
   }
 }
 
+.navbar {
+  display: none;
+}
+
 .navbar--fixed-top {
   padding: 0 5%!important;
 }
@@ -479,4 +388,8 @@ hr {
 
 .sidebarItemLink_mo7H {
   font-weight: 400!important;
+}
+
+.sidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module, .tableOfContents_node_modules-\@docusaurus-theme-classic-lib-theme-TOC-styles-module {
+  top: 1rem!important;
 }

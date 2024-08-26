@@ -75,154 +75,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "light",
+        // defaultMode: "light",
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
 
-      navbar: {
-        title: "Cloud-Native",
-        logo: {
-          alt: "Azure Cloud Logo",
-          src: "img/logo-2024.png",
-        },
-        items: [
-          {
-            to: "/Build-IA/",
-            label: "Home",
-            position: "left",
-          },
-          {
-            to: "/60DaysOfIA",
-            label: "Blog",
-            position: "left",
-          },
-          {
-            to: "/Build-IA/calendar/",
-            label: "Calendar",
-            position: "left",
-          },
-          // {
-          //   to: "/Build-IA/calendar",
-          //   label: "Calendar",
-          //   position: "left",
-          // },
-          {
-            type: "dropdown",
-            label: "Intelligent Apps",
-            position: "right",
-            items: [
-              {
-                label: "Build Intelligent Apps | 2024",
-                href: "/Build-IA/",
-              },
-              {
-                label: "#60DaysOfIA",
-                href: "/60DaysOfIA",
-              },
-              {
-                label: "#30DaysOfIA",
-                href: "/30DaysOfIA",
-              },
-            ],
-          },
-          {
-            type: "dropdown",
-            label: "Cloud Native",
-            position: "right",
-            items: [
-              {
-                label: "🥳 | New Year 2023",
-                href: "/New-Year/",
-              },
-              {
-                label: "#30DaysOfCloudNative",
-                href: "/cnny-2023",
-              },
-            ],
-          },
-          {
-            type: "dropdown",
-            label: "Serverless",
-            position: "right",
-            items: [
-              {
-                label: "🍂 September | 2022",
-                href: "/serverless-september",
-              },
-              {
-                label: "🍂 September | 2020",
-                href: "https://dev.to/azure/serverlessseptember-2020-content-collection-443k",
-              },
-              {
-                label: "🍂 September | 2019",
-                href: "https://dev.to/azure/serverless-september-content-collection-2fhb",
-              },
-              {
-                label: "#30DaysOfServerless",
-                href: "/blog",
-              },
-            ],
-          },
-          {
-            href: "https://github.com/azure/cloud-native",
-            position: "right",
-            className: "header-github-link",
-            "aria-label": "GitHub repository",
-          },
-          {
-            href: "https://azure.github.io/Cloud-Native/60DaysOfIA/rss.xml",
-            position: "right",
-            className: "header-rss-link",
-            "aria-label": "Subscribe to RSS",
-          },
-        ],
-      },
 
-      footer: {
-        links: [
-          {
-            label: `AI`,
-            to: "https://learn.microsoft.com/ai?ocid=buildia24_website",
-          },
-          {
-            label: `Cloud-Native`,
-            to: "https://azure.microsoft.com/solutions/cloud-native-apps/?ocid=buildia24_website",
-          },
-          {
-            label: `Serverless`,
-            to: "https://azure.microsoft.com/solutions/serverless/?ocid=buildia24_website",
-          },
-          {
-            label: "Collection",
-            to: "https://aka.ms/CNNY/collection?ocid=buildia24_website",
-          },
-          {
-            label: "Java",
-            to: "https://developer.microsoft.com/java/?ocid=buildia24_website",
-          },
-          {
-            label: "JavaScript",
-            to: "https://docs.microsoft.com/javascript/?ocid=buildia24_website",
-          },
-          {
-            label: ".NET",
-            to: "https://dotnet.microsoft.com/?ocid=buildia24_website",
-          },
-          {
-            label: "Python",
-            to: "https://docs.microsoft.com/azure/developer/python/?ocid=buildia24_website",
-          },
-          // {
-          //   label: "Privacy Statement ",
-          //   to: "https://privacy.microsoft.com/privacystatement",
-          // },
-          // {
-          //   label: `© ${new Date().getFullYear()} Microsoft`,
-          //   to: "https://microsoft.com",
-          // },
-        ],
-      },
 
       prism: {
         theme: lightTheme,
@@ -280,20 +138,12 @@ const config = {
           content: "Production",
         },
       ],
-      /* Banner Announcements */
-      // announcementBar: {
-      //   id: "Call To Action",
-      //   content:
-      //   'Meet the Azure team at <a target="_blank" href="https://aka.ms/aks-day" style="color:#ffb3bb; font-weight:600;">KubeCon + Azure Day</a> - Give us <a target="_blank" href="https://github.com/azure/cloud-native" style="color:#ffb3bb; font-weight:600;">🌟 on GitHub</a>',
-      //   backgroundColor: "#140035",
-      //   textColor: "#ffffff",
-      //   isCloseable: false,
-      // },
 
       /* Clarity Config */
       clarity: {
         ID: "d61n997vq9", // Instructions below
       },
+
     }),
 
   // --- CONFIG-30DAYS #7: Activate and configure plugins here
@@ -362,7 +212,7 @@ const config = {
         archiveBasePath: "archive",
         postsPerPage: 1,
         showReadingTime: true,
-        sortPosts: "ascending",
+        sortPosts: "descending",
       },
     ],
     // ---- End Multiple Blogs

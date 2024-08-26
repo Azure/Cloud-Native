@@ -22,7 +22,7 @@ export const MyGlobalProvider = ({ children }) => {
         //console.log('MyGlobalContext|fetchData: fetch uhf data.');
 
         const request = new XMLHttpRequest();
-        request.open('GET', 'https://uhf.microsoft.com/en-us/shell/xml/MSNativeMaturity?headerId=MSNativeMaturityHeader&footerId=MSNativeMaturityFooter&CookieComplianceEnabled=true', false);
+        request.open('GET', 'https://uhf.microsoft.com/en-us/shell/xml/AZCloudNative?headerId=AZCloudNativeHeader&footerId=AZCloudNativeFooter&CookieComplianceEnabled=true', false);
         request.send(null);
 
         const parser = new xml2js.Parser();
