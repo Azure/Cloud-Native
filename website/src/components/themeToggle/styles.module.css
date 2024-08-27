@@ -1,0 +1,9 @@
+.icon {
+    transition: all .2s;
+    margin-left: .5rem;
+    cursor: pointer;
+}
+
+.icon:hover {
+    filter: opacity(.8);
+}

@@ -1,15 +1,21 @@
+.announcementBarBackground {
+    background-color: #133486;
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: -2px
+}
+
 .announcementBarContainer {
-    display: flex;
-    align-items: center;
+    align-content: center;
+    text-align: center;
     background-color: #133486;
     color: #ffffff;
 }
 
 .announcementBarContent {
-    flex: 1 1 auto;
-    font-size: 13px;
-    text-align:center;
-    padding: .5rem 1rem;
+    padding: 1rem 0;
+    margin: 0;
+    text-align: center;
 }
 
 .announcementLink {
@@ -21,3 +27,28 @@
     color: #ffb3bb;
     font-weight: 600;
 }
+
+.announcementBarIconContainer {
+    align-content: center;
+    text-align: right;
+}
+
+.icon {
+    transition: all .2s;
+}
+
+.icon:not(:first-child) {
+    padding-left: .5rem;
+}
+
+.icon:hover {
+    filter: opacity(.8);
+}
+
+@media screen and (max-width: 997px) {
+    .announcementBarIconContainer {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+  
