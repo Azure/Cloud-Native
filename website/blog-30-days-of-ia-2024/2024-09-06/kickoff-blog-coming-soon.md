@@ -36,4 +36,4 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA, learn-live, community-buzz, azure-
 
 <!-- End METADATA -->
 
-Stay tuned for details on September 10 at 8am PT.
+Stay tuned for details on September 10.
