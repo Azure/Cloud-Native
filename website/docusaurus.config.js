@@ -215,6 +215,24 @@ const config = {
         sortPosts: "descending",
       },
     ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "blog-30-days-of-ia-2024",
+        routeBasePath: "30-days-of-ia-2024",
+        path: "./blog-30-days-of-ia-2024",
+        blogTitle: "Learn in #30DaysOfIA",
+        blogDescription:
+          "Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure!",
+        blogSidebarCount: "ALL",
+        blogSidebarTitle: "#30DaysOfIA2024",
+        tagsBasePath: "tags",
+        archiveBasePath: "archive",
+        postsPerPage: 1,
+        showReadingTime: true,
+        sortPosts: "descending",
+      },
+    ],
     // ---- End Multiple Blogs
 
     ["docusaurus-plugin-clarity", {}],

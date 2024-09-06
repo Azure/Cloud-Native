@@ -1,10 +1,69 @@
 [
     {
-        "title": "Ask the Expert: Learn Live | Build Intelligent Apps with Serverless Containers on Azure Container Apps",
+        "title": "Ask the Expert: Intelligent Apps with Azure Kubernetes Service",
+        "description": "Join the Azure Kubernetes Service Product Group to learn about developing cloud-native apps for high scale and resilience with Azure Kubernetes Service clusters. Discuss with the experts on how to combine the power of AI with Kubernetes app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Kubernetes Service (AKS).",
+        "preview": "",
+        "website": "https://learn.microsoft.com/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/intelligent-apps/ate-aks",
+        "tags": [
+            "featured",
+            "azurekubernetesservice",
+            "azureopenai",
+            "ai",
+            "video"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Intelligent Apps with Azure Cosmos DB",
+        "description": "Join the Azure Cosmos DB team for an engaging session on the versatile vector database capabilities of Azure Cosmos DB. Discover the seamless integration of your operational and transactional data with native vector indexing and search functionalities, specifically tailored for AI applications. Learn how to build RAG pattern solutions and manage chat history by seamlessly connecting with Azure OpenAI. Explore the power of Azure Cosmos DB's Copilot in simplifying complex query writing, enhancing accuracy, and improving performance. Additionally, we'll showcase our seamless integrations with Semantic Kernel, Langchain, and LlamaIndex.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/intelligent-apps/ate-cosmos",
+        "tags": [
+            "featured",
+            "cosmosdb",
+            "azureopenai",
+            "ai",
+            "video"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Intelligent Apps with Azure Functions",
+        "description": "Join the Azure Functions Product Group to learn about FaaS or Functions-as-a-Service in Azure serverless computing. It is time to focus on the pieces of code that matter most to you while Azure Functions handles the rest. Discuss with the experts on how to combine the power of AI, cloud-scale data, and serverless app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Functions.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/intelligent-apps/ate-functions",
+        "tags": [
+            "featured",
+            "azurefunctions",
+            "azureopenai",
+            "ai",
+            "video"
+        ]
+    },
+    {
+        "title": "Ask the Expert: Intelligent Apps with Azure AI",
+        "description": "Want to build an enterprise AI application with your data, and run it in production? Join us as we build Contoso Chat, an AI-based support agent that implements Retrieval Augmented Generation (RAG) to ground the copilot responses in your product data. Streamline your development workflow with PromptFlow, and manage your Azure AI platform interactions with the Azure AI Studio, SDK and CLI. Learn about Responsible AI practices, and learn how to evaluate your application, and calibrate it for content safety, using built-in capabilities of the Azure AI platform.",
+        "preview": "",
+        "website": "https://learn.microsoft.com/shows/Ask-the-Expert/",
+        "author": "Ask the Expert",
+        "source": "https://aka.ms/intelligent-apps/ate-ai",
+        "tags": [
+            "featured",
+            "azureopenai",
+            "ai",
+            "video"
+        ]
+    },
+    {
+        "title": "Learn Live | Build Intelligent Apps with Serverless Containers on Azure Container Apps",
         "description": "Leverage Azure Developer CLI (azd) to deploy intelligent apps on ACA",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
         "source": "https://aka.ms/serverless-learn-live/ep1",
         "tags": [
             "featured",
@@ -16,11 +75,11 @@
         ]
     },
     {
-        "title": "Ask the Expert: Learn Live | From Day Zero To Production with Azure Container Apps",
+        "title": "Learn Live | From Day Zero To Production with Azure Container Apps",
         "description": "Take your intelligent apps to production with ACA using Bicep and GitHub Actions",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
         "source": "https://aka.ms/serverless-learn-live/ep2",
         "tags": [
             "featured",
@@ -32,11 +91,11 @@
         ]
     },
     {
-        "title": "Ask the Expert: Learn Live | Azure Container Apps uncovered: Scenarios, workloads, and portability",
+        "title": "Learn Live | Azure Container Apps uncovered: Scenarios, workloads, and portability",
         "description": "Learn how to build portable, intelligent cloud native apps with ACA and Dapr",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
         "source": "https://aka.ms/serverless-learn-live/ep3",
         "tags": [
             "featured",
@@ -48,11 +107,11 @@
         ]
     },
     {
-        "title": "Ask the Expert: Learn Live | Build Intelligent Apps with .NET and Serverless on Azure",
+        "title": "Learn Live | Build Intelligent Apps with .NET and Serverless on Azure",
         "description": "Leverage the power of Serverless on Azure and Azure OpenAI with .NET",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
         "source": "https://aka.ms/serverless-learn-live/ep4",
         "tags": [
             "featured",
@@ -64,12 +123,12 @@
         ]
     },
     {
-        "title": "Ask the Expert: Learn Live | Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service",
+        "title": "Learn Live | Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service",
         "description": "Learn how to leverage Azure OpenAI with the AKS Store Demo app.",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
-        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_LL_website",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep1",
         "tags": [
             "featured",
             "azurekubernetesservice",
@@ -80,12 +139,12 @@
         ]
     },
     {
-        "title": "Ask the Expert: Learn Live | Bring Your Own AI Models to Intelligent Apps on AKS with Kaito",
+        "title": "Learn Live | Bring Your Own AI Models to Intelligent Apps on AKS with Kaito",
         "description": "Use AKS to run your own AI Models with Kaito.",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
-        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_LL_website",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep2",
         "tags": [
             "featured",
             "azurekubernetesservice",
@@ -96,12 +155,12 @@
         ]
     },
     {
-        "title": "Ask the Expert: Learn Live | Enhance Observability of Your Intelligent Apps on AKS",
+        "title": "Learn Live | Enhance Observability of Your Intelligent Apps on AKS",
         "description": "Learn how OpenCost, Prometheus, and Grafana can improve intelligent apps.",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
-        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_LL_website",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep3",
         "tags": [
             "featured",
             "azurekubernetesservice",
@@ -112,12 +171,12 @@
         ]
     },
     {
-        "title": "Ask the Expert: Learn Live | Taking Your Intelligent App Global with AKS",
+        "title": "Learn Live | Taking Your Intelligent App Global with AKS",
         "description": "Use AKS and Azure to take your intelligent app global.",
         "preview": "",
-        "website": "https://learn.microsoft.com/en-us/shows/Ask-the-Expert/",
-        "author": "Ask the Expert",
-        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_LL_website",
+        "website": "https://learn.microsoft.com/shows/learn-live/",
+        "author": "Learn Live",
+        "source": "https://aka.ms/learn-live-building-intelligent-apps-aks-ep4",
         "tags": [
             "featured",
             "azurekubernetesservice",

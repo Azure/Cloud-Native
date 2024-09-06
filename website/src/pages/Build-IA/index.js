@@ -6,13 +6,13 @@ import styles from './../index.module.css';
 
 const CampaignFeatures = [
   {
-    title: "#60Days Of IA",
-    linkTitle: "#60DaysOfIA",
+    title: "#30Days Of IA",
+    linkTitle: "#30DaysOfIA",
     svgpath: "../img/svg/60-days-of-IA-azure-icon-blog.svg",
-    link: "/Cloud-Native/60DaysOfIA",
+    link: "/Cloud-Native/30-days-of-ia-2024",
     description: (
       <>
-        Join us on a #60Day journey that starts by demystifying Intelligent Apps and ends with you building on Azure OpenAI.
+        Join us on a #30Day journey that starts by demystifying Intelligent Apps and ends with you building on Azure OpenAI.
       </>
     ),
   },
@@ -23,18 +23,18 @@ const CampaignFeatures = [
     link: "/Cloud-Native/Build-IA/LearnLive",
     description: (
       <>
-        Deconstruct an enterprise-grade end to end reference sample for a serverless or Kubernetes application.
+        Deconstruct an enterprise-grade end to end reference sample for AI infused serverless or Kubernetes Application.
       </>
     ),
   },
   {
-    title: "Ask The Expert",
-    linkTitle: "Ask The Expert",
-    svgpath: "../img/svg/60-days-of-IA-azure-icon-ask-the-experts.svg",
-    link: "/Cloud-Native/Build-IA/AskTheExpert",
+    title: "Demo Bytes",
+    linkTitle: "Demo Bytes",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-demobytes.svg",
+    link: "/Cloud-Native/Build-IA/DemoBytes",
     description: (
       <>
-        Join us for online conversations with the product teams on building intelligent apps architectures - ask your questions live.
+        Join us for Snackable AI Demos with the SMEs on building intelligent app architectures - ask your questions live.
       </>
     ),
   },
@@ -50,8 +50,8 @@ const CampaignFeatures = [
   //   ),
   // },
   {
-    title: "Cloud Skills Challenge",
-    linkTitle: "Cloud Skills Challenge",
+    title: "AI Skills Challenge",
+    linkTitle: "AI Skills Challenge",
     svgpath: "../img/svg/60-days-of-IA-azure-icon-cloud-skills.svg",
     link: "/Cloud-Native/Build-IA/CloudSkills",
     description: (
@@ -101,10 +101,10 @@ function CampaignHeader() {
           <div className="col col--6">
             <h1 className="hero__title">Build Intelligent Apps!</h1>
             <p>
-            Join us on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure for your users.
+            Join us on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-scale data, and modern app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure for your users.
             </p>
             <div className={styles.buttonsFFIA}>
-              <Link className="button button--primary button--lg" to="/60DaysOfIA" data-bi-area="Hero" data-bi-name="#IntelligentApps">
+              <Link className="button button--primary button--lg" to="/30-days-of-ia-2024" data-bi-area="Hero" data-bi-name="#IntelligentApps">
               Get Started
               </Link>
             </div>
@@ -115,7 +115,7 @@ function CampaignHeader() {
           <div className="col col--5">
             <img
               className="hide-on-mobile"
-              src="../img/60-days-of-ia/60-days-of-ia-hero-image.png"
+              src="../img/30-days-of-ia/30-days-of-ia-2024-hero-image.png"
               alt=""
               role="presentation"
               width="100%"

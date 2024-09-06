@@ -1,15 +1,67 @@
 # Events Calendar
 
-Build Intelligent Apps kicked off **mid-February** with initiatives to help you learn the tools, technologies and skills you need to modernize your applications and build differentiated experiences with AI! Look for these signature events & more:
+Build Intelligent Apps kicked off **September** initiatives to help you learn the tools, technologies and skills you need to modernize your applications and build differentiated experiences with AI! Look for these signature events & more:
 
- * 🎙 **Ask The Expert** - (free, online) with the Azure Product Group across two time zones–Americas + EMEA and APAC + ANZ
+ * 🎙 **Demo Bytes** - (free, online) with the Azure Product Group across two time zones–Americas + EMEA and APAC + ANZ
  * 👩🏽‍💻 **Learn Live** - live training series on building intelligent apps end-to-end on Azure with AI.
- * ✍🏽 **#60Days of Intelligent Apps** - series of blog posts organized in themed weeks focused on intelligent apps.
- * 🎯 **Cloud Skills Challenge** - curated collection of Learn modules in Apps, Data & AI - for self-skilling!
+ * ✍🏽 **#30Days of Intelligent Apps** - series of blog posts organized in themed weeks focused on intelligent apps.
+ * 🎯 **AI Skills Challenge** - curated collection of Learn modules in Apps, Data & AI - for self-skilling!
 
 Read on to learn where you can tune into livestreams, catch up on replays, and participate by making your first open-source contributions!
 
 ---
+
+## Sept 2024
+### Build #IntelligentApps
+
+* 👩🏽‍💻 Sep 12 | Learn Live - [Ep. 01: Data-driven AI applications and multi-modal search](https://aka.ms/learn-live/ep1)
+* 🎙 Sep 16 | Demo Bytes - [Ep. 01: Azure Kubernetes Service Automated Deployments - Streamlining Kubernetes Deployments](https://aka.ms/demo-bytes/ep1)
+* 🎙 Sep 17 | Demo Bytes - [Ep. 02: Deliver AI infused app innovation with Open Liberty on AKS](https://aka.ms/demo-bytes/ep2)
+* 🎙 Sep 18 | Demo Bytes - [Ep. 03: Fine-Tuning Open-Source Models made easy with KAITO](https://aka.ms/demo-bytes/ep3)
+* 👩🏽‍💻 Sep 18 | Learn Live - [Ep. 02: Containerizing and Deploying AI Workloads on AKS](https://aka.ms/learn-live/ep2)
+* 🎙 Sep 23 | Demo Bytes - [Ep. 04: Get your on-prem apps AI-ready using GitHub Copilot and Azure Migrate Code Assessment tool](https://aka.ms/demo-bytes/ep4)
+* 🎙 Sep 24 | Demo Bytes - [Ep. 05: Add generative AI capabilities to your web apps, leveraging vector databases and caching](https://aka.ms/demo-bytes/ep5)
+* 🎙 Sep 25 | Demo Bytes - [Ep. 06: Apply auto-scaling and load testing to your AI applications to make them customer-ready](https://aka.ms/demo-bytes/ep6)
+* 👩🏽‍💻 Sep 25 | Learn Live - [Ep. 03: Operational Excellence with AKS](https://aka.ms/learn-live/ep3)
+* 🎙 Sep 30 | Demo Bytes - [Ep. 07: Configure and Deploy Intelligent Java SpringBoot Apps on Azure App Service](https://aka.ms/demo-bytes/ep7)
+
+### Rag Hack
+* Sept 3-13 | [Build a RAG app](https://aka.ms/raghack)
+
+### PyCon India 2024
+* Sep 20 | [Introduction to data-driven AI applications and multi-modal search](https://in.pycon.org/cfp/2024/proposals/introduction-to-data-driven-ai-applications-and-multi-modal-search~axk8n/)
+
+---
+
+## Oct 2024
+### Build #IntelligentApps
+
+* 🎙 Oct 1 | Demo Bytes - [Ep. 08: End-to-End AI application deployments with GitHub Copilot](https://aka.ms/demo-bytes/ep8)
+* 🎙 Oct 2 | Demo Bytes - [Ep. 09: Extending GitHub Copilot to chat with your Postgres Database](https://aka.ms/demo-bytes/ep9)
+* 👩🏽‍💻 Oct 2 | Learn Live - [Ep. 04: Get Started Incorporating AI into Your .NET Applications and Service](https://aka.ms/learn-live/ep4)
+* 🎙 Oct 7 | Demo Bytes - [Ep. 10: Architecting a Unified AI Stack: Secure, Responsible, and Scalable](https://aka.ms/demo-bytes/ep10)
+* 🎙 Oct 8 | Demo Bytes - [Ep. 11: 10x Developer with GitHub Copilot](https://aka.ms/demo-bytes/ep11)
+* 🎙 Oct 9 | Demo Bytes - [Ep. 12: Building and running intelligent Spring app on Azure Container Apps](https://aka.ms/demo-bytes/ep12)
+* 👩🏽‍💻 Oct 9 | Learn Live - [Ep. 05: Modernize Your Apps Using GenAI Without Rewriting the Code](https://aka.ms/learn-live/ep5)
+* 🎙 Oct 14 | Demo Bytes - [Ep. 13: Ingest your own content using Azure Functions OpenAI Triggers & Bindings](https://aka.ms/demo-bytes/ep13)
+* 🎙 Oct 15 | Demo Bytes - [Ep. 14: GenAI Gateway Capabilities in Azure API Management](https://aka.ms/demo-bytes/ep14)
+* 🎙 Oct 16 | Demo Bytes - [Ep. 15: Elevate Policy Authoring Experience in API Management with Microsoft Copilot for Azure](https://aka.ms/demo-bytes/ep15)
+
+### GitHub Universe
+* Oct 29-30 | [GitHub Universe .24](https://githubuniverse.com/)
+
+---
+
+## Nov 2024
+### KubeCon NA
+* Nov 12-15 | [KubeCon Cloud Native Con 2024](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
+
+### Microsoft Ignite
+* Nov 19-22 | [Online and In-person at Chicago](https://ignite.microsoft.com/home)
+
+---
+
+## Previously on Build Intelligent Apps
 
 ## Feb 2024
 ### Build #IntelligentApps
@@ -17,9 +69,6 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 * 🎯 Feb 15 | [#CloudSkillsChallenge](https://azure.github.io/Cloud-Native/Build-IA/CloudSkills) begins
 * ✍🏽 Feb 19 | [#60Days of Intelligent Apps](https://aka.ms/build-ia/60days) begins
 * 👩🏽‍💻 Feb 21 | #LearnLive Kubernetes – [Ep 01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service](https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_website)
-
-<iframe width="800" height="450" src="https://www.youtube.com/embed/1kdDoGoy37A?si=mzWmXaOMhVMvcWC4&amp;controls=0" title="Intelligent Apps on AKS Ep01: Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service" allowFullScreen></iframe>
-
 * 👩🏽‍💻 Feb 28 | #LearnLive Kubernetes – [Ep 02: Bring Your Own AI Models to Intelligent Apps on AKS with KAITO](https://developer.microsoft.com/en-us/reactor/events/21815/?ocid=buildia24_website)
 * 🎙 Feb 29 | #AskTheExpert – [Azure Kubernetes Service](https://reactor.microsoft.com/en-us/reactor/events/21693/?ocid=buildia24_website) 
 
@@ -57,9 +106,6 @@ Read on to learn where you can tune into livestreams, catch up on replays, and p
 Experience the latest innovations around AI, learn from product and partner experts to advance your skills, and connect with your community. Join the developer community in-person at Seattle, or online from anywhere in the world!
 
 * May 21-23 | [Seattle, Online](https://build.microsoft.com/home?ocid=buildia24_website)
-
----
-## Previously on Build Intelligent Apps
 
 ## Sep 2023
 ### #BuildIntelligentApps 
