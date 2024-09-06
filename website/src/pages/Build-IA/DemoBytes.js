@@ -80,7 +80,7 @@ const ContentItems = [
         episodeNumber: '3',
         title: 'Fine-Tuning Open-Source Models made easy with KAITO',
         link: 'https://aka.ms/demo-bytes/ep3?ocid=biafy25h1_demobytes_webpage_azuremktg',
-        speaker: 'Ed Burns',
+        speaker: 'Paul Yu',
         description: "Foundation models have a vast amount of knowledge but often need to be refined for specific tasks. In this demo, we'll see how KAITO (Kubernetes AI Toolchain Operator) can help you easily fine-tune models so that your LLMs stay on track and provide more accurate answers; just as your users expect."
     },
     {
