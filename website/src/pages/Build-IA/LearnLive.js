@@ -66,35 +66,35 @@ const ContentItems = [
 
     {
       title: 'Data-driven AI applications and multi-modal search',
-      imglink: '/img/60-days-of-ia/learn-live-ep-1.PNG',
+      imglink: '/img/60-days-of-ia/learn-live-ep-1.png',
       link: "https://aka.ms/learn-live/ep1?ocid=biafy25h1_learnlive_webpage_azuremktg",
       description: "Dive into building AI applications in Python with cutting-edge technology and models.",
       date: "September 12"
     },
     {
       title: 'Containerizing and Deploying AI Workloads on AKS',
-      imglink: '/img/60-days-of-ia/learn-live-ep-2.PNG',
+      imglink: '/img/60-days-of-ia/learn-live-ep-2.png',
       link: "https://aka.ms/learn-live/ep2?ocid=biafy25h1_learnlive_webpage_azuremktg",
       description: "Join us as we cover the key considerations for deploying AI workloads at scale.",
       date: "September 18"
     },
     {
       title: 'Operational Excellence with AKS',
-      imglink: '/img/60-days-of-ia/learn-live-ep-3.PNG',
+      imglink: '/img/60-days-of-ia/learn-live-ep-3.png',
       link: "https://aka.ms/learn-live/ep3?ocid=biafy25h1_learnlive_webpage_azuremktg",
       description: "Explore the key components of operational excellence for AI applications on AKS.",
       date: "September 25"
     },
     {
       title: 'Get Started Incorporating AI into Your .NET Applications and Service',
-      imglink: '/img/60-days-of-ia/learn-live-ep-4.PNG',
+      imglink: '/img/60-days-of-ia/learn-live-ep-4.png',
       link: "https://aka.ms/learn-live/ep4?ocid=biafy25h1_learnlive_webpage_azuremktg",
       description: "In this hands-on session, we'll build a simple .NET project and infuse it with AI capabilities using just a few lines of code.",
       date: "October 2"
     },
     {
       title: 'Modernize Your Apps Using GenAI Without Rewriting the Code',
-      imglink: '/img/60-days-of-ia/learn-live-ep-5.PNG',
+      imglink: '/img/60-days-of-ia/learn-live-ep-5.png',
       link: "https://aka.ms/learn-live/ep5?ocid=biafy25h1_learnlive_webpage_azuremktg",
       description: "Enhance your apps with AI-powered features like caching and monitoring without modifying the core application code.",
       date: "October 9"
