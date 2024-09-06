@@ -46,7 +46,6 @@ import styles from './styles.module.css';
 
 const TITLE = 'Community Gallery';
 const DESCRIPTION = 'A community-contributed showcase gallery';
-// const ADD_URL = 'https://aka.ms/awesome-azd-contribute'
 
 type UserState = {
   scrollTopPosition: number;

@@ -10,7 +10,7 @@ const AnnouncementBar = () => {
           <div className={`col col--8 col--offset-2 ${styles.announcementBarContainer}`}>
             <div className="col-demo">
               <p className={styles.announcementBarContent}>
-                Check out the <a className={styles.announcementLink} target="_blank" href="https://developer.microsoft.com/en-us/reactor/series/S-1308/?wt.mc_id=blog_S-1308_webpage_reactor" data-bi-area="AnnouncementBar" data-bi-name="Intelligent Apps on Azure Container Apps">Intelligent Apps on Azure Container Apps</a> series for quick demo bytes | Give us a 🌟 <a className={styles.announcementLink} target="_blank" href="https://github.com/azure/cloud-native" data-bi-area="AnnouncementBar" data-bi-name="Give us a star on GitHub">on GitHub</a>
+              Dive into <a className={styles.announcementLink} target="_blank" href="https://aka.ms/learn-live/ep1?ocid=biafy25h1_cn_webpage_azuremktg" data-bi-area="AnnouncementBar" data-bi-name="building AI applications in Python">building AI applications in Python</a> with cutting-edge technology and models | Give us a 🌟 <a className={styles.announcementLink} target="_blank" href="https://github.com/azure/cloud-native" data-bi-area="AnnouncementBar" data-bi-name="Give us a star on GitHub">on GitHub</a>
               </p>
             </div>
           </div>

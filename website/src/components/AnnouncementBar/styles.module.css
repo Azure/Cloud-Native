@@ -1,14 +1,13 @@
 .announcementBarBackground {
-    background-color: #133486;
+    background-color: #002948;
     color: #ffffff;
     font-size: 13px;
-    margin-top: -2px
+    margin-top: -2px;
 }
 
 .announcementBarContainer {
     align-content: center;
     text-align: center;
-    background-color: #133486;
     color: #ffffff;
 }
 

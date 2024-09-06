@@ -61,10 +61,19 @@ function ShowcaseCardTag({tags}: {tags: TagType[]}) {
   );
 }
 
-function ShowcaseMultipleWebsites(authorName:string, websiteLink:string) {
- return <li>
-         <a className="dropdown__link" href={websiteLink}>{authorName}</a>
-       </li>;
+function ShowcaseMultipleWebsites(authorName: string, websiteLink: string) {
+  return (
+    <li>
+      <a
+        className="dropdown__link"
+        href={websiteLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {authorName}
+      </a>
+    </li>
+  );
 }
 
 function ShowcaseMultipleAuthorsDropdown({ user }: { user: User }) {
@@ -89,7 +98,7 @@ function ShowcaseMultipleAuthorsDropdown({ user }: { user: User }) {
         <ul className="dropdown__menu">
           {multiWebsites.map((value, index) => {
             // Append tracking parameter to URL
-            const trackedUrl = `${value}?ocid=buildia24_gallery_website`;
+            const trackedUrl = `${value}?ocid=biafy25h1_communitygallery_webpage_azuremktg`;
             return ShowcaseMultipleWebsites(
               multiAuthors[index],
               trackedUrl // Use the tracked URL
@@ -101,16 +110,16 @@ function ShowcaseMultipleAuthorsDropdown({ user }: { user: User }) {
   }
 
   // Append tracking parameter to single URL
-  const trackedUrl = `${websites}?ocid=buildia24_gallery_website`;
+  const trackedUrl = `${websites}?ocid=biafy25h1_communitygallery_webpage_azuremktg`;
 
   return (
     <div className="author">
-      <p className="margin-bottom--none">Author</p>
-      <a href={trackedUrl}>{authors}</a>
+      <a href={trackedUrl} target="_blank" rel="noopener noreferrer">
+        {authors}
+      </a>
     </div>
   );
 }
-
 
 function ShowcaseCard({ user }: { user: User }) {
   // Function to determine if the URL contains a specific tracking parameter
@@ -121,16 +130,15 @@ function ShowcaseCard({ user }: { user: User }) {
   // Determine the URL to use
   let urlToUse = user.source;
 
-  // Check if the URL contains the tracking parameter "?ocid=buildia24_LL_website"
-  if (!urlContainsParameter(urlToUse, '?ocid=buildia24_LL_website')) {
-    // If the tracking parameter "?ocid=buildia24_LL_website" is not present, append "?ocid=buildia24_gallery_website"
-
-    const trackingParameter = '?ocid=buildia24_gallery_website';
+  // Check if the URL contains the tracking parameter "?ocid=biafy25h1_communitygallery_webpage_azuremktg"
+  if (!urlContainsParameter(urlToUse, '?ocid=biafy25h1_communitygallery_webpage_azuremktg')) {
+    // If the tracking parameter "?ocid=biafy25h1_communitygallery_webpage_azuremktg" is not present, append "?ocid=biafy25h1_communitygallery_webpage_azuremktg"
+    const trackingParameter = '?ocid=biafy25h1_communitygallery_webpage_azuremktg';
 
     // Check if the URL already has query parameters
     if (urlToUse.includes('?')) {
       // URL already has parameters, use '&' to append the new parameter
-      urlToUse += `&ocid=buildia24_gallery_website`;
+      urlToUse += `&ocid=biafy25h1_communitygallery_webpage_azuremktg`;
     } else {
       // URL does not have any parameters, use '?' to append the new parameter
       urlToUse += trackingParameter;
@@ -143,6 +151,8 @@ function ShowcaseCard({ user }: { user: User }) {
       <Link
         className="card-link"
         to={urlToUse}
+        target="_blank"
+        rel="noopener noreferrer"
         data-bi-area="BodyGrid"
         data-bi-name={user.title}
       >
@@ -169,8 +179,5 @@ function ShowcaseCard({ user }: { user: User }) {
     </li>
   );
 }
-
-
-
 
 export default React.memo(ShowcaseCard);

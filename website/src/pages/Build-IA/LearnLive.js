@@ -15,14 +15,11 @@ function SectionHeader({title, description}) {
             <h1 className="hero__title">
                 {title}
             </h1>
-            <p> {description} </p>
-            <div className={styles.buttons}>
-                <Link className="button button--primary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://aka.ms/intelligent-apps/serverless-learnlive?ocid=buildia24_LL_website" target="_blank" data-bi-area="Hero" data-bi-name="Build Serverless">
-                    Build Serverless
-                </Link>
-                <Link className="button button--primary button--lg mobile-block-buttons mobile-block-button-padding button-spacer" to="https://aka.ms/intelligent-apps/aks-learnlive?ocid=buildia24_LL_website" target="_blank" data-bi-area="Hero" data-bi-name="Build Kubernetes">
-                    Build Kubernetes
-                </Link>
+            <p>{description}</p>
+            <div className={styles.buttonsFFIA}>
+              <Link className="button button--primary button--lg" to="https://aka.ms/bia/learn-live?ocid=biafy25h1_learnlive_webpage_azuremktg" data-bi-area="Hero" data-bi-name="#LearnLive">
+              Register for the series
+              </Link>
             </div>
         </div>
       </header>
@@ -34,23 +31,9 @@ function SectionContent(){
     return (
         <section className={styles.features}>
             <div className="container">
-                <div>
-                    <h2>Serverless</h2>
-                </div>
                 <div className="row" style={{ paddingBottom: '1rem' }}>
-                    {ContentItemsServerless.map((props, idx) => (
-                        <ContentItemServerless key={idx} {...props} />
-                    ))}
-                </div>
-                <div>
-                    <hr></hr>
-                </div>
-                <div>
-                    <h2>Kubernetes</h2>
-                </div>
-                <div className="row" style={{ paddingBottom: '1rem' }}>
-                    {ContentItemsKubernetes.map((props, idx) => (
-                        <ContentItemKubernetes key={idx} {...props} />
+                    {ContentItems.map((props, idx) => (
+                        <ContentItem key={idx} {...props} />
                     ))}
                 </div>
             </div>
@@ -59,7 +42,7 @@ function SectionContent(){
 }
 
 // Content Item 
-function ContentItemKubernetes({title, description, link, imglink, cta}){
+function ContentItem({title, description, link, imglink, date}){
     return (
         <div className={clsx('col col--6 card-col', styles.contentItem)}>
             <Link className="card-link" to={link} target="_blank" data-bi-area="BodyGrid" data-bi-name={description}>
@@ -69,7 +52,7 @@ function ContentItemKubernetes({title, description, link, imglink, cta}){
                     </div>
                     <div className="card-body">
                         <div className="text--left padding-horiz--md">
-                            <h2>{cta}</h2>
+                            <h2>{date}</h2>
                             <p>{description}</p>
                         </div>
                     </div>
@@ -79,88 +62,42 @@ function ContentItemKubernetes({title, description, link, imglink, cta}){
     );
 }
 
-function ContentItemServerless({title, description, link, imglink, cta}){
-    return (
-        <div className={clsx('col col--6 card-col', styles.contentItem)}>
-            <Link className="card-link" to={link} target="_blank" data-bi-area="BodyGrid" data-bi-name={description}>
-                <div className="card">
-                    <div className="card__image">
-                        <Image alt={"Thumbnail Image for"+title} img={useBaseUrl(imglink)}/>
-                    </div>
-                    <div className="card-body">
-                        <div className="text--left padding-horiz--md">
-                            <h2>{cta}</h2>
-                            <p>{description}</p>
-                        </div>
-                    </div>
-                </div>
-            </Link>
-        </div>
-    );
-}
-
-// Update this dataset with links to the last 20 roundups
-const ContentItemsKubernetes = [
-
-  {
-    title: 'Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service',
-    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-1.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep1?ocid=buildia24_LL_website",
-    description: "Learn how to leverage Azure OpenAI with the AKS Store Demo app.",
-    cta: "February 21, 2024"
-  },
-  {
-    title: 'Bring Your Own AI Models to Intelligent Apps on AKS with Kaito',
-    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-2.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep2?ocid=buildia24_LL_website",
-    description: "Use AKS to run your own AI Models with Kaito.",
-    cta: "February 28, 2024"
-  },
-  {
-    title: 'Enhance Observability of Your Intelligent Apps on AKS',
-    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-3.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep3?ocid=buildia24_LL_website",
-    description: "Learn how OpenCost, Prometheus, and Grafana can improve intelligent apps.",
-    cta: "March 6, 2024"
-  },
-  {
-    title: 'Taking Your Intelligent App Global with AKS',
-    imglink: '/img/60-days-of-ia/learn-live-kubernetes-session-4.png',
-    link: "https://aka.ms/learn-live-building-intelligent-apps-aks-ep4?ocid=buildia24_LL_website",
-    description: "Use AKS and Azure to take your intelligent app global.",
-    cta: "March 13, 2024"
-  },
-];
-
-const ContentItemsServerless = [
+const ContentItems = [
 
     {
-      title: 'Deploying Intelligent Apps with OpenAI on Azure Kubernetes Service',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep1.PNG',
-      link: "https://aka.ms/serverless-learn-live/ep1",
-      description: "Leverage Azure Developer CLI (azd) to deploy intelligent apps on ACA.",
-      cta: "April 2, 2024"
+      title: 'Data-driven AI applications and multi-modal search',
+      imglink: '/img/60-days-of-ia/learn-live-ep-1.PNG',
+      link: "https://aka.ms/learn-live/ep1?ocid=biafy25h1_learnlive_webpage_azuremktg",
+      description: "Dive into building AI applications in Python with cutting-edge technology and models.",
+      date: "September 12"
     },
     {
-      title: 'Bring Your Own AI Models to Intelligent Apps on AKS with Kaito',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep2.PNG',
-      link: "https://aka.ms/serverless-learn-live/ep2",
-      description: "Take your intelligent apps to production with ACA using Bicep and GitHub Actions.",
-      cta: "April 3, 2024"
+      title: 'Containerizing and Deploying AI Workloads on AKS',
+      imglink: '/img/60-days-of-ia/learn-live-ep-2.PNG',
+      link: "https://aka.ms/learn-live/ep2?ocid=biafy25h1_learnlive_webpage_azuremktg",
+      description: "Join us as we cover the key considerations for deploying AI workloads at scale.",
+      date: "September 18"
     },
     {
-      title: 'Enhance Observability of Your Intelligent Apps on AKS',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep3.PNG',
-      link: "https://aka.ms/serverless-learn-live/ep3",
-      description: "Learn how to build portable, intelligent cloud native apps with ACA and Dapr.",
-      cta: "April 10, 2024"
+      title: 'Operational Excellence with AKS',
+      imglink: '/img/60-days-of-ia/learn-live-ep-3.PNG',
+      link: "https://aka.ms/learn-live/ep3?ocid=biafy25h1_learnlive_webpage_azuremktg",
+      description: "Explore the key components of operational excellence for AI applications on AKS.",
+      date: "September 25"
     },
     {
-      title: 'Taking Your Intelligent App Global with AKS',
-      imglink: '/img/60-days-of-ia/serverless-learnlive-ep4.PNG',
-      link: "https://aka.ms/serverless-learn-live/ep4",
-      description: "Leverage the power of Serverless on Azure and Azure OpenAI with .NET.",
-      cta: "April 17, 2024"
+      title: 'Get Started Incorporating AI into Your .NET Applications and Service',
+      imglink: '/img/60-days-of-ia/learn-live-ep-4.PNG',
+      link: "https://aka.ms/learn-live/ep4?ocid=biafy25h1_learnlive_webpage_azuremktg",
+      description: "In this hands-on session, we'll build a simple .NET project and infuse it with AI capabilities using just a few lines of code.",
+      date: "October 2"
+    },
+    {
+      title: 'Modernize Your Apps Using GenAI Without Rewriting the Code',
+      imglink: '/img/60-days-of-ia/learn-live-ep-5.PNG',
+      link: "https://aka.ms/learn-live/ep5?ocid=biafy25h1_learnlive_webpage_azuremktg",
+      description: "Enhance your apps with AI-powered features like caching and monitoring without modifying the core application code.",
+      date: "October 9"
     },
 ];
 

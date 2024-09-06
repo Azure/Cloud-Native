@@ -59,15 +59,15 @@
   --ifm-color-primary-light: #dcd2ee;
   --ifm-color-primary-lighter: #e7e0f4;
   --ifm-color-primary-lightest: #ffffff;
-  --ifm-background-color: #06112c!important;
-  --ifm-card-background-color: #0b1d4a!important;
+  --ifm-background-color: #002948!important;
+  --ifm-card-background-color: #004277!important;
   --ifm-navbar-background-color: #0b1d4a!important;
   --ifm-footer-background-color: #0b1d4a!important;
   --ifm-dropdown-background-color: #0b1d4a!important;
   --ifm-link-color: #ffb3bb!important;
   --font-color: #ffffff;
   --border-gradient: linear-gradient(to right,
-    #163A95 20%,
+    #004277 20%,
     #1172B0 60%,
     #8DC8E8 70%,
     #FFB3BB 80%,
@@ -81,7 +81,7 @@
    Need a better way to make this a dependent version on background color automatically
 */
 .hero{
-  color: #ffffff;
+  color: #f4fafd!important;
 }
 
 html {
@@ -210,6 +210,7 @@ a {
   box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
   transition: box-shadow 200ms ease-in-out;
   font-weight: 400;
+  border-radius: 1.5rem;
 }
 
 .card-body {
@@ -242,20 +243,45 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
+h1 {
+  letter-spacing: -.05em;
+}
+
+h2, h3, h4, h5, h6 {
+  letter-spacing: -.03em;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .08em;
+  font-weight: 600;
+}
+
 .button {
   font-weight: 600!important;
+  font-size: 1rem!important;
+  padding: .75rem 1rem;
 }
 
 .button--primary {
-  color: #1c1e21!important;
-  background-color: #9FA2F3!important;
+  color: #0e1726!important;
+  background-color: #b3daf0!important;
   border: 0px solid white!important;
 }
 
 .button--primary:hover {
-  color: #1c1e21!important;
-  background-color: #b0b3f5!important;
+  color: #0e1726!important;
+  background-color: #cbe6f4!important;
   border: 0px solid #ffb3bb!important;
+}
+
+.button--primary:focus {
+  color: #0e1726!important;
+  background-color: #f4fafd!important;
+  border: 0px solid #ffb3bb!important;
+  outline-offset: -.375rem!important;
+  outline: .1875rem dotted currentColor!important;
 }
 
 .button--secondary {

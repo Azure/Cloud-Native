@@ -8,7 +8,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #163A95;
+  background-color: #004277!important;
 }
 
 .heroBannerImg {
@@ -17,7 +17,7 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(to right, 
-    #163A95 20%,
+  #004277 20%,
     #1172B0 60%,
     #8DC8E8 70%,
     #FFB3BB 80%,
@@ -65,8 +65,8 @@
   .heroBannerImg {
     padding: 2rem 0;
     text-align: center;
-    background-color: #163A95 !important;
-    background: #163A95 !important;
+    background-color: #004277 !important;
+    background: #004277 !important;
   }
 
   .buttonsFFIA {
