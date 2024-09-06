@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[1900],{93618:a=>{a.exports=JSON.parse('{"label":"community-buzz","permalink":"/Cloud-Native/30-days-of-ia-2024/tags/community-buzz","allTagsPath":"/Cloud-Native/30-days-of-ia-2024/tags","count":1,"unlisted":false}')}}]);
