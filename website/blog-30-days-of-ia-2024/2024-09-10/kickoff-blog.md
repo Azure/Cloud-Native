@@ -55,7 +55,7 @@ We have a number of initiatives exclusively curated to build an engaging learnin
 * [Demo Bytes](https://azure.github.io/Cloud-Native/Build-IA/DemoBytes) – snackable demo playlist on building intelligent apps in Java, Python, .NET and using GitHub Copilot.
 * [AI Skills Challenge](https://aka.ms/build-ia/csc) – show your skills by competing with peers to complete learn modules and earn a badge.
 
-![Build intelligent apps](../../static/img/60-days-of-ia/60-days-of-ia-cloud-skills-modules.png)
+![Build intelligent apps](../../static/img/30-days-of-ia-2024/blogs/2024-09-10/30-days-of-ia-2024-cloud-skills-modules.jpg)
 
 :::info
 
@@ -69,6 +69,7 @@ What are 4 things you can do today, to jumpstart your learning journey?
   * September 25 | Episode 3: [Operational Excellence with AKS](https://developer.microsoft.com/reactor/events/23497/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
   * October 2 | Episode 4: [Get Started Incorporating AI into Your .NET Applications and Service](https://developer.microsoft.com/reactor/events/23656/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
   * October 9 | Episode 5: [Modernize Your Apps Using GenAI Without Rewriting the Code](https://developer.microsoft.com/reactor/events/23657/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+
 * **Register** for [Demo Bytes](https://aka.ms/bia/events?ocid=biafy25h1_30daysofia_webpage_azuremktg) (free, online) - snackable demo playlist
   * September 16 | Episode 1: [AKS Automated Deployments - Streamlining Kubernetes Deployments](https://developer.microsoft.com/reactor/events/23702/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
   * September 17 | Episode 2: [Deliver AI infused app innovation with Open Liberty on AKS](https://developer.microsoft.com/reactor/events/23587/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
@@ -85,6 +86,7 @@ What are 4 things you can do today, to jumpstart your learning journey?
   * October 14 | Episode 13: [Ingest your own content using Azure Functions OpenAI Triggers & Bindings](https://developer.microsoft.com/reactor/events/23599/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
   * October 15 | Episode 14: [GenAI Gateway Capabilities in Azure API Management](https://developer.microsoft.com/reactor/events/23600/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
   * October 17 | Episode 15: [Elevate Policy Authoring Experience in API Management](https://developer.microsoft.com/reactor/events/23601/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+
 * **Register** for the [AI Skills Challenge](https://aka.ms/intelligent-apps/csc?ocid=biafy25h1_30daysofia_webpage_azuremktg) to earn a Microsoft Learn badge – ends on *November 1*!.
 
 :::
