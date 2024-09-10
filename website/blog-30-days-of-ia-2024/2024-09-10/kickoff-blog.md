@@ -37,8 +37,8 @@ We’re bringing together a comprehensive suite of content designed to guide you
 ## What We’ll Cover
 
 * What is Build Intelligent Apps?
-* How Can you *participate*?
-* How Can you *skill up*? (in just 30 Days)
+* How can you *participate*?
+* How can you *skill up*? (in just 30 Days)
 
 ![Build intelligent apps](../../static/img/30-days-of-ia-2024/30-days-of-ia-2024-build-ia-banner.jpg)
 
@@ -100,7 +100,7 @@ This series takes you through learning journey in **four stages**, each buildi
 * **Week 3**: Build your own copilot with [Azure AI Studio](https://azure.microsoft.com/products/ai-studio/?msockid=115fb720d83d62ad12f8a380d9876328&ocid=biafy25h1_30daysofia_webpage_azuremktg), [Prompty](https://github.com/microsoft/prompty) and AKS
 * **Week 4**: Infuse AI-assisted development tools to [enhance your efforts](https://www.microsoft.com/research/publication/the-space-of-developer-productivity-theres-more-to-it-than-you-think/?msockid=115fb720d83d62ad12f8a380d9876328&ocid=biafy25h1_30daysofia_webpage_azuremktg) and experience.
 
-We will start with defining intelligent apps and then expand on how to build with cloud technologies like [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/products/kubernetes-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg), [Azure App Service](https://azure.microsoft.com/products/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg), [Azure API Management](https://azure.microsoft.com/products/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg), and [GitHub Copilot](https://github.com/features/copilot?ef_id=_k_77f1fde05f071240ccbe9b3b760f8c57_k_&OCID=AIDcmmb150vbv1_SEM__k_77f1fde05f071240ccbe9b3b760f8c57_k_&msclkid=77f1fde05f071240ccbe9b3b760f8c57) as well as integrate AI and cloud-scale data. You will learn how to build end-to-end scenarios for real world application development based on [reference architectures](https://learn.microsoft.com/azure/architecture/?ocid=biafy25h1_30daysofia_webpage_azuremktg). Before we dive deep on intelligent apps, here is a high-level overview of the **Intelligent Apps** landscape on Azure for you to leverage the most comprehensive, trusted cloud to prime the customer and employee experiences.
+We will start with defining intelligent apps and then expand on how to build with cloud technologies like [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/products/kubernetes-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg), [Azure App Service](https://azure.microsoft.com/products/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg), [Secure API Management](https://azure.microsoft.com/products/api-management/?ocid=biafy25h1_30daysofia_webpage_azuremktg), and [GitHub Copilot](https://github.com/features/copilot?ef_id=_k_77f1fde05f071240ccbe9b3b760f8c57_k_&OCID=AIDcmmb150vbv1_SEM__k_77f1fde05f071240ccbe9b3b760f8c57_k_&msclkid=77f1fde05f071240ccbe9b3b760f8c57) as well as integrate AI and cloud-scale data. You will learn how to build end-to-end scenarios for real world application development based on [reference architectures](https://learn.microsoft.com/azure/architecture/?ocid=biafy25h1_30daysofia_webpage_azuremktg). Before we dive deep on intelligent apps, here is a high-level overview of the **Intelligent Apps** landscape on Azure for you to leverage the most comprehensive, trusted cloud to prime the customer and employee experiences.
 
 ![diagram of intelligent apps on Azure AI application platform](../../static/img/30-days-of-ia-2024/blogs/2024-09-10/azure-ai-application-platform.jpeg)
 
