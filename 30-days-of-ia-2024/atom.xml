@@ -2,27 +2,101 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024</id>
     <title>Build Intelligent Apps On Azure Blog</title>
-    <updated>2024-09-06T00:00:00.000Z</updated>
+    <updated>2024-09-10T09:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024"/>
     <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Kickoff blog coming soon!]]></title>
-        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kickoff-blog-coming-soon</id>
-        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kickoff-blog-coming-soon"/>
-        <updated>2024-09-06T00:00:00.000Z</updated>
+        <title type="html"><![CDATA[Kick-off #30Days of IA]]></title>
+        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off</id>
+        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off"/>
+        <updated>2024-09-10T09:00:00.000Z</updated>
         <summary type="html"><![CDATA[Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure.]]></summary>
         <content type="html"><![CDATA[
-<p>Stay tuned for details on September 10.</p>]]></content>
+<p>In today’s fast-paced digital world, staying ahead means harnessing the power of technology to create smarter, more responsive applications. We’re excited to introduce you to our new edition of Build '#IntelligentApps', your go-to destination for skilling up on how to leverage AI to transform your applications and drive innovation.</p>
+<p>We’re bringing together a comprehensive suite of content designed to guide you through the latest in AI powered application development. Our goal is to empower developers, data scientists, and business leaders with the knowledge and tools needed to leverage AI effectively. Follow along for a sneak peek at what to expect.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-well-cover">What We’ll Cover<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off#what-well-cover" class="hash-link" aria-label="Direct link to What We’ll Cover" title="Direct link to What We’ll Cover">​</a></h2>
+<ul>
+<li>What is Build Intelligent Apps?</li>
+<li>How can you <em>participate</em>?</li>
+<li>How can you <em>skill up</em>? (in just 30 Days)</li>
+</ul>
+<p><img loading="lazy" alt="Build intelligent apps" src="https://azure.github.io/Cloud-Native/assets/images/30-days-of-ia-2024-build-ia-banner-026f80a6be3454d467eeb985c05866a9.jpg" width="1300" height="300" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="get-ready-to-build-intelligentapps-starting-september-16">Get Ready to Build #IntelligentApps starting September 16!<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off#get-ready-to-build-intelligentapps-starting-september-16" class="hash-link" aria-label="Direct link to Get Ready to Build #IntelligentApps starting September 16!" title="Direct link to Get Ready to Build #IntelligentApps starting September 16!">​</a></h2>
+<p>Today, we kick-off with new content and activities for you to skill up on all things Intelligent Apps on Azure with “how-to” blogs, events, and community interactions! Read on to learn about what is coming!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="explore-our-initiatives">Explore Our Initiatives<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off#explore-our-initiatives" class="hash-link" aria-label="Direct link to Explore Our Initiatives" title="Direct link to Explore Our Initiatives">​</a></h2>
+<p>We have a number of initiatives exclusively curated to build an engaging learning journey for you to skill up on relevant technologies for building intelligent apps.</p>
+<ul>
+<li><a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024" target="_blank" rel="noopener noreferrer">#30Days of IA</a> - 4 themed weeks of blogs on AI led application development in Java or Python using Azure Application Platform, Azure Data Platform and Azure AI.</li>
+<li><a href="https://aka.ms/FallForIA/LearnLive" target="_blank" rel="noopener noreferrer">Learn Live Series</a> – 5 weekly livestream episodes on AI app development in Python or .NET.</li>
+<li><a href="https://azure.github.io/Cloud-Native/Build-IA/DemoBytes" target="_blank" rel="noopener noreferrer">Demo Bytes</a> – snackable demo playlist on building intelligent apps in Java, Python, .NET and using GitHub Copilot.</li>
+<li><a href="https://aka.ms/build-ia/csc" target="_blank" rel="noopener noreferrer">AI Skills Challenge</a> – show your skills by competing with peers to complete learn modules and earn a badge.</li>
+</ul>
+<p><img loading="lazy" alt="Build intelligent apps" src="https://azure.github.io/Cloud-Native/assets/images/30-days-of-ia-2024-cloud-skills-modules-7325712ca36084eaac10f41fb9a35d54.jpg" width="1920" height="1080" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><h2 class="anchor anchorWithStickyNavbar_LWe7" id="register-for-the-events"><a href="https://aka.ms/bia/events?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Register for the events!</a><a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off#register-for-the-events" class="hash-link" aria-label="Direct link to register-for-the-events" title="Direct link to register-for-the-events">​</a></h2><p>What are 4 things you can do today, to jumpstart your learning journey?</p><ul>
+<li>
+<p><strong>Register</strong>  for <a href="https://aka.ms/bia/events?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Learn Live</a> (free, online) – weekly live learning with SMEs</p>
+<ul>
+<li>September 12 | Episode 1: <a href="https://developer.microsoft.com/reactor/events/23495/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Data-driven AI applications and multi-modal search</a></li>
+<li>September 18 | Episode 2: <a href="https://developer.microsoft.com/reactor/events/23702/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Containerizing and Deploying AI Workloads on AKS</a></li>
+<li>September 25 | Episode 3: <a href="https://developer.microsoft.com/reactor/events/23497/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Operational Excellence with AKS</a></li>
+<li>October 2 | Episode 4: <a href="https://developer.microsoft.com/reactor/events/23656/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Get Started Incorporating AI into Your .NET Applications and Service</a></li>
+<li>October 9 | Episode 5: <a href="https://developer.microsoft.com/reactor/events/23657/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Modernize Your Apps Using GenAI Without Rewriting the Code</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Register</strong> for <a href="https://aka.ms/bia/events?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Demo Bytes</a> (free, online) - snackable demo playlist</p>
+<ul>
+<li>September 16 | Episode 1: <a href="https://developer.microsoft.com/reactor/events/23702/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">AKS Automated Deployments - Streamlining Kubernetes Deployments</a></li>
+<li>September 17 | Episode 2: <a href="https://developer.microsoft.com/reactor/events/23587/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Deliver AI infused app innovation with Open Liberty on AKS</a></li>
+<li>September 19 | Episode 3: <a href="https://developer.microsoft.com/reactor/events/23697/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Fine-tuning open-source models made easy with KAITO</a></li>
+<li>September 23 | Episode 4: <a href="https://developer.microsoft.com/reactor/events/23588/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Get your on-prem apps AI-ready using GitHub Copilot</a></li>
+<li>September 24 | Episode 5: <a href="https://developer.microsoft.com/reactor/events/23590/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Add Generative AI Capabilities to your Web Apps</a></li>
+<li>September 26 | Episode 6: <a href="https://developer.microsoft.com/reactor/events/23592/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Apply Auto-Scaling and Load Testing to your AI Applications</a></li>
+<li>September 30 | Episode 7: <a href="https://developer.microsoft.com/reactor/events/23593/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Configure &amp; Deploy Intelligent Java SpringBoot Apps on Azure App Service</a></li>
+<li>October 1 | Episode 8: <a href="https://developer.microsoft.com/reactor/events/23594/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">End-to-End AI application deployments with GitHub Copilot</a></li>
+<li>October 3 | Episode 9: <a href="https://developer.microsoft.com/reactor/events/23595/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Extending GitHub Copilot to chat with your Postgres Database</a></li>
+<li>October 7 | Episode 10: <a href="https://developer.microsoft.com/reactor/events/23596/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Architecting a Unified AI Stack: Secure, Responsible, and Scalable</a></li>
+<li>October 8 | Episode 11: <a href="https://developer.microsoft.com/reactor/events/23597/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">10x Developer with GitHub Copilot</a></li>
+<li>October 10 | Episode 12: <a href="https://developer.microsoft.com/reactor/events/23598/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Building and Running Intelligent Spring Apps on Azure Container Apps</a></li>
+<li>October 14 | Episode 13: <a href="https://developer.microsoft.com/reactor/events/23599/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Ingest your own content using Azure Functions OpenAI Triggers &amp; Bindings</a></li>
+<li>October 15 | Episode 14: <a href="https://developer.microsoft.com/reactor/events/23600/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">GenAI Gateway Capabilities in Azure API Management</a></li>
+<li>October 17 | Episode 15: <a href="https://developer.microsoft.com/reactor/events/23601/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Elevate Policy Authoring Experience in API Management</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Register</strong> for the <a href="https://aka.ms/intelligent-apps/csc?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">AI Skills Challenge</a> to earn a Microsoft Learn badge – ends on <em>November 1</em>!.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="30days-of-intelligent-apps">#30Days Of Intelligent Apps<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off#30days-of-intelligent-apps" class="hash-link" aria-label="Direct link to #30Days Of Intelligent Apps" title="Direct link to #30Days Of Intelligent Apps">​</a></h2>
+<p><a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024" target="_blank" rel="noopener noreferrer">#30Days of IA</a> is a series of “how-to” blog posts grouped into themed weeks - taking you from core concepts to end-to-end solution examples in 30 days. Each blog will provide conceptual lessons paired with exercises and resources to help you reinforce learnings and take next steps.</p>
+<p>This series takes you through learning journey in <strong>four stages</strong>, each building on the previous week to help you skill up in a beginner-friendly way:</p>
+<ul>
+<li><strong>Week 1</strong>: Build AI powered content generation <a href="https://azure.microsoft.com/blog/build-next-generation-ai-powered-applications-on-microsoft-azure/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">intelligent app in Java on Azure Kubernetes Service (AKS)</a></li>
+<li><strong>Week 2</strong>: Build AI powered content generation <a href="https://azure.microsoft.com/blog/build-next-generation-ai-powered-applications-on-microsoft-azure/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">intelligent app in Java on Azure App Service</a></li>
+<li><strong>Week 3</strong>: Build your own copilot with <a href="https://azure.microsoft.com/products/ai-studio/?msockid=115fb720d83d62ad12f8a380d9876328&amp;ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure AI Studio</a>, <a href="https://github.com/microsoft/prompty" target="_blank" rel="noopener noreferrer">Prompty</a> and AKS</li>
+<li><strong>Week 4</strong>: Infuse AI-assisted development tools to <a href="https://www.microsoft.com/research/publication/the-space-of-developer-productivity-theres-more-to-it-than-you-think/?msockid=115fb720d83d62ad12f8a380d9876328&amp;ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">enhance your efforts</a> and experience.</li>
+</ul>
+<p>We will start with defining intelligent apps and then expand on how to build with cloud technologies like <a href="https://azure.microsoft.com/products/kubernetes-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service (AKS)</a>, <a href="https://azure.microsoft.com/products/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure App Service</a>, <a href="https://azure.microsoft.com/products/api-management/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Secure API Management</a>, and <a href="https://github.com/features/copilot?ef_id=_k_77f1fde05f071240ccbe9b3b760f8c57_k_&amp;OCID=AIDcmmb150vbv1_SEM__k_77f1fde05f071240ccbe9b3b760f8c57_k_&amp;msclkid=77f1fde05f071240ccbe9b3b760f8c57" target="_blank" rel="noopener noreferrer">GitHub Copilot</a> as well as integrate AI and cloud-scale data. You will learn how to build end-to-end scenarios for real world application development based on <a href="https://learn.microsoft.com/azure/architecture/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">reference architectures</a>. Before we dive deep on intelligent apps, here is a high-level overview of the <strong>Intelligent Apps</strong> landscape on Azure for you to leverage the most comprehensive, trusted cloud to prime the customer and employee experiences.</p>
+<p><img loading="lazy" alt="diagram of intelligent apps on Azure AI application platform" src="https://azure.github.io/Cloud-Native/assets/images/azure-ai-application-platform-2d270b371e1a9a64c0a43fc41da4c657.jpeg" width="781" height="440" class="img_ev3q"></p>
+<p>The Azure application platform is designed to help you deliver on the promise of intelligent applications. It’s an <a href="https://azure.microsoft.com/solutions/build-modernize-intelligent-apps?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">integrated platform</a> that encompasses developer services, application services, databases, and <a href="https://azure.microsoft.com/solutions/ai/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">AI</a> services. Leveraging Azure’s robust security capabilities and principles around governance and <a href="https://www.microsoft.com/ai/responsible-ai?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">responsible AI</a>, the platform supports what you already use to help you make your apps intelligent. The developer stack on Azure also integrates AI, enhancing productivity for developers’ efficiency.</p>
+<p>There are eight key areas in which you can reinvent experiences for external customers as well as reshape internal processes to derive high productivity.</p>
+<p><img loading="lazy" alt="image of use cases for reinventing customer experiences with intelligent apps" src="https://azure.github.io/Cloud-Native/assets/images/customer-experiences-2b0b13a22e09f52d962c40a8417e6d3f.jpeg" width="781" height="440" class="img_ev3q"></p>
+<p><img loading="lazy" alt="image of use cases for reshaping business processes with intelligent apps" src="https://azure.github.io/Cloud-Native/assets/images/reshaping-business-processes-1289a2f34f6d078c26d9a0c5e9f5ea1b.jpeg" width="781" height="440" class="img_ev3q"></p>
+<p>Bring your applications to a modern application platform in the cloud for AI, which leverages a cloud data platform at scale, and agile development methods with DevOps. Embrace the most effective approaches to enhance both customer and employee experiences. Azure offers the latest apps, data, AI and is the most comprehensive, trusted cloud.</p>
+<p>To start with the basics for understanding AI app development concepts, explore <a href="https://azure.github.io/Cloud-Native/30DaysOfIA/" target="_blank" rel="noopener noreferrer">#30Days of IA (2023)</a> and <a href="https://azure.github.io/Cloud-Native/60DaysOfIA/" target="_blank" rel="noopener noreferrer">#60Days of IA</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="lets-get-started">Let’s Get Started<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off#lets-get-started" class="hash-link" aria-label="Direct link to Let’s Get Started" title="Direct link to Let’s Get Started">​</a></h2>
+<p>Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to <a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/rss.xml" target="_blank" rel="noopener noreferrer">subscribe</a> for updates in your favorite feed reader. <strong>And, look out for our first Intelligent Apps blog on Monday, September 16!</strong></p>]]></content>
         <author>
-            <name>#30Days Of IA</name>
-            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
+            <name>Devanshi Joshi</name>
+            <uri>https://github.com/devanshidiaries</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
-        <category label="30-days-of-IA" term="30-days-of-IA"/>
+        <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
         <category label="learn-live" term="learn-live"/>
-        <category label="community-buzz" term="community-buzz"/>
+        <category label="demo-bytes" term="demo-bytes"/>
+        <category label="community-gallery" term="community-gallery"/>
         <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
         <category label="azure-functions" term="azure-functions"/>
         <category label="azure-openai" term="azure-openai"/>
