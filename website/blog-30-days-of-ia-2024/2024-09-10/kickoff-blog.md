@@ -120,4 +120,4 @@ To start with the basics for understanding AI app development concepts, explore 
 
 ## Let’s Get Started
 
-Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/rss.xml) for updates in your favorite feed reader. **And, look out for our first Intelligent Apps blog on Monday, September 16!**
+Now you know everything! We hope you are as excited as we are to dive into a full month of active learning and doing! Don't forget to [subscribe](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/rss.xml) for updates in your favorite feed reader. **And, look out for our first Intelligent Apps blog.**
