@@ -29,9 +29,6 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 </head>
 
 <!-- End METADATA -->
-
-In this series, we show you how you can combine multiple Azure products and services to effectively build an example generative AI application that supports marketing teams.  
-
 In this blog series, discover how you can use Azure services to take advantage of generative AI capabilities to build an intelligent application.   
 
 ## What We’ll Cover
@@ -113,7 +110,7 @@ Our application makes the most of several cutting-edge technologies, each servin
 * [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg). For secure storage of secrets such as API keys, credentials, and sensitive configuration data, Key Vault is integrated into the system. This helps ensure that all sensitive data is stored securely and retrieved only when needed.  
 * [Microsoft Entra ID](https://learn.microsoft.com/entra/fundamentals/whatis?ocid=biafy25h1_30daysofia_webpage_azuremktg) (formerly Azure Active Directory). Microsoft Entra ID is used for authentication and identity management, supporting secure access to the back end and to APIs. It helps effectively manage user roles and access permissions.  
 * [Managed identity](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg). The application uses managed identity to securely access Azure resources without hard-coding credentials. This simplifies the authentication process when interacting with services like Key Vault and Azure Cosmos DB.  
-* [Azure App Service]](https://learn.microsoft.com/azure/app-service/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg) and [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg).The application supports two deployment models: App Service and AKS. Both provide scalable infrastructure but differ in flexibility and complexity (more on this in the "[Choosing the right deployment technology](#choosing-the-right-deployment-technology-for-you) for you" section).  
+* [Azure App Service](https://learn.microsoft.com/azure/app-service/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg) and [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg).The application supports two deployment models: App Service and AKS. Both provide scalable infrastructure but differ in flexibility and complexity (more on this in the "[Choosing the right deployment technology](#choosing-the-right-deployment-technology-for-you) for you" section).  
 * [Azure API Management](https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg). API Management manages the API gateway, controlling access between the front end, middleware, and back end. With features like Cross-Origin Resource Sharing (CORS), throttling, rate limiting, and authentication, API Management supports efficient communication and security across the system.
 
 :::info
