@@ -242,3 +242,73 @@ Choose Create, and complete the resource creation wizard. Select Create to deplo
 az group create --name <resource-group-name> --location <location>
 ```
 
+2. Create the API Management service using the following command:
+
+```
+az apim create \
+  --resource-group <your-resource-group-name> \
+  --name <your-apim-name> \
+  --publisher-email <your-email-address> \
+  --publisher-name <your-publisher-name> \
+  --location <your-location> \
+  --sku-name <sku-type>
+```
+
+**Parameters**
+
+* `--resource-group`: The name of the resource group where the API Management instance will be created. 
+* `--name`: The name of your API Management instance. 
+* `--publisher-email`: The email address of the API publisher. 
+* `--publisher-name`: The name of the API publisher. 
+* `--location`: The region where your API Management service will be deployed. 
+* `--sku-name`: The pricing tier for the API Management instance (`Developer`, `Basic`, `Standard`, or `Premium`). Default value is `Developer`.
+
+**SKUs**
+
+* `Developer`: Best for non-production use.
+* `Basic`: Entry-level production tier.
+* `Standard`: Mid-range production tier.
+* `Premium`: Enterprise-level tier with additional features like multiregion support.
+
+![Code lines: Last login](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-9.png)
+
+![Code lines: az apim create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-10.png)
+
+## Step 3. Prepare your app hosting environments—AKS or App Service
+
+With the Azure OpenAI instance in place and our API Management configuration created, we have one more piece to set up before we can start building and deploying our app. We need to determine what type of service we’re going to use in Azure for hosting the front-end, middleware, and back-end app code.
+
+### Choose your deployment technology
+
+Depending on your preferences or business requirements, you can choose either Azure Kubernetes Service (AKS) or Azure App Service when deploying your app the Azure.
+
+To recap, here’s a quick high-level overview of the AKS versus App Service.
+
+| Feature      | AKS                                    | App Service                                   |
+|--------------|----------------------------------------|-----------------------------------------------|
+| Flexibility  | More control, containerized apps       | Simplified, fully managed                     |
+| Scalability  | High customization and scalability     | Easy scaling for small to medium-sized apps   |
+| Use case     | Ideal for complex, enterprise apps     | Ideal for rapid deployment                    |
+
+Both are robust options, and you can select the one that best fits your business needs.
+
+### Use the Azure App Service path
+
+Create a separate App Service instance for the front-end, middleware, and back-end services.
+
+#### Azure portal instructions
+
+**Create a web app**. In the Azure portal, search for **App Service** and create a new app. 
+
+In the first section of the resource creation wizard, select the correct **Runtime stack**:  
+
+* For the back-end service, select **Java 21**.
+* For the middleware service, select **Java 17**.
+* For the front-end service, select **Node 20 LTS**.
+
+Complete the resource creation wizard, and select **Create** to deploy the App Service instance.
+
+![The "Create Web App" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-11.png)
+
+### CLI instructions
+
