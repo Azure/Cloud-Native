@@ -74,7 +74,7 @@ Your Spring Boot back end requires both Java 17 and 21.
 
    java -version
 
-   ![alt: image of terminal response]
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-2.png)
 
 ### Step 3. Install the Azure CLI.
 
@@ -85,7 +85,7 @@ The Azure CLI is essential for managing your Azure resources from the terminal.
 
    az login
 
-   ![alt: image of terminal response]
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-3.png)
 
 ### Step 4. Install Node.js and set up React.
 
@@ -96,7 +96,7 @@ We use Node.js for managing front-end dependencies and running the React develop
 
    node -v && npm -v
 
-   ![alt: image of terminal response]
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-4.png)
 
 ### Step 5. Install an integrated development environment.
 
@@ -125,7 +125,7 @@ Before you start configuring resources, choose the Azure account you want to use
 
     az --version
 
-    ![alt: image of terminal response]
+    ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-5.png)
 
 After installing and verifying the Azure CLI, follow these steps to sign in, list your subscriptions, and select a subscription:
 
@@ -137,7 +137,7 @@ After installing and verifying the Azure CLI, follow these steps to sign in, lis
 
 2. Select a subscription. After you sign in, a prompt is displayed.
 
-   ![alt: image of terminal response]
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-6.png)
 
 3. Type the number corresponding to the subscription you want to select, and press Enter. After you select the subscription, it is set as the default for your current session.
 
@@ -154,7 +154,7 @@ Cosmos DB will serve as the database for storing your application data, such as 
 5. Proceed with the rest of the setup, such as specifying the resource group, region, and database name.
 6. Once the Cosmos DB account is created, you can add a database and collections to organize your data.
 
-   ![alt: image of Cosmos DB setup in Azure Portal]
+   ![image of Cosmos DB setup in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-7.png)
 
 #### CLI instructions
 
@@ -162,7 +162,7 @@ Cosmos DB will serve as the database for storing your application data, such as 
 
    az group create --name <resource-group-name> --location <location>
 
-   ![alt: image of terminal response]
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-8.png)
 
 2. Create an Azure Cosmos DB account with MongoDB API.  
    Use the following command to create an Azure Cosmos DB account with the MongoDB API, and specify throughput in Request Units per second (RU/s):
@@ -183,7 +183,7 @@ Cosmos DB will serve as the database for storing your application data, such as 
      --name <database-name> \
      --resource-group <resource-group-name>
 
-   ![alt: image of terminal response]
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-9.png)
 
 ### Step 3. Create Azure Storage account.
 
@@ -195,7 +195,7 @@ Our Azure Storage account is used to store any static files (for example, produc
 2. Choose Blob Storage for storing documents and media.
 3. Complete the resource creation wizard, and select Create to deploy the storage account.
 
-   ![alt: image of storage account in Azure Portal]
+   ![image of storage account in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-10.png)
 
 #### CLI instructions
 
@@ -222,14 +222,14 @@ Our Azure Storage account is used to store any static files (for example, produc
      --sku Standard_LRS \
      --kind StorageV2
 
-   ![alt: image of terminal response to creating the Azure Storage account]
+   ![image of terminal response to creating the Azure Storage account](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-11.png)
 
 4. Verify storage account creation.  
    To ensure that the storage account was created successfully, list all storage accounts in the resource group:
 
    az storage account list --resource-group <resource-group-name> --output table
 
-   ![alt: image of terminal response to verify storage account creation]
+   ![image of terminal response to verify storage account creation](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-12.png)
 
 ### Step 4. Set up Azure Key Vault.
 
@@ -242,7 +242,7 @@ To securely store our secrets, like API keys and connection strings, we use Azur
 3. Assign managed identity. Enable Managed Identity to allow secure access from your application.
 4. Complete the resource creation wizard, and select Create to deploy the key vault.
 
-   ![alt: image of key vault in Azure Portal]
+   ![image of key vault in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-13.png)
 
 #### CLI instructions
 
@@ -260,14 +260,14 @@ To securely store our secrets, like API keys and connection strings, we use Azur
      --location <location> \
      --sku standard
 
-   ![alt: image of terminal response to creating the Azure key vault]
+   ![image of terminal response to creating the Azure key vault](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-14.png)
 
 3. Verify key vault creation.  
    To verify that the key vault was created, you can list all key vaults in the specified resource group:
 
    az keyvault list --resource-group <resource-group-name> --output table
 
-   ![alt: image of terminal response to verifying key vault creation]
+   ![image of terminal response to verifying key vault creation](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-15.png)
 
 ### Step 5. Use Microsoft Entra ID to create an app registration for Microsoft account sign-in.
 
@@ -288,7 +288,7 @@ To support multi-user access, including sign-in from any Microsoft account, regi
 
    **Important**: Ensure that all potential URLs (local, deployed, and custom domain) are listed as redirect URIs.
 
-   ![alt: image of application registration in Microsoft Entra ID]
+   ![image of application registration in Microsoft Entra ID](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-16.png)
 
 3. Configure API permissions.
    1. Go to the **API permissions** tab, and select **Add a permission**.
@@ -296,13 +296,13 @@ To support multi-user access, including sign-in from any Microsoft account, regi
       - **User.Read**. Allows users to sign in and read their profile.
    3. Grant admin consent. After permissions are added, select **Grant admin consent for your organization**.
 
-   ![alt: image of API permissions configuration]
+   ![image of API permissions configuration](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-17.png)
 
 4. Configure authentication settings.
    1. Go to the **Authentication** tab, and add your redirect URIs (both local and production URLs).
    2. Enable ID tokens to authenticate users.
 
-   ![alt: image in Azure Portal of authentication settings configuration]
+   ![image in Azure Portal of authentication settings configuration](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-18.png)
 
 This revision integrates Microsoft Entra ID and highlights the navigation flow for app registration through the Manage section. It also ensures that you're set up for both local development and production environments using AKS, App Service, or a custom domain.
 
@@ -442,3 +442,4 @@ echo "Here are the details of the app:"
 az ad app show --id "$APP_ID"
 ```
 
+   ![mage of terminal response after running the script](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-19.png)
