@@ -2,7 +2,7 @@
 date: 2024-09-20T09:00
 slug: setting-up-your-development-environment-1
 title: "2.1a Setting up your development environment Part 1"
-authors: [devanshi]
+authors: [30days]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
