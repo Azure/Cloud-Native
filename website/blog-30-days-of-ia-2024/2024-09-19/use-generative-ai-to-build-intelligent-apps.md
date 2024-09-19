@@ -70,16 +70,16 @@ BLUE BACKGROUND START
 ### AI and .Net
 In this series, we’ll walk through the basics of building a Java based content generation application. However, if you’re also interested in building intelligent apps using .Net, you can learn more from the following resources:  
 
-* [AI for .NET Developers | Microsoft Learn]()  
-* [Building Generative AI apps with .NET 8 | .Net Blog]() 
-* [Develop Generative AI solutions with Azure OpenAI Service - Training | Microsoft Learn]() 
-* [Dive deeper into .NET + AI collection | Microsoft Learn]()
-* [Develop AI agents using Azure OpenAI and the Semantic Kernel SDK - Training | Microsoft Learn]() 
-* [Add AI to Your .NET Apps Easily with Prompty | .Net Blog]()   
-* [Using Phi-3 & C# with ONNX for text and vision samples | .Net Blog]()   
-* [AI Samples for .NET | GitHub]()  
-* [Azure Samples: ChatGPT + Enterprise data with Azure OpenAI and Azure AI Search (.NET) | GitHub]()   
-* [.NET AI Community Standup playlist | YouTube]()  
+* [AI for .NET Developers | Microsoft Learn](https://learn.microsoft.com/dotnet/ai)  
+* [Building Generative AI apps with .NET 8 | .Net Blog](https://devblogs.microsoft.com/dotnet/build-gen-ai-with-dotnet-8/) 
+* [Develop Generative AI solutions with Azure OpenAI Service - Training | Microsoft Learn](https://learn.microsoft.com/training/paths/develop-ai-solutions-azure-openai/) 
+* [Dive deeper into .NET + AI collection | Microsoft Learn](https://learn.microsoft.com/collections/qp6xfmodr6q6px)
+* [Develop AI agents using Azure OpenAI and the Semantic Kernel SDK - Training | Microsoft Learn](https://learn.microsoft.com/training/paths/develop-ai-agents-azure-open-ai-semantic-kernel-sdk/) 
+* [Add AI to Your .NET Apps Easily with Prompty | .Net Blog](https://devblogs.microsoft.com/dotnet/add-ai-to-your-dotnet-apps-easily-with-prompty/)   
+* [Using Phi-3 & C# with ONNX for text and vision samples | .Net Blog](https://devblogs.microsoft.com/dotnet/using-phi3-csharp-with-onnx-for-text-and-vision-samples-md/)   
+* [AI Samples for .NET | GitHub](https://github.com/dotnet/ai-samples)  
+* [Azure Samples: ChatGPT + Enterprise data with Azure OpenAI and Azure AI Search (.NET) | GitHub](https://github.com/Azure-Samples/azure-search-openai-demo-csharp)   
+* [.NET AI Community Standup playlist | YouTube](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oX0Hrq9KqhQfZNAcDF5VPNt)  
 
 BLUE BACKGROUND END?
 
@@ -103,22 +103,22 @@ This flow allows for fast and efficient content creation while tailoring the out
 
 #### GitHub repository
 
-The project’s full source code can be found in the [GitHub repository for the Java AI-based content generator]().
+The project’s full source code can be found in the [GitHub repository for the Java AI-based content generator](https://github.com/Azure-Samples/Java-AI-Based-Content-Generator).
 
 #### Technologies used 
 Our application makes the most of several cutting-edge technologies, each serving a critical role in the system:  
   
 
-* [Azure OpenAI Service](). At the core of content generation is Azure OpenAI, which uses GPT models to create coherent and relevant content based on user input. The Chat Completion API (GPT-4o) generates the text, while the embedding model helps ensure that data retrieved for content is semantically relevant to the user's needs.  
-* [Azure Key Vault](). For secure storage of secrets such as API keys, credentials, and sensitive configuration data, Key Vault is integrated into the system. This helps ensure that all sensitive data is stored securely and retrieved only when needed.  
-* [Microsoft Entra ID]() (formerly Azure Active Directory). Microsoft Entra ID is used for authentication and identity management, supporting secure access to the back end and to APIs. It helps effectively manage user roles and access permissions.  
-* [Managed identity](). The application uses managed identity to securely access Azure resources without hard-coding credentials. This simplifies the authentication process when interacting with services like Key Vault and Azure Cosmos DB.  
-* [Azure App Service]]() and [Azure Kubernetes Service (AKS)]().The application supports two deployment models: App Service and AKS. Both provide scalable infrastructure but differ in flexibility and complexity (more on this in the “Choosing the right deployment technology for you<<anchor to that section below>>” section).  
-* [Azure API Management](). API Management manages the API gateway, controlling access between the front end, middleware, and back end. With features like Cross-Origin Resource Sharing (CORS), throttling, rate limiting, and authentication, API Management supports efficient communication and security across the system.
+* [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview). At the core of content generation is Azure OpenAI, which uses GPT models to create coherent and relevant content based on user input. The Chat Completion API (GPT-4o) generates the text, while the embedding model helps ensure that data retrieved for content is semantically relevant to the user's needs.  
+* [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview). For secure storage of secrets such as API keys, credentials, and sensitive configuration data, Key Vault is integrated into the system. This helps ensure that all sensitive data is stored securely and retrieved only when needed.  
+* [Microsoft Entra ID](https://learn.microsoft.com/entra/fundamentals/whatis) (formerly Azure Active Directory). Microsoft Entra ID is used for authentication and identity management, supporting secure access to the back end and to APIs. It helps effectively manage user roles and access permissions.  
+* [Managed identity](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview). The application uses managed identity to securely access Azure resources without hard-coding credentials. This simplifies the authentication process when interacting with services like Key Vault and Azure Cosmos DB.  
+* [Azure App Service]](https://learn.microsoft.com/azure/app-service/overview) and [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks).The application supports two deployment models: App Service and AKS. Both provide scalable infrastructure but differ in flexibility and complexity (more on this in the “Choosing the right deployment technology for you<<anchor to that section below>>” section).  
+* [Azure API Management](https://learn.microsoft.com/azure/api-management/api-management-key-concepts). API Management manages the API gateway, controlling access between the front end, middleware, and back end. With features like Cross-Origin Resource Sharing (CORS), throttling, rate limiting, and authentication, API Management supports efficient communication and security across the system.
 
 BLUE BACKGROUND START
 
-Learn more on Technical leaders’ [guide to building intelligent apps]().
+Learn more on Technical leaders’ [guide to building intelligent apps](https://aka.ms/AAI_TDMApps_Plan).
 
 BLUE BACKGROUND END
 
@@ -154,6 +154,6 @@ In our next post, we cover the **environment you’ll set up** to prepare for th
 Each subsequent post will dive deeper into the specific technologies that power this AI-driven application. Stay tuned as we explore everything from back-end data management to deploying on AKS or App Service.  
 
 ## Additional resources
-* To help you build the skills you need to create intelligent apps by using Azure OpenAI, complete the [Get started with Azure OpenAI Service]() module.  
+* To help you build the skills you need to create intelligent apps by using Azure OpenAI, complete the [Get started with Azure OpenAI Service](https://learn.microsoft.com/training/modules/get-started-openai/) module.  
 
-* Register for live learning or a demo playlist on [Build Intelligent Apps]() on Azure.  
+* Register for live learning or a demo playlist on [Build Intelligent Apps](https://aka.ms/bia/events) on Azure.  
