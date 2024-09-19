@@ -295,7 +295,7 @@ To support multi-user access, including sign-in from any Microsoft account, regi
 #### Azure portal instructions
 
 1. Navigate to Microsoft Entra ID.  
-   In the Azure portal, search for **Microsoft Entra ID**, and select **Manage → App registrations**.
+   - In the Azure portal, search for **Microsoft Entra ID**, and select **Manage → App registrations**.
 2. Register a new application.
    1. Select **New registration**.
    2. **Name**. Enter a name for your application (for example, ContentGenApp).
