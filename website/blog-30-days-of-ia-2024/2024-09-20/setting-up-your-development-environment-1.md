@@ -1,7 +1,7 @@
 ---
 date: 2024-09-20T09:00
 slug: setting-up-your-development-environment-1
-title: 2.1 "Setting up your development environment Part 1"
+title: "2.1a Setting up your development environment Part 1"
 authors: [30days]
 draft: true
 hide_table_of_contents: false
@@ -29,8 +29,6 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 </head>
 
 <!-- End METADATA -->
-## 2.a. Setting up your development environment
-
 Learn what you need to set up and configure your development environment before we start to build our example generative AI app.
 
 ### What we cover:
