@@ -56,9 +56,9 @@ Git is essential for version control and managing your project’s source code.
 2. **Installation**. Run the installer. Unless you have specific preferences, use the default settings.
 3. **Verify installation**. Open your terminal and run:
 
-  ```
+```
    git --version
-  ```
+```
 
    ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-1.png)
 
@@ -82,6 +82,7 @@ The Azure CLI is essential for managing your Azure resources from the terminal.
 
 1. **Download the Azure CLI**. Follow the instructions in How to install the Azure CLI.
 2. **Sign in to Azure**. After installing the Azure CLI, sign in. Open your terminal and run:
+
 ```
    az login
 ```
@@ -184,14 +185,14 @@ Cosmos DB will serve as the database for storing your application data, such as 
 
 3. Create a MongoDB database with a specific throughput.  
    After creating the Azure Cosmos DB account, create a MongoDB database and set the throughput (RU/s):
-   ```
+```
    az cosmosdb mongodb database create \
      --account-name <cosmos-account-name> \
      --name <database-name> \
      --resource-group <resource-group-name>
-  ```
+```
 
-   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-9.png)
+![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-9.png)
 
 ### Step 3. Create Azure Storage account.
 
@@ -203,7 +204,7 @@ Our Azure Storage account is used to store any static files (for example, produc
 2. Choose **Blob Storage** for storing documents and media.
 3. Complete the resource creation wizard, and select Create to deploy the storage account.
 
-   ![image of storage account in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-10.png)
+![image of storage account in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-10.png)
 
 #### CLI instructions
 
