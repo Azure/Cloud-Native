@@ -225,7 +225,7 @@ const config = {
         blogDescription:
           "Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure!",
         blogSidebarCount: "ALL",
-        blogSidebarTitle: "#30DaysOfIA2024",
+        blogSidebarTitle: "#30Days Of IA 2024",
         tagsBasePath: "tags",
         archiveBasePath: "archive",
         postsPerPage: 1,
