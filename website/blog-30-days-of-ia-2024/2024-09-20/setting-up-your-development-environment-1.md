@@ -58,9 +58,11 @@ Git is essential for version control and managing your project’s source code.
 2. Installation. Run the installer. Unless you have specific preferences, use the default settings.
 3. Verify installation. Open your terminal and run:
 
+  ```
    git --version
+  ```
 
-   ![alt: image of terminal response]
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-1.png)
 
 ### Step 2. Install Java (17 and 21).
 
