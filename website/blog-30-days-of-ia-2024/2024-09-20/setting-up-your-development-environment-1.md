@@ -82,8 +82,9 @@ The Azure CLI is essential for managing your Azure resources from the terminal.
 
 1. **Download the Azure CLI**. Follow the instructions in How to install the Azure CLI.
 2. **Sign in to Azure**. After installing the Azure CLI, sign in. Open your terminal and run:
-
+```
    az login
+```
 
    ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-3.png)
 
@@ -93,8 +94,9 @@ We use Node.js for managing front-end dependencies and running the React develop
 
 1. **Install Node.js**. Go to Node.js, and download the appropriate version for your system.
 2. **Verify installation**. Confirm that Node.js is correctly installed. Open your terminal and run:
-
+```
    node -v && npm -v
+```
 
    ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-4.png)
 
@@ -122,7 +124,7 @@ Before you start configuring resources, choose the Azure account you want to use
   The steps throughout this series include instructions for using either the browser-based Azure portal or the command-line Azure CLI tool. If you want to use the Azure CLI but don’t already have it installed, follow these steps:
   - Follow the instructions provided at Install Azure CLI.
   - Verify the installation. Open your terminal or command prompt and run:
-``
+```
     az --version
 ```
 
