@@ -2,30 +2,30 @@
 date: 2024-09-20T09:00
 slug: setting-up-your-development-environment-1
 title: "2.1a Setting up your development environment Part 1"
-authors: [30days]
+authors: [devanshi]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days-2024, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure." 
+description: "Learn what you need to set up and configure your development environment before we start to build our example generative AI app." 
 tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, community-gallery, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
 <head> 
-  <meta property="og:url" content="https://azure.github.io/cloud-native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps"/>
+  <meta property="og:url" content="https://azure.github.io/cloud-native/30-days-of-ia-2024/setting-up-your-development-environment-1"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/>
   <meta property="og:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!"/>
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
-  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps" />
+  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1" />
   <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" />
   <meta name="twitter:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!" />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@devanshidiaries" />
-  <link rel="canonical" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps" />
+  <link rel="canonical" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1" />
 </head>
 
 <!-- End METADATA -->
