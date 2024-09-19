@@ -215,3 +215,30 @@ Run the script:
 ```
 
 ![Code lines: ./create-openai-resource.sh --name <NAME> --resource-group <RESOURCE_GROUP_NAME> --location <LOCATION>](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-7.png)
+
+## Step 2. Set up Azure API Management
+API Management serves as the gateway between your front-end, middleware, and back-end services.
+
+Create an API Management instance. Search for API Management, and create a new instance.
+
+Configure two services (back-end service API Management and middleware service API Management):
+
+- Back end for data management (Azure Cosmos DB, storage account)
+- Middleware for Azure OpenAI Service
+
+### Azure portal instructions
+In the Azure portal, search for API Management.
+
+Choose Create, and complete the resource creation wizard. Select Create to deploy the API Management service.
+
+![The "Create API Management service" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-8.png)
+
+#### CLI instructions
+1. Create a resource group (optional).
+
+   If you need to create a resource group, use the following command, replacing `<resource-group-name>` with your desired name and `<location>` with the region (for example, eastus, westeurope):
+
+```
+az group create --name <resource-group-name> --location <location>
+```
+
