@@ -158,7 +158,7 @@ Cosmos DB will serve as the database for storing your application data, such as 
 3. You will see two options: **Request unit (RU) database account** and **vCore cluster (Recommended)**. Choose Request unit (RU) database account.
 4. **Configure the Request Units per second (RU/s)** based on your application's scale (e.g., 400 RU/s as a starting point for small applications). The RU/s determines how many operations Cosmos DB can handle per second, so adjust it according to your expected load and usage.
 5. Proceed with the rest of the setup, such as specifying the **resource group**, **region**, and **database name**.
-6. Once the Cosmos DB account is created, you can add a **database** and collections to organize your data.
+6. Once the Cosmos DB account is created, you can add a **database** and **collections** to organize your data.
 
    ![image of Cosmos DB setup in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-7.png)
 
@@ -171,7 +171,8 @@ Cosmos DB will serve as the database for storing your application data, such as 
 
    ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-8.png)
 
-2. Create an Azure Cosmos DB account with MongoDB API.  
+2. Create an Azure Cosmos DB account with MongoDB API.
+
    Use the following command to create an Azure Cosmos DB account with the MongoDB API, and specify throughput in Request Units per second (RU/s):
 ```
    az cosmosdb create \
@@ -183,7 +184,8 @@ Cosmos DB will serve as the database for storing your application data, such as 
      --enable-automatic-failover false
 ```
 
-3. Create a MongoDB database with a specific throughput.  
+3. Create a MongoDB database with a specific throughput.
+
    After creating the Azure Cosmos DB account, create a MongoDB database and set the throughput (RU/s):
 ```
    az cosmosdb mongodb database create \
@@ -202,13 +204,14 @@ Our Azure Storage account is used to store any static files (for example, produc
 
 1. In the Azure portal, search for **storage account** and create a new one.
 2. Choose **Blob Storage** for storing documents and media.
-3. Complete the resource creation wizard, and select Create to deploy the storage account.
+3. Complete the resource creation wizard, and select **Create** to deploy the storage account.
 
 ![image of storage account in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-10.png)
 
 #### CLI instructions
 
-1. Determine whether resource group exists (optional).  
+1. Determine whether resource group exists (optional).
+
    Use the following command:
 
 ```
@@ -218,13 +221,15 @@ Our Azure Storage account is used to store any static files (for example, produc
    - If the resource group exists, it returns the details.
    - If it doesn't exist, it throws an error.
 
-2. Create the resource group (optional).  
+2. Create the resource group (optional).
+
    If the resource group doesn't exist, create it using the following command, replacing `<resource-group-name>` with your desired name for the resource group and `<location>` with the Azure region where you want to deploy the resource, (for example, eastus, westus):
 ```
    az group create --name <resource-group-name> --location <location>
 ```
 
-3. Create the storage account.  
+3. Create the storage account.
+
    Use the following command to create the Azure Storage account, replacing `<storage-account-name>` with a globally unique name for your storage account; replacing `<resource-group-name>` with the name of the resource group you created or chose; and replacing `<location>` with the Azure region where you want to deploy the storage account (for example, eastus, westeurope):
 ```
    az storage account create \
@@ -237,7 +242,8 @@ Our Azure Storage account is used to store any static files (for example, produc
 
    ![image of terminal response to creating the Azure Storage account](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-11.png)
 
-4. Verify storage account creation.  
+4. Verify storage account creation.
+
    To ensure that the storage account was created successfully, list all storage accounts in the resource group:
 ```
    az storage account list --resource-group <resource-group-name> --output table
@@ -260,13 +266,15 @@ To securely store our secrets, like API keys and connection strings, we use Azur
 
 #### CLI instructions
 
-1. Create a resource group (optional).  
+1. Create a resource group (optional).
+
    If you need to create a resource group (like we did in the Azure Cosmos DB steps), use the following command, replacing `<resource-group-name>` with your desired name and `<location>` with the region (for example, eastus, westeurope):
 ```
    az group create --name <resource-group-name> --location <location>
 ```
 
-2. Create the Azure key vault.  
+2. Create the Azure key vault.
+
    Now, use the following command to create the Azure key vault, replacing `<key-vault-name>` with a globally unique name for the key vault; replacing `<resource-group-name>` with the name of the resource group created or selected in the previous step; and replacing `<location>` with your preferred Azure region. Note that “--sku standard” is a common pricing tier. You can also use premium if you need additional features like Hardware Security Module (HSM) support.
 
 ```
@@ -279,7 +287,8 @@ To securely store our secrets, like API keys and connection strings, we use Azur
 
    ![image of terminal response to creating the Azure key vault](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-14.png)
 
-3. Verify key vault creation.  
+3. Verify key vault creation.
+
    To verify that the key vault was created, you can list all key vaults in the specified resource group:
 
 ```
@@ -301,9 +310,9 @@ To support multi-user access, including sign-in from any Microsoft account, regi
    2. **Name**. Enter a name for your application (for example, **ContentGenApp**).
    3. **Supported account types**. Select **Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**.
    4. **Redirect URI**. Set this to the front end's callback URL.
-      - For local development (React app running locally), use `http://localhost:3000`.
-      - For production (when deployed on [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg) or [Azure App Service](https://learn.microsoft.com/azure/app-service/overview/?ocid=biafy25h1_30daysofia_webpage_azuremktg)), add the URL for the App Service or AKS deployment you plan to create for this app (We’ll create these in our next post). For example, `https://your-app.azurewebsites.net` for App Service or `https://your-aks-domain.com` for AKS.
-      - If you plan to use a custom domain for your application, add that domain here (for example, `https://your-custom-domain.com`).
+      - For local development (React app running locally), use [http://localhost:3000](http://localhost:3000).
+      - For production (when deployed on [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg) or [Azure App Service](https://learn.microsoft.com/azure/app-service/overview/?ocid=biafy25h1_30daysofia_webpage_azuremktg)), add the URL for the App Service or AKS deployment you plan to create for this app (We’ll create these in our next post). For example, [https://your-app.azurewebsites.net](https://your-app.azurewebsites.net) for App Service or [https://your-aks-domain.com](https://your-aks-domain.com) for AKS.
+      - If you plan to use a custom domain for your application, add that domain here (for example, [https://your-custom-domain.com](https://your-custom-domain.com)).
 
    **Important**: Ensure that all potential URLs (local, deployed, and custom domain) are listed as redirect URIs.
 
@@ -313,12 +322,12 @@ To support multi-user access, including sign-in from any Microsoft account, regi
    1. Go to the **API permissions** tab, and select **Add a permission**.
    2. Choose **Microsoft Graph → Delegated permissions**, and then select the following permissions:
       - **User.Read**. Allows users to sign in and read their profile.
-   3. Grant admin consent. After permissions are added, select **Grant admin consent for your organization**.
+   3. **Grant admin consent**. After permissions are added, select **Grant admin consent** for your organization.
 
    ![image of API permissions configuration](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-17.png)
 
 4. Configure authentication settings.
-   1. Go to the **Authentication** tab, and add your redirect URIs (both local and production URLs).
+   1. Go to the **Authentication** tab, and add your **redirect URIs** (both local and production URLs).
    2. Enable **ID tokens** to authenticate users.
 
    ![image in Azure Portal of authentication settings configuration](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-18.png)
