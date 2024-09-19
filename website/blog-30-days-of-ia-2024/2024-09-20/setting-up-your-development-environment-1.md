@@ -308,9 +308,9 @@ This revision integrates Microsoft Entra ID and highlights the navigation flow f
 
 You’ll use the following script when performing these instructions.
 
-**Shell script: create-azure-ad-app.sh**
+Shell script: `create-azure-ad-app.sh`
 
-```bash
+```
 #!/bin/bash
 
 # Function to display help
@@ -440,4 +440,26 @@ echo "Here are the details of the app:"
 az ad app show --id "$APP_ID"
 ```
 
-   ![mage of terminal response after running the script](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-19.png)
+Run the script:
+
+  1. Save the script. Save the preceding script as create-azure-ad-app.sh. 
+  2. Make the script executable: 
+  ``` 
+  chmod +x create-azure-ad-app.sh
+  ```
+ 
+  3. Run the script.
+  ```
+./create-azure-ad-app.sh --name <YOUR_APP_NAME> --redirect-uris http://localhost:3000 https://your-custom-domain.com
+```
+
+   ![image of terminal response after running the script](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-19.png)
+
+##Summary
+
+In this blog, we’ve covered setting up your local development environment and creating the Azure-based database, storage, and secret management services you’ll use when running an AI powered content generation sample application in Java. However, there’s still one critical piece of infrastructure to provision before you can start building and deploying the app.
+
+In the next blog, we’ll cover how to set up and configure [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg) to power this sample app.
+
+##Additional resources
+* [Register for Demo Bytes](https://developer.microsoft.com/reactor/series/S-1381/?ocid=biafy25h1_30daysofia_webpage_azuremktg), a snackable playlist of demos designed to help you skill up on AI powered app development.
