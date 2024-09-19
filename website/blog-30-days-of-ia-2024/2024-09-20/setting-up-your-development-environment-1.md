@@ -52,7 +52,7 @@ Before diving into the Azure components, let’s ensure that your local developm
 
 Git is essential for version control and managing your project’s source code.
 
-1. **Download Git**. Go to Install and set up Git, and download the installer for your operating system.
+1. **Download Git**. Go to [Install and set up Git](https://learn.microsoft.com/devops/develop/git/install-and-set-up-git?ocid=biafy25h1_30daysofia_webpage_azuremktg), and download the installer for your operating system.
 2. **Installation**. Run the installer. Unless you have specific preferences, use the default settings.
 3. **Verify installation**. Open your terminal and run:
 
@@ -66,7 +66,7 @@ Git is essential for version control and managing your project’s source code.
 
 Your Spring Boot back end requires both Java 17 and 21.
 
-1. **Download**. Obtain both versions from Download the Microsoft Build of OpenJDK.
+1. **Download**. Obtain both versions from [Download the Microsoft Build of OpenJDK](https://learn.microsoft.com/java/openjdk/download?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 2. **Configure**. You can manage multiple Java versions using update alternatives (Linux) or SDKMAN (for Linux/Mac). For Windows, use Java Development Kit (JDK) tools, like JDKTool.
 3. **Verify installation**. Open your terminal and run:
 
@@ -80,7 +80,7 @@ Your Spring Boot back end requires both Java 17 and 21.
 
 The Azure CLI is essential for managing your Azure resources from the terminal.
 
-1. **Download the Azure CLI**. Follow the instructions in How to install the Azure CLI.
+1. **Download the Azure CLI**. Follow the instructions in [How to install the Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 2. **Sign in to Azure**. After installing the Azure CLI, sign in. Open your terminal and run:
 
 ```
@@ -93,7 +93,7 @@ The Azure CLI is essential for managing your Azure resources from the terminal.
 
 We use Node.js for managing front-end dependencies and running the React development server.
 
-1. **Install Node.js**. Go to Node.js, and download the appropriate version for your system.
+1. **Install Node.js**. Go to [Node.js](https://nodejs.org/), and download the appropriate version for your system.
 2. **Verify installation**. Confirm that Node.js is correctly installed. Open your terminal and run:
 ```
    node -v && npm -v
@@ -105,9 +105,9 @@ We use Node.js for managing front-end dependencies and running the React develop
 
 You can use your preferred integrated development environment (IDE), but we recommend **Visual Studio Code** and **IntelliJ IDEA** for Java and JavaScript development.
 
-- Install Visual Studio Code.
-- or
-- Install IntelliJ IDEA.
+- [Install Visual Studio Code](https://code.visualstudio.com/).
+   - or
+- [Install IntelliJ IDEA](https://www.jetbrains.com/idea/).
 
 Both IDEs support Azure integrations through plugins for managing Azure resources and services.
 
@@ -120,10 +120,10 @@ Now that your local environment is ready, let’s configure the Azure resources 
 Before you start configuring resources, choose the Azure account you want to use. If you want to use the Azure CLI to configure Azure resources, perform a few configuration steps:
 
 - **Create a new account—unless you already have one (optional)**.  
-  If you don’t have an existing Azure account that you want to use when creating Azure resources, create a new one. Go to the Azure portal and sign up. Choose the subscription plan that fits your business needs.
+  If you don’t have an existing Azure account that you want to use when creating Azure resources, create a new one. Go to the [Azure portal](https://portal.azure.com/) and sign up. Choose the subscription plan that fits your business needs.
 - **Configure the Azure CLI, if you want use it (optional)**.  
   The steps throughout this series include instructions for using either the browser-based Azure portal or the command-line Azure CLI tool. If you want to use the Azure CLI but don’t already have it installed, follow these steps:
-  - Follow the instructions provided at Install Azure CLI.
+  - Follow the instructions provided at [Install Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli?ocid=biafy25h1_30daysofia_webpage_azuremktg).
   - Verify the installation. Open your terminal or command prompt and run:
 
 ```
@@ -298,11 +298,11 @@ To support multi-user access, including sign-in from any Microsoft account, regi
    - In the Azure portal, search for **Microsoft Entra ID**, and select **Manage → App registrations**.
 2. Register a new application.
    1. Select **New registration**.
-   2. **Name**. Enter a name for your application (for example, ContentGenApp).
+   2. **Name**. Enter a name for your application (for example, **ContentGenApp**).
    3. **Supported account types**. Select **Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**.
    4. **Redirect URI**. Set this to the front end's callback URL.
       - For local development (React app running locally), use `http://localhost:3000`.
-      - For production (when deployed on Azure Kubernetes Service (AKS) or Azure App Service), add the URL for the App Service or AKS deployment you plan to create for this app (We’ll create these in our next post). For example, `https://your-app.azurewebsites.net` for App Service or `https://your-aks-domain.com` for AKS.
+      - For production (when deployed on [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg) or [Azure App Service](https://learn.microsoft.com/azure/app-service/overview/?ocid=biafy25h1_30daysofia_webpage_azuremktg)), add the URL for the App Service or AKS deployment you plan to create for this app (We’ll create these in our next post). For example, `https://your-app.azurewebsites.net` for App Service or `https://your-aks-domain.com` for AKS.
       - If you plan to use a custom domain for your application, add that domain here (for example, `https://your-custom-domain.com`).
 
    **Important**: Ensure that all potential URLs (local, deployed, and custom domain) are listed as redirect URIs.
