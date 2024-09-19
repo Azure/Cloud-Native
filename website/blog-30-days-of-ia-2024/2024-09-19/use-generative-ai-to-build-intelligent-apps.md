@@ -2,7 +2,7 @@
 date: 2024-09-19T09:00
 slug: use-generative-ai-to-build-intelligent-apps
 title: "Use Generative AI to build intelligent apps"
-authors: [devanshi]
+authors: [30days]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
