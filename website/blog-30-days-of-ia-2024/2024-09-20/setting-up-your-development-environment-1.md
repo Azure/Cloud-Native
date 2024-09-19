@@ -124,17 +124,18 @@ Before you start configuring resources, choose the Azure account you want to use
   The steps throughout this series include instructions for using either the browser-based Azure portal or the command-line Azure CLI tool. If you want to use the Azure CLI but don’t already have it installed, follow these steps:
   - Follow the instructions provided at Install Azure CLI.
   - Verify the installation. Open your terminal or command prompt and run:
+
 ```
-    az --version
+az --version
 ```
 
-    ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-5.png)
+![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-5.png)
 
 After installing and verifying the Azure CLI, follow these steps to sign in, list your subscriptions, and select a subscription:
 
 1. Sign in to Azure. Run the following command:
 ```
-   az login
+az login
 ```
 
    This opens a web browser for you to authenticate your Azure account. After successful authentication, the CLI automatically lists your subscriptions and asks you to select one by number.
