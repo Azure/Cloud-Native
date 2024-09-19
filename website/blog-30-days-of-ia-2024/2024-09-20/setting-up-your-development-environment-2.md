@@ -1,0 +1,201 @@
+---
+date: 2024-09-20T09:01
+slug: setting-up-your-development-environment-2
+title: "2.1b Setting Up Your Development Environment Part 2"
+authors: [30days]
+draft: true
+hide_table_of_contents: false
+toc_min_heading_level: 2
+toc_max_heading_level: 3
+keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days-2024, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
+image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
+description: "Learn what you need to set up and configure your development environment before we start to build our example generative AI app." 
+tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, community-gallery, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+---
+
+<head> 
+  <meta property="og:url" content="https://azure.github.io/cloud-native/30-days-of-ia-2024/setting-up-your-development-environment-2"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/>
+  <meta property="og:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!"/>
+  <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
+  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-2" />
+  <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" />
+  <meta name="twitter:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!" />
+  <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@devanshidiaries" />
+  <link rel="canonical" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-2" />
+</head>
+
+<!-- End METADATA -->
+Learn what you need to set up and configure your development environment before we start to build our example generative AI app.
+
+## 2.b. Setting up your development environment
+
+## Day 2: Part 2. Preparing the Azure OpenAI Service resource
+Learn how to create and configure the Azure OpenAI Service resource that we’ll use in our example app.
+
+### What we cover:
+- Creating an Azure OpenAI instance
+- Setting up Azure API Management
+- Exploring the options for creating our app hosting environments on Azure
+
+## Introduction
+In our previous post, we discussed setting up your local development environment and creating the Azure-based database, storage, and secret management services that you’ll use when running our application. In this post, we set up the Azure OpenAI instance that provides the core of our content generation capabilities. After you’ve created the Azure OpenAI instance, we’ll finish our preparation tasks by setting up Azure API Management and then finally creating our preferred app hosting resources (Azure Kubernetes Service [AKS] or Azure App Service).
+
+## Step 1. Set up Azure OpenAI
+Create two Azure OpenAI deployments—one for GPT-4o (chat completion) and another for text embedding.
+
+1. Create a new Azure OpenAI resource. Go to the Azure portal, and search for Azure OpenAI.
+2. Deploy two separate instances:
+   - Chat completion (GPT-4o) for generating content.
+   - Embedding model for semantic search functionality.
+
+### Create the Azure OpenAI resource
+
+#### Azure portal instructions
+1. Use the Azure portal to deploy Azure OpenAI.
+
+   ![alt: The "Create Azure OpenAI" screen in the Azure portal.]
+
+2. After provisioning Azure, open Azure OpenAI and go to Azure OpenAI Studio.
+
+   ![alt: The "aistudy-chatcompletion" screen in the Azure portal, with the focus on "Go to Azure OpenAI Studio."]
+
+3. Go to Deployments, and then deploy the models.
+
+   ![alt: The "Manage deployments of your models..." screen in the Azure portal, with the focus on "Deployments" and "Deploy base model."]
+
+4. Search GPT-4o for chat completion. Set tokens-per-minute rate limit (depending on response length), and deploy.
+
+   ![alt: The "Deploy model gpt-4o" screen in the Azure portal, with the focus on "Tokens per Minute Rate Limit."]  
+   Make sure to save the Target URI and Key for future use.
+
+   ![alt: The "gpt-4o" screen in the Azure portal, with the focus on "Endpoint."]  
+   Deploy the text-embedding-3-small model to embed the data in the same way.
+
+   ![alt: The "text-embedding-3-small" screen in the Azure portal, with the focus on "Endpoint."]
+
+#### CLI instructions
+Use the following script when performing these instructions:
+
+```
+#!/bin/bash
+
+# Function to display help
+function display_help() {
+  echo "Usage: $0 --name <OpenAI Account Name> --resource-group <Resource Group Name> --location <Location> [--help]"
+  echo
+  echo "Options:"
+  echo "  --name              The display name of the Azure OpenAI account."
+  echo "  --resource-group    The name of the Azure resource group."
+  echo "  --location          The Azure region/location for the resource. (e.g., eastus, westus)"
+  echo "  --help              Display this help message and exit."
+  echo
+  exit 0
+}
+
+# Function to check if the user is logged in
+function check_azure_login() {
+  echo "Checking Azure CLI login status..."
+  az account show &> /dev/null
+  if [ $? -ne 0 ]; then
+    echo "You are not logged in. Logging in now..."
+    az login
+    if [ $? -ne 0 ]; then
+      echo "Azure login failed. Exiting script."
+      exit 1
+    fi
+  else
+    echo "You are already logged in."
+  fi
+}
+
+# Parse command line arguments
+OPENAI_ACCOUNT_NAME=""
+RESOURCE_GROUP=""
+LOCATION=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --name)
+      OPENAI_ACCOUNT_NAME="$2"
+      shift 2
+      ;;
+    --resource-group)
+      RESOURCE_GROUP="$2"
+      shift 2
+      ;;
+    --location)
+      LOCATION="$2"
+      shift 2
+      ;;
+    --help)
+      display_help
+      ;;
+    *)
+      echo "Unknown option: $1"
+      display_help
+      ;;
+  esac
+done
+
+# Ensure required arguments are provided
+if [[ -z "$OPENAI_ACCOUNT_NAME" || -z "$RESOURCE_GROUP" || -z "$LOCATION" ]]; then
+  echo "Error: --name, --resource-group, and --location are required."
+  display_help
+fi
+
+# Step 0: Check if logged in
+check_azure_login
+
+# Step 1: Create resource group (if not exists)
+echo "Creating resource group $RESOURCE_GROUP (if it doesn't already exist)..."
+az group create --name "$RESOURCE_GROUP" --location "$LOCATION"
+
+# Step 2: Create OpenAI resource
+echo "Creating Azure OpenAI resource..."
+az cognitiveservices account create \
+  --name "$OPENAI_ACCOUNT_NAME" \
+  --resource-group "$RESOURCE_GROUP" \
+  --kind OpenAI \
+  --sku S0 \
+  --location "$LOCATION" \
+  --yes
+
+# Step 3: Deploy GPT-4o model with increased token limit (10K capacity)
+echo "Deploying GPT-4o model..."
+az cognitiveservices account deployment create \
+  --name "$OPENAI_ACCOUNT_NAME" \
+  --resource-group "$RESOURCE_GROUP" \
+  --deployment-name "gpt-4o-deployment" \
+  --model-name "gpt-4o" \
+  --model-version "2024-05-13" \
+  --model-format OpenAI \
+  --sku-capacity 10 \
+  --sku-name "Standard"
+
+# Step 4: Deploy text-embedding-3-small model
+echo "Deploying text-embedding-3-small model..."
+az cognitiveservices account deployment create \
+  --name "$OPENAI_ACCOUNT_NAME" \
+  --resource-group "$RESOURCE_GROUP" \
+  --deployment-name "text-embedding-3-small-deployment" \
+  --model-name "text-embedding-3-small" \
+  --model-version "1" \
+  --model-format OpenAI \
+  --sku-name "Standard" \
+  --sku-capacity 120
+
+# Verify deployments
+echo "Listing deployed models..."
+az cognitiveservices account deployment list \
+  --name "$OPENAI_ACCOUNT_NAME" \
+  --resource-group "$RESOURCE_GROUP"
+
+```
+
+Run the script. Save the script as create-openai-resource.sh.
+
+Make the script executable:
