@@ -57,25 +57,27 @@ Create two Azure OpenAI deployments—one for GPT-4o (chat completion) and anoth
 #### Azure portal instructions
 1. Use the Azure portal to deploy Azure OpenAI.
 
-   ![alt: The "Create Azure OpenAI" screen in the Azure portal.]
+   ![The "Create Azure OpenAI" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-1.png)
 
 2. After provisioning Azure, open Azure OpenAI and go to Azure OpenAI Studio.
 
-   ![alt: The "aistudy-chatcompletion" screen in the Azure portal, with the focus on "Go to Azure OpenAI Studio."]
+   ![The "aistudy-chatcompletion" screen in the Azure portal, with the focus on "Go to Azure OpenAI Studio."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-2.png)
 
 3. Go to Deployments, and then deploy the models.
 
-   ![alt: The "Manage deployments of your models..." screen in the Azure portal, with the focus on "Deployments" and "Deploy base model."]
+   ![The "Manage deployments of your models..." screen in the Azure portal, with the focus on "Deployments" and "Deploy base model."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-3.png)
 
 4. Search GPT-4o for chat completion. Set tokens-per-minute rate limit (depending on response length), and deploy.
 
-   ![alt: The "Deploy model gpt-4o" screen in the Azure portal, with the focus on "Tokens per Minute Rate Limit."]  
+   ![alt: The "Deploy model gpt-4o" screen in the Azure portal, with the focus on "Tokens per Minute Rate Limit."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-4.png)
+
    Make sure to save the Target URI and Key for future use.
 
-   ![alt: The "gpt-4o" screen in the Azure portal, with the focus on "Endpoint."]  
+   ![The "gpt-4o" screen in the Azure portal, with the focus on "Endpoint."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-5.png)
+
    Deploy the text-embedding-3-small model to embed the data in the same way.
 
-   ![alt: The "text-embedding-3-small" screen in the Azure portal, with the focus on "Endpoint."]
+   ![The "text-embedding-3-small" screen in the Azure portal, with the focus on "Endpoint."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-6.png)
 
 #### CLI instructions
 Use the following script when performing these instructions:
@@ -196,6 +198,20 @@ az cognitiveservices account deployment list \
 
 ```
 
-Run the script. Save the script as create-openai-resource.sh.
+Run the script.
+
+**Save the script**. Save the script as `create-openai-resource.sh`.
 
 Make the script executable:
+
+```
+chmod +x create-openai-resource.sh 
+```
+
+Run the script: 
+
+```
+./create-openai-resource.sh --name <NAME> --resource-group <RESOURCE_GROUP_NAME> --location <LOCATION>
+```
+
+![Code lines: ./create-openai-resource.sh --name <NAME> --resource-group <RESOURCE_GROUP_NAME> --location <LOCATION>](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-7.png)
