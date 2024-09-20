@@ -221,12 +221,10 @@ Run the script:
 ## Step 2. Set up Azure API Management
 API Management serves as the gateway between your front-end, middleware, and back-end services.
 
-**Create an API Management instance**. Search for **API Management**, and create a new instance.
-
-**Configure two services (back-end service API Management and middleware service API Management)**:
-
-- Back end for data management (Azure Cosmos DB, storage account)
-- Middleware for Azure OpenAI Service
+1. **Create an API Management instance**. Search for **API Management**, and create a new instance.
+2. **Configure two services (back-end service API Management and middleware service API Management)**:
+  - Back end for data management (Azure Cosmos DB, storage account)
+  - Middleware for Azure OpenAI Service
 
 ### Azure portal instructions
 In the Azure portal, search for **API Management**.
@@ -392,8 +390,8 @@ Complete the resource creation wizard, and select **Create** to deploy the clust
 
 #### CLI instructions
 
-  1. Create a resource group (optional). 
-
+  1. Create a resource group (optional).
+  
   If you need to create a resource group, use the following command, replacing <resource-group-name> with your desired name and <location> with the region (for example, eastus, westeurope): 
 
 ```
