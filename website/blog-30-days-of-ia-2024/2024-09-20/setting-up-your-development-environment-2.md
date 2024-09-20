@@ -45,42 +45,44 @@ Learn how to create and configure the Azure OpenAI Service resource that we’ll
 In our previous post, we discussed setting up your local development environment and creating the Azure-based database, storage, and secret management services that you’ll use when running our application. In this post, we set up the Azure OpenAI instance that provides the core of our content generation capabilities. After you’ve created the Azure OpenAI instance, we’ll finish our preparation tasks by setting up Azure API Management and then finally creating our preferred app hosting resources (Azure Kubernetes Service [AKS] or Azure App Service).
 
 ## Step 1. Set up Azure OpenAI
-Create two Azure OpenAI deployments—one for GPT-4o (chat completion) and another for text embedding.
+Create two Azure OpenAI deployments—one for **GPT-4o** (chat completion) and another for **text embedding**.
 
-1. Create a new Azure OpenAI resource. Go to the Azure portal, and search for Azure OpenAI.
+1. **Create a new Azure OpenAI resource**. Go to the Azure portal, and search for **Azure OpenAI**.
 2. Deploy two separate instances:
-   - Chat completion (GPT-4o) for generating content.
-   - Embedding model for semantic search functionality.
+   - **Chat completion (GPT-4o)** for generating content.
+   - **Embedding model** for semantic search functionality.
 
 ### Create the Azure OpenAI resource
 
 #### Azure portal instructions
-1. Use the Azure portal to deploy Azure OpenAI.
+1. Use the Azure portal to deploy **Azure OpenAI**.
 
    ![The "Create Azure OpenAI" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-1.png)
 
-2. After provisioning Azure, open Azure OpenAI and go to Azure OpenAI Studio.
+2. After provisioning Azure, open Azure OpenAI and go to **Azure OpenAI Studio**.
 
    ![The "aistudy-chatcompletion" screen in the Azure portal, with the focus on "Go to Azure OpenAI Studio."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-2.png)
 
-3. Go to Deployments, and then deploy the models.
+3. Go to **Deployments**, and then deploy the models.
 
    ![The "Manage deployments of your models..." screen in the Azure portal, with the focus on "Deployments" and "Deploy base model."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-3.png)
 
-4. Search GPT-4o for chat completion. Set tokens-per-minute rate limit (depending on response length), and deploy.
+4. Search **GPT-4o** for chat completion. Set tokens-per-minute rate limit (depending on response length), and deploy.
 
    ![alt: The "Deploy model gpt-4o" screen in the Azure portal, with the focus on "Tokens per Minute Rate Limit."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-4.png)
 
-   Make sure to save the Target URI and Key for future use.
+   Make sure to save the **Target URI** and **Key** for future use.
 
    ![The "gpt-4o" screen in the Azure portal, with the focus on "Endpoint."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-5.png)
 
-   Deploy the text-embedding-3-small model to embed the data in the same way.
+   Deploy the **text-embedding-3-small** model to embed the data in the same way.
 
    ![The "text-embedding-3-small" screen in the Azure portal, with the focus on "Endpoint."](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-6.png)
 
 #### CLI instructions
 Use the following script when performing these instructions:
+
+Shell script: `create-openai-resource.sh`
 
 ```
 #!/bin/bash
@@ -219,17 +221,19 @@ Run the script:
 ## Step 2. Set up Azure API Management
 API Management serves as the gateway between your front-end, middleware, and back-end services.
 
-Create an API Management instance. Search for API Management, and create a new instance.
+**Create an API Management instance**. Search for **API Management**, and create a new instance.
 
-Configure two services (back-end service API Management and middleware service API Management):
+**Configure two services (back-end service API Management and middleware service API Management)**:
 
 - Back end for data management (Azure Cosmos DB, storage account)
 - Middleware for Azure OpenAI Service
 
 ### Azure portal instructions
-In the Azure portal, search for API Management.
+In the Azure portal, search for **API Management**.
 
-Choose Create, and complete the resource creation wizard. Select Create to deploy the API Management service.
+Choose **Create**, and complete the resource creation wizard.
+
+Select **Create** to deploy the API Management service.
 
 ![The "Create API Management service" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-8.png)
 
@@ -280,9 +284,9 @@ With the Azure OpenAI instance in place and our API Management configuration cre
 
 ### Choose your deployment technology
 
-Depending on your preferences or business requirements, you can choose either Azure Kubernetes Service (AKS) or Azure App Service when deploying your app the Azure.
+Depending on your preferences or business requirements, you can choose either **Azure Kubernetes Service (AKS)** or **Azure App Service** when deploying your app to Azure.
 
-To recap, here’s a quick high-level overview of the AKS versus App Service.
+To recap, here’s a quick high-level overview of the **AKS** versus **App Service**.
 
 | Feature      | AKS                                    | App Service                                   |
 |--------------|----------------------------------------|-----------------------------------------------|
@@ -410,12 +414,12 @@ az group create --name <resource-group-name> --location <location>
 
   **Command parameters** 
 
-  * `--sku Standard`: Specifies the pricing tier for the Azure container registry. (Standard is a good default option.)
+  * `--sku Standard`: Specifies the pricing tier for the Azure container registry. (**Standard** is a good default option.)
   * `--admin-enabled true`: Enables admin access for easier management of the Azure container registry.
 
   ![Code lines: az acr create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-16.png)
 
-    3. Create an AKS cluster:
+  3. Create an AKS cluster:
 
 ```
 az aks create \
