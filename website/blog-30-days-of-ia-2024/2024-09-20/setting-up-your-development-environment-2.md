@@ -1,7 +1,7 @@
 ---
 date: 2024-09-20T09:01
 slug: setting-up-your-development-environment-2
-title: "2.1b Setting Up Your Development Environment Part 2"
+title: "1.2b Setting Up Your Development Environment Part 2"
 authors: [30days]
 draft: true
 hide_table_of_contents: false

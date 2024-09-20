@@ -1,7 +1,7 @@
 ---
 date: 2024-09-20T09:00
 slug: setting-up-your-development-environment-1
-title: "2.1a Setting up your development environment Part 1"
+title: "1.2a Setting up your development environment Part 1"
 authors: [30days]
 draft: true
 hide_table_of_contents: false
@@ -74,7 +74,7 @@ Your Spring Boot back end requires both Java 17 and 21.
    java -version
 ```
 
-   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-2.png)
+   ![image of terminal response](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-2.gif)
 
 ### Step 3. Install the Azure CLI.
 
@@ -297,6 +297,12 @@ To securely store our secrets, like API keys and connection strings, we use Azur
 
    ![image of terminal response to verifying key vault creation](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-15.png)
 
+:::info
+
+Join the next snackable AI Demo Bytes to explore how to [add generative AI capabilities to your web apps](https://aka.ms/demo-bytes/ep5?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+
+:::
+
 ### Step 5. Use Microsoft Entra ID to create an app registration for Microsoft account sign-in.
 
 To support multi-user access, including sign-in from any Microsoft account, register your application in Microsoft Entra ID.
@@ -484,6 +490,12 @@ Run the script:
 ```
 
 ![image of terminal response after running the script](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1-19.png)
+
+:::info
+
+Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+
+:::
 
 ## Summary
 
