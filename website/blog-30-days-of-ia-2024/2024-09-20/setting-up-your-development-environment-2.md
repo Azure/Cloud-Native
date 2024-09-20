@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days-2024, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "Learn what you need to set up and configure your development environment before we start to build our example generative AI app." 
+description: "Learn how to create and configure the Azure OpenAI Service resource that we’ll use in our example app." 
 tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, community-gallery, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -29,8 +29,6 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 </head>
 
 <!-- End METADATA -->
-Learn what you need to set up and configure your development environment before we start to build our example generative AI app.
-
 ## 2.b. Setting up your development environment
 
 ## Day 2: Part 2. Preparing the Azure OpenAI Service resource
