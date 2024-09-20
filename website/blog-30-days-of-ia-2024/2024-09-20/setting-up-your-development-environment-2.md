@@ -312,3 +312,132 @@ Complete the resource creation wizard, and select **Create** to deploy the App S
 
 ### CLI instructions
 
+  1. Create a resource group (optional).
+
+  If you need to create a resource group, use the following command, replacing <resource-group-name> with your desired name and <location> with the region (for example, eastus, westeurope):
+
+```
+az group create --name <resource-group-name> --location <location>
+```
+
+  2. Create an App Service plan.
+
+  First, create an App Service plan, which defines the region, pricing tier, and scaling options of your App Service instance:
+
+```
+az appservice plan create \
+  --name <your-app-service-plan-name> \
+  --resource-group <your-resource-group-name> \
+  --sku B1 \
+  --is-linux 
+```
+
+  * `--sku B1`: Specifies the pricing tier (Basic B1).
+  * `--is-linux`: Specifies that the app will run on Linux.
+
+![Code lines: az appservice plan create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-12.png)
+
+  3. Create a web app.
+
+  To create a web app, use the following command:
+
+```
+az webapp create \
+  --resource-group <your-resource-group-name> \
+  --plan <your-app-service-plan-name> \
+  --name <your-backend-app-service-name> \
+  --runtime "JAVA:21-java21"
+```
+
+  **Runtime specifications** 
+
+  * Back end:
+  `--runtime "JAVA:21-java21"`: Specifies the Java 21 runtime.
+  * Middleware:
+  `--runtime "JAVA:17-java17"`: Specifies the Java 17 runtime. 
+  * Front end:
+  `--runtime "NODE:22-lts"`: Specifies the Node.js 22 runtime. 
+
+  Use these runtime values in your `az webapp` create commands when setting up the respective services for back-end, middleware, and front-end applications. 
+
+![Code lines: az webapp create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-13.png)
+
+### Use the Azure Kubernetes Service (AKS) path
+To deploy your Kubernetes-based resources, you need to perform two actions: 
+
+Set up a **container registry** to host your application’s container images. 
+
+**Create a Kubernetes cluster**.
+
+#### Azure portal instructions
+Create a container registry. 
+
+In the Azure portal, search for **Kubernetes Service** and create a new AKS cluster. 
+
+Complete the resource creation wizard, and select **Create** to deploy the container registry.
+
+![The "Create container registry" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-14.png)
+
+Create a Kubernetes cluster. 
+
+In the Azure portal, search for **Kubernetes Service** and create a new Kubernetes cluster. 
+
+Complete the resource creation wizard, and select **Create** to deploy the cluster.
+
+![The "Create Kubernetes cluster" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-15.png)
+
+#### CLI instructions
+
+  1. Create a resource group (optional). 
+
+  If you need to create a resource group, use the following command, replacing <resource-group-name> with your desired name and <location> with the region (for example, eastus, westeurope): 
+
+```
+az group create --name <resource-group-name> --location <location> 
+```
+
+  2. Create an Azure container registry. 
+
+```
+  az acr create \
+  --resource-group <your-resource-group-name> \
+  --name <your-acr-name> \
+  --sku Standard \
+  --admin-enabled true 
+``` 
+
+  Replace `<your-acr-name>` with the name you want for your container registry. The `--sku Standard` specifies the Azure Container Registry tier, and `--admin-enabled true` enables admin access. 
+
+  **Command parameters** 
+
+  * `--sku Standard`: Specifies the pricing tier for the Azure container registry. (Standard is a good default option.)
+  * `--admin-enabled true`: Enables admin access for easier management of the Azure container registry.
+
+  ![Code lines: az acr create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-16.png)
+
+    3. Create an AKS cluster:
+
+```
+az aks create \
+  --resource-group <your-resource-group-name> \
+  --name <your-frontend-aks-cluster-name> \
+  --node-count 3 \
+  --enable-addons monitoring \
+  --generate-ssh-keys \
+  --node-vm-size Standard_DS2_v2
+```
+
+![Code lines: az aks create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-17.png)
+
+![Second set of code lines: az aks create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-18.png)
+
+![Third set of code lines: az aks create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-19.png)
+
+## Summary
+
+In this post, we walked through creating the Azure OpenAI instance that will serve as the core of our app’s content generation capabilities. We finished up our setup tasks by configuring Azure API Management, and then we created the hosting resources we need to deploy our app to Azure.
+
+In our next post, we’ll discuss how you can start building and running the app on your local dev machine.
+
+### Additional resources
+* [Register for Demo Bytes](https://developer.microsoft.com/reactor/series/S-1381/?ocid=biafy25h1_30daysofia_webpage_azuremktg), a snackable playlist of demos designed to help you skill up on AI powered app development. 
