@@ -1,9 +1,9 @@
 ---
-date: 2024-09-20T09:00
+date: 2024-09-23T09:00
 slug: setting-up-your-development-environment-1
 title: "1.2a Setting up your development environment Part 1"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
