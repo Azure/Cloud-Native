@@ -10,7 +10,7 @@ Gaining AI skills can increase wages by an average of 21%. Build in-demand skill
 
 #LearnMicrosoftAI  
 
-The challenge is coming soon on **September 24**.
+[Register now](https://aka.ms/aiskillschallenge?ocid=biafy25h1_aiskillschallenge_webpage_azuremktg) to compete and level up your AI skills. The challenge is live **September 24 through November 1**!
 
 ![Build intelligent apps](./../../../static/img/60-days-of-ia/60-days-of-ia-cloud-skills-banner.jpg)
 
