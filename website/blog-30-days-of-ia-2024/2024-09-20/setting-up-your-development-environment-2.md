@@ -1,9 +1,9 @@
 ---
-date: 2024-09-20T09:01
+date: 2024-09-24T09:00
 slug: setting-up-your-development-environment-2
 title: "1.2b Setting Up Your Development Environment Part 2"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -29,9 +29,9 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 </head>
 
 <!-- End METADATA -->
-## 2.b. Setting up your development environment
+## 1.2b. Setting up your development environment
 
-## Day 2: Part 2. Preparing the Azure OpenAI Service resource
+## Part 2. Preparing the Azure OpenAI Service resource
 Learn how to create and configure the Azure OpenAI Service resource that we’ll use in our example app.
 
 ### What we cover:
@@ -40,7 +40,7 @@ Learn how to create and configure the Azure OpenAI Service resource that we’ll
 - Exploring the options for creating our app hosting environments on Azure
 
 ## Introduction
-In our previous post, we discussed setting up your local development environment and creating the Azure-based database, storage, and secret management services that you’ll use when running our application. In this post, we set up the Azure OpenAI instance that provides the core of our content generation capabilities. After you’ve created the Azure OpenAI instance, we’ll finish our preparation tasks by setting up Azure API Management and then finally creating our preferred app hosting resources (Azure Kubernetes Service [AKS] or Azure App Service).
+In our [previous post](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1), we discussed setting up your local development environment and creating the Azure-based database, storage, and secret management services that you’ll use when running our application. In this post, we set up the Azure OpenAI instance that provides the core of our content generation capabilities. After you’ve created the Azure OpenAI instance, we’ll finish our preparation tasks by setting up Azure API Management and then finally creating our preferred app hosting resources (Azure Kubernetes Service [AKS] or Azure App Service).
 
 ## Step 1. Set up Azure OpenAI
 Create two Azure OpenAI deployments—one for **GPT-4o** (chat completion) and another for **text embedding**.
@@ -188,7 +188,7 @@ az cognitiveservices account deployment create \
   --model-version "1" \
   --model-format OpenAI \
   --sku-name "Standard" \
-  --sku-capacity 120
+  --sku-capacity 120 \
 
 # Verify deployments
 echo "Listing deployed models..."
@@ -216,6 +216,10 @@ Run the script:
 
 ![Code lines: ./create-openai-resource.sh --name <NAME> --resource-group <RESOURCE_GROUP_NAME> --location <LOCATION>](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-7.png)
 
+:::info
+Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
+
 ## Step 2. Set up Azure API Management
 API Management serves as the gateway between your front-end, middleware, and back-end services.
 
@@ -225,11 +229,9 @@ API Management serves as the gateway between your front-end, middleware, and bac
    - Middleware for Azure OpenAI Service
 
 ### Azure portal instructions
-In the Azure portal, search for **API Management**.
-
-Choose **Create**, and complete the resource creation wizard.
-
-Select **Create** to deploy the API Management service.
+1. In the Azure portal, search for **API Management**.
+2. Choose **Create**, and complete the resource creation wizard.
+3. Select **Create** to deploy the API Management service.
 
 ![The "Create API Management service" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-8.png)
 
@@ -365,24 +367,21 @@ az webapp create \
 ### Use the Azure Kubernetes Service (AKS) path
 To deploy your Kubernetes-based resources, you need to perform two actions: 
 
-Set up a **container registry** to host your application’s container images. 
-
-**Create a Kubernetes cluster**.
+1. Set up a **container registry** to host your application’s container images.
+2. **Create a Kubernetes cluster**.
 
 #### Azure portal instructions
 Create a container registry. 
 
-In the Azure portal, search for **Kubernetes Service** and create a new AKS cluster. 
-
-Complete the resource creation wizard, and select **Create** to deploy the container registry.
+1. In the Azure portal, search for **Kubernetes Service** and create a new AKS cluster.
+2. Complete the resource creation wizard, and select **Create** to deploy the container registry.
 
 ![The "Create container registry" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-14.png)
 
 Create a Kubernetes cluster. 
 
-In the Azure portal, search for **Kubernetes Service** and create a new Kubernetes cluster. 
-
-Complete the resource creation wizard, and select **Create** to deploy the cluster.
+1. In the Azure portal, search for **Kubernetes Service** and create a new Kubernetes cluster.
+2. Complete the resource creation wizard, and select **Create** to deploy the cluster.
 
 ![The "Create Kubernetes cluster" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-15.png)
 
@@ -432,6 +431,10 @@ az aks create \
 ![Second set of code lines: az aks create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-18.png)
 
 ![Third set of code lines: az aks create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-19.png)
+
+:::info
+Learn more on Technical leaders’ [guide to building intelligent apps](https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
 
 ## Summary
 
