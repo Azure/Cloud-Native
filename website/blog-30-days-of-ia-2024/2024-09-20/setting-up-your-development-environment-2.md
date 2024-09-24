@@ -389,7 +389,7 @@ Create a Kubernetes cluster.
 
 1. Create a resource group (optional).
   
-   If you need to create a resource group, use the following command, replacing <resource-group-name> with your desired name and <location> with the region (for example, eastus, westeurope): 
+   If you need to create a resource group, use the following command, replacing `<resource-group-name>` with your desired name and `<location>` with the region (for example, eastus, westeurope): 
 
 ```
 az group create --name <resource-group-name> --location <location> 
