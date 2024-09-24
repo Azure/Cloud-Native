@@ -40,7 +40,7 @@ Learn how to create and configure the Azure OpenAI Service resource that we’ll
 - Exploring the options for creating our app hosting environments on Azure
 
 ## Introduction
-In our previous post, we discussed setting up your local development environment and creating the Azure-based database, storage, and secret management services that you’ll use when running our application. In this post, we set up the Azure OpenAI instance that provides the core of our content generation capabilities. After you’ve created the Azure OpenAI instance, we’ll finish our preparation tasks by setting up Azure API Management and then finally creating our preferred app hosting resources (Azure Kubernetes Service [AKS] or Azure App Service).
+In our [previous post](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1), we discussed setting up your local development environment and creating the Azure-based database, storage, and secret management services that you’ll use when running our application. In this post, we set up the Azure OpenAI instance that provides the core of our content generation capabilities. After you’ve created the Azure OpenAI instance, we’ll finish our preparation tasks by setting up Azure API Management and then finally creating our preferred app hosting resources (Azure Kubernetes Service [AKS] or Azure App Service).
 
 ## Step 1. Set up Azure OpenAI
 Create two Azure OpenAI deployments—one for **GPT-4o** (chat completion) and another for **text embedding**.
@@ -215,6 +215,10 @@ Run the script:
 ```
 
 ![Code lines: ./create-openai-resource.sh --name <NAME> --resource-group <RESOURCE_GROUP_NAME> --location <LOCATION>](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-7.png)
+
+:::info
+Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
 
 ## Step 2. Set up Azure API Management
 API Management serves as the gateway between your front-end, middleware, and back-end services.
@@ -427,6 +431,10 @@ az aks create \
 ![Second set of code lines: az aks create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-18.png)
 
 ![Third set of code lines: az aks create](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-19.png)
+
+:::info
+Learn more on Technical leaders’ [guide to building intelligent apps](https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
 
 ## Summary
 
