@@ -29,9 +29,9 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 </head>
 
 <!-- End METADATA -->
-## 2.b. Setting up your development environment
+## 1.2b. Setting up your development environment
 
-## Day 2: Part 2. Preparing the Azure OpenAI Service resource
+## Part 2. Preparing the Azure OpenAI Service resource
 Learn how to create and configure the Azure OpenAI Service resource that we’ll use in our example app.
 
 ### What we cover:
@@ -188,7 +188,7 @@ az cognitiveservices account deployment create \
   --model-version "1" \
   --model-format OpenAI \
   --sku-name "Standard" \
-  --sku-capacity 120
+  --sku-capacity 120 \
 
 # Verify deployments
 echo "Listing deployed models..."
@@ -225,11 +225,9 @@ API Management serves as the gateway between your front-end, middleware, and bac
    - Middleware for Azure OpenAI Service
 
 ### Azure portal instructions
-In the Azure portal, search for **API Management**.
-
-Choose **Create**, and complete the resource creation wizard.
-
-Select **Create** to deploy the API Management service.
+1. In the Azure portal, search for **API Management**.
+2. Choose **Create**, and complete the resource creation wizard.
+3. Select **Create** to deploy the API Management service.
 
 ![The "Create API Management service" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-8.png)
 
@@ -365,24 +363,21 @@ az webapp create \
 ### Use the Azure Kubernetes Service (AKS) path
 To deploy your Kubernetes-based resources, you need to perform two actions: 
 
-Set up a **container registry** to host your application’s container images. 
-
-**Create a Kubernetes cluster**.
+1. Set up a **container registry** to host your application’s container images.
+2. **Create a Kubernetes cluster**.
 
 #### Azure portal instructions
 Create a container registry. 
 
-In the Azure portal, search for **Kubernetes Service** and create a new AKS cluster. 
-
-Complete the resource creation wizard, and select **Create** to deploy the container registry.
+1. In the Azure portal, search for **Kubernetes Service** and create a new AKS cluster.
+2. Complete the resource creation wizard, and select **Create** to deploy the container registry.
 
 ![The "Create container registry" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-14.png)
 
 Create a Kubernetes cluster. 
 
-In the Azure portal, search for **Kubernetes Service** and create a new Kubernetes cluster. 
-
-Complete the resource creation wizard, and select **Create** to deploy the cluster.
+1. In the Azure portal, search for **Kubernetes Service** and create a new Kubernetes cluster.
+2. Complete the resource creation wizard, and select **Create** to deploy the cluster.
 
 ![The "Create Kubernetes cluster" screen in the Azure portal.](../../static/img/30-days-of-ia-2024/blogs/2024-09-20/2-1b-15.png)
 
