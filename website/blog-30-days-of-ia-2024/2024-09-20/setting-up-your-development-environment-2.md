@@ -3,7 +3,7 @@ date: 2024-09-24T09:00
 slug: setting-up-your-development-environment-2
 title: "1.2b Setting Up Your Development Environment Part 2"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
