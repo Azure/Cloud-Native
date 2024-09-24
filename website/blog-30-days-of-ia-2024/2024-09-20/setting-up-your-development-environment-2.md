@@ -1,5 +1,5 @@
 ---
-date: 2024-09-20T09:01
+date: 2024-09-24T09:00
 slug: setting-up-your-development-environment-2
 title: "1.2b Setting Up Your Development Environment Part 2"
 authors: [30days]
