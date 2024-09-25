@@ -95,7 +95,7 @@ function Feature({ svgpath, title, linkTitle, description, link, className }) {
 
 function CampaignHeader() {
   return (
-    <header className={clsx("hero hero--primary", styles.heroBannerImg)}>
+    <header className={clsx("hero hero--primary heroAzure")} style={{ backgroundImage: 'url(../img/hero-bg.png)' }}>
       <div className="container">
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6">

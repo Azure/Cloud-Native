@@ -128,12 +128,28 @@ function useFilteredUsers() {
 
 function ShowcaseHeader() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx("hero hero--primary heroAzure")} style={{ backgroundImage: 'url(../img/hero-bg.png)' }}>
       <div className="container text--center">
-          <h1 className="hero__title">
-              Community Gallery
-          </h1>
-          <p>Explore the Community Showcase for videos, blog posts and open-source projects from the community.</p>
+        <div className="row" style={{ alignItems: 'center' }}>
+          <div className="col col--6 text--left">
+              <h1 className="hero__title">
+                  Community Gallery
+              </h1>
+              <p>Explore the Community Showcase for videos, blog posts and open-source projects from the community.</p>
+          </div>
+          <div className="col col--1 hide-on-mobile">
+
+</div>
+<div className="col col--5">
+<img
+    className="hide-on-mobile"
+    src="../img/30-days-of-ia/30-days-of-ia-2024-hero-image.png"
+    alt=""
+    role="presentation"
+    width="100%"
+/>
+</div>
+        </div>
       </div>
     </header>
   );

@@ -10,16 +10,32 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 // Section Header
 function SectionHeader({title, description}) {
     return (
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container text--center">
-            <h1 className="hero__title">
-                {title}
-            </h1>
-            <p>{description}</p>
-            <div className={styles.buttonsFFIA}>
-              <Link className="button button--primary button--lg" to="https://aka.ms/bia/learn-live?ocid=biafy25h1_learnlive_webpage_azuremktg" data-bi-area="Hero" data-bi-name="#LearnLive">
-              Register for the series
-              </Link>
+        <header className={clsx("hero hero--primary heroAzure")} style={{ backgroundImage: 'url(../img/hero-bg.png)' }}>
+        <div className="container">
+            <div className="row" style={{ alignItems: 'center' }}>
+                <div className="col col--6 text--left">
+                    <h1 className="hero__title">
+                        {title}
+                    </h1>
+                    <p>{description}</p>
+                    <div className={styles.buttonsFFIA}>
+                    <Link className="button button--primary button--lg" to="https://aka.ms/bia/learn-live?ocid=biafy25h1_learnlive_webpage_azuremktg" data-bi-area="Hero" data-bi-name="#LearnLive">
+                    Register for the series
+                    </Link>
+                    </div>
+                </div>
+                <div className="col col--1 hide-on-mobile">
+
+                    </div>
+                    <div className="col col--5">
+                    <img
+                        className="hide-on-mobile"
+                        src="../img/30-days-of-ia/30-days-of-ia-2024-hero-image.png"
+                        alt=""
+                        role="presentation"
+                        width="100%"
+                    />
+</div>
             </div>
         </div>
       </header>
