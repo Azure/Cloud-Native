@@ -6,6 +6,34 @@
   background-color: #004277;
 }
 
+.heroBannerImg {
+  padding: 1rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, 
+  #004277 20%,
+    #1172B0 60%,
+    #8DC8E8 70%,
+    #FFB3BB 80%,
+    #FFB900 90%,
+    #FFE399 100%
+    /* Add more color stops or adjust percentages as needed */
+  );
+
+}
+
+.heroAzure {
+  padding: 8rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color: #004277 !important;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+
 .featureImg {
   width: 100%;
 }

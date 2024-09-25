@@ -27,6 +27,18 @@
   );
 
 }
+
+.heroAzure {
+  padding: 8rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color: #004277 !important;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+
 .featureImg {
   width: 100%;
 }
@@ -34,7 +46,7 @@
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .buttonsFFIA {
@@ -72,6 +84,6 @@
   .buttonsFFIA {
     display: flex;
     align-items: center!important;
-    justify-content: center!important;
+    justify-content: left!important;
   }
 }
