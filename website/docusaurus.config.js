@@ -266,30 +266,30 @@ const config = {
             to: '/Build-IA/CommunityGallery/',
             from: '/Fall-For-IA/CommunityGallery',
           },
-          {
-            from: '/Build-IA/LearnLive/',
-            to: '/Build-IA/LearnLive',
-          },
-          {
-            from: '/Build-IA/AskTheExpert/',
-            to: '/Build-IA/AskTheExpert',
-          },
-          {
-            from: '/Build-IA/CloudSkills/',
-            to: '/Build-IA/CloudSkills',
-          },
-          {
-            from: '/Build-IA/calendar/',
-            to: '/Build-IA/calendar',
-          },
-          {
-            from: '/Build-IA/CommunityGallery/',
-            to: '/Build-IA/CommunityGallery',
-          },
-          {
-            from: '/Build-IA/FreeTrial/',
-            to: '/Build-IA/FreeTrial',
-          },
+          // {
+          //   from: '/Build-IA/LearnLive/',
+          //   to: '/Build-IA/LearnLive',
+          // },
+          // {
+          //   from: '/Build-IA/AskTheExpert/',
+          //   to: '/Build-IA/AskTheExpert',
+          // },
+          // {
+          //   from: '/Build-IA/CloudSkills/',
+          //   to: '/Build-IA/CloudSkills',
+          // },
+          // {
+          //   from: '/Build-IA/calendar/',
+          //   to: '/Build-IA/calendar',
+          // },
+          // {
+          //   from: '/Build-IA/CommunityGallery/',
+          //   to: '/Build-IA/CommunityGallery',
+          // },
+          // {
+          //   from: '/Build-IA/FreeTrial/',
+          //   to: '/Build-IA/FreeTrial',
+          // },
         ],
       },
     ],
