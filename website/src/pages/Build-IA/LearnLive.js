@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 // Section Header
 function SectionHeader({title, description}) {
     return (
-        <header className={clsx("hero hero--primary heroAzure")} style={{ backgroundImage: 'url(../img/hero-bg.png)' }}>
+        <header className={clsx("hero hero--primary heroAzureHome")} style={{ backgroundImage: 'url(../img/hero-bg.png)', padding: '8rem 0rem' }}>
         <div className="container">
             <div className="row" style={{ alignItems: 'center' }}>
                 <div className="col col--6 text--left">
@@ -24,18 +24,8 @@ function SectionHeader({title, description}) {
                     </Link>
                     </div>
                 </div>
-                <div className="col col--1 hide-on-mobile">
-
-                    </div>
-                    <div className="col col--5">
-                    <img
-                        className="hide-on-mobile"
-                        src="../img/30-days-of-ia/30-days-of-ia-2024-hero-image.png"
-                        alt=""
-                        role="presentation"
-                        width="100%"
-                    />
-</div>
+                <div className="col col--6 hide-on-mobile">
+                </div>
             </div>
         </div>
       </header>

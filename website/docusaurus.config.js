@@ -20,6 +20,7 @@ const config = {
   // --- CONFIG-30DAYS #3: Config GitHub Pages
   url: "https://azure.github.io",
   baseUrl: "/Cloud-Native/",
+  // trailingSlash: false,
   favicon: "img/favicon.ico",
   organizationName: "azure",
   projectName: "Cloud-Native",
@@ -264,6 +265,30 @@ const config = {
           {
             to: '/Build-IA/CommunityGallery/',
             from: '/Fall-For-IA/CommunityGallery',
+          },
+          {
+            from: '/Build-IA/LearnLive/',
+            to: '/Build-IA/LearnLive',
+          },
+          {
+            from: '/Build-IA/AskTheExpert/',
+            to: '/Build-IA/AskTheExpert',
+          },
+          {
+            from: '/Build-IA/CloudSkills/',
+            to: '/Build-IA/CloudSkills',
+          },
+          {
+            from: '/Build-IA/calendar/',
+            to: '/Build-IA/calendar',
+          },
+          {
+            from: '/Build-IA/CommunityGallery/',
+            to: '/Build-IA/CommunityGallery',
+          },
+          {
+            from: '/Build-IA/FreeTrial/',
+            to: '/Build-IA/FreeTrial',
           },
         ],
       },

@@ -46,8 +46,9 @@
   --ifm-navbar-background-color: #f5f6f7!important;
   --ifm-link-color: #b638ba!important;
   --ifm-footer-background-color: #ffffff!important;
-  --ifm-card-background-color: #f5f6f7!important;
+  --ifm-card-background-color: #ffffff!important;
   --font-color: #323130;
+  --ifm-background-color: #f4fafd!important;
 
 }
 
@@ -450,4 +451,16 @@ hr {
     padding: 2rem 0!important;
     background-image: none!important;
   }
+}
+
+.card-icon-bg {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+  border: 1px solid #e6f2fb;
+  margin-bottom:1rem;
 }
