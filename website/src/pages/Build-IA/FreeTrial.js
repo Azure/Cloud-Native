@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function CampaignHeader() {
     return (
-      <header className={clsx("hero hero--primary heroAzureHome")} style={{ backgroundImage: 'url(../img/hero-bg.png)', padding: '8rem 0rem' }}>
+      <header className={clsx("hero hero--primary heroAzureHome")} style={{ backgroundImage: 'url(/Cloud-Native/img/hero-bg.png)', padding: '8rem 0rem' }}>
         <div className="container">
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col col--6">

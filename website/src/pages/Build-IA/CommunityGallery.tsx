@@ -128,7 +128,7 @@ function useFilteredUsers() {
 
 function ShowcaseHeader() {
   return (
-    <header className={clsx("hero hero--primary heroAzureHome")} style={{ backgroundImage: 'url(../img/hero-bg.png)', padding: '8rem 0rem' }}>
+    <header className={clsx("hero hero--primary heroAzureHome")} style={{ backgroundImage: 'url(/Cloud-Native/img/hero-bg.png)', padding: '8rem 0rem' }}>
       <div className="container text--center">
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6 text--left">
