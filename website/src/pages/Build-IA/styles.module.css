@@ -170,3 +170,14 @@ ul li input[type="checkbox"] {
 .hide {
   display: none;
 }
+
+.card-icon-bg {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+  border: 1px solid gray;
+}

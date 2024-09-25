@@ -39,13 +39,13 @@ const CampaignFeatures = [
     ),
   },
   // {
-  //   title: "Hack Together",
-  //   linkTitle: "Hack Together",
+  //   title: "Free Trial",
+  //   linkTitle: "Free Trial",
   //   svgpath: "../img/svg/60-days-of-IA-azure-icon-hack-together.svg",
-  //   link: "/Cloud-Native/Build-IA/HackTogether",
+  //   link: "/Cloud-Native/Build-IA/FreeTrial",
   //   description: (
   //     <>
-  //       Explore this 6-part from Microsoft Reactor on JS & AI on Azure and make an open-source contribution!
+  //       Dive into an extensive suite of free services designed to help get started building intelligent apps while minimizing upfront costs.
   //     </>
   //   ),
   // },
