@@ -1,5 +1,19 @@
 [
     {
+        "title": "Azure-Samples / AI-Gateway",
+        "description": "This repository contains a set of experiments on using GenAI capabilities of Azure API Management with Azure OpenAI and other services.",
+        "preview": "",
+        "website": "https://github.com/Azure-Samples?ocid=biafy25h1_communitygallery_webpage_azuremktg",
+        "author": "Azure Samples",
+        "source": "https://github.com/Azure-Samples/AI-Gateway",
+        "tags": [
+            "featured",
+            "ai",
+            "azureopenai",
+            "codesample"
+        ]
+    },
+    {
         "title": "Ask the Expert: Intelligent Apps with Azure Kubernetes Service",
         "description": "Join the Azure Kubernetes Service Product Group to learn about developing cloud-native apps for high scale and resilience with Azure Kubernetes Service clusters. Discuss with the experts on how to combine the power of AI with Kubernetes app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure Kubernetes Service (AKS).",
         "preview": "",
