@@ -34,7 +34,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 
 Learn how to create and configure the Azure OpenAI Service resource that we’ll use in our example app.
 
-### What we cover:
+## What we cover:
 
 - Downloading the app code from GitHub to your local machine
 - Setting up app secrets and connecting them to Azure Key Vault
@@ -46,6 +46,8 @@ In the previous topic, we finished setting up the local tools and Azure services
 ## System Architecture Diagram – Local Setup
 
 Before diving into the setup and configuration details, let's take a look at the overall architecture of the Content Generation System. The architecture diagram below illustrates the key components and their interactions, including the backend, middleware, and frontend services, as well as how they integrate with Azure Key Vault and other Azure services.
+
+![architecture diagram of the key components and their interactions, including the backend, middleware, and frontend services, as well as how they integrate with Azure Key Vault and other Azure services](../../static/img/30-days-of-ia-2024/blogs/2024-10-03/1-3a-1.png)
 
 **In the diagram:**  
 
@@ -92,6 +94,8 @@ Before running the services, you must set the environment variables required to 
   - For local development, the application will use `AzureCliCredential` if no other credentials are configured. This ensures that your local environment can authenticate and interact with Azure services seamlessly.
 
 For more details on configuring and using Spring Cloud Azure with Key Vault, refer to the [Spring Cloud Azure authentication documentation](https://learn.microsoft.com/azure/developer/java/spring-framework/authentication?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+
+![image of the application properties variables](../../static/img/30-days-of-ia-2024/blogs/2024-10-03/1-3a-2.png)
 
 ### 2. Assign Key Vault Administrator Role
 
