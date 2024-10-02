@@ -214,6 +214,8 @@ a {
   border-radius: 1.5rem;
 }
 
+
+
 .card-body {
   padding: 1.5rem!important;
 }
@@ -250,6 +252,25 @@ h1 {
 
 h2, h3, h4, h5, h6 {
   letter-spacing: -.03em;
+}
+
+h1 {
+  letter-spacing: -.05em;
+  font-size:3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.card .card-body h2,
+.card .card-body h3 {
+    font-size: 1.25rem;
+}
+
+.card-body > h2,
+.card-body > h3 {
+  font-size: 1.25rem!important;
 }
 
 .eyebrow {
@@ -426,7 +447,7 @@ hr {
   text-align: left;
   position: relative;
   overflow: hidden;
-  background-color: #0078d4 !important;
+  background-color: #0074CC !important;
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
@@ -437,7 +458,7 @@ hr {
   text-align: left;
   position: relative;
   overflow: hidden;
-  background-color: #0078d4 !important;
+  background-color: #0074CC !important;
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
