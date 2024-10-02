@@ -18,9 +18,12 @@ function SectionHeader({title, description}) {
                         {title}
                     </h1>
                     <p>{description}</p>
-                    <div className={styles.buttonsFFIA}>
+                    <div className={`${styles.buttonsFFIA} hero-buttons`}>
                     <Link className="button button--primary button--lg" to="https://aka.ms/demo-bytes?ocid=biafy25h1_demobytes_webpage_azuremktg" data-bi-area="Hero" data-bi-name="#DemoBytes">
                     Register for the series
+                    </Link>
+                    <Link className="button button--secondary button--lg" to="https://www.youtube.com/playlist?list=PLmsFUfdnGr3xYBEmLI7AqtWtBc31D20er" data-bi-area="Hero" data-bi-name="#DemoBytes" target="_blank">
+                    Watch on demand
                     </Link>
                     </div>
                 </div>
