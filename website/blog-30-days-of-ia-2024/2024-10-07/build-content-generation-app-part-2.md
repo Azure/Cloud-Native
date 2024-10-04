@@ -54,24 +54,24 @@ After access is granted, add the following secrets into **Azure Key Vault** to s
 
 **Back-end service secret keys:**
 
-- AzureCosmosConnectionString
-- MongoDBDatabaseName
-- AzureStorageConnectionString
-- StorageContainerName
-- MiddlewareServiceBaseUrl
-- MiddlewareServiceProductEmbeddingEndpoint
-- MiddlewareServiceAccessKey
+- `AzureCosmosConnectionString`
+- `MongoDBDatabaseName`
+- `AzureStorageConnectionString`
+- `StorageContainerName`
+- `MiddlewareServiceBaseUrl`
+- `MiddlewareServiceProductEmbeddingEndpoint`
+- `MiddlewareServiceAccessKey`
 
 **Middleware service secret keys:**
 
-- BackendServiceBaseUrl
-- BackendServiceProductEndpoint
-- BackendServiceSimilarProductEndpoint
-- BackendServiceAccessKey
-- AzureOpenAiEndpointUrl
-- AzureOpenAiAccessKey
-- AzureOpenAiEmbeddingEndpointUrl
-- AzureOpenAiEmbeddingKey
+- `BackendServiceBaseUrl`
+- `BackendServiceProductEndpoint`
+- `BackendServiceSimilarProductEndpoint`
+- `BackendServiceAccessKey`
+- `AzureOpenAiEndpointUrl`
+- `AzureOpenAiAccessKey`
+- `AzureOpenAiEmbeddingEndpointUrl`
+- `AzureOpenAiEmbeddingKey`
 
 ### CLI instructions  
 
