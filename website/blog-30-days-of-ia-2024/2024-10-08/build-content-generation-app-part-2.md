@@ -344,7 +344,7 @@ Save this script, and then run it using the following command:
 
 2. **Change the port for middleware**. Open the `application.properties` file in the middleware folder, and change the default port to `8081` by adding:
 
-   ```properties
+   ```
    server.port=8081
    ```
 
