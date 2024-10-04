@@ -325,11 +325,15 @@ Save this script, and then run it using the following command:
 
 ![Code lines: add-secrets-to-keyvault.sh](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-1.png)
 
+:::info
+Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
+
 ## Step 2. Run the Back-End Service Locally
 
 1. **Navigate to the back-end folder**. In your terminal, navigate to the back-end folder in the cloned repo.
 
-2. **Open the folder in your IDE**. Use Visual Studio Code or IntelliJ IDEA to open the back-end folder.
+2. **Open the folder in your IDE**. Use [Visual Studio Code](https://code.visualstudio.com/) or [IntelliJ IDEA](https://www.jetbrains.com/idea/) to open the back-end folder.
 
 3. **Add Key Vault environment variables** .Be sure that the following variable is set in your local environment:
    - `AZURE_KEYVAULT_URI`: The URL of your Key Vault.
@@ -341,6 +345,8 @@ Save this script, and then run it using the following command:
    ```
 
     ![image of the back-end service command running](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-2.png)
+
+    The back-end service will run on port **8080**.
 
 ## Step 3: Run the Middleware Service Locally
 
@@ -354,9 +360,9 @@ Save this script, and then run it using the following command:
 
       ![Code in application properties file](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-3.png)
 
-3. Add key vault environment variables. Set the environment variables as itemized `(AZURE_KEYVAULT_URI)`. 
+3. **Add key vault environment variables.** Set the environment variables as itemized `(AZURE_KEYVAULT_URI)`. 
 
-4. Run the middleware service. Use the following command:
+4. **Run the middleware service.** Use the following command:
 
     ```
     ./mvnw spring-boot:run  
@@ -370,19 +376,19 @@ Save this script, and then run it using the following command:
 
 1. **Navigate to the front-end folder**. Go to the front-end folder in your cloned repo.
 
-2. **Copy the .env.example file**. Copy the `.env.example` file, and rename it to `.env`:
+2. **Copy the `.env.example file`**. Copy the `.env.example` file, and rename it to `.env`:
 
    ```
    cp .env.example .env
    ```
 
-3. Configure the .env file. Update the following variables in the .env file:
+3. Configure the `.env file`. Update the following variables in the `.env` file:
 
     ![List of variables to update in the env file.](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-5.png)
 
-4. Install dependencies. Run npm install or yarn install to install the necessary front-end dependencies.  
+4. **Install dependencies.** Run npm install or yarn install to install the necessary front-end dependencies.  
 
-5. Run the front-end service. Start the front-end service using one of the following commands:
+5. **Run the front-end service.** Start the front-end service using one of the following commands:
 
     ```
     npm start  
