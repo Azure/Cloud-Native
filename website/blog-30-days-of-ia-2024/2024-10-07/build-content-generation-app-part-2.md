@@ -1,5 +1,5 @@
 ---
-date: 2024-10-03T09:00
+date: 2024-10-07T09:00
 slug: build-content-generation-app-part-2
 title: "1.3b Build Content Generation App Part 2"
 authors: [30days]
