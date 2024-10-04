@@ -100,6 +100,17 @@ The screenshot shows the "Add API" button and the selection of the **HTTP** type
           - **Request Body/Parameters**: Define any request body or parameters required for the operation.
       - Click **Save** to add the operation.
 
+![screenshot of ai-study-middleware-apim fields in Azure portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-7.png)
+
+![screenshot of ai-study-middleware-apim POST fields in Azure portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-8.png)
+
+![screenshot of ai-study-backend-apim fields in Azure portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-9.png)
+
+  5. **Configure Security Policies for the APIs:**
+      - After adding the APIs, go to the **Design** tab for each API and add security policies.
+        - **Header Check Policy**: Validate the presence of an API key.
+        - **CORS Policy**: Allow only specific origins to access the API endpoints.
+        - **Rate Limit Policy**: Limit the number of requests a client can make to the API within a specified time frame  
 
 :::info
 Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
