@@ -1,5 +1,5 @@
 ---
-date: 2024-10-07T09:00
+date: 2024-10-08T09:00
 slug: build-content-generation-app-part-2
 title: "1.3b Build Content Generation App Part 2"
 authors: [30days]
@@ -266,21 +266,150 @@ echo "Secrets have been set or updated successfully."
 
 These arguments are mandatory for the script to run successfully:
 
+- `--keyvault-name <keyvault-name>`: The name of the Azure key vault where secrets will be set or updated.
+
+- `--resource-group <resource-group>`: The Azure resource group that contains the resources (for example, Key Vault, Azure Cosmos DB) to be used.
+
+- `--cosmosdb-name <cosmos-mongo>`: The name of the Azure Cosmos DB instance (MongoDB API).
+
+- `--storage <sa-name>`: The name of the Azure Storage account used for storing data.
+
+- `--openai-name <openai-details>`: The name of the Azure OpenAI Service instance.
+
+- `--openai-embedding-model <embedding-deployment-name>`: The deployment name for the Azure OpenAI embedding model.
+
+
 #### Optional arguments
 
 These arguments have default values and can be overridden if needed:
 
+- `--mongodb-name <dbname>`: Name of the MongoDB database.  
+  **Default value**: `ContentGenerator`
+
+- `--storage-container <container-name>`: Name of the storage container within the Azure Storage account.  
+  **Default value**: `contentgen`
+
+- `--openai-completion-model <ai-service-completion-deployment-name>`: Deployment name for the Azure OpenAI chat completion model.  
+  **Default value**: `gpt-4o`
+
+- `--middleware-base-url <url>`: Base URL for the middleware service.  
+  **Default value**: `http://localhost:8081`
+
+- `--middleware-product-embedding-endpoint <endpoint>`: Endpoint for the product embedding service in the middleware.  
+  **Default value**: `/api/v1/generate/embeddings`
+
+- `--backend-base-url <url>`: Base URL for the back-end service.  
+  **Default value**: `http://localhost:8080`
+
+- `--backend-product-endpoint <endpoint>`: Endpoint for accessing product data in the back-end service.  
+  **Default value**: `/api/v1/products`
+
+- `--backend-similar-product-endpoint <endpoint>`: Endpoint for accessing similar product data in the back-end service.  
+  **Default value**: `/api/v1/products/similar`
+
+
+Save this script, and then run it using the following command:
+
+```
+./add-secrets-to-keyvault.sh \
+    --keyvault-name <keyvault-name> \
+    --resource-group <resource-group> \
+    --cosmosdb-name <cosmos-mongo> \
+    --mongodb-name <dbname> \
+    --storage <sa-name> \
+    --storage-container <container-name> \
+    --openai-name <openai-details> \
+    --openai-completion-model <ai-service-completion-deployment-name> \
+    --openai-embedding-model <embedding-deployment-name>
+```
+
+## Step 2. Run the Back-End Service Locally
+
+1. **Navigate to the back-end folder**. In your terminal, navigate to the back-end folder in the cloned repo.
+
+2. **Open the folder in your IDE**. Use Visual Studio Code or IntelliJ IDEA to open the back-end folder.
+
+3. **Add Key Vault environment variables** .Be sure that the following variable is set in your local environment:
+   - `AZURE_KEYVAULT_URI`: The URL of your Key Vault.
+
+4. **Run the back-end service**. To start the back-end service, run the following command:
+
+   ```
+   ./mvnw spring-boot:run
+   ```
+
+## Step 3: Run the Middleware Service Locally
+
+1. **Navigate to the middleware folder**. Open another terminal window, and navigate to the middleware folder.
+
+2. **Change the port for middleware**. Open the `application.properties` file in the middleware folder, and change the default port to `8081` by adding:
+
+   ```properties
+   server.port=8081
+   ```
+
+3. Add key vault environment variables. Set the environment variables as itemized `(AZURE_KEYVAULT_URI)`. 
+
+4. Run the middleware service. Use the following command:
+
+    ```
+    ./mvnw spring-boot:run  
+    ```
+
+  The middleware will run on port **8081**.
+
+## Step 4: Run the Front-End Service Locally
+
+1. **Navigate to the front-end folder**. Go to the front-end folder in your cloned repo.
+
+2. **Copy the .env.example file**. Copy the `.env.example` file, and rename it to `.env`:
+
+   ```
+   cp .env.example .env
+   ```
+
+3. Configure the .env file. Update the following variables in the .env file:
+
+    ![image of the application properties variables](../../static/img/30-days-of-ia-2024/blogs/2024-10-03/1-3a-2.png)
+
+4. Install dependencies. Run npm install or yarn install to install the necessary front-end dependencies.  
+
+5. Run the front-end service. Start the front-end service using one of the following commands:
+
+    ```
+    npm start  
+    ```
+
+    or
+
+    ```
+    yarn start  
+    ```
+
+**Note:** At this point, you’re prompted to sign in with your Microsoft Entra ID credentials. The front end authenticates the user with Microsoft Entra ID (user identity). After you sign in, the following screen appears.
+
 ![image of the application properties variables](../../static/img/30-days-of-ia-2024/blogs/2024-10-03/1-3a-2.png)
 
+The front end runs on `http://localhost:3000`.
+
+### Local vs. Deployment Environments
+
+For local development, you can set the **endpoint URLs** directly in `.env` or `application.properties` files. However, after deployment to **AKS** or **App Service**, you need to update the **Key Vault secrets** to reflect the public-facing URLs and credentials:
+
+- **Back-end and middleware URLs**: Replace `localhost` with the public URL of your deployed services.
+
+- **API Management**: When deployed, make sure that API keys and exposed API URLs are managed through **API Management**.
+
+We’ll cover the details of deploying to AKS or App Service and using API Management in subsequent topics.
 
 :::info
-Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg) 
+Learn more on Technical leaders’ [guide to building intelligent apps](https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
 
 ## Summary
 
-In this blog, we cloned our example app code onto your local development machine, and we set up the required environment variables needed to run the app. In addition, we configured the Azure Key Vault settings to securely store the secrets, such as connection strings and keys, that you’ll use when running the app.   
+In today’s topic, we finished configuring the app’s connection strings and other secrets in Azure Key Vault. Then we got the back-end, middleware, and front-end services running on your local machine, allowing you to test the app in your browser.  
 
-In our next blog, we’ll walk through adding those secrets to your key vault and then we’ll build and run the app for the first time in your local development environment.
+Now that you’ve got a running app, our next topic will cover deploying it to Azure using either **Azure Kubernetes Service (AKS)** or **Azure App Service**, along with configuring **Azure API Management** to help ensure that your APIs are secured using key-based authentication.
 
 
