@@ -334,7 +334,7 @@ After running the script, we’ll have created the APIs to use and will have app
 ![screenshot of code response script](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-11.png)
 
 :::info
-Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
 
 ## Step 2: Configuring Azure Key Vault and Granting Access
@@ -349,7 +349,75 @@ Once the APIs are defined and secured, we need to securely store the API keys an
 
 ### 2.2 Granting Access to Key Vault via Managed Identities
 
+1. To allow your App Service to access the secrets in Key Vault, enable the **System-assigned Managed Identity:**
+    - Navigate to your **Azure App Service**.
+    - Under the **Identity** section, enable "System-assigned Managed Identity".
 
+![screenshot of fields under Identity in Azure App Service](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-12.png)
+
+2. In the **Azure Key Vault**, navigate to **Access policies**.
+3. Create a new access policy using the "Secret Management" template.
+4. Select the Managed Identity of your App Service as the principal and grant it **Get** and **List** permissions for secrets.
+
+![screenshot of access configuration](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-13.png)
+
+![screenshot of access policy](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-14.png)
+
+![screenshot of access policy permissions when creating a new policy](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-15.png)
+
+![screenshot of access policy principal selections when creating a new policy](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-16.png)
+
+![screenshot of access policy review screen when creating a new policy](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-17.png)
+
+![screenshot of access policy once created](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-18.png)
+
+#### Azure CLI instructions
+
+```
+# Get the Managed Identity's client ID
+IDENTITY_CLIENT_ID=$(az webapp identity show --resource-group <resource-group-name> --name <app-service-name> --query principalId --output tsv)
+```
+
+```
+# Grant access to the Key Vault for the Managed Identity
+az keyvault set-policy --name <key-vault-name> --secret-permissions get list --object-id $IDENTITY_CLIENT_ID
+```
+
+### 2.3 Configure Environment Variables in App Service
+
+1. **Navigate to your App Service** in the Azure portal:
+    - Go to the **Azure portal** and select your **App Service**.
+2. **Open Configuration Settings:**
+    - In the left-hand menu, select **Configuration** under the **Settings** section.
+
+![screenshot of App Service Configuration Settings in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-19.png)
+
+3. **Add a New Application Setting**
+- In the **Application settings** tab, click on **+ New application setting**.
+- Enter the following details:
+   - **Name**: `AZURE_KEYVAULT_URL`
+   - **Value**: `https://<your-key-vault-name>.vault.azure.net/`
+4. **Save the Changes**:
+   - After adding the setting, click **Save** at the top to apply the changes.
+
+![screenshot of the new application setting after saving it in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-20.png)
+
+5. **Restart the App Service** (if necessary):
+   - You may need to restart your App Service for the changes to take effect. You can do this by going to the **Overview** section and clicking on the **Restart** button.
+
+#### Azure CLI instructions
+
+Run the following command:
+
+```
+# Set the environment variable in the App Service
+
+az webapp config appsettings set --resource-group <resource-group-name> --name <app-service-name> --settings AZURE_KEYVAULT_URL=https://<key-vault-name>.vault.azure.net/
+```
+
+:::info
+Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
 
 ## Conclusion 
 
