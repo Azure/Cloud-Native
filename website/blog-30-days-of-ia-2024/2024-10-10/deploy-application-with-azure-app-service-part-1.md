@@ -43,9 +43,38 @@ In this section, we will configure Azure API Management (APIM) to define and sec
 
 In our previous blog post, we ran the application locally to verify its functionality. Now, we will focus on securing the APIs and managing sensitive data before deploying the application. First, we will define and add the necessary APIs for the back-end and middleware services using **Azure API Management (APIM)**. After configuring APIM, we will set up **Azure Key Vault** to securely store API keys and other sensitive information and grant secure access to these secrets using [Managed Identities](https://learn.microsoft.com/azure/app-service/overview-managed-identity?tabs=portal%2Chttp?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 
+## Step 1: Defining and Adding APIs to Azure API Management (APIM)
+
+We will start by creating and configuring the APIs for both back-end and middleware services in **Azure API Management (APIM)**. Each service will have its own set of operations that clients can interact with. 
+
+### 1.1 Define and Add APIs to APIM 
+
+To add and configure the APIs for both back-end and middleware services, follow these steps: 
+
+1. **Navigate to the Azure API Management Service:**
+    - Go to the **Azure portal**.
+    - Select your **API Management instance**.
+    - Click on **APIs** and then select **+ Add API**.
+
+The screenshot shows the navigation to the "APIs" section in Azure API Management.
 
 ![a screenshot shows the navigation to the "APIs" section in Azure API Management](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-1.png)
 
+2. **Select the API Type:**
+
+    - Choose **HTTP** as the API type since we are exposing HTTP endpoints.
+
+The screenshot shows the "Add API" button and the selection of the **HTTP** type. 
+
+![screenshot shows the "Add API" button and the selection of the HTTP type](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-2.png)
+
+3. **Configure the API Details**:
+    - For each API, configure the following settings:
+      - **Display Name:** Name of the API (e.g., `Product API` for back-end, `Generate Content API` for middleware).
+      - **Name:** A unique identifier for the API (e.g., `products`, `generate-content`).
+      - **URL:** The relative path for the API endpoint (e.g., `/api/v1/products` for Product List, `/api/v1/generate/content` for content generation).
+      - **Method:** Choose the HTTP method (e.g., `GET`, `POST`).
+    - Click **Create** to add the API.
 
 :::info
 Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
