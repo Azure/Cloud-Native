@@ -112,6 +112,39 @@ The screenshot shows the "Add API" button and the selection of the **HTTP** type
         - **CORS Policy**: Allow only specific origins to access the API endpoints.
         - **Rate Limit Policy**: Limit the number of requests a client can make to the API within a specified time frame  
 
+#### Header Check Policy:
+
+```
+<check-header name="api-key"
+failed-check-httpcode="401"
+failed-check-error-message="API Key Invalid or Not Found" ignore-case="true">
+    <value>API_ACCESS_KEY</value>
+</check-header>
+```
+
+#### CORS Policy:
+
+```
+<cors allow-credentials="false">
+    <allowed-origins>
+        <origin>APP_SERVICE_URL</origin>
+    </allowed-origins>
+    <allowed-methods>
+        <method>GET</method>
+        <method>POST</method>
+    </allowed-methods>
+</cors>
+```
+
+#### Rate Limit Policy:
+
+```
+<rate-limit calls="100" renewal-period="60" />
+```
+
+- This policy limits each client to 100 requests per minute.
+
+
 :::info
 Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
