@@ -32,12 +32,12 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 
 ## Part 1: Securing Application with Azure API Management and Key Vault Integration
 
-In this section, we will configure Azure API Management (APIM) to define and secure our APIs, and then use Azure Key Vault to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed.
+In this section, we will configure [Azure API Management (APIM)](https://learn.microsoft.com/azure/api-management/api-management-key-concepts) to define and secure our APIs, and then use [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview) to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed.
 
 ## What we cover:
 
-1. Defining and Adding APIs to Azure API Management  
-2. Configuring Azure Key Vault and Granting Access  
+1. Defining and Adding APIs to **Azure API Management**
+2. Configuring **Azure Key Vault** and Granting Access  
 
 ## Introduction
 
@@ -343,8 +343,8 @@ Once the APIs are defined and secured, we need to securely store the API keys an
 
 ### 2.1 Storing API Keys in Key Vault
 
-1. Go to your Azure Key Vault in the Azure portal.
-2. Select Secrets and create a new secret for each API key (e.g., BackendServiceAccessKey, MiddlewareServiceAccessKey).
+1. Go to your **Azure Key Vault** in the Azure portal.
+2. Select **Secrets** and create a new secret for each API key (e.g., `BackendServiceAccessKey`, `MiddlewareServiceAccessKey`).
 3. Update the values with the API keys configured in APIM.
 
 ### 2.2 Granting Access to Key Vault via Managed Identities
@@ -376,9 +376,7 @@ Once the APIs are defined and secured, we need to securely store the API keys an
 ```
 # Get the Managed Identity's client ID
 IDENTITY_CLIENT_ID=$(az webapp identity show --resource-group <resource-group-name> --name <app-service-name> --query principalId --output tsv)
-```
 
-```
 # Grant access to the Key Vault for the Managed Identity
 az keyvault set-policy --name <key-vault-name> --secret-permissions get list --object-id $IDENTITY_CLIENT_ID
 ```
