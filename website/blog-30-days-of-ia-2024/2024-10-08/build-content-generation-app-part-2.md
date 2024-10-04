@@ -323,6 +323,8 @@ Save this script, and then run it using the following command:
     --openai-embedding-model <embedding-deployment-name>
 ```
 
+![Code lines: add-secrets-to-keyvault.sh](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-1.png)
+
 ## Step 2. Run the Back-End Service Locally
 
 1. **Navigate to the back-end folder**. In your terminal, navigate to the back-end folder in the cloned repo.
@@ -338,6 +340,8 @@ Save this script, and then run it using the following command:
    ./mvnw spring-boot:run
    ```
 
+    ![image of the back-end service command running](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-2.png)
+
 ## Step 3: Run the Middleware Service Locally
 
 1. **Navigate to the middleware folder**. Open another terminal window, and navigate to the middleware folder.
@@ -348,6 +352,8 @@ Save this script, and then run it using the following command:
    server.port=8081
    ```
 
+      ![Code in application properties file](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-3.png)
+
 3. Add key vault environment variables. Set the environment variables as itemized `(AZURE_KEYVAULT_URI)`. 
 
 4. Run the middleware service. Use the following command:
@@ -355,6 +361,8 @@ Save this script, and then run it using the following command:
     ```
     ./mvnw spring-boot:run  
     ```
+
+      ![Results of running  mvnw spring boot run](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-4.png)
 
   The middleware will run on port **8081**.
 
@@ -370,7 +378,7 @@ Save this script, and then run it using the following command:
 
 3. Configure the .env file. Update the following variables in the .env file:
 
-    ![image of the application properties variables](../../static/img/30-days-of-ia-2024/blogs/2024-10-03/1-3a-2.png)
+    ![List of variables to update in the env file.](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-5.png)
 
 4. Install dependencies. Run npm install or yarn install to install the necessary front-end dependencies.  
 
@@ -388,7 +396,7 @@ Save this script, and then run it using the following command:
 
 **Note:** At this point, you’re prompted to sign in with your Microsoft Entra ID credentials. The front end authenticates the user with Microsoft Entra ID (user identity). After you sign in, the following screen appears.
 
-![image of the application properties variables](../../static/img/30-days-of-ia-2024/blogs/2024-10-03/1-3a-2.png)
+![App Modernization Content Generation Sample screen that say Effortless Marketing Content at Your Fingertips.](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-6.png)
 
 The front end runs on `http://localhost:3000`.
 
