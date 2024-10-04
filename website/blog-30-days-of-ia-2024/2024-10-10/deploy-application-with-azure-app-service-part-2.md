@@ -103,3 +103,35 @@ Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and 
     </configuration>
 </plugin>
 ```
+
+- **Note:** If the `subscriptionId` is not specified, the Maven plugin will use the default subscription configured in your **Azure CLI** or settings. Additionally, if the App Service defined in the appName field does not exist (as discussed in **blog 2b**), the Maven plugin will create it automatically during deployment.
+
+![screenshot of Maven plugin command](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-3.png)
+
+## Step 3: Deploying the Back-end and Middleware Services Using Maven
+
+1. **Deploy the Back-end Service Using Maven:**
+    - Use the following Maven wrapper command to deploy the back-end service to Azure App Service:
+
+      `./mvnw clean package azure-webapp:deploy`
+
+    - This command will either create the App Service instance (if it does not exist) or deploy the WAR file located in the target directory to the existing Azure Web App.
+
+![screenshot of Maven wrapper command back-end deployment](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-4.png)
+
+![screenshot of Maven wrapper command back-end deployment results](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-5.png)
+
+2. **Deploy the Middleware Service Using Maven:**
+    - Similarly, use the Maven wrapper command for the middleware service:
+
+      `./mvnw clean package azure-webapp:deploy`
+
+![screenshot of Maven clean package command](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-6.png)
+
+  - Verify that the middleware service is deployed successfully to the specified Azure App Service instance.
+
+![screenshot of Maven wrapper command middleware deployment](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-7.png)
+
+![screenshot of Maven wrapper command middleware deployment results](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-8.png)
+
+## Step 4: Deploying the Front-end Service
