@@ -1,0 +1,59 @@
+---
+date: 2024-10-10T09:00
+slug: deploy-application-with-azure-app-service-part-1
+title: "1.4a Deploy application with Azure App Service Part 1"
+authors: [30days]
+draft: true
+hide_table_of_contents: false
+toc_min_heading_level: 2
+toc_max_heading_level: 3
+keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days-2024, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
+image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
+description: "In this section, we will configure Azure API Management (APIM) to define and secure our APIs, and then use Azure Key Vault to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed." 
+tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, community-gallery, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
+---
+
+<head> 
+  <meta property="og:url" content="https://azure.github.io/cloud-native/30-days-of-ia-2024/deploy-application-with-azure-app-service-part-1"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/>
+  <meta property="og:description" content="In this section, we will configure Azure API Management (APIM) to define and secure our APIs, and then use Azure Key Vault to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed."/>
+  <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
+  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/deploy-application-with-azure-app-service-part-1" />
+  <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" />
+  <meta name="twitter:description" content="In this section, we will configure Azure API Management (APIM) to define and secure our APIs, and then use Azure Key Vault to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed." />
+  <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@devanshidiaries" />
+  <link rel="canonical" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/deploy-application-with-azure-app-service-part-1" />
+</head>
+
+<!-- End METADATA -->
+
+## Part 1: Securing Application with Azure API Management and Key Vault Integration
+
+In this section, we will configure Azure API Management (APIM) to define and secure our APIs, and then use Azure Key Vault to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed.
+
+## What we cover:
+
+1. Defining and Adding APIs to Azure API Management  
+2. Configuring Azure Key Vault and Granting Access  
+
+## Introduction
+
+In our previous blog post, we ran the application locally to verify its functionality. Now, we will focus on securing the APIs and managing sensitive data before deploying the application. First, we will define and add the necessary APIs for the back-end and middleware services using **Azure API Management (APIM)**. After configuring APIM, we will set up **Azure Key Vault** to securely store API keys and other sensitive information and grant secure access to these secrets using [Managed Identities](https://learn.microsoft.com/azure/app-service/overview-managed-identity?tabs=portal%2Chttp?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+
+
+![a screenshot shows the navigation to the "APIs" section in Azure API Management](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-1.png)
+
+
+:::info
+Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
+
+## Conclusion 
+
+In this section, we created and configured the APIs for both back-end and middleware services using **Azure API Management (APIM)**. We secured the APIs using CORS policies, header checks, and rate limits. After configuring APIM, we securely stored the API keys and other sensitive data in Azure Key Vault and granted access using Managed Identity. This setup ensures that all components interact securely and that sensitive information is managed properly.
+
+In the next section, we will deploy the application using Azure App Service, ensuring it utilizes the secure configurations established here.
+
