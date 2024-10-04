@@ -425,3 +425,8 @@ In this section, we created and configured the APIs for both back-end and middle
 
 In the next section, we will deploy the application using Azure App Service, ensuring it utilizes the secure configurations established here.
 
+## Additional Resources
+
+- [Understanding Azure API Management](https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Getting Started with Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Configuring Managed Identities in Azure](https://learn.microsoft.com/azure/app-service/overview-managed-identity?tabs=portal%2Chttp?ocid=biafy25h1_30daysofia_webpage_azuremktg)
