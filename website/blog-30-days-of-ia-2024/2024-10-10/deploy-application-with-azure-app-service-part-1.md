@@ -76,6 +76,31 @@ The screenshot shows the "Add API" button and the selection of the **HTTP** type
       - **Method:** Choose the HTTP method (e.g., `GET`, `POST`).
     - Click **Create** to add the API.
 
+![screenshot of HTTP API configuration for backend_service_app_service_URL](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-3.png)
+
+![screenshot of HTTP API configuration for backend_service_app_service_URL](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-4.png)
+
+![screenshot of HTTP API configuration for middleware_service_app_service_URL](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-5.png)
+
+![screenshot of API fields in Azure portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-6.png)
+
+  4. Add Operations for Each API
+
+      - After the API is created, add operations that define specific actions for the API. Follow these steps for both back-end and middleware services:
+        - **Back-end Service Operations:**
+            - `GET /api/v1/products`: Retrieves a list of products.
+            - `POST /api/v1/products/similar`: Returns similar products based on the request body.
+        - **Middleware Service Operations:**
+            - `POST /api/v1/generate/content`: Generates content based on input data.
+            - `POST /api/v1/generate/embeddings`: Generates embeddings based on input data.
+      - For each operation, configure the following:
+          - **Operation Name**: A descriptive name for the operation (e.g., "`Get Product List`", "`Generate Content`").
+          - **Method**: HTTP method (`GET` or `POST`).
+          - **URL**: Relative URL path.
+          - **Request Body/Parameters**: Define any request body or parameters required for the operation.
+      - Click **Save** to add the operation.
+
+
 :::info
 Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
