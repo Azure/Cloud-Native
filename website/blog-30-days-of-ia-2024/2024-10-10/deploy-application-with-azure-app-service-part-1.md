@@ -144,10 +144,212 @@ failed-check-error-message="API Key Invalid or Not Found" ignore-case="true">
 
 - This policy limits each client to 100 requests per minute.
 
+![screenshot of code response](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-10.png)
+
+  6. **Verify the API Configuration:**
+      - Once the APIs and operations are defined and secured, verify the configuration by using the **Test** feature in Azure API Management.  
+      - **Header Check Policy**: Validate the presence of an API key.
+
+### Azure CLI instructions
+
+You can create and configure all of the APIs used by our back-end and middleware services by saving and running the following script:
+
+Shell script: Create API and add policy (`create-api.sh`)
+
+```
+#!/bin/bash  
+
+# Function to display help  
+function display_help() {  
+  echo "Usage: $0 -g <resource-group> -b <backend-url> -m <middleware-url> -f <frontend-url> -ba <backend-apim-name> -ma <middleware-apim-name> [--backend-api-key <backend-api-key>] [--middleware-api-key <middleware-api-key>]"  
+  echo  
+  echo "Options:"  
+  echo "  -g, --resource-group              Azure Resource Group"  
+  echo "  -b, --backend-url                 Backend service URL"  
+  echo "  -m, --middleware-url              Middleware service URL"  
+  echo "  -f, --frontend-url                Frontend service URL"  
+  echo "  -ba, --backend-apim-name          Backend API Management name"  
+  echo "  -ma, --middleware-apim-name       Middleware API Management name"  
+  echo "  --backend-api-key                 (Optional) API Key for Backend service"  
+  echo "  --middleware-api-key              (Optional) API Key for Middleware service"  
+  echo "  -h, --help                        Display this help message"  
+  exit 0  
+}  
+
+# Function to generate API key if not provided  
+function generate_api_key() {  
+  echo $(uuidgen)  
+}  
+
+# Parse arguments  
+while [[ "$#" -gt 0 ]]; do  
+  case $1 in  
+    -g|--resource-group) RESOURCE_GROUP="$2"; shift ;;  
+    -b|--backend-url) BACKEND_URL="$2"; shift ;;  
+    -m|--middleware-url) MIDDLEWARE_URL="$2"; shift ;;  
+    -f|--frontend-url) FRONTEND_URL="$2"; shift ;;  
+    -ba|--backend-apim-name) BACKEND_APIM_NAME="$2"; shift ;;  
+    -ma|--middleware-apim-name) MIDDLEWARE_APIM_NAME="$2"; shift ;;  
+    --backend-api-key) BACKEND_API_KEY="$2"; shift ;;  
+    --middleware-api-key) MIDDLEWARE_API_KEY="$2"; shift ;;  
+    -h|--help) display_help ;;  
+    *) echo "Unknown option: $1"; display_help ;;  
+  esac  
+  shift  
+done  
+
+# Check for required arguments  
+if [[ -z "$RESOURCE_GROUP" || -z "$BACKEND_URL" || -z "$MIDDLEWARE_URL" || -z "$FRONTEND_URL" || -z "$BACKEND_APIM_NAME" || -z "$MIDDLEWARE_APIM_NAME" ]]; then  
+  echo "Error: Missing required arguments."  
+  display_help  
+fi  
+
+# Generate API keys if not provided  
+BACKEND_API_KEY=${BACKEND_API_KEY:-$(generate_api_key)}  
+MIDDLEWARE_API_KEY=${MIDDLEWARE_API_KEY:-$(generate_api_key)}  
+
+echo "Using Backend API Key: $BACKEND_API_KEY"  
+echo "Using Middleware API Key: $MIDDLEWARE_API_KEY"  
+
+# Create Backend API in APIM  
+az apim api create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$BACKEND_APIM_NAME" \  
+  --api-id backend-api \  
+  --path /api/v1/products \  
+  --display-name "Backend Product API" \  
+  --service-url "$BACKEND_URL" \  
+  --protocols https  
+
+# Add Backend API Operations  
+az apim api operation create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$BACKEND_APIM_NAME" \  
+  --api-id backend-api \  
+  --url-template "/" \  
+  --method GET \  
+  --display-name "Get Product List"  
+
+az apim api operation create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$BACKEND_APIM_NAME" \  
+  --api-id backend-api \  
+  --url-template "/similar" \  
+  --method POST \  
+  --display-name "Get Similar Product List"  
+
+# Apply Backend API Policy (CORS, API Key Validation)  
+az apim api policy create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$BACKEND_APIM_NAME" \  
+  --api-id backend-api \  
+  --xml-policy "  
+<inbound>  
+  <base />  
+  <cors allow-credentials='true'>  
+    <allowed-origins>  
+      <origin>$MIDDLEWARE_URL</origin>  
+    </allowed-origins>  
+    <allowed-methods>  
+      <method>GET</method>  
+      <method>POST</method>  
+    </allowed-methods>  
+    <allowed-headers>  
+      <header>*</header>  
+    </allowed-headers>  
+  </cors>  
+  <check-header name='api-key' failed-check-httpcode='401' failed-check-error-message='API Key Invalid or Not Found' ignore-case='true'>  
+    <value>$BACKEND_API_KEY</value>  
+  </check-header>  
+</inbound>"  
+
+# Create Middleware API in APIM  
+az apim api create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$MIDDLEWARE_APIM_NAME" \  
+  --api-id middleware-api \  
+  --path /api/v1/generate \  
+  --display-name "Middleware Generate API" \  
+  --service-url "$MIDDLEWARE_URL" \  
+  --protocols https  
+
+# Add Middleware API Operations  
+az apim api operation create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$MIDDLEWARE_APIM_NAME" \  
+  --api-id middleware-api \  
+  --url-template "/content" \  
+  --method POST \  
+  --display-name "Generate Content"  
+
+az apim api operation create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$MIDDLEWARE_APIM_NAME" \  
+  --api-id middleware-api \  
+  --url-template "/embeddings" \  
+  --method POST \  
+  --display-name "Generate Embeddings"  
+
+# Apply Middleware API Policy (CORS, API Key Validation)  
+az apim api policy create \  
+  --resource-group "$RESOURCE_GROUP" \  
+  --service-name "$MIDDLEWARE_APIM_NAME" \  
+  --api-id middleware-api \  
+  --xml-policy "  
+<inbound>  
+  <base />  
+  <cors allow-credentials='true'>  
+    <allowed-origins>  
+      <origin>$BACKEND_URL</origin>  
+      <origin>$FRONTEND_URL</origin>  
+    </allowed-origins>  
+    <allowed-methods>  
+      <method>POST</method>  
+    </allowed-methods>  
+    <allowed-headers>  
+      <header>*</header>  
+    </allowed-headers>  
+  </cors>  
+  <check-header name='api-key' failed-check-httpcode='401' failed-check-error-message='API Key Invalid or Not Found' ignore-case='true'>  
+    <value>$MIDDLEWARE_API_KEY</value>  
+  </check-header>  
+</inbound>"  
+
+echo "APIs created and policies applied successfully."  
+```
+
+#### What does the script do?
+
+The script configures the following API rules:
+ 
+- **Allowed origins in CORS:**
+  - The back-end API allows only the **middleware URL** as the allowed origin.
+  - The middleware API allows both **back-end URL** and **front-end URL** as allowed origins.
+- **Updated `check-header` validation:**
+  - Replaces `validate-header` with `check-header` for API key validation.
+  - Includes failed-check-httpcode="401", `failed-check-error-message="API Key Invalid or Not Found"`, and `ignore-case="true"`.
+
+After running the script, we’ll have created the APIs to use and will have applied the `CORS` and `check-header` policies for both back-end and middleware APIs. The script will also generate the required API keys, if you didn’t already provide them.
+
+![screenshot of code response script](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-11.png)
 
 :::info
 Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
+
+## Step 2: Configuring Azure Key Vault and Granting Access
+
+Once the APIs are defined and secured, we need to securely store the API keys and other sensitive information in **Azure Key Vault** and grant the application access to these secrets.
+
+### 2.1 Storing API Keys in Key Vault
+
+1. Go to your Azure Key Vault in the Azure portal.
+2. Select Secrets and create a new secret for each API key (e.g., BackendServiceAccessKey, MiddlewareServiceAccessKey).
+3. Update the values with the API keys configured in APIM.
+
+### 2.2 Granting Access to Key Vault via Managed Identities
+
+
 
 ## Conclusion 
 
