@@ -39,8 +39,8 @@ Additionally, we will deploy the front-end ReactJS application separately to its
 ## What we will cover:
 
 1. Preparing the Application for Deployment
-2. Configuring Maven for Azure Web App Deployment
-3. Deploying the Back-end and Middleware Services Using Maven
+2. Configuring Maven for **Azure Web App Deployment**
+3. Deploying the Back-end and Middleware Services Using **Maven**
 4. Deploying the Front-end Service
 5. Verifying the Deployment
 
@@ -104,7 +104,7 @@ Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and 
 </plugin>
 ```
 
-- **Note:** If the `subscriptionId` is not specified, the Maven plugin will use the default subscription configured in your **Azure CLI** or settings. Additionally, if the App Service defined in the appName field does not exist (as discussed in **blog 2b**), the Maven plugin will create it automatically during deployment.
+- **Note:** If the `subscriptionId` is not specified, the Maven plugin will use the default subscription configured in your **Azure CLI** or settings. Additionally, if the App Service defined in the `appName` field does not exist (as discussed in **blog 2b**), the Maven plugin will create it automatically during deployment.
 
 ![screenshot of Maven plugin command](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-3.png)
 
@@ -217,7 +217,7 @@ az webapp browse --resource-group <your-resource-group> --name <your-webapp-name
 
 ## Step 5: Verifying the Deployment
 
-1. Check Application Functionality:
+1. **Check Application Functionality**:
     - Open the front-end application in a browser and test its functionality to ensure it communicates with the back-end and middleware services as intended.
 
 ![screenshot of front end application browser view](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-14.png)
