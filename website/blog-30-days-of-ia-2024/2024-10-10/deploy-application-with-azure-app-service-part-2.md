@@ -135,3 +135,138 @@ Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and 
 ![screenshot of Maven wrapper command middleware deployment results](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-8.png)
 
 ## Step 4: Deploying the Front-end Service
+
+In our earlier blog post [1.2b. Preparing the Azure OpenAI Service resource](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-2), we discussed creating the app services that will host our app. If you didn’t create the front-end service then, you can do it now. 
+
+If you already created a front-end app service, proceed to deploy the ZIP file in step [4.2](#deploy-the-zip-file).
+
+### 4.1 Create App Service
+
+#### Azure portal instructions
+
+1. In the Azure portal, go to **App Services**.
+2. Select **Create and choose the Web App**.
+3. Select your subscription and resource group, and give the app a name (for example, `frontend-service`).
+4. Choose the **Runtime stack: Node.js** and **Operating System: Linux**.
+5. Configure **Deployment** and **Monitoring** options as needed.
+6. Review and create the App Service.
+
+![Web App configuration in Web Apps in the Azure portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-9.png)
+
+![Web App deployment in Web Apps in the Azure portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-10.png)
+
+#### Azure CLI instructions
+
+```
+# Create Web App for Frontend (ReactJS)
+az webapp create --resource-group <your-resource-group-name> --plan <plan-name> --name <your-frontend-name> --runtime "NODE:22-lts"
+```
+
+![Web App frontend deployment command](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-11.png)
+
+### 4.2 Deploy the ZIP File
+
+Build, package, and deploy the application using the following commands.
+
+***Note:** Before deploying code, make sure that you’ve cloned the application source from the GitHub repository to your local machine and then navigate to the “frontend” folder.*
+
+```
+# Build the application
+npm run build  
+
+# Conver into ZIP File
+zip -r build.zip ./build
+
+# Deploy the code into Azure App Service
+az webapp deploy --resource-group <your-resource-group> --name <your-web-app-name> --src-path build.zip --type zip  
+```
+
+![ZIP file deployment command](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-12.png)
+
+### 4.3 Set the correct startup command for React
+
+Azure App Service needs to know how to correctly serve requests to our front-end React app. For static sites, like this React app, you configure the startup command to serve static files and handle routing for single-page applications (SPAs).
+
+You can configure the app service to use the correct React startup command for the app by running the following:
+
+```
+az webapp config set --resource-group <your-resource-group> --name <your-web-app-name> --startup-file "pm2 serve /home/site/wwwroot/build --no-daemon --spa"
+```
+
+![Configuration code to use the correct React startup command](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-13.png)
+
+### 4.4 Clear browser cache
+
+Your browser cache may prevent client-side updates from appearing correctly. After deploying the front-end app, clear your browser cache or use an incognito window before accessing the app to make sure that you're seeing the latest version.
+
+### 4.5 Restart the web app
+
+Configuration changes to the app service may not be applied immediately. To be sure that the app is running correctly, after a successful deployment, restart the web app to make sure that everything is refreshed:
+
+```
+az webapp restart --name <your-web-app-name> --resource-group <your-resource-group>
+```
+
+### 4.6 Verify your deployment
+
+Open the newly deployed web app in a browser, and be sure that it’s running:
+
+```
+az webapp browse --resource-group <your-resource-group> --name <your-webapp-name>
+```
+
+## Step 5: Verifying the Deployment
+
+1. Check Application Functionality:
+    - Open the front-end application in a browser and test its functionality to ensure it communicates with the back-end and middleware services as intended.
+
+![screenshot of front end application browser view](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-14.png)
+
+![another screenshot of front end application browser view](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-15.png)
+
+### Cleanup
+
+Once you have finished deploying and testing your application, it's essential to clean up the resources to avoid incurring any unnecessary costs. You can delete the Azure Resource Group that contains your resources using either the **Azure CLI** or the **Azure portal**. This will remove all the resources within that group, such as the Azure App Service, Azure API Management, and any other services created in the group.
+
+#### Using Azure CLI
+
+To delete the resource group using the Azure CLI, follow these steps:
+- Open your terminal or Azure Cloud Shell.
+- Run the following command to delete the resource group:
+
+```
+az group delete --name <resource-group-name> --yes --no-wait
+```
+
+- Replace `<resource-group-name>` with the name of your Azure resource group.
+- The `--yes` parameter confirms the deletion without a prompt.
+- The `--no-wait` parameter initiates the deletion and immediately returns control to the terminal, so you don't have to wait for the deletion process to complete.
+
+#### Using the Azure Portal
+
+If you prefer to delete the resources using the Azure portal, follow these instructions:  
+
+- **Navigate to the Azure Portal:** Go to [Azure Portal](http://portal.azure.com/) and sign in with your credentials.
+- **Select "Resource Groups":** In the left-hand menu, select **Resource groups**. This will list all the resource groups available in your subscription.
+- **Find the Resource Group:** Locate the resource group you want to delete (e.g., the resource group that contains your AKS and ACR resources).
+- **Click on the Resource Group:** Click on the resource group name to open it.
+- **Delete the Resource Group:** At the top of the resource group page, click on **Delete resource group**.
+- **Confirm Deletion:** You will be prompted to type the name of the resource group to confirm deletion. Type the name exactly and click on the **Delete** button.
+
+![Azure portal view of deleting the Resource group](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-16.png)
+
+Deleting a resource group in the Azure portal will remove **all resources** associated with it. Be careful when performing this action, as it cannot be undone.
+
+:::info
+Learn more on Technical leaders’ [guide to building intelligent apps](https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
+
+## Conclusion
+
+In this section, we deployed our Java-based back-end and middleware services using the Maven Azure Web App Plugin and verified that they were hosted correctly in Azure App Service. We also deployed the front-end ReactJS application using the deployment center in Azure App Service. These steps ensure that all components are securely hosted and configured for seamless communication.
+
+## Additional Resources:
+
+- [Azure Web App Maven Plugin Documentation](https://github.com/microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)
+- [Azure App Service Documentation](https://learn.microsoft.com/azure/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Deploying Java Applications to Azure](https://learn.microsoft.com/azure/app-service/app-service-web-java?ocid=biafy25h1_30daysofia_webpage_azuremktg)
