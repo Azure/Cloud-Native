@@ -1,7 +1,7 @@
 ---
 date: 2024-10-10T09:00
 slug: deploy-application-with-AKS-part-2
-title: "1.5a Deploy Application with AKS Part 1"
+title: "1.5b Deploy Application with AKS Part 2"
 authors: [30days]
 draft: true
 hide_table_of_contents: false
@@ -46,4 +46,4 @@ In this blog, we will deploy our application components (Middleware, Back-end, a
 Join the next snackable AI Demo Bytes to explore how to [ apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
 
-![screenshot of Azure CLI commands for creating and configuring managed identities for AKS clusters](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5a-1.png)
+![screenshot of Azure CLI commands for creating and configuring managed identities for AKS clusters](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5b-1.png)
