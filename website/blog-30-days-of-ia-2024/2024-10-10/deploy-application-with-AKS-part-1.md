@@ -57,8 +57,8 @@ Join the next snackable AI Demo Bytes to explore how to [ apply auto-scaling and
 
 In this step, we will set up Azure Key Vault and configure Managed Identity to allow secure access to the secrets stored in Key Vault.
 
-1. **Create a Key Vault:**
-    - Use the Azure CLI to create a Key Vault if it does not already exist:
+### Create a Key Vault:
+  - Use the Azure CLI to create a Key Vault if it does not already exist:
 
 ```
 az aks create \
@@ -71,9 +71,9 @@ az aks create \
   --generate-ssh-keys
 ```
 
-2. **Enable Managed Identity in AKS:**
-    - Follow the Azure documentation to enable Managed Identity for the AKS cluster using workload identity: [Workload Identity for AKS](https://learn.microsoft.com/azure/aks/workload-identity-deploy-cluster?ocid=biafy25h1_30daysofia_webpage_azuremktg).
-    - Run the following commands to integrate workload identity:
+### Enable Managed Identity in AKS:
+  - Follow the Azure documentation to enable Managed Identity for the AKS cluster using workload identity: [Workload Identity for AKS](https://learn.microsoft.com/azure/aks/workload-identity-deploy-cluster?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+  - Run the following commands to integrate workload identity:
 
 ```
 # Retrieve the OIDC issuer URL
@@ -142,8 +142,8 @@ EOF
 
 ![screenshot of Azure CLI commands for deploying the application](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5a-5.png)
 
-3. **Grant Access to Key Vault:**
-    - Use the following command to grant the Managed Identity access to the Key Vault:
+### Grant Access to Key Vault:
+  - Use the following command to grant the Managed Identity access to the Key Vault:
 
 ```
 # Retrieve the Key Vault resource ID
