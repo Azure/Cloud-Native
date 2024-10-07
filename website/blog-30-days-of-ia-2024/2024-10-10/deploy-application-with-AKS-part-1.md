@@ -53,7 +53,7 @@ The APIM configuration for the Middleware and Back-end services remains the same
 Join the next snackable AI Demo Bytes to explore how to [ apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
 
-## Setting Up Key Vault and Managed Identity
+## Step 2: Setting Up Key Vault and Managed Identity
 
 In this step, we will set up Azure Key Vault and configure Managed Identity to allow secure access to the secrets stored in Key Vault.
 
@@ -71,7 +71,7 @@ az aks create \
   --generate-ssh-keys
 ```
 
-2. Enable Managed Identity in AKS:
+2. **Enable Managed Identity in AKS:**
     - Follow the Azure documentation to enable Managed Identity for the AKS cluster using workload identity: [Workload Identity for AKS](https://learn.microsoft.com/azure/aks/workload-identity-deploy-cluster?ocid=biafy25h1_30daysofia_webpage_azuremktg).
     - Run the following commands to integrate workload identity:
 
@@ -174,14 +174,59 @@ export AZURE_KEYVAULT_URI=https://<KEYVAULT_NAME>.vault.azure.net/
 
 ![screenshot of Azure CLI command to create a role assignment](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5a-7.png)
 
-## Conclusion 
+## Step 3: Creating Kubernetes Pod with Managed Identity Integration
 
-In this section, we created and configured the APIs for both back-end and middleware services using **Azure API Management (APIM)**. We secured the APIs using CORS policies, header checks, and rate limits. After configuring APIM, we securely stored the API keys and other sensitive data in Azure Key Vault and granted access using Managed Identity. This setup ensures that all components interact securely and that sensitive information is managed properly.
+In this step, we will create a Kubernetes pod and integrate it with Key Vault using the Managed Identity.
 
-In the next section, we will deploy the application using Azure App Service, ensuring it utilizes the secure configurations established here.
+### Deploy a Kubernetes Pod reference:
+- To define the pod with the necessary labels and annotations for Managed Identity integration.
+
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Pod
+metadata:
+  name: workload-identity-key-vault
+  namespace: default
+  labels:
+    azure.workload.identity/use: "true"
+spec:
+  serviceAccountName: <SERVICE_ACCOUNT_NAME>
+  containers:
+    - image: ghcr.io/azure/azure-workload-identity/msal-go
+      name: oidc
+      env:
+        - name: AZURE_KEYVAULT_URI
+          value: ${AZURE_KEYVAULT_URI}
+  nodeSelector:
+    kubernetes.io/os: linux
+EOF
+```
+
+![screenshot of Azure CLI command to create an Azure Kubernetes pod and integrate it with Key Vault](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5a-8.png)
+
+## Step 4: Verifying Configurations
+
+### Verify Pod Creation:
+- Check if the pod is running successfully:
+
+```
+kubectl get pods
+```
+
+![screenshot of Azure CLI command kubectl get pods](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5a-9.png)
+
+:::info
+Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+:::
+
+## Conclusion
+
+In this blog, we configured APIM, Key Vault, and Managed Identity for the Middleware and Back-end services. We also created a Kubernetes pod with Managed Identity integration, ensuring secure access to Key Vault secrets.
 
 ## Additional Resources
 
-- [Understanding Azure API Management](https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg)
-- [Getting Started with Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)
-- [Configuring Managed Identities in Azure](https://learn.microsoft.com/azure/app-service/overview-managed-identity?tabs=portal%2Chttp?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Azure API Management Documentation](https://learn.microsoft.com/azure/api-management/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Azure Key Vault Documentation](https://learn.microsoft.com/azure/key-vault/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Managed Identities for Azure Resources](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Workload Identity for AKS](https://learn.microsoft.com/azure/aks/workload-identity-deploy-cluster?ocid=biafy25h1_30daysofia_webpage_azuremktg)
