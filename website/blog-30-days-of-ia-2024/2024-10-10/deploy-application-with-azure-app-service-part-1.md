@@ -32,9 +32,9 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 
 ## Part 1: Securing Application with Azure API Management and Key Vault Integration
 
-In this section, we will configure [Azure API Management (APIM)](https://learn.microsoft.com/azure/api-management/api-management-key-concepts) to define and secure our APIs, and then use [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview) to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed.
+In this section, we will configure **[Azure API Management (APIM)](https://learn.microsoft.com/azure/api-management/api-management-key-concepts)** to define and secure our APIs, and then use **[Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview)** to securely store and access the required secrets for these APIs. This setup ensures that all API endpoints are protected and that sensitive information is securely managed.
 
-## What we cover:
+## What we will cover:
 
 1. Defining and Adding APIs to **Azure API Management**
 2. Configuring **Azure Key Vault** and Granting Access  
@@ -84,7 +84,7 @@ The screenshot shows the "Add API" button and the selection of the **HTTP** type
 
 ![screenshot of API fields in Azure portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-6.png)
 
-  4. Add Operations for Each API
+  4. **Add Operations for Each API:**
 
       - After the API is created, add operations that define specific actions for the API. Follow these steps for both back-end and middleware services:
         - **Back-end Service Operations:**
@@ -148,7 +148,7 @@ failed-check-error-message="API Key Invalid or Not Found" ignore-case="true">
 
   6. **Verify the API Configuration:**
       - Once the APIs and operations are defined and secured, verify the configuration by using the **Test** feature in Azure API Management.  
-      - **Header Check Policy**: Validate the presence of an API key.
+      - Make a sample request to each endpoint to ensure that they respond correctly.This testing will occur after the application has been deployed for both the back-end and middleware services. 
 
 ### Azure CLI instructions
 
@@ -334,7 +334,7 @@ After running the script, we’ll have created the APIs to use and will have app
 ![screenshot of code response script](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-11.png)
 
 :::info
-Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+[Ingest your own content](https://aka.ms/demo-bytes/ep13?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.
 :::
 
 ## Step 2: Configuring Azure Key Vault and Granting Access
@@ -372,6 +372,8 @@ Once the APIs are defined and secured, we need to securely store the API keys an
 ![screenshot of access policy once created](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4a-18.png)
 
 #### Azure CLI instructions
+
+Run the following commands:
 
 ```
 # Get the Managed Identity's client ID

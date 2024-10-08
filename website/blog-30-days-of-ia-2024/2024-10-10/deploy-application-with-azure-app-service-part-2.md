@@ -1,5 +1,5 @@
 ---
-date: 2024-10-10T09:00
+date: 2024-10-10T09:01
 slug: deploy-application-with-azure-app-service-part-2
 title: "1.4b Deploy application with Azure App Service Part 2"
 authors: [30days]
@@ -64,7 +64,7 @@ Before deploying, ensure that your application is built and packaged correctly. 
 ![screenshot of Maven clean package command](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-4b-2.png)
 
 :::info
-Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+[Ingest your own content](https://aka.ms/demo-bytes/ep13?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.
 :::
 
 ## Step 2: Configuring the Azure Web App Maven Plugin
