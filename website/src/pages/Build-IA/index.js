@@ -73,36 +73,6 @@ const CampaignFeatures = [
   },
 ];
 
-const LearnSkillsCards = [
-  {
-    title: "Cloud Native Security",
-    link: "/Cloud-Native/downloads/cloud-native-security-with-aks.pdf",
-    description: (
-      <>
-        This guide provides an overview of best practices in cloud-native security for each stage in your container app's journey from code to cloud and how AKS works better with Microsoft Defender for Containers. 
-      </>
-    ),
-  },
-  {
-    title: "Intro to Platform Engineering",
-    link: "/Cloud-Native/downloads/platform-engineering-an-introduction.pdf",
-    description: (
-      <>
-        This e-book shares our best learnings so your organization can build the foundation of a platform engineering practice and you can start seeing the benefits for yourself.
-      </>
-    ),
-  },
-  {
-    title: "Code to cloud with GitHub and AKS",
-    link: "/Cloud-Native/downloads/code-to-cloud-with-aks.pdf",
-    description: (
-      <>
-        Using the recommendations in this e-book, you can get a noncontainerized application deployed on a Kubernetes cluster—in minutes. 
-      </>
-    ),
-  },
-];
-
 function Feature({ svgpath, title, linkTitle, description, link, className }) {
   return (
     <div className={clsx(className, 'card-col')}>
@@ -119,53 +89,6 @@ function Feature({ svgpath, title, linkTitle, description, link, className }) {
           </div>
         </div>
       </Link>
-    </div>
-  );
-}
-
-const DownloadLink = ({ link, children }) => {
-  if (!link) {
-    console.error("Error: 'link' prop is required for the download functionality.");
-    return null; // Exit early if the link is not provided
-  }
-
-  const handleDownload = (e) => {
-    e.preventDefault();
-    const anchor = document.createElement('a');
-    anchor.href = link;
-    anchor.download = ''; // Provide a filename if necessary
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-  };
-
-  return (
-    <a
-      className="card-link"
-      href={link}
-      data-bi-area="BodyGrid"
-      data-bi-name="Download Link"
-      onClick={handleDownload}
-    >
-      {children}
-    </a>
-  );
-};
-
-function LearnValuableSkills({ title, description, link, className }) {
-  return (
-    <div className={clsx(className, 'card-col')}>
-      {/* Wrap the entire card with the DownloadLink */}
-      <DownloadLink link={link}>
-        <div className="card">
-          <div className="card-body">
-            <div fill="#00ff00" className="padding-horiz--md">
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </div>
-          </div>
-        </div>
-      </DownloadLink>
     </div>
   );
 }
@@ -220,29 +143,6 @@ function FeaturesSection() {
   );
 }
 
-function LearnValuableSkillsSection() {
-  return (
-    <section className={styles.features} style={{ paddingTop: '0rem' }}>
-      <div className="container">
-        <div className="row">
-          <div className='col text--center'>
-            <h2 style={{ paddingBottom: '1rem' }}>Learn valuable skills</h2>
-          </div>
-        </div>
-        <div className="row">
-          {LearnSkillsCards.map((props, idx) => (
-            <LearnValuableSkills
-              key={idx}
-              {...props}
-              className={'col col--4 card-col'}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export default function BuildIA() {
   return (
     <Layout
@@ -251,7 +151,6 @@ export default function BuildIA() {
       <CampaignHeader />
       <main>
         <FeaturesSection />
-        <LearnValuableSkillsSection />
       </main>
     </Layout>
   );
