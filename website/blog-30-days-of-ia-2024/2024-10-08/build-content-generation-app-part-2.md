@@ -353,11 +353,7 @@ Save this script, and then run it using the following command:
 
 2. **Change the port for middleware**. Open the `application.properties` file in the middleware folder, and change the default port to `8081` by adding:
 
-   ```
-   server.port=8081
-   ```
-
-      ![Code in application properties file](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-3.png)
+      ![Code in application properties file](../../static/img/30-days-of-ia-2024/blogs/2024-10-08/1-3b-3-v2.png)
 
 3. **Add key vault environment variables.** Set the environment variables as itemized `(AZURE_KEYVAULT_URI)`. 
 
