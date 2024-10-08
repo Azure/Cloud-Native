@@ -71,7 +71,6 @@ After access is granted, add the following secrets into **Azure Key Vault** to s
 - `AzureOpenAiEndpointUrl`
 - `AzureOpenAiAccessKey`
 - `AzureOpenAiEmbeddingEndpointUrl`
-- `AzureOpenAiEmbeddingKey`
 
 ### CLI instructions  
 
@@ -329,13 +328,13 @@ Save this script, and then run it using the following command:
 Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
 
-## Step 2. Run the Back-End Service Locally
+## Step 2. Run the back-end service locally
 
 1. **Navigate to the back-end folder**. In your terminal, navigate to the back-end folder in the cloned repo.
 
 2. **Open the folder in your IDE**. Use [Visual Studio Code](https://code.visualstudio.com/) or [IntelliJ IDEA](https://www.jetbrains.com/idea/) to open the back-end folder.
 
-3. **Add Key Vault environment variables** .Be sure that the following variable is set in your local environment:
+3. **Add Key Vault environment variables**. Be sure that the following variable is set in your local environment:
    - `AZURE_KEYVAULT_URI`: The URL of your Key Vault.
 
 4. **Run the back-end service**. To start the back-end service, run the following command:
@@ -348,7 +347,7 @@ Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and 
 
     The back-end service will run on port **8080**.
 
-## Step 3: Run the Middleware Service Locally
+## Step 3: Run the middleware service locally
 
 1. **Navigate to the middleware folder**. Open another terminal window, and navigate to the middleware folder.
 
@@ -372,7 +371,7 @@ Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and 
 
   The middleware will run on port **8081**.
 
-## Step 4: Run the Front-End Service Locally
+## Step 4: Run the front-end service locally
 
 1. **Navigate to the front-end folder**. Go to the front-end folder in your cloned repo.
 
@@ -406,13 +405,13 @@ Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and 
 
 The front end runs on `http://localhost:3000`.
 
-### Local vs. Deployment Environments
+### Local vs. deployment environments
 
 For local development, you can set the **endpoint URLs** directly in `.env` or `application.properties` files. However, after deployment to **AKS** or **App Service**, you need to update the **Key Vault secrets** to reflect the public-facing URLs and credentials:
 
-- **Back-end and middleware URLs**: Replace `localhost` with the public URL of your deployed services.
+- **Back-end and middleware URLs:** Replace `localhost` with the public URL of your deployed services.
 
-- **API Management**: When deployed, make sure that API keys and exposed API URLs are managed through **API Management**.
+- **API Management:** When deployed, make sure that API keys and exposed API URLs are managed through **API Management**.
 
 We’ll cover the details of deploying to AKS or App Service and using API Management in subsequent topics.
 
