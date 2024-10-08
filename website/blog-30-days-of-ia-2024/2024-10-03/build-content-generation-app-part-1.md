@@ -1,5 +1,5 @@
 ---
-date: 2024-10-03T09:00
+date: 2024-10-08T09:00
 slug: build-content-generation-app-part-1
 title: "1.3a Build Content Generation App Part 1"
 authors: [30days]
@@ -17,11 +17,11 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
   <meta property="og:url" content="https://azure.github.io/cloud-native/30-days-of-ia-2024/build-content-generation-app-part-1"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/>
-  <meta property="og:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!"/>
+  <meta property="og:description" content="Learn how to download our example app code, and prepare to run it in your local dev environment."/>
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
   <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/build-content-generation-app-part-1" />
   <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" />
-  <meta name="twitter:description" content="Join us on a learning journey to build intelligent apps on Azure. Read all about the upcoming #BuildIntelligentApps initiative on this post!" />
+  <meta name="twitter:description" content="Learn how to download our example app code, and prepare to run it in your local dev environment." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@devanshidiaries" />
@@ -32,7 +32,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 
 ## Part 1: Download and configure app code
 
-Learn how to create and configure the Azure OpenAI Service resource that we’ll use in our example app.
+Learn how to download our example app code, and prepare to run it in your local dev environment.
 
 ## What we cover:
 
@@ -70,7 +70,7 @@ git clone https://github.com/Azure-Samples/Java-AI-Based-Content-Generator
 ```
 
 :::info
-Join the next snackable AI Demo Bytes to explore how to [apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+[Ingest your own content](https://aka.ms/demo-bytes/ep13?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.
 :::
 
 ## Step 2: Set Up Azure Key Vault Secrets and User Identity (Local Setup)
