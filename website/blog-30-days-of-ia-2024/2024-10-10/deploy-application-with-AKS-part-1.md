@@ -47,7 +47,7 @@ Before proceeding, ensure that you have completed the environment setup describe
 
 ## Step 1: Review of APIM Configuration
 
-The APIM configuration for the Middleware and Back-end services remains the same as covered in Blog 1.4a. Please refer to **Blog 1.4a** for detailed steps on setting up APIM and configuring CORS policies, header checks, and other necessary configurations.
+The APIM configuration for the Middleware and Back-end services remains the same as covered in **Blog 1.4a**. Please refer to Blog 1.4a for detailed steps on setting up APIM and configuring CORS policies, header checks, and other necessary configurations.
 
 :::info
 [Ingest your own content](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.
