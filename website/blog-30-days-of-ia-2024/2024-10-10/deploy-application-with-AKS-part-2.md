@@ -53,13 +53,13 @@ Before proceeding, ensure that the Managed Identity and Key Vault configurations
 Azure Kubernetes Service (AKS) is a managed container orchestration service that simplifies the deployment, management, and operations of Kubernetes. It enables seamless scaling, monitoring, and management of containerized applications. With AKS, you can deploy, manage, and scale containerized applications with ease.
 
 :::info
-Join the next snackable AI Demo Bytes to explore how to [ apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+Ingest your own content [using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.](https://aka.ms/demo-bytes/ep13?ocid=biafy25h1_30daysofia_webpage_azuremktg).
 :::
 
 ## Step 2: Preparing the Application for AKS Deployment
 
 ### Containerize the Application:
-- Ensure that you have a separate Dockerfile for each service (Back-end, Middleware, and Front-end) for the containerization process. Example Dockerfile for Back-end:
+- Ensure that you have a separate `Dockerfile` for each service (Back-end, Middleware, and Front-end) for the containerization process. Example `Dockerfile` for Back-end:
 
 ```
 # Use an official JDK base image
@@ -263,4 +263,31 @@ az group delete --name <resource-group-name> --yes --no-wait
 ### Using the Azure Portal
 
 If you prefer to delete the resources using the Azure portal, follow these instructions:
+
+- **Navigate to the Azure Portal:** Go to [Azure Portal](http://portal.azure.com/) and sign in with your credentials.
+- **Select "Resource Groups":** In the left-hand menu, select **Resource groups**. This will list all the resource groups available in your subscription.
+- **Find the Resource Group:** Locate the resource group you want to delete (e.g., the resource group that contains your AKS and ACR resources).
+- **Click on the Resource Group:** Click on the resource group name to open it.
+- **Delete the Resource Group:** At the top of the resource group page, click on Delete resource group.
+- **Confirm Deletion:** You will be prompted to type the name of the resource group to confirm deletion. Type the name exactly and click on the **Delete** button.
+
+![deleting resources in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5b-9.png)
+
+Deleting a resource group in the Azure portal will remove **all resources** associated with it. Be careful when performing this action, as it cannot be undone.
+
+:::info
+Learn more on Technical leaders’ [  guide to building intelligent apps](https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
+
+## Conclusion
+
+In this blog, we successfully deployed our Middleware, Back-end, and Front-end services to Azure Kubernetes Service (AKS) using Kubernetes configurations and the Azure CLI. By using the `--enable-oidc-issuer` and `--enable-workload-identity` flags, we enabled secure workload identity on the cluster, allowing for integration with Azure AD and seamless access to Key Vault secrets.
+
+## Additional Resources
+
+- [Azure Kubernetes Service Documentation](https://learn.microsoft.com/azure/aks/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Getting Started with Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/get-started-aks)
+- [Deploying Applications to Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/deploy-application)
+- [Managed Identities for Azure Resources](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/)
+- [Workload Identity for AKS](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster)
 
