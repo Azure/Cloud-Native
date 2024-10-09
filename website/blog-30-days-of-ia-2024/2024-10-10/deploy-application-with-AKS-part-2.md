@@ -46,14 +46,14 @@ In this blog, we will deploy our application components (Middleware, Back-end, a
 
 ## Prerequisites
 
-Before proceeding, ensure that the Managed Identity and Key Vault configurations are completed as described in **Blog 5.a**. Additionally, refer to **Blog 2.b** for details on the initial environment setup, where the AKS cluster and Azure Container Registry (ACR) were created.
+Before proceeding, ensure that the Managed Identity and Key Vault configurations are completed as described in **Blog 1.5a**. Additionally, refer to **[Blog 1.2b](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-2)** for details on the initial environment setup, where the AKS cluster and Azure Container Registry (ACR) were created.
 
 ## Step 1: Understanding Azure Kubernetes Service (AKS)
 
 Azure Kubernetes Service (AKS) is a managed container orchestration service that simplifies the deployment, management, and operations of Kubernetes. It enables seamless scaling, monitoring, and management of containerized applications. With AKS, you can deploy, manage, and scale containerized applications with ease.
 
 :::info
-Ingest your own content [using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.](https://aka.ms/demo-bytes/ep13?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+ [Ingest your own content](https://aka.ms/demo-bytes/ep13?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data..
 :::
 
 ## Step 2: Preparing the Application for AKS Deployment
@@ -92,14 +92,11 @@ az acr login --name <ACR_NAME>
 # Set your image build version
 VERSION=1.0.1
 
-# Build the Docker image
 docker build -t aistudy/backend-service:${VERSION} .
 
-# Tag the built image into ACR repository
 docker tag aistudy/backend-service:${VERSION} <ACR_Name>.azurecr.io/aistudy/backend-service:${VERSION}
 
-# Push the backend service image to ACR
-docker push <ACR_Name>.azurecr.io/aistudy/backend-service:${VERSION}
+docker push <ACR_Name>.azurecr.io/backend-service:latest
 
 # Build and push the Back-end service
 docker tag backend-service:latest <ACR_Name>.azurecr.io/backend-service:latest
@@ -120,7 +117,7 @@ docker push <ACR_Name>.azurecr.io/frontend-service:latest
 
 ## Step 3: Creating the AKS Cluster
 
-If you have not already created the AKS cluster and ACR (Azure Container Registry), refer to Blog 1.2b for details on the environment setup.
+If you have not already created the AKS cluster and ACR (Azure Container Registry), refer to **[Blog 1.2b](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-2)** for details on the environment setup.
 
 ### Create AKS Cluster Using Azure CLI
 - Use the following Azure CLI command to create a new AKS cluster with workload identity enabled:
@@ -268,7 +265,7 @@ If you prefer to delete the resources using the Azure portal, follow these instr
 - **Select "Resource Groups":** In the left-hand menu, select **Resource groups**. This will list all the resource groups available in your subscription.
 - **Find the Resource Group:** Locate the resource group you want to delete (e.g., the resource group that contains your AKS and ACR resources).
 - **Click on the Resource Group:** Click on the resource group name to open it.
-- **Delete the Resource Group:** At the top of the resource group page, click on Delete resource group.
+- **Delete the Resource Group:** At the top of the resource group page, click on **Delete resource group**.
 - **Confirm Deletion:** You will be prompted to type the name of the resource group to confirm deletion. Type the name exactly and click on the **Delete** button.
 
 ![deleting resources in Azure Portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5b-9.png)

@@ -43,14 +43,14 @@ In this blog, we will set up **APIM**, **Key Vault**, and **Managed Identity** f
 
 ## Prerequisites
 
-Before proceeding, ensure that you have completed the environment setup described in **Blog 2.b**, where we created the AKS cluster and Azure Container Registry (ACR).
+Before proceeding, ensure that you have completed the environment setup described in **Blog 1.2b**, where we created the AKS cluster and Azure Container Registry (ACR).
 
 ## Step 1: Review of APIM Configuration
 
-The APIM configuration for the Middleware and Back-end services remains the same as covered in Blog 1.4a. Please refer to **Blog 1.4a** for detailed steps on setting up APIM and configuring CORS policies, header checks, and other necessary configurations.
+The APIM configuration for the Middleware and Back-end services remains the same as covered in **Blog 1.4a**. Please refer to Blog 1.4a for detailed steps on setting up APIM and configuring CORS policies, header checks, and other necessary configurations.
 
 :::info
-Join the next snackable AI Demo Bytes to explore how to [ apply auto-scaling and load testing to your AI applications](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+[Ingest your own content](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.
 :::
 
 ## Step 2: Setting Up Key Vault and Managed Identity
@@ -146,27 +146,23 @@ EOF
   - Use the following command to grant the Managed Identity access to the Key Vault:
 
 ```
-# Retrieve the Key Vault resource ID
 export KEYVAULT_RESOURCE_ID=$(az keyvault show --resource-group <RESOURCE_GROUP_NAME> \
   --name <KEYVAULT_NAME> \
   --query id \
   --output tsv)
 
-# Retrieve the principal ID of the User Assigned Managed Identity
 export IDENTITY_PRINCIPAL_ID=$(az identity show \
   --name <USER_ASSIGNED_IDENTITY_NAME> \
   --resource-group <RESOURCE_GROUP_NAME> \
   --query principalId \
   --output tsv)
 
-# Assign the "Key Vault Secrets User" role to the Managed Identity
 az role assignment create \
   --assignee-object-id "${IDENTITY_PRINCIPAL_ID}" \
   --role "Key Vault Secrets User" \
   --scope "${KEYVAULT_RESOURCE_ID}" \
   --assignee-principal-type ServicePrincipal
 
-# Set the Key Vault URI for future use
 export AZURE_KEYVAULT_URI=https://<KEYVAULT_NAME>.vault.azure.net/
 ```
 
