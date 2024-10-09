@@ -3,7 +3,7 @@ date: 2024-10-09T09:01
 slug: build-content-generation-app-part-2
 title: "1.3b Build Content Generation App Part 2"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

@@ -1,9 +1,9 @@
 ---
-date: 2024-10-10T09:01
+date: 2024-10-09T09:03
 slug: deploy-application-with-azure-app-service-part-2
 title: "1.4b Deploy application with Azure App Service Part 2"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
