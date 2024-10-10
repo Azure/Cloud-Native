@@ -265,3 +265,32 @@ stages: 
 
 #### Testing the CI/CD Pipeline
 
+After setting up the pipeline, navigate to the **Pipelines** section in Azure DevOps and manually trigger a run to test your configuration.
+
+1. **Navigate to Pipelines:** Open the Pipelines section.
+
+    ![screenshot of Pipelines in Azure DevOps portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6-9.png)
+
+2. **Select the Pipeline:** Choose the pipeline you configured.
+
+    ![screenshot of Pipeline configuration in Azure DevOps portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6-10.png)
+
+3. **Run Pipeline:** Click on **Run pipeline** and monitor the execution.
+
+    ![screenshot of Run pipeline screen in Azure DevOps portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6-11.png)
+
+4. **Monitor Job Logs:** View the logs for each stage to ensure there are no errors.
+
+    ![screenshot of logs in Azure DevOps portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6-12.png)
+
+:::info
+Join live experts to dive into [operational excellence with AKS](https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+:::
+
+## Conclusion
+
+In this blog, we explored how to set up a CI/CD pipeline for Java and ReactJS applications using Azure DevOps. We integrated GitHub, configured variable groups, and deployed to both Azure App Service and AKS. Testing the pipeline ensures that the setup works end-to-end.
+
+## Next
+
+In the next blog, we’ll cover advanced topics such as monitoring and scaling these deployments.
