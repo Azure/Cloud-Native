@@ -220,9 +220,11 @@ stages:
               package: '$(Pipeline.Workspace)/frontend'
               startUpCommand: 'pm2 serve /home/site/wwwroot/build --no-daemon --spa'
               appType: 'webAppLinux'
+              # These secrets will be retrieved from Key Vault - Variable Group
               appSettings: |
                 -AZURE_KEYVAULT_URI "$(AZURE_KEYVAULT_URI)" -REACT_APP_SERVICE_BASE_URL "$(MiddlewareServiceBaseUrl)" -REACT_APP_CLIENT_ID "$(MsalAppId)" -REACT_APP_CONTENT_GENERATOR_ENDPOINT "$(MiddlewareServiceGenerateContentEndpoint)" -REACT_APP_SERVICE_ACCESS_KEY "$(MiddlewareServiceAccessKey)"
 
+      # Deploying to Azure Kubernetes Service
       - job: Deploy_Backend_AKS
         displayName: 'Deploy Backend to Azure Kubernetes Service'
         pool:
