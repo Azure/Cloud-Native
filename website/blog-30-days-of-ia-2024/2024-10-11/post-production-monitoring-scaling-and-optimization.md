@@ -100,33 +100,33 @@ AKS scaling can be configured using these features:
 
 - **Horizontal Pod Autoscaling (HPA).** Automatically adjusts the number of pod replicas in your AKS cluster based on observed CPU or memory usage. You can set up HPA by defining a resource threshold in your Kubernetes deployment `YAML`:
 
-```
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: <your-hpa-name>
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: <your-app-name>
-  minReplicas: 1
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 80
-```
+  ```
+  apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    name: <your-hpa-name>
+  spec:
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: <your-app-name>
+    minReplicas: 1
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 80
+  ```
 
 - **Cluster Autoscaler.** Automatically scales the AKS cluster by adding or removing nodes based on workload demands. Enable this through the AKS settings in the Azure portal or via **the Azure CLI:**
 
-```
-az aks update \
-  --resource-group <resource-group> \
-  --name <aks-cluster> \
-  --enable-cluster-autoscaler \
-  --min-count 1 \
-  --max-count 5
-```
+  ```
+  az aks update \
+    --resource-group <resource-group> \
+    --name <aks-cluster> \
+    --enable-cluster-autoscaler \
+    --min-count 1 \
+    --max-count 5
+  ```
 
-![Terminal output from an Azure Kubernetes Service (AKS) update command, showing agent pool configuration and an error regarding role assignment.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-5.png)
+  ![Terminal output from an Azure Kubernetes Service (AKS) update command, showing agent pool configuration and an error regarding role assignment.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-5.png)
 
 ### 2.3 Scaling best practices
 
