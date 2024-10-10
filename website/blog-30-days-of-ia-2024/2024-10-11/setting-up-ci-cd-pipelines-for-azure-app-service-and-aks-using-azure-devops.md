@@ -37,7 +37,7 @@ In this application development, Continuous Integration and Continuous Deploymen
 Before we start, ensure you have:
 
 - An Azure DevOps account.
-- A GitHub repository with your application code, specifically structured with three folders: backend, middleware, and frontend.
+- A GitHub repository with your application code, specifically structured with three folders: `backend`, `middleware`, and `frontend`.
 - An Azure subscription with access to Azure App Service and AKS.
 - The GitHub URL for the project we will be using is: [Java-AI-Based-Content-Generator](https://github.com/Azure-Samples/Java-AI-Based-Content-Generator).
 
@@ -49,8 +49,8 @@ Before we start, ensure you have:
 
 The CI/CD pipeline will consist of the following key stages:
 
-- **Build Stage:** Each application is built in parallel, producing artifacts for deployment.
-- **Deploy Stage:** The built artifacts are deployed to Azure App Service and AKS.
+1. **Build Stage:** Each application is built in parallel, producing artifacts for deployment.
+2. **Deploy Stage:** The built artifacts are deployed to Azure App Service and AKS.
 
 ### Integrating GitHub Repository into Azure DevOps
 
