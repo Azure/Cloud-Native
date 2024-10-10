@@ -64,3 +64,18 @@ You need to know whether your app is running correctly and that users can access
 
   ![Azure Application Insights setup page for ai-study-backend-service, with options to enable monitoring and view connected resources.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-1.png)
 
+  ![Overview of Azure Application Insights for ai-study-backend-service, highlighting performance metrics and connection details for monitoring.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-2.png)
+
+  ![Azure dashboard for ai-study-backend-service displaying metrics on usage, reliability, responsiveness, and browser performance.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-3.png)
+
+### 1.2 Implement logging and tracing
+
+- **App Service.** Enable diagnostic logs to capture application and server logs. You can stream logs live or archive them in Azure Storage.
+- **AKS.** Use **kubectl logs** to retrieve logs from pods. Integrate with Azure Monitor Logs for centralized log management and analysis.
+
+### 1.3 Identify key metrics to monitor
+
+- **Availability.** Uptime of your services.
+- **Performance.** Response times, latency, and throughput.
+- **Error rates.** Percentage of failed requests or exceptions in your app.
+- **Resource utilization.** CPU and memory usage of App Service and AKS nodes.
