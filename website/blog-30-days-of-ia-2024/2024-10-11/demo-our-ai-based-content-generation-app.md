@@ -47,7 +47,7 @@ In today’s blog post, we examine the functionality of our example app, now tha
 
 In the following demo, we present a high-level overview of the app’s interface and functionality, explaining how the app integrates with Azure services, like **[Azure API Management](https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg)**, **[Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)**, **[Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg)**, **[Azure Blob Storage](https://learn.microsoft.com/azure/storage/blobs/storage-blobs-introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg)**, and **[Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)**.
 
-## The front-end layer: How the user interacts with the app.
+## 1. The front-end layer: How the user interacts with the app.
 
 The app’s front-end layer is a ReactJS application designed to provide users with an interface for requesting content through a seamless chat experience. Users enter their queries, select the type of content they want to generate, submit their request, and then receive results from the AI-powered middleware.
 
