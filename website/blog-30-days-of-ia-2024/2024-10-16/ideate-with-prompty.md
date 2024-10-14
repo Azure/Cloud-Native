@@ -39,7 +39,7 @@ In this series, we are walking through this end-to-end developer workflow, to bu
  - We provisioned infrastructure and deployed our applications using the Azure Developer CLI.
  - We setup our dev environment using GitHub Codespaces, and configured it to use Azure.
 
-![Developer Workflow](./img/03-developer-workflow.png)
+![Developer Workflow](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-developer-workflow.png)
 
 Today, we dive into the first stage of the GenAIOps lifecycle and learn how to **Ideate** our applicaiton, taking it from prompt to initial prototype, using a new tool called **Prompty**.
 
@@ -58,7 +58,7 @@ Ready? Let's get started!
 
 ---  
 
-![Card Banner](./img/03-ideate-prompty.png)
+![Card Banner](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-ideate-prompty.png)
 
 ## 1. What is Ideation?
 
@@ -66,7 +66,7 @@ Ideation is the first step in the GenAIOps workflow we saw in our first post. In
 
 Once they see an acceptable response, **they can then move to code**, building complex flows that can orchestrate the interactions between data sources (to populate the prompt template) and model deployments (to make invocations), giving them the initial application prototype.
 
-![GenAIOps Workflow](./img/03-gen-ai-ops.png)
+![GenAIOps Workflow](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-gen-ai-ops.png)
 
 Let's look at our two application scenarios and set the stage for Ideation. _Contoso Chat_ is a retail copilot, so the sample input is a typical question we expect to get from a customer. _Contoso Creative Writer_ is a writing assistant so the sample input is typically an "assignment" providing a target topic, guiding context (research, product) and editorial feedback (optional).
 
@@ -93,7 +93,7 @@ By definition, [Prompty](https://prompty.ai) an _asset class_ that is designed t
 
 Let's see this in action with a basic Prompty example.
 
-![What is Prompty](./img/03-what-is-prompty.png)
+![What is Prompty](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-what-is-prompty.png)
 
 
 ### 2.1 Create Prompty Asset
@@ -167,7 +167,7 @@ Throughout this process, _you remain within the Visual Studio Code environment_ 
 
 We talked about the specification (define asset) and tooling (create and manage asset). Now it's time to look at the [Prompty runtime](https://pypi.org/project/prompty/) which converts assets into executable code that can be run in larger workflows. The good news is that Prompty comes with built-in support for both core languages (Python) and frameworks (Langchain, Semantic Kernel, Prompt flow) as shown below.
 
-![Code generators](./img/03-prompty-code.png)
+![Code generators](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-prompty-code.png)
 
 Select the `basic.prompty` asset generated above and use the `Add Prompty Code` option to get a `basic.py` file created with the  Python code shown below. You should now be able to execute this file from Visual Studio Code (using the _play_ icon) or from the commandline (using `python basic.py` like any other Python app).
 
@@ -245,7 +245,7 @@ Before we explore the specific Prompty assets created for our app scenarios, let
 - _Develop_ completes the ideation phase, using code for tracing & orchestration
 - _Evaluate_ uses orchestratration to add scoring tasks for quality metrics
 
-![How do we use it](./img/03-how-do-we-use-it.png)
+![How do we use it](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-how-do-we-use-it.png)
 
 
 We'll talk briefly about Develop today, then cover tracing and evaluation in more detail tomorrow. Let's take a look at the Prompty asset and orchestration flow for Retrieval Augmented Generation (Contoso Chat) and Multi-Agent Collaboration (Contoso Creative Writer).
@@ -465,7 +465,7 @@ def create(research_context, product_context, assignment_context, evaluate=True)
 
 We completed the Ideate phase of our GenAIOps workflow. Now its time to **EVALUATE** our application response quality by scoring it for various criteria, using a larger data set (batch evaluation) with more diverse test inputs. This also gives us a chance to see Prompty tracing in action, and see the power of _observability_ for debugging or analyzing performance, in complex workflows. Join us tomorrow, for our next post covering these topics in depth.
 
-![Developer Workflow](./img/03-developer-workflow.png)
+![Developer Workflow](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-developer-workflow.png)
 
 ## 5. Call To Action
 
