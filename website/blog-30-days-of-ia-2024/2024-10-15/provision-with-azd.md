@@ -1,5 +1,5 @@
 ---
-date: 2024-10-14T09:00
+date: 2024-10-15T09:00
 slug: provision-with-azd
 title: "2.2 Provision With AZD!"
 authors: [nitya, marlene]
@@ -59,14 +59,13 @@ The challenge in here is that these tasks need to be completed in a **consistent
 
 Let's see this in action by getting started with our development workflow.
 
-
 ## 1. Configuration As Code
 
-!!! note "_In this section, we'll fork the sample repo to our personal profiles - then launch GitHub Codespaces to activate that environment with a Visual Studio Code editor, right in the browser._."
+:::info
+_In this section, we'll fork the sample repo to our personal profiles - then launch GitHub Codespaces to activate that environment with a Visual Studio Code editor, right in the browser._.
+:::
 
 Both our application samples use a Python development runtime and require specific Visual Studio Code extensions (e.g., `Prompty`) and commandline tools (e.g., `az`, `azd`, `fastapi`) to be installed for development. To simplify developer setup, we configured each repository with a `devcontainer.json` file that you can activate by launching GitHub Codespaces. 
-
-
 
 ### 1.1 Fork Repo In GitHub
 
@@ -86,8 +85,8 @@ To get started, fork the relevant sample repository to your personal GitHub acco
    
     * You now have a copy (known as a fork) of this workshop repository in your own GitHub account! Feel free to play with it, you won't break anything.
 
-!!! success "You have successfully forked the repository!"
-
+:::success "You have successfully forked the repository!"
+:::
 
 ### 1.2 Launch GitHub Codespaces 
 
@@ -102,11 +101,15 @@ This activates the `devcontainer.json` configuration, launching a docker contain
 
 This will launch a new browser tab and load the dev environment. In a few minutes, you should see the Visual Studio Code editor with the project files loaded.
 
-!!! success "You have successfully setup the dev environment!"
+:::success
+"You have successfully setup the dev environment!"
+:::
 
 ## 2. Infrastructure As Code
 
-!!! note "In this section, we'll authenticate with Azure from Visual Studio Code, then use the Azure Developer CLI to activate our `azd template`, provisioning resources and deploying the application with a single command."
+:::info
+_In this section, we'll authenticate with Azure from Visual Studio Code, then use the Azure Developer CLI to activate our `azd template`, provisioning resources and deploying the application with a single command._
+:::
 
 Both our application samples are instrumented as [azd-templates](htts://aka.ms/awesome-azd) with the main configuration defined in `azure.yaml` and related resources defined as Bicep files under `infra/`. All we need to do is call `azd up` and wait. In a short timeframe, the tool has provisioned the infrastructure, deployed our application, populated the data, and updated our local environment with the environment variables - with no added effort from us. Let's try it!
 
@@ -125,7 +128,9 @@ In the previous step, you would have started working with one of the samples and
 
 **Note:** If you are using a multi-tenant account, you will need to add the tool-specific option to identify the tenant ID you are targeting.
 
-!!! success "You have successfully authenticated with Azure!"
+:::success
+"You have successfully authenticated with Azure!"
+:::
 
 ### 2.2 Provision with AZD
 
@@ -141,11 +146,14 @@ You are now ready to provision the resources and deploy the application, effecti
 
 This can take about 15-20 minutes to complete. You can monitor the progress in the Azure Portal, under the resource group `rg-ENVNAME` that was created. When completed, you should see a "SUCCESS" message in the terminal.
 
-!!! success "You have successfully provisioned the app!"
+:::success "You have successfully provisioned the app!
+:::
 
 ## 3. Validate Infrastructure
 
-!!! note "In this section, we'll look at each application sample independently, to verify that the infrastructure and application have been correctly provisioned for that scenario."
+:::info
+_In this section, we'll look at each application sample independently, to verify that the infrastructure and application have been correctly provisioned for that scenario._
+:::
 
 We can now validate each sample to make sure everything works as expected. Let's first validate the infrastructure and the deployed application. 
 
@@ -168,7 +176,8 @@ We can now validate each sample to make sure everything works as expected. Let's
 - Click the hub resource - you should see an AI Project resource listed
 - Click the project resource - look at Deployments page to verify models
 
-!!! success "Congratulations! - Your Contoso Chat Infrastructure is Ready!"
+:::success "Congratulations! - Your Contoso Chat Infrastructure is Ready!"
+:::
 
 
 ### 3.2 Contoso Creative Writer
@@ -186,7 +195,9 @@ We can now validate each sample to make sure everything works as expected. Let's
 - Click the hub resource - you should see an AI Project resource listed
 - Click the project resource - look at Deployments page to verify models
 
-!!! success "Congratulations! - Your Contoso Creative Writer Infrastructure is Ready!"
+:::success
+"Congratulations! - Your Contoso Creative Writer Infrastructure is Ready!"
+:::
 
 ## 4. Validate Deployment
 
@@ -205,7 +216,9 @@ In both the samples, the `azd up` deploys the application to an Azure Container 
     - You should see a valid response with a list of tents 
     - The results should match items in the product catalog, with added details
 
-!!! success "Congratulations! - Your Contoso Chat Deployment Works!"
+:::success
+"Congratulations! - Your Contoso Chat Deployment Works!"
+:::
 
 ### 4.2 Contoso Creative Writer
 
@@ -215,7 +228,9 @@ In both the samples, the `azd up` deploys the application to an Azure Container 
 1. Click the small bug button (bottom left of page) to see agents and tasks completed
 1. You should also see an article being generated and streamed on the page. 
 
-!!! success "Congratulations! - Your Contoso Creative Writer Deployment Works!"
+:::success
+"Congratulations! - Your Contoso Creative Writer Deployment Works!"
+:::
 
 ## 5. What's Next
 
@@ -233,6 +248,6 @@ Want to get hands-on experience building intelligent apps on Azure?
 
 Take these actions today, to jumpstart your skilling journey:
 
-    - [Register for Microsoft AI Tour](https://aka.ms/aitour) - join an instructor-led workshop session.
-    - [Register for Microsoft Ignite](https://ignite.microsoft.com/sessions) - look for related lab & breakout sessions on Azure AI.
-    - [Browse the AI Templates Collection](https://aka.ms/azd-ai-templates) - explore samples for new frameworks and scenarios.
+  - [Register for Microsoft AI Tour](https://aka.ms/aitour?ocid=biafy25h1_30daysofia_webpage_azuremktg) - join an instructor-led workshop session.
+  - [Register for Microsoft Ignite](https://ignite.microsoft.com/sessions?ocid=biafy25h1_30daysofia_webpage_azuremktg) - look for related lab & breakout sessions on Azure AI.
+  - [Browse the AI Templates Collection](https://aka.ms/azd-ai-templates?ocid=biafy25h1_30daysofia_webpage_azuremktg) - explore samples for new frameworks and scenarios.
