@@ -469,8 +469,8 @@ We completed the Ideate phase of our GenAIOps workflow. Now its time to **EVALUA
 
 ## 5. Call To Action
 
-::: tip "Want to get hands-on experience building intelligent apps on Azure?"   
-
+:::tip "Want to get hands-on experience building intelligent apps on Azure?"   
+:::
     Take these actions today, to jumpstart your skilling journey:
 
     - [Register for Microsoft AI Tour](https://aka.ms/aitour) - join an instructor-led workshop session.
