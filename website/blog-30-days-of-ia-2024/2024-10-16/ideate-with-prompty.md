@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days-2024, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "In this series, we are walking through this end-to-end developer workflow, to build 2 separate application scenarios." 
+description: "Today, we dive into the first stage of the GenAIOps lifecycle and learn how to Ideate our application, taking it from prompt to initial prototype, using a new tool called Prompty." 
 tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, community-gallery, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -17,11 +17,11 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
   <meta property="og:url" content="https://azure.github.io/cloud-native/ideate-with-prompty"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/>
-  <meta property="og:description" content="In this series, we are walking through this end-to-end developer workflow, to build 2 separate application scenarios."/>
+  <meta property="og:description" content="Today, we dive into the first stage of the GenAIOps lifecycle and learn how to Ideate our application, taking it from prompt to initial prototype, using a new tool called Prompty."/>
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
-  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/provision-with-azd" />
+  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/ideate-with-prompty" />
   <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" />
-  <meta name="twitter:description" content="In this series, we are walking through this end-to-end developer workflow, to build 2 separate application scenarios." />
+  <meta name="twitter:description" content="Today, we dive into the first stage of the GenAIOps lifecycle and learn how to Ideate our application, taking it from prompt to initial prototype, using a new tool called Prompty." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@devanshidiaries" />
@@ -41,7 +41,7 @@ In this series, we are walking through this end-to-end developer workflow, to bu
 
 ![Developer Workflow](../../static/img/30-days-of-ia-2024/blogs/2024-10-16/03-developer-workflow.png)
 
-Today, we dive into the first stage of the GenAIOps lifecycle and learn how to **Ideate** our applicaiton, taking it from prompt to initial prototype, using a new tool called **Prompty**.
+Today, we dive into the first stage of the GenAIOps lifecycle and learn how to **Ideate** our application, taking it from prompt to initial prototype, using a new tool called **Prompty**.
 
 
 Ready? Let's get started!
@@ -471,10 +471,10 @@ We completed the Ideate phase of our GenAIOps workflow. Now its time to **EVALUA
 
 :::tip "Want to get hands-on experience building intelligent apps on Azure?"   
 :::
-    Take these actions today, to jumpstart your skilling journey:
+    
+Take these actions today, to jumpstart your skilling journey:
 
-    - [Register for Microsoft AI Tour](https://aka.ms/aitour) - join an instructor-led workshop session.
-    - [Register for Microsoft Ignite](https://ignite.microsoft.com/sessions) - look for related lab & breakout sessions on Azure AI.
-    - [Browse the AI Templates Collection](https://aka.ms/azd-ai-templates) - explore samples for new frameworks and scenarios.
+  - [Register for Microsoft AI Tour](https://aka.ms/aitour) - join an instructor-led workshop session.
+  - [Register for Microsoft Ignite](https://ignite.microsoft.com/sessions) - look for related lab & breakout sessions on Azure AI.
+  - [Browse the AI Templates Collection](https://aka.ms/azd-ai-templates) - explore samples for new frameworks and scenarios.
 
----
