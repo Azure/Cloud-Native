@@ -85,7 +85,7 @@ To get started, fork the relevant sample repository to your personal GitHub acco
    
     * You now have a copy (known as a fork) of this workshop repository in your own GitHub account! Feel free to play with it, you won't break anything.
 
-:::success "You have successfully forked the repository!"
+:::note "You have successfully forked the repository!"
 :::
 
 ### 1.2 Launch GitHub Codespaces 
@@ -101,8 +101,8 @@ This activates the `devcontainer.json` configuration, launching a docker contain
 
 This will launch a new browser tab and load the dev environment. In a few minutes, you should see the Visual Studio Code editor with the project files loaded.
 
-:::success
-"You have successfully setup the dev environment!"
+:::note
+"You have notefully setup the dev environment!"
 :::
 
 ## 2. Infrastructure As Code
@@ -128,7 +128,7 @@ In the previous step, you would have started working with one of the samples and
 
 **Note:** If you are using a multi-tenant account, you will need to add the tool-specific option to identify the tenant ID you are targeting.
 
-:::success
+:::note
 "You have successfully authenticated with Azure!"
 :::
 
@@ -146,7 +146,7 @@ You are now ready to provision the resources and deploy the application, effecti
 
 This can take about 15-20 minutes to complete. You can monitor the progress in the Azure Portal, under the resource group `rg-ENVNAME` that was created. When completed, you should see a "SUCCESS" message in the terminal.
 
-:::success "You have successfully provisioned the app!
+:::note "You have successfully provisioned the app!
 :::
 
 ## 3. Validate Infrastructure
@@ -176,7 +176,7 @@ We can now validate each sample to make sure everything works as expected. Let's
 - Click the hub resource - you should see an AI Project resource listed
 - Click the project resource - look at Deployments page to verify models
 
-:::success "Congratulations! - Your Contoso Chat Infrastructure is Ready!"
+:::note "Congratulations! - Your Contoso Chat Infrastructure is Ready!"
 :::
 
 
@@ -195,7 +195,7 @@ We can now validate each sample to make sure everything works as expected. Let's
 - Click the hub resource - you should see an AI Project resource listed
 - Click the project resource - look at Deployments page to verify models
 
-:::success
+:::note
 "Congratulations! - Your Contoso Creative Writer Infrastructure is Ready!"
 :::
 
@@ -216,7 +216,7 @@ In both the samples, the `azd up` deploys the application to an Azure Container 
     - You should see a valid response with a list of tents 
     - The results should match items in the product catalog, with added details
 
-:::success
+:::note
 "Congratulations! - Your Contoso Chat Deployment Works!"
 :::
 
@@ -228,7 +228,7 @@ In both the samples, the `azd up` deploys the application to an Azure Container 
 1. Click the small bug button (bottom left of page) to see agents and tasks completed
 1. You should also see an article being generated and streamed on the page. 
 
-:::success
+:::note
 "Congratulations! - Your Contoso Creative Writer Deployment Works!"
 :::
 
