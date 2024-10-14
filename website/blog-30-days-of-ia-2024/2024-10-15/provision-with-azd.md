@@ -2,7 +2,7 @@
 date: 2024-10-15T09:00
 slug: provision-with-azd
 title: "2.2 Provision With AZD!"
-authors: [nitya, marlene]
+authors: [marlene, nitya]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
