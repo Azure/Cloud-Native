@@ -6,7 +6,7 @@ cnteam:
 
 nitya:
   name: Nitya Narasimhan
-  title: Senior Cloud Advocate, Illustrator
+  title: Senior AI Advocate
   url: https://github.com/nitya
   image_url: https://github.com/nitya.png
 
@@ -27,3 +27,9 @@ cory:
   title: BuildIA Content Team
   url: https://azure.github.io/Cloud-Native/Build-IA/
   image_url: https://azure.github.io/Cloud-Native/img/logo-2024.png
+
+marlene: 
+  name: "Marlene Mhangami"
+  title: Senior Developer Advocate
+  url:  https://github.com/marlenezw
+  image_url: https://github.com/marlenezw.png
