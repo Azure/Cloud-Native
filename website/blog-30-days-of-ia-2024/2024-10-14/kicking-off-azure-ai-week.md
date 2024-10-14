@@ -32,7 +32,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 
 Welcome to Day 1️⃣ of Azure AI Week on the #30 Days Of IA series!
 
-Want to build a custom copilot with more control over every step of the end-to-end workflow from prompt to production? Join us for a week of posts as we walk through **two signature application samples** that teach you how to deliver generative AI solutions using [Prompty](https://prompty.ai) for ideation, [Azure AI Studio](https://aka.ms/ai-studio?ocid=biafy25h1_30daysofia_webpage_azuremktg) for development, and [Azure Container Apps](https://aka.ms/containerapps?ocid=biafy25h1_30daysofia_webpage_azuremktg) for deployment.
+Want to build a custom copilot with more control over every step of the end-to-end workflow from prompt to production? Join us for a week of posts as we walk through **two signature application samples** that teach you how to deliver generative AI solutions using [Prompty](https://prompty.ai) for ideation, [Azure AI Studio](https://aka.ms/aistudio/docs?ocid=biafy25h1_30daysofia_webpage_azuremktg) for development, and [Azure Container Apps](https://aka.ms/containerapps?ocid=biafy25h1_30daysofia_webpage_azuremktg) for deployment.
 
 Ready? Let's get started!
 
@@ -47,7 +47,7 @@ Ready? Let's get started!
  
 ---  
 
-![Card Banner](../../static/img/30-days-of-ia-2024/blogs/2024-10-14/01-build-copilot.png)
+![Card Banner](../../static/img/30-days-of-ia-2024/blogs/2024-10-14/01-build-intelligent-apps.png)
 
 When we begin any application development journey, we start with _design_ before proceeding to _development_ and _delivery_ of the solution. For the design phase, we focus on three questions:
 
