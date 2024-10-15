@@ -2,11 +2,364 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024</id>
     <title>Build Intelligent Apps On Azure Blog</title>
-    <updated>2024-10-09T09:03:00.000Z</updated>
+    <updated>2024-10-15T09:01:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024"/>
     <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[2.2 Provision With AZD!]]></title>
+        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd</id>
+        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd"/>
+        <updated>2024-10-15T09:01:00.000Z</updated>
+        <summary type="html"><![CDATA[We'll kick off our developer journey by provisioning the necessary resources for our applications - and setting up our development environment.]]></summary>
+        <content type="html"><![CDATA[
+<p>Welcome to Day 2️⃣ of Azure AI Week on the #30DaysOfIA series!</p>
+<p><em>Yesterday</em>, we introduced the two application scenarios we'll be building this week. <em>Today</em>, we'll kick off our developer journey by provisioning the necessary resources for our applications - and setting up our development environment.</p>
+<p>Ready? Let's get started!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-well-cover-today">What We'll Cover Today<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#what-well-cover-today" class="hash-link" aria-label="Direct link to What We'll Cover Today" title="Direct link to What We'll Cover Today">​</a></h2>
+<ul>
+<li><strong>Setup Dev Environment</strong> - with GitHub Codespaces (configuration as code).</li>
+<li><strong>Provision Azure Resources</strong> - with Azure Developer CLI (infrastructure as code).</li>
+<li><strong>Validate Infrastructure</strong> - verify Azure AI App Architecture setup</li>
+<li><strong>Validate App Deployment</strong> - verify Azure Container Apps setup</li>
+<li><strong>What's Next</strong> - Ideating with Prompty</li>
+</ul>
+<hr>
+<p><img loading="lazy" alt="Card Banner" src="https://azure.github.io/Cloud-Native/assets/images/02-provision-azd-c9e75e7917197a6de1e4d85dae91b971.png" width="960" height="403" class="img_ev3q"></p>
+<p>Yesterday, we introduced our two application scenarios, and showed this simplified diagram of the end-to-end developer workflow that we will be walking through this week. Today, we focus on the first two tasks (provision infrastructure, setup dev environment) and the respective tools (Azure Developer CLI, GitHub Codespaces) that will help us complete them.</p>
+<p><img loading="lazy" alt="Developer Workflow" src="https://azure.github.io/Cloud-Native/assets/images/02-developer-workflow-ea28bc208380d98a8041016271b8e50a.png" width="1433" height="448" class="img_ev3q"></p>
+<p>The challenge in here is that these tasks need to be completed in a <strong>consistent and repeatable way</strong> that can be version controlled, to support collaborative and fast-moving teams. We achieve this by adopting two familiar practices, with relevant tooling:</p>
+<ul>
+<li><strong>Configuration as Code</strong> uses the <a href="https://containers.dev/" target="_blank" rel="noopener noreferrer">devcontainer</a> specification to define the development environment in a file that can be checked in alongside the codebase. You can now launch GitHub Codespaces on the repo and get a pre-built environment with all dependencies installed, in a consistent way for all team members.</li>
+<li><strong>Infrastructure As Code</strong> uses Bicep and the <a href="https://aka.ms/awesome-azd" target="_blank" rel="noopener noreferrer">azd-template</a> format, to describe a solution architecture in a standardized way (<code>azure.yaml</code> + <code>infra/</code>) that can be checked in alongside the codebase. You can provision and deploy the solution with a single <code>azd up</code> command, in a consistent way for all team members.</li>
+</ul>
+<p>Let's see this in action by getting started with our development workflow.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-configuration-as-code">1. Configuration As Code<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#1-configuration-as-code" class="hash-link" aria-label="Direct link to 1. Configuration As Code" title="Direct link to 1. Configuration As Code">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p><em>In this section, we'll fork the sample repo to our personal profiles - then launch GitHub Codespaces to activate that environment with a Visual Studio Code editor, right in the browser.</em>.</p></div></div>
+<p>Both our application samples use a Python development runtime and require specific Visual Studio Code extensions (e.g., <code>Prompty</code>) and commandline tools (e.g., <code>az</code>, <code>azd</code>, <code>fastapi</code>) to be installed for development. To simplify developer setup, we configured each repository with a <code>devcontainer.json</code> file that you can activate by launching GitHub Codespaces.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-fork-repo-in-github">1.1 Fork Repo In GitHub<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#11-fork-repo-in-github" class="hash-link" aria-label="Direct link to 1.1 Fork Repo In GitHub" title="Direct link to 1.1 Fork Repo In GitHub">​</a></h3>
+<p>To get started, fork the relevant sample repository to your personal GitHub account. This gives you a copy of the repository that you can experiment with and customize later, without affecting the original source.</p>
+<ol>
+<li>
+<p><strong>Navigate to</strong> your chosen sample Github repository:</p>
+<table><thead><tr><th>Contoso Chat</th><th>Contoso Creative Writer</th></tr></thead><tbody><tr><td><a href="https://aka.ms/aitour/contoso-chat" target="_blank" rel="noopener noreferrer">https://aka.ms/aitour/contoso-chat</a></td><td><a href="https://github.com/Azure-Samples/contoso-creative-writer" target="_blank" rel="noopener noreferrer">https://aka.ms/aitour/contoso-creative-writer</a></td></tr></tbody></table>
+</li>
+<li>
+<p><strong>Sign into</strong> GitHub. If you don't have a Github account you can create one <a href="https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github" target="_blank" rel="noopener noreferrer">here</a>.</p>
+</li>
+<li>
+<p><strong>Click Fork</strong> on the top-right corner of the repo, to create a personal copy.</p>
+</li>
+<li>
+<p><strong>Uncheck <code>main only</code></strong> and click <strong>Create Fork</strong> to complete the action.</p>
+<ul>
+<li>
+<p>You should now be at the page <code>https://github.com/YOURUSERNAME/contoso-{chat or creative-writer}</code> within your own GitHub account.</p>
+</li>
+<li>
+<p>You now have a copy (known as a fork) of this workshop repository in your own GitHub account! Feel free to play with it, you won't break anything.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>"You have successfully forked the repository!"</div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-launch-github-codespaces">1.2 Launch GitHub Codespaces<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#12-launch-github-codespaces" class="hash-link" aria-label="Direct link to 1.2 Launch GitHub Codespaces" title="Direct link to 1.2 Launch GitHub Codespaces">​</a></h3>
+<p><em>GitHub Codespaces provides a generous free quota for personal accounts that is more than sufficient for this lab. Make sure to delete the Codespaces after the workshop to conserve quota.</em></p>
+<p>This activates the <code>devcontainer.json</code> configuration, launching a docker container in the cloud with all relevant tools and dependencies pre-installed. And, it opens a new browser tab with a Visual Studio Code editor connected remotely to that container - making it possible to work on the repsitory from anywhere, without worrying about hardware or software setup.</p>
+<ol>
+<li><strong>Navigate to</strong> your forked repository in the browser.</li>
+<li>Click the green <strong>&lt;&gt; Code</strong> button in the top-right part of the page</li>
+<li>Click the <strong>Codespaces</strong> tab</li>
+<li>Click <strong>Create codespace on main</strong> button</li>
+</ol>
+<p>This will launch a new browser tab and load the dev environment. In a few minutes, you should see the Visual Studio Code editor with the project files loaded.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>"You have notefully setup the dev environment!"</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-infrastructure-as-code">2. Infrastructure As Code<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#2-infrastructure-as-code" class="hash-link" aria-label="Direct link to 2. Infrastructure As Code" title="Direct link to 2. Infrastructure As Code">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p><em>In this section, we'll authenticate with Azure from Visual Studio Code, then use the Azure Developer CLI to activate our <code>azd template</code>, provisioning resources and deploying the application with a single command.</em></p></div></div>
+<p>Both our application samples are instrumented as <a href="htts://aka.ms/awesome-azd" target="_blank" rel="noopener noreferrer">azd-templates</a> with the main configuration defined in <code>azure.yaml</code> and related resources defined as Bicep files under <code>infra/</code>. All we need to do is call <code>azd up</code> and wait. In a short timeframe, the tool has provisioned the infrastructure, deployed our application, populated the data, and updated our local environment with the environment variables - with no added effort from us. Let's try it!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-authenticate-with-azure">2.1 Authenticate with Azure<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#21-authenticate-with-azure" class="hash-link" aria-label="Direct link to 2.1 Authenticate with Azure" title="Direct link to 2.1 Authenticate with Azure">​</a></h3>
+<p>In the previous step, you would have started working with one of the samples and have it running in a GitHub Codespaces, with a Visual Studio Code editor open in the browser. <strong>Open a terminal window</strong> and follow these steps to authenticate key tools with Azure.</p>
+<ol>
+<li>Authenticate with Azure CLI<!-- -->
+<ul>
+<li>run: <code>az login --use-device-code</code></li>
+<li>follow instructions and complete auth workflow</li>
+<li>select the valid Azure subscription and tenant to use</li>
+</ul>
+</li>
+<li>Authenticate with Azure Developer CLI<!-- -->
+<ul>
+<li>run: <code>azd auth login --use-device-code</code></li>
+<li>follow instructions and complete auth workflow</li>
+<li>You should see: "Logged in to Azure"</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note:</strong> If you are using a multi-tenant account, you will need to add the tool-specific option to identify the tenant ID you are targeting.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>"You have successfully authenticated with Azure!"</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-provision-with-azd">2.2 Provision with AZD<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#22-provision-with-azd" class="hash-link" aria-label="Direct link to 2.2 Provision with AZD" title="Direct link to 2.2 Provision with AZD">​</a></h3>
+<p>You are now ready to provision the resources and deploy the application, effectively delivering the solution architecture with one step. <strong>Start with the same terminal used above, to get an authenticated session.</strong></p>
+<ol>
+<li>Type <code>azd up</code> - and follow the prompts:<!-- -->
+<ol>
+<li>Enter a new environment name - use <code>rg-ENVNAME</code></li>
+<li>Select a subscription - pick the same one you used to login</li>
+<li>Select a location that has the resources (e.g., model quota) you need:<!-- -->
+<ul>
+<li><code>canadaeast</code> for <em>Contoso Creative Writer</em></li>
+<li><code>francecentral</code> for <em>Contoso Chat</em>.</li>
+</ul>
+</li>
+<li>You should see: <em>"You can view detailed progress in the Azure Portal ..."</em></li>
+</ol>
+</li>
+</ol>
+<p>This can take about 15-20 minutes to complete. You can monitor the progress in the Azure Portal, under the resource group <code>rg-ENVNAME</code> that was created. When completed, you should see a "SUCCESS" message in the terminal.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>"You have successfully provisioned the app!</div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-validate-infrastructure">3. Validate Infrastructure<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#3-validate-infrastructure" class="hash-link" aria-label="Direct link to 3. Validate Infrastructure" title="Direct link to 3. Validate Infrastructure">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p><em>In this section, we'll look at each application sample independently, to verify that the infrastructure and application have been correctly provisioned for that scenario.</em></p></div></div>
+<p>We can now validate each sample to make sure everything works as expected. Let's first validate the infrastructure and the deployed application.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-contoso-chat">3.1 Contoso Chat<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#31-contoso-chat" class="hash-link" aria-label="Direct link to 3.1 Contoso Chat" title="Direct link to 3.1 Contoso Chat">​</a></h3>
+<ol>
+<li>Visit the Azure Portal - look for the <code>rg-ENVNAME</code> resource group created above</li>
+<li>Click the Deployments link in the Essentials section - wait till all are completed.</li>
+<li>Return to Overview page - you should see: 35 deployments, 15 resources</li>
+<li>Click on the Azure CosmosDB resource in the list<!-- -->
+<ul>
+<li>Visit the resource detail page - click "Data Explorer"</li>
+<li>Verify that it has created a customers database with data items in it</li>
+</ul>
+</li>
+<li>Click on the Azure AI Search resource in the list<!-- -->
+<ul>
+<li>Visit the resource detail page - click "Search Explorer"</li>
+<li>Verify that it has created a contoso-products index with data items in it</li>
+</ul>
+</li>
+<li>Click on the Azure Container Apps resource in the list<!-- -->
+<ul>
+<li>Visit the resource detail page - click Application Url</li>
+<li>Verify that you see a hosted endpoint with a Hello World message on page</li>
+</ul>
+</li>
+<li>Next, visit the Azure AI Studio portal</li>
+</ol>
+<ul>
+<li>Sign in - you should be auto-logged in with existing Azure credential</li>
+<li>Click on All Resources - you should see an AIServices and Hub resources</li>
+<li>Click the hub resource - you should see an AI Project resource listed</li>
+<li>Click the project resource - look at Deployments page to verify models</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>"Congratulations! - Your Contoso Chat Infrastructure is Ready!"</div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-contoso-creative-writer">3.2 Contoso Creative Writer<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#32-contoso-creative-writer" class="hash-link" aria-label="Direct link to 3.2 Contoso Creative Writer" title="Direct link to 3.2 Contoso Creative Writer">​</a></h3>
+<ol>
+<li>Visit the Azure Portal - look for the rg-ENVNAME resource group created above</li>
+<li>Click the Deployments link in the Essentials section - wait till all are completed.</li>
+<li>Click on the Azure AI Search resource in the list<!-- -->
+<ul>
+<li>Visit the resource detail page - click "Search Explorer"</li>
+<li>Verify that it has created a contoso-products index with data items in it</li>
+</ul>
+</li>
+<li>Click on the Azure Container Apps resource in the list<!-- -->
+<ul>
+<li>Visit the resource detail page - click Application Url</li>
+<li>Verify that you see a the Contoso Creative Writer Application.</li>
+</ul>
+</li>
+<li>Next, visit the Azure AI Studio portal</li>
+</ol>
+<ul>
+<li>Sign in - you should be auto-logged in with existing Azure credential</li>
+<li>Click on All Resources - you should see an AIServices and Hub resources</li>
+<li>Click the hub resource - you should see an AI Project resource listed</li>
+<li>Click the project resource - look at Deployments page to verify models</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>"Congratulations! - Your Contoso Creative Writer Infrastructure is Ready!"</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-validate-deployment">4. Validate Deployment<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#4-validate-deployment" class="hash-link" aria-label="Direct link to 4. Validate Deployment" title="Direct link to 4. Validate Deployment">​</a></h2>
+<p>In both the samples, the <code>azd up</code> deploys the application to an Azure Container App resource as a <em>FastAPI</em> application with a hosted API endpoint. This comes with a built-in <code>/docs</code> route that provides a Swagger API test page, allowing you to interact with the application and verify that it works as expected. <strong>Let's validate this for the respective samples.</strong></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-contoso-chat">4.1 Contoso Chat<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#41-contoso-chat" class="hash-link" aria-label="Direct link to 4.1 Contoso Chat" title="Direct link to 4.1 Contoso Chat">​</a></h3>
+<ol>
+<li>Visit the ACA resource page - click on Application Url to view endpoint</li>
+<li>Add a /docs suffix to default deployed path - to get a Swagger API test page</li>
+<li>Click Try it out to unlock inputs - you see question, customer_id, chat_history</li>
+<li>Enter the following values:<!-- -->
+<ul>
+<li><strong>Question</strong> = "Tell me about the waterproof tents"</li>
+<li><strong>customer_id</strong> = 2</li>
+<li><strong>chat_history</strong> = []</li>
+</ul>
+</li>
+<li>Click Execute to see results:<!-- -->
+<ul>
+<li>You should see a valid response with a list of tents</li>
+<li>The results should match items in the product catalog, with added details</li>
+</ul>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>"Congratulations! - Your Contoso Chat Deployment Works!"</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="42-contoso-creative-writer">4.2 Contoso Creative Writer<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#42-contoso-creative-writer" class="hash-link" aria-label="Direct link to 4.2 Contoso Creative Writer" title="Direct link to 4.2 Contoso Creative Writer">​</a></h3>
+<ol>
+<li>The link to the deployed application should have been printed to your terminal after running azd up. If you don't see it, scroll up in your terminal until you do. <em>You can also find the link by visiting the ACA resource page - click on Application Url</em>.</li>
+<li>Click the <code>Example</code> button to add some example data</li>
+<li>Click the <code>Start Work</code> button to run the app.</li>
+<li>Click the small bug button (bottom left of page) to see agents and tasks completed</li>
+<li>You should also see an article being generated and streamed on the page.</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>"Congratulations! - Your Contoso Creative Writer Deployment Works!"</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-whats-next">5. What's Next<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#5-whats-next" class="hash-link" aria-label="Direct link to 5. What's Next" title="Direct link to 5. What's Next">​</a></h2>
+<p>We've setup our development environment and successfully provisioned our resources and deployed our application to make sure the codebase works as expected. It's time for us to  <strong>deconstruct</strong> these samples and learn how they were built - so we can reproduce this for our own application scenarios and projects.</p>
+<p>In our next post, we'll move on to the <strong>IDEATE</strong> stage of the workflow and learn to use an asset called Prompty to help us go from prompt to prototype in a few simple steps.</p>
+<p><img loading="lazy" alt="Developer Workflow" src="https://azure.github.io/Cloud-Native/assets/images/02-developer-workflow-ea28bc208380d98a8041016271b8e50a.png" width="1433" height="448" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-call-to-action">6. Call To Action<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd#6-call-to-action" class="hash-link" aria-label="Direct link to 6. Call To Action" title="Direct link to 6. Call To Action">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Want to get hands-on experience building intelligent apps on Azure?</p></div></div>
+<p>Take these actions today, to jumpstart your skilling journey:</p>
+<ul>
+<li><a href="https://aka.ms/aitour?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Register for Microsoft AI Tour</a> - join an instructor-led workshop session.</li>
+<li><a href="https://ignite.microsoft.com/sessions?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Register for Microsoft Ignite</a> - look for related lab &amp; breakout sessions on Azure AI.</li>
+<li><a href="https://aka.ms/azd-ai-templates?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Browse the AI Templates Collection</a> - explore samples for new frameworks and scenarios.</li>
+</ul>]]></content>
+        <author>
+            <name>Marlene Mhangami</name>
+            <uri>https://github.com/marlenezw</uri>
+        </author>
+        <author>
+            <name>Nitya Narasimhan</name>
+            <uri>https://github.com/nitya</uri>
+        </author>
+        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
+        <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="demo-bytes" term="demo-bytes"/>
+        <category label="community-gallery" term="community-gallery"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2.1 Kicking Off Azure AI Week!]]></title>
+        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week</id>
+        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week"/>
+        <updated>2024-10-15T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Join us for a week of posts as we walk through two signature application samples that teach you how to deliver generative AI solutions using Prompty for ideation, Azure AI Studio for development, and Azure Container Apps for deployment.]]></summary>
+        <content type="html"><![CDATA[
+<p>Welcome to Day 1️⃣ of Azure AI Week on the #30 Days Of IA series!</p>
+<p>Want to build a custom copilot with more control over every step of the end-to-end workflow from prompt to production? Join us for a week of posts as we walk through <strong>two signature application samples</strong> that teach you how to deliver generative AI solutions using <a href="https://prompty.ai/" target="_blank" rel="noopener noreferrer">Prompty</a> for ideation, <a href="https://aka.ms/aistudio/docs?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure AI Studio</a> for development, and <a href="https://aka.ms/containerapps?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Container Apps</a> for deployment.</p>
+<p>Ready? Let's get started!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-well-cover-today">What We'll Cover Today<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#what-well-cover-today" class="hash-link" aria-label="Direct link to What We'll Cover Today" title="Direct link to What We'll Cover Today">​</a></h2>
+<ul>
+<li><strong>What are we building?</strong> - Let's talk about the application scenarios.</li>
+<li><strong>How are we building it?</strong> - Let's discuss the app architecture.</li>
+<li><strong>What tasks do I need to do?</strong> - Let's review the end-to-end developer workflow.</li>
+<li><strong>The Week Ahead</strong> - Let's preview the week's content.</li>
+<li><strong>Call To Action</strong> - Take these 3 actions to skill up on Azure AI!</li>
+</ul>
+<hr>
+<p><img loading="lazy" alt="Card Banner" src="https://azure.github.io/Cloud-Native/assets/images/01-build-intelligent-apps-efb33a6fa24eba8ed31e63699c6065dd.png" width="960" height="403" class="img_ev3q"></p>
+<p>When we begin any application development journey, we start with <em>design</em> before proceeding to <em>development</em> and <em>delivery</em> of the solution. For the design phase, we focus on three questions:</p>
+<ol>
+<li><strong>App Scenario</strong>: What use cases and interaction flows should we support?</li>
+<li><strong>App Architecture</strong>: What resources do we need to build the application?</li>
+<li><strong>App Lifecycle</strong>: What is our end-to-end workflow from prompt to production?</li>
+</ol>
+<p>We can then think about development and delivery requirements from three perspectives:</p>
+<ul>
+<li><strong>Design Patterns</strong>: How do we orchestrate our workflow for efficiency?</li>
+<li><strong>Developer Experience</strong>: What tools do we use to streamline the process?</li>
+<li><strong>Responsible AI</strong>: What principles &amp; practices do we need for trustworthy AI?</li>
+</ul>
+<p>This week, we'll explore these questions with two distinct AI applications that will demonstrate the power and versatility of the Azure AI platform for building intelligent applications.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-what-are-we-building">1. What are we building?<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#1-what-are-we-building" class="hash-link" aria-label="Direct link to 1. What are we building?" title="Direct link to 1. What are we building?">​</a></h2>
+<p>Our first application is <a href="https://aka.ms/aitour/contoso-chat/" target="_blank" rel="noopener noreferrer"><strong>Contoso Chat</strong></a>, a custom copilot that uses the <em>Retrieval Augmented Generation</em> pattern (RAG) to ground responses in your data. The second application is <a href="https://github.com/Azure-Samples/Contoso-Creative-Writer" target="_blank" rel="noopener noreferrer"><strong>Contoso Creative Writer</strong></a>, a content publishing assistant that uses the <em>Multi-Agent Conversation</em> pattern to coordinate and execute multiple tasks autonomously, on behalf of the user. Let's look at each.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-contoso-chat">1.1 Contoso Chat<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#11-contoso-chat" class="hash-link" aria-label="Direct link to 1.1 Contoso Chat" title="Direct link to 1.1 Contoso Chat">​</a></h3>
+<p>The Contoso Chat app scenario involves a retail company ("Contoso Outdoors") that sells hiking and camping gear to outdoor enthusiasts via their website. The company wants to build and integrate a custom copilot that can help customers ask questions about their product catalog, and receive recommendations based on their previous purchases. This requires the copilot to <em>ground responses in the retailer's product catalog and customer orders data</em> for quality responses.</p>
+<p><img loading="lazy" alt="Contoso Chat" src="https://azure.github.io/Cloud-Native/assets/images/01-contoso-chat-1e6a568ef26af525237d5b3df58804c8.png" width="1457" height="529" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-contoso-creative-writer">1.2 Contoso Creative Writer<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#12-contoso-creative-writer" class="hash-link" aria-label="Direct link to 1.2 Contoso Creative Writer" title="Direct link to 1.2 Contoso Creative Writer">​</a></h3>
+<p>The Contoso Creative Writer app scenario involves a content authoring assistant that can help the company's marketing team quickly assemble and publish content for their product blog. The company needs these articles to be grounded in the product data, but expand on key themes to create compelling narratives for their readers that would motivate more relevant purchases. This requires agentic workflows that can execute tasks concurrently (research topic, find products) and coordinate them autonomously (write content, review for publication) to streamline content creation workflows at scale.</p>
+<p><img loading="lazy" alt="Contoso Creative Writer" src="https://azure.github.io/Cloud-Native/assets/images/01-contoso-creative-writer-7b33e6d5fb82fa902bf5638d191a091f.png" width="3422" height="1966" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-how-are-we-building-it">2. How are we building it?<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#2-how-are-we-building-it" class="hash-link" aria-label="Direct link to 2. How are we building it?" title="Direct link to 2. How are we building it?">​</a></h2>
+<p>Building generative AI applications requires developers to <em>choose</em> relevant models, <em>deploy</em> them for use, and <em>orchestrate</em> their interactions with other services to deliver a complete solution that meets quality and safety requirements.</p>
+<p>The <a href="https://aka.ms/aistudio/docs?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure AI Studio</a> platform provides a <em>unified experience</em> for developers to complete this workflow end-to-end, using a web portal, CLI, or SDK. The <strong>Azure AI Studio architecture</strong> involves the three resources shown below - a <em>hub</em> for administration, a <em>project</em> for development and <em>services</em> that provide model endpoints for invocation. Learn more <a href="https://learn.microsoft.com/azure/ai-studio/concepts/architecture?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p><img loading="lazy" alt="Azure AI" src="https://azure.github.io/Cloud-Native/assets/images/01-azure-ai-architecture-d961d2acb6c8546eada1d841066f60c9.svg" width="946" height="502" class="img_ev3q"></p>
+<p>The <strong>AI Application Architecture</strong> builds on this foundation, implementing the required design patterns that define the application's behavior. This typically involves orchestrating interactions between the Azure AI platform resources and third party services, to deliver end-to-end user experience as shown in the examples below. Let's take a look.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-contoso-chat">2.1 Contoso Chat<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#21-contoso-chat" class="hash-link" aria-label="Direct link to 2.1 Contoso Chat" title="Direct link to 2.1 Contoso Chat">​</a></h3>
+<p>The figure shows the AI Application Architecture for the Contoso Chat sample.</p>
+<p><img loading="lazy" alt="Contoso Chat Architecture" src="https://azure.github.io/Cloud-Native/assets/images/01-contoso-chat-architecture-c8d974311fa6b0f780acbf5b9c92e693.png" width="1200" height="726" class="img_ev3q"></p>
+<p>The application is deployed as a hosted endpoint in Azure Container Apps, using Azure Managed Identity for keyless authentication. The user request ("prompt") is received at this endpoint, and processed in three steps:</p>
+<ol>
+<li>The <em>prompt query is expanded</em> to extract relevant product query terms</li>
+<li>The expanded query is sent to Azure AI Search to <em>retrieve relevant product documents</em></li>
+<li>The original query is also sent to Azure Cosmos DB to <em>retrieve relevant customer profile data</em></li>
+</ol>
+<p>The results from the last two steps provide <em>grounding data</em> that shapes the "enhanced prompt" we then dispatch to the Azure OpenAI <em>chat</em> model. The generated response is then returned to the user. This workflow requires <em>orchestration</em> of invocations to both the AI models (embeddings, chat) and the data retrieval services (search index, customer database) for each request.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-contoso-creative-writer">2.2 Contoso Creative Writer<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#22-contoso-creative-writer" class="hash-link" aria-label="Direct link to 2.2 Contoso Creative Writer" title="Direct link to 2.2 Contoso Creative Writer">​</a></h3>
+<p>The figure shows the AI Application Architecture for the Contoso Creative Writer sample.</p>
+<p><img loading="lazy" alt="Contoso Creative Writer Architecture" src="https://azure.github.io/Cloud-Native/assets/images/01-contoso-creative-writer-architecture-55c8c139608f3e349eee5240b85b44ba.png" width="1200" height="726" class="img_ev3q"></p>
+<p>Similar to Contoso Chat, the application is deployed as a hosted endpoint in Azure Container Apps, using Azure Managed Identity for keyless authentication - with App Insights for monitoring app performance. The difference is in the <em>orchestration</em> required for processing the user request ("prompt") in this application.</p>
+<ol>
+<li>The prompt query is expanded to extract relevant topic query terms and relevant products retrieved using Bing Search and Azure AI Search.</li>
+<li>The expanded query is sent to a "Writer Agent" (chat model) which uses the provided query and grounding context to generate a draft article based on the designed prompt template.</li>
+<li>The draft article is then sent to an "Editor Agent" (chat model) which assesses the article for acceptance based on the designed prompt template.</li>
+</ol>
+<p>An approved article is then published as a blog post. The user interface allows you to view the progression of these tasks visually, to get an intuitive sense for multi-agent coordination.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-what-tasks-do-i-need-to-do">3. What tasks do I need to do?<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#3-what-tasks-do-i-need-to-do" class="hash-link" aria-label="Direct link to 3. What tasks do I need to do?" title="Direct link to 3. What tasks do I need to do?">​</a></h2>
+<p>We know the application architecture to implement, and we know the infrastructure requirements for building on. But we still need to understand the <em>end-to-end</em> developer workflow that will help us go from initial prototype to production-ready solution.</p>
+<p>This is where the <strong>GenAIOps</strong> lifecycle comes in. Because generative AI applications rely on <em>natural language processing</em> and <em>pre-trained models</em>, they need additional steps to ensure that responses meet quality and safety standards for the diverse real-world prompts they will encounter. The application lifecycle now looks something like this, with three main stages:</p>
+<ol>
+<li><strong>Ideation</strong> - go from prompt to prototype, and validate with a test input.</li>
+<li><strong>Evaluation</strong> - go from prototype to production-ready by validating with larger test input set.</li>
+<li><strong>Operationalization</strong> - deploy for real-world use, and monitor for cost and performance.</li>
+</ol>
+<p><img loading="lazy" alt="Gen AI Ops" src="https://azure.github.io/Cloud-Native/assets/images/01-gen-ai-ops-d74a6694116d833dd1dead0d17969479.png" width="960" height="540" class="img_ev3q"></p>
+<p>From a practical development perspective, we can map these many steps in the workflow shown below, highlighting the key task to be performed and the tool best-suited for that task. We'll look at these in more detail in the next few posts this week.</p>
+<p><img loading="lazy" alt="Developer Workflow" src="https://azure.github.io/Cloud-Native/assets/images/01-developer-workflow-ea28bc208380d98a8041016271b8e50a.png" width="1433" height="448" class="img_ev3q"></p>
+<p>But, to deliver <strong>trustworthy AI solutions</strong>, we also need to consider security, privacy, and safety requirements for the application. In the last row above, we highlight key features or practices that enable a Responsible AI approach to development. These range from practical considerations (like using curated models from trusted providers) to more complex features (like evaluation, safety systems, and managed identity) that add layers of protection to the application across the development lifecycle.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-the-week-ahead">4. The Week Ahead!<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#4-the-week-ahead" class="hash-link" aria-label="Direct link to 4. The Week Ahead!" title="Direct link to 4. The Week Ahead!">​</a></h2>
+<p>We'll explore these in more detail in the next few posts, as we build and deploy the Contoso Chat and Contoso Creative Writer applications using the Azure AI platform. Here's what to expect:</p>
+<ul>
+<li><a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#1-what-are-we-building"><strong>Day 1:</strong></a> Kickoff Post - What are we building?</li>
+<li><strong>Day 2:</strong> Provision With AZD - Setup for development.</li>
+<li><strong>Day 3:</strong> Ideate with Prompty - Prompt Engineering &amp; Data Grounding</li>
+<li><strong>Day 4:</strong> Evaluate with AI - Custom Evaluators &amp; AI-Assisted Scoring</li>
+<li><strong>Day 5:</strong> Deploy with ACA - Operationalization &amp; Monitoring</li>
+</ul>
+<p>We'll start our journey tomorrow by provisioning Azure resources (<em>Infrastructure as code</em>) and setting up our development environment (<em>Configuration as code</em>) in a manner that enables consistent and reproducible usage across teams.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-call-to-action">5. Call To Action<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kicking-off-azure-ai-week#5-call-to-action" class="hash-link" aria-label="Direct link to 5. Call To Action" title="Direct link to 5. Call To Action">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Want to get hands-on experience building intelligent apps on Azure?</p></div></div>
+<p>Take these actions today, to jumpstart your skilling journey:</p>
+<ul>
+<li><a href="https://aka.ms/aitour?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Register for Microsoft AI Tour</a> - join an instructor-led workshop session.</li>
+<li><a href="https://ignite.microsoft.com/sessions?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Register for Microsoft Ignite</a> - look for related lab &amp; breakout sessions on Azure AI.</li>
+<li><a href="https://aka.ms/azd-ai-templates?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Browse the AI Templates Collection</a> - explore samples for new frameworks and scenarios.</li>
+</ul>]]></content>
+        <author>
+            <name>Nitya Narasimhan</name>
+            <uri>https://github.com/nitya</uri>
+        </author>
+        <author>
+            <name>Marlene Mhangami</name>
+            <uri>https://github.com/marlenezw</uri>
+        </author>
+        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
+        <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="demo-bytes" term="demo-bytes"/>
+        <category label="community-gallery" term="community-gallery"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1.4b Deploy application with Azure App Service Part 2]]></title>
         <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/deploy-application-with-azure-app-service-part-2</id>
