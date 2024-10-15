@@ -1,5 +1,18 @@
 [
     {
+        "title": "Code AI apps on Azure - Python, Prompty & Visual Studio",
+        "description": "Build your own custom applications with Azure AI right from your code. With Azure AI, leverage over 1,700 models, seamlessly integrating them into your coding environment to create tailored app experiences. Utilize features like Retrieval Augmented Generation and vector search to enrich responses with contextual information, as well as prebuilt Azure AI services to incorporate cognitive skills such as language, vision, and safety detection.",
+        "preview": "",
+        "website": "https://www.youtube.com/@MSFTMechanics/featured",
+        "author": "Microsoft Mechanics",
+        "source": "https://www.youtube.com/watch?v=f1eD1bL2_KI",
+        "tags": [
+            "featured",
+            "ai",
+            "azureopenai"
+        ]
+    },
+    {
         "title": "Azure-Samples / AI-Gateway",
         "description": "This repository contains a set of experiments on using GenAI capabilities of Azure API Management with Azure OpenAI and other services.",
         "preview": "",
@@ -21,7 +34,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-aks",
         "tags": [
-            "featured",
             "azurekubernetesservice",
             "azureopenai",
             "ai",
@@ -36,7 +48,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-cosmos",
         "tags": [
-            "featured",
             "cosmosdb",
             "azureopenai",
             "ai",
@@ -51,7 +62,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-functions",
         "tags": [
-            "featured",
             "azurefunctions",
             "azureopenai",
             "ai",
@@ -66,7 +76,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-ai",
         "tags": [
-            "featured",
             "azureopenai",
             "ai",
             "video"
@@ -462,20 +471,6 @@
             "video",
             "azurefunctions",
             "azurecontainerapps"
-        ]
-    },
-    {
-        "title": "Hack Together Launch – Opening Keynote",
-        "description": "Join us for an in-depth walkthrough of the Contoso Real Estate project, with a focus on the portal app architecture (Full stack application). During this session, we'll guide you through the key components of the architecture and show you how to set up your own environment for the project. We'll also provide detailed contribution instructions to help you get involved in the project and make a meaningful impact. Whether you're a seasoned developer or just getting started, this session is a must-attend for anyone interested in building scalable, modern web applications.",
-        "preview": "",
-        "website": "https://developer.microsoft.com/en-us/reactor/home/index/",
-        "author": "Microsoft Reactor",
-        "source": "https://developer.microsoft.com/reactor/events/20275/",
-        "tags": [
-            "video",
-            "azurefunctions",
-            "cosmosdb",
-            "featured"
         ]
     },
     {
