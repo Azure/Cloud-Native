@@ -115,7 +115,7 @@ In this section we focus on the **quality** assessment workflow, targeting the f
 3. Those responses are now fed to the **evaluator** application, which generates evaluation results
 4. These results can now be delivered to a relevant **dashboard** (here, in Azure AI Studio) for analysis.
 
-![AI Assisted Eval](./img/04-ai-assisted-flow.png)
+![AI Assisted Eval](../../static/img/30-days-of-ia-2024/blogs/2024-10-17/04-ai-assisted-flow.png)
 
 The **key** to good evaluations is to have _coverage_ of the broad range of user inputs (test prompts) you may be likely to encounter in the real-world deployment of the application. This can come from the customer's own dataset (based on their historical knowledge of customers) or be generated with AI assistance (to reflect the criteria you define). _In our scenarios below, we use sample test dataset with just a few inputs - in real-world contexts, this would likely be much larger and cover more edge cases_.
 
@@ -216,7 +216,9 @@ Navigate to the `src/api` folder in Visual Studio Code.
 - Click: Select Kernel - choose "Python Environments" - pick recommended `Python 3.11.x`
 - Click: `Run all` - this kickstarts the multi-step evaluation flow.
 
-:::warning "Troubleshooting: Evaluation gives an error message in the Notebook"
+:::warning 
+
+"Troubleshooting: Evaluation gives an error message in the Notebook"
 
     On occasion, the evaluation notebook may throw an error after a couple of iterations. This is typically a transient error. To fix it, `Clear inputs` in the Jupyter Notebook, then `Restart` it. It should complete the run this time.
 :::
@@ -324,9 +326,10 @@ Once the trace file is displayed, explore the panel to get an intuition for usag
 - See: Azure OpenAIExecutor traces on model use
 - Click: any trace to see its timing and details in pane (right)
 
-!!! info "Want to learn more about Prompty Tracing? [Explore the documentation](https://github.com/microsoft/prompty/tree/main/runtime/prompty#using-tracing-in-prompty) to learn how to configure your application for traces, and how to view and publish traces for debugging and observability."
+:::info 
+"Want to learn more about Prompty Tracing? [Explore the documentation](https://github.com/microsoft/prompty/tree/main/runtime/prompty#using-tracing-in-prompty) to learn how to configure your application for traces, and how to view and publish traces for debugging and observability."
 
-
+:::
 ## 7. Where Next
 
 In this section, you saw how Prompty-based custom evaluators work with AI-Assisted evaluation, to assess the quality of your application using defined metrics like coherence, fluency, relevance, and groundedness. You got a sense for how these custom evaluators are crafted. In tomorrow's post we'll learn how to deploy, test and monitor our application. 
