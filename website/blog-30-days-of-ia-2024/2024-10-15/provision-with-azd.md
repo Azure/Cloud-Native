@@ -95,7 +95,7 @@ _GitHub Codespaces provides a generous free quota for personal accounts that is 
 This activates the `devcontainer.json` configuration, launching a docker container in the cloud with all relevant tools and dependencies pre-installed. And, it opens a new browser tab with a Visual Studio Code editor connected remotely to that container - making it possible to work on the repsitory from anywhere, without worrying about hardware or software setup.
 
 1. **Navigate to** your forked repository in the browser.
-1. Click the green **<> Code** button in the top-right part of the page
+1. Click the green **&lt;&gt; Code** button in the top-right part of the page
 1. Click the **Codespaces** tab
 1. Click **Create codespace on main** button
 
