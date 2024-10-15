@@ -1,5 +1,5 @@
 ---
-date: 2024-10-16T09:00
+date: 2024-10-17T09:00
 slug: evaluate-with-ai
 title: "2.4 Evaluate with AI!"
 authors: [marlene, nitya]
@@ -29,8 +29,6 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 </head>
 
 <!-- End METADATA -->
-
-# Evaluate with AI
 
 Welcome to Day 4️⃣ of Azure AI Week on the #30DaysOfIA series!
 

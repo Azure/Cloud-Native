@@ -30,8 +30,6 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 
 <!-- End METADATA -->
 
-# Ideate with Prompty
-
 Welcome to Day 3️⃣ of Azure AI Week on the #30DaysOfIA series!
 
 In this series, we are walking through this end-to-end developer workflow, to build **2 separate application scenarios** ([Contoso Chat](https://aka.ms/aitour/contoso-chat) and [Contoso Creative Writer](https://aka.ms/aitour/contoso-creative-writer)) code-first, using the [Azure AI platform](https://ai.azure.com) with [Prompty](https://prompty.ai) assets. In our last post, we completed the first two steps in this diagram:
