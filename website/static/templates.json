@@ -34,7 +34,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-aks",
         "tags": [
-            "featured",
             "azurekubernetesservice",
             "azureopenai",
             "ai",
@@ -49,7 +48,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-cosmos",
         "tags": [
-            "featured",
             "cosmosdb",
             "azureopenai",
             "ai",
@@ -64,7 +62,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-functions",
         "tags": [
-            "featured",
             "azurefunctions",
             "azureopenai",
             "ai",
@@ -79,7 +76,6 @@
         "author": "Ask the Expert",
         "source": "https://aka.ms/intelligent-apps/ate-ai",
         "tags": [
-            "featured",
             "azureopenai",
             "ai",
             "video"
