@@ -85,7 +85,8 @@ To get started, fork the relevant sample repository to your personal GitHub acco
    
     * You now have a copy (known as a fork) of this workshop repository in your own GitHub account! Feel free to play with it, you won't break anything.
 
-:::note "You have successfully forked the repository!"
+:::note
+"You have successfully forked the repository!"
 :::
 
 ### 1.2 Launch GitHub Codespaces 
@@ -146,7 +147,8 @@ You are now ready to provision the resources and deploy the application, effecti
 
 This can take about 15-20 minutes to complete. You can monitor the progress in the Azure Portal, under the resource group `rg-ENVNAME` that was created. When completed, you should see a "SUCCESS" message in the terminal.
 
-:::note "You have successfully provisioned the app!
+:::note
+"You have successfully provisioned the app!
 :::
 
 ## 3. Validate Infrastructure
@@ -176,7 +178,8 @@ We can now validate each sample to make sure everything works as expected. Let's
 - Click the hub resource - you should see an AI Project resource listed
 - Click the project resource - look at Deployments page to verify models
 
-:::note "Congratulations! - Your Contoso Chat Infrastructure is Ready!"
+:::note
+"Congratulations! - Your Contoso Chat Infrastructure is Ready!"
 :::
 
 
