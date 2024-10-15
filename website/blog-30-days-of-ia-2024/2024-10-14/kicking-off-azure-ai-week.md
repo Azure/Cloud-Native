@@ -140,7 +140,7 @@ But, to deliver **trustworthy AI solutions**, we also need to consider security,
 We'll explore these in more detail in the next few posts, as we build and deploy the Contoso Chat and Contoso Creative Writer applications using the Azure AI platform. Here's what to expect: 
 
 - [**Day 1:**](#1-what-are-we-building) Kickoff Post - What are we building?
-- **Day 2:** Provision With AZD - Setup for development.
+- [**Day 2:**](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd) Provision With AZD - Setup for development.
 - **Day 3:** Ideate with Prompty - Prompt Engineering & Data Grounding
 - **Day 4:** Evaluate with AI - Custom Evaluators & AI-Assisted Scoring
 - **Day 5:** Deploy with ACA - Operationalization & Monitoring
