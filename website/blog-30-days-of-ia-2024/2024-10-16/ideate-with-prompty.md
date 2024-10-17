@@ -3,7 +3,7 @@ date: 2024-10-16T09:00
 slug: ideate-with-prompty
 title: "2.3 Ideate with Prompty!"
 authors: [marlene, nitya]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

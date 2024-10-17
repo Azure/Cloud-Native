@@ -3,7 +3,7 @@ date: 2024-10-17T09:00
 slug: evaluate-with-ai
 title: "2.4 Evaluate with AI!"
 authors: [marlene, nitya]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
