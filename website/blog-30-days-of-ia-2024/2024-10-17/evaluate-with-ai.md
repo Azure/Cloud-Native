@@ -200,7 +200,8 @@ Let's understand how this works, taking one of these custom evaluators as an exa
 
 Repeat this exercise for the other evaluators on your own. Use this to build your intuition for each metric and how it defines and assesses response quality.
 
-:::info "Note the several examples given in the Prompty file of answers that represent each of the star ratings. This is an example of [few-shot learning](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions#few-shot-learning), a common technique used to guide AI models."
+:::info 
+"Note the several examples given in the Prompty file of answers that represent each of the star ratings. This is an example of [few-shot learning](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions#few-shot-learning), a common technique used to guide AI models."
 :::
 ---
 

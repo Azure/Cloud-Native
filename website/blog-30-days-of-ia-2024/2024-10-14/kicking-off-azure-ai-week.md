@@ -141,8 +141,8 @@ We'll explore these in more detail in the next few posts, as we build and deploy
 
 - [**Day 1:**](#1-what-are-we-building) Kickoff Post - What are we building?
 - [**Day 2:**](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/provision-with-azd) Provision With AZD - Setup for development.
-- **Day 3:** Ideate with Prompty - Prompt Engineering & Data Grounding
-- **Day 4:** Evaluate with AI - Custom Evaluators & AI-Assisted Scoring
+- [**Day 3:**](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/ideate-with-prompty) Ideate with Prompty - Prompt Engineering & Data Grounding
+- [**Day 4:**](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/evaluate-with-ai) Evaluate with AI - Custom Evaluators & AI-Assisted Scoring
 - **Day 5:** Deploy with ACA - Operationalization & Monitoring
 
 We'll start our journey tomorrow by provisioning Azure resources (_Infrastructure as code_) and setting up our development environment (_Configuration as code_) in a manner that enables consistent and reproducible usage across teams.
