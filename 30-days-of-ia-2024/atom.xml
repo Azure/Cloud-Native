@@ -285,12 +285,12 @@
 <p>In this section, you saw how Prompty-based custom evaluators work with AI-Assisted evaluation, to assess the quality of your application using defined metrics like coherence, fluency, relevance, and groundedness. You got a sense for how these custom evaluators are crafted. In tomorrow's post we'll learn how to deploy, test and monitor our application.</p>
 <p><img loading="lazy" alt="Developer Workflow" src="https://azure.github.io/Cloud-Native/assets/images/04-developer-workflow-ea28bc208380d98a8041016271b8e50a.png" width="1433" height="448" class="img_ev3q"></p>]]></content>
         <author>
-            <name>Marlene Mhangami</name>
-            <uri>https://github.com/marlenezw</uri>
-        </author>
-        <author>
             <name>Nitya Narasimhan</name>
             <uri>https://github.com/nitya</uri>
+        </author>
+        <author>
+            <name>Marlene Mhangami</name>
+            <uri>https://github.com/marlenezw</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
         <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
@@ -438,12 +438,12 @@
 <li><a href="https://aka.ms/azd-ai-templates" target="_blank" rel="noopener noreferrer">Browse the AI Templates Collection</a> - explore samples for new frameworks and scenarios.</li>
 </ul>]]></content>
         <author>
-            <name>Marlene Mhangami</name>
-            <uri>https://github.com/marlenezw</uri>
-        </author>
-        <author>
             <name>Nitya Narasimhan</name>
             <uri>https://github.com/nitya</uri>
+        </author>
+        <author>
+            <name>Marlene Mhangami</name>
+            <uri>https://github.com/marlenezw</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
         <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
