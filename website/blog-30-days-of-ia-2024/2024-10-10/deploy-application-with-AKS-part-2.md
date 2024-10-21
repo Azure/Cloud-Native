@@ -52,10 +52,6 @@ Before proceeding, ensure that the Managed Identity and Key Vault configurations
 
 Azure Kubernetes Service (AKS) is a managed container orchestration service that simplifies the deployment, management, and operations of Kubernetes. It enables seamless scaling, monitoring, and management of containerized applications. With AKS, you can deploy, manage, and scale containerized applications with ease.
 
-:::info
- [Ingest your own content](https://aka.ms/demo-bytes/ep13?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data..
-:::
-
 ## Step 2: Preparing the Application for AKS Deployment
 
 ### Containerize the Application:
@@ -92,10 +88,13 @@ az acr login --name <ACR_NAME>
 # Set your image build version
 VERSION=1.0.1
 
+# Build docker image
 docker build -t aistudy/backend-service:${VERSION} .
 
+# Tag the build image into acr repo
 docker tag aistudy/backend-service:${VERSION} <ACR_Name>.azurecr.io/aistudy/backend-service:${VERSION}
 
+# Push the backend service image to ACR
 docker push <ACR_Name>.azurecr.io/backend-service:latest
 
 # Build and push the Back-end service
@@ -125,12 +124,13 @@ If you have not already created the AKS cluster and ACR (Azure Container Registr
 ```
 az aks create \
   --resource-group <RESOURCE_GROUP_NAME> \
-  --name <AKS_NAME> \
+  --name <CLUSTER_NAME> \
   --node-count 1 \
   --enable-addons monitoring \
   --enable-oidc-issuer \
   --enable-workload-identity \
-  --generate-ssh-keys
+  --generate-ssh-keys \
+  --attach-acr <ACR_NAME>
 ```
 
 - The `--enable-oidc-issuer` and `--enable-workload-identity` flags are required to enable workload identity on the cluster, allowing for secure and seamless integration with Azure AD and Key Vault.
@@ -224,13 +224,13 @@ kubectl apply -f frontend-deployment.yml
 
 ```
 kubectl get deployments  
-kubectl get services 
+kubectl get pods 
 ```
 
 ![Azure CLI command to check the status of deployments](../../static/img/30-days-of-ia-2024/blogs/2024-10-10/1-5b-8.png)
 
 ### Access the Application
-- If the front-end service is exposed as a `ClusterIP` type, use the following command to get the external IP address:
+- If the front-end service is exposed as a `LoadBalancer` type, use the following command to get the external IP address:
 
 ```
 kubectl get services frontend-service
