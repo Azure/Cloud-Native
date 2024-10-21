@@ -57,10 +57,16 @@ This post covers the necessary steps for monitoring, scaling, and optimizing app
     - **To enable:**  
         Go to your App Service in the Azure portal. Under Monitoring, enable Application Insights. This provides features like:
 
+        ![Azure Application Insights](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-1v2.png)
+
     - **Live metrics:**
         Real-time performance monitoring.
 
-    - **Custom dashboards:** Create visual dashboards for metrics such as API response times and database latency.  
+        ![Azure AI Study Backend Service](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-2v2.png)
+
+    - **Custom dashboards:** Create visual dashboards for metrics such as API response times and database latency.
+
+        ![Azure AI Study Backend Service Custom Dashboard](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-3v2.png)
 
 2. **Implement Logging and Tracing**  
     Enable diagnostic logs to capture application and server logs. Stream logs live or archive them in Azure Storage for future analysis.
@@ -75,6 +81,8 @@ Add more instances of your App Service to handle increased traffic. You can set 
 
     - **To Scale Out:**  
     Go to **App Service** > Scale Out (App Service plan), and configure scaling rules.
+
+      ![Azure AI Study Backend Service Scale Out](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-4v2.png)
 
 ### Step 3: Set Up Alerts and Notifications for App Service
 
@@ -97,11 +105,15 @@ Enable Container Insights to monitor cluster performance, including CPU, memory,
 2. **Logging and Tracing on AKS**  
 Use `kubectl` logs to retrieve logs from your pods. Integrate with Azure Monitor Logs for centralized log management.
 
+    ![Azure Monitor Logs](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-5v2.png)
+
 3. **Key Metrics to Monitor**
     - **Availability:** Uptime of the services deployed in your AKS cluster.  
     - **Performance:** CPU, memory usage, and network traffic.
     - **Error Rates:** Failed requests or service outages.
     - **Resource Utilization:** Node and pod-level resource usage.
+
+      ![Azure showing CPU, memory usage, node and pod-level resource usage](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-6v2.png)
 
 ### Step 2: Scale Your Application on AKS
 
@@ -136,10 +148,14 @@ Automatically scales the AKS cluster by adding or removing nodes based on worklo
         --max-count 5
       ```
 
+      ![Azure CLI commands](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-7v2.png)
+
 ### Step 3: Set Up Alerts and Notifications for AKS
 
 6. **Azure Monitor Alerts**  
 Configure alerts to detect resource thresholds being exceeded, such as CPU usage, memory, or network latency.
+
+    ![Azure Monitor Alert Rule](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-8v2.png)
 
 7. **Action Groups**  
 Use action groups to define responses when an alert is triggered, standardizing notification and automated actions.
