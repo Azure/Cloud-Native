@@ -91,7 +91,7 @@ The back end is responsible for managing product-related data, such as customer 
 
   ![Products appended to MongoDB successfully](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-8-6.png)
 
-- **Key Vault integration.** All back-end services securely connect to **Azure CosmosDB** and **Blob Storage**, using secrets stored in **Azure Key Vault**. The key vault is accessed securely by using a **managed identity** assigned to the App Service or AKS cluster running the service.
+- **Key Vault integration.** All back-end services securely connect to **Azure Cosmos DB** and **Blob Storage**, using secrets stored in **Azure Key Vault**. The key vault is accessed securely by using a **managed identity** assigned to the App Service or AKS cluster running the service.
 
 ## 4. End-to-end flow demonstration
 
