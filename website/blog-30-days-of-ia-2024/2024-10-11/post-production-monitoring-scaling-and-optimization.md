@@ -41,7 +41,7 @@ Learn how to ensure that your deployed applications are healthy, scalable, and o
 
 ## Introduction
 
-In our previous blog posts, we walked through building and deploying an example application using both Azure App Service and Azure Kubernetes Service (AKS) environments.
+In our previous blog posts, we walked through building and deploying an example application using both **[Azure App Service](https://learn.microsoft.com/azure/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg)** and **[Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg)** environments.
 
 However, deployment is not the end of the journey. Post-production phases are essential to maintaining your application’s efficiency and ensuring that it scales effectively as demand increases.
 
