@@ -9,7 +9,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [Cloud, Data, AI, AI/ML, intelligent apps, cloud-native, 30-days-2024, 30-days, enterprise apps, digital experiences, app modernization, serverless, ai apps]
 image: https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png
-description: "Learn how to make sure that your deployed apps are healthy and meeting user demand." 
+description: "Learn how to ensure that your deployed applications are healthy, scalable, and optimized for cost efficiency. This blog provides specific strategies for both Azure App Service and Azure Kubernetes Service (AKS)." 
 tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, community-gallery, azure-kubernetes-service, azure-functions, azure-openai, azure-container-apps, azure-cosmos-db, github-copilot, github-codespaces, github-actions]
 ---
 
@@ -17,11 +17,11 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
   <meta property="og:url" content="https://azure.github.io/cloud-native/post-production-monitoring-scaling-and-optimization"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/>
-  <meta property="og:description" content="Learn how to make sure that your deployed apps are healthy and meeting user demand."/>
+  <meta property="og:description" content="Learn how to ensure that your deployed applications are healthy, scalable, and optimized for cost efficiency. This blog provides specific strategies for both Azure App Service and Azure Kubernetes Service (AKS)."/>
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
   <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/post-production-monitoring-scaling-and-optimization" />
   <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" />
-  <meta name="twitter:description" content="Learn how to make sure that your deployed apps are healthy and meeting user demand." />
+  <meta name="twitter:description" content="Learn how to ensure that your deployed applications are healthy, scalable, and optimized for cost efficiency. This blog provides specific strategies for both Azure App Service and Azure Kubernetes Service (AKS)." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@devanshidiaries" />
@@ -30,7 +30,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 
 <!-- End METADATA -->
 
-Learn how to make sure that your deployed apps are healthy and meeting user demand.
+Learn how to ensure that your deployed applications are healthy, scalable, and optimized for cost efficiency. This blog provides specific strategies for both Azure App Service and Azure Kubernetes Service (AKS).
 
 ## What we cover:
 
@@ -41,142 +41,137 @@ Learn how to make sure that your deployed apps are healthy and meeting user dema
 
 ## Introduction
 
-In our previous blog posts in this series, we walked through building an example application and deploying it to production by using both **[Azure App Service](https://learn.microsoft.com/azure/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg)** and **[Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg)** environments. However, the journey doesn’t end after your app is live. The post-production phase of deployment is critical to ensuring that your app is running efficiently and is prepared to scale as user demand increases. 
+In our previous blog posts, we walked through building and deploying an example application using both **[Azure App Service](https://learn.microsoft.com/azure/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg)** and **[Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg)** environments.
 
-This post guides you through the essential steps for monitoring, scaling, and optimizing applications deployed on App Service and AKS. We cover setting up monitoring, explore scaling strategies, and discuss setting up alerts and notifications systems that help you stay on top of issues and allow your app to remain reliable and performant.
+However, deployment is not the end of the journey. Post-production phases are essential to maintaining your application’s efficiency and ensuring that it scales effectively as demand increases.
 
-:::info
-Join Demo Bytes: [GenAI Gateway Capabilities in Azure API Management](https://aka.ms/demo-bytes/ep14?ocid=biafy25h1_30daysofia_webpage_azuremktg) to learn how Azure API Management can be configured for authentication and authorization of OpenAI endpoints.
-:::
+This post covers the necessary steps for monitoring, scaling, and optimizing applications on both App Service and AKS, helping you maintain reliable and performant deployments.
 
-## Step 1. Monitor application health
+## Azure App Service
 
-You need to know whether your app is running correctly and that users can access it successfully. Monitoring tools provide real-time insights, issue and outage detection, and ongoing logging and analysis capabilities. They allow you to gain insight into your app’s performance, availability, and reliability, and they help you to perform proactive troubleshooting and optimization.
+### Step 1: Monitor Application Health on App Service
 
-### 1.1 Set up Azure Monitor and Application Insights
+1. **Set up Azure Monitor and Application Insights**  
+    Enable Application Insights for your App Service to track performance metrics such as response times, request rates, and failure rates.
+    
+    - **To enable:**  
+        Go to your App Service in the Azure portal. Under Monitoring, enable Application Insights. This provides features like:
 
-- **[Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)** provides a full-stack monitoring solution that collects and analyzes telemetry data from your apps and services. To enable Azure Monitor:
-  1. **For Azure App Service.** In the Azure portal, go to your App Service. Under **Monitoring**, enable **Application Insights**.
-  2. **For AKS.** Enable **Container Insights** to monitor cluster performance, including CPU, memory, and node availability.
-- **Application Insights** can be integrated with both App Service and AKS to track performance, response times, request rates, and failures. Key features include:
-  - **Live metrics.** Real-time performance monitoring.
-  - **Custom dashboards.** Create custom dashboards for specific metrics (for example, API response times, database latency).
+        ![Azure Application Insights](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-1v2.png)
 
-  ![Azure Application Insights setup page for ai-study-backend-service, with options to enable monitoring and view connected resources.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-1.png)
+    - **Live metrics:**
+        Real-time performance monitoring.
 
-  ![Overview of Azure Application Insights for ai-study-backend-service, highlighting performance metrics and connection details for monitoring.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-2.png)
+        ![Azure AI Study Backend Service](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-2v2.png)
 
-  ![Azure dashboard for ai-study-backend-service displaying metrics on usage, reliability, responsiveness, and browser performance.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-3.png)
+    - **Custom dashboards:** Create visual dashboards for metrics such as API response times and database latency.
 
-### 1.2 Implement logging and tracing
+        ![Azure AI Study Backend Service Custom Dashboard](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-3v2.png)
 
-- **App Service.** Enable diagnostic logs to capture application and server logs. You can stream logs live or archive them in Azure Storage.
-- **AKS.** Use **kubectl logs** to retrieve logs from pods. Integrate with Azure Monitor Logs for centralized log management and analysis.
+2. **Implement Logging and Tracing**  
+    Enable diagnostic logs to capture application and server logs. Stream logs live or archive them in Azure Storage for future analysis.
 
-### 1.3 Identify key metrics to monitor
+### Step 2: Scale Your Application on App Service
 
-- **Availability.** Uptime of your services.
-- **Performance.** Response times, latency, and throughput.
-- **Error rates.** Percentage of failed requests or exceptions in your app.
-- **Resource utilization.** CPU and memory usage of App Service and AKS nodes.
+1. **Vertical Scaling (Scale Up)**  
+Increase the compute resources allocated to your App Service plan for handling intensive workloads.
 
-## Step 2. Scale your application
+2. **Horizontal Scaling (Scale Out)**  
+Add more instances of your App Service to handle increased traffic. You can set the number of instances or configure Autoscale based on CPU or memory thresholds.
 
-Scaling your app allows it to handle varying user demand by automatically adjusting the available hosting resources. This helps to ensure optimal performance, reduced downtime, and cost-effectiveness.
+    - **To Scale Out:**  
+    Go to **App Service** > Scale Out (App Service plan), and configure scaling rules.
 
-### 2.1 Scaling on Azure App Service
+      ![Azure AI Study Backend Service Scale Out](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-4v2.png)
 
-App Service offers two methods of scaling resources:
+### Step 3: Set Up Alerts and Notifications for App Service
 
-- **Vertical scaling (scale up).** This involves increasing the compute resources (for example, CPU, memory) allocated to your App Service plan. It’s useful when your application needs more power to handle intensive workloads.
-- **Horizontal scaling (scale out).** This adds more instances of your App Service to handle increased traffic.
-  - To set the App Service scale-out setting, go to **App Service > Scale Out (App Service plan)** and then set the number of instances or configure **Autoscale** based on CPU or memory thresholds.
+1. **Configure Azure Monitor Alerts**   
+Set up alerts to notify you when key metrics (such as CPU usage, memory, or failure rates) exceed defined thresholds.
 
-    ![Azure portal scale-out page for ai-study-backend-service, displaying instance count settings and scaling options for the application.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-4.png)
+    - **Steps:**  
+**Azure Monitor** > **Alerts** > **New Alert Rule**. Define your target resource, set conditions, and configure actions like sending emails or SMS alerts.
 
-### 2.2  Scaling on Azure Kubernetes Service (AKS)
+2. **Set Up Action Groups**  
+Use action groups to standardize alert responses, ensuring the right teams are notified promptly.
 
-AKS scaling can be configured using these features:
+## Azure Kubernetes Service (AKS)
 
-- **Horizontal Pod Autoscaling (HPA).** Automatically adjusts the number of pod replicas in your AKS cluster based on observed CPU or memory usage. You can set up HPA by defining a resource threshold in your Kubernetes deployment `YAML`:
+### Step 1: Monitor Application Health on AKS
 
-  ```
-  apiVersion: autoscaling/v1
-  kind: HorizontalPodAutoscaler
-  metadata:
-    name: <your-hpa-name>
-  spec:
-    scaleTargetRef:
-      apiVersion: apps/v1
-      kind: Deployment
-      name: <your-app-name>
-    minReplicas: 1
-    maxReplicas: 10
-    targetCPUUtilizationPercentage: 80
-  ```
+1. **Set up Azure Monitor with Container Insights**  
+Enable Container Insights to monitor cluster performance, including CPU, memory, and node availability.  
 
-- **Cluster Autoscaler.** Automatically scales the AKS cluster by adding or removing nodes based on workload demands. Enable this through the AKS settings in the Azure portal or via **the Azure CLI:**
+2. **Logging and Tracing on AKS**  
+Use `kubectl` logs to retrieve logs from your pods. Integrate with Azure Monitor Logs for centralized log management.
 
-  ```
-  az aks update \
-    --resource-group <resource-group> \
-    --name <aks-cluster> \
-    --enable-cluster-autoscaler \
-    --min-count 1 \
-    --max-count 5
-  ```
+    ![Azure Monitor Logs](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-5v2.png)
 
-  ![Terminal output from an Azure Kubernetes Service (AKS) update command, showing agent pool configuration and an error regarding role assignment.](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-5.png)
+3. **Key Metrics to Monitor**
+    - **Availability:** Uptime of the services deployed in your AKS cluster.  
+    - **Performance:** CPU, memory usage, and network traffic.
+    - **Error Rates:** Failed requests or service outages.
+    - **Resource Utilization:** Node and pod-level resource usage.
 
-### 2.3 Scaling best practices
+      ![Azure showing CPU, memory usage, node and pod-level resource usage](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-6v2.png)
 
-To make sure that your app stays reliable, while also optimizing costs, you want your scaling to fit your usage. You don’t want to overprovision during low-demand periods, and you don’t want to under provision during high-demand periods. Use the following methods to find the best scaling strategy:
+### Step 2: Scale Your Application on AKS
 
-- **Monitor usage trends.** Use historical performance data to predict when scaling might be required.
-- **Define scaling rules.** Automate scaling with predefined thresholds, making sure that your app can handle sudden spikes in traffic, without manual intervention.
+4. **Horizontal Pod Autoscaling (HPA)**  
+Automatically adjust the number of pod replicas based on observed CPU or memory usage. Configure HPA by defining resource thresholds in your Kubernetes deployment YAML:
 
-## Step 3. Set up alerts and notifications
+    ```
+    apiVersion: autoscaling/v1
+    kind: HorizontalPodAutoscaler
+    metadata:
+      name: <your-hpa-name>
+    spec:
+      scaleTargetRef:
+        apiVersion: apps/v1
+        kind: Deployment
+        name: <your-app-name>
+      minReplicas: 1
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 80
+    ```
+  
+5. **Cluster Autoscaler**  
+Automatically scales the AKS cluster by adding or removing nodes based on workload demands.
+    - **Enable using Azure CLI:**
 
-Alerts and notifications provide real-time updates on critical app issues, such as performance degradation, security vulnerabilities, and resource bottlenecks. By receiving timely alerts, your team can quickly respond to issues, minimizing downtime and helping to ensure that the app operates smoothly.
+      ```
+      az aks update \
+        --resource-group <RESOURCE_GROUP_NAME> \
+        --name <AKS_NAME> \
+        --enable-cluster-autoscaler \
+        --min-count 1 \
+        --max-count 5
+      ```
 
-### 3.1 Configure Azure alerts
+      ![Azure CLI commands](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-7v2.png)
 
-Set up [Azure Monitor alerts](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg) to notify you when certain metrics (such as CPU usage, memory, or failure rates) exceed defined thresholds:
+### Step 3: Set Up Alerts and Notifications for AKS
 
-1. Go to **Azure Monitor > Alerts > New Alert Rule**.
-2. Define the **Target Resource**, such as your App Service or AKS.
-3. Set **Conditions** for metrics like CPU usage, memory, or HTTP response times.
-4. Configure **Actions**, such as sending an email or SMS, or triggering an automated action to handle more advanced responses.
+6. **Azure Monitor Alerts**  
+Configure alerts to detect resource thresholds being exceeded, such as CPU usage, memory, or network latency.
 
-### 3.2 Set up action groups
+    ![Azure Monitor Alert Rule](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-7-8v2.png)
 
-In Azure Monitor, **[action groups](https://learn.microsoft.com/azure/azure-monitor/alerts/action-groups?ocid=biafy25h1_30daysofia_webpage_azuremktg)** define how Azure responds to an alert after it’s triggered. When attached to an alert rule, the action group determines the following:
+7. **Action Groups**  
+Use action groups to define responses when an alert is triggered, standardizing notification and automated actions.
 
-- Who gets notified and by what means (for example, via email, SMS, or push notifications).
-- What automated actions are performed (for instance, executing an Azure Logic Apps or  Azure Functions process).
-- Action groups can be shared across different alert rules, allowing you to centralize and standardize your alert response and helping to ensure that the right people or systems are notified to address issues promptly​.
+## Common Continuous Optimization
 
-### 3.3 Use advanced alerting strategies
+### Step 4. Implement continuous optimization
 
-The Azure platform offers additional capabilities that you can use to make sure that your apps are working correctly:
+8. **Performance Tuning**
+    - **Database:** Optimize queries and review the performance of your databases (e.g., Azure Cosmos DB for MongoDB).
+    - **Caching:** Use caching mechanisms (e.g., Azure Cache for Redis) to offload work from the backend.
+    - **Code Optimization:** Identify and resolve performance bottlenecks using profiling tools like Application Insights Profiler.
 
-- **Anomaly detection.** Use machine learning-based anomaly detection in Application Insights to trigger alerts when metrics behave unusually.
-- **Health checks.** Set up recurring synthetic transactions or health probes to periodically test the availability and performance of key application endpoints.
-
-## Step 4. Implement continuous optimization
-
-The process of continuous optimization involves regularly analyzing performance, resource utilization, and user demands to let you improve your app’s resource usage and to maintain optimal performance. App scaling is one aspect of optimization that we’ve already discussed, but Azure offers more ways to improve your app’s performance, cost, and stability.
-
-### 4.1 Apply performance tuning
-
-- **Database performance.** Regularly review the performance of your databases (for example, [Azure Cosmos DB for MongoDB](https://learn.microsoft.com/azure/cosmos-db/mongodb/introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg)) to make sure that they can handle traffic and optimize queries for faster response times.
-- **Caching.** Implement caching layers (such as [Azure Cache for Redis](https://learn.microsoft.com/azure/azure-cache-for-redis/cache-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)) to reduce load on the back-end and database services.
-- **Code optimization.** Review performance bottlenecks in your code by using profiling tools, such as [Application Insights Profiler](https://learn.microsoft.com/azure/azure-monitor/profiler/profiler-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg).
-
-### 4.2 Consider cost optimizations
-
-- **Monitor resource costs.** Regularly review your resource usage and scaling strategies to avoid overprovisioning. To track your spending, use [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management?ocid=biafy25h1_30daysofia_webpage_azuremktg) tools.
-- **Use reserved instances.** For cost savings with long-term workloads, consider using [reserved instances](https://azure.microsoft.com/pricing/reserved-vm-instances?ocid=biafy25h1_30daysofia_webpage_azuremktg).
+9. **Cost Optimization**
+    - **Monitor Resource Costs:** Regularly review resource usage to avoid overprovisioning.
+    - **Reserved Instances:** Use reserved instances for predictable workloads to save on costs.
 
 :::info
 Learn more on Technical leaders’ [guide to building intelligent apps](https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg).
@@ -184,6 +179,6 @@ Learn more on Technical leaders’ [guide to building intelligent apps](https://
 
 ## Summary
 
-In this blog post, we walked through how a strong post-production rollout strategy can help you ensure that your application is not only functional but also performant, scalable, and cost-efficient. Monitoring tools, autoscaling features, and alert systems all contribute to a reliable and resilient application environment.
+In this post, we provided a comprehensive guide on monitoring, scaling, and optimizing applications on Azure App Service and AKS. We discussed using monitoring tools, configuring scaling strategies, and setting up alerts. Additionally, we covered best practices for continuous optimization to ensure your applications remain reliable, scalable, and cost-effective.
 
-In the next post, we’ll demo the application, showcasing how all the components work together in a live setup, and we’ll discuss some real-world use cases.
+In the next blog, we will demonstrate a live application setup, showcasing how all these components work together in real-world use cases.
