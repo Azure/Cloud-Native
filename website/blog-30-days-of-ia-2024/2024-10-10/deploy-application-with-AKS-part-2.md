@@ -283,8 +283,7 @@ In this blog, we successfully deployed our Middleware, Back-end, and Front-end s
 ## Additional Resources
 
 - [Azure Kubernetes Service Documentation](https://learn.microsoft.com/azure/aks/?ocid=biafy25h1_30daysofia_webpage_azuremktg)
-- [Getting Started with Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/get-started-aks)
-- [Deploying Applications to Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/deploy-application)
+- [Getting Started with Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg)
+- [Deploying Applications to Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/tutorial-kubernetes-deploy-application?ocid=biafy25h1_30daysofia_webpage_azuremktg)
 - [Managed Identities for Azure Resources](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/)
 - [Workload Identity for AKS](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster)
-
