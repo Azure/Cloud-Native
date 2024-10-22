@@ -1,5 +1,5 @@
 ---
-date: 2024-10-22T09:01
+date: 2024-10-10T09:01
 slug: deploy-application-with-AKS-part-2
 title: "1.5b Deploy Application with AKS Part 2"
 authors: [30days]
