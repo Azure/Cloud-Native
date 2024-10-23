@@ -55,11 +55,56 @@ The CI/CD pipeline will consist of the following key stages:
 
 Follow similar steps as outlined in blog 1.6a.
 
-#### Creating Variable Groups
+### Creating Variable Groups
 
 Variable groups in Azure DevOps help centralize configuration management by allowing you to store and reuse variables across multiple pipelines. Here's how to create and configure a variable group:
 
 - **Navigate to Pipelines:** Open the **Pipelines** section in your Azure DevOps project.
 - **Library:** Click on **Library** under Pipelines.
 
-![screenshot of Library in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-1.png)
+  ![screenshot of Library in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-1.png)
+
+1. **Add Variable Group:** Select + **Variable group**.
+
+    ![screenshot of Variable Group fields Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-2.png)
+
+2. **Define Variables:** Add the necessary variables (e.g., `AcrName`, `BackendAppServiceName`, `MiddlewareAppServiceName`, and `FrontendAppServiceName`). Optionally, mark sensitive values as secrets.
+
+    ![screenshot of secrets settings in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-3.png)
+
+3. **Link to Azure Key Vault:** If needed, link your variable group to an Azure Key Vault to manage secrets.
+
+    ![screenshot of Azure Key Vault variables in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-4.png)
+
+4. **Save the Variable Group:** Click **Save** to confirm your variable group configuration.
+5. **Add Pipeline Permission:** Ensure that the pipeline has permission to access the variable group.
+
+    ![screenshot of pipeline permissions in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-5.png)
+
+### Variable Groups
+
+We will utilize variable groups to manage our configurations efficiently. In particular, we will set the `DeploymentTarget` variable in the variable group `ai-study-vg` to determine whether we are deploying to AKS or App Service.
+
+#### Adding Variables
+
+- `DeploymentTarget`: This variable will dictate the target deployment, allowing us to switch between AKS and App Service as needed.
+
+    ![screenshot of deployment target variable setting in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-6.png)
+
+## Configuring Service Connection for Azure Container Registry (ACR)
+
+Before deploying your applications to Azure Kubernetes Service (AKS), it's essential to set up a service connection for Azure Container Registry (ACR). This allows Azure DevOps to authenticate and pull images from your ACR. Follow these steps to configure the service connection:
+
+### Step 1: Access Your Azure Container Registry
+
+1. **Navigate to Azure Portal** and find your Azure Container Registry resource.
+2. In the left-hand menu, select **Access keys**.
+
+### Step 2: Copy the Required Values
+
+In the **Access keys** section, you will find two important values: 
+
+- **Login Server:** This will typically be in the format youracrname.azurecr.io.
+- **Admin User Password:** This is used for authentication.
+
+    ![screenshot of access keys section in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-7.png)
