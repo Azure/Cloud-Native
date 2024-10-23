@@ -31,7 +31,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 <!-- End METADATA -->
 ## Part 2: Setting Up CI/CD Pipelines for Azure Kubernetes Service (AKS) Using Azure DevOps
 
-In the previous blog, we discussed the fundamentals of setting up CI/CD pipelines for Azure App Service. In this blog, we will focus on how to configure a CI/CD pipeline specifically for Azure Kubernetes Service (AKS) using Azure DevOps. We’ll cover prerequisites, detailed YAML configurations, and how to manage deployments based on a variable group setting.
+In the previous blog, we discussed the fundamentals of setting up CI/CD pipelines for **Azure App Service**. In this blog, we will focus on how to configure a CI/CD pipeline specifically for **Azure Kubernetes Service (AKS)** using Azure DevOps. We’ll cover prerequisites, detailed YAML configurations, and how to manage deployments based on a variable group setting.
 
 ## Prerequisites
 
@@ -111,14 +111,14 @@ In the **Access keys** section, you will find two important values:
 
 ### Step 3: Create the Service Connection
 
-6. In your Azure DevOps project, navigate to Project Settings > Service connections.
-7. Click on New service connection and select Docker Registry.
-8. Choose Others as the Docker Registry type.
+6. In your Azure DevOps project, navigate to **Project Settings** > **Service connections**.
+7. Click on **New service connection** and select **Docker Registry**.
+8. Choose **Others** as the Docker Registry type.
 9. Enter the following details:
-    - Registry: $(DockerRegistry) (the variable you created in ai-study-vg)
-    - Username: Your ACR username (usually the name of your ACR)
-    - Password: Use the Admin User Passwordyou copied earlier.
-10. Name your service connection (e.g., AI Study Container) and save it.
+    - **Registry:** `$(DockerRegistry)` (the variable you created in `ai-study-vg`)
+    - **Username:** Your ACR username (usually the name of your ACR)
+    - **Password:** Use the **Admin User Password** you copied earlier.
+10. Name your service connection (e.g., `AI Study Container`) and save it.
 
     ![screenshot of service connection settings in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-8.png)
 
@@ -364,8 +364,8 @@ stages:
 ### Explanation of the YAML Configuration
 
 - The pipeline triggers on changes to the `main` branch.
-- The `Buildjob` compiles the applications and builds artifacts for deployment.
-- The `Deployjob` checks the value of DeploymentTarget and decides whether to deploy to AKS or App Service.
+- The **Build** job compiles the applications and builds artifacts for deployment.
+- The **Deploy** job checks the value of DeploymentTarget and decides whether to deploy to AKS or App Service.
 
 #### Testing the CI/CD Pipeline
 
