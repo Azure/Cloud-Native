@@ -62,4 +62,4 @@ Variable groups in Azure DevOps help centralize configuration management by allo
 - **Navigate to Pipelines:** Open the **Pipelines** section in your Azure DevOps project.
 - **Library:** Click on **Library** under Pipelines.
 
-![screenshot of project in Azure DevOps portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6-1.png)
+![screenshot of Library in Azure DevOps project](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6b-1.png)
