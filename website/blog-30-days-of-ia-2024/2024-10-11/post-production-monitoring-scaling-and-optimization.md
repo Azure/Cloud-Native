@@ -71,6 +71,12 @@ This post covers the necessary steps for monitoring, scaling, and optimizing app
 2. **Implement Logging and Tracing**  
     Enable diagnostic logs to capture application and server logs. Stream logs live or archive them in Azure Storage for future analysis.
 
+3. **Key Metrics to Monitor**
+    - **Availability:** Uptime and responsiveness of your App Service.
+    - **Performance:** Response times, throughput, and latency.
+    - **Error Rates:** Percentage of failed requests or exceptions.
+    - **Resource Utilization:** CPU and memory usage.
+
 ### Step 2: Scale Your Application on App Service
 
 1. **Vertical Scaling (Scale Up)**  
