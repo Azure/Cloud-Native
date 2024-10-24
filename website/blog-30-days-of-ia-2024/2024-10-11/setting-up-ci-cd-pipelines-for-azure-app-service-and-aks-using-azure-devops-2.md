@@ -45,7 +45,7 @@ Before diving into the pipeline configuration, ensure you have the following pre
 
 ## Overview of the Pipeline
 
-The CI/CD pipeline will consist of the following key stages:
+The CI/CD pipeline for deploying to AKS will include:
 
 1. **Build Stage:** Similar to the previous setup, each application is built in parallel to produce artifacts.
 2. **Push to ACR:** Docker images are created from the build artifacts and pushed to Azure Container Registry.
