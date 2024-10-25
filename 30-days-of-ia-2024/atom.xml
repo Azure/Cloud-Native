@@ -2,134 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024</id>
     <title>Build Intelligent Apps On Azure Blog</title>
-    <updated>2024-10-17T09:01:00.000Z</updated>
+    <updated>2024-10-17T09:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024"/>
     <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[1.10 Closing Summary]]></title>
-        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary</id>
-        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary"/>
-        <updated>2024-10-17T09:01:00.000Z</updated>
-        <summary type="html"><![CDATA[Review what you’ve learned building the app, along with the benefits that apps like this one can bring to businesses.]]></summary>
-        <content type="html"><![CDATA[
-<p>Review what you’ve learned building the app, along with the benefits that apps like this one can bring to businesses. </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-we-cover">What we cover:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#what-we-cover" class="hash-link" aria-label="Direct link to What we cover:" title="Direct link to What we cover:">​</a></h2>
-<ul>
-<li>How the app meets our scalability needs </li>
-<li>How it addresses our performance needs </li>
-<li>How it meets our security and compliance requirements </li>
-<li>How our app’s AI integration improves business outcomes </li>
-<li>How it optimizes costs </li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
-<p>In this blog series, we’ve walked through an example scenario—creating an AI-based content generation app to support the Best For You Organics Company’s marketing efforts. This app integrates various Azure services with AI models to offer a scalable, secure, and high-performance solution. </p>
-<p>In previous blog posts, we’ve examined our application architecture and covered the process of creating, deploying, and operating the application. In today’s post, the last in this series, we explore the <strong>scalability</strong>, <strong>performance</strong>, <strong>security</strong>, <strong>cost optimization</strong>, and <strong>business impacts</strong> of our example app, and we summarize the benefits and takeaways from the development process. </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-scalability">1. Scalability<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#1-scalability" class="hash-link" aria-label="Direct link to 1. Scalability" title="Direct link to 1. Scalability">​</a></h2>
-<p>One of the key design goals of this application was scalability, ensuring that the system could handle increasing user traffic and larger datasets without degrading performance. Here are the key factors that allowed us to achieve that in our example app, along with the business impacts of these capabilities. </p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-scalability-factors">Key scalability factors<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-scalability-factors" class="hash-link" aria-label="Direct link to Key scalability factors" title="Direct link to Key scalability factors">​</a></h3>
-<ul>
-<li><a href="https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer"><strong>Azure Kubernetes Service (AKS)</strong></a>. If we deploy our three app layers to AKS, we can take advantage of built-in scaling options, like <a href="https://learn.microsoft.com/azure/aks/tutorial-kubernetes-scale?tabs=azure-cli?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">horizontal pod autoscaling (HPA)</a>, allowing services to scale up based on CPU and memory usage. <!-- -->
-<ul>
-<li><strong>Impact</strong>. This ensures that as the demand increases, additional instances are spun up automatically, maintaining the app’s responsiveness. </li>
-</ul>
-</li>
-<li><a href="https://learn.microsoft.com/azure/app-service/getting-started?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer"><strong>Azure App Service</strong></a>. If our app is hosted on App Service, we can benefit from that service’s <a href="https://learn.microsoft.com/azure/app-service/manage-scale-up?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">autoscaling capabilities</a> to handle spikes in user traffic. <!-- -->
-<ul>
-<li><strong>Impact</strong>. During peak usage periods, the app can handle significant traffic, while maintaining fast response times. </li>
-</ul>
-</li>
-<li><strong>Caching for efficiency</strong>. By using caching mechanisms at both the middleware and back-end levels, repeated queries can be served faster, reducing the load on back-end systems. <!-- -->
-<ul>
-<li><strong>Impact</strong>. Improves performance for common user queries and reduces API calls to services like Azure OpenAI Service. </li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
-<ul>
-<li><strong>High availability</strong>. The app can handle thousands of users simultaneously, with no downtime. </li>
-<li><strong>Cost-effective scaling</strong>. The automatic scaling reduces operational costs by only allocating resources when demand increases. </li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-performance">2. Performance<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#2-performance" class="hash-link" aria-label="Direct link to 2. Performance" title="Direct link to 2. Performance">​</a></h2>
-<p>Ensuring fast response times was critical, especially since the application integrates with AI models and large databases. We applied several optimization techniques to our example app to meet performance goals. </p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-performance-enhancements">Key performance enhancements<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-performance-enhancements" class="hash-link" aria-label="Direct link to Key performance enhancements" title="Direct link to Key performance enhancements">​</a></h3>
-<ul>
-<li><strong><a href="https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure OpenAI</a> integration optimization</strong>. The middleware integrates with the <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/models/gpt-4o-and-gpt-4-turbo?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">OpenAI Service GPT-4o completion model</a> and <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/models/embeddings-models?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">embedding model</a> to generate content and vectors.<!-- -->
-<ul>
-<li>To optimize performance, we batch multiple requests when feasible and use <strong>non-blocking async operations</strong> to minimize delays. </li>
-</ul>
-</li>
-<li><strong>Data processing via Azure Cosmos DB</strong>. The <strong>back-end</strong> service uses <a href="https://learn.microsoft.com/azure/cosmos-db/introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Cosmos DB</a> for storing product and customer data. With <a href="https://learn.microsoft.com/azure/cosmos-db/partitioning-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">automatic partitioning</a> and <a href="https://learn.microsoft.com/azure/cosmos-db/distribute-data-globally?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">global distribution</a>, Azure Cosmos DB ensures low-latency data access, no matter where the users are located.</li>
-<li><strong>API management</strong>. Both the back-end and middleware services are exposed via <a href="https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure API Management</a>. API Management offers caching, load balancing, and rate-limiting features that can improve performance and manage high request volumes. </li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-1">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-1" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
-<ul>
-<li><strong>Faster query responses</strong>. AI-generated content and product similarity results are delivered in seconds.</li>
-<li><strong>Improved user experience</strong>. The app offers a fluid, fast, and reliable user experience with no noticeable delays, helping to keep users engaged.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-security-and-compliance">3. Security and compliance<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#3-security-and-compliance" class="hash-link" aria-label="Direct link to 3. Security and compliance" title="Direct link to 3. Security and compliance">​</a></h2>
-<p>Security is essential when handling sensitive data, API keys, and AI-generated results. Our example app was designed with security-first principles, using Azure best practices. </p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-security-features">Key security features<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-security-features" class="hash-link" aria-label="Direct link to Key security features" title="Direct link to Key security features">​</a></h3>
-<ul>
-<li><strong><a href="https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Key Vault</a> integration</strong>. Both <strong>back-end</strong> and <strong>middleware</strong> services retrieve secrets (API keys, database credentials, and more) securely from <strong>Key Vault</strong> using <a href="https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">managed identities</a>. This eliminates hard-coded secrets and credentials in the code. </li>
-<li><strong>Authentication and authorization</strong>. The front-end ReactJS app uses <a href="https://learn.microsoft.com/entra/fundamentals/whatis?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Microsoft Entra ID</a> for identity management and user authentication. Only authenticated users can access the app, helping to prevent unauthorized access. </li>
-<li><strong>API key validation</strong>. Both middleware and back-end APIs are secured using Azure API Management endpoints, implementing policies which require that requests pass valid API keys. This helps to ensure that only authorized services can call these APIs. </li>
-<li><strong>API Cross-Origin Resource Sharing (CORS) limits</strong>. The API Management endpoints also apply CORS policies that only permit requests from allowed domains.</li>
-<li><strong>Rate limiting and throttling</strong>. By configuring <a href="https://learn.microsoft.com/azure/api-management/api-management-sample-flexible-throttling?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">rate limits and throttling</a> in API Management, we enhanced the security and stability of the application, making sure that no single user can overwhelm the system.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-2">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-2" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
-<ul>
-<li><strong>Data privacy</strong>. User data and API keys are kept secure using best-in-class Azure security features.</li>
-<li><strong>Compliance with industry standards</strong>. The app follows security and compliance regulations, making it suitable for enterprise-level use.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-ai-and-business-outcomes">4. AI and business outcomes<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#4-ai-and-business-outcomes" class="hash-link" aria-label="Direct link to 4. AI and business outcomes" title="Direct link to 4. AI and business outcomes">​</a></h2>
-<p>The incredible productivity increases that generative AI can offer are the core reasons to build our example app. The app takes advantage of the power of <strong>Azure OpenAI</strong> models to provide a unique business capability to the <strong>Best For You Organics</strong> Company’s marketing team, blending product recommendations with AI-generated content. </p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-ai-capabilities">Key AI capabilities<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-ai-capabilities" class="hash-link" aria-label="Direct link to Key AI capabilities" title="Direct link to Key AI capabilities">​</a></h3>
-<ul>
-<li><strong>Product vector search</strong>. By transforming user queries into embedding vectors and retrieving similar products, the app delivers personalized product recommendations in real time.</li>
-<li><strong>Content generation</strong>. The <strong>GPT-4o completion model</strong> generates contextual, AI-based content tailored to user queries, offering value-added content for e-commerce, support, and content creation use cases.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-3">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-3" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
-<ul>
-<li><strong>Personalized user experience</strong>. By combining AI-powered content with product recommendations, the app helps create personalized marketing content that can boost user engagement and conversions.</li>
-<li><strong>Reduced manual work</strong>. Automated content generation radically reduces the need for manual effort, making the app highly efficient for businesses in need of automated solutions.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-cost-efficiency">5. Cost efficiency<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#5-cost-efficiency" class="hash-link" aria-label="Direct link to 5. Cost efficiency" title="Direct link to 5. Cost efficiency">​</a></h2>
-<p>By making the most of the <a href="https://azure.microsoft.com/pricing/purchase-options/azure-account?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure pay-as-you-go model</a>, the application optimizes costs, while maintaining performance and scalability.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-cost-optimizations">Key cost optimizations:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-cost-optimizations" class="hash-link" aria-label="Direct link to Key cost optimizations:" title="Direct link to Key cost optimizations:">​</a></h3>
-<ul>
-<li><strong>Managed services</strong>. Many of the Azure services that we use in our app, like App Service, AKS, and Azure Cosmos DB, are platform as a service (PaaS) offerings. PaaS can save you money by eliminating infrastructure and maintenance expenses, enabling pay-as-you-go scalability, reducing development and operational costs, and providing built-in tools, security, and compliance features.</li>
-<li><strong>Managed identities and Azure Key Vault</strong>. These services help to secure access to credentials, without the need for costly, complex infrastructure.</li>
-<li><strong>Autoscaling</strong>. Both AKS and App Service offer autoscaling options that allow resources to be dynamically allocated based on actual usage, helping to save costs during periods of low demand.</li>
-<li><strong>Serverless options for low-traffic scenarios</strong>. For certain functionalities, the app could use serverless options, like Azure Functions, which only incur costs when executed.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-4">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-4" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
-<ul>
-<li><strong>Optimized spending</strong>. The business can focus on scaling with demand, while keeping cloud spending under control.</li>
-<li><strong>Better return on investment (ROI)</strong>. The reduced operational overhead can increase ROI, especially for e-commerce or customer-facing businesses.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
-<p>In this series, we’ve covered a lot, and we hope that you’ve found the experience useful. From handling user queries and product recommendations to generating intelligent content by using Azure OpenAI, our example app aims to show you the potential advantage that these new technologies offer—not just to marketing teams but also to any organization that needs to communicate effectively with customers.
-We hope that you can use this example app as a model for how modern cloud-native applications can combine <strong>AI</strong>, <strong>secure data handling</strong>, and <strong>scalable infrastructure</strong> to deliver powerful tools to you and your customers.</p>]]></content>
-        <author>
-            <name>#30Days Of IA</name>
-            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
-        </author>
-        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
-        <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
-        <category label="learn-live" term="learn-live"/>
-        <category label="demo-bytes" term="demo-bytes"/>
-        <category label="community-gallery" term="community-gallery"/>
-        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
-        <category label="azure-functions" term="azure-functions"/>
-        <category label="azure-openai" term="azure-openai"/>
-        <category label="azure-container-apps" term="azure-container-apps"/>
-        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
-        <category label="github-copilot" term="github-copilot"/>
-        <category label="github-codespaces" term="github-codespaces"/>
-        <category label="github-actions" term="github-actions"/>
-    </entry>
     <entry>
         <title type="html"><![CDATA[2.4 Evaluate with AI!]]></title>
         <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/evaluate-with-ai</id>
@@ -414,132 +291,6 @@ We hope that you can use this example app as a model for how modern cloud-native
         <author>
             <name>Marlene Mhangami</name>
             <uri>https://github.com/marlenezw</uri>
-        </author>
-        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
-        <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
-        <category label="learn-live" term="learn-live"/>
-        <category label="demo-bytes" term="demo-bytes"/>
-        <category label="community-gallery" term="community-gallery"/>
-        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
-        <category label="azure-functions" term="azure-functions"/>
-        <category label="azure-openai" term="azure-openai"/>
-        <category label="azure-container-apps" term="azure-container-apps"/>
-        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
-        <category label="github-copilot" term="github-copilot"/>
-        <category label="github-codespaces" term="github-codespaces"/>
-        <category label="github-actions" term="github-actions"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1.9 How it works: Behind the scenes of our AI-based content generation app]]></title>
-        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app</id>
-        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app"/>
-        <updated>2024-10-17T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Dive in to learn more about how our example application works at a technical level.]]></summary>
-        <content type="html"><![CDATA[
-<p>Dive in to learn more about how our example application works at a technical level.  </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-we-cover">What we cover:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#what-we-cover" class="hash-link" aria-label="Direct link to What we cover:" title="Direct link to What we cover:">​</a></h2>
-<ul>
-<li>A high-level architecture overview </li>
-<li>A description of API calls made by the front-end app </li>
-<li>An overview of the APIs offered by the middleware service </li>
-<li>A walkthrough of the back-end service’s APIs and integration with other Azure services </li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
-<p>In the previous blog post, we gave you a high-level overview of our example AI-based content generation app, covering its user experience and how it integrated various services. Now we’d like to dive a little deeper into the technical side, explaining the app's architecture, key components, and code snippets and offering an overview of the app’s data flow.  </p>
-<p>Today’s post breaks down how the <strong>front-end</strong>, <strong>middleware</strong>, and <strong>back-end</strong> services work together. We also discuss how the app uses Azure services, like <a href="https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure API Management</a>, <a href="https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Key Vault</a>, <a href="https://learn.microsoft.com/azure/cosmos-db/introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Cosmos DB</a>, <a href="https://learn.microsoft.com/azure/storage/blobs/storage-blobs-introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Blob Storage</a>, and <a href="https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure OpenAI Service</a>, and how <strong>managed identity</strong> is used to securely connect these components. </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-high-level-architecture">1. High-level architecture<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#1-high-level-architecture" class="hash-link" aria-label="Direct link to 1. High-level architecture" title="Direct link to 1. High-level architecture">​</a></h2>
-<p>The application is composed of three core services:</p>
-<ol>
-<li>
-<p><strong>Front-end app (ReactJS based)</strong>. A chat-based UI where users submit queries and receive AI-generated content </p>
-</li>
-<li>
-<p><strong>Middleware service (Java Spring Boot based)</strong>. Responsible for content generation and handling product similarity searches </p>
-</li>
-<li>
-<p><strong>Back-end service (Java Spring Boot based)</strong>. Handles customer and product data and computes product similarity using vectors </p>
-</li>
-</ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="architecture-diagram">Architecture diagram<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#architecture-diagram" class="hash-link" aria-label="Direct link to Architecture diagram" title="Direct link to Architecture diagram">​</a></h3>
-<p>The architecture diagram shows the interaction between: </p>
-<p><strong>Front end -&gt; Middleware Azure API Management endpoints -&gt; Middleware service -&gt; Back-end API Management endpoints -&gt; Back end (Spring Boot)</strong>.</p>
-<p>How middleware and back-end services connect to <strong>Azure Key Vault</strong>, <strong>Azure Cosmos DB</strong>, <strong>Azure Blob Storage</strong>, and <strong>Azure OpenAI</strong>.</p>
-<p><img loading="lazy" alt="architecture diagram for front end all the way to back end" src="https://azure.github.io/Cloud-Native/assets/images/1-9-2-c6a19b796c36b6ad0b5af2558c445ca2.png" width="1430" height="639" class="img_ev3q"></p>
-<p><img loading="lazy" alt="architecture diagram for middleware and back-end service connections" src="https://azure.github.io/Cloud-Native/assets/images/1-9-3-346b537b831bf0ca167d5f3e01b0008c.png" width="1600" height="711" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-front-end-app">2. Front-end app<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#2-front-end-app" class="hash-link" aria-label="Direct link to 2. Front-end app" title="Direct link to 2. Front-end app">​</a></h2>
-<p>The <strong>front end</strong> acts as the interface between the user and the application. It allows the user to sign in, enter queries, and receive generated content. </p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-components">Key components:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#key-components" class="hash-link" aria-label="Direct link to Key components:" title="Direct link to Key components:">​</a></h3>
-<ul>
-<li>
-<p><strong>Sign-in and user identity management</strong>. The front end uses identity management to authenticate users before they access the main chat functionality. </p>
-<ul>
-<li>Code snippet: User authentication logic uses the <a href="https://learn.microsoft.com/entra/identity-platform/msal-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer"><strong>Microsoft Authentication Library (MSAL)</strong></a>. (@azure/msal-browser) </li>
-</ul>
-</li>
-</ul>
-<p><img loading="lazy" alt="image of code snippet for identity management" src="https://azure.github.io/Cloud-Native/assets/images/1-9-4-a7a874b164bcc615912dddb72acf29b3.png" width="1282" height="1238" class="img_ev3q"></p>
-<ul>
-<li><strong>Chat interface</strong>. After authentication, the user can interact with the chat interface. On form submission, the query is sent to the <strong>Middleware API</strong> through an <strong>API Management endpoint</strong>.</li>
-</ul>
-<p><img loading="lazy" alt="image of code snippet for chat interface" src="https://azure.github.io/Cloud-Native/assets/images/1-9-5-be92371ca307304b1bfb91a342ef76ee.png" width="1470" height="1346" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-middleware-service">3. Middleware service<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#3-middleware-service" class="hash-link" aria-label="Direct link to 3. Middleware service" title="Direct link to 3. Middleware service">​</a></h2>
-<p>The <strong>middleware service</strong> is the central hub for content generation and managing product similarity searches. It connects to <strong>Azure OpenAI</strong> for content generation and interfaces with the <strong>back end</strong> to retrieve product vectors. </p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-apis">Core APIs:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#core-apis" class="hash-link" aria-label="Direct link to Core APIs:" title="Direct link to Core APIs:">​</a></h3>
-<ul>
-<li><strong>Generate content API</strong>. This API receives the user’s query, generates an embedding vector, and calls Azure OpenAI to generate relevant content. </li>
-</ul>
-<p><img loading="lazy" alt="image of code snippet" src="https://azure.github.io/Cloud-Native/assets/images/1-9-6-bc99665faf146b5b69cc74e40c5f701d.png" width="1432" height="841" class="img_ev3q"></p>
-<p><img loading="lazy" alt="image of code snippet" src="https://azure.github.io/Cloud-Native/assets/images/1-9-7-0c231abe122c4e2669cb496ade5e06ec.png" width="1536" height="1436" class="img_ev3q"></p>
-<p><img loading="lazy" alt="image of code snippet" src="https://azure.github.io/Cloud-Native/assets/images/1-9-8-cae0bf85b4f54de1a9382b2a378c0a77.png" width="1432" height="792" class="img_ev3q"></p>
-<ul>
-<li><strong>Generate embedding vector API</strong>. Uses <strong>OpenAI's embedding model</strong> to transform the user query into an embedding vector that the <strong>back-end</strong> service can use for similarity matching. </li>
-</ul>
-<p><img loading="lazy" alt="image of code snippet using OpenAI&amp;#39;s embedding model" src="https://azure.github.io/Cloud-Native/assets/images/1-9-9-6ad0a34f6a13959748639acd93559326.png" width="1464" height="850" class="img_ev3q"></p>
-<ul>
-<li><strong>OpenAI integration</strong>. The <strong>middleware</strong> connects to <strong>OpenAI's GPT-4o completion model</strong> for content generation and <strong>text embedding model</strong> for vector creation. Credentials and API keys are retrieved securely from <strong>Azure Key Vault</strong> using a <strong>managed identity</strong>.</li>
-</ul>
-<p><img loading="lazy" alt="image of code snippet using OpenAI integration" src="https://azure.github.io/Cloud-Native/assets/images/1-9-10-8cf4d1d7988a926720d3c1bd99fc5a43.png" width="792" height="252" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-back-end-service">4. Back-end service<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#4-back-end-service" class="hash-link" aria-label="Direct link to 4. Back-end service" title="Direct link to 4. Back-end service">​</a></h2>
-<p>The <strong>back-end</strong> service handles customer and product data and uses the <strong>product vector API</strong> to find similar products based on embedding vectors sent from the middleware. </p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-apis-1">Core APIs:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#core-apis-1" class="hash-link" aria-label="Direct link to Core APIs:" title="Direct link to Core APIs:">​</a></h3>
-<ul>
-<li><strong>Customer API</strong>. Manages customer data and provides endpoints to retrieve and update customer information. </li>
-</ul>
-<p>  <img loading="lazy" alt="image of code snippet of customer API" src="https://azure.github.io/Cloud-Native/assets/images/1-9-11-bf32af7bb30efd49489dfab3a66af982.png" width="1430" height="1186" class="img_ev3q"></p>
-<ul>
-<li><strong>Product vector API</strong>. Retrieves a list of similar products based on the embedding vector generated by the middleware. </li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-data-flow-diagram">5. Data flow diagram<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#5-data-flow-diagram" class="hash-link" aria-label="Direct link to 5. Data flow diagram" title="Direct link to 5. Data flow diagram">​</a></h2>
-<p>The data flow diagram shows how the user query flows from the <strong>front-end</strong> app to the <strong>middleware</strong> service and finally to the <strong>back-end</strong> service: </p>
-<ol>
-<li>
-<p><strong>User -&gt; Front end</strong>. The user submits a query. </p>
-</li>
-<li>
-<p><strong>Front end -&gt; Middleware API Management endpoint</strong>. The query is sent to the middleware via API Management, which enforces API key checks and security. </p>
-</li>
-<li>
-<p><strong>Middleware -&gt; Back-end API Management endpoint</strong>. The middleware sends a vectorized query to the back end via API Management. </p>
-</li>
-<li>
-<p><strong>Back-end -&gt; Database</strong>. The back end retrieves similar products from Azure Cosmos DB. </p>
-</li>
-<li>
-<p><strong>Middleware -&gt; OpenAI</strong>. The middleware generates content using OpenAI’s models. </p>
-</li>
-<li>
-<p><strong>Middleware -&gt; Front end</strong>. The generated content is returned to the front end for display. </p>
-</li>
-</ol>
-<p><img loading="lazy" alt="data flow diagram" src="https://azure.github.io/Cloud-Native/assets/images/1-9-12-fe1758976559bf351fc721490b4b2169.png" width="1600" height="711" class="img_ev3q"></p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Learn more on Technical leaders’ <a href="https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">guide to building intelligent apps</a>.</p></div></div>
-<p> </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
-<p>In today’s blog post, we discussed the inner workings of our example AI-based content generation app, detailing the interactions between the <strong>front-end</strong>, <strong>middleware</strong>, and <strong>back-end</strong> app tiers. We learned how our app uses various Azure services, like Azure API Management, Azure Key Vault, Azure Cosmos DB, Azure Blob Storage, and Azure OpenAI Service to build a secure and scalable solution.  </p>
-<p>In the next post—the last in this series—we'll explore the <strong>outcomes</strong> of building this application, highlighting its scalability and performance, the overall impact of the architecture and technologies used, and the key learnings to take away from the project. </p>]]></content>
-        <author>
-            <name>#30Days Of IA</name>
-            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
         <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
@@ -1046,6 +797,255 @@ We hope that you can use this example app as a model for how modern cloud-native
         <author>
             <name>Marlene Mhangami</name>
             <uri>https://github.com/marlenezw</uri>
+        </author>
+        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
+        <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="demo-bytes" term="demo-bytes"/>
+        <category label="community-gallery" term="community-gallery"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.10 Closing Summary]]></title>
+        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary</id>
+        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary"/>
+        <updated>2024-10-11T09:05:00.000Z</updated>
+        <summary type="html"><![CDATA[Review what you’ve learned building the app, along with the benefits that apps like this one can bring to businesses.]]></summary>
+        <content type="html"><![CDATA[
+<p>Review what you’ve learned building the app, along with the benefits that apps like this one can bring to businesses. </p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-we-cover">What we cover:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#what-we-cover" class="hash-link" aria-label="Direct link to What we cover:" title="Direct link to What we cover:">​</a></h2>
+<ul>
+<li>How the app meets our scalability needs </li>
+<li>How it addresses our performance needs </li>
+<li>How it meets our security and compliance requirements </li>
+<li>How our app’s AI integration improves business outcomes </li>
+<li>How it optimizes costs </li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<p>In this blog series, we’ve walked through an example scenario—creating an AI-based content generation app to support the Best For You Organics Company’s marketing efforts. This app integrates various Azure services with AI models to offer a scalable, secure, and high-performance solution. </p>
+<p>In previous blog posts, we’ve examined our application architecture and covered the process of creating, deploying, and operating the application. In today’s post, the last in this series, we explore the <strong>scalability</strong>, <strong>performance</strong>, <strong>security</strong>, <strong>cost optimization</strong>, and <strong>business impacts</strong> of our example app, and we summarize the benefits and takeaways from the development process. </p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-scalability">1. Scalability<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#1-scalability" class="hash-link" aria-label="Direct link to 1. Scalability" title="Direct link to 1. Scalability">​</a></h2>
+<p>One of the key design goals of this application was scalability, ensuring that the system could handle increasing user traffic and larger datasets without degrading performance. Here are the key factors that allowed us to achieve that in our example app, along with the business impacts of these capabilities. </p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-scalability-factors">Key scalability factors<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-scalability-factors" class="hash-link" aria-label="Direct link to Key scalability factors" title="Direct link to Key scalability factors">​</a></h3>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer"><strong>Azure Kubernetes Service (AKS)</strong></a>. If we deploy our three app layers to AKS, we can take advantage of built-in scaling options, like <a href="https://learn.microsoft.com/azure/aks/tutorial-kubernetes-scale?tabs=azure-cli?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">horizontal pod autoscaling (HPA)</a>, allowing services to scale up based on CPU and memory usage. <!-- -->
+<ul>
+<li><strong>Impact</strong>. This ensures that as the demand increases, additional instances are spun up automatically, maintaining the app’s responsiveness. </li>
+</ul>
+</li>
+<li><a href="https://learn.microsoft.com/azure/app-service/getting-started?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer"><strong>Azure App Service</strong></a>. If our app is hosted on App Service, we can benefit from that service’s <a href="https://learn.microsoft.com/azure/app-service/manage-scale-up?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">autoscaling capabilities</a> to handle spikes in user traffic. <!-- -->
+<ul>
+<li><strong>Impact</strong>. During peak usage periods, the app can handle significant traffic, while maintaining fast response times. </li>
+</ul>
+</li>
+<li><strong>Caching for efficiency</strong>. By using caching mechanisms at both the middleware and back-end levels, repeated queries can be served faster, reducing the load on back-end systems. <!-- -->
+<ul>
+<li><strong>Impact</strong>. Improves performance for common user queries and reduces API calls to services like Azure OpenAI Service. </li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
+<ul>
+<li><strong>High availability</strong>. The app can handle thousands of users simultaneously, with no downtime. </li>
+<li><strong>Cost-effective scaling</strong>. The automatic scaling reduces operational costs by only allocating resources when demand increases. </li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-performance">2. Performance<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#2-performance" class="hash-link" aria-label="Direct link to 2. Performance" title="Direct link to 2. Performance">​</a></h2>
+<p>Ensuring fast response times was critical, especially since the application integrates with AI models and large databases. We applied several optimization techniques to our example app to meet performance goals. </p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-performance-enhancements">Key performance enhancements<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-performance-enhancements" class="hash-link" aria-label="Direct link to Key performance enhancements" title="Direct link to Key performance enhancements">​</a></h3>
+<ul>
+<li><strong><a href="https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure OpenAI</a> integration optimization</strong>. The middleware integrates with the <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/models/gpt-4o-and-gpt-4-turbo?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">OpenAI Service GPT-4o completion model</a> and <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/models/embeddings-models?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">embedding model</a> to generate content and vectors.<!-- -->
+<ul>
+<li>To optimize performance, we batch multiple requests when feasible and use <strong>non-blocking async operations</strong> to minimize delays. </li>
+</ul>
+</li>
+<li><strong>Data processing via Azure Cosmos DB</strong>. The <strong>back-end</strong> service uses <a href="https://learn.microsoft.com/azure/cosmos-db/introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Cosmos DB</a> for storing product and customer data. With <a href="https://learn.microsoft.com/azure/cosmos-db/partitioning-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">automatic partitioning</a> and <a href="https://learn.microsoft.com/azure/cosmos-db/distribute-data-globally?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">global distribution</a>, Azure Cosmos DB ensures low-latency data access, no matter where the users are located.</li>
+<li><strong>API management</strong>. Both the back-end and middleware services are exposed via <a href="https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure API Management</a>. API Management offers caching, load balancing, and rate-limiting features that can improve performance and manage high request volumes. </li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-1">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-1" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
+<ul>
+<li><strong>Faster query responses</strong>. AI-generated content and product similarity results are delivered in seconds.</li>
+<li><strong>Improved user experience</strong>. The app offers a fluid, fast, and reliable user experience with no noticeable delays, helping to keep users engaged.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-security-and-compliance">3. Security and compliance<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#3-security-and-compliance" class="hash-link" aria-label="Direct link to 3. Security and compliance" title="Direct link to 3. Security and compliance">​</a></h2>
+<p>Security is essential when handling sensitive data, API keys, and AI-generated results. Our example app was designed with security-first principles, using Azure best practices. </p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-security-features">Key security features<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-security-features" class="hash-link" aria-label="Direct link to Key security features" title="Direct link to Key security features">​</a></h3>
+<ul>
+<li><strong><a href="https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Key Vault</a> integration</strong>. Both <strong>back-end</strong> and <strong>middleware</strong> services retrieve secrets (API keys, database credentials, and more) securely from <strong>Key Vault</strong> using <a href="https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">managed identities</a>. This eliminates hard-coded secrets and credentials in the code. </li>
+<li><strong>Authentication and authorization</strong>. The front-end ReactJS app uses <a href="https://learn.microsoft.com/entra/fundamentals/whatis?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Microsoft Entra ID</a> for identity management and user authentication. Only authenticated users can access the app, helping to prevent unauthorized access. </li>
+<li><strong>API key validation</strong>. Both middleware and back-end APIs are secured using Azure API Management endpoints, implementing policies which require that requests pass valid API keys. This helps to ensure that only authorized services can call these APIs. </li>
+<li><strong>API Cross-Origin Resource Sharing (CORS) limits</strong>. The API Management endpoints also apply CORS policies that only permit requests from allowed domains.</li>
+<li><strong>Rate limiting and throttling</strong>. By configuring <a href="https://learn.microsoft.com/azure/api-management/api-management-sample-flexible-throttling?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">rate limits and throttling</a> in API Management, we enhanced the security and stability of the application, making sure that no single user can overwhelm the system.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-2">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-2" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
+<ul>
+<li><strong>Data privacy</strong>. User data and API keys are kept secure using best-in-class Azure security features.</li>
+<li><strong>Compliance with industry standards</strong>. The app follows security and compliance regulations, making it suitable for enterprise-level use.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-ai-and-business-outcomes">4. AI and business outcomes<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#4-ai-and-business-outcomes" class="hash-link" aria-label="Direct link to 4. AI and business outcomes" title="Direct link to 4. AI and business outcomes">​</a></h2>
+<p>The incredible productivity increases that generative AI can offer are the core reasons to build our example app. The app takes advantage of the power of <strong>Azure OpenAI</strong> models to provide a unique business capability to the <strong>Best For You Organics</strong> Company’s marketing team, blending product recommendations with AI-generated content. </p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-ai-capabilities">Key AI capabilities<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-ai-capabilities" class="hash-link" aria-label="Direct link to Key AI capabilities" title="Direct link to Key AI capabilities">​</a></h3>
+<ul>
+<li><strong>Product vector search</strong>. By transforming user queries into embedding vectors and retrieving similar products, the app delivers personalized product recommendations in real time.</li>
+<li><strong>Content generation</strong>. The <strong>GPT-4o completion model</strong> generates contextual, AI-based content tailored to user queries, offering value-added content for e-commerce, support, and content creation use cases.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-3">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-3" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
+<ul>
+<li><strong>Personalized user experience</strong>. By combining AI-powered content with product recommendations, the app helps create personalized marketing content that can boost user engagement and conversions.</li>
+<li><strong>Reduced manual work</strong>. Automated content generation radically reduces the need for manual effort, making the app highly efficient for businesses in need of automated solutions.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-cost-efficiency">5. Cost efficiency<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#5-cost-efficiency" class="hash-link" aria-label="Direct link to 5. Cost efficiency" title="Direct link to 5. Cost efficiency">​</a></h2>
+<p>By making the most of the <a href="https://azure.microsoft.com/pricing/purchase-options/azure-account?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure pay-as-you-go model</a>, the application optimizes costs, while maintaining performance and scalability.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-cost-optimizations">Key cost optimizations:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#key-cost-optimizations" class="hash-link" aria-label="Direct link to Key cost optimizations:" title="Direct link to Key cost optimizations:">​</a></h3>
+<ul>
+<li><strong>Managed services</strong>. Many of the Azure services that we use in our app, like App Service, AKS, and Azure Cosmos DB, are platform as a service (PaaS) offerings. PaaS can save you money by eliminating infrastructure and maintenance expenses, enabling pay-as-you-go scalability, reducing development and operational costs, and providing built-in tools, security, and compliance features.</li>
+<li><strong>Managed identities and Azure Key Vault</strong>. These services help to secure access to credentials, without the need for costly, complex infrastructure.</li>
+<li><strong>Autoscaling</strong>. Both AKS and App Service offer autoscaling options that allow resources to be dynamically allocated based on actual usage, helping to save costs during periods of low demand.</li>
+<li><strong>Serverless options for low-traffic scenarios</strong>. For certain functionalities, the app could use serverless options, like Azure Functions, which only incur costs when executed.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="business-impacts-4">Business impacts<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#business-impacts-4" class="hash-link" aria-label="Direct link to Business impacts" title="Direct link to Business impacts">​</a></h3>
+<ul>
+<li><strong>Optimized spending</strong>. The business can focus on scaling with demand, while keeping cloud spending under control.</li>
+<li><strong>Better return on investment (ROI)</strong>. The reduced operational overhead can increase ROI, especially for e-commerce or customer-facing businesses.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
+<p>In this series, we’ve covered a lot, and we hope that you’ve found the experience useful. From handling user queries and product recommendations to generating intelligent content by using Azure OpenAI, our example app aims to show you the potential advantage that these new technologies offer—not just to marketing teams but also to any organization that needs to communicate effectively with customers.
+We hope that you can use this example app as a model for how modern cloud-native applications can combine <strong>AI</strong>, <strong>secure data handling</strong>, and <strong>scalable infrastructure</strong> to deliver powerful tools to you and your customers.</p>]]></content>
+        <author>
+            <name>#30Days Of IA</name>
+            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
+        </author>
+        <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
+        <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
+        <category label="learn-live" term="learn-live"/>
+        <category label="demo-bytes" term="demo-bytes"/>
+        <category label="community-gallery" term="community-gallery"/>
+        <category label="azure-kubernetes-service" term="azure-kubernetes-service"/>
+        <category label="azure-functions" term="azure-functions"/>
+        <category label="azure-openai" term="azure-openai"/>
+        <category label="azure-container-apps" term="azure-container-apps"/>
+        <category label="azure-cosmos-db" term="azure-cosmos-db"/>
+        <category label="github-copilot" term="github-copilot"/>
+        <category label="github-codespaces" term="github-codespaces"/>
+        <category label="github-actions" term="github-actions"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.9 How it works: Behind the scenes of our AI-based content generation app]]></title>
+        <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app</id>
+        <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app"/>
+        <updated>2024-10-11T09:04:00.000Z</updated>
+        <summary type="html"><![CDATA[Dive in to learn more about how our example application works at a technical level.]]></summary>
+        <content type="html"><![CDATA[
+<p>Dive in to learn more about how our example application works at a technical level.  </p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-we-cover">What we cover:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#what-we-cover" class="hash-link" aria-label="Direct link to What we cover:" title="Direct link to What we cover:">​</a></h2>
+<ul>
+<li>A high-level architecture overview </li>
+<li>A description of API calls made by the front-end app </li>
+<li>An overview of the APIs offered by the middleware service </li>
+<li>A walkthrough of the back-end service’s APIs and integration with other Azure services </li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<p>In the previous blog post, we gave you a high-level overview of our example AI-based content generation app, covering its user experience and how it integrated various services. Now we’d like to dive a little deeper into the technical side, explaining the app's architecture, key components, and code snippets and offering an overview of the app’s data flow.  </p>
+<p>Today’s post breaks down how the <strong>front-end</strong>, <strong>middleware</strong>, and <strong>back-end</strong> services work together. We also discuss how the app uses Azure services, like <a href="https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure API Management</a>, <a href="https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Key Vault</a>, <a href="https://learn.microsoft.com/azure/cosmos-db/introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Cosmos DB</a>, <a href="https://learn.microsoft.com/azure/storage/blobs/storage-blobs-introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Blob Storage</a>, and <a href="https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure OpenAI Service</a>, and how <strong>managed identity</strong> is used to securely connect these components. </p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-high-level-architecture">1. High-level architecture<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#1-high-level-architecture" class="hash-link" aria-label="Direct link to 1. High-level architecture" title="Direct link to 1. High-level architecture">​</a></h2>
+<p>The application is composed of three core services:</p>
+<ol>
+<li>
+<p><strong>Front-end app (ReactJS based)</strong>. A chat-based UI where users submit queries and receive AI-generated content </p>
+</li>
+<li>
+<p><strong>Middleware service (Java Spring Boot based)</strong>. Responsible for content generation and handling product similarity searches </p>
+</li>
+<li>
+<p><strong>Back-end service (Java Spring Boot based)</strong>. Handles customer and product data and computes product similarity using vectors </p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="architecture-diagram">Architecture diagram<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#architecture-diagram" class="hash-link" aria-label="Direct link to Architecture diagram" title="Direct link to Architecture diagram">​</a></h3>
+<p>The architecture diagram shows the interaction between: </p>
+<p><strong>Front end -&gt; Middleware Azure API Management endpoints -&gt; Middleware service -&gt; Back-end API Management endpoints -&gt; Back end (Spring Boot)</strong>.</p>
+<p>How middleware and back-end services connect to <strong>Azure Key Vault</strong>, <strong>Azure Cosmos DB</strong>, <strong>Azure Blob Storage</strong>, and <strong>Azure OpenAI</strong>.</p>
+<p><img loading="lazy" alt="architecture diagram for front end all the way to back end" src="https://azure.github.io/Cloud-Native/assets/images/1-9-2-c6a19b796c36b6ad0b5af2558c445ca2.png" width="1430" height="639" class="img_ev3q"></p>
+<p><img loading="lazy" alt="architecture diagram for middleware and back-end service connections" src="https://azure.github.io/Cloud-Native/assets/images/1-9-3-346b537b831bf0ca167d5f3e01b0008c.png" width="1600" height="711" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-front-end-app">2. Front-end app<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#2-front-end-app" class="hash-link" aria-label="Direct link to 2. Front-end app" title="Direct link to 2. Front-end app">​</a></h2>
+<p>The <strong>front end</strong> acts as the interface between the user and the application. It allows the user to sign in, enter queries, and receive generated content. </p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-components">Key components:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#key-components" class="hash-link" aria-label="Direct link to Key components:" title="Direct link to Key components:">​</a></h3>
+<ul>
+<li>
+<p><strong>Sign-in and user identity management</strong>. The front end uses identity management to authenticate users before they access the main chat functionality. </p>
+<ul>
+<li>Code snippet: User authentication logic uses the <a href="https://learn.microsoft.com/entra/identity-platform/msal-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer"><strong>Microsoft Authentication Library (MSAL)</strong></a>. (@azure/msal-browser) </li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" alt="image of code snippet for identity management" src="https://azure.github.io/Cloud-Native/assets/images/1-9-4-a7a874b164bcc615912dddb72acf29b3.png" width="1282" height="1238" class="img_ev3q"></p>
+<ul>
+<li><strong>Chat interface</strong>. After authentication, the user can interact with the chat interface. On form submission, the query is sent to the <strong>Middleware API</strong> through an <strong>API Management endpoint</strong>.</li>
+</ul>
+<p><img loading="lazy" alt="image of code snippet for chat interface" src="https://azure.github.io/Cloud-Native/assets/images/1-9-5-be92371ca307304b1bfb91a342ef76ee.png" width="1470" height="1346" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-middleware-service">3. Middleware service<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#3-middleware-service" class="hash-link" aria-label="Direct link to 3. Middleware service" title="Direct link to 3. Middleware service">​</a></h2>
+<p>The <strong>middleware service</strong> is the central hub for content generation and managing product similarity searches. It connects to <strong>Azure OpenAI</strong> for content generation and interfaces with the <strong>back end</strong> to retrieve product vectors. </p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-apis">Core APIs:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#core-apis" class="hash-link" aria-label="Direct link to Core APIs:" title="Direct link to Core APIs:">​</a></h3>
+<ul>
+<li><strong>Generate content API</strong>. This API receives the user’s query, generates an embedding vector, and calls Azure OpenAI to generate relevant content. </li>
+</ul>
+<p><img loading="lazy" alt="image of code snippet" src="https://azure.github.io/Cloud-Native/assets/images/1-9-6-bc99665faf146b5b69cc74e40c5f701d.png" width="1432" height="841" class="img_ev3q"></p>
+<p><img loading="lazy" alt="image of code snippet" src="https://azure.github.io/Cloud-Native/assets/images/1-9-7-0c231abe122c4e2669cb496ade5e06ec.png" width="1536" height="1436" class="img_ev3q"></p>
+<p><img loading="lazy" alt="image of code snippet" src="https://azure.github.io/Cloud-Native/assets/images/1-9-8-cae0bf85b4f54de1a9382b2a378c0a77.png" width="1432" height="792" class="img_ev3q"></p>
+<ul>
+<li><strong>Generate embedding vector API</strong>. Uses <strong>OpenAI's embedding model</strong> to transform the user query into an embedding vector that the <strong>back-end</strong> service can use for similarity matching. </li>
+</ul>
+<p><img loading="lazy" alt="image of code snippet using OpenAI&amp;#39;s embedding model" src="https://azure.github.io/Cloud-Native/assets/images/1-9-9-6ad0a34f6a13959748639acd93559326.png" width="1464" height="850" class="img_ev3q"></p>
+<ul>
+<li><strong>OpenAI integration</strong>. The <strong>middleware</strong> connects to <strong>OpenAI's GPT-4o completion model</strong> for content generation and <strong>text embedding model</strong> for vector creation. Credentials and API keys are retrieved securely from <strong>Azure Key Vault</strong> using a <strong>managed identity</strong>.</li>
+</ul>
+<p><img loading="lazy" alt="image of code snippet using OpenAI integration" src="https://azure.github.io/Cloud-Native/assets/images/1-9-10-8cf4d1d7988a926720d3c1bd99fc5a43.png" width="792" height="252" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-back-end-service">4. Back-end service<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#4-back-end-service" class="hash-link" aria-label="Direct link to 4. Back-end service" title="Direct link to 4. Back-end service">​</a></h2>
+<p>The <strong>back-end</strong> service handles customer and product data and uses the <strong>product vector API</strong> to find similar products based on embedding vectors sent from the middleware. </p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-apis-1">Core APIs:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#core-apis-1" class="hash-link" aria-label="Direct link to Core APIs:" title="Direct link to Core APIs:">​</a></h3>
+<ul>
+<li><strong>Customer API</strong>. Manages customer data and provides endpoints to retrieve and update customer information. </li>
+</ul>
+<p>  <img loading="lazy" alt="image of code snippet of customer API" src="https://azure.github.io/Cloud-Native/assets/images/1-9-11-bf32af7bb30efd49489dfab3a66af982.png" width="1430" height="1186" class="img_ev3q"></p>
+<ul>
+<li><strong>Product vector API</strong>. Retrieves a list of similar products based on the embedding vector generated by the middleware. </li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-data-flow-diagram">5. Data flow diagram<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#5-data-flow-diagram" class="hash-link" aria-label="Direct link to 5. Data flow diagram" title="Direct link to 5. Data flow diagram">​</a></h2>
+<p>The data flow diagram shows how the user query flows from the <strong>front-end</strong> app to the <strong>middleware</strong> service and finally to the <strong>back-end</strong> service: </p>
+<ol>
+<li>
+<p><strong>User -&gt; Front end</strong>. The user submits a query. </p>
+</li>
+<li>
+<p><strong>Front end -&gt; Middleware API Management endpoint</strong>. The query is sent to the middleware via API Management, which enforces API key checks and security. </p>
+</li>
+<li>
+<p><strong>Middleware -&gt; Back-end API Management endpoint</strong>. The middleware sends a vectorized query to the back end via API Management. </p>
+</li>
+<li>
+<p><strong>Back-end -&gt; Database</strong>. The back end retrieves similar products from Azure Cosmos DB. </p>
+</li>
+<li>
+<p><strong>Middleware -&gt; OpenAI</strong>. The middleware generates content using OpenAI’s models. </p>
+</li>
+<li>
+<p><strong>Middleware -&gt; Front end</strong>. The generated content is returned to the front end for display. </p>
+</li>
+</ol>
+<p><img loading="lazy" alt="data flow diagram" src="https://azure.github.io/Cloud-Native/assets/images/1-9-12-fe1758976559bf351fc721490b4b2169.png" width="1600" height="711" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Learn more on Technical leaders’ <a href="https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">guide to building intelligent apps</a>.</p></div></div>
+<p> </p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
+<p>In today’s blog post, we discussed the inner workings of our example AI-based content generation app, detailing the interactions between the <strong>front-end</strong>, <strong>middleware</strong>, and <strong>back-end</strong> app tiers. We learned how our app uses various Azure services, like Azure API Management, Azure Key Vault, Azure Cosmos DB, Azure Blob Storage, and Azure OpenAI Service to build a secure and scalable solution.  </p>
+<p>In the next post—the last in this series—we'll explore the <strong>outcomes</strong> of building this application, highlighting its scalability and performance, the overall impact of the architecture and technologies used, and the key learnings to take away from the project. </p>]]></content>
+        <author>
+            <name>#30Days Of IA</name>
+            <uri>https://azure.github.io/Cloud-Native/Build-IA/</uri>
         </author>
         <category label="Build-Intelligent-Apps" term="Build-Intelligent-Apps"/>
         <category label="30-days-of-IA-2024" term="30-days-of-IA-2024"/>
