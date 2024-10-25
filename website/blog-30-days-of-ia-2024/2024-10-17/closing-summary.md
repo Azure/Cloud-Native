@@ -1,5 +1,5 @@
 ---
-date: 2024-10-17T09:01
+date: 2024-10-11T09:05
 slug: closing-summary
 title: "1.10 Closing Summary"
 authors: [30days]
