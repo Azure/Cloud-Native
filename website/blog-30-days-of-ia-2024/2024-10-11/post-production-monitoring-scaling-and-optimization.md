@@ -1,9 +1,9 @@
 ---
-date: 2024-10-11T09:01
+date: 2024-10-11T09:02
 slug: post-production-monitoring-scaling-and-optimization
 title: "1.7 Post-production monitoring, scaling, and optimization"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -70,6 +70,12 @@ This post covers the necessary steps for monitoring, scaling, and optimizing app
 
 2. **Implement Logging and Tracing**  
     Enable diagnostic logs to capture application and server logs. Stream logs live or archive them in Azure Storage for future analysis.
+
+3. **Key Metrics to Monitor**
+    - **Availability:** Uptime and responsiveness of your App Service.
+    - **Performance:** Response times, throughput, and latency.
+    - **Error Rates:** Percentage of failed requests or exceptions.
+    - **Resource Utilization:** CPU and memory usage.
 
 ### Step 2: Scale Your Application on App Service
 

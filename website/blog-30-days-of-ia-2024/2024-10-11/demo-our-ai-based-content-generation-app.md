@@ -1,9 +1,9 @@
 ---
-date: 2024-10-11T09:02
+date: 2024-10-11T09:03
 slug: demo-our-ai-based-content-generation-app
 title: "1.8 Demo our AI-based content generation app"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

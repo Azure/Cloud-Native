@@ -1,9 +1,9 @@
 ---
 date: 2024-10-17T09:01
 slug: closing-summary
-title: "Closing Summary"
-authors: [Build IA Team]
-draft: true
+title: "1.10 Closing Summary"
+authors: [30days]
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

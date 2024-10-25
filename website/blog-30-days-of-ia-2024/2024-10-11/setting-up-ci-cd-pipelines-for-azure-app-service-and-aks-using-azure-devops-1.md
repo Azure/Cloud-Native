@@ -1,7 +1,7 @@
 ---
 date: 2024-10-11T09:00
-slug: setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops
-title: "1.6 Setting Up CI/CD Pipelines for Azure App Service and AKS Using Azure DevOps"
+slug: setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops-1
+title: "1.6a Setting Up CI/CD Pipelines for Azure App Service and AKS Using Azure DevOps Part 1"
 authors: [30days]
 draft: true
 hide_table_of_contents: false
@@ -14,23 +14,24 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 ---
 
 <head> 
-  <meta property="og:url" content="https://azure.github.io/cloud-native/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops"/>
+  <meta property="og:url" content="https://azure.github.io/cloud-native/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops-1"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="**Build Intelligent Apps | AI Apps on Azure"/>
   <meta property="og:description" content="In this application development, Continuous Integration and Continuous Deployment (CI/CD) play a vital role in streamlining workflows and ensuring rapid delivery of software.  "/>
   <meta property="og:image" content="https://github.com/Azure/Cloud-Native/blob/main/website/static/img/ogImage.png"/>
-  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops" />
+  <meta name="twitter:url" content="https://azure.github.io/Cloud-Native/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops-1" />
   <meta name="twitter:title" content="**Build Intelligent Apps | AI Apps on Azure" />
   <meta name="twitter:description" content="In this application development, Continuous Integration and Continuous Deployment (CI/CD) play a vital role in streamlining workflows and ensuring rapid delivery of software." />
   <meta name="twitter:image" content="https://azure.github.io/Cloud-Native/img/ogImage.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@devanshidiaries" />
-  <link rel="canonical" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops" />
+  <link rel="canonical" href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops-1" />
 </head>
 
 <!-- End METADATA -->
+## Part 1: Setting Up CI/CD Pipelines for Azure App Service Using Azure DevOps
 
-In this application development, Continuous Integration and Continuous Deployment (CI/CD) play a vital role in streamlining workflows and ensuring rapid delivery of software. In this blog, we will explore how to set up CI/CD pipelines for three applications—a Java Spring Boot backend, a Java Spring Boot middleware, and a ReactJS frontend—using Azure DevOps. We will deploy these applications to Azure App Service and Azure Kubernetes Service (AKS) in parallel.
+In this application development, Continuous Integration and Continuous Deployment (CI/CD) play a vital role in streamlining workflows and ensuring rapid delivery of software. In this blog, we will explore how to set up CI/CD pipelines for three applications—a Java Spring Boot backend, a Java Spring Boot middleware, and a ReactJS frontend—using Azure DevOps. We will deploy these applications to Azure App Service in parallel.
 
 ## Prerequisites
 
@@ -38,12 +39,8 @@ Before we start, ensure you have:
 
 - An Azure DevOps account.
 - A GitHub repository with your application code, specifically structured with three folders: `backend`, `middleware`, and `frontend`.
-- An Azure subscription with access to Azure App Service and AKS.
+- An Azure subscription with access to Azure App Service.
 - The GitHub URL for the project we will be using is: [Java-AI-Based-Content-Generator](https://github.com/Azure-Samples/Java-AI-Based-Content-Generator).
-
-:::info
-[Ingest your own content](https://aka.ms/demo-bytes/ep6?ocid=biafy25h1_30daysofia_webpage_azuremktg) using the Azure Functions OpenAI extension into a Cosmos DB vector database to enable OpenAI query on your data.
-:::
 
 ## Overview of the Pipeline
 
@@ -132,13 +129,14 @@ stages:
               mavenPomFile: 'backend/pom.xml'
               mavenOptions: '-Xmx3072m'
               javaHomeOption: 'JDKVersion'
-              jdkVersionOption: '1.17'  # JDK Version set to 17
+              jdkVersionOption: '1.17' # JDK Version set to 17
               jdkArchitectureOption: 'x64'
               publishJUnitResults: true
               testResultsFiles: '**/TEST-*.xml'
               goals: 'clean package'
           - publish: '$(System.DefaultWorkingDirectory)/backend/target/backend.war'
             artifact: backend
+
       - job: Build_Middleware
         displayName: 'Build Middleware Service'
         pool:
@@ -150,13 +148,14 @@ stages:
               mavenPomFile: 'middleware/pom.xml'
               mavenOptions: '-Xmx3072m'
               javaHomeOption: 'JDKVersion'
-              jdkVersionOption: '1.17'  # JDK Version set to 17
+              jdkVersionOption: '1.17' # JDK Version set to 17
               jdkArchitectureOption: 'x64'
               publishJUnitResults: true
               testResultsFiles: '**/TEST-*.xml'
               goals: 'clean package'
           - publish: '$(System.DefaultWorkingDirectory)/middleware/target/middleware.war'
             artifact: middleware
+
       - job: Build_Frontend
         displayName: 'Build Frontend Service'
         pool:
@@ -183,8 +182,8 @@ stages:
             artifact: backend
           - task: AzureWebApp@1
             inputs:
-              azureSubscription: '$(AzureSubscription)'  # This will be set from Variable Group
-              appName: '$(BackendAppServiceName)'  # This will be set from Key Vault - Variable Group
+              azureSubscription: '$(AzureSubscription)' # This will be set from Variable Group
+              appName: '$(BackendAppServiceName)' # This will be set from Key Vault - Variable Group
               package: '$(Pipeline.Workspace)/backend/backend.war'
               appType: 'webAppLinux'
               appSettings: |
@@ -199,8 +198,8 @@ stages:
             artifact: middleware
           - task: AzureWebApp@1
             inputs:
-              azureSubscription: '$(AzureSubscription)'  # This will be set from Variable Group
-              appName: '$(MiddlewareAppServiceName)'  # This will be set from Key Vault - Variable Group
+              azureSubscription: '$(AzureSubscription)' # This will be set from Variable Group
+              appName: '$(MiddlewareAppServiceName)' # This will be set from Key Vault - Variable Group
               package: '$(Pipeline.Workspace)/middleware/middleware.war'
               appType: 'webAppLinux'
               appSettings: |
@@ -215,54 +214,17 @@ stages:
             artifact: frontend
           - task: AzureWebApp@1
             inputs:
-              azureSubscription: '$(AzureSubscription)'  # This will be set from Variable Group
-              appName: '$(FrontendAppServiceName)'  # This will be set from Key Vault - Variable Group
+              azureSubscription: '$(AzureSubscription)' # This will be set from Variable Group
+              appName: '$(FrontendAppServiceName)' # This will be set from Key Vault - Variable Group
               package: '$(Pipeline.Workspace)/frontend'
               startUpCommand: 'pm2 serve /home/site/wwwroot/build --no-daemon --spa'
               appType: 'webAppLinux'
               # These secrets will be retrieved from Key Vault - Variable Group
               appSettings: |
-                -AZURE_KEYVAULT_URI "$(AZURE_KEYVAULT_URI)" -REACT_APP_SERVICE_BASE_URL "$(MiddlewareServiceBaseUrl)" -REACT_APP_CLIENT_ID "$(MsalAppId)" -REACT_APP_CONTENT_GENERATOR_ENDPOINT "$(MiddlewareServiceGenerateContentEndpoint)" -REACT_APP_SERVICE_ACCESS_KEY "$(MiddlewareServiceAccessKey)"
-
-      # Deploying to Azure Kubernetes Service
-      - job: Deploy_Backend_AKS
-        displayName: 'Deploy Backend to Azure Kubernetes Service'
-        pool:
-          vmImage: 'ubuntu-latest'
-        steps:
-          - download: current
-            artifact: backend
-          - script: |
-              az aks get-credentials --resource-group $(resourceGroup) --name $(BackendAppServiceName)
-              docker build -t $(AcrName).azurecr.io/aistudy/backend:latest backend/
-              docker push $(AcrName).azurecr.io/aistudy/backend:latest
-              kubectl apply -f backend/backend-deployment.yml
-
-      - job: Deploy_Middleware_AKS
-        displayName: 'Deploy Middleware to Azure Kubernetes Service'
-        pool:
-          vmImage: 'ubuntu-latest'
-        steps:
-          - download: current
-            artifact: middleware
-          - script: |
-              az aks get-credentials --resource-group $(resourceGroup) --name $(MiddlewareAppServiceName)
-              docker build -t $(AcrName).azurecr.io/aistudy/middleware:latest middleware/
-              docker push $(AcrName).azurecr.io/aistudy/middleware:latest
-              kubectl apply -f middleware/middleware-deployment.yml
-
-      - job: Deploy_Frontend_AKS
-        displayName: 'Deploy Frontend to Azure Kubernetes Service'
-        pool:
-          vmImage: 'ubuntu-latest'
-        steps:
-          - download: current
-            artifact: frontend
-          - script: |
-              az aks get-credentials --resource-group $(resourceGroup) --name $(FrontendAppServiceName)
-              docker build -t $(AcrName).azurecr.io/aistudy/frontend:latest frontend/
-              docker push $(AcrName).azurecr.io/aistudy/frontend:latest
-              kubectl apply -f frontend/frontend-deployment.yml
+                -REACT_APP_SERVICE_BASE_URL "$(MiddlewareServiceBaseUrl)"
+                -REACT_APP_CLIENT_ID "$(MsalAppId)"
+                -REACT_APP_CONTENT_GENERATOR_ENDPOINT "$(MiddlewareServiceGenerateContentEndpoint)"
+                -REACT_APP_SERVICE_ACCESS_KEY "$(MiddlewareServiceAccessKey)"
 ```
 
 #### Testing the CI/CD Pipeline
@@ -277,7 +239,7 @@ After setting up the pipeline, navigate to the **Pipelines** section in Azure De
 
     ![screenshot of Pipeline configuration in Azure DevOps portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6-10.png)
 
-3. **Run Pipeline:** Click on **Run pipeline** and monitor the execution.
+3. **Run Pipeline:** Click on **Run Pipeline** and monitor the execution.
 
     ![screenshot of Run pipeline screen in Azure DevOps portal](../../static/img/30-days-of-ia-2024/blogs/2024-10-11/1-6-11.png)
 
@@ -291,7 +253,7 @@ Join live experts to dive into [operational excellence with AKS](https://aka.ms/
 
 ## Conclusion
 
-In this blog, we explored how to set up a CI/CD pipeline for Java and ReactJS applications using Azure DevOps. We integrated GitHub, configured variable groups, and deployed to both Azure App Service and AKS. Testing the pipeline ensures that the setup works end-to-end.
+In this blog, we explored how to set up a CI/CD pipeline for Java and ReactJS applications using Azure DevOps. We integrated GitHub, configured variable groups, and deployed to Azure App Service. Testing the pipeline ensures that the setup works end-to-end.
 
 ## Next
 
