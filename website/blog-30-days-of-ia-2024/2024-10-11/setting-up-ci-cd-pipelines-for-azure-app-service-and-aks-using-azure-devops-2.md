@@ -31,7 +31,7 @@ tags: [Build-Intelligent-Apps, 30-days-of-IA-2024, learn-live, demo-bytes, commu
 <!-- End METADATA -->
 ## Part 2: Setting Up CI/CD Pipelines for Azure Kubernetes Service (AKS) Using Azure DevOps
 
-In the previous blog, we discussed the fundamentals of setting up CI/CD pipelines for **Azure App Service**. In this blog, we will focus on how to configure a CI/CD pipeline specifically for **Azure Kubernetes Service (AKS)** using Azure DevOps. We’ll cover prerequisites, detailed YAML configurations, and how to manage deployments based on a variable group setting.
+In the [previous blog](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops-1), we discussed the fundamentals of setting up CI/CD pipelines for **Azure App Service**. In this blog, we will focus on how to configure a CI/CD pipeline specifically for **Azure Kubernetes Service (AKS)** using Azure DevOps. We’ll cover prerequisites, detailed YAML configurations, and how to manage deployments based on a variable group setting.
 
 ## Prerequisites
 
@@ -379,4 +379,4 @@ Similar to **Blog 1.6a**, manually trigger the pipeline to ensure that the deplo
 
 In this blog, we extended our CI/CD pipelines to deploy Java Spring Boot and ReactJS applications to Azure Kubernetes Service. This approach allows for greater scalability and flexibility.
 
-In our next blog, we will cover advanced topics such as monitoring and scaling these deployments to ensure optimal performance and reliability.
+In our [next blog](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/post-production-monitoring-scaling-and-optimization), we will cover advanced topics such as monitoring and scaling these deployments to ensure optimal performance and reliability.

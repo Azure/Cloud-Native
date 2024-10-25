@@ -40,7 +40,7 @@ Dive in to learn more about how our example application works at a technical lev
 
 ## Introduction
 
-In the previous blog post, we gave you a high-level overview of our example AI-based content generation app, covering its user experience and how it integrated various services. Now we’d like to dive a little deeper into the technical side, explaining the app's architecture, key components, and code snippets and offering an overview of the app’s data flow.   
+In the [previous blog post](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/demo-our-ai-based-content-generation-app), we gave you a high-level overview of our example AI-based content generation app, covering its user experience and how it integrated various services. Now we’d like to dive a little deeper into the technical side, explaining the app's architecture, key components, and code snippets and offering an overview of the app’s data flow.   
 
 Today’s post breaks down how the **front-end**, **middleware**, and **back-end** services work together. We also discuss how the app uses Azure services, like [Azure API Management](https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg), [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg), [Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg), [Azure Blob Storage](https://learn.microsoft.com/azure/storage/blobs/storage-blobs-introduction?ocid=biafy25h1_30daysofia_webpage_azuremktg), and [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg), and how **managed identity** is used to securely connect these components.  
 
@@ -140,4 +140,4 @@ The data flow diagram shows how the user query flows from the **front-end** app 
 
 In today’s blog post, we discussed the inner workings of our example AI-based content generation app, detailing the interactions between the **front-end**, **middleware**, and **back-end** app tiers. We learned how our app uses various Azure services, like Azure API Management, Azure Key Vault, Azure Cosmos DB, Azure Blob Storage, and Azure OpenAI Service to build a secure and scalable solution.   
 
-In the next post—the last in this series—we'll explore the **outcomes** of building this application, highlighting its scalability and performance, the overall impact of the architecture and technologies used, and the key learnings to take away from the project.  
+In the [next post](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/closing-summary)—the last in this series—we'll explore the **outcomes** of building this application, highlighting its scalability and performance, the overall impact of the architecture and technologies used, and the key learnings to take away from the project.  

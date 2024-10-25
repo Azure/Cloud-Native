@@ -108,4 +108,4 @@ The back end is responsible for managing product-related data, such as customer 
 
 In this blog post, we showcased the power of integrating multiple services and Azure technologies to create a straightforward user experience for AI-based content generation. From secure user sign-in to generating AI-driven content and retrieving relevant product data, the app efficiently uses Azure API Management, Azure Key Vault, and Azure OpenAI Service to meet the needs of modern applications.
 
-In the next post, we’ll dive deeper into how the application works, covering technical details, code, and data flow diagrams.
+In the [next post](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app), we’ll dive deeper into how the application works, covering technical details, code, and data flow diagrams.

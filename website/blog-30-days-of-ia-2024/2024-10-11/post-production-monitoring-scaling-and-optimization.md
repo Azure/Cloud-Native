@@ -187,4 +187,4 @@ Learn more on Technical leaders’ [guide to building intelligent apps](https://
 
 In this post, we provided a comprehensive guide on monitoring, scaling, and optimizing applications on Azure App Service and AKS. We discussed using monitoring tools, configuring scaling strategies, and setting up alerts. Additionally, we covered best practices for continuous optimization to ensure your applications remain reliable, scalable, and cost-effective.
 
-In the next blog, we will demonstrate a live application setup, showcasing how all these components work together in real-world use cases.
+In the [next blog](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/demo-our-ai-based-content-generation-app), we will demonstrate a live application setup, showcasing how all these components work together in real-world use cases.

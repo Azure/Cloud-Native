@@ -257,4 +257,4 @@ In this blog, we explored how to set up a CI/CD pipeline for Java and ReactJS ap
 
 ## Next
 
-In the next blog, we’ll cover advanced topics such as monitoring and scaling these deployments.
+In the [next blog](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops-2), we’ll cover advanced topics such as monitoring and scaling these deployments.
