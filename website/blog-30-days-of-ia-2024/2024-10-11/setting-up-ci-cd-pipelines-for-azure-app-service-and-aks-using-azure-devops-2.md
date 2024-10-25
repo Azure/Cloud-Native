@@ -3,7 +3,7 @@ date: 2024-10-11T09:01
 slug: setting-up-ci-cd-pipelines-for-azure-app-servicea-and-aks-using-azure-devops-2
 title: "1.6b Setting Up CI/CD Pipelines for Azure App Service and AKS Using Azure DevOps Part 2"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

@@ -1,9 +1,9 @@
 ---
 date: 2024-10-17T09:00
 slug: how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app
-title: "How it works: Behind the scenes of our AI-based content generation app"
-authors: [Build IA Team]
-draft: true
+title: "1.9 How it works: Behind the scenes of our AI-based content generation app"
+authors: [30days]
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
