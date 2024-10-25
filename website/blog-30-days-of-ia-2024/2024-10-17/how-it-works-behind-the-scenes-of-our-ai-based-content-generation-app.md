@@ -1,5 +1,5 @@
 ---
-date: 2024-10-17T09:00
+date: 2024-10-11T09:04
 slug: how-it-works-behind-the-scenes-of-our-ai-based-content-generation-app
 title: "1.9 How it works: Behind the scenes of our AI-based content generation app"
 authors: [30days]
