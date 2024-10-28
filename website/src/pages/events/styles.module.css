@@ -1,0 +1,64 @@
+:root {
+    --link: #002948!important;
+  }
+  [data-theme='dark'] {
+    --link: #b3daf0!important;
+  }
+  
+
+.page-background {
+    background-color: var(--bg)!important;
+}
+
+.link-blue {
+    color: var(--link)!important;
+    text-decoration: underline;
+}
+
+.banner-background {
+    background: linear-gradient(to bottom, #002948, #2A446F);
+    color: white;
+}
+
+.banner-background h2 {
+    background: linear-gradient(45deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for older browsers */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card-content {
+    flex-grow: 1; /* Takes up all the remaining space */
+  }
+  
+  .card-link {
+    align-self: flex-start; /* Aligns the link at the bottom left */
+    margin-top: auto; /* Pushes the link to the bottom of the container */
+    color: var(--link)!important;
+  }
+
+  a.card-link {
+    cursor: pointer;
+    color: var(--link) !important;
+    text-decoration: underline!important;
+}
+
+
+@media (min-width: 996px) {
+    /* Styles for screens 996px or less */
+  .banner-cta{
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    }
+  
+  }
+
+  

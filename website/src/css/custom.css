@@ -264,12 +264,14 @@ h2 {
 }
 
 .card .card-body h2,
-.card .card-body h3 {
+.card .card-body h3,
+.card .card-body h4 {
     font-size: 1.25rem;
 }
 
 .card-body > h2,
-.card-body > h3 {
+.card-body > h3,
+.card-body > h4 {
   font-size: 1.25rem!important;
 }
 
@@ -284,6 +286,7 @@ h2 {
   font-weight: 600!important;
   font-size: 1rem!important;
   padding: .75rem 1rem;
+  text-decoration: none!important;
 }
 
 .button--primary {
@@ -486,4 +489,9 @@ hr {
   border-radius: .5rem;
   border: 1px solid #e6f2fb;
   margin-bottom:1rem;
+}
+
+.link-blue {
+  color: var(--link)!important;
+  text-decoration: underline;
 }
