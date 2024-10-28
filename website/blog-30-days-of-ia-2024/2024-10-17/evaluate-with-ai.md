@@ -3,7 +3,7 @@ date: 2024-10-17T09:00
 slug: evaluate-with-ai
 title: "2.4 Evaluate with AI!"
 authors: [nitya, marlene]
-draft: false
+draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -87,9 +87,9 @@ Let's take a quick look at the [**default quality metrics**](https://learn.micro
 | Metric | What does it assess? | How does it work? | When should you use it? | Inputs Needed |
 |:--|:--|:--|:--|:--|
 | **Groundedness** <br/> 1=ungrounded <br/> 5=grounded | How well does model's generated answers align with information from source data ("context")?  | Checks if response corresponds _verifiably_ to source context |When factual correctness and contextual accuracy are key - e.g., is it grounded in "my" product data? | Question, Context, Generated Response |
-| **Relevance** <br/> 1=bad <br/> 5=good | Are the model's generated responses pertinent, and directly related, to the given queries? | Assesses ability of responses to capture the key points of context that relate to the query | When evaluating your application's ability to understand the inputs and generate _contextually-relevant_ responses | |
-| **Groundedness**| Given support knowledge, does the ANSWER use the information provided by the CONTEXT? | | | |
-| **Relevance**| How well does the ANSWER address the main aspects of the QUESTION, based on the CONTEXT? | | | |
+| **Relevance** <br/> 1=bad <br/> 5=good | Are the model's generated responses pertinent, and directly related, to the given queries? | Assesses ability of responses to capture the key points of context that relate to the query | When evaluating your application's ability to understand the inputs and generate _contextually-relevant_ responses | Question, Answer|
+| **Fluency** 1=bad <br/> 5=fluent| How grammatically and linguistically correct the model's predicted answer is. | Checks quality of individual sentences in the ANSWER? Are they well-written and grammatically correct? | When evaluating your application's ability to generate _readable_ responses| Question, Answer |
+| **Coherence** <br/> 1=bad <br/> 5=good | Measures the quality of all sentences in a model's predicted answer and how they fit together naturally. | Checks how well do all sentences in the ANSWER fit together? Do they sound natural when taken as a whole? | When the _readability_ of the response is important | Question, Answer|
 
 To create these custom evaluators, we need to do three things:
 
