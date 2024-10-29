@@ -224,7 +224,7 @@ function Sessions() {
     },
     {
         session: 'Kubernetes Multi-Cluster Networking 101',
-        presenter: 'iranjan Shankar',
+        presenter: 'Niranjan Shankar',
         link: 'https://sched.co/1i7oW',
       },
   
