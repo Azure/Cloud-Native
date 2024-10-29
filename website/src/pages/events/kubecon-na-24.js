@@ -41,7 +41,7 @@ function CampaignHeader() {
               Diamond Sponsor. Discover how Azure is leading the way in Kubernetes and intelligent applications with a series of
               exciting sessions, demos, and keynotes.
             </p>
-            <p>Find us at Booth #C4</p>
+            <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth #C4</p>
           </div>
           <div className="col col--6">
             <div style={videoResponsiveStyle}>
@@ -67,15 +67,21 @@ function BannerLearn() {
     return (
       <section className={styles['banner-background']}>
         <div className="container">
-          <div className="row padding-top--lg padding-bottom--lg">
-            <div className="col col--6">
+          <div className="row padding-top--lg">
+            <div className="col col--auto text--center">
               <h2 className="margin-bottom--sm">Azure Day with Kubernetes</h2>
-              <p className='margin-bottom--md'>
-                November 12 | Join our team of Microsoft experts in-person to learn best practices for building cloud-native and
+            </div>
+          </div>
+          <div className="row">
+            <div className="col col--6 col--offset-3">
+              <p className='margin-bottom--md text--center'>
+              <span style={{ fontWeight: 600 }}>November 12</span> | Join our team of Microsoft experts in-person to learn best practices for building cloud-native and
                 intelligent apps with Kubernetes on Azure.
               </p>
             </div>
-            <div className={clsx('col col--6', styles['banner-cta'])}>
+          </div>
+          <div className="row padding-bottom--lg">
+            <div className='col col--6 text--center col--offset-3'>
               <a className="button button--secondary button--lg button-mobile-padding" href="https://aka.ms/AzureKubernetesDay" target="_blank">
                 Register now
               </a>
@@ -91,8 +97,8 @@ function BannerLearn() {
       <section className={styles['banner-background']}>
         <div className="container">
           <div className="row padding-top--lg padding-bottom--lg">
-            <div className="col col--6">
-              <h2 className="margin-bottom--sm">Join us during the KubeCrawl</h2>
+            <div className="col col--6 col--offset-3 text--center">
+              <h2 className="margin-bottom--sm gradient-background">Join us at booth C4 during the KubeCrawl</h2>
               <p className='margin-bottom--none'>
               For an exclusive book signing of Kubernetes Best Practices, 2nd Edition with Brendan Burns!
               </p>
@@ -109,9 +115,13 @@ function Sessions() {
       <section>
         <div className="container margin-top--lg">
             <div className="row">
+                <div className="col text--center">
+                    <h2 className={styles['gradient-header']}>Learn from Microsoft Experts</h2>
+                </div>
+            </div>
+            <div className="row">
                 <div className="col">
-                    <h2>Learn from Microsoft Experts</h2>
-                    <h3>KEYNOTE</h3>
+                    <h3 style={{textTransform:'uppercase'}}>Keynote</h3>
                     <h4 className="margin-bottom--sm">A Developer's Guide to Securing Your Software Supply Chain</h4>
                     <p className="margin-bottom--sm">Toddy Mladenov, Principal Product Manager, Microsoft</p>
                     <p>November 14, 2024 at 9:40 AM</p>
@@ -131,7 +141,7 @@ function Sessions() {
                 </a>
             </div>
           </div>
-          <h3 className='margin-top--md'>Featured Breakout Sessions</h3>
+          <h3 style={{textTransform:'uppercase'}} className='margin-top--md'>Featured Breakout Sessions</h3>
           <p>Microsoft engineers will be delivering sessions throughout the conference on a variety of topics including <a className="link-blue" href="https://sched.co/1i7lA" target='_blank'>LLM Performance</a>, <a className="link-blue" href="https://kccncna2024.sched.com/event/1iW9K/eraser-cleaning-up-vulnerable-images-from-kubernetes-nodes-project-lightning-talk?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Eraser</a>, <a className="link-blue" href="https://sched.co/1hovU" target='_blank'>Notary</a>, <a className="link-blue" href="https://sched.co/1i7mf" target='_blank'>handling GPU Failures</a>, <a className="link-blue" href="https://sched.co/1i7rK" target='_blank'>OpenCost</a>, <a className="link-blue" href="https://sched.co/1i7ng" target='_blank'>Gateway API</a>, <a  className="link-blue"href="https://sched.co/1i7oH" target='_blank'>WebAssembly (Wasm)</a>, <a className="link-blue"href="https://sched.co/1how8" target='_blank'>CNI</a>, <a className="link-blue" href="https://sched.co/1i7n3" target='_blank'>Karpenter</a>, <a className="link-blue" href="https://sched.co/1izr8" target='_blank'>eBPF</a>, <a className="link-blue" href="https://sched.co/1izsX" target='_blank'>OpenTelemetry</a> and more!</p>
           <p>Some featured sessions include:</p>
           <div className="row" style={{ paddingBottom: '1rem' }}>
@@ -235,8 +245,8 @@ function Sessions() {
       <section>
         <div className="container margin-top--lg margin-bottom--lg">
           <div className="row">
-            <div className="col">
-              <h3 className="margin-top--md">Booth Theatre & Demos</h3>
+            <div className="col margin-top--md text--center">
+              <h2 className={styles['gradient-header']}>Booth Theatre & Demos</h2>
               <p>
                 Visit our booth #C4 to engage with our experts and attend a variety
                 of theatre sessions and technical demos.
@@ -258,18 +268,19 @@ function Sessions() {
               >
                 <div className="card-body" style={{ flexGrow: 1 }}>
                   <div className="text--left">
-                    <h4>Wednesday, November 13, 2024</h4>
+                    <h3>Wednesday, November 13, 2024</h3>
                     <ul>
                       <li>Enhance the Security of your Container Images with Continuous Patching</li>
+                      <li>Objection! Event-Driven Workload Mistakes on Trial with Azure & KEDA</li>
                       <li>Unlocking Binary Drift Detection</li>
                       <li>Accelerated GenAI on Azure with Canonical's Managed Kubeflow</li>
+                      <li>Securing your Microservices in AKS using eBPF and Istio</li>
                       <li>What's new for Windows on AKS</li>
+                      <li>Introduction to Reliability Best Practices on AKS and beyond</li>
                       <li>OpenTelemetry on Azure</li>
+                      <li>Cloud-Agnostic Network Observability for Kubernetes: Empowering Azure Workloads with Retina</li>
                       <li>Amplify the Security of AKS Deployments Using Ratify and Gatekeeper</li>
-                      <li>
-                        Join us during the KubeCrawl for an exclusive book signing
-                        with Brendan Burns: Kubernetes Best Practices, 2nd Edition
-                      </li>
+                      <li>Divide and Conquer: Master GPU Partitioning and Visualize Savings</li>
                     </ul>
                   </div>
                 </div>
@@ -288,10 +299,12 @@ function Sessions() {
               >
                 <div className="card-body" style={{ flexGrow: 1 }}>
                   <div className="text--left">
-                    <h4>Thursday, November 14, 2024</h4>
+                    <h3>Thursday, November 14, 2024</h3>
                     <ul>
                       <li>Fine-Tuning Open-Source Models made easy with KAITO</li>
                       <li>Full-stack K8S monitoring with Azure Monitor</li>
+                      <li>Wiz Container security for AI workloads on AKS</li>
+                      <li>AKS Field Guide: Surviving in the Real World</li>
                       <li>Managing Kubernetes with Azure Linux</li>
                       <li>AKS Networking Best Practices</li>
                       <li>Harnessing AI with Redis: Optimizing Databases on Kubernetes</li>
@@ -313,7 +326,7 @@ function Sessions() {
               >
                 <div className="card-body" style={{ flexGrow: 1 }}>
                   <div className="text--left">
-                    <h4>Friday, November 15, 2024</h4>
+                    <h3>Friday, November 15, 2024</h3>
                     <ul>
                       <li>How to Move from Ingress to Gateway API with Minimal Hassle</li>
                       <li>Cloud storage best practices for containers with scale-out analytics and AI workloads</li>
@@ -335,8 +348,8 @@ function Sessions() {
       <section>
         <div className="container margin-top--lg margin-bottom--lg">
           <div className="row">
-            <div className="col">
-              <h2 className="margin-top--md">Find your Community</h2>
+            <div className="col margin-top--md text--center">
+              <h2 className={styles['gradient-header']}>Find your Community</h2>
             </div>
           </div>
   
@@ -353,14 +366,14 @@ function Sessions() {
                   justifyContent: "space-between",
                   height: "100%",
                 }}>
-                  <div>
+                  <div className="text--center">
                     <img width="150px" height="150px" src="/Cloud-Native/img/svg/60-days-of-IA-azure-icon-learn-live.svg" alt="" role="presentation" />
                   </div>
-                  <div className="text--left">
+                  <div className="text--center">
                     <h3>The AKS Community</h3>
                     <p>Check out the AKS Community channel for technical content and updates.</p>
                   </div>
-                  <div>
+                  <div className="text--center">
                       <a className={styles['card-link']} href="https://www.youtube.com/@theakscommunity" target='_blank'>Watch Now</a>
                   </div>
                 </div>
@@ -378,14 +391,14 @@ function Sessions() {
                   justifyContent: "space-between",
                   height: "100%",
                 }}>
-                  <div>
+                  <div className="text--center">
                     <img width="150px" height="150px" src="/Cloud-Native/img/svg/60-days-of-IA-azure-icon-blog.svg" alt="" role="presentation" />
                   </div>
-                  <div className="text--left">
+                  <div className="text--center">
                     <h3>Become a Microsoft MVP</h3>
                     <p>The Microsoft MVP Program connects technical community leaders with Microsoft to promote engagement, advocacy, and knowledge sharing.</p>
                   </div>
-                  <div>
+                  <div className="text--center">
                   <a className={styles['card-link']} href="https://mvp.microsoft.com/en-us/mvp/" target='_blank'>Get Started</a>
                   </div>
                 </div>
@@ -402,14 +415,14 @@ function Sessions() {
                   justifyContent: "space-between",
                   height: "100%",
                 }}>
-                  <div>
+                  <div className="text--center">
                     <img width="150px" height="150px" src="/Cloud-Native/img/svg/60-days-of-IA-azure-icon-community-gallery.svg" alt="" role="presentation" />
                   </div>
-                  <div className="text--left">
+                  <div className="text--center">
                     <h3>Microsoft Developer Community</h3>
                     <p>Connect with fellow developers, attend a local user group, find resources to get you started, and discover what's happening in the community.</p>
                     </div>
-                    <div>
+                    <div className="text--center">
                     <a className={styles['card-link']} href="https://developer.microsoft.com/en-us/community" target='_blank'>Connect Now</a>
                   </div>
                 </div>
