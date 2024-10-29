@@ -1,9 +1,9 @@
 ---
-date: 2024-10-17T09:00
+date: 2024-10-29T09:00
 slug: deploy-with-aca
 title: "2.5 Deploy with ACA"
 authors: [nitya, marlene]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
