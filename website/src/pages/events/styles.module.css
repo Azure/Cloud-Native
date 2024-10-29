@@ -26,7 +26,22 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent; /* Fallback for older browsers */
+    
+    /* Ensure gradient only covers the text width */
+    display: inline-block;
 }
+
+.gradient-header {
+  background: linear-gradient(45deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback for older browsers */
+  
+  /* Ensure gradient only covers the text width */
+  display: inline-block;
+}
+
 
 .card-body {
     display: flex;
