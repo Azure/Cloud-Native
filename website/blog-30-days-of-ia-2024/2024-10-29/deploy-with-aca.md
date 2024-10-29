@@ -197,7 +197,7 @@ Once our application is deployed into production, we can use [Azure Application 
 
 ### 4.2 App Insights Dashboard
 
-In Contoso Creative Writer we utilize the [App Insights Dashboard](https://learn.microsoft.com/en-us/azure/azure-monitor/app/overview-dashboard) to access realtime information about our deployed application through a dashboard in Azure Portal. The dashboard provides an overview pane to allow at-a-glance assessment of our application's health and performance. We can also can also use Application Insights to track custom information, and add it to our dashboard. In this case we want to add the evaluation scores and LLM token information we got from the running the evaluations and Prompty tracing we saw in [yesterday's post](../2024-10-17/index.md). 
+In Contoso Creative Writer we utilize the [App Insights Dashboard](https://learn.microsoft.com/en-us/azure/azure-monitor/app/overview-dashboard) to access realtime information about our deployed application through a dashboard in Azure Portal. The dashboard provides an overview pane to allow at-a-glance assessment of our application's health and performance. We can also can also use Application Insights to track custom information, and add it to our dashboard. In this case we want to add the evaluation scores and LLM token information we got from the running the evaluations and Prompty tracing we saw in [yesterday's post](https://azure.github.io/Cloud-Native/30-days-of-ia-2024/evaluate-with-ai). 
 
 To enable custom insights in Contoso Creative Writer we added the following code to a [tracing.py](https://github.com/Azure-Samples/contoso-creative-writer/blob/a304cc691d1657b6d1e93e18df871de37633efb9/src/api/tracing.py#L51) file. 
 
