@@ -495,3 +495,8 @@ hr {
   color: var(--link)!important;
   text-decoration: underline;
 }
+
+.link-blue-light {
+  color: #b3daf0!important;
+  text-decoration: underline;
+}

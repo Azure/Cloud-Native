@@ -97,10 +97,10 @@ function BannerLearn() {
       <section className={styles['banner-background']}>
         <div className="container">
           <div className="row padding-top--lg padding-bottom--lg">
-            <div className="col col--6 col--offset-3 text--center">
+            <div className="col col--8 col--offset-2 text--center">
               <h2 className="margin-bottom--sm gradient-background">Join us at booth C4 during the KubeCrawl</h2>
               <p className='margin-bottom--none'>
-              For an exclusive book signing of Kubernetes Best Practices, 2nd Edition with Brendan Burns!
+              For an exclusive book signing of <a className="link-blue-light" href="https://www.oreilly.com/library/view/kubernetes-best-practices/9781098142155/" target='_blank'>Kubernetes Best Practices, 2nd Edition</a> with Brendan Burns!
               </p>
             </div>
           </div>
@@ -142,7 +142,7 @@ function Sessions() {
             </div>
           </div>
           <h3 style={{textTransform:'uppercase'}} className='margin-top--md'>Featured Breakout Sessions</h3>
-          <p>Microsoft engineers will be delivering sessions throughout the conference on a variety of topics including <a className="link-blue" href="https://sched.co/1i7lA" target='_blank'>LLM Performance</a>, <a className="link-blue" href="https://kccncna2024.sched.com/event/1iW9K/eraser-cleaning-up-vulnerable-images-from-kubernetes-nodes-project-lightning-talk?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Eraser</a>, <a className="link-blue" href="https://sched.co/1hovU" target='_blank'>Notary</a>, <a className="link-blue" href="https://sched.co/1i7mf" target='_blank'>handling GPU Failures</a>, <a className="link-blue" href="https://sched.co/1i7rK" target='_blank'>OpenCost</a>, <a className="link-blue" href="https://sched.co/1i7ng" target='_blank'>Gateway API</a>, <a  className="link-blue"href="https://sched.co/1i7oH" target='_blank'>WebAssembly (Wasm)</a>, <a className="link-blue"href="https://sched.co/1how8" target='_blank'>CNI</a>, <a className="link-blue" href="https://sched.co/1i7n3" target='_blank'>Karpenter</a>, <a className="link-blue" href="https://sched.co/1izr8" target='_blank'>eBPF</a>, <a className="link-blue" href="https://sched.co/1izsX" target='_blank'>OpenTelemetry</a> and more!</p>
+          <p>Microsoft engineers will be delivering sessions throughout the conference on a variety of projects and topics including <a className="link-blue" href="https://sched.co/1i7lA" target='_blank'>LLM Performance</a>, <a className="link-blue" href="https://kccncna2024.sched.com/event/1iW9K/eraser-cleaning-up-vulnerable-images-from-kubernetes-nodes-project-lightning-talk?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Eraser</a>, <a className="link-blue" href="https://sched.co/1hovU" target='_blank'>Notary</a>, <a className="link-blue" href="https://sched.co/1i7mf" target='_blank'>handling GPU Failures</a>, <a className="link-blue" href="https://sched.co/1i7rK" target='_blank'>OpenCost</a>, <a className="link-blue" href="https://sched.co/1i7ng" target='_blank'>Gateway API</a>, <a  className="link-blue"href="https://sched.co/1i7oH" target='_blank'>WebAssembly (Wasm)</a>, <a className="link-blue"href="https://sched.co/1how8" target='_blank'>CNI</a>, <a className="link-blue" href="https://sched.co/1i7n3" target='_blank'>Karpenter</a>, <a className="link-blue" href="https://sched.co/1izr8" target='_blank'>eBPF</a>, <a className="link-blue" href="https://sched.co/1izsX" target='_blank'>OpenTelemetry</a> and more!</p>
           <p>Some featured sessions include:</p>
           <div className="row" style={{ paddingBottom: '1rem' }}>
             {ContentItemsA.map((props, idx) => (
@@ -151,7 +151,7 @@ function Sessions() {
           </div>
           <div className='row'>
             <div className='col'>
-          <a className="button button--primary button--lg" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/" target='_blank'>
+          <a className="button button--primary button--lg" href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-north-america-2024-salt-lake-city-utah-november/ba-p/4278879#MSFTsessions" target='_blank'>
             View all sessions
             </a>
             </div>
@@ -306,6 +306,7 @@ function Sessions() {
                       <li>Wiz Container security for AI workloads on AKS</li>
                       <li>AKS Field Guide: Surviving in the Real World</li>
                       <li>Managing Kubernetes with Azure Linux</li>
+                      <li>Increased performance capabilities with Azure Container Storage</li>
                       <li>AKS Networking Best Practices</li>
                       <li>Harnessing AI with Redis: Optimizing Databases on Kubernetes</li>
                     </ul>
