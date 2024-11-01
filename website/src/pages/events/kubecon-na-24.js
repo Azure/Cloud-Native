@@ -7,6 +7,7 @@ import styles from './styles.module.css';
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { AnnouncementBarProvider } from '../../contexts/AnnouncementBarContext';
 
 function CampaignHeader() {
   // Inline styles for responsive video
@@ -444,6 +445,7 @@ export default function KubeconNA() {
   };
 
   return (
+    <AnnouncementBarProvider hide={true}>
     <Layout title={pageProps.title} description={pageProps.description}>
       <Head>
         <meta name="robots" content="index, follow" />
@@ -457,5 +459,6 @@ export default function KubeconNA() {
       <Community />
       </main>
     </Layout>
+    </AnnouncementBarProvider>
   );
 }
