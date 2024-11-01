@@ -439,16 +439,19 @@ function Sessions() {
 export default function KubeconNA() {
   const { siteConfig } = useDocusaurusContext();
   const pageProps = {
-    title: 'KubeCon North America 2024',
-    description: 'Join Microsoft Azure at KubeCon North America 2024',
+    title: 'Microsoft Azure at KubeCon Salt Lake City',
+    description: 'Join us at KubeCon North America 2024 in Salt Lake City, Utah, from November 12-15, where Microsoft Azure will be a Diamond Sponsor.',
   };
 
   return (
     <Layout title={pageProps.title} description={pageProps.description}>
       <Head>
-        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:title" content="Microsoft Azure at KubeCon Salt Lake City" />
+        <meta property="og:description" content="Join us at KubeCon North America 2024 in Salt Lake City, Utah, from November 12-15, where Microsoft Azure will be a Diamond Sponsor." />
+        <meta property="og:url" content="https://azure.github.io/Cloud-Native/events/kubecon-na-24/" />
+        <meta name="robots" content="index, follow" />
       </Head>
-      <main className='page-background'>
+      <main>
       <CampaignHeader />
       <BannerLearn />
       <Sessions />
