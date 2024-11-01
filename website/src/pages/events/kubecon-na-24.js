@@ -446,9 +446,6 @@ export default function KubeconNA() {
   return (
     <Layout title={pageProps.title} description={pageProps.description}>
       <Head>
-        <meta property="og:title" content="Microsoft Azure at KubeCon Salt Lake City" />
-        <meta property="og:description" content="Join us at KubeCon North America 2024 in Salt Lake City, Utah, from November 12-15, where Microsoft Azure will be a Diamond Sponsor." />
-        <meta property="og:url" content="https://azure.github.io/Cloud-Native/events/kubecon-na-24/" />
         <meta name="robots" content="index, follow" />
       </Head>
       <main>
