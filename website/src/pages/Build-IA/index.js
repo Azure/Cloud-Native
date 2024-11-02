@@ -38,17 +38,17 @@ const CampaignFeatures = [
       </>
     ),
   },
-  // {
-  //   title: "Free Trial",
-  //   linkTitle: "Free Trial",
-  //   svgpath: "../img/svg/60-days-of-IA-azure-icon-hack-together.svg",
-  //   link: "/Cloud-Native/Build-IA/FreeTrial",
-  //   description: (
-  //     <>
-  //       Dive into an extensive suite of free services designed to help get started building intelligent apps while minimizing upfront costs.
-  //     </>
-  //   ),
-  // },
+  {
+    title: "Free Services for AI apps ",
+    linkTitle: "Free Services for AI apps ",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-free-services.svg",
+    link: "/Cloud-Native/Build-IA/Free-Services",
+    description: (
+      <>
+        Get started with free amounts of Azure AI, app, and data services*
+      </>
+    ),
+  },
   {
     title: "AI Skills Challenge",
     linkTitle: "AI Skills Challenge",
@@ -134,10 +134,15 @@ function FeaturesSection() {
             <Feature
               key={idx}
               {...props}
-              className={idx < 2 ? 'col col--6 card-col' : 'col col--4 card-col'}
+              className={'col col--4 card-col'}
             />
           ))}
         </div>
+        <div className="row">
+            <div className="col">
+              <p style={{fontSize:"0.875rem", marginTop:"1rem"}}>*Some services are always free for Azure customers, and some are free for 12 months for new customers only. To see the free amount for each service, visit the <a href="https://azure.microsoft.com/en-us/pricing" target='_blank'>pricing</a> page for that specific service. 12 months free services is available only to new customers who have not previously had an Azure account or received 12 months of free services. It is not currently available to customers who sign up directly for pay as you go in China and India. Customers who try Azure free must move to pay as you go within 30 days to continue receiving 12 months free services. Read the full offer terms <a href="https://go.microsoft.com/fwlink/?linkid=2234065" target='_blank'>here</a>.</p>
+            </div>
+          </div>
       </div>
     </section>
   );

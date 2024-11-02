@@ -500,3 +500,23 @@ hr {
   color: #b3daf0!important;
   text-decoration: underline;
 }
+
+.glass-border {
+  position: relative;
+  width: 100%;
+  background: 
+    linear-gradient(
+      to bottom, 
+      rgba(255, 255, 255, 0) 0%, /* Top part, nearly opaque white */
+      var(--ifm-background-color) 90% /* Fade to the background color */
+    ), 
+    linear-gradient(90deg, rgba(181, 223, 239, 1), rgba(252, 107, 175, 1)); /* Horizontal color gradient */
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit; /* Text inherits color based on light/dark mode */
+  overflow: hidden; /* Ensure content stays within bounds */
+}
