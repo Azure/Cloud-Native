@@ -35,14 +35,12 @@ function CampaignHeader() {
       <div className="container">
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6">
-            <h1 className="hero__title">Join Microsoft Azure at KubeCon North America 2024</h1>
-            <p style={{ fontSize: '1.125rem', fontWeight:'600' }}>November 12-15, 2024 | Salt Lake City, Utah</p>
+            <h1 className="hero__title">Join Microsoft Azure at KubeCon India 2024</h1>
+            <p style={{ fontSize: '1.125rem', fontWeight:'600' }}>11-12 December 2024 | Delhi, India </p>
             <p>
-              Join us at KubeCon North America 2024 in Salt Lake City, Utah, from November 12-15, where Microsoft Azure will be a
-              Diamond Sponsor. Discover how Azure is leading the way in Kubernetes and intelligent applications with a series of
-              exciting sessions, demos, and keynotes.
+            Join us at the inaugural KubeCon India 2024 in Delhi, from 11-12 December, where Microsoft Azure will be a Gold Sponsor. Discover how Azure is leading the way in Kubernetes and intelligent applications.
             </p>
-            <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth #C4</p>
+            <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth #TBD</p>
           </div>
           <div className="col col--6">
             <div style={videoResponsiveStyle}>
@@ -70,21 +68,20 @@ function BannerLearn() {
         <div className="container">
           <div className="row padding-top--lg">
             <div className="col col--auto text--center">
-              <h2 className="margin-bottom--sm">Azure Day with Kubernetes</h2>
+              <h2 className="margin-bottom--sm">Lorem ipsum dolor sit</h2>
             </div>
           </div>
           <div className="row">
             <div className="col col--6 col--offset-3">
               <p className='margin-bottom--md text--center'>
-              <span style={{ fontWeight: 600 }}>November 12</span> | Join our team of Microsoft experts in-person to learn best practices for building cloud-native and
-                intelligent apps with Kubernetes on Azure.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
           </div>
           <div className="row padding-bottom--lg">
             <div className='col col--6 text--center col--offset-3'>
-              <a className="button button--secondary button--lg button-mobile-padding" href="https://aka.ms/AzureKubernetesDay" target="_blank">
-                Register now
+              <a className="button button--secondary button--lg button-mobile-padding" href="#" target="_blank">
+                lorem ipsum
               </a>
             </div>
           </div>
@@ -97,14 +94,25 @@ function BannerLearn() {
     return (
       <section className={styles['banner-background']}>
         <div className="container">
-          <div className="row padding-top--lg padding-bottom--lg">
-            <div className="col col--8 col--offset-2 text--center">
-              <h2 className="margin-bottom--sm gradient-background">Join us at booth C4 during the KubeCrawl</h2>
-              <p className='margin-bottom--none'>
-              For an exclusive book signing of <a className="link-blue-light" href="https://www.oreilly.com/library/view/kubernetes-best-practices/9781098142155/" target='_blank'>Kubernetes Best Practices, 2nd Edition</a> with Brendan Burns!
+          <div className="row padding-top--lg">
+            <div className="col col--auto text--center">
+              <h2 className="margin-bottom--sm">Lorem ipsum dolor sit</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col col--6 col--offset-3">
+              <p className='margin-bottom--lg text--center'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
           </div>
+          {/* <div className="row padding-bottom--lg">
+            <div className='col col--6 text--center col--offset-3'>
+              <a className="button button--secondary button--lg button-mobile-padding" href="#" target="_blank">
+                lorem ipsum
+              </a>
+            </div>
+          </div> */}
         </div>
       </section>
     );
@@ -115,74 +123,120 @@ function Sessions() {
     return (
       <section>
         <div className="container margin-top--lg">
-            <div className="row">
+            {/* <div className="row">
                 <div className="col text--center">
                     <h2 className={styles['gradient-header']}>Learn from Microsoft Experts</h2>
                 </div>
-            </div>
-            <div className="row">
+            </div> */}
+            {/* <div className="row">
                 <div className="col">
                     <h3 style={{textTransform:'uppercase'}}>Keynote</h3>
                     <h4 className="margin-bottom--sm">A Developer's Guide to Securing Your Software Supply Chain</h4>
                     <p className="margin-bottom--sm">Toddy Mladenov, Principal Product Manager, Microsoft</p>
-                    <p>November 14, 2024 at 10:00 AM</p>
+                    <p>November 14, 2024 at 9:40 AM</p>
                 </div>
-            </div>
-          <div className="row">
+            </div> */}
+          <div className="row margin-top--lg">
             <div className="col col--6">
-              <div style={{marginBottom: "1rem"}}>
-                <img src="/Cloud-Native/img/events/kubecon-na-24-keynote-image.png" alt="" role="presentation" style={{borderRadius: "1.5rem", outline: "solid #091f2c", outlineOffset: "-2px"}}/>
+              <div style={{marginBottom: "1rem"}} className='glass-border-kubecon'>
+                <img src="/Cloud-Native/img/Azure-3D-Illustrations-Migration-Dark.jpg" alt="" role="presentation" style={{borderRadius: "1.5rem"}}/>
               </div>
             </div>
             <div className="col col--6" style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'center' }}>
-              <p>Container images, AI weights, WebAssembly modules, and software packages - what's the link? They are all examples of some of the many artifacts found throughout a software supply chain. With so many different artifacts, the real question becomes, “Is your software supply chain as secure as your production environment?” </p>
-              <p>In this keynote, we will navigate the journey of these artifacts from source to production and showcase how to secure your software at each step of the supply chain using cloud native open-source tooling. With the help of key CNCF projects like in-toto, Notary Project, Ratify, and Copa, you will learn how to ensure your software is secure, consistent, and reliably delivered to production.</p>
-              <a className="button button--primary button--lg" href="https://sched.co/1iCSh" target='_blank'>
-              Add to your Schedule
+            <h2 className={styles['gradient-header']}>Azure Days with Kubernetes</h2>
+              <p>Azure Days with Kubernetes are in-person events tailored for developers, IT professionals, and decision-makers eager to harness the power of AKS for their cloud-native and intelligent applications. Whether you're starting with Kubernetes or seeking to refine your AKS deployments, we have sessions to provide valuable insights and actionable knowledge for your cloud journey.</p>
+              <a className="button button--primary button--lg" href="#" target='_blank'>
+              Register now
                 </a>
             </div>
           </div>
-          <h3 style={{textTransform:'uppercase'}} className='margin-top--md'>Additional Keynotes</h3>
-          <h4 className="margin-bottom--sm">A Decade of Kubernetes and Cloud Native - Are We There Yet?</h4>
-          <p>November 15, 2024 at 9:10 AM</p>
-          <a className="button button--primary button--lg" href="https://sched.co/1iG7A" target='_blank'>
-              Add to your Schedule
+          <div className="row">
+          <div className="row">
+            <div className="col col--8">
+              
+                  <div className="text--left">
+                    <h3>Hands-On Labs</h3>
+                    <p>Roll up your sleeves and dive into Azure Kubernetes Service with our hands-on labs. Participants can choose from a variety of labs, including introductory, advanced, as well as developer and platform focused.</p>
+                    <a className="button button--primary button--lg" href="https://azureday.eventbuilder.com/event/87493?source=AKSDayIndia" target='_blank'>
+              Register now
                 </a>
-          <h4 className="margin-bottom--sm margin-top--lg">Kubernetes Family Feud: A Decade of Architecture and Evolution</h4>
-          <p>November 15, 2024 at 10:05 AM</p>
-          <a className="button button--primary button--lg" href="https://sched.co/1iCTr" target='_blank'>
-              Add to your Schedule
+                  </div>
+
+            </div>
+  
+            <div className="col col--8 margin-top--lg">
+
+                  <div className="text--left">
+                    <h3>Developer & Digital Native Track</h3>
+                    <p>The developer track will provide a strategic overview of AKS for developers, ISVs, and Digital Natives including topics such as:</p>
+                    <ul>
+                      <li>Getting started quickly & driving productivity with AKS Automatic</li>
+                      <li>Building intelligent applications with AKS</li>
+                      <li>Using AI to speed up time to production</li>
+                      <li>Implementing a secure supply chain & securely accessing resources from your applications</li>
+                      <li>Developing stateful applications in Kubernetes</li>
+                    </ul>
+                    <a className="button button--primary button--lg" href="https://azureday.eventbuilder.com/event/87494?source=AKSDayIndia" target='_blank'>
+              Register now
                 </a>
-          <h3 style={{textTransform:'uppercase'}} className='margin-top--lg'>Featured Breakout Sessions</h3>
-          <p>Microsoft engineers will be delivering sessions throughout the conference on a variety of projects and topics including <a className="link-blue" href="https://sched.co/1i7lA" target='_blank'>LLM Performance</a>, <a className="link-blue" href="https://kccncna2024.sched.com/event/1iW9K/eraser-cleaning-up-vulnerable-images-from-kubernetes-nodes-project-lightning-talk?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Eraser</a>, <a className="link-blue" href="https://sched.co/1hovU" target='_blank'>Notary</a>, <a className="link-blue" href="https://sched.co/1i7mf" target='_blank'>handling GPU Failures</a>, <a className="link-blue" href="https://sched.co/1i7rK" target='_blank'>OpenCost</a>, <a className="link-blue" href="https://sched.co/1i7ng" target='_blank'>Gateway API</a>, <a  className="link-blue"href="https://sched.co/1i7oH" target='_blank'>WebAssembly (Wasm)</a>, <a className="link-blue"href="https://sched.co/1how8" target='_blank'>CNI</a>, <a className="link-blue" href="https://sched.co/1i7n3" target='_blank'>Karpenter</a>, <a className="link-blue" href="https://sched.co/1izr8" target='_blank'>eBPF</a>, <a className="link-blue" href="https://sched.co/1izsX" target='_blank'>OpenTelemetry</a> and more!</p>
-          <p>Some featured sessions include:</p>
+                  </div>
+            </div>
+  
+            <div className="col col--8 margin-top--lg">
+                  <div className="text--left">
+                    <h3>Platform & Operators Track</h3>
+                    <p>The operator track will provide a strategic overview of AKS for platform engineers and operators, including topics such as:</p>
+                    <ul>
+                      <li>Upgrades, business continuity & resiliency</li>
+                      <li>Securing your clusters</li>
+                      <li>Network setup and best practices</li>
+                      <li>Operating a mission-critical environment</li>
+                      <li>Managing distributed fleets of clusters</li>
+                      <li>Making AKS your most cost-efficient platform</li>
+                    </ul>
+                    <a className="button button--primary button--lg" href="https://azureday.eventbuilder.com/event/87495?source=AKSDayIndia" target='_blank'>
+              Register now
+                </a>
+                  </div>
+                </div>
+          </div>
+          </div>
+          <div className='text--center margin-top--lg'>
+            <h2 className={styles['gradient-header']}>Learn from Microsoft Experts</h2>
+                <p>
+                Microsoft engineers will be delivering sessions and technical demos at KubeCon and at our booth on the show floor.
+                </p>
+          </div>
+          {/* <h3 style={{textTransform:'uppercase'}} className='margin-top--md'>Featured Breakout Sessions</h3>
+          <p>Some featured sessions include:</p> */}
           <div className="row" style={{ paddingBottom: '1rem' }}>
             {ContentItemsA.map((props, idx) => (
               <ContentItem key={idx} {...props} />
             ))}
           </div>
-          <div className='row'>
+          {/* <div className='row'>
             <div className='col'>
-          <a className="button button--primary button--lg" href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-north-america-2024-salt-lake-city-utah-november/ba-p/4278879#MSFTsessions" target='_blank'>
-            View all sessions
-            </a>
+              <a className="button button--primary button--lg" href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-north-america-2024-salt-lake-city-utah-november/ba-p/4278879#MSFTsessions" target='_blank'>
+                View all sessions
+                </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     );
   }
   
   // Content Item
-  function ContentItem({ session, link, presenter }) {
+  function ContentItem({ session, link, presenter, description }) {
     return (
-      <div className={clsx('col col--4 card-col')}>
+      <div className={clsx('col col--6 card-col')}>
 
           <div className="card">
             <div className="card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
               <div className="text--left">
                 <h4>{session}</h4>
                 <p>{presenter}</p>
+                <p>{description}</p>
                 </div>
                 <div>
                 <a
@@ -193,7 +247,7 @@ function Sessions() {
                 data-bi-area="BodyGrid"
                 data-bi-name={session}
                 >
-                    Register to attend
+                    Add to Schedule
                 </a>
               </div>
             </div>
@@ -205,50 +259,17 @@ function Sessions() {
   
   const ContentItemsA = [
     {
-      session: 'Optimizing LLM Performance in Kubernetes with OpenTelemetry',
-      presenter: 'Liudmila Molkova',
-      link: 'https://sched.co/1i7lA',
+      session: 'Effortless Clustering: Rethinking ClusterAPI with Systemd-Systext',
+      description: 'Through the years, ClusterAPI has evolved into an indispensable tool, streamlining the lifecycle management of Kubernetes clusters across multiple infrastructure providers. The current approach adds a layer of complexity at the image-building stage, presenting users with a multitude of options. But what if we challenge this conventional approach? This presentation introduces a paradigm shift in ClusterAPI image building, leveraging systemd-sysext and image composability. Join me in this talk as we explore how this innovative approach could help cope with the never-ending matrix of Kubernetes versions and Distro images, significantly enhancing usability for users managing their workloads.',
+      presenter: 'Sayan Chowdury',
+      link: 'https://sched.co/1mVRz',
     },
     {
-        session: 'Running WebAssembly (Wasm) Workloads Side-by-Side with Container Workloads',
-        presenter: 'Jiaxiao Zhou',
-        link: 'https://sched.co/1i7oH',
-    },
-    {
-        session: 'Detecting and Overcoming GPU Failures During ML Training',
-        presenter: 'Ganeshkumar Ashokavardhanan',
-        link: 'https://sched.co/1i7mf',
-    },
-    {
-        session: 'Working Together to Improve Security Visibility in Kubernetes',
-        presenter: 'Rita Zhang, Jeremy Rickard',
-        link: 'https://sched.co/1hoxr',
-    },
-    {
-        session: 'Divide and Conquer: Master GPU Partitioning and Visualize Savings with OpenCost',
-        presenter: 'Kaysie Yu, Ally Ford',
-        link: 'https://sched.co/1i7rK',
-    },
-    {
-        session: 'Building a More Resilient Future with Advanced Cloud Provider Testing',
-        presenter: 'Bridget Kromhout',
-        link: 'https://sched.co/1hoyJ',
-    },
-    {
-        session: 'The Maintainer Monologues',
-        presenter: 'Ryan Nowak',
-        link: 'https://sched.co/1i7p6',
-    },
-    {
-        session: 'The State of Kubernetes Optimization and the Role of AI',
-        presenter: 'Haoran Qiu',
-        link: 'https://sched.co/1i7s0',
-    },
-    {
-        session: 'Kubernetes Multi-Cluster Networking 101',
-        presenter: 'Niranjan Shankar',
-        link: 'https://sched.co/1i7oW',
-      },
+      session: 'Flatcar Container Linux Deep Dive: Deploying, Managing and Automating Workloads Securely',
+      description: 'Flatcar is an operating system purpose-built for securely running container workloads. It ensures security by providing essential tools, reducing the OS size with minimal packages, and making the /usr directory immutable. This tutorial is designed for ops and DevOps professionals, offering step-by-step guidance on getting started with Flatcar. You&#39;ll explore how to deploy it using Terraform, configure it with Ignition, and automate OS updates via Nebraska, enabling you to "set it and forget it.',
+      presenter: 'Sayan Chowdury',
+      link: 'https://sched.co/1i7oH',
+    }
   
   ];
 
@@ -259,16 +280,16 @@ function Sessions() {
           <div className="row">
             <div className="col margin-top--md text--center">
               <h2 className={styles['gradient-header']}>Booth Theatre & Demos</h2>
-              <p>
+              {/* <p>
                 Visit our booth #C4 to engage with our experts and attend a variety
                 of theatre sessions and technical demos.
-              </p>
+              </p> */}
             </div>
           </div>
   
           {/* Row container for cards */}
           <div className="row">
-            <div className="col col--4 card-col">
+            <div className="col col--6 card-col">
               <div
                 className="card"
                 style={{
@@ -280,26 +301,14 @@ function Sessions() {
               >
                 <div className="card-body" style={{ flexGrow: 1 }}>
                   <div className="text--left">
-                    <h3>Wednesday, November 13, 2024</h3>
-                    <ul>
-                      <li>Enhance the Security of your Container Images with Continuous Patching</li>
-                      <li>Objection! Event-Driven Workload Mistakes on Trial with Azure & KEDA</li>
-                      <li>Unlocking Binary Drift Detection</li>
-                      <li>Accelerated GenAI on Azure with Canonical's Managed Kubeflow</li>
-                      <li>Securing your Microservices in AKS using eBPF and Istio</li>
-                      <li>What's new for Windows on AKS</li>
-                      <li>Introduction to Reliability Best Practices on AKS and beyond</li>
-                      <li>OpenTelemetry on Azure</li>
-                      <li>Cloud-Agnostic Network Observability for Kubernetes: Empowering Azure Workloads with Retina</li>
-                      <li>Amplify the Security of AKS Deployments Using Ratify and Gatekeeper</li>
-                      <li>Divide and Conquer: Master GPU Partitioning and Visualize Savings</li>
-                    </ul>
+                    <h3>Wednesday 11 December</h3>
+                    <p>Schedule coming soon! </p>
                   </div>
                 </div>
               </div>
             </div>
   
-            <div className="col col--4 card-col">
+            <div className="col col--6 card-col">
               <div
                 className="card"
                 style={{
@@ -310,41 +319,9 @@ function Sessions() {
                 }}
               >
                 <div className="card-body" style={{ flexGrow: 1 }}>
-                  <div className="text--left">
-                    <h3>Thursday, November 14, 2024</h3>
-                    <ul>
-                      <li>Fine-Tuning Open-Source Models made easy with KAITO</li>
-                      <li>Full-stack K8S monitoring with Azure Monitor</li>
-                      <li>Wiz Container security for AI workloads on AKS</li>
-                      <li>AKS Field Guide: Surviving in the Real World</li>
-                      <li>Managing Kubernetes with Azure Linux</li>
-                      <li>Increased performance capabilities with Azure Container Storage</li>
-                      <li>AKS Networking Best Practices</li>
-                      <li>Harnessing AI with Redis: Optimizing Databases on Kubernetes</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div className="col col--4 card-col">
-              <div
-                className="card"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  height: "100%",
-                }}
-              >
-                <div className="card-body" style={{ flexGrow: 1 }}>
-                  <div className="text--left">
-                    <h3>Friday, November 15, 2024</h3>
-                    <ul>
-                      <li>How to Move from Ingress to Gateway API with Minimal Hassle</li>
-                      <li>Cloud storage best practices for containers with scale-out analytics and AI workloads</li>
-                      <li>Enhancing Application Resiliency with Azure Kubernetes Fleet Manager</li>
-                    </ul>
+                <div className="text--left">
+                    <h3>Thursday 12 December</h3>
+                    <p>Schedule coming soon!</p>
                   </div>
                 </div>
               </div>
@@ -448,18 +425,18 @@ function Sessions() {
   }
   
 
-export default function KubeconNA() {
+export default function KubeconIndia() {
   const { siteConfig } = useDocusaurusContext();
   const pageProps = {
-    title: 'Microsoft Azure at KubeCon Salt Lake City',
-    description: 'Join us at KubeCon North America 2024 in Salt Lake City, Utah, from November 12-15, where Microsoft Azure will be a Diamond Sponsor.',
+    title: 'Microsoft Azure at KubeCon India',
+    description: 'Join us at KubeCon India 2024 in Delhi, India, from December 11-12.',
   };
 
   return (
     <AnnouncementBarProvider hide={true}>
     <Layout title={pageProps.title} description={pageProps.description}>
       <Head>
-        <meta name="robots" content="index, follow" />
+      <meta name="robots" content="noindex, nofollow" />
       </Head>
       <main>
       <CampaignHeader />
