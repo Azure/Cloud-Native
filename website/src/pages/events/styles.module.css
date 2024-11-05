@@ -21,7 +21,7 @@
 }
 
 .banner-background h2 {
-    background: linear-gradient(45deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
+    background: linear-gradient(135deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -32,7 +32,7 @@
 }
 
 .gradient-header {
-  background: linear-gradient(45deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
+  background: linear-gradient(135deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
