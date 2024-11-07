@@ -1,8 +1,8 @@
 ---
-date: 2024-11-07T09:00
+date: 2024-11-07T09:01
 slug: using-github-copilot
 title: "Using GitHub Copilot"
-authors: [Build IA Team]
+authors: [30days]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2

@@ -1,8 +1,8 @@
 ---
-date: 2024-10-29T09:00
+date: 2024-11-07T09:00
 slug: improving-the-developer-experience-with-modern-dev-tools
 title: "Improving the developer experience with modern dev tools"
-authors: [Build IA Team]
+authors: [30days]
 draft: true
 hide_table_of_contents: false
 toc_min_heading_level: 2
