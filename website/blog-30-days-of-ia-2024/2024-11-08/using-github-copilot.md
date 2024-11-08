@@ -1,7 +1,7 @@
 ---
 date: 2024-11-08T09:01
 slug: using-github-copilot
-title: "Using GitHub Copilot"
+title: "3.2 Using GitHub Copilot"
 authors: [30days]
 draft: false
 hide_table_of_contents: false

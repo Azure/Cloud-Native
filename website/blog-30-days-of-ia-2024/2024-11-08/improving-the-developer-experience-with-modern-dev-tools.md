@@ -1,7 +1,7 @@
 ---
 date: 2024-11-08T09:00
 slug: improving-the-developer-experience-with-modern-dev-tools
-title: "Improving the developer experience with modern dev tools"
+title: "3.1 Improving the developer experience with modern dev tools"
 authors: [30days]
 draft: false
 hide_table_of_contents: false
