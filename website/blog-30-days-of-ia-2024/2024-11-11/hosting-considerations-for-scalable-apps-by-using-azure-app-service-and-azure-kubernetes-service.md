@@ -129,7 +129,7 @@ Don’t be reactive to performance issues. Look for ways to configure your app a
 
 1. **Response optimization:** 
 
-   - **Language models**. When integrating language models, optimize their responsiveness by minimizing the number of output tokens and setting appropriate values for parameters like ''' max_tokens '''. As discussed in [GenAI Solutions: Elevating Production Apps Performance Through Latency Optimization](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/genai-solutions-elevating-production-apps-performance-through/ba-p/4049822?ocid=biafy25h1_30daysofia_webpage_azuremktg), this helps control the length of generated output and reduces latency. 
+   - **Language models**. When integrating language models, optimize their responsiveness by minimizing the number of output tokens and setting appropriate values for parameters like ```max_tokens```. As discussed in [GenAI Solutions: Elevating Production Apps Performance Through Latency Optimization](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/genai-solutions-elevating-production-apps-performance-through/ba-p/4049822?ocid=biafy25h1_30daysofia_webpage_azuremktg), this helps control the length of generated output and reduces latency. 
 
    - **Efficient workflow orchestration**. Design efficient workflows to minimize delays and help ensure that tasks are processed quickly. This involves optimizing the sequence and execution of tasks to reduce bottlenecks. 
 
