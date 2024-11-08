@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Using GitHub Copilot]]></title>
+            <title><![CDATA[3.2 Using GitHub Copilot]]></title>
             <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot</link>
             <guid>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot</guid>
             <pubDate>Fri, 08 Nov 2024 09:01:00 GMT</pubDate>
@@ -51,7 +51,7 @@
             <category>github-actions</category>
         </item>
         <item>
-            <title><![CDATA[Improving the developer experience with modern dev tools]]></title>
+            <title><![CDATA[3.1 Improving the developer experience with modern dev tools]]></title>
             <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools</link>
             <guid>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools</guid>
             <pubDate>Fri, 08 Nov 2024 09:00:00 GMT</pubDate>

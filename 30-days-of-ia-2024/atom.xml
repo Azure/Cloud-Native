@@ -8,7 +8,7 @@
     <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Using GitHub Copilot]]></title>
+        <title type="html"><![CDATA[3.2 Using GitHub Copilot]]></title>
         <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot</id>
         <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot"/>
         <updated>2024-11-08T09:01:00.000Z</updated>
@@ -54,7 +54,7 @@
         <category label="github-actions" term="github-actions"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Improving the developer experience with modern dev tools]]></title>
+        <title type="html"><![CDATA[3.1 Improving the developer experience with modern dev tools]]></title>
         <id>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools</id>
         <link href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools"/>
         <updated>2024-11-08T09:00:00.000Z</updated>
