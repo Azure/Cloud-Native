@@ -1,7 +1,7 @@
 ---
-date: 2024-11-11T09:00
+date: 2024-11-11T09:01
 slug: hosting-considerations-for-scalable-apps-by-using-azure-app-service-and-azure-kubernetes-service
-title: "Hosting considerations for scalable apps by using Azure App Service and Azure Kubernetes Service (AKS)"
+title: "3.4 Hosting considerations for scalable apps by using Azure App Service and Azure Kubernetes Service (AKS)"
 authors: [30days]
 draft: true
 hide_table_of_contents: false
@@ -41,9 +41,9 @@ Deciding on the deployment technology for your app is a fundamental decision. Yo
 
 1. **Choosing the right hosting service**: 
 
-   - [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/?ocid=biafy25h1_30daysofia_webpage_azuremktg). If your application is containerized and requires orchestration, AKS is an excellent choice. It simplifies the deployment, management, and scaling of containerized applications using Kubernetes. AKS provides features like automated upgrades, self-healing, and easy scaling, making it ideal for complex applications that need to handle varying loads. 
+   - **[Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. If your application is containerized and requires orchestration, AKS is an excellent choice. It simplifies the deployment, management, and scaling of containerized applications using Kubernetes. AKS provides features like automated upgrades, self-healing, and easy scaling, making it ideal for complex applications that need to handle varying loads. 
 
-   - [Azure App Service](https://learn.microsoft.com/azure/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg). For web apps, APIs, and mobile back ends, App Service offers a fully managed platform with built-in scaling and management capabilities. App Service is ideal when you need a fast, easy-to-use platform to host your app, with minimal management overhead. It supports multiple languages and frameworks, making it versatile for different types of applications. 
+   - **[Azure App Service](https://learn.microsoft.com/azure/app-service/?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. For web apps, APIs, and mobile back ends, App Service offers a fully managed platform with built-in scaling and management capabilities. App Service is ideal when you need a fast, easy-to-use platform to host your app, with minimal management overhead. It supports multiple languages and frameworks, making it versatile for different types of applications. 
 
 2. **Provisioning resources:**
 
@@ -57,25 +57,25 @@ You also need to be sure that your app is secure and compliant with your securit
 
 1. **Identity and access management:** 
 
-   - [Microsoft Entra ID](https://www.microsoft.com/security/business/identity-access/microsoft-entra-id?ocid=biafy25h1_30daysofia_webpage_azuremktg). Implement Microsoft Entra ID for robust authentication and authorization. It supports single sign-on (SSO), multifactor authentication, and conditional access policies, enhancing the security of your application. 
+   - **[Microsoft Entra ID](https://www.microsoft.com/security/business/identity-access/microsoft-entra-id?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. Implement Microsoft Entra ID for robust authentication and authorization. It supports single sign-on (SSO), multifactor authentication, and conditional access policies, enhancing the security of your application. 
 
-   - [Azure role-based access control (RBAC)](https://learn.microsoft.com/azure/role-based-access-control/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg). Use RBAC to restrict access to resources based on user roles. This minimizes the risk of unauthorized access and helps ensure that users only have the permissions they need to perform their tasks. 
+   - **[Azure role-based access control (RBAC)](https://learn.microsoft.com/azure/role-based-access-control/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. Use RBAC to restrict access to resources based on user roles. This minimizes the risk of unauthorized access and helps ensure that users only have the permissions they need to perform their tasks. 
 
  
 
 2. **Data encryption:**
 
-   - [Encryption at rest and in transit](https://learn.microsoft.com/azure/well-architected/security/encryption?ocid=biafy25h1_30daysofia_webpage_azuremktg). Enable encryption for data at rest and in transit, to protect sensitive information from unauthorized access. Azure provides built-in encryption mechanisms for various services, helping to ensure data security. 
+   - **[Encryption at rest and in transit](https://learn.microsoft.com/azure/well-architected/security/encryption?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. Enable encryption for data at rest and in transit, to protect sensitive information from unauthorized access. Azure provides built-in encryption mechanisms for various services, helping to ensure data security. 
 
-   - [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/?ocid=biafy25h1_30daysofia_webpage_azuremktg). Use Azure Key Vault to manage and store secrets, keys, and certificates securely. Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services, helping to ensure that they’re protected and accessible only to authorized users. 
+   - **[Azure Key Vault](https://learn.microsoft.com/azure/key-vault/?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. Use Azure Key Vault to manage and store secrets, keys, and certificates securely. Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services, helping to ensure that they’re protected and accessible only to authorized users. 
 
  
 
 3. **Compliance:**
 
-   - [Industry standards and regulations](https://learn.microsoft.com/azure/compliance/?ocid=biafy25h1_30daysofia_webpage_azuremktg). Help ensure that your application complies with relevant industry standards and regulations, such as General Data Protection Regulation (GDPR), Health Insurance Portability and Accountability Act (HIPAA), and others. Compliance helps protect user data and builds trust with your customers. 
+   - **[Industry standards and regulations](https://learn.microsoft.com/azure/compliance/?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. Help ensure that your application complies with relevant industry standards and regulations, such as General Data Protection Regulation (GDPR), Health Insurance Portability and Accountability Act (HIPAA), and others. Compliance helps protect user data and builds trust with your customers. 
 
-   - [Azure Policy](https://learn.microsoft.com/azure/governance/policy/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg). Use Azure Policy to enforce compliance policies across your resources. Azure Policy helps you manage and prevent IT issues, with policy definitions that enforce rules and effects for your resources. 
+   - **[Azure Policy](https://learn.microsoft.com/azure/governance/policy/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)**. Use Azure Policy to enforce compliance policies across your resources. Azure Policy helps you manage and prevent IT issues, with policy definitions that enforce rules and effects for your resources. 
 
 ## Availability and resilience
 

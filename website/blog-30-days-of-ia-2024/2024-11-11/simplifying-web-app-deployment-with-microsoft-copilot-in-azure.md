@@ -1,7 +1,7 @@
 ---
 date: 2024-11-08T09:00
 slug: simplifying-web-app-deployment-with-microsoft-copilot-in-azure
-title: "Simplifying web app deployment with Microsoft Copilot in Azure"
+title: "3.3 Simplifying web app deployment with Microsoft Copilot in Azure"
 authors: [30days]
 draft: true
 hide_table_of_contents: false
@@ -62,7 +62,7 @@ Deploying your web application with Copilot in Azure is straightforward:
 
 1. Prepare your application: 
 
-    a. Be sure your application is ready for deployment. This includes having a Dockerfile, if you’re using containers, or a building configuration file for other types of applications. 
+    a. Be sure your application is ready for deployment. This includes having a ```Dockerfile```, if you’re using containers, or a building configuration file for other types of applications. 
 
 2. Deploy with Copilot in Azure: 
 
