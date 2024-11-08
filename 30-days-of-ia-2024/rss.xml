@@ -4,10 +4,93 @@
         <title>Build Intelligent Apps On Azure Blog</title>
         <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024</link>
         <description>Build Intelligent Apps On Azure Blog</description>
-        <lastBuildDate>Tue, 29 Oct 2024 09:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 Nov 2024 09:01:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Using GitHub Copilot]]></title>
+            <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot</link>
+            <guid>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot</guid>
+            <pubDate>Fri, 08 Nov 2024 09:01:00 GMT</pubDate>
+            <description><![CDATA[In this blog series, we explore how exactly Microsoft developer tools can improve DevEx.]]></description>
+            <content:encoded><![CDATA[
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reimagining-the-developer-experience-with-github-copilot">Reimagining the developer experience with GitHub Copilot<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot#reimagining-the-developer-experience-with-github-copilot" class="hash-link" aria-label="Direct link to Reimagining the developer experience with GitHub Copilot" title="Direct link to Reimagining the developer experience with GitHub Copilot">​</a></h2>
+<p>AI has the potential to change every job on the planet. It can make employees more efficient, less stressed, and more fulfilled. For most jobs, this is a vision for the future, but for software developers, this isn’t a vision at all—it’s today’s reality.</p>
+<p>GitHub Copilot, the most widely adopted AI developer tool in the world , is leading this charge. In our last blog post, we talked about the ongoing paradigm shift from developer productivity to developer experience—and how leading firms are no longer prioritizing <strong>how much</strong> code is created but instead focusing on <strong>everything that goes into creating that code</strong>. In this post, we cover how GitHub Copilot is revolutionizing the way developers work and how it’s drastically improving DevEx every day.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="improving-devex-with-ai">Improving DevEx with AI<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot#improving-devex-with-ai" class="hash-link" aria-label="Direct link to Improving DevEx with AI" title="Direct link to Improving DevEx with AI">​</a></h2>
+<p>DevEx is all about making life easier for developers and removing their pain points. To illustrate the power of GitHub Copilot, let’s look at a few of the most common struggles for developers and see how GitHub Copilot can address them.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h2>
+<p>Security is one of the most common challenges for developers. The goal with security tools is to provide smooth guardrails for developers, but often these tools can feel like concrete roadblocks. If this sounds familiar, it’s probably time for better security tools.</p>
+<p>GitHub Copilot helps here by scanning code in real time for potential vulnerabilities, flagging them so devs can fix them as they write. This not only saves developers time but also reduces business costs, since addressing a vulnerability early on is less time-consuming and expensive than remediating it later.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="onboarding-to-new-projects">Onboarding to new projects<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot#onboarding-to-new-projects" class="hash-link" aria-label="Direct link to Onboarding to new projects" title="Direct link to Onboarding to new projects">​</a></h2>
+<p>Starting on a new job or project is never easy. You have to learn the landscape, find your footing, and get familiar with the new codebase. Historically, this has taken developers days, if not weeks, but AI is changing that. Now, GitHub Copilot can scan your codebase, understand it in an instant, and answer all your questions, like:</p>
+<ul>
+<li>“What does this function do?”</li>
+<li>“How is this schema set up?”</li>
+<li>“Where are these variables used?”</li>
+</ul>
+<p>Now, you don’t have to onboard alone. As itemized in “Announcing new research: The case for investing in DevEx,” our research shows that when developers get answers to their questions quickly, their teams report 50% less tech debt, and when developers understand their codebase well, they feel 42% more productive. This means that GitHub Copilot is not only saving developers time as they onboard, but also it improves business outcomes in the long run.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="repetitive-and-low-complexity-tasks">Repetitive and low-complexity tasks<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot#repetitive-and-low-complexity-tasks" class="hash-link" aria-label="Direct link to Repetitive and low-complexity tasks" title="Direct link to Repetitive and low-complexity tasks">​</a></h2>
+<p>The cool part about being a developer is building something new and awesome. The less cool part is all the admin work that comes along with it—adding comments, writing documentation, and writing repetitive infrastructure code that you’ve written 100 times before.</p>
+<p>GitHub Copilot is finally eliminating these headaches. It can write documentation, clean up code, and handle repetitive tasks with ease, allowing developers to focus their time and effort on the things that matter, like building innovative solutions to push the world forward.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-tools-are-improving-devex-but-this-is-just-the-start">AI tools are improving DevEx, but this is just the start<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/using-github-copilot#ai-tools-are-improving-devex-but-this-is-just-the-start" class="hash-link" aria-label="Direct link to AI tools are improving DevEx, but this is just the start" title="Direct link to AI tools are improving DevEx, but this is just the start">​</a></h2>
+<p>We’ve just covered how the world’s leading AI developer tool, GitHub Copilot, can improve the developer experience by removing common headaches, such as security, onboarding, and repetitive tasks, but this is just the tip of the iceberg. GitHub Copilot and our other cutting-edge developer tools are completely changing the way that developers build and deploy software—all with the singular goal of making life better for developers. To learn more about how modern tools are revolutionizing developer workflows, stay tuned for the rest of this blog series, and try <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a> today!</p>]]></content:encoded>
+            <category>Build-Intelligent-Apps</category>
+            <category>30-days-of-IA-2024</category>
+            <category>learn-live</category>
+            <category>demo-bytes</category>
+            <category>community-gallery</category>
+            <category>azure-kubernetes-service</category>
+            <category>azure-functions</category>
+            <category>azure-openai</category>
+            <category>azure-container-apps</category>
+            <category>azure-cosmos-db</category>
+            <category>github-copilot</category>
+            <category>github-codespaces</category>
+            <category>github-actions</category>
+        </item>
+        <item>
+            <title><![CDATA[Improving the developer experience with modern dev tools]]></title>
+            <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools</link>
+            <guid>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools</guid>
+            <pubDate>Fri, 08 Nov 2024 09:00:00 GMT</pubDate>
+            <description><![CDATA[In this blog series, we explore how exactly Microsoft developer tools can improve DevEx.]]></description>
+            <content:encoded><![CDATA[
+<p>There’s a paradigm shift happening right now in the software world. Traditionally, when companies want to move faster or release more code, they’ve focused on enhancing <strong>developer productivity</strong>. However, when organizations focus solely on productivity, they can inadvertently cause major problems, such as burnout, turnover, and reduced code quality.</p>
+<p>Leading firms have recognized that it’s not just about <strong>how much</strong> code is written, it’s also about <strong>how</strong> that code is written. The conversation has evolved from developer productivity to <strong>developer experience (DevEx)</strong>.</p>
+<p> </p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-improve-devex">How to improve DevEx<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools#how-to-improve-devex" class="hash-link" aria-label="Direct link to How to improve DevEx" title="Direct link to How to improve DevEx">​</a></h2>
+<p>Naturally, this paradigm shift has many tech leaders wondering, “How can we improve our DevEx?” Well, to improve your DevEx, you need to change the way your developers work. There are two components to this:</p>
+<ul>
+<li>
+<p>Establishing better developer processes.</p>
+</li>
+<li>
+<p>Giving your developers better tools.</p>
+</li>
+</ul>
+<p>Improving developer processes can be tricky because each organization experiences friction in unique places. So, the first step is to find your friction. To do this, talk to your developers; they’ll probably be happy to point out the friction points in their workflows. Hold discussions, run surveys, figure out which parts of their workflow cause them the most headaches, and then do something about it.</p>
+<p>Doing something about it often involves our second point: giving your developers better tools. This is one of the quickest and most effective ways of improving DevEx. A good knife helps a skilled chef work faster and cleaner—dev tools are no different. We’ll cover some recommended tools later in this blog series.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-assess-devex">How to assess DevEx<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools#how-to-assess-devex" class="hash-link" aria-label="Direct link to How to assess DevEx" title="Direct link to How to assess DevEx">​</a></h2>
+<p>We’ve established that improving DevEx is important, but now you may be wondering, “How do you measure DevEx? It seems like a multifaceted thing.”</p>
+<p>You’re right, it is multifaceted. It can’t be captured with one metric—or even with a category of metrics. That’s why we invented the SPACE framework, a new way of understanding DevEx. It offers metrics across five categories: <strong>S</strong>atisfaction and well-being, <strong>P</strong>erformance, <strong>A</strong>ctivity, <strong>C</strong>ommunication and collaboration, and <strong>E</strong>fficiency and flow. To assess your DevEx, we recommend tracking metrics across at least three of these categories. For a deep dive on the SPACE framework, check out The <a href="https://queue.acm.org/detail.cfm?id=3454124" target="_blank" rel="noopener noreferrer">SPACE of Developer Productivity</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-ahead">Looking ahead<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/improving-the-developer-experience-with-modern-dev-tools#looking-ahead" class="hash-link" aria-label="Direct link to Looking ahead" title="Direct link to Looking ahead">​</a></h2>
+<p>In the rest of this blog series, we dive deeper into how exactly Microsoft developer tools can improve DevEx, but for now, we’re sharing the highlights. With modern developer tools, like GitHub Enterprise, GitHub Copilot, and Visual Studio, firms can reimagine the way that their developers build software to remove friction and re-prioritize developer satisfaction, leading to happier developers and better business outcomes, as explored in our recent research: <a href="https://azure.microsoft.com/blog/quantifying-the-impact-of-developer-experience/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">The case for investing in DevEx</a>. To learn more about our perspective on DevEx, visit our <a href="https://developer.microsoft.com/developer-experience?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">developer experience web page</a>; and to see how our dev tools can improve every stage of the developer workflow, stay tuned for the rest of this blog series!</p>]]></content:encoded>
+            <category>Build-Intelligent-Apps</category>
+            <category>30-days-of-IA-2024</category>
+            <category>learn-live</category>
+            <category>demo-bytes</category>
+            <category>community-gallery</category>
+            <category>azure-kubernetes-service</category>
+            <category>azure-functions</category>
+            <category>azure-openai</category>
+            <category>azure-container-apps</category>
+            <category>azure-cosmos-db</category>
+            <category>github-copilot</category>
+            <category>github-codespaces</category>
+            <category>github-actions</category>
+        </item>
         <item>
             <title><![CDATA[2.5 Deploy with ACA]]></title>
             <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/deploy-with-aca</link>
@@ -2924,458 +3007,6 @@ Real-time performance monitoring.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="additional-resources">Additional resources<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-2#additional-resources" class="hash-link" aria-label="Direct link to Additional resources" title="Direct link to Additional resources">​</a></h3>
 <ul>
 <li><a href="https://developer.microsoft.com/reactor/series/S-1381/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Register for Demo Bytes</a>, a snackable playlist of demos designed to help you skill up on AI powered app development.</li>
-</ul>]]></content:encoded>
-            <category>Build-Intelligent-Apps</category>
-            <category>30-days-of-IA-2024</category>
-            <category>learn-live</category>
-            <category>demo-bytes</category>
-            <category>community-gallery</category>
-            <category>azure-kubernetes-service</category>
-            <category>azure-functions</category>
-            <category>azure-openai</category>
-            <category>azure-container-apps</category>
-            <category>azure-cosmos-db</category>
-            <category>github-copilot</category>
-            <category>github-codespaces</category>
-            <category>github-actions</category>
-        </item>
-        <item>
-            <title><![CDATA[1.2a Setting up your development environment Part 1]]></title>
-            <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1</link>
-            <guid>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1</guid>
-            <pubDate>Mon, 23 Sep 2024 09:00:00 GMT</pubDate>
-            <description><![CDATA[Learn what you need to set up and configure your development environment before we start to build our example generative AI app.]]></description>
-            <content:encoded><![CDATA[
-<p>Learn what you need to set up and configure your development environment before we start to build our example generative AI app.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-we-cover">What we cover:<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#what-we-cover" class="hash-link" aria-label="Direct link to What we cover:" title="Direct link to What we cover:">​</a></h3>
-<ul>
-<li>Installing required development tools and services on your local machine</li>
-<li>Configuring the Azure Cosmos DB that the back-end application uses</li>
-<li>Setting up the Azure Key Vault that will store application secrets</li>
-<li>Creating a Microsoft Entra ID app registration to enable Microsoft Account sign-in for our app</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
-<p>As we introduced in the previous post, this series walks you through building an example AI-powered content generation app for <strong>Best For You Organics Company</strong>. This app will help our fictitious company support a new skin-care product by generating a variety of marketing materials, including social media posts, blog articles, and email campaigns. Tailored specifically for the skin-care industry, the app will allow them to efficiently create and customize content for different platforms, enabling them to more effectively reach their target audience.</p>
-<p>In this blog, we take you through setting up your local development environment and configuring several essential services in the Azure portal. You install tools, such as Git, Java, and Node.js, and set up Azure resources, such as Azure Cosmos DB and Azure Key Vault.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="local-machine-setup">Local machine setup<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#local-machine-setup" class="hash-link" aria-label="Direct link to Local machine setup" title="Direct link to Local machine setup">​</a></h2>
-<p>Before diving into the Azure components, let’s ensure that your local development machine is equipped with all the tools you need to build the app.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-1-install-git">Step 1. Install Git.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-1-install-git" class="hash-link" aria-label="Direct link to Step 1. Install Git." title="Direct link to Step 1. Install Git.">​</a></h3>
-<p>Git is essential for version control and managing your project’s source code.</p>
-<ol>
-<li><strong>Download Git</strong>. Go to <a href="https://learn.microsoft.com/devops/develop/git/install-and-set-up-git?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Install and set up Git</a>, and download the installer for your operating system.</li>
-<li><strong>Installation</strong>. Run the installer. Unless you have specific preferences, use the default settings.</li>
-<li><strong>Verify installation</strong>. Open your terminal and run:</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   git --version</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-1-048444deb097be39c6d11b953478d08d.png" width="632" height="80" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-2-install-java-17-and-21">Step 2. Install Java (17 and 21).<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-2-install-java-17-and-21" class="hash-link" aria-label="Direct link to Step 2. Install Java (17 and 21)." title="Direct link to Step 2. Install Java (17 and 21).">​</a></h3>
-<p>Your Spring Boot back end requires both Java 17 and 21.</p>
-<ol>
-<li><strong>Download</strong>. Obtain both versions from <a href="https://learn.microsoft.com/java/openjdk/download?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Download the Microsoft Build of OpenJDK</a>.</li>
-<li><strong>Configure</strong>. You can manage multiple Java versions using update alternatives (Linux) or SDKMAN (for Linux/Mac). For Windows, use Java Development Kit (JDK) tools, like JDKTool.</li>
-<li><strong>Verify installation</strong>. Open your terminal and run:</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   java -version</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-2-844b0aee14de7c7b375872b3673d43f1.gif" width="780" height="59" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-3-install-the-azure-cli">Step 3. Install the Azure CLI.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-3-install-the-azure-cli" class="hash-link" aria-label="Direct link to Step 3. Install the Azure CLI." title="Direct link to Step 3. Install the Azure CLI.">​</a></h3>
-<p>The Azure CLI is essential for managing your Azure resources from the terminal.</p>
-<ol>
-<li><strong>Download the Azure CLI</strong>. Follow the instructions in <a href="https://learn.microsoft.com/cli/azure/install-azure-cli?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">How to install the Azure CLI</a>.</li>
-<li><strong>Sign in to Azure</strong>. After installing the Azure CLI, sign in. Open your terminal and run:</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az login</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-3-b9fae33fcb68738999da91ee9bed6fd2.png" width="1466" height="186" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-4-install-nodejs-and-set-up-react">Step 4. Install Node.js and set up React.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-4-install-nodejs-and-set-up-react" class="hash-link" aria-label="Direct link to Step 4. Install Node.js and set up React." title="Direct link to Step 4. Install Node.js and set up React.">​</a></h3>
-<p>We use Node.js for managing front-end dependencies and running the React development server.</p>
-<ol>
-<li><strong>Install Node.js</strong>. Go to <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">Node.js</a>, and download the appropriate version for your system.</li>
-<li><strong>Verify installation</strong>. Confirm that Node.js is correctly installed. Open your terminal and run:</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   node -v &amp;&amp; npm -v</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-4-8fe98e180875bdc258adf9648125457e.png" width="450" height="112" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-5-install-an-integrated-development-environment">Step 5. Install an integrated development environment.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-5-install-an-integrated-development-environment" class="hash-link" aria-label="Direct link to Step 5. Install an integrated development environment." title="Direct link to Step 5. Install an integrated development environment.">​</a></h3>
-<p>You can use your preferred integrated development environment (IDE), but we recommend <strong>Visual Studio Code</strong> and <strong>IntelliJ IDEA</strong> for Java and JavaScript development.</p>
-<ul>
-<li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Install Visual Studio Code</a>.<!-- -->
-<ul>
-<li>or</li>
-</ul>
-</li>
-<li><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener noreferrer">Install IntelliJ IDEA</a>.</li>
-</ul>
-<p>Both IDEs support Azure integrations through plugins for managing Azure resources and services.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="azure-setup">Azure setup<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#azure-setup" class="hash-link" aria-label="Direct link to Azure setup" title="Direct link to Azure setup">​</a></h2>
-<p>Now that your local environment is ready, let’s configure the Azure resources you need to build and run the app.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-1-set-up-azure-basics">Step 1. Set up Azure basics.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-1-set-up-azure-basics" class="hash-link" aria-label="Direct link to Step 1. Set up Azure basics." title="Direct link to Step 1. Set up Azure basics.">​</a></h3>
-<p>Before you start configuring resources, choose the Azure account you want to use. If you want to use the Azure CLI to configure Azure resources, perform a few configuration steps:</p>
-<ul>
-<li><strong>Create a new account—unless you already have one (optional)</strong>.<br>
-<!-- -->If you don’t have an existing Azure account that you want to use when creating Azure resources, create a new one. Go to the <a href="https://portal.azure.com/" target="_blank" rel="noopener noreferrer">Azure portal</a> and sign up. Choose the subscription plan that fits your business needs.</li>
-<li><strong>Configure the Azure CLI, if you want use it (optional)</strong>.<br>
-<!-- -->The steps throughout this series include instructions for using either the browser-based Azure portal or the command-line Azure CLI tool. If you want to use the Azure CLI but don’t already have it installed, follow these steps:<!-- -->
-<ul>
-<li>Follow the instructions provided at <a href="https://learn.microsoft.com/cli/azure/install-azure-cli?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Install Azure CLI</a>.</li>
-<li>Verify the installation. Open your terminal or command prompt and run:</li>
-</ul>
-</li>
-</ul>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">az --version</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-5-510b58ec9e02ce976aaade6a8b0b038f.png" width="1427" height="774" class="img_ev3q"></p>
-<p>After installing and verifying the Azure CLI, follow these steps to sign in, list your subscriptions, and select a subscription:</p>
-<ol>
-<li>Sign in to Azure. Run the following command:</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">az login</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>This opens a web browser for you to authenticate your Azure account. After successful authentication, the CLI automatically lists your subscriptions and asks you to select one by number.</p>
-<ol start="2">
-<li>
-<p>Select a subscription. After you sign in, a prompt is displayed.</p>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-6-a0977a4b4191be6f3d41d1cda55a6638.png" width="1431" height="433" class="img_ev3q"></p>
-</li>
-<li>
-<p>Type the number corresponding to the subscription you want to select, and press <code>Enter</code>. After you select the subscription, it is set as the default for your current session.</p>
-</li>
-</ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-2-create-azure-cosmos-db-resource-mongodb-api">Step 2. Create Azure Cosmos DB resource (MongoDB API).<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-2-create-azure-cosmos-db-resource-mongodb-api" class="hash-link" aria-label="Direct link to Step 2. Create Azure Cosmos DB resource (MongoDB API)." title="Direct link to Step 2. Create Azure Cosmos DB resource (MongoDB API).">​</a></h3>
-<p>Cosmos DB will serve as the database for storing your application data, such as customer information and product details.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="azure-portal-instructions">Azure portal instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#azure-portal-instructions" class="hash-link" aria-label="Direct link to Azure portal instructions" title="Direct link to Azure portal instructions">​</a></h4>
-<ol>
-<li>
-<p><strong>Go to the Azure Portal</strong> and search for <strong>"Cosmos DB"</strong>.</p>
-</li>
-<li>
-<p>Click on <strong>"Create"</strong> and select <strong>MongoDB API</strong>.</p>
-</li>
-<li>
-<p>You will see two options: <strong>Request unit (RU) database account</strong> and <strong>vCore cluster (Recommended)</strong>. Choose Request unit (RU) database account.</p>
-</li>
-<li>
-<p><strong>Configure the Request Units per second (RU/s)</strong> based on your application's scale (e.g., 400 RU/s as a starting point for small applications). The RU/s determines how many operations Cosmos DB can handle per second, so adjust it according to your expected load and usage.</p>
-</li>
-<li>
-<p>Proceed with the rest of the setup, such as specifying the <strong>resource group</strong>, <strong>region</strong>, and <strong>database name</strong>.</p>
-</li>
-<li>
-<p>Once the Cosmos DB account is created, you can add a <strong>database</strong> and <strong>collections</strong> to organize your data.</p>
-<p><img loading="lazy" alt="image of Cosmos DB setup in Azure Portal" src="https://azure.github.io/Cloud-Native/assets/images/2-1-7-7d2c3de853c014fc34c8fe66fc354399.png" width="1429" height="611" class="img_ev3q"></p>
-</li>
-</ol>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cli-instructions">CLI instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#cli-instructions" class="hash-link" aria-label="Direct link to CLI instructions" title="Direct link to CLI instructions">​</a></h4>
-<ol>
-<li>Create a resource group (if you don’t already have one) by running the following command:</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az group create --name &lt;resource-group-name&gt; --location &lt;location&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-8-a4b35aa02ad872e4bfaa0545a18c7a6e.png" width="1430" height="362" class="img_ev3q"></p>
-<ol start="2">
-<li>
-<p>Create an Azure Cosmos DB account with MongoDB API.</p>
-<p>Use the following command to create an Azure Cosmos DB account with the MongoDB API, and specify throughput in Request Units per second (RU/s):</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az cosmosdb create \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --name &lt;cosmos-account-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --resource-group &lt;resource-group-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --kind MongoDB \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --locations regionName=&lt;location&gt; failoverPriority=0 isZoneRedundant=False \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --default-consistency-level Eventual \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --enable-automatic-failover false</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<ol start="3">
-<li>
-<p>Create a MongoDB database with a specific throughput.</p>
-<p>After creating the Azure Cosmos DB account, create a MongoDB database and set the throughput (RU/s):</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az cosmosdb mongodb database create \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --account-name &lt;cosmos-account-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --name &lt;database-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --resource-group &lt;resource-group-name&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response" src="https://azure.github.io/Cloud-Native/assets/images/2-1-9-3c4a36a58afbdfe051718310d42ea395.png" width="1428" height="706" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-3-create-azure-storage-account">Step 3. Create Azure Storage account.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-3-create-azure-storage-account" class="hash-link" aria-label="Direct link to Step 3. Create Azure Storage account." title="Direct link to Step 3. Create Azure Storage account.">​</a></h3>
-<p>Our Azure Storage account is used to store any static files (for example, product brochures or images).</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="azure-portal-instructions-1">Azure portal instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#azure-portal-instructions-1" class="hash-link" aria-label="Direct link to Azure portal instructions" title="Direct link to Azure portal instructions">​</a></h4>
-<ol>
-<li>In the Azure portal, search for <strong>storage account</strong> and create a new one.</li>
-<li>Choose <strong>Blob Storage</strong> for storing documents and media.</li>
-<li>Complete the resource creation wizard, and select <strong>Create</strong> to deploy the storage account.</li>
-</ol>
-<p><img loading="lazy" alt="image of storage account in Azure Portal" src="https://azure.github.io/Cloud-Native/assets/images/2-1-10-99fba4ad9f6337728e5af417024978f9.png" width="1220" height="1430" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cli-instructions-1">CLI instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#cli-instructions-1" class="hash-link" aria-label="Direct link to CLI instructions" title="Direct link to CLI instructions">​</a></h4>
-<ol>
-<li>
-<p>Determine whether resource group exists (optional).</p>
-<p>Use the following command:</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az group show --name &lt;resource-group-name&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<ul>
-<li>If the resource group exists, it returns the details.</li>
-<li>If it doesn't exist, it throws an error.</li>
-</ul>
-<ol start="2">
-<li>
-<p>Create the resource group (optional).</p>
-<p>If the resource group doesn't exist, create it using the following command, replacing <code>&lt;resource-group-name&gt;</code> with your desired name for the resource group and <code>&lt;location&gt;</code> with the Azure region where you want to deploy the resource, (for example, eastus, westus):</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az group create --name &lt;resource-group-name&gt; --location &lt;location&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<ol start="3">
-<li>
-<p>Create the storage account.</p>
-<p>Use the following command to create the Azure Storage account, replacing <code>&lt;storage-account-name&gt;</code> with a globally unique name for your storage account; replacing <code>&lt;resource-group-name&gt;</code> with the name of the resource group you created or chose; and replacing <code>&lt;location&gt;</code> with the Azure region where you want to deploy the storage account (for example, eastus, westeurope):</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az storage account create \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --name &lt;storage-account-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --resource-group &lt;resource-group-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --location &lt;location&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --sku Standard_LRS \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --kind StorageV2</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response to creating the Azure Storage account" src="https://azure.github.io/Cloud-Native/assets/images/2-1-11-fbc6df7f2756d9af001768cd4b640cf7.png" width="1168" height="1430" class="img_ev3q"></p>
-<ol start="4">
-<li>
-<p>Verify storage account creation.</p>
-<p>To ensure that the storage account was created successfully, list all storage accounts in the resource group:</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az storage account list --resource-group &lt;resource-group-name&gt; --output table</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response to verify storage account creation" src="https://azure.github.io/Cloud-Native/assets/images/2-1-12-21fc7cdf14818baa9d90dfb9695915c2.png" width="1430" height="121" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-4-set-up-azure-key-vault">Step 4. Set up Azure Key Vault.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-4-set-up-azure-key-vault" class="hash-link" aria-label="Direct link to Step 4. Set up Azure Key Vault." title="Direct link to Step 4. Set up Azure Key Vault.">​</a></h3>
-<p>To securely store our secrets, like API keys and connection strings, we use Azure Key Vault.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="azure-portal-instructions-2">Azure portal instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#azure-portal-instructions-2" class="hash-link" aria-label="Direct link to Azure portal instructions" title="Direct link to Azure portal instructions">​</a></h4>
-<ol>
-<li>
-<p><strong>Create a key vault</strong>. In the portal, search for key vault and create one.</p>
-</li>
-<li>
-<p><strong>Register an application</strong>. In Microsoft Entra ID, register your application to grant it access to the key vault.</p>
-</li>
-<li>
-<p><strong>Assign managed identity</strong>. Enable Managed Identity to allow secure access from your application.</p>
-</li>
-<li>
-<p>Complete the resource creation wizard, and select <strong>Create</strong> to deploy the key vault.</p>
-<p><img loading="lazy" alt="image of key vault in Azure Portal" src="https://azure.github.io/Cloud-Native/assets/images/2-1-13-ca66bc299cc9eea06151841a5ac9911b.png" width="1220" height="1430" class="img_ev3q"></p>
-</li>
-</ol>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cli-instructions-2">CLI instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#cli-instructions-2" class="hash-link" aria-label="Direct link to CLI instructions" title="Direct link to CLI instructions">​</a></h4>
-<ol>
-<li>
-<p>Create a resource group (optional).</p>
-<p>If you need to create a resource group (like we did in the Azure Cosmos DB steps), use the following command, replacing <code>&lt;resource-group-name&gt;</code> with your desired name and <code>&lt;location&gt;</code> with the region (for example, eastus, westeurope):</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az group create --name &lt;resource-group-name&gt; --location &lt;location&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<ol start="2">
-<li>
-<p>Create the Azure key vault.</p>
-<p>Now, use the following command to create the Azure key vault, replacing <code>&lt;key-vault-name&gt;</code> with a globally unique name for the key vault; replacing <code>&lt;resource-group-name&gt;</code> with the name of the resource group created or selected in the previous step; and replacing <code>&lt;location&gt;</code> with your preferred Azure region. Note that “--sku standard” is a common pricing tier. You can also use premium if you need additional features like Hardware Security Module (HSM) support.</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az keyvault create \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --name &lt;key-vault-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --resource-group &lt;resource-group-name&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --location &lt;location&gt; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     --sku standard</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response to creating the Azure key vault" src="https://azure.github.io/Cloud-Native/assets/images/2-1-14-37bfb963d64160ec3d02561a34758ac0.png" width="1431" height="885" class="img_ev3q"></p>
-<ol start="3">
-<li>
-<p>Verify key vault creation.</p>
-<p>To verify that the key vault was created, you can list all key vaults in the specified resource group:</p>
-</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   az keyvault list --resource-group &lt;resource-group-name&gt; --output table</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response to verifying key vault creation" src="https://azure.github.io/Cloud-Native/assets/images/2-1-15-5ded1bce3065b8243875b17351754a8c.png" width="1266" height="146" class="img_ev3q"></p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Join the next snackable AI Demo Bytes to explore how to <a href="https://aka.ms/demo-bytes/ep5?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">add generative AI capabilities to your web apps</a>.</p></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-5-use-microsoft-entra-id-to-create-an-app-registration-for-microsoft-account-sign-in">Step 5. Use Microsoft Entra ID to create an app registration for Microsoft account sign-in.<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#step-5-use-microsoft-entra-id-to-create-an-app-registration-for-microsoft-account-sign-in" class="hash-link" aria-label="Direct link to Step 5. Use Microsoft Entra ID to create an app registration for Microsoft account sign-in." title="Direct link to Step 5. Use Microsoft Entra ID to create an app registration for Microsoft account sign-in.">​</a></h3>
-<p>To support multi-user access, including sign-in from any Microsoft account, register your application in Microsoft Entra ID.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="azure-portal-instructions-3">Azure portal instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#azure-portal-instructions-3" class="hash-link" aria-label="Direct link to Azure portal instructions" title="Direct link to Azure portal instructions">​</a></h4>
-<ol>
-<li>
-<p>Navigate to Microsoft Entra ID.</p>
-<ul>
-<li>In the Azure portal, search for <strong>Microsoft Entra ID</strong>, and select <strong>Manage → App registrations</strong>.</li>
-</ul>
-</li>
-<li>
-<p>Register a new application.</p>
-<ol>
-<li>Select <strong>New registration</strong>.</li>
-<li><strong>Name</strong>. Enter a name for your application (for example, <strong>ContentGenApp</strong>).</li>
-<li><strong>Supported account types</strong>. Select <strong>Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)</strong>.</li>
-<li><strong>Redirect URI</strong>. Set this to the front end's callback URL.<!-- -->
-<ul>
-<li>For local development (React app running locally), use <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">http://localhost:3000</a>.</li>
-<li>For production (when deployed on <a href="https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service (AKS)</a> or <a href="https://learn.microsoft.com/azure/app-service/overview/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure App Service</a>), add the URL for the App Service or AKS deployment you plan to create for this app (We’ll create these in our next post). For example, <a href="https://your-app.azurewebsites.net/" target="_blank" rel="noopener noreferrer">https://your-app.azurewebsites.net</a> for App Service or <a href="https://your-aks-domain.com/" target="_blank" rel="noopener noreferrer">https://your-aks-domain.com</a> for AKS.</li>
-<li>If you plan to use a custom domain for your application, add that domain here (for example, <a href="https://your-custom-domain.com/" target="_blank" rel="noopener noreferrer">https://your-custom-domain.com</a>).</li>
-</ul>
-</li>
-</ol>
-<p><strong>Important</strong>: Ensure that all potential URLs (local, deployed, and custom domain) are listed as redirect URIs.</p>
-<p><img loading="lazy" alt="image of application registration in Microsoft Entra ID" src="https://azure.github.io/Cloud-Native/assets/images/2-1-16-6e8e9cf28830c64437f9e97a82e70227.png" width="1428" height="715" class="img_ev3q"></p>
-</li>
-<li>
-<p>Configure API permissions.</p>
-<ol>
-<li>Go to the <strong>API permissions</strong> tab, and select <strong>Add a permission</strong>.</li>
-<li>Choose <strong>Microsoft Graph → Delegated permissions</strong>, and then select the following permissions:<!-- -->
-<ul>
-<li><strong>User.Read</strong>. Allows users to sign in and read their profile.</li>
-</ul>
-</li>
-<li><strong>Grant admin consent</strong>. After permissions are added, select <strong>Grant admin consent</strong> for your organization.</li>
-</ol>
-<p><img loading="lazy" alt="image of API permissions configuration" src="https://azure.github.io/Cloud-Native/assets/images/2-1-17-7accd8db654dd286ed22b6647e9f06fd.png" width="1430" height="665" class="img_ev3q"></p>
-</li>
-<li>
-<p>Configure authentication settings.</p>
-<ol>
-<li>Go to the <strong>Authentication</strong> tab, and add your <strong>redirect URIs</strong> (both local and production URLs).</li>
-<li>Enable <strong>ID tokens</strong> to authenticate users.</li>
-</ol>
-<p><img loading="lazy" alt="image in Azure Portal of authentication settings configuration" src="https://azure.github.io/Cloud-Native/assets/images/2-1-18-c77fd44d51fe8ad01af17c233066715b.png" width="1429" height="873" class="img_ev3q"></p>
-</li>
-</ol>
-<p>This revision integrates <strong>Microsoft Entra ID</strong> and highlights the navigation flow for app registration through the <strong>Manage</strong> section. It also ensures that you're set up for both local development and production environments using <strong>AKS</strong>, <strong>App Service</strong>, or a <strong>custom domain</strong>.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cli-instructions-3">CLI instructions<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#cli-instructions-3" class="hash-link" aria-label="Direct link to CLI instructions" title="Direct link to CLI instructions">​</a></h4>
-<p>You’ll use the following script when performing these instructions.</p>
-<p>Shell script: <code>create-azure-ad-app.sh</code></p>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">#!/bin/bash</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Function to display help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">function display_help() {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "Usage: $0 --name &lt;App Name&gt; --redirect-uris &lt;Redirect URI 1&gt; &lt;Redirect URI 2&gt; ... [options]"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "Options:"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "  --name              The display name of the Azure AD App."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "  --redirect-uris     Space-separated list of redirect URIs to configure."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "  --help              Display this help message and exit."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  exit 0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Function to check if the user is logged in</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">function check_azure_login() {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "Checking Azure CLI login status..."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  az account show &amp;&gt; /dev/null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  if [ $? -ne 0 ]; then</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    echo "You are not logged in. Logging in now..."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    az login</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    if [ $? -ne 0 ]; then</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      echo "Azure login failed. Exiting script."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      exit 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    fi</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  else</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    echo "You are already logged in."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  fi</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Parse command line arguments</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">APP_NAME=""</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">REDIRECT_URIS=()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">while [[ $# -gt 0 ]]; do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  case "$1" in</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --name)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      APP_NAME="$2"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      shift 2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      ;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --redirect-uris)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      shift</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      while [[ $# -gt 0 &amp;&amp; ! "$1" =~ ^-- ]]; do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        REDIRECT_URIS+=("$1")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        shift</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      done</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      ;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --help)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      display_help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      ;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    *)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      echo "Unknown option: $1"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      display_help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      ;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  esac</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Ensure required arguments are provided</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">if [[ -z "$APP_NAME" || ${#REDIRECT_URIS[@]} -eq 0 ]]; then</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "Error: Both --name and --redirect-uris are required."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  display_help</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">fi</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Step 0: Check if logged in</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">check_azure_login</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">API_PERMISSION="e1fe6dd8-ba31-4d61-89e7-88639da4683d"  # User.Read permission ID</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">GRAPH_API="00000003-0000-0000-c000-000000000000"        # Microsoft Graph API ID</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SIGN_IN_AUDIENCE="AzureADandPersonalMicrosoftAccount"    # Supported account types</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Define the required resource accesses in JSON format</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">REQUIRED_RESOURCE_ACCESS=$(cat &lt;&lt;EOF</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    "resourceAppId": "$GRAPH_API",</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    "resourceAccess": [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        "id": "$API_PERMISSION",</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        "type": "Scope"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">EOF</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Step 1: Check if the app already exists</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">APP_ID=$(az ad app list --filter "displayName eq '$APP_NAME'" --query "[0].appId" -o tsv)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">if [ -z "$APP_ID" ]; then</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "App doesn't exist. Creating the app registration..."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  # Step 2: Create the app registration</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  APP_ID=$(az ad app create \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --display-name "$APP_NAME" \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --required-resource-accesses "$REQUIRED_RESOURCE_ACCESS" \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --web-redirect-uris "${REDIRECT_URIS[@]}" \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --enable-id-token-issuance true \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --enable-access-token-issuance true \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --sign-in-audience "$SIGN_IN_AUDIENCE" \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --query appId -o tsv)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  if [ -z "$APP_ID" ]; then</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    echo "App creation failed. Exiting script."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    exit 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  fi</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "App created with ID: $APP_ID"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">else</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "App already exists with ID: $APP_ID. Updating the redirect URIs..."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  # Step 3: Update the redirect URIs</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  az ad app update --id "$APP_ID" \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    --web-redirect-uris "${REDIRECT_URIS[@]}"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  if [ $? -ne 0 ]; then</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    echo "Failed to update redirect URIs. Exiting script."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    exit 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  fi</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo "Redirect URIs updated for app ID: $APP_ID"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">fi</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Display the app details</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">echo "Here are the details of the app:"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">az ad app show --id "$APP_ID"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>Run the script:</p>
-<ol>
-<li>Save the script. Save the preceding script as create-azure-ad-app.sh.</li>
-<li>Make the script executable:</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">chmod +x create-azure-ad-app.sh</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<ol start="3">
-<li>Run the script.</li>
-</ol>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">./create-azure-ad-app.sh --name &lt;YOUR_APP_NAME&gt; --redirect-uris http://localhost:3000 https://your-custom-domain.com</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p><img loading="lazy" alt="image of terminal response after running the script" src="https://azure.github.io/Cloud-Native/assets/images/2-1-19-02526725c7fe24438aed574901ff5ea8.png" width="1429" height="378" class="img_ev3q"></p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Join live experts to dive into <a href="https://aka.ms/learn-live/ep3?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">operational excellence with AKS</a></p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
-<p>In this blog, we’ve covered setting up your local development environment and creating the Azure-based database, storage, and secret management services you’ll use when running an AI powered content generation sample application in Java. However, there’s still one critical piece of infrastructure to provision before you can start building and deploying the app.</p>
-<p>In the next blog, we’ll cover how to set up and configure <a href="https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure OpenAI Service</a> to power this sample app.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-resources">Additional resources<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/setting-up-your-development-environment-1#additional-resources" class="hash-link" aria-label="Direct link to Additional resources" title="Direct link to Additional resources">​</a></h2>
-<ul>
-<li><a href="https://developer.microsoft.com/reactor/series/S-1381/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Register for Demo Bytes</a>, a snackable playlist of demos designed to help you skill up on AI powered app development.</li>
-</ul>]]></content:encoded>
-            <category>Build-Intelligent-Apps</category>
-            <category>30-days-of-IA-2024</category>
-            <category>learn-live</category>
-            <category>demo-bytes</category>
-            <category>community-gallery</category>
-            <category>azure-kubernetes-service</category>
-            <category>azure-functions</category>
-            <category>azure-openai</category>
-            <category>azure-container-apps</category>
-            <category>azure-cosmos-db</category>
-            <category>github-copilot</category>
-            <category>github-codespaces</category>
-            <category>github-actions</category>
-        </item>
-        <item>
-            <title><![CDATA[1.1 Use Generative AI to build intelligent apps]]></title>
-            <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps</link>
-            <guid>https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps</guid>
-            <pubDate>Thu, 19 Sep 2024 09:00:00 GMT</pubDate>
-            <description><![CDATA[Combine the power of AI, cloud-scale data, and cloud-native app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure.]]></description>
-            <content:encoded><![CDATA[
-<p>In this blog series, discover how you can use Azure services to take advantage of generative AI capabilities to build an intelligent application.  </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-well-cover">What We’ll Cover<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#what-well-cover" class="hash-link" aria-label="Direct link to What We’ll Cover" title="Direct link to What We’ll Cover">​</a></h2>
-<ul>
-<li>Why generative AI?</li>
-<li>A high-level overview of our example scenario</li>
-<li>An overview of the deployment options </li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-generative-ai">Why generative AI?<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#why-generative-ai" class="hash-link" aria-label="Direct link to Why generative AI?" title="Direct link to Why generative AI?">​</a></h2>
-<p>Unlike traditional AI systems that follow predefined rules, generative AI models use deep learning techniques to generate outputs such as text, images, music, and even code in a way that mimics human creativity. If you’re reading this, you’re likely interested in how you can harness these capabilities to build new and innovative solutions for your organization or your customers. But what benefits does this new technology bring, and when would you use it? </p>
-<p>For businesses, one of the main benefits of generative AI is enhanced productivity. By automating tasks such as content creation, customer service responses, and data analysis, you can significantly reduce tasks that your teams previously had to do manually, and this automation can result in radically increased efficiency. Marketing teams, for instance, can use generative AI to draft personalized content or generate ideas for campaigns, accelerating time to market. Similarly, customer support teams can make the most of AI-powered chatbots that provide accurate responses based on large datasets, supporting faster and more consistent handling of customer requests or issues. </p>
-<p>In addition to the productivity benefits, intelligent apps built by using generative AI can scale to meet the needs of growing businesses, allowing these businesses to meet increased demand for personalized solutions and messaging. AI helps your business to do this without sacrificing quality or capabilities. </p>
-<p>In this series, we show you how you can combine multiple Azure products and services to effectively build an example generative AI application that supports marketing teams. </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-example-application">The example application<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#the-example-application" class="hash-link" aria-label="Direct link to The example application" title="Direct link to The example application">​</a></h2>
-<p>In our example scenario, we’re building a solution for the <strong>Best For You Organics Company</strong>, which is releasing an innovative, new skin-care product designed to enhance natural beauty and promote skin health. In a competitive market, it’s crucial for marketing efforts to create engaging content that captures the attention of potential customers and aids the marketing team in market penetration. </p>
-<p>Through this blog series, you can learn to use Azure services to build an application that supports the Best For You Organics Company marketing team, making the most of the capabilities of Azure to create exceptional customer experiences and generate engaging marketing content.  </p>
-<p>Our solution generates the following types of content to assist the marketing team: </p>
-<ul>
-<li>
-<p><strong>Social media posts</strong>. Announcements, product highlights, customer testimonials, and promotional offers, with the hashtags #Skincare #NaturalBeauty #BestForYouOrganics </p>
-</li>
-<li>
-<p><strong>Blog articles</strong>. In-depth articles on skin-care tips, the benefits of natural ingredients, and product usage guides </p>
-</li>
-<li>
-<p><strong>Email content</strong>. Product launches, exclusive offers, skin-care routines, and collateral </p>
-</li>
-</ul>
-<p>The application is built using a three-part architecture consisting of a <strong>back end</strong>, <strong>middleware</strong>, and <strong>front end</strong>, deployed on either <strong>Azure Kubernetes Service (AKS)</strong> or <strong>Azure App Service</strong>. This architecture forms the foundation for integrating modern cloud and AI technologies, which is our focus throughout this case study. </p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ai-and-net">AI and .Net<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#ai-and-net" class="hash-link" aria-label="Direct link to AI and .Net" title="Direct link to AI and .Net">​</a></h3><p>In this series, we’ll walk through the basics of building a Java based content generation application. However, if you’re also interested in building intelligent apps using .Net, you can learn more from the following resources: </p><ul>
-<li><a href="https://learn.microsoft.com/dotnet/ai?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">AI for .NET Developers | Microsoft Learn</a> </li>
-<li><a href="https://devblogs.microsoft.com/dotnet/build-gen-ai-with-dotnet-8/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Building Generative AI apps with .NET 8 | .Net Blog</a></li>
-<li><a href="https://learn.microsoft.com/training/paths/develop-ai-solutions-azure-openai/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Develop Generative AI solutions with Azure OpenAI Service - Training | Microsoft Learn</a></li>
-<li><a href="https://learn.microsoft.com/collections/qp6xfmodr6q6px?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Dive deeper into .NET + AI collection | Microsoft Learn</a></li>
-<li><a href="https://learn.microsoft.com/training/paths/develop-ai-agents-azure-open-ai-semantic-kernel-sdk/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Develop AI agents using Azure OpenAI and the Semantic Kernel SDK - Training | Microsoft Learn</a></li>
-<li><a href="https://devblogs.microsoft.com/dotnet/add-ai-to-your-dotnet-apps-easily-with-prompty/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Add AI to Your .NET Apps Easily with Prompty | .Net Blog</a>  </li>
-<li><a href="https://devblogs.microsoft.com/dotnet/using-phi3-csharp-with-onnx-for-text-and-vision-samples-md/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Using Phi-3 &amp; C# with ONNX for text and vision samples | .Net Blog</a>  </li>
-<li><a href="https://github.com/dotnet/ai-samples" target="_blank" rel="noopener noreferrer">AI Samples for .NET | GitHub</a> </li>
-<li><a href="https://github.com/Azure-Samples/azure-search-openai-demo-csharp" target="_blank" rel="noopener noreferrer">Azure Samples: ChatGPT + Enterprise data with Azure OpenAI and Azure AI Search (.NET) | GitHub</a>  </li>
-<li><a href="https://www.youtube.com/playlist?list=PLdo4fOcmZ0oX0Hrq9KqhQfZNAcDF5VPNt" target="_blank" rel="noopener noreferrer">.NET AI Community Standup playlist | YouTube</a> </li>
-</ul></div></div>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="application-flow">Application flow<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#application-flow" class="hash-link" aria-label="Direct link to Application flow" title="Direct link to Application flow">​</a></h4>
-<p>The content generation process in the application is simple yet powerful. Here's how the flow works, from the user's perspective: </p>
-<ol>
-<li>
-<p><strong>User input</strong>. The user provides details, such as the type of content they need—whether it's an email campaign, social media post, or blog article (steps 1-4 in the diagram below). </p>
-</li>
-<li>
-<p><strong>Back-end processing</strong>. The system retrieves necessary data, such as customer demographics, product details, and relevant information stored in the back end (steps 5-6 in the diagram). </p>
-</li>
-<li>
-<p><strong>Content generation</strong>. The <strong>middleware</strong> communicates with <strong>Azure OpenAI Service</strong> to generate content based on the provided input and back-end data, helping to ensure that the content is contextually relevant (steps 7-9 in the diagram). </p>
-</li>
-<li>
-<p><strong>Result display</strong>. The generated content is then displayed on the <strong>ReactJS front end</strong>, where the user can review, copy, and implement it directly into their marketing campaigns (step 10 in diagram). </p>
-</li>
-</ol>
-<p>Let’s now look at the data flow for this application flow to understand how Azure OpenAI can be used in a Retrieval-Augmented Generation (RAG) architecture pattern. </p>
-<p><img loading="lazy" alt="diagram of data flow for this application" src="https://azure.github.io/Cloud-Native/assets/images/1-1-f596e2e96666cf16edac7b8f5642897f.png" width="1600" height="669" class="img_ev3q"></p>
-<p>This flow allows for fast and efficient content creation while tailoring the output to specific campaign needs, all powered by AI. </p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="github-repository">GitHub repository<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#github-repository" class="hash-link" aria-label="Direct link to GitHub repository" title="Direct link to GitHub repository">​</a></h4>
-<p>The project’s full source code can be found in the <a href="https://github.com/Azure-Samples/Java-AI-Based-Content-Generator" target="_blank" rel="noopener noreferrer">GitHub repository for the Java AI-based content generator</a>.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="technologies-used">Technologies used <a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#technologies-used" class="hash-link" aria-label="Direct link to Technologies used " title="Direct link to Technologies used ">​</a></h4>
-<p>Our application makes the most of several cutting-edge technologies, each serving a critical role in the system: 
- </p>
-<ul>
-<li><a href="https://learn.microsoft.com/azure/ai-services/openai/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure OpenAI Service</a>. At the core of content generation is Azure OpenAI, which uses GPT models to create coherent and relevant content based on user input. The Chat Completion API (GPT-4o) generates the text, while the embedding model helps ensure that data retrieved for content is semantically relevant to the user's needs. </li>
-<li><a href="https://learn.microsoft.com/azure/key-vault/general/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Key Vault</a>. For secure storage of secrets such as API keys, credentials, and sensitive configuration data, Key Vault is integrated into the system. This helps ensure that all sensitive data is stored securely and retrieved only when needed. </li>
-<li><a href="https://learn.microsoft.com/entra/fundamentals/whatis?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Microsoft Entra ID</a> (formerly Azure Active Directory). Microsoft Entra ID is used for authentication and identity management, supporting secure access to the back end and to APIs. It helps effectively manage user roles and access permissions. </li>
-<li><a href="https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Managed identity</a>. The application uses managed identity to securely access Azure resources without hard-coding credentials. This simplifies the authentication process when interacting with services like Key Vault and Azure Cosmos DB. </li>
-<li><a href="https://learn.microsoft.com/azure/app-service/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure App Service</a> and <a href="https://learn.microsoft.com/azure/aks/what-is-aks?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service (AKS)</a>.The application supports two deployment models: App Service and AKS. Both provide scalable infrastructure but differ in flexibility and complexity (more on this in the "<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#choosing-the-right-deployment-technology-for-you">Choosing the right deployment technology</a> for you" section). </li>
-<li><a href="https://learn.microsoft.com/azure/api-management/api-management-key-concepts?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Azure API Management</a>. API Management manages the API gateway, controlling access between the front end, middleware, and back end. With features like Cross-Origin Resource Sharing (CORS), throttling, rate limiting, and authentication, API Management supports efficient communication and security across the system.</li>
-</ul>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Learn more on Technical leaders’ <a href="https://aka.ms/AAI_TDMApps_Plan?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">guide to building intelligent apps</a>.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="choosing-the-right-deployment-technology-for-you">Choosing the right deployment technology for you<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#choosing-the-right-deployment-technology-for-you" class="hash-link" aria-label="Direct link to Choosing the right deployment technology for you" title="Direct link to Choosing the right deployment technology for you">​</a></h2>
-<p>The application can be deployed by using either <strong>Azure App Service</strong> or <strong>Azure Kubernetes Service (AKS)</strong>, depending on your business needs. Both options provide advantages, but the choice often depends on the application’s complexity and scale.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="azure-app-service">Azure App Service<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#azure-app-service" class="hash-link" aria-label="Direct link to Azure App Service" title="Direct link to Azure App Service">​</a></h4>
-<ul>
-<li>
-<p><strong>Simplicity</strong>. App Service is a fully managed platform as a service (PaaS) that abstracts the underlying infrastructure. This allows for quick deployments with less overhead. </p>
-</li>
-<li>
-<p><strong>Cost-effective</strong>. For small to medium-sized applications, App Service can reduce operational costs by automating much of the infrastructure management. </p>
-</li>
-<li>
-<p><strong>Use case</strong>. The service is ideal for businesses looking for rapid deployment without the need for extensive control over infrastructure. It works well for straightforward applications with predictable workloads.</p>
-</li>
-</ul>
-<p><img loading="lazy" alt="architecture diagram using Azure App Service" src="https://azure.github.io/Cloud-Native/assets/images/1-2-e76f7ae3000b3f590bf463dc3ce73d41.png" width="1280" height="720" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="azure-kubernetes-service-aks">Azure Kubernetes Service (AKS)<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#azure-kubernetes-service-aks" class="hash-link" aria-label="Direct link to Azure Kubernetes Service (AKS)" title="Direct link to Azure Kubernetes Service (AKS)">​</a></h4>
-<ul>
-<li>
-<p><strong>Flexibility</strong>. AKS offers more control over infrastructure, allowing for fine-tuned customization of containerized microservices. </p>
-</li>
-<li>
-<p><strong>Scalability</strong>. The service is ideal for applications with large-scale operations or high customization requirements. It allows for horizontal scaling and integration with multiple cloud-native tools. </p>
-</li>
-<li>
-<p><strong>Use case</strong>. AKS is best suited for enterprise-level applications or businesses requiring multi-container orchestration and complex workloads.</p>
-</li>
-</ul>
-<p><img loading="lazy" alt="architecture diagram using Azure Kubernetes Service" src="https://azure.github.io/Cloud-Native/assets/images/1-3-4ccdafe5c7e81ea5693a0943648dafef.png" width="1280" height="720" class="img_ev3q"></p>
-<p>Both options are scalable and robust, and businesses can select the one that aligns best with their operational needs and scale of application. </p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
-<p>In today’s post, we introduced you to the example app that we’ll build in this series—the Best For You Organics content generation app. We discussed our goals, overall approach, and the architecture that we’re using to create this app.</p>
-<p>In our next post, we cover the <strong>environment you’ll set up</strong> to prepare for the development of the application. Learn how to configure your local environment; set up Java, Spring Boot, and ReactJS; and integrate with Azure services, like Azure OpenAI, Key Vault, and more.</p>
-<p>Each subsequent post will dive deeper into the specific technologies that power this AI-driven application. Stay tuned as we explore everything from back-end data management to deploying on AKS or App Service.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-resources">Additional resources<a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/use-generative-ai-to-build-intelligent-apps#additional-resources" class="hash-link" aria-label="Direct link to Additional resources" title="Direct link to Additional resources">​</a></h2>
-<ul>
-<li>
-<p>To help you build the skills you need to create intelligent apps by using Azure OpenAI, complete the <a href="https://learn.microsoft.com/training/modules/get-started-openai/?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Get started with Azure OpenAI Service</a> module. </p>
-</li>
-<li>
-<p>Register for live learning or a demo playlist on <a href="https://aka.ms/bia/events?ocid=biafy25h1_30daysofia_webpage_azuremktg" target="_blank" rel="noopener noreferrer">Build Intelligent Apps</a> on Azure.</p>
-</li>
 </ul>]]></content:encoded>
             <category>Build-Intelligent-Apps</category>
             <category>30-days-of-IA-2024</category>
