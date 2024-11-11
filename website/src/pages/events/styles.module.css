@@ -1,5 +1,6 @@
 :root {
     --link: #002948!important;
+    --ifm-card-background-color: #f4f3f5;
   }
   [data-theme='dark'] {
     --link: #b3daf0!important;
@@ -42,6 +43,15 @@
   display: inline-block;
 }
 
+.card {
+  height:100%;
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
+  transition: box-shadow 200ms ease-in-out;
+  font-weight: 400;
+  border-radius: 1.5rem;
+  background-color: var(--ifm-card-background-color);
+}
+
 
 .card-body {
     display: flex;
@@ -57,6 +67,7 @@
     align-self: flex-start; /* Aligns the link at the bottom left */
     margin-top: auto; /* Pushes the link to the bottom of the container */
     color: var(--link)!important;
+    font-size: .875rem;
   }
 
   a.card-link {

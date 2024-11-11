@@ -40,9 +40,9 @@ function CampaignHeader() {
             <p>
             Join us at the inaugural KubeCon India 2024 in Delhi, from 11-12 December, where Microsoft Azure will be a Gold Sponsor. Discover how Azure is leading the way in Kubernetes and intelligent applications.
             </p>
-            <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth #TBD</p>
+            {/* <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth #TBD</p> */}
           </div>
-          <div className="col col--6">
+          {/* <div className="col col--6">
             <div style={videoResponsiveStyle}>
               <iframe
                 style={iframeStyle}
@@ -54,7 +54,7 @@ function CampaignHeader() {
                 allowFullScreen
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
@@ -137,38 +137,51 @@ function Sessions() {
                 </div>
             </div> */}
           <div className="row margin-top--lg">
-            <div className="col col--6">
+            {/* <div className="col col--6">
               <div style={{marginBottom: "1rem"}} className='glass-border-kubecon'>
                 <img src="/Cloud-Native/img/Azure-3D-Illustrations-Migration-Dark.jpg" alt="" role="presentation" style={{borderRadius: "1.5rem"}}/>
               </div>
-            </div>
-            <div className="col col--6" style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'center' }}>
+            </div> */}
+            <div className="col col--8 col--offset-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <h2 className={styles['gradient-header']}>Azure Days with Kubernetes</h2>
-              <p>Azure Days with Kubernetes are in-person events tailored for developers, IT professionals, and decision-makers eager to harness the power of AKS for their cloud-native and intelligent applications. Whether you're starting with Kubernetes or seeking to refine your AKS deployments, we have sessions to provide valuable insights and actionable knowledge for your cloud journey.</p>
-              <a className="button button--primary button--lg" href="#" target='_blank'>
+              <p style={{textAlign: 'center'}}>Azure Days with Kubernetes are in-person events tailored for developers, IT professionals, and decision-makers eager to harness the power of AKS for their cloud-native and intelligent applications. Whether you're starting with Kubernetes or seeking to refine your AKS deployments, we have sessions to provide valuable insights and actionable knowledge for your cloud journey.</p>
+              <p>Three distinct events are planned over two days:</p>
+              {/* <a className="button button--primary button--lg" href="#" target='_blank'>
               Register now
-                </a>
+                </a> */}
             </div>
           </div>
           <div className="row">
-          <div className="row">
-            <div className="col col--8">
-              
-                  <div className="text--left">
-                    <h3>Hands-On Labs</h3>
-                    <p>Roll up your sleeves and dive into Azure Kubernetes Service with our hands-on labs. Participants can choose from a variety of labs, including introductory, advanced, as well as developer and platform focused.</p>
-                    <a className="button button--primary button--lg" href="https://azureday.eventbuilder.com/event/87493?source=AKSDayIndia" target='_blank'>
-              Register now
-                </a>
-                  </div>
+          <div className={clsx('col col--4 card-col')}>
 
+            <div className="card">
+              <div className="card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                <div className="text--left">
+                  <h3>Hands-On Labs</h3>
+                  <p>Roll up your sleeves and dive into Azure Kubernetes Service with our hands-on labs. Participants can choose from a variety of labs, including introductory, advanced, as well as developer and platform focused.</p>
+                </div>
+                <div>
+                  <a
+                  href="https://azureday.eventbuilder.com/event/87493?source=AKSDayIndia"
+                  className={styles['card-link']}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                      Register
+                  </a>
+                </div>
+              </div>
             </div>
-  
-            <div className="col col--8 margin-top--lg">
 
-                  <div className="text--left">
-                    <h3>Developer & Digital Native Track</h3>
-                    <p>The developer track will provide a strategic overview of AKS for developers, ISVs, and Digital Natives including topics such as:</p>
+          </div>
+
+          <div className={clsx('col col--4 card-col')}>
+
+            <div className="card">
+              <div className="card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                <div className="text--left">
+                  <h3>Developer & Digital Native Track</h3>
+                  <p>The developer track will provide a strategic overview of AKS for developers, ISVs, and Digital Natives including topics such as:</p>
                     <ul>
                       <li>Getting started quickly & driving productivity with AKS Automatic</li>
                       <li>Building intelligent applications with AKS</li>
@@ -176,16 +189,29 @@ function Sessions() {
                       <li>Implementing a secure supply chain & securely accessing resources from your applications</li>
                       <li>Developing stateful applications in Kubernetes</li>
                     </ul>
-                    <a className="button button--primary button--lg" href="https://azureday.eventbuilder.com/event/87494?source=AKSDayIndia" target='_blank'>
-              Register now
-                </a>
-                  </div>
+                </div>
+                <div>
+                  <a
+                  href="https://azureday.eventbuilder.com/event/87494?source=AKSDayIndia"
+                  className={styles['card-link']}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                      Register
+                  </a>
+                </div>
+              </div>
             </div>
-  
-            <div className="col col--8 margin-top--lg">
-                  <div className="text--left">
-                    <h3>Platform & Operators Track</h3>
-                    <p>The operator track will provide a strategic overview of AKS for platform engineers and operators, including topics such as:</p>
+
+          </div>
+
+          <div className={clsx('col col--4 card-col')}>
+
+            <div className="card">
+              <div className="card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                <div className="text--left">
+                  <h3>Platform & Operators Track</h3>
+                  <p>The operator track will provide a strategic overview of AKS for platform engineers and operators, including topics such as:</p>
                     <ul>
                       <li>Upgrades, business continuity & resiliency</li>
                       <li>Securing your clusters</li>
@@ -194,12 +220,22 @@ function Sessions() {
                       <li>Managing distributed fleets of clusters</li>
                       <li>Making AKS your most cost-efficient platform</li>
                     </ul>
-                    <a className="button button--primary button--lg" href="https://azureday.eventbuilder.com/event/87495?source=AKSDayIndia" target='_blank'>
-              Register now
-                </a>
-                  </div>
                 </div>
+                <div>
+                  <a
+                  href="https://azureday.eventbuilder.com/event/87495?source=AKSDayIndia"
+                  className={styles['card-link']}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                      Register
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
+  
           </div>
           <div className='text--center margin-top--lg'>
             <h2 className={styles['gradient-header']}>Learn from Microsoft Experts</h2>
@@ -209,7 +245,7 @@ function Sessions() {
           </div>
           {/* <h3 style={{textTransform:'uppercase'}} className='margin-top--md'>Featured Breakout Sessions</h3>
           <p>Some featured sessions include:</p> */}
-          <div className="row" style={{ paddingBottom: '1rem' }}>
+          <div className="row">
             {ContentItemsA.map((props, idx) => (
               <ContentItem key={idx} {...props} />
             ))}
@@ -234,7 +270,7 @@ function Sessions() {
           <div className="card">
             <div className="card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
               <div className="text--left">
-                <h4>{session}</h4>
+                <h3>{session}</h3>
                 <p>{presenter}</p>
                 <p>{description}</p>
                 </div>
@@ -244,8 +280,6 @@ function Sessions() {
                 className={styles['card-link']}
                 target="_blank"
                 rel="noopener noreferrer"
-                data-bi-area="BodyGrid"
-                data-bi-name={session}
                 >
                     Add to Schedule
                 </a>
@@ -440,10 +474,10 @@ export default function KubeconIndia() {
       </Head>
       <main>
       <CampaignHeader />
-      <BannerLearn />
+      {/* <BannerLearn /> */}
       <Sessions />
       <Demos />
-      <BannerKubecrawl />
+      {/* <BannerKubecrawl /> */}
       <Community />
       </main>
     </Layout>
