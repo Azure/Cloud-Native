@@ -1,9 +1,9 @@
 ---
 date: 2024-11-12T09:00
 slug: deploy-to-production-at-scale
-title: "Using continuous integration/continuous deployment (CI/CD) processes, monitoring, and AI to help ensure that your app can deploy to production at scale"
+title: "3.5 Using continuous integration/continuous deployment (CI/CD) processes, monitoring, and AI to help ensure that your app can deploy to production at scale"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
@@ -42,21 +42,21 @@ You previously walked through building our example application, but now that you
 
  
 
-The first step in this process is to set up [Azure Pipelines](https://learn.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops?ocid=biafy25h1_30daysofia_webpage_azuremktg), a component of the [Azure DevOps](https://learn.microsoft.com/azure/devops/user-guide/what-is-azure-devops?ocid=biafy25h1_30daysofia_webpage_azuremktg) platform. This involves creating both build and release pipelines for your app, which are essential for automating the deployment process. You use [YAML pipelines](https://learn.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?ocid=biafy25h1_30daysofia_webpage_azuremktg) to help ensure that your configurations are version-controlled and reproducible, making it easier to manage changes and maintain consistency across different environments. 
+The first step in this process is to set up **[Azure Pipelines](https://learn.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops?ocid=biafy25h1_30daysofia_webpage_azuremktg)**, a component of the [Azure DevOps](https://learn.microsoft.com/azure/devops/user-guide/what-is-azure-devops?ocid=biafy25h1_30daysofia_webpage_azuremktg) platform. This involves creating both build and release pipelines for your app, which are essential for automating the deployment process. You use [YAML pipelines](https://learn.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?ocid=biafy25h1_30daysofia_webpage_azuremktg) to help ensure that your configurations are version-controlled and reproducible, making it easier to manage changes and maintain consistency across different environments. 
 
  
 
-Next, you turn your attention to [GitHub Actions](https://docs.github.com/en/actions). Here, you set up workflows to build, test, and deploy your application. GitHub Actions allows you to easily integrate with Azure services, enabling smooth and efficient deployments. This integration helps ensure that your application is always up to date and running optimally. 
+Next, you turn your attention to **[GitHub Actions](https://docs.github.com/en/actions)**. Here, you set up workflows to build, test, and deploy your application. GitHub Actions allows you to easily integrate with Azure services, enabling smooth and efficient deployments. This integration helps ensure that your application is always up to date and running optimally. 
 
   
 
 ## Monitoring and performance management
 
-After your CI/CD pipelines are in place, it’s crucial to monitor the performance and health of your applications. [Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg) comes into play here. By setting up Azure Monitor, you can collect and analyze telemetry data from your applications and infrastructure. This data provides valuable insights into how your app is performing and helps you identify any potential issues before they become critical. 
+After your CI/CD pipelines are in place, it’s crucial to monitor the performance and health of your applications. **[Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)** comes into play here. By setting up Azure Monitor, you can collect and analyze telemetry data from your applications and infrastructure. This data provides valuable insights into how your app is performing and helps you identify any potential issues before they become critical. 
 
  
 
-In addition to Azure Monitor, you integrate [Application Insights](https://learn.microsoft.com/azure/azure-monitor/app/app-insights-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg) with your app. Application Insights is a powerful tool that allows you to monitor performance, detect anomalies, and diagnose issues. It also helps you track user behavior and application usage patterns, giving you a comprehensive view of how your application is being used and where improvements can be made. 
+In addition to Azure Monitor, you integrate **[Application Insights](https://learn.microsoft.com/azure/azure-monitor/app/app-insights-overview?ocid=biafy25h1_30daysofia_webpage_azuremktg)** with your app. Application Insights is a powerful tool that allows you to monitor performance, detect anomalies, and diagnose issues. It also helps you track user behavior and application usage patterns, giving you a comprehensive view of how your application is being used and where improvements can be made. 
 
   
 
