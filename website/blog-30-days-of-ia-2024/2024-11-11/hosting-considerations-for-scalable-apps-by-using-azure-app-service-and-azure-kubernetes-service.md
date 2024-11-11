@@ -3,7 +3,7 @@ date: 2024-11-11T09:01
 slug: hosting-considerations-for-scalable-apps-by-using-azure-app-service-and-azure-kubernetes-service
 title: "3.4 Hosting considerations for scalable apps by using Azure App Service and Azure Kubernetes Service (AKS)"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

@@ -3,7 +3,7 @@ date: 2024-11-12T09:00
 slug: deploy-to-production-at-scale
 title: "3.5 Using continuous integration/continuous deployment (CI/CD) processes, monitoring, and AI to help ensure that your app can deploy to production at scale"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3

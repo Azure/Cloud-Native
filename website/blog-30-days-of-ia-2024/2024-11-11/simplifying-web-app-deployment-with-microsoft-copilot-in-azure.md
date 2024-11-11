@@ -3,7 +3,7 @@ date: 2024-11-11T09:00
 slug: simplifying-web-app-deployment-with-microsoft-copilot-in-azure
 title: "3.3 Simplifying web app deployment with Microsoft Copilot in Azure"
 authors: [30days]
-draft: true
+draft: false
 hide_table_of_contents: false
 toc_min_heading_level: 2
 toc_max_heading_level: 3
