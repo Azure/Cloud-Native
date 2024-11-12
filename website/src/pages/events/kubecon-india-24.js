@@ -313,7 +313,7 @@ function Sessions() {
         <div className="container margin-top--lg margin-bottom--lg">
           <div className="row">
             <div className="col margin-top--md text--center">
-              <h2 className={styles['gradient-header']}>Booth Theatre & Demos</h2>
+              <h2 className={styles['gradient-header']}>Booth Demos</h2>
               {/* <p>
                 Visit our booth #C4 to engage with our experts and attend a variety
                 of theatre sessions and technical demos.
