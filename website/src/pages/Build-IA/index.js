@@ -45,7 +45,7 @@ const CampaignFeatures = [
     link: "/Cloud-Native/Build-IA/Free-Services",
     description: (
       <>
-        Get started with free amounts of Azure AI, app, and data services*
+        Get started with free amounts of Azure app, data, and AI services*
       </>
     ),
   },
