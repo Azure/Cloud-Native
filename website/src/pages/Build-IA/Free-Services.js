@@ -15,10 +15,15 @@ function CampaignHeader() {
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col col--6">
               <h1 className="hero__title">Free services for AI apps</h1>
-              <p style={{ fontSize: '1.125rem' }}>
+              <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
               Learn which services offer free monthly amounts <a href="#disclaimer" style={{color:"white"}}>*</a>
               </p>
               <p>Are you ready to experiment with cutting-edge technologies? You can start building intelligent apps with free Azure app, data, and AI services to minimize upfront costs.</p>
+              <div className={`${styles.buttonsFFIA} hero-buttons`}>
+                    <Link className="button button--primary button--lg" to="https://azure.microsoft.com/pricing/purchase-options/azure-account?ocid=cmm2sprg51l" data-bi-area="Hero" data-bi-name="#FreeServices">
+                    Get started
+                    </Link>
+              </div>
             </div>
             <div className="col col--6 hide-on-mobile">
 
@@ -42,15 +47,9 @@ function SectionContent() {
           </div>
           <div className="col col--6" style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'center' }}>
             <h2>Azure free services</h2>
-            <p>All the Azure AI, app, and data services below offer free amounts. There are two groups of free Azure services. Some are always free, and others are free for 12 months for new customers only<a href="#disclaimer">*</a>. <a href="https://azure.microsoft.com/pricing/purchase-options/azure-account" target="_blank">Get started</a> and learn more about <a href="https://azure.microsoft.com/pricing/purchase-options/azure-account#free-services" target="_blank">Azure free services</a>, including specific free amounts by service. You can estimate the cost for your project using the <a href="https://azure.microsoft.com/pricing/calculator/" target="_blank">Azure pricing calculator</a>. You can also take advantage of specialized programs for <a href="https://www.microsoft.com/startups" target='_blank'>startups</a> and <a href="https://azure.microsoft.com/free/students" target='_blank'>students</a>.</p>
-            <p>Not sure what to build? Explore the <a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off" target='_blank'>AI app use cases</a> for examples, sample apps, and other resources.</p>
+            <p>All the Azure app, data, and AI services below offer free amounts. There are two groups of free Azure services. Some are always free, and others are free for 12 months for new customers only<a href="#disclaimer">*</a>. <a href="https://azure.microsoft.com/pricing/purchase-options/azure-account?ocid=cmm2sprg51l" target="_blank">Get started</a> and learn more about <a href="https://azure.microsoft.com/pricing/free-services" target="_blank">Azure free services</a>, including specific free amounts by service. You can estimate the cost for your project using the <a href="https://azure.microsoft.com/pricing/calculator/" target="_blank">Azure pricing calculator</a>. You can also take advantage of specialized programs for <a href="https://www.microsoft.com/startups" target='_blank'>startups</a> and <a href="https://azure.microsoft.com/free/students" target='_blank'>students</a>.</p>
+            <p>Explore <a href="https://azure.github.io/Cloud-Native/30-days-of-ia-2024/kick-off" target='_blank'>AI app use cases</a> for examples and try <a href="https://aka.ms/aiapps" target='_blank'>AI app templates</a> to deploy starter apps to Azure using VS Code or GitHub Codespaces.</p>
           </div>
-        </div>
-        <h2 className='margin-top--md text--center'>Azure AI services</h2>
-        <div className="row" style={{ paddingBottom: '1rem' }}>
-          {ContentItemsA.map((props, idx) => (
-            <ContentItem key={idx} {...props} />
-          ))}
         </div>
         <h2 className='margin-top--md text--center'>Azure application services</h2>
         <div className="row" style={{ paddingBottom: '1rem' }}>
@@ -61,6 +60,12 @@ function SectionContent() {
         <h2 className='margin-top--md text--center'>Azure databases</h2>
         <div className="row" style={{ paddingBottom: '1rem' }}>
           {ContentItemsC.map((props, idx) => (
+            <ContentItem key={idx} {...props} />
+          ))}
+        </div>
+        <h2 className='margin-top--md text--center'>Azure AI services</h2>
+        <div className="row" style={{ paddingBottom: '1rem' }}>
+          {ContentItemsA.map((props, idx) => (
             <ContentItem key={idx} {...props} />
           ))}
         </div>
