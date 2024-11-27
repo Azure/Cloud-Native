@@ -85,7 +85,7 @@ function Sessions() {
                 <div>
                   <a
                   href="https://azureday.eventbuilder.com/event/87493?source=AKSDayIndia"
-                  className={styles['card-link']}
+                  className="button button--primary"
                   target="_blank"
                   rel="noopener noreferrer"
                   >
@@ -115,7 +115,7 @@ function Sessions() {
                 <div>
                   <a
                   href="https://azureday.eventbuilder.com/event/87494?source=AKSDayIndia"
-                  className={styles['card-link']}
+                  className="button button--primary"
                   target="_blank"
                   rel="noopener noreferrer"
                   >
@@ -146,7 +146,7 @@ function Sessions() {
                 <div>
                   <a
                   href="https://azureday.eventbuilder.com/event/87495?source=AKSDayIndia"
-                  className={styles['card-link']}
+                  className="button button--primary"
                   target="_blank"
                   rel="noopener noreferrer"
                   >
@@ -253,7 +253,8 @@ function Sessions() {
                       <li>Azure Backup for AKS</li>
                       <li>Managed Prometheus and Grafana for AKS</li>
                       <li>Application security in Kubernetes</li>
-                      <li>Enhance the security of your container images with continuous patching</li>
+                      <li>Enhance the security of your Container images with Continuous Patching</li>
+                      <li>Partner demo: Ultra-fast testing with HyperExecute on AKS</li>
                     </ul>
                   </div>
                 </div>
