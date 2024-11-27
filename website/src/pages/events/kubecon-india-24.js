@@ -40,7 +40,7 @@ function CampaignHeader() {
             <p>
             Join us at the inaugural KubeCon India 2024 in Delhi, from 11-12 December, where Microsoft Azure will be a Gold Sponsor. Discover how Azure is leading the way in Kubernetes and intelligent applications.
             </p>
-            {/* <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth #TBD</p> */}
+            <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth G1</p>
           </div>
           <div className="col col--6">
             <div style={videoResponsiveStyle}>
@@ -62,93 +62,15 @@ function CampaignHeader() {
 }
 
 // Section Content
-function BannerLearn() {
-    return (
-      <section className={styles['banner-background']}>
-        <div className="container">
-          <div className="row padding-top--lg">
-            <div className="col col--auto text--center">
-              <h2 className="margin-bottom--sm">Lorem ipsum dolor sit</h2>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col col--6 col--offset-3">
-              <p className='margin-bottom--md text--center'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-            </div>
-          </div>
-          <div className="row padding-bottom--lg">
-            <div className='col col--6 text--center col--offset-3'>
-              <a className="button button--secondary button--lg button-mobile-padding" href="#" target="_blank">
-                lorem ipsum
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-  
-  function BannerKubecrawl() {
-    return (
-      <section className={styles['banner-background']}>
-        <div className="container">
-          <div className="row padding-top--lg">
-            <div className="col col--auto text--center">
-              <h2 className="margin-bottom--sm">Lorem ipsum dolor sit</h2>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col col--6 col--offset-3">
-              <p className='margin-bottom--lg text--center'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-            </div>
-          </div>
-          {/* <div className="row padding-bottom--lg">
-            <div className='col col--6 text--center col--offset-3'>
-              <a className="button button--secondary button--lg button-mobile-padding" href="#" target="_blank">
-                lorem ipsum
-              </a>
-            </div>
-          </div> */}
-        </div>
-      </section>
-    );
-  }
-
-// Section Content
 function Sessions() {
     return (
       <section>
         <div className="container margin-top--lg">
-            {/* <div className="row">
-                <div className="col text--center">
-                    <h2 className={styles['gradient-header']}>Learn from Microsoft Experts</h2>
-                </div>
-            </div> */}
-            {/* <div className="row">
-                <div className="col">
-                    <h3 style={{textTransform:'uppercase'}}>Keynote</h3>
-                    <h4 className="margin-bottom--sm">A Developer's Guide to Securing Your Software Supply Chain</h4>
-                    <p className="margin-bottom--sm">Toddy Mladenov, Principal Product Manager, Microsoft</p>
-                    <p>November 14, 2024 at 9:40 AM</p>
-                </div>
-            </div> */}
           <div className="row margin-top--lg">
-            {/* <div className="col col--6">
-              <div style={{marginBottom: "1rem"}} className='glass-border-kubecon'>
-                <img src="/Cloud-Native/img/Azure-3D-Illustrations-Migration-Dark.jpg" alt="" role="presentation" style={{borderRadius: "1.5rem"}}/>
-              </div>
-            </div> */}
             <div className="col col--8 col--offset-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <h2 className={styles['gradient-header']}>Azure Days with Kubernetes</h2>
               <p style={{textAlign: 'center'}}>Azure Days with Kubernetes are in-person events tailored for developers, IT professionals, and decision-makers eager to harness the power of AKS for their cloud-native and intelligent applications. Whether you're starting with Kubernetes or seeking to refine your AKS deployments, we have sessions to provide valuable insights and actionable knowledge for your cloud journey.</p>
               <p>Three distinct events are planned over two days:</p>
-              {/* <a className="button button--primary button--lg" href="#" target='_blank'>
-              Register now
-                </a> */}
             </div>
           </div>
           <div className="row">
@@ -243,20 +165,11 @@ function Sessions() {
                 Microsoft engineers will be delivering sessions and technical demos at KubeCon and at our booth on the show floor.
                 </p>
           </div>
-          {/* <h3 style={{textTransform:'uppercase'}} className='margin-top--md'>Featured Breakout Sessions</h3>
-          <p>Some featured sessions include:</p> */}
           <div className="row">
             {ContentItemsA.map((props, idx) => (
               <ContentItem key={idx} {...props} />
             ))}
           </div>
-          {/* <div className='row'>
-            <div className='col'>
-              <a className="button button--primary button--lg" href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-north-america-2024-salt-lake-city-utah-november/ba-p/4278879#MSFTsessions" target='_blank'>
-                View all sessions
-                </a>
-            </div>
-          </div> */}
         </div>
       </section>
     );
@@ -314,10 +227,6 @@ function Sessions() {
           <div className="row">
             <div className="col margin-top--md text--center">
               <h2 className={styles['gradient-header']}>Booth Demos</h2>
-              {/* <p>
-                Visit our booth #C4 to engage with our experts and attend a variety
-                of theatre sessions and technical demos.
-              </p> */}
             </div>
           </div>
   
@@ -336,7 +245,16 @@ function Sessions() {
                 <div className="card-body" style={{ flexGrow: 1 }}>
                   <div className="text--left">
                     <h3>Wednesday 11 December</h3>
-                    <p>Schedule coming soon! </p>
+                    <ul>
+                      <li>Running LLMs on Azure Kubernetes Service with KAITO</li>
+                      <li>Partner demo: Cost optimization for AI on Kubernetes with CAST AI</li>
+                      <li>Persistent storage options for Kubernetes deployment</li>
+                      <li>Azure Linux for AKS</li>
+                      <li>Azure Backup for AKS</li>
+                      <li>Managed Prometheus and Grafana for AKS</li>
+                      <li>Application security in Kubernetes</li>
+                      <li>Enhance the security of your container images with continuous patching</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -355,7 +273,15 @@ function Sessions() {
                 <div className="card-body" style={{ flexGrow: 1 }}>
                 <div className="text--left">
                     <h3>Thursday 12 December</h3>
-                    <p>Schedule coming soon!</p>
+                    <ul>
+                      <li>End-to-end developer experience with AKS Automatic</li>
+                      <li>Application Gateway for Containers</li>
+                      <li>Partner demo: Choreo Internal Developer Platform</li>
+                      <li>Azure Container Networking Services</li>
+                      <li>Workload Identity at scale with Spinkube on AKS</li>
+                      <li>Securing AKS deployments with Azure Firewall</li>
+                      <li>AKS add-ons: KEDA, dapr, NAP and more</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -474,10 +400,8 @@ export default function KubeconIndia() {
       </Head>
       <main>
       <CampaignHeader />
-      {/* <BannerLearn /> */}
       <Sessions />
       <Demos />
-      {/* <BannerKubecrawl /> */}
       <Community />
       </main>
     </Layout>
