@@ -42,11 +42,11 @@ function CampaignHeader() {
             </p>
             {/* <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth #TBD</p> */}
           </div>
-          {/* <div className="col col--6">
+          <div className="col col--6">
             <div style={videoResponsiveStyle}>
               <iframe
                 style={iframeStyle}
-                src="https://www.youtube.com/embed/-kBTokGFIa0?si=VK7OB34lEaJzJfvG"
+                src="https://www.youtube.com/embed/d6jDYa3y_Xk?si=_Vid1YrimIm7d8dm"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -54,7 +54,7 @@ function CampaignHeader() {
                 allowFullScreen
               />
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </header>
