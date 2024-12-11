@@ -45,7 +45,7 @@ Yesterday we explored Azure Container Concepts related to environments, networki
  * Exercise: Explore [azure-opensource-labs](https://aka.ms/oss-labs) examples
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Event slide featuring Paul Yu discussing Azure Container Apps scaling with KEDA, including serverless features and scaling rules.](./img/banner.png)
 
 ---
 

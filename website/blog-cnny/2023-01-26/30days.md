@@ -41,7 +41,7 @@ This week we'll focus on advanced topics and best practices for Cloud-Native pra
  * Conclusion
  * Resources
 
-![](./../../static/img/cnny23/hero-banner.png)
+![Promotional banner for Cloud Native New Year featuring colorful 3D icons representing security, containers, and cloud technology.](./../../static/img/cnny23/hero-banner.png)
 
 ---
 

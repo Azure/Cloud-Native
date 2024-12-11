@@ -78,7 +78,7 @@ This series focuses on the [Serverless On Azure](https://azure.microsoft.com/sol
  * **Week 3:** Streamline integrations using [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=javascript-99907-ninarasi) and [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview?WT.mc_id=javascript-99907-ninarasi)
  * **Week 4:** Develop End-to-End solutions with [Serverless on Azure](https://azure.microsoft.com/solutions/serverless/?WT.mc_id=javascript-99907-ninarasi)
 
-![](./img/banner.png)
+![Serverless September kickoff slide for #30DaysOfServerless, featuring Nitya Narasimhan and Devanshi Joshi with a Functions as a Service illustration.](./img/banner.png)
 
 We have a [tentative roadmap](/serverless-september/30DaysOfServerless) for the topics we hope to cover and will keep this updated as we go with links to actual articles as they get published.
 

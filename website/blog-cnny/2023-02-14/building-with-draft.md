@@ -44,7 +44,7 @@ It's the final week of #CloudNativeNewYear! This week we'll go further with Clou
 * Demo: Developing to AKS with Draft
 * Resources
 
-![](./../../static/img/cnny23/hero-banner.png)
+![Promotional banner for Cloud Native New Year featuring colorful 3D icons representing security, containers, and cloud technology.](./../../static/img/cnny23/hero-banner.png)
 
 --- 
 ## What is Draft? 

@@ -37,7 +37,7 @@ And that's a wrap on the inaugural #CloudNativeNewYear! Thank you for joining us
 
 We appreciate your time and attention and we hope you found this curated learning valuable. Feedback and suggestions are always welcome. From our entire team, we wish you good luck with the learning journey - now go build some apps and share your knowledge! 🎉
 
-![](./../../static/img/cnny23/hero-banner.png)
+![Promotional banner for Cloud Native New Year featuring colorful 3D icons representing security, containers, and cloud technology.](./../../static/img/cnny23/hero-banner.png)
 
 ---
 

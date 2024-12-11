@@ -19,7 +19,7 @@ Our team will review all submitted questions and prioritize them for the live AT
 
 [Ask the Expert](https://docs.microsoft.com/shows/Ask-the-Expert/?WT.mc_id=javascript-99907-ninarasi) is a series of scheduled 30-minute **LIVE** broadcasts where you can connect with experts to get your questions answered! You an also visit the site later, to view sessions on demand - and view answers to questions you may have submitted ahead of time.
 
-![](../../../static/img/banners/serverless-ate.png)
+![Text graphic with the phrase Ask the Expert on a textured green background with beige accents and dotted design elements.](../../../static/img/banners/serverless-ate.png)
 
 ---
 

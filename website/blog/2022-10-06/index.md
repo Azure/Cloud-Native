@@ -54,7 +54,7 @@ Ready? Let's go!
     * Features: discover, create, contribute, request - templates
     * Hacktoberfest: opportunities to contribute in October - and beyond!
 
-![](./img/banner.png)
+![Serverless September slide promoting Savannah Ostrowski's session on azd-template Gallery, titled E2E Dev – From Cloud to Community.](./img/banner.png)
 
 ---
 
@@ -94,7 +94,7 @@ In addition, it's **README** reflects the [awesome-list](https://github.com/topi
  * Browse the [awesome-azd README](https://github.com/Azure/awesome-azd/blob/main/README.md)
 
 
-![](./img/gallery.gif)
+![Animated showcase of Awesome AZD Templates](./img/gallery.gif)
 
 The Gallery is organized into three main areas:
  - [Gallery](https://azure.github.io/awesome-azd/) page hosting templates.

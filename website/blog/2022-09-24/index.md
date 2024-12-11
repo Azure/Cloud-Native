@@ -46,7 +46,7 @@ The application consists of a front-end web app built using Blazor Server, as we
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-![](./img/dotnet/banner.png)
+![Slide on "E2E – Container Apps" by Alex Wolf (@alexwolfmsft), covering ASP.NET, GitHub Actions, and Bicep in serverless deployments.](./img/dotnet/banner.png)
 
 ---
 

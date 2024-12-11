@@ -54,7 +54,7 @@ Today marked the [October 22 release](https://devblogs.microsoft.com/azure-sdk/a
  * **Exercise:** Try this yourself or create your own `azd` template
  * **Resources:** For self-study!
 
-![](./img/banner.png)
+![Serverless September slide featuring Savannah Ostrowski presenting Azure Developer CLI: E2E Dev – From Code to Cloud.](./img/banner.png)
 
 ---
 
@@ -63,7 +63,7 @@ The Azure Developer CLI (`azd`) is a new, open source tool that makes it quick a
 
 The Azure Developer CLI commands are simple, high-level and map to core stages in your developer workflow. Think project initialization/creation, build, deploy, repeat!
 
-![](img/azd-workflow.png)
+![Code to Cloud guide with Azure Developer CLI, highlighting commands for initializing, deploying, and monitoring cloud-native applications.](img/azd-workflow.png)
 
 By using [idiomatic and flexible application templates](https://aka.ms/azure-dev/templates?source=serverless-september), the Azure Developer CLI uses recipes for common application architectures that you can customize for your use case. These templates include:
 - best practices
@@ -78,7 +78,7 @@ So now that you've been introduced to the Azure Developer CLI, let's take a look
 
 To make this concrete and because it's #ServerlessSeptember, we're going to walk through this [ToDo application template](https://github.com/Azure-Samples/todo-python-mongo-swa-func) that uses Azure Static Web Apps and Azure Functions.
 
-![](img/arch-diagram.png)
+![Azure resource group diagram showing a ReactJS web app, Python FastAPI, Cosmos DB, Key Vault, Azure Storage, and Azure Monitor.](img/arch-diagram.png)
 
 Let's talk about the files in terms of their purpose:
 
@@ -106,27 +106,27 @@ So now that we've gone over what this template contains on GitHub, let's pull th
 
 When designing the CLI, we wanted the experience to be both flexible and non-magical (no side effects, easy to understand). So, we're going to run this all with `azd up` but you could alternatively run a series of three commands and the outcome would be the same - `azd init --t Azure-Samples/todo-python-mongo-swa-func` (to pull the code down to your machine), `azd provision` (to provision infrastructure) and then `azd deploy` (to deploy application code on Azure). Choose your own adventure!
 
-![](img/single-step.png)
+![Azure CLI guide showing commands: azd init for setup, azd provision for resource creation, and azd deploy for app deployment.](img/single-step.png)
 
 So let's walk through it. On running `azd up -t todo-python-mongo-swa-func`, I'm prompted for a couple pieces of information as part of the `azd init` process being run under the hood:
     - **An environment name** - the prefix for the resource group that will be created to hold all Azure resources
     - **An Azure region** - the Azure location where your resources will be deployed
     - **An Azure subscription** - the Azure subscription where your resources will be deployed
-![](img/start-up.png)
+![Terminal output showing azd up command initializing an Azure project with template setup, environment name, and subscription details.](img/start-up.png)
 
 Once that information is provided, `azd` will pull down the code from GitHub and create a `.azure/` directory in the project root that contains all Azure Developer CLI environment information that you just entered. This directory will be important when it comes time to provision and deploy infrastructure in the next step in the `up` process.
 
 The next step here is provisioning. `azd` is running `azd provision` on your behalf and leveraging the IaC assets in the `.infra/` directory in the project. As the tool works to provision, you'll see an output of each resource (name alongside a unique identifier which you can use to reference back to the Azure Portal, if you want)
-![](img/provision-up.png)
+![Terminal output showing Azure CLI provisioning resources, including a static web app, function app, storage, Cosmos DB, and Key Vault.](img/provision-up.png)
 
 Finally, the final step here in running `azd up` is deployment. `azd` is running `azd deploy` and deploying the application code to the resources that we're provisioned in the previous phase of the process. Once this has completed, you'll be able to click on two different endpoint URLs - one for the backend and one for the frontend. 
-![](img/deploy-up.png)
+![Terminal output displaying successful deployment of API and web services, with endpoints and resource group details.](img/deploy-up.png)
 
 The backend endpoint (`service api`) hosts the specification for the API via the `openapi.yaml` file that's also in the root of the project template. You can explore the endpoints that are available in the web app here. 
-![](img/backend.png)
+![OpenAPI documentation for Simple Todo API, showing endpoints for CRUD operations on lists and items with HTTP methods.](img/backend.png)
 
 The frontend endpoint (`service web`) hosts a fully-fledged and functional ToDo web app with a UI, Cosmos DB for the database and Key Vault for application secrets. This isn't just application hosting. It's really everything you need to be successful and productive, all set up on your behalf by the Azure Developer CLI.
-![](img/frontend.png)
+![Task management app view with a to-do list item and a detailed edit panel for setting task description, status, and due date.](img/frontend.png)
 
 ...and that's it! We've successfully deployed our application on Azure! 
 
@@ -137,17 +137,17 @@ In my opinion, it's not enough to _just_ set up the application on Azure! I want
 
 ### Application Monitoring
 When we provisioned all of our infrastructure, we also set up application monitoring via a Bicep file in our `.infra/` directory that spec'd out an Application Insights dashboard. By running `azd monitor` we can see the dashboard with live metrics that was configured for the application. 
-![](img/metrics.png)
+![Azure Monitor dashboard showing metrics for incoming requests, outgoing requests, overall health, and server telemetry details.](img/metrics.png)
 
 We can also navigate to the Application Dashboard by clicking on the resource group name, where you can set a specific refresh rate for the dashboard, and see usage, reliability, and performance metrics over time.
-![](img/dashboard.png)
+![Application Insights dashboard with charts for user sessions, server response time, availability, and page load performance.](img/dashboard.png)
 
 I don't know about everyone else but I have spent a ton of time building out similar dashboards. It can be super time-consuming to write all the queries and create the visualizations so this feels like a real time saver.
 
 ### CI/CD
 Finally let's talk about setting up CI/CD! This might be my favorite `azd` feature. As I mentioned before, the Azure Developer CLI has a command, `azd pipeline config`, which uses the files in the `.github/` directory to set up a GitHub Action. More than that, if there is no upstream repo, the Developer CLI will actually help you create one. But what does this mean exactly? Because our GitHub Action is using the same commands you'd run in the CLI under the hood, we're actually going to have CI/CD set up to run on every commit into the repo, against real Azure resources. What a sweet collaboration feature!
 
-![](img/pipeline-config.png)
+![Terminal log showing azd pipeline config command creating a GitHub repository and configuring CI pipeline with Azure secrets.](img/pipeline-config.png)
 
 
 That's it! We've gone end-to-end with the Azure Developer CLI - initialized a project, provisioned the resources on Azure, deployed our code on Azure, set up monitoring logs and dashboards, and set up a CI/CD pipeline with GitHub Actions to run on every commit into the repo (on real Azure resources!).

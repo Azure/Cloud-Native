@@ -41,7 +41,7 @@ This week we'll _go further with Cloud-native_ by exploring advanced topics and 
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-![](./../../static/img/og/30-16.png)
+![Going further with cloud-native: Serverless container options by Nitya Narasimhan.](./../../static/img/og/30-16.png)
 
 ---
 

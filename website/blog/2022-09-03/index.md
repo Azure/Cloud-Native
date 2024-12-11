@@ -49,7 +49,7 @@ Ready? Let's go.
  * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi)!
  * **Resources**: [#30DaysOfServerless Collection](https://aka.ms/30DaysOfServerless/collection).
 
-![](./img/banner.png)
+![Serverless September slide featuring Nitya Narasimhan's session on Azure Functions: Build Your First Function, with app structure tips.](./img/banner.png)
 
 ---
 

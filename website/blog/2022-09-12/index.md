@@ -47,7 +47,7 @@ Ready? Let's go!
  * Exercise: Build & Deploy a Dapr-enabled ACA.
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Session slide by Nitya Narasimhan on Dapr, explaining microservices with sidecar patterns, API blocks, and practical examples.](./img/banner.png)
 
 ---
 

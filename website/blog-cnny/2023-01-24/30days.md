@@ -41,7 +41,7 @@ Today, we'll focus on building an understanding of containers.
  * Resources
  * Learning Path
 
-![](./../../static/img/cnny23/hero-banner.png)
+![Promotional banner for Cloud Native New Year featuring colorful 3D icons representing security, containers, and cloud technology.](./../../static/img/cnny23/hero-banner.png)
 ---
 
 :::tip REGISTER & LEARN: KUBERNETES 101

@@ -46,7 +46,7 @@ Ready? Let's Go!
  * **Exercise**: [Take the Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi)
  * **Resources**: For self-study!
 
-![](./img/banner.png)
+![Day 15 recap of ACA and Dapr featuring E2E solutions and next steps by Nitya Narasimhan and Devanshi Joshi, highlighting integrations.](./img/banner.png)
 
 ## This Week In Events
 
@@ -67,7 +67,7 @@ In our #30Days series we focused on Azure Container Apps and Dapr.
 
 Here's a visual recap:
 
-![](./../../static/img/banners/roadmap-Week2.png)
+![Summary of microservices and container apps with Azure Container Apps, Dapr integration, scaling, and secure access concepts.](./../../static/img/banners/roadmap-Week2.png)
 
 
 

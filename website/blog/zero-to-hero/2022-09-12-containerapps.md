@@ -43,7 +43,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * Using Azure CLI
  * Using CI/CD Pipelines
 
-![](./img/zero-to-hero-anthony.png)
+![Anthony Chu presents Azure Container Apps, guiding you on building cloud-native apps for scalable deployments.](./img/zero-to-hero-anthony.png)
 
 ---
 

@@ -48,7 +48,7 @@ We've so far walked through what [Azure Event Grid][az eg] is and how it general
 - [Exercise: Try this yourself!](#exercise-try-this-yourself)
 - [Resources: For self-study!](#resources-for-self-study)
 
-![](./img/banner.png)
+![Slide for "Brokering Cloud Events," presented by Justin Yoo (@justinchronicle), discussing Event Grid for integrating cloud services.](./img/banner.png)
 
 ---
 

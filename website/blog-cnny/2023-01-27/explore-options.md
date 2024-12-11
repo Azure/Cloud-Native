@@ -47,7 +47,7 @@ Today, we will do a brief recap of some of these technologies and provide some b
 * Resources
 * What's coming next!
 
-![](./../../static/img/cnny23/hero-banner.png)
+![Promotional banner for Cloud Native New Year featuring colorful 3D icons representing security, containers, and cloud technology.](./../../static/img/cnny23/hero-banner.png)
 
 ---
 

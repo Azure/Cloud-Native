@@ -45,7 +45,7 @@ In the past few days we focused our attention on Azure Container Apps, building 
  * What's Next: Advanced scenario in 12-part series 
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Day 14 Serverless September graphic featuring "Build With Dapr" topic by Taiseer Joudeh, focusing on Dapr and Azure Container Apps.](./img/banner.png)
 
 ---
 

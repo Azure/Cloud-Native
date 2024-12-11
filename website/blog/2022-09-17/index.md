@@ -47,7 +47,7 @@ Ready? Let's Go!
  * Writing data to Cosmos DB from a Logic app
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Serverless September session on using CosmosDB and Logic Apps for tracking weather data changes, hosted by Brian Benz.](./img/banner.png)
 
 ---
 
@@ -69,7 +69,7 @@ Cosmos DB has [many APIs to choose from](https://learn.microsoft.com/azure/cosmo
 
 To get started with Cosmos DB, you create an account, then a database, then a container to store JSON documents. To create a new Cosmos DB account from the [portal dashboard](https://portal.azure.com), Select **Create a resource > Azure Cosmos DB > Create**.  Choose **core SQL** for the API.
 
-![](img/cosmosdbapiselection.png)
+![Azure Cosmos DB API selection screen showing Core SQL, MongoDB, Cassandra, Azure Table, and Gremlin options with "Create" buttons.](img/cosmosdbapiselection.png)
 
 Select your subscription, then create a new resource group called **CosmosWeather**.  Enter an account name and choose a location, select provisioned throughput capacity mode and apply the free tier discount. From here you can select **Review and Create**, then **Create** 
 

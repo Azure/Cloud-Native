@@ -53,7 +53,7 @@ We continue our exploraton into Azure Container Apps, with today's focus being _
 - Exercise: Try this yourself!
 - Resources: For self-study!
 
-![](./img/banner.png)
+![Microservices communications overview by Paul Yu (@pauldotyu), exploring Azure Container Apps (ACA) and Dapr integrations.](./img/banner.png)
 
 ---
 

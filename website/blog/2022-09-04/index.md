@@ -47,7 +47,7 @@ _Today_ we'll look at developing Functions app with a _different_ programming la
  * **Exercise:** [Develop Java serverless Functions on Azure using Maven](https://docs.microsoft.com/learn/modules/develop-azure-functions-app-with-maven-plugin/) 
  * **Resources**: Check out [Java at Microsoft](https://developer.microsoft.com/java/) and use [Java Your Way](https://aka.ms/JavaYourWay)!
 
-![](./img/banner.png)
+![Serverless September slide featuring Rory Preddy's session on Azure Functions for the Java Developer, covering tools and usage scenarios.](./img/banner.png)
 
 ---
 
