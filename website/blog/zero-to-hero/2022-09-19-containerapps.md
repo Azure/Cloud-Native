@@ -44,7 +44,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * Log Analytics - using Azure Monitor
  * Metric Alerts and Log Alerts - using Azure Monitor
 
-![](./img/mike-aca-observability.png)
+![Learn how to monitor and manage Azure Container Apps effectively with Mike Morton’s observability tips.](./img/mike-aca-observability.png)
 
 ---
 
@@ -71,7 +71,7 @@ In the Azure portal, you can connect to the console of a container in your app. 
 
 This can be great for checking configuration files or even modifying a setting or library your container is using. Of course, updating a container in this fashion is not something you should do to a production app, but tweaking and re-testing an app in a non-production environment can speed up development.
 
-![](./img/mike-observability-2.png)
+![Azure portal view of an active container instance revision displaying console logs and files.](./img/mike-observability-2.png)
 
 Here’s an example CLI command to connect to the console of a container app.
 
@@ -95,7 +95,7 @@ Azure Monitor collects metric data from your container app at regular intervals 
 
 Here you can see the metrics explorer showing the replica count for an app as it scaled from one replica to fifteen, and then back down to one.
 
-![](./img/mike-observability-3.png)
+![Azure Monitor chart showing replica count spike for 'album-api' over the past 30 minutes.](./img/mike-observability-3.png)
 
 You can also retrieve metric data through [the Azure CLI](https://aka.ms/container-apps/azure-monitor-metrics-cli).
 
@@ -104,7 +104,7 @@ You can also retrieve metric data through [the Azure CLI](https://aka.ms/contain
 ## Log Analytics
 Azure Monitor Log Analytics is great for viewing your historical logs emitted from your container apps. There are two custom tables of interest, the ContainerAppConsoleLogs_CL which contains all the log messages written by your app (stdout and stderr), and the ContainerAppSystemLogs_CL which contain the system messages from the Azure Container Apps service.	
 
-![](./img/mike-observability-4.png)
+![Azure Log Analytics query output for 'album-api' revision with shutdown messages listed.](./img/mike-observability-4.png)
 
 You can also query Log Analytics through the [Azure CLI](https://aka.ms/container-apps/azure-monitor-logs-cli).
 
@@ -119,7 +119,7 @@ You can create alert rules from metric charts in the metric explorer and from qu
 
 Here is what creating an alert looks like in the Azure portal. In this case we are setting an alert rule from the metric explorer to trigger an alert if the replica restart count for a specific container app is greater than two within the last fifteen minutes.
 
-![](./img/mike-observability-5.png)
+![Setting up an alert rule in Azure for container replica restart thresholds.](./img/mike-observability-5.png)
 
 To learn more about alerts, refer to [Overview of alerts in Microsoft Azure](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-overview).
 

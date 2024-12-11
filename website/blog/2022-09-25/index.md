@@ -44,7 +44,7 @@ Welcome to `Day 25` of #30DaysOfServerless!
  * Step-by-step: Deploying and running on Azure Container Apps
  * Resources: For self-study!
 
-![](./img/java/banner.png)
+![Slide on "E2E – Container Apps" by Brian Benz (@bbenz), focusing on deploying Spring Boot with Azure Container Registry.](./img/java/banner.png)
 
 ---
 

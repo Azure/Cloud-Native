@@ -17,7 +17,7 @@ Use the link above to register for the Cloud Skills Challenge today! You will ge
 The Cloud Skills Challenge is a fun way to skill up on Azure serverless technologies while competing with other members of the community for a chance to win fun swag! 
 
 
-![](./../../../static/img/banners/cloud-skills.png)
+![A raccoon takes a selfie with a document and cloud, works with a sloth on laptops, and smiles holding gold medals in an orange shirt.](./../../../static/img/banners/cloud-skills.png)
 
 You'll work your way through [learning modules](https://learn.microsoft.com) that skill you up on relevant technologies - while collecting points that place you on a Leaderboard.
 
@@ -34,5 +34,5 @@ Completed the Cloud Skills Challenge, and want to keep going on your learning jo
 | 1️⃣ - [**LEARNING PATHS**](https://docs.microsoft.com/learn/browse/?WT.mc_id=javascript-99907-ninarasi) | 2️⃣ - [** CERTIFICATIONS**](https://docs.microsoft.com/learn/certifications/?WT.mc_id=javascript-99907-ninarasi)| 3️⃣ - [**LEARNING EVENTS**](https://docs.microsoft.com/events/?WT.mc_id=javascript-99907-ninarasi)|
 |:---:|:---:|:---:|
 | Skill up on a topic with guided paths for self-study!| Showcase your expertise with industry-recognized credentials!| Learn from subject matter experts in live & recorded events|
-| <img src="https://docs.microsoft.com/learn/media/topics/cards/icon-card_learningpath_light.png" /> |  <img src="https://docs.microsoft.com/learn/media/topics/cards/icon-card_certification_light.png" />  | <img src="https://docs.microsoft.com/learn/media/topics/cards/icon-card_learnvideo_light.png" />  |
+| <img alt="Stacked 3D tiles in white, peach, and purple." src="https://docs.microsoft.com/learn/media/topics/cards/icon-card_learningpath_light.png" /> |  <img alt="Verification badge icon with a checkmark and text lines on a gradient blue card." src="https://docs.microsoft.com/learn/media/topics/cards/icon-card_certification_light.png" />  | <img alt="Video search icon featuring a play button on a gradient filmstrip and a blue magnifier." src="https://docs.microsoft.com/learn/media/topics/cards/icon-card_learnvideo_light.png" />  |
 

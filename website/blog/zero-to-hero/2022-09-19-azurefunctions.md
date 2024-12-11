@@ -43,7 +43,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * Key support for Kafka messages - in Apache Kafka Extension
  * References: Apache Kafka Extension for Azure Functions
 
-![](./img/ramya-functions-kafka.png)
+![Error handling strategies in Azure Functions using Kafka Extension by Ramya Oruganti.](./img/ramya-functions-kafka.png)
 
 ---
 

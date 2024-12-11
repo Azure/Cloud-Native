@@ -43,7 +43,7 @@ Welcome to `Day 9` of #30DaysOfServerless!
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Serverless September slide featuring Nitya Narasimhan on Azure Container Apps, covering core concepts, cloud-native tools, and quickstarts.](./img/banner.png)
 
 ---
 

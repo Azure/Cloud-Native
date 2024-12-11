@@ -17,7 +17,7 @@ If the words look familiar, it's because I actually wrote them [2 years ago](htt
 
 You can still browse the [2020 Content Collection](https://dev.to/azure/serverlessseptember-2020-content-collection-443k) to find great talks, articles and code samples to get started using Serverless on Azure. But read on to learn what's new!
 
-![](./img/2020-banner.png)
+![Fall-themed artwork for Serverless September with a cloud, servers, leaves, and symbols representing pay-as-you-go and serverless technology.](./img/2020-banner.png)
 
 
 
@@ -42,7 +42,7 @@ Previous years focused on curating and sharing content authored by Microsoft and
 
 This year, we wanted to combine _beginner-friendly_ options (for those just starting their serverless journey) with more _advanced insights_ (for those looking to skill up further). Here's a sneak peek at some of the initiatives we've got planned!
 
-![](../../static/img/banners/post-kickoff.png)
+![Overview of Serverless September featuring Azure Functions, Container Apps, Logic Apps, and Event Grid, with links to resources and events.](../../static/img/banners/post-kickoff.png)
 
 We'll also explore the full spectrum of serverless - from Functions-as-a-Service (for granularity) to Containerization (for deployment) and Microservices (for scalability). Here are a few services and technologies you'll get to learn more about:
 

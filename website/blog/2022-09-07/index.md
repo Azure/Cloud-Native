@@ -47,7 +47,7 @@ Ready? Let's go.
  * **Exercise**: Try this yourself!
  * **Resources**: For self-study!
 
-![](./img/banner.png)
+![Serverless September slide featuring Jay Miller's session on Azure Functions for Python Developers with an illustration on wildfire detection.](./img/banner.png)
 
 
 ---

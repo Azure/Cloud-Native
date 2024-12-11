@@ -53,7 +53,7 @@ Ready? Let's go.
  * What's Next: Hello, Containers & Microservices
  * Challenge: [Complete the Learning Path](https://docs.microsoft.com/training/paths/create-serverless-applications/?WT.mc_id=javascript-99907-cxa)
 
-![](./img/banner.png)
+![Serverless September slide featuring Nitya Narasimhan and Devanshi Joshi presenting Azure Functions: E2E Solutions & Next Steps.](./img/banner.png)
 
 ---
 
@@ -69,7 +69,7 @@ Congratulations!! We made it to the end of Week 1 of #ServerlessSeptember. Let's
 
 The illustrated roadmap below summarizes what we covered each day this week, as we bring our **Functions-as-a-Service** exploration to a close.
 
-![](./../../static/img/banners/roadmap-Week1.png)
+![Illustrated recap of Azure Functions Week 1, with sessions on building functions, language-specific guides, and serverless solutions.](./../../static/img/banners/roadmap-Week1.png)
 
 ---
 
@@ -89,7 +89,7 @@ Want more ideas? Check out the [Azure Samples for Functions](https://docs.micros
 
 _Want to systematically work your way through a single End-to-End scenario involving Azure Functions alongside other serverless support technologies?_ Check out the [Serverless Hacks](/serverless-september/ServerlessHacks) activity happening during #ServerlessSeptember, and learn to build this **"Serverless Tollbooth Application"** in a series of 10 challenges. Check out the [video series for a reference solution in .NET](https://aka.ms/serverless-september/videos) and sign up for weekly office hours to join peers and discuss your solutions or challenges.
 
-![](./../../static/img/banners/wth-serverless.png)
+![System architecture showing Azure services like Event Grid, Functions, and Computer Vision API for extracting and managing toll booth data.](./../../static/img/banners/wth-serverless.png)
 
 _Or perhaps you prefer to learn core concepts with code in a structured learning path?_ We have that covered. Check out the [12-module](https://docs.microsoft.com/training/paths/create-serverless-applications/?WT.mc_id=javascript-99907-cxa) **"Create Serverless Applications"** course from Microsoft Learn which walks your through concepts, one at a time, with code. Even better - [sign up for the free Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi) and _complete the same path_ (in under 30 days) but this time, with the added fun of competing against your peers for a spot on a leaderboard, and swag.
 

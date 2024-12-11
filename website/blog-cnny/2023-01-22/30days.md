@@ -81,7 +81,7 @@ This series focuses on the [Cloud-native On Azure](https://azure.microsoft.com/s
  * **Week 3:** Migrate your applications to [Azure Kubernetes Service](https://azure.microsoft.com/products/kubernetes-service/?WT.mc_id=javascript-99907-ninarasi).
  * **Week 4:** Go from Code to Containers to Cloud with [Cloud-native solutions](https://azure.microsoft.com/solutions/cloud-native-apps/?WT.mc_id=javascript-99907-ninarasi)
 
-![](./img/banner.png)
+![Event kickoff slide for #CloudNativeNewYear with speaker profiles and a sketch promoting Kubernetes as the de facto container orchestrator.](./img/banner.png)
 
 We have a tentative weekly-themed roadmap for the topics we hope to cover and will keep this updated as we go with links to actual articles as they get published.
 

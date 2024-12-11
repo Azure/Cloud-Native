@@ -48,7 +48,7 @@ Ready? Let's Go!
  * **Exercise**: Take the [Cloud Skills Challenge](https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&WT.mc_id=javascript-99907-ninarasi)!
  * **Resources**: [#30DaysOfServerless Collection](https://aka.ms/30DaysOfServerless/collection).
 
-![](./img/banner.png)
+![Serverless September slide featuring Nitya Narasimhan presenting Azure Functions: Learn Core Concepts, with an illustration of triggers and bindings.](./img/banner.png)
 
 ---
 

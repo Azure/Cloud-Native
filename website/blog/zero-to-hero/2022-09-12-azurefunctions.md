@@ -45,7 +45,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * Message Processing With Azure Custom Handler
  * Azure Portal Monitoring
 
-![](./img/zero-to-hero-melony.png)
+![Custom Handlers for Serverless Go Apps by Melony Qin with an illustrated flowchart.](./img/zero-to-hero-melony.png)
 
 ---
  

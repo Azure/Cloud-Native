@@ -47,7 +47,7 @@ Ready? Let's go.
   * Conclusion   
   * Resources: For self-study!
 
-![](./img/banner.png)
+![Session by Kendall Roden on securing ACA with container secrets, managed identity, and the Dapr secret store.](./img/banner.png)
 
 ---
 
@@ -238,7 +238,7 @@ Using Dapr’s secret store building block typically involves the following:
   - Retrieving secrets using the Dapr secrets API in the application code.
   - Optionally, referencing secrets in Dapr component files.
   
-![](./img/secrets-overview-cloud-stores.png)
+![Diagram showing Dapr fetching secrets from cloud secret stores like AWS Secrets Manager, Azure Key Vault, and passing them to Service A.](./img/secrets-overview-cloud-stores.png)
   
 Let's walk through a couple sample workflows involving the use of Dapr's Secrets Management capabilities! 
  

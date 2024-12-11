@@ -50,7 +50,7 @@ In this post, we'll learn how to build a seamless onboarding experience for new 
 - ✋ Exercise: Try this tutorial out yourself!
 - 📚 Resources: For Self-Study
 
-![](./img/banner.png)
+![Slide featuring "Integrate Microsoft Graph: Automation With Logic Apps and Event Hubs" by Ayça Baş, contact @aycabs, part of Serverless September.](./img/banner.png)
 
 ---
 

@@ -49,7 +49,7 @@ Ready? Let's go.
  * Exercise: Support searching
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Serverless September slide featuring Aaron Powell presenting Azure Functions for JavaScript Developers, with Node.js and CLI usage highlights.](./img/banner.png)
 
 ---
 

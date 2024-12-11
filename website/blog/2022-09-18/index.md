@@ -45,7 +45,7 @@ Ready? Let's go!
  * Connecting it all together with a Logic App 
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Slide promoting "Integrate Computer Vision: Teach the Cloud to Read & Categorize Your Mail" by Brian Benz, with contact handle @bbenz.](./img/banner.png)
 
 ---
 

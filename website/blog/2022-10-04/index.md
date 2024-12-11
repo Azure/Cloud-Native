@@ -57,7 +57,7 @@ Serveless technologies accelerate productivity and minimize costs for deploying 
  - **Web Applications** - scaled by #concurrent HTTP requests
  - **Background Process** - scaled by CPU and Memory usage
 
-![](./img/cloud-native.png)
+![Infographic explaining serverless cloud-native uses, including microservices, public APIs, web apps, event-driven, and background processing.](./img/cloud-native.png)
 
 Great - but as developers, we really want to know **_how_ we can get started building and deploying serverless solutions on Azure**. That was the focus of our #ServerlessSeptember journey. Let's take a quick look at the four key themes.
 
@@ -72,7 +72,7 @@ Want to get extended language support for languages like Go, and Rust? You can [
 
 Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session with the Azure Functions team to get answers to popular community questions on Azure Functions features and usage.
 
-<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&ep=serverless-september-azure-functions" width="600" height="400"></iframe>
+<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&ep=serverless-september-azure-functions" width="600" height="400" title="Ask the Expert: Serverless September Azure Functions"></iframe>
 
 ## Microservices and Containers 
 
@@ -92,7 +92,7 @@ In this 6-part series of posts, we walk through each technology independently, b
 
 Check out this recent [AskTheExpert](https://aka.ms/ATEonDemand) Q&A session with the Azure Container Apps team for answers to popular community questions on core features and usage.
 
-<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&ep=serverless-september-azure-container-apps" width="640" height="360"></iframe>
+<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&ep=serverless-september-azure-container-apps" width="640" height="360" title="Ask the Expert: Serverless September Azure Container Apps"></iframe>
 
 
 ## Serverless Integrations
@@ -131,7 +131,7 @@ But wait - there's more. Those are a sample of the end-to-end application scenar
 
 And **watch this space for more such tutorials and content through October**, including a special #Hacktoberfest focused initiative to encourage and support first-time contributors to open-source. Here's a sneak peek at the project we plan to share - the new [awesome-azd templates](https://aka.ms/awesome-azd) gallery.
 
-![](./../2022-10-06/img/gallery.gif)
+![Animated showcase of Awesome AZD Templates](./../2022-10-06/img/gallery.gif)
 
 ---
 

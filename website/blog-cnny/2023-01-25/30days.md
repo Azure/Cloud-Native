@@ -39,7 +39,7 @@ This week we'll focus on what Kubernetes is.
  * How does Kubernetes Work? (Video)
  * Conclusion
 
-![](./../../static/img/cnny23/hero-banner.png)
+![Promotional banner for Cloud Native New Year featuring colorful 3D icons representing security, containers, and cloud technology.](./../../static/img/cnny23/hero-banner.png)
 
 ---
 

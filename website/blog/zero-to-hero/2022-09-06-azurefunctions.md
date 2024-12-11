@@ -44,7 +44,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * A Programming Model
  * Entities for a Micro-Blogging Platform
 
-![](./img/zero-to-hero-david.png)
+![Durable Entities walkthrough featuring David Justo, Azure icons, and function flows.](./img/zero-to-hero-david.png)
 
 ---
  

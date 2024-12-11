@@ -43,7 +43,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * Dapr In Azure Container Apps
  * Conclusion
 
-![](./img/zero-to-hero-kendall.png)
+![Kendall Roden explores Azure Container Apps for microservices, APIs, and background processing. Start building cloud-native apps.](./img/zero-to-hero-kendall.png)
 
 ---
 

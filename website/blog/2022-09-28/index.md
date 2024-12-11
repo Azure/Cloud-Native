@@ -49,7 +49,7 @@ OK. Are you ready? Let's get started!
  * Exercise: Try this yourself!
  * Resources: For self-study!
 
-![](./img/banner.png)
+![Event slide by Justin Yoo (@justinchronicle) on combining Serverless architecture with Microsoft Power Platform tools.](./img/banner.png)
 
 ---
 

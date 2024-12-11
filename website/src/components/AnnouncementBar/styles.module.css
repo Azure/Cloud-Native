@@ -1,5 +1,5 @@
 .announcementBarBackground {
-    background-color: #002948;
+    background: linear-gradient(180deg, #002948 0%, #004275 98.96%);
     color: #ffffff;
     font-size: 13px;
     margin-top: -2px;

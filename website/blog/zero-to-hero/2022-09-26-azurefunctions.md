@@ -43,7 +43,7 @@ Today, we have a special set of posts from our [Zero To Hero 🚀](/serverless-s
  * Live Metrics stream
  * Troubleshooting Azure Functions
 
-![](./img/zero-to-hero-madhura.png)
+![Serverless September slide featuring Madhura Bharadwaj presenting Monitoring & Troubleshooting Apps in Azure Functions.](./img/zero-to-hero-madhura.png)
 
 ---
 
