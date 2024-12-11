@@ -21,8 +21,8 @@
 <script>!function(t,e,n,c,a,r,s){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(r=e.createElement(c)).async=1,r.src="https://www.clarity.ms/tag/d61n997vq9",(s=e.getElementsByTagName(c)[0]).parentNode.insertBefore(r,s)}(window,document,"clarity","script")</script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js"></script><link rel="stylesheet" href="/Cloud-Native/assets/css/styles.cf5fa7e1.css">
-<script src="/Cloud-Native/assets/js/runtime~main.f0325e06.js" defer="defer"></script>
+<script src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js"></script><link rel="stylesheet" href="/Cloud-Native/assets/css/styles.38c9e8a2.css">
+<script src="/Cloud-Native/assets/js/runtime~main.1aae2929.js" defer="defer"></script>
 <script src="/Cloud-Native/assets/js/main.2244487d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -41,7 +41,7 @@
 <li>Conclusion</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="/Cloud-Native/assets/images/banner-9d61f89816a8e8b5682eae3c4fcdb71c.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Session by Kendall Roden on securing ACA with container secrets, managed identity, and the Dapr secret store." src="/Cloud-Native/assets/images/banner-9d61f89816a8e8b5682eae3c4fcdb71c.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="securing-access-to-external-services">Securing access to external services<a href="#securing-access-to-external-services" class="hash-link" aria-label="Direct link to Securing access to external services" title="Direct link to Securing access to external services">​</a></h2>
 <p>In most, if not all, microservice-based applications, one or more services in the system will rely on other cloud-hosted resources; Think external services like databases, secret stores, message brokers, event sources, etc. To interact with these services, an application must have the ability to establish a secure connection. Traditionally, an application will authenticate to these backing resources using some type of connection string or password.</p>
@@ -127,7 +127,7 @@
 <li>Retrieving secrets using the Dapr secrets API in the application code.</li>
 <li>Optionally, referencing secrets in Dapr component files.</li>
 </ul>
-<p><img loading="lazy" src="/Cloud-Native/assets/images/secrets-overview-cloud-stores-f0c9f823ba6a3246dac070c4da40a80a.png" width="1739" height="1057" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Diagram showing Dapr fetching secrets from cloud secret stores like AWS Secrets Manager, Azure Key Vault, and passing them to Service A." src="/Cloud-Native/assets/images/secrets-overview-cloud-stores-f0c9f823ba6a3246dac070c4da40a80a.png" width="1739" height="1057" class="img_ev3q"></p>
 <p>Let&#x27;s walk through a couple sample workflows involving the use of Dapr&#x27;s Secrets Management capabilities!</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="setting-up-a-component-for-a-specific-secret-store-solution">Setting up a component for a specific secret store solution<a href="#setting-up-a-component-for-a-specific-secret-store-solution" class="hash-link" aria-label="Direct link to Setting up a component for a specific secret store solution" title="Direct link to Setting up a component for a specific secret store solution">​</a></h4>
 <ol>

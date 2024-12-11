@@ -39,7 +39,7 @@
 </ul>
 </li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-17bfa50821263d1d81d1e0ac8b509032.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Serverless September slide promoting Savannah Ostrowski&amp;#39;s session on azd-template Gallery, titled E2E Dev – From Cloud to Community." src="https://azure.github.io/Cloud-Native/assets/images/banner-17bfa50821263d1d81d1e0ac8b509032.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="azure-friday">Azure Friday<a href="https://azure.github.io/Cloud-Native/blog/29-awesome-azd#azure-friday" class="hash-link" aria-label="Direct link to Azure Friday" title="Direct link to Azure Friday">​</a></h2>
 <p>This post is a follow-up to our #ServerlessSeptember post on <strong><a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli">Code to Cloud with Azure Developer CLI</a></strong> where we introduced <code>azd</code>, a new open-source tool that makes it quick and simple for you to move your application from a <em>local development environment</em> to Azure, streamlining your <em>end-to-end developer workflow</em> in the process.</p>
@@ -68,7 +68,7 @@
 <li>Visit the <a href="https://azure.github.io/awesome-azd/" target="_blank" rel="noopener noreferrer">awesome-azd Gallery</a></li>
 <li>Browse the <a href="https://github.com/Azure/awesome-azd/blob/main/README.md" target="_blank" rel="noopener noreferrer">awesome-azd README</a></li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/gallery-6c6684d3eb7048353a6641b17b689046.gif" width="1894" height="942" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Animated showcase of Awesome AZD Templates" src="https://azure.github.io/Cloud-Native/assets/images/gallery-6c6684d3eb7048353a6641b17b689046.gif" width="1894" height="942" class="img_ev3q"></p>
 <p>The Gallery is organized into three main areas:</p>
 <ul>
 <li><a href="https://azure.github.io/awesome-azd/" target="_blank" rel="noopener noreferrer">Gallery</a> page hosting templates.</li>
@@ -131,14 +131,14 @@
 <li><strong>Web Applications</strong> - scaled by #concurrent HTTP requests</li>
 <li><strong>Background Process</strong> - scaled by CPU and Memory usage</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/cloud-native-f4c230814d34747c8920a9f01729ccca.png" width="1280" height="720" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Infographic explaining serverless cloud-native uses, including microservices, public APIs, web apps, event-driven, and background processing." src="https://azure.github.io/Cloud-Native/assets/images/cloud-native-f4c230814d34747c8920a9f01729ccca.png" width="1280" height="720" class="img_ev3q"></p>
 <p>Great - but as developers, we really want to know <strong><em>how</em> we can get started building and deploying serverless solutions on Azure</strong>. That was the focus of our #ServerlessSeptember journey. Let's take a quick look at the four key themes.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions-as-a-service-faas">Functions-as-a-Service (FaaS)<a href="https://azure.github.io/Cloud-Native/blog/serverless-status-post#functions-as-a-service-faas" class="hash-link" aria-label="Direct link to Functions-as-a-Service (FaaS)" title="Direct link to Functions-as-a-Service (FaaS)">​</a></h2>
 <p><em>Functions-as-a-Service</em> (FaaS) is the epitome of developer productivity for full-stack modern apps. As developers, you don't manage infrastructure and focus only on business logic and application code. And, with <strong>Serverless Compute</strong> you <em>only pay for when your code runs</em> - making this the simplest first step to begin migrating your application to cloud-native.</p>
 <p>In Azure, FaaS is provided by Azure Functions. Check out our <a href="https://azure.github.io/Cloud-Native/blog/08-functions-azure">Functions + Serverless on Azure</a> to go from learning core concepts, to building your first Functions app in your programming language of choice. Azure functions support multiple programming languages including C#, F#, Java, JavaScript, Python, Typescript, and PowerShell.</p>
 <p>Want to get extended language support for languages like Go, and Rust? You can <a href="https://azure.github.io/Cloud-Native/blog/zero2hero-func-03">Use Custom Handlers</a> to make this happen! But what if you want to have long-running functions, or create complex workflows involving more than one function? Read our <a href="https://azure.github.io/Cloud-Native/blog/zero2hero-func-02">post on Durable Entities</a> to learn how you can <em>orchestrate</em> this with Azure Functions.</p>
 <p>Check out this recent <a href="https://aka.ms/ATEonDemand" target="_blank" rel="noopener noreferrer">AskTheExpert</a> Q&amp;A session with the Azure Functions team to get answers to popular community questions on Azure Functions features and usage.</p>
-<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&amp;ep=serverless-september-azure-functions" width="600" height="400"></iframe>
+<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&amp;ep=serverless-september-azure-functions" width="600" height="400" title="Ask the Expert: Serverless September Azure Functions"></iframe>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="microservices-and-containers">Microservices and Containers<a href="https://azure.github.io/Cloud-Native/blog/serverless-status-post#microservices-and-containers" class="hash-link" aria-label="Direct link to Microservices and Containers" title="Direct link to Microservices and Containers">​</a></h2>
 <p>Functions-as-a-Service is an ideal first step towards serverless development. But Functions are just <em>one of the 5 pillars</em> of <a href="https://azure.github.io/Cloud-Native/blog/zero2hero-aca-01" target="_blank" rel="noopener noreferrer">cloud-native</a>. This week we'll look at two of the other pillars: <strong>microservices</strong> and <strong>containers</strong> - with specific focus on two core technologies: Azure Container Apps and Dapr (Distributed Application Runtime).</p>
 <p>In this 6-part series of posts, we walk through each technology independently, before looking at the value of building Azure Container Apps <strong>with Dapr</strong>.</p>
@@ -152,7 +152,7 @@
 </ul>
 <p><img loading="lazy" src="https://github.com/Azure/Cloud-Native/blob/41cc0890acd204a9069836dfcc5727c48d5fca97/website/blog/2022-09-14/img/ACA-Tutorial-AsyncComm-0922.jpg" alt="Build ACA with Dapr" class="img_ev3q"></p>
 <p>Check out this recent <a href="https://aka.ms/ATEonDemand" target="_blank" rel="noopener noreferrer">AskTheExpert</a> Q&amp;A session with the Azure Container Apps team for answers to popular community questions on core features and usage.</p>
-<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&amp;ep=serverless-september-azure-container-apps" width="640" height="360"></iframe>
+<iframe src="https://learn-video.azurefd.net/vod/player?show=ask-the-expert&amp;ep=serverless-september-azure-container-apps" width="640" height="360" title="Ask the Expert: Serverless September Azure Container Apps"></iframe>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="serverless-integrations">Serverless Integrations<a href="https://azure.github.io/Cloud-Native/blog/serverless-status-post#serverless-integrations" class="hash-link" aria-label="Direct link to Serverless Integrations" title="Direct link to Serverless Integrations">​</a></h2>
 <p>In the first half of the month we looked at <em>compute</em> resources for building and deploying serverless applications. In the second half, we look at <em>integration</em> tools and resources that automate developer workflows to streamline the end-to-end developer experience.</p>
 <p>In Azure, this is enabled by services like <a href="https://learn.microsoft.com/azure/logic-apps/logic-apps-overview" target="_blank" rel="noopener noreferrer">Azure Logic Apps</a> and <a href="https://learn.microsoft.com/azure/event-grid/overview" target="_blank" rel="noopener noreferrer">Azure Event Grid</a>. Azure Logic Apps provides a visual designer to <em>create and automate workflows</em> with little or no code involved. Azure Event Grid provides a <em>highly-scable event broker</em> with support for pub/sub communications to drive async event-driven architectures.</p>
@@ -172,7 +172,7 @@
 <p>But wait - there's more. Those are a sample of the end-to-end application scenarios that are built on serverless on Azure. But what about the <strong>developer experience</strong>? In <a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli" target="_blank" rel="noopener noreferrer"><strong>this article</strong></a>, we say hello to the <em>Azure Developer CLI</em> - an open-source tool that streamlines your develop-deploy workflow, with simple commands that map to core stages of your development journey. <strong>Go from code to cloud with one CLI</strong></p>
 <p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/azd-workflow-163d61cf5c6aa44a23dd4dda9858a296.png" alt="" class="img_ev3q"></p>
 <p>And <strong>watch this space for more such tutorials and content through October</strong>, including a special #Hacktoberfest focused initiative to encourage and support first-time contributors to open-source. Here's a sneak peek at the project we plan to share - the new <a href="https://aka.ms/awesome-azd" target="_blank" rel="noopener noreferrer">awesome-azd templates</a> gallery.</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/gallery-6c6684d3eb7048353a6641b17b689046.gif" width="1894" height="942" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Animated showcase of Awesome AZD Templates" src="https://azure.github.io/Cloud-Native/assets/images/gallery-6c6684d3eb7048353a6641b17b689046.gif" width="1894" height="942" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="join-us-at-microsoft-ignite">Join us at Microsoft Ignite!<a href="https://azure.github.io/Cloud-Native/blog/serverless-status-post#join-us-at-microsoft-ignite" class="hash-link" aria-label="Direct link to Join us at Microsoft Ignite!" title="Direct link to Join us at Microsoft Ignite!">​</a></h2>
 <p>Want to continue your learning journey, and learn about what's next for Serverless on Azure?
@@ -206,12 +206,12 @@
 <li><strong>Exercise:</strong> Try this yourself or create your own <code>azd</code> template</li>
 <li><strong>Resources:</strong> For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-ae42f77f55dd26f67623a51594c4d1e7.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Serverless September slide featuring Savannah Ostrowski presenting Azure Developer CLI: E2E Dev – From Code to Cloud." src="https://azure.github.io/Cloud-Native/assets/images/banner-ae42f77f55dd26f67623a51594c4d1e7.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-new-tool-has-entered-the-chat-what-is-the-azure-developer-cli-azd"><strong>A new tool has entered the chat:</strong> What is the Azure Developer CLI (<code>azd</code>)?<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#a-new-tool-has-entered-the-chat-what-is-the-azure-developer-cli-azd" class="hash-link" aria-label="Direct link to a-new-tool-has-entered-the-chat-what-is-the-azure-developer-cli-azd" title="Direct link to a-new-tool-has-entered-the-chat-what-is-the-azure-developer-cli-azd">​</a></h2>
 <p>The Azure Developer CLI (<code>azd</code>) is a new, open source tool that makes it quick and simple for you to move your application from your local development environment to Azure while considering your end-to-end developer workflow. You might be familiar with other CLIs that focus on Infrastructure as Code or scaffolding your application but the Azure Developer CLI does all that and more!</p>
 <p>The Azure Developer CLI commands are simple, high-level and map to core stages in your developer workflow. Think project initialization/creation, build, deploy, repeat!</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/azd-workflow-163d61cf5c6aa44a23dd4dda9858a296.png" width="1920" height="1080" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Code to Cloud guide with Azure Developer CLI, highlighting commands for initializing, deploying, and monitoring cloud-native applications." src="https://azure.github.io/Cloud-Native/assets/images/azd-workflow-163d61cf5c6aa44a23dd4dda9858a296.png" width="1920" height="1080" class="img_ev3q"></p>
 <p>By using <a href="https://aka.ms/azure-dev/templates?source=serverless-september" target="_blank" rel="noopener noreferrer">idiomatic and flexible application templates</a>, the Azure Developer CLI uses recipes for common application architectures that you can customize for your use case. These templates include:</p>
 <ul>
 <li>best practices</li>
@@ -223,7 +223,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="template-anatomy-101-what-makes-an-azd-template"><strong>(Template) Anatomy 101</strong>: What makes an <code>azd</code> template?<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#template-anatomy-101-what-makes-an-azd-template" class="hash-link" aria-label="Direct link to template-anatomy-101-what-makes-an-azd-template" title="Direct link to template-anatomy-101-what-makes-an-azd-template">​</a></h2>
 <p>So now that you've been introduced to the Azure Developer CLI, let's take a look at an <code>azd</code>-enabled codebase, which we call a template. You can think of a template as a recipe - it provides a solid foundation that you can customize depending on your preference/use case/requirements.</p>
 <p>To make this concrete and because it's #ServerlessSeptember, we're going to walk through this <a href="https://github.com/Azure-Samples/todo-python-mongo-swa-func" target="_blank" rel="noopener noreferrer">ToDo application template</a> that uses Azure Static Web Apps and Azure Functions.</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/arch-diagram-9fc83dea79bdc2778665a6129823c6cd.png" width="1475" height="1509" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Azure resource group diagram showing a ReactJS web app, Python FastAPI, Cosmos DB, Key Vault, Azure Storage, and Azure Monitor." src="https://azure.github.io/Cloud-Native/assets/images/arch-diagram-9fc83dea79bdc2778665a6129823c6cd.png" width="1475" height="1509" class="img_ev3q"></p>
 <p>Let's talk about the files in terms of their purpose:</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="azure-developer-cli-specific-files">Azure Developer CLI-specific files<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#azure-developer-cli-specific-files" class="hash-link" aria-label="Direct link to Azure Developer CLI-specific files" title="Direct link to Azure Developer CLI-specific files">​</a></h3>
 <ul>
@@ -249,36 +249,36 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="if-you-want-to-follow-along-in-this-section-and-dont-already-have-the-azure-developer-cli-installed-check-out-these-instructions-to-install-it-on-windows-linux-or-macos-in-your-favorite-terminal">If you want to follow along in this section and don't already have the Azure Developer CLI installed, check out <a href="https://aka.ms/azure-dev/install-instructions?source=serverless-september" target="_blank" rel="noopener noreferrer">these instructions</a> to install it on Windows, Linux or MacOS in your favorite terminal!<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#if-you-want-to-follow-along-in-this-section-and-dont-already-have-the-azure-developer-cli-installed-check-out-these-instructions-to-install-it-on-windows-linux-or-macos-in-your-favorite-terminal" class="hash-link" aria-label="Direct link to if-you-want-to-follow-along-in-this-section-and-dont-already-have-the-azure-developer-cli-installed-check-out-these-instructions-to-install-it-on-windows-linux-or-macos-in-your-favorite-terminal" title="Direct link to if-you-want-to-follow-along-in-this-section-and-dont-already-have-the-azure-developer-cli-installed-check-out-these-instructions-to-install-it-on-windows-linux-or-macos-in-your-favorite-terminal">​</a></h3>
 <p>So now that we've gone over what this template contains on GitHub, let's pull this template code down to our local machine, set it up for local development, provision the right infrastructure, and deploy the code on Azure in a <strong>single step</strong>.</p>
 <p>When designing the CLI, we wanted the experience to be both flexible and non-magical (no side effects, easy to understand). So, we're going to run this all with <code>azd up</code> but you could alternatively run a series of three commands and the outcome would be the same - <code>azd init --t Azure-Samples/todo-python-mongo-swa-func</code> (to pull the code down to your machine), <code>azd provision</code> (to provision infrastructure) and then <code>azd deploy</code> (to deploy application code on Azure). Choose your own adventure!</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/single-step-b78e3ff4650026486170cea1a4931152.png" width="1226" height="366" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Azure CLI guide showing commands: azd init for setup, azd provision for resource creation, and azd deploy for app deployment." src="https://azure.github.io/Cloud-Native/assets/images/single-step-b78e3ff4650026486170cea1a4931152.png" width="1226" height="366" class="img_ev3q"></p>
 <p>So let's walk through it. On running <code>azd up -t todo-python-mongo-swa-func</code>, I'm prompted for a couple pieces of information as part of the <code>azd init</code> process being run under the hood:</p>
 <ul>
 <li><strong>An environment name</strong> - the prefix for the resource group that will be created to hold all Azure resources</li>
 <li><strong>An Azure region</strong> - the Azure location where your resources will be deployed</li>
 <li><strong>An Azure subscription</strong> - the Azure subscription where your resources will be deployed
-<img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/start-up-93fc105dd5d9305c5b28c5912481341d.png" width="1352" height="122" class="img_ev3q"></li>
+<img loading="lazy" alt="Terminal output showing azd up command initializing an Azure project with template setup, environment name, and subscription details." src="https://azure.github.io/Cloud-Native/assets/images/start-up-93fc105dd5d9305c5b28c5912481341d.png" width="1352" height="122" class="img_ev3q"></li>
 </ul>
 <p>Once that information is provided, <code>azd</code> will pull down the code from GitHub and create a <code>.azure/</code> directory in the project root that contains all Azure Developer CLI environment information that you just entered. This directory will be important when it comes time to provision and deploy infrastructure in the next step in the <code>up</code> process.</p>
 <p>The next step here is provisioning. <code>azd</code> is running <code>azd provision</code> on your behalf and leveraging the IaC assets in the <code>.infra/</code> directory in the project. As the tool works to provision, you'll see an output of each resource (name alongside a unique identifier which you can use to reference back to the Azure Portal, if you want)
-<img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/provision-up-dd676acea00f3760ddd140713ce9169a.png" width="1878" height="265" class="img_ev3q"></p>
+<img loading="lazy" alt="Terminal output showing Azure CLI provisioning resources, including a static web app, function app, storage, Cosmos DB, and Key Vault." src="https://azure.github.io/Cloud-Native/assets/images/provision-up-dd676acea00f3760ddd140713ce9169a.png" width="1878" height="265" class="img_ev3q"></p>
 <p>Finally, the final step here in running <code>azd up</code> is deployment. <code>azd</code> is running <code>azd deploy</code> and deploying the application code to the resources that we're provisioned in the previous phase of the process. Once this has completed, you'll be able to click on two different endpoint URLs - one for the backend and one for the frontend.
-<img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/deploy-up-6d2e9abe348976287738e4acde709a80.png" width="1234" height="201" class="img_ev3q"></p>
+<img loading="lazy" alt="Terminal output displaying successful deployment of API and web services, with endpoints and resource group details." src="https://azure.github.io/Cloud-Native/assets/images/deploy-up-6d2e9abe348976287738e4acde709a80.png" width="1234" height="201" class="img_ev3q"></p>
 <p>The backend endpoint (<code>service api</code>) hosts the specification for the API via the <code>openapi.yaml</code> file that's also in the root of the project template. You can explore the endpoints that are available in the web app here.
-<img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/backend-61ff7bb024093a01f81ff1b2efcc5630.png" width="1466" height="883" class="img_ev3q"></p>
+<img loading="lazy" alt="OpenAPI documentation for Simple Todo API, showing endpoints for CRUD operations on lists and items with HTTP methods." src="https://azure.github.io/Cloud-Native/assets/images/backend-61ff7bb024093a01f81ff1b2efcc5630.png" width="1466" height="883" class="img_ev3q"></p>
 <p>The frontend endpoint (<code>service web</code>) hosts a fully-fledged and functional ToDo web app with a UI, Cosmos DB for the database and Key Vault for application secrets. This isn't just application hosting. It's really everything you need to be successful and productive, all set up on your behalf by the Azure Developer CLI.
-<img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/frontend-2c29ef61f79ab80a1f5486d3d29b242d.png" width="1916" height="767" class="img_ev3q"></p>
+<img loading="lazy" alt="Task management app view with a to-do list item and a detailed edit panel for setting task description, status, and due date." src="https://azure.github.io/Cloud-Native/assets/images/frontend-2c29ef61f79ab80a1f5486d3d29b242d.png" width="1916" height="767" class="img_ev3q"></p>
 <p>...and that's it! We've successfully deployed our application on Azure!</p>
 <p>But there's more!</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-monitoring-and-cicd">Best practices: Monitoring and CI/CD!<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#best-practices-monitoring-and-cicd" class="hash-link" aria-label="Direct link to Best practices: Monitoring and CI/CD!" title="Direct link to Best practices: Monitoring and CI/CD!">​</a></h2>
 <p>In my opinion, it's not enough to <em>just</em> set up the application on Azure! I want to know that my web app is performant and serving my users reliably! I also want to make sure that I'm not inadvertently breaking my application as I continue to make changes to it. Thankfully, the Azure Developer CLI also handles all of this via two additional commands - <code>azd monitor</code> and <code>azd pipeline config</code>.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="application-monitoring">Application Monitoring<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#application-monitoring" class="hash-link" aria-label="Direct link to Application Monitoring" title="Direct link to Application Monitoring">​</a></h3>
 <p>When we provisioned all of our infrastructure, we also set up application monitoring via a Bicep file in our <code>.infra/</code> directory that spec'd out an Application Insights dashboard. By running <code>azd monitor</code> we can see the dashboard with live metrics that was configured for the application.
-<img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/metrics-a7988df3076a04e473ddb210c80c95cf.png" width="1653" height="764" class="img_ev3q"></p>
+<img loading="lazy" alt="Azure Monitor dashboard showing metrics for incoming requests, outgoing requests, overall health, and server telemetry details." src="https://azure.github.io/Cloud-Native/assets/images/metrics-a7988df3076a04e473ddb210c80c95cf.png" width="1653" height="764" class="img_ev3q"></p>
 <p>We can also navigate to the Application Dashboard by clicking on the resource group name, where you can set a specific refresh rate for the dashboard, and see usage, reliability, and performance metrics over time.
-<img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/dashboard-97724f78d1fcc7c1e075e41498f62fa4.png" width="1553" height="865" class="img_ev3q"></p>
+<img loading="lazy" alt="Application Insights dashboard with charts for user sessions, server response time, availability, and page load performance." src="https://azure.github.io/Cloud-Native/assets/images/dashboard-97724f78d1fcc7c1e075e41498f62fa4.png" width="1553" height="865" class="img_ev3q"></p>
 <p>I don't know about everyone else but I have spent a ton of time building out similar dashboards. It can be super time-consuming to write all the queries and create the visualizations so this feels like a real time saver.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="cicd-1">CI/CD<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#cicd-1" class="hash-link" aria-label="Direct link to CI/CD" title="Direct link to CI/CD">​</a></h3>
 <p>Finally let's talk about setting up CI/CD! This might be my favorite <code>azd</code> feature. As I mentioned before, the Azure Developer CLI has a command, <code>azd pipeline config</code>, which uses the files in the <code>.github/</code> directory to set up a GitHub Action. More than that, if there is no upstream repo, the Developer CLI will actually help you create one. But what does this mean exactly? Because our GitHub Action is using the same commands you'd run in the CLI under the hood, we're actually going to have CI/CD set up to run on every commit into the repo, against real Azure resources. What a sweet collaboration feature!</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/pipeline-config-40319f9d957eb87325aa11427e1801eb.png" width="1798" height="960" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Terminal log showing azd pipeline config command creating a GitHub repository and configuring CI pipeline with Azure secrets." src="https://azure.github.io/Cloud-Native/assets/images/pipeline-config-40319f9d957eb87325aa11427e1801eb.png" width="1798" height="960" class="img_ev3q"></p>
 <p>That's it! We've gone end-to-end with the Azure Developer CLI - initialized a project, provisioned the resources on Azure, deployed our code on Azure, set up monitoring logs and dashboards, and set up a CI/CD pipeline with GitHub Actions to run on every commit into the repo (on real Azure resources!).</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-try-it-yourself-or-create-your-own-template"><strong>Exercise:</strong> Try it yourself or create your own template!<a href="https://azure.github.io/Cloud-Native/blog/29-azure-developer-cli#exercise-try-it-yourself-or-create-your-own-template" class="hash-link" aria-label="Direct link to exercise-try-it-yourself-or-create-your-own-template" title="Direct link to exercise-try-it-yourself-or-create-your-own-template">​</a></h2>
 <p>As an exercise, try out the workflow above with <a href="https://aka.ms/azure-dev/templates" target="_blank" rel="noopener noreferrer">any template on GitHub</a>!</p>
@@ -319,7 +319,7 @@
 <li>Exercise: Try this yourself!</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-3e7c6e6693ff558354358bf059a7c853.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Event slide by Justin Yoo (@justinchronicle) on combining Serverless architecture with Microsoft Power Platform tools." src="https://azure.github.io/Cloud-Native/assets/images/banner-3e7c6e6693ff558354358bf059a7c853.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>SAMPLE REPO</div><div class="admonitionContent_BuS1"><p>Want to follow along? Check out the <a href="https://github.com/justinyoo/google-naver-maps-custom-connector-sample" target="_blank" rel="noopener noreferrer">sample app on GitHub repository</a> used in this post.</p></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-power-platform-custom-connector">What is Power Platform custom connector?<a href="https://azure.github.io/Cloud-Native/blog/28-where-am-i#what-is-power-platform-custom-connector" class="hash-link" aria-label="Direct link to What is Power Platform custom connector?" title="Direct link to What is Power Platform custom connector?">​</a></h2>
@@ -501,7 +501,7 @@
 <li>Live Metrics stream</li>
 <li>Troubleshooting Azure Functions</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/zero-to-hero-madhura-9186d0cba8bf8974d76dfdeb73cd5f50.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Serverless September slide featuring Madhura Bharadwaj presenting Monitoring &amp;amp; Troubleshooting Apps in Azure Functions." src="https://azure.github.io/Cloud-Native/assets/images/zero-to-hero-madhura-9186d0cba8bf8974d76dfdeb73cd5f50.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="monitoring-your-azure-functions">Monitoring your Azure Functions:<a href="https://azure.github.io/Cloud-Native/blog/zero2hero-func-07#monitoring-your-azure-functions" class="hash-link" aria-label="Direct link to Monitoring your Azure Functions:" title="Direct link to Monitoring your Azure Functions:">​</a></h2>
 <p>Azure Functions uses <strong>Application Insights</strong> to collect and analyze log data from individual function executions in your function app.</p>
@@ -555,7 +555,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Step-by-step: Deploying and running on Azure Container Apps</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-a80dd142b324c50ca8d68b0c69a4206b.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Slide on &amp;quot;E2E – Container Apps&amp;quot; by Brian Benz (@bbenz), focusing on deploying Spring Boot with Azure Container Registry." src="https://azure.github.io/Cloud-Native/assets/images/banner-a80dd142b324c50ca8d68b0c69a4206b.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="deploy-java-containers-to-cloud">Deploy Java containers to cloud<a href="https://azure.github.io/Cloud-Native/blog/25-aca-java#deploy-java-containers-to-cloud" class="hash-link" aria-label="Direct link to Deploy Java containers to cloud" title="Direct link to Deploy Java containers to cloud">​</a></h2>
 <p>We'll deploy a Java application running on Spring Boot in a container to Azure Container Registry and Azure Container Apps. Here are the main steps:</p>
@@ -676,7 +676,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Exercise: Try this yourself!</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-7fdb7fe187e430c2baabec8b2ae4b648.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Slide on &amp;quot;E2E – Container Apps&amp;quot; by Alex Wolf (@alexwolfmsft), covering ASP.NET, GitHub Actions, and Bicep in serverless deployments." src="https://azure.github.io/Cloud-Native/assets/images/banner-7fdb7fe187e430c2baabec8b2ae4b648.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h1>Introduction</h1>
 <p>Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.</p>
@@ -878,7 +878,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li><a href="https://azure.github.io/Cloud-Native/blog/21-cloudevents-via-event-grid#exercise-try-this-yourself">Exercise: Try this yourself!</a></li>
 <li><a href="https://azure.github.io/Cloud-Native/blog/21-cloudevents-via-event-grid#resources-for-self-study">Resources: For self-study!</a></li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-44903533e9d0b0bdac7d242027cc0694.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Slide for &amp;quot;Brokering Cloud Events,&amp;quot; presented by Justin Yoo (@justinchronicle), discussing Event Grid for integrating cloud services." src="https://azure.github.io/Cloud-Native/assets/images/banner-44903533e9d0b0bdac7d242027cc0694.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <p>OK. Let's get started!</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-cloudevents">What is CloudEvents?<a href="https://azure.github.io/Cloud-Native/blog/21-cloudevents-via-event-grid#what-is-cloudevents" class="hash-link" aria-label="Direct link to What is CloudEvents?" title="Direct link to What is CloudEvents?">​</a></h2>
@@ -988,7 +988,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>✋ Exercise: Try this tutorial out yourself!</li>
 <li>📚 Resources: For Self-Study</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-a18bdc5dea8b6ae90be31453092132fc.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Slide featuring &amp;quot;Integrate Microsoft Graph: Automation With Logic Apps and Event Hubs&amp;quot; by Ayça Baş, contact @aycabs, part of Serverless September." src="https://azure.github.io/Cloud-Native/assets/images/banner-a18bdc5dea8b6ae90be31453092132fc.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>PRE-REQUISITES (Recommended)</div><div class="admonitionContent_BuS1"><ul>
 <li><a href="https://aka.ms/m365developers" target="_blank" rel="noopener noreferrer">Microsoft 365 Developer Program account</a></li>
@@ -1269,7 +1269,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Key support for Kafka messages - in Apache Kafka Extension</li>
 <li>References: Apache Kafka Extension for Azure Functions</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/ramya-functions-kafka-5a847320c1814350e946ac762907c8e3.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Error handling strategies in Azure Functions using Kafka Extension by Ramya Oruganti." src="https://azure.github.io/Cloud-Native/assets/images/ramya-functions-kafka-5a847320c1814350e946ac762907c8e3.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <p><em>Recently we launched the <a href="https://github.com/Azure/azure-functions-kafka-extension" target="_blank" rel="noopener noreferrer">Apache Kafka extension for Azure functions</a> in GA with some cool new features like deserialization of Avro Generic records and Kafka headers support. We received great responses - so we're back with more updates!</em></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="retry-policy-support">Retry Policy support<a href="https://azure.github.io/Cloud-Native/blog/zero2hero-func-05#retry-policy-support" class="hash-link" aria-label="Direct link to Retry Policy support" title="Direct link to Retry Policy support">​</a></h2>
@@ -1329,7 +1329,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Log Analytics - using Azure Monitor</li>
 <li>Metric Alerts and Log Alerts - using Azure Monitor</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/mike-aca-observability-fdc8af07553b1411298f719b22ceca15.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Learn how to monitor and manage Azure Container Apps effectively with Mike Morton’s observability tips." src="https://azure.github.io/Cloud-Native/assets/images/mike-aca-observability-fdc8af07553b1411298f719b22ceca15.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <p>In past weeks, <a href="https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/296868" target="_blank" rel="noopener noreferrer">@kendallroden</a> wrote about <a href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407" target="_blank" rel="noopener noreferrer">what it means to be Cloud-Native</a> and <a href="https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/236816" target="_blank" rel="noopener noreferrer">@Anthony Chu</a> the various ways to <a href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/journey-to-the-cloud-with-azure-container-apps/ba-p/3622609" target="_blank" rel="noopener noreferrer">get your apps running on Azure Container Apps</a>. Today, we will talk about the <strong>observability tools</strong> you can use to observe, debug, and diagnose your Azure Container Apps.</p>
 <p><strong>Azure Container Apps</strong> provides several observability features to help you debug and diagnose your apps. There are both Azure portal and CLI options you can use to help understand the health of your apps and help identify when issues arise.</p>
@@ -1343,7 +1343,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="console-connect">Console Connect<a href="https://azure.github.io/Cloud-Native/blog/zero2hero-aca-06#console-connect" class="hash-link" aria-label="Direct link to Console Connect" title="Direct link to Console Connect">​</a></h2>
 <p>In the Azure portal, you can connect to the console of a container in your app. Like log streaming, you can select the revision, replica, and container if applicable. After connecting to the console of the container, you can execute shell commands and utilities that you have installed in your container.  You can view files and their contents, monitor processes, and perform other debugging tasks.</p>
 <p>This can be great for checking configuration files or even modifying a setting or library your container is using. Of course, updating a container in this fashion is not something you should do to a production app, but tweaking and re-testing an app in a non-production environment can speed up development.</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-2-2e21617739406a5d9b090b9580b95dd3.png" width="550" height="336" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Azure portal view of an active container instance revision displaying console logs and files." src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-2-2e21617739406a5d9b090b9580b95dd3.png" width="550" height="336" class="img_ev3q"></p>
 <p>Here’s an example CLI command to connect to the console of a container app.</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">az containerapp exec -n MyContainerapp -g MyResourceGroup</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>You can find more information about the different options in our <a href="https://aka.ms/container-apps/exec-cli" target="_blank" rel="noopener noreferrer">CLI docs</a>.</p>
@@ -1359,11 +1359,11 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Replica restart count</li>
 </ul>
 <p>Here you can see the metrics explorer showing the replica count for an app as it scaled from one replica to fifteen, and then back down to one.</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-3-fcd3dd1c9bc4cc4ab8df18c1321502a8.png" width="550" height="319" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Azure Monitor chart showing replica count spike for &amp;#39;album-api&amp;#39; over the past 30 minutes." src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-3-fcd3dd1c9bc4cc4ab8df18c1321502a8.png" width="550" height="319" class="img_ev3q"></p>
 <p>You can also retrieve metric data through <a href="https://aka.ms/container-apps/azure-monitor-metrics-cli" target="_blank" rel="noopener noreferrer">the Azure CLI</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log-analytics">Log Analytics<a href="https://azure.github.io/Cloud-Native/blog/zero2hero-aca-06#log-analytics" class="hash-link" aria-label="Direct link to Log Analytics" title="Direct link to Log Analytics">​</a></h2>
 <p>Azure Monitor Log Analytics is great for viewing your historical logs emitted from your container apps. There are two custom tables of interest, the ContainerAppConsoleLogs_CL which contains all the log messages written by your app (stdout and stderr), and the ContainerAppSystemLogs_CL which contain the system messages from the Azure Container Apps service.</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-4-d284a4303e3c243917edb8eb2685f1ac.png" width="550" height="345" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Azure Log Analytics query output for &amp;#39;album-api&amp;#39; revision with shutdown messages listed." src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-4-d284a4303e3c243917edb8eb2685f1ac.png" width="550" height="345" class="img_ev3q"></p>
 <p>You can also query Log Analytics through the <a href="https://aka.ms/container-apps/azure-monitor-logs-cli" target="_blank" rel="noopener noreferrer">Azure CLI</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="alerts">Alerts<a href="https://azure.github.io/Cloud-Native/blog/zero2hero-aca-06#alerts" class="hash-link" aria-label="Direct link to Alerts" title="Direct link to Alerts">​</a></h2>
 <p>Azure Monitor alerts notify you so that you can respond quickly to critical issues. There are two types of alerts that you can define:</p>
@@ -1373,7 +1373,7 @@ Log streams can be viewed both in the portal and in most local development envir
 </ul>
 <p>You can create alert rules from metric charts in the metric explorer and from queries in Log Analytics. You can also define and manage alerts from the <strong>Monitor|Alerts</strong> page.</p>
 <p>Here is what creating an alert looks like in the Azure portal. In this case we are setting an alert rule from the metric explorer to trigger an alert if the replica restart count for a specific container app is greater than two within the last fifteen minutes.</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-5-b64a5cdcac00d2090c8efdd42861e339.png" width="550" height="302" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Setting up an alert rule in Azure for container replica restart thresholds." src="https://azure.github.io/Cloud-Native/assets/images/mike-observability-5-b64a5cdcac00d2090c8efdd42861e339.png" width="550" height="302" class="img_ev3q"></p>
 <p>To learn more about alerts, refer to <a href="https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-overview" target="_blank" rel="noopener noreferrer">Overview of alerts in Microsoft Azure</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://azure.github.io/Cloud-Native/blog/zero2hero-aca-06#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
 <p>In this article, we looked at the several ways to observe, debug, and diagnose your Azure Container Apps. As you can see there are rich portal tools and a complete set of CLI commands to use. All the tools are helpful throughout the lifecycle of your app, be sure to take advantage of them when having an issue and/or to prevent issues.</p>
@@ -1406,7 +1406,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Connecting it all together with a Logic App</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-e7cc7a75c1dd0c42170942a9186aeee3.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Slide promoting &amp;quot;Integrate Computer Vision: Teach the Cloud to Read &amp;amp; Categorize Your Mail&amp;quot; by Brian Benz, with contact handle @bbenz." src="https://azure.github.io/Cloud-Native/assets/images/banner-e7cc7a75c1dd0c42170942a9186aeee3.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="introducing-the-readmail-solution">Introducing the ReadMail solution<a href="https://azure.github.io/Cloud-Native/blog/18-cloudmail#introducing-the-readmail-solution" class="hash-link" aria-label="Direct link to Introducing the ReadMail solution" title="Direct link to Introducing the ReadMail solution">​</a></h2>
 <p>The US Postal system offers <a href="https://informeddelivery.usps.com/" target="_blank" rel="noopener noreferrer">a subscription service</a> that sends you images of mail it will be delivering to your home.  I decided it would be cool to try getting Azure to collect data based on these images, so that I could categorize my mail and track the types of mail that I received.</p>
@@ -1547,7 +1547,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Writing data to Cosmos DB from a Logic app</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-285b55411e45272a99069fd37ec84557.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Serverless September session on using CosmosDB and Logic Apps for tracking weather data changes, hosted by Brian Benz." src="https://azure.github.io/Cloud-Native/assets/images/banner-285b55411e45272a99069fd37ec84557.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction-to-logic-apps">Introduction to Logic Apps<a href="https://azure.github.io/Cloud-Native/blog/17-integrate-cosmosdb#introduction-to-logic-apps" class="hash-link" aria-label="Direct link to Introduction to Logic Apps" title="Direct link to Introduction to Logic Apps">​</a></h2>
 <p>Previously in Serverless September, we've covered Azure Functions, where the event triggers code. In Logic Apps, the event triggers a workflow that you design. Logic Apps enable serverless applications to connect to external sources for data then automate business processes via workflows.</p>
@@ -1559,7 +1559,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="setup-cosmos-db-for-logic-apps">Setup Cosmos DB for Logic Apps<a href="https://azure.github.io/Cloud-Native/blog/17-integrate-cosmosdb#setup-cosmos-db-for-logic-apps" class="hash-link" aria-label="Direct link to Setup Cosmos DB for Logic Apps" title="Direct link to Setup Cosmos DB for Logic Apps">​</a></h2>
 <p>Cosmos DB has <a href="https://learn.microsoft.com/azure/cosmos-db/choose-api" target="_blank" rel="noopener noreferrer">many APIs to choose from</a>, but to use the <a href="https://docs.microsoft.com/connectors/documentdb/" target="_blank" rel="noopener noreferrer">default Logic App connection</a>, we need to choose the a Cosmos DB SQL API.  We'll set this up via the Azure Portal.</p>
 <p>To get started with Cosmos DB, you create an account, then a database, then a container to store JSON documents. To create a new Cosmos DB account from the <a href="https://portal.azure.com/" target="_blank" rel="noopener noreferrer">portal dashboard</a>, Select <strong>Create a resource &gt; Azure Cosmos DB &gt; Create</strong>.  Choose <strong>core SQL</strong> for the API.</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/cosmosdbapiselection-573c0193332958da1c5090a29c6a7941.png" width="2976" height="1478" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Azure Cosmos DB API selection screen showing Core SQL, MongoDB, Cassandra, Azure Table, and Gremlin options with &amp;quot;Create&amp;quot; buttons." src="https://azure.github.io/Cloud-Native/assets/images/cosmosdbapiselection-573c0193332958da1c5090a29c6a7941.png" width="2976" height="1478" class="img_ev3q"></p>
 <p>Select your subscription, then create a new resource group called <strong>CosmosWeather</strong>.  Enter an account name and choose a location, select provisioned throughput capacity mode and apply the free tier discount. From here you can select <strong>Review and Create</strong>, then <strong>Create</strong></p>
 <blockquote>
 <p>Azure Cosmos DB is available in two different capacity modes: provisioned throughput and <a href="https://docs.microsoft.com/azure/cosmos-db/throughput-serverless" target="_blank" rel="noopener noreferrer">serverless</a>. You can perform the same database operations in both modes, but the way you get billed for these operations is different. We wil be using provisioned throughput and the free tier for this example.</p>
@@ -1632,7 +1632,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li><strong>Exercise</strong>: <a href="https://docs.microsoft.com/learn/challenges?id=b950cd7a-d456-46ab-81ba-3bd1ad86dc1c&amp;WT.mc_id=javascript-99907-ninarasi" target="_blank" rel="noopener noreferrer">Take the Cloud Skills Challenge</a></li>
 <li><strong>Resources</strong>: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-639be8df2be1df5b73125c263e8a21e1.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Day 15 recap of ACA and Dapr featuring E2E solutions and next steps by Nitya Narasimhan and Devanshi Joshi, highlighting integrations." src="https://azure.github.io/Cloud-Native/assets/images/banner-639be8df2be1df5b73125c263e8a21e1.png" width="1600" height="672" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="this-week-in-events">This Week In Events<a href="https://azure.github.io/Cloud-Native/blog/15-microservices-azure#this-week-in-events" class="hash-link" aria-label="Direct link to This Week In Events" title="Direct link to This Week In Events">​</a></h2>
 <p>We had a number of activities happen this week - here's a quick summary:</p>
 <ul>
@@ -1651,7 +1651,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>Finally, <a href="https://azure.github.io/Cloud-Native/blog/14-dapr-aca-quickstart" target="_blank" rel="noopener noreferrer">Build ACA with Dapr</a> tied it all together with a enterprise app scenario where an orders processor (ACA) uses Dapr APIs (PubSub, State Management) to receive and store order messages from Azure Service Bus.</li>
 </ul>
 <p>Here's a visual recap:</p>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/roadmap-Week2-cdacf0e02c8a938d944f3c4d9a29721a.png" width="3840" height="2160" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Summary of microservices and container apps with Azure Container Apps, Dapr integration, scaling, and secure access concepts." src="https://azure.github.io/Cloud-Native/assets/images/roadmap-Week2-cdacf0e02c8a938d944f3c4d9a29721a.png" width="3840" height="2160" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="self-study-code-samples--tutorials">Self Study: Code Samples &amp; Tutorials<a href="https://azure.github.io/Cloud-Native/blog/15-microservices-azure#self-study-code-samples--tutorials" class="hash-link" aria-label="Direct link to Self Study: Code Samples &amp; Tutorials" title="Direct link to Self Study: Code Samples &amp; Tutorials">​</a></h2>
 <p>There's no better way to get familiar with the concepts, than to dive in and play with code samples and hands-on tutorials. Here are 4 resources to bookmark and try out:</p>
 <ol>
@@ -1691,7 +1691,7 @@ Log streams can be viewed both in the portal and in most local development envir
 <li>What's Next: Advanced scenario in 12-part series</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-7d7a40cad48fa26cd9b62cdf2a073fe5.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Day 14 Serverless September graphic featuring &amp;quot;Build With Dapr&amp;quot; topic by Taiseer Joudeh, focusing on Dapr and Azure Container Apps." src="https://azure.github.io/Cloud-Native/assets/images/banner-7d7a40cad48fa26cd9b62cdf2a073fe5.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction-to-dapr">Introduction To Dapr<a href="https://azure.github.io/Cloud-Native/blog/14-dapr-aca-quickstart#introduction-to-dapr" class="hash-link" aria-label="Direct link to Introduction To Dapr" title="Direct link to Introduction To Dapr">​</a></h2>
 <p>As developers, we are often tasked with create scalable resilient and distributed microservices, but face challenges such as recovering state after failures, establishing reliable communication between services, integrating with external resources and instrumenting distributed tracing for end-to-end solution observability. Dapr (Distributed Application Runtime) offers an approach for solving these common problems more easily.</p>
@@ -1984,7 +1984,7 @@ If you want to set breakpoints and debug your daper application locally, you can
 <li>Conclusion</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-9d61f89816a8e8b5682eae3c4fcdb71c.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Session by Kendall Roden on securing ACA with container secrets, managed identity, and the Dapr secret store." src="https://azure.github.io/Cloud-Native/assets/images/banner-9d61f89816a8e8b5682eae3c4fcdb71c.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="securing-access-to-external-services">Securing access to external services<a href="https://azure.github.io/Cloud-Native/blog/13-aca-managed-id#securing-access-to-external-services" class="hash-link" aria-label="Direct link to Securing access to external services" title="Direct link to Securing access to external services">​</a></h2>
 <p>In most, if not all, microservice-based applications, one or more services in the system will rely on other cloud-hosted resources; Think external services like databases, secret stores, message brokers, event sources, etc. To interact with these services, an application must have the ability to establish a secure connection. Traditionally, an application will authenticate to these backing resources using some type of connection string or password.</p>
@@ -2070,7 +2070,7 @@ If you want to set breakpoints and debug your daper application locally, you can
 <li>Retrieving secrets using the Dapr secrets API in the application code.</li>
 <li>Optionally, referencing secrets in Dapr component files.</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/secrets-overview-cloud-stores-f0c9f823ba6a3246dac070c4da40a80a.png" width="1739" height="1057" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Diagram showing Dapr fetching secrets from cloud secret stores like AWS Secrets Manager, Azure Key Vault, and passing them to Service A." src="https://azure.github.io/Cloud-Native/assets/images/secrets-overview-cloud-stores-f0c9f823ba6a3246dac070c4da40a80a.png" width="1739" height="1057" class="img_ev3q"></p>
 <p>Let's walk through a couple sample workflows involving the use of Dapr's Secrets Management capabilities!</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="setting-up-a-component-for-a-specific-secret-store-solution">Setting up a component for a specific secret store solution<a href="https://azure.github.io/Cloud-Native/blog/13-aca-managed-id#setting-up-a-component-for-a-specific-secret-store-solution" class="hash-link" aria-label="Direct link to Setting up a component for a specific secret store solution" title="Direct link to Setting up a component for a specific secret store solution">​</a></h4>
 <ol>
@@ -2141,7 +2141,7 @@ If you want to set breakpoints and debug your daper application locally, you can
 <li>Exercise: Build &amp; Deploy a Dapr-enabled ACA.</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-cc3cfe656444b6f21e4bc8d2c541bc3e.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Session slide by Nitya Narasimhan on Dapr, explaining microservices with sidecar patterns, API blocks, and practical examples." src="https://azure.github.io/Cloud-Native/assets/images/banner-cc3cfe656444b6f21e4bc8d2c541bc3e.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hello-dapr">Hello, Dapr!<a href="https://azure.github.io/Cloud-Native/blog/12-build-with-dapr#hello-dapr" class="hash-link" aria-label="Direct link to Hello, Dapr!" title="Direct link to Hello, Dapr!">​</a></h2>
 <p>Building distributed applications is hard. Building <strong>reliable and portable microservces</strong> means having middleware that deals with challenges like service discovery, sync and async communications, state management, secure information sharing and more. Integrating these support services into your application can be challenging from both development and maintenance perspectives, adding complexity that is independent of the core application logic you want to focus on.</p>
@@ -2249,7 +2249,7 @@ If you want to set breakpoints and debug your daper application locally, you can
 <li>Message Processing With Azure Custom Handler</li>
 <li>Azure Portal Monitoring</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/zero-to-hero-melony-a4e4f337b95ea7199352808d42961764.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Custom Handlers for Serverless Go Apps by Melony Qin with an illustrated flowchart." src="https://azure.github.io/Cloud-Native/assets/images/zero-to-hero-melony-a4e4f337b95ea7199352808d42961764.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <p>If you have been working with <a href="https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=javascript-99907-cxa" target="_blank" rel="noopener noreferrer">Azure Functions</a> for a while, you may know Azure Functions is a serverless FaaS (Function as a Service) offered provided by Microsoft Azure, which is built for your key scenarios, including building web APIs, processing file uploads, responding to database changes, processing IoT data streams, managing message queues, and more.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="custom-handlers-what-and-why">Custom Handlers: What and Why<a href="https://azure.github.io/Cloud-Native/blog/zero2hero-func-03#custom-handlers-what-and-why" class="hash-link" aria-label="Direct link to Custom Handlers: What and Why" title="Direct link to Custom Handlers: What and Why">​</a></h2>
@@ -2314,7 +2314,7 @@ If you want to set breakpoints and debug your daper application locally, you can
 <li>Using Azure CLI</li>
 <li>Using CI/CD Pipelines</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/zero-to-hero-anthony-2bc58afc7d6bdff1e92a0c3b87ae02cc.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Anthony Chu presents Azure Container Apps, guiding you on building cloud-native apps for scalable deployments." src="https://azure.github.io/Cloud-Native/assets/images/zero-to-hero-anthony-2bc58afc7d6bdff1e92a0c3b87ae02cc.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <p>Last week, <a href="https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/296868?WT.mc_id=javascript-99907-cxa" target="_blank" rel="noopener noreferrer">@kendallroden</a> wrote about <a href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/go-cloud-native-with-azure-container-apps/ba-p/3616407" target="_blank" rel="noopener noreferrer">what it means to be Cloud-Native</a> and how Azure Container Apps provides a serverless containers platform for hosting all of your Cloud-Native applications. Today, we’ll walk through a few ways to get your apps up and running on Azure Container Apps.</p>
 <p>Depending on where you are in your Cloud-Native app development journey, you might choose to use different tools to deploy your apps.</p>
@@ -2382,7 +2382,7 @@ If you want to set breakpoints and debug your daper application locally, you can
 <li>Exercise: Explore <a href="https://aka.ms/oss-labs" target="_blank" rel="noopener noreferrer">azure-opensource-labs</a> examples</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="https://azure.github.io/Cloud-Native/assets/images/banner-3e6ce6ac4f59bb1c536972dced457df3.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Event slide featuring Paul Yu discussing Azure Container Apps scaling with KEDA, including serverless features and scaling rules." src="https://azure.github.io/Cloud-Native/assets/images/banner-3e6ce6ac4f59bb1c536972dced457df3.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="so-what-makes-azure-container-apps-serverless">So, what makes Azure Container Apps "serverless"?<a href="https://azure.github.io/Cloud-Native/blog/11-scaling-container-apps#so-what-makes-azure-container-apps-serverless" class="hash-link" aria-label="Direct link to So, what makes Azure Container Apps &quot;serverless&quot;?" title="Direct link to So, what makes Azure Container Apps &quot;serverless&quot;?">​</a></h2>
 <p>Today we are going to focus on what makes Azure Container Apps (ACA) a "serverless" offering. But what does the term "<em>serverless</em>" really mean? As much as we'd like to think there aren't any servers involved, that is certainly not the case. In general, "serverless" means that most (if not all) server maintenance has been abstracted away from you.</p>

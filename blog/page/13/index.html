@@ -21,8 +21,8 @@
 <script>!function(t,e,n,c,a,r,s){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(r=e.createElement(c)).async=1,r.src="https://www.clarity.ms/tag/d61n997vq9",(s=e.getElementsByTagName(c)[0]).parentNode.insertBefore(r,s)}(window,document,"clarity","script")</script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js"></script><link rel="stylesheet" href="/Cloud-Native/assets/css/styles.cf5fa7e1.css">
-<script src="/Cloud-Native/assets/js/runtime~main.f0325e06.js" defer="defer"></script>
+<script src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js"></script><link rel="stylesheet" href="/Cloud-Native/assets/css/styles.38c9e8a2.css">
+<script src="/Cloud-Native/assets/js/runtime~main.1aae2929.js" defer="defer"></script>
 <script src="/Cloud-Native/assets/js/main.2244487d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -40,7 +40,7 @@
 <li>Writing data to Cosmos DB from a Logic app</li>
 <li>Resources: For self-study!</li>
 </ul>
-<p><img loading="lazy" src="/Cloud-Native/assets/images/banner-285b55411e45272a99069fd37ec84557.png" width="1600" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Serverless September session on using CosmosDB and Logic Apps for tracking weather data changes, hosted by Brian Benz." src="/Cloud-Native/assets/images/banner-285b55411e45272a99069fd37ec84557.png" width="1600" height="672" class="img_ev3q"></p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction-to-logic-apps">Introduction to Logic Apps<a href="#introduction-to-logic-apps" class="hash-link" aria-label="Direct link to Introduction to Logic Apps" title="Direct link to Introduction to Logic Apps">​</a></h2>
 <p>Previously in Serverless September, we&#x27;ve covered Azure Functions, where the event triggers code. In Logic Apps, the event triggers a workflow that you design. Logic Apps enable serverless applications to connect to external sources for data then automate business processes via workflows.</p>
@@ -52,7 +52,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="setup-cosmos-db-for-logic-apps">Setup Cosmos DB for Logic Apps<a href="#setup-cosmos-db-for-logic-apps" class="hash-link" aria-label="Direct link to Setup Cosmos DB for Logic Apps" title="Direct link to Setup Cosmos DB for Logic Apps">​</a></h2>
 <p>Cosmos DB has <a href="https://learn.microsoft.com/azure/cosmos-db/choose-api" target="_blank" rel="noopener noreferrer">many APIs to choose from</a>, but to use the <a href="https://docs.microsoft.com/connectors/documentdb/" target="_blank" rel="noopener noreferrer">default Logic App connection</a>, we need to choose the a Cosmos DB SQL API.  We&#x27;ll set this up via the Azure Portal.</p>
 <p>To get started with Cosmos DB, you create an account, then a database, then a container to store JSON documents. To create a new Cosmos DB account from the <a href="https://portal.azure.com" target="_blank" rel="noopener noreferrer">portal dashboard</a>, Select <strong>Create a resource &gt; Azure Cosmos DB &gt; Create</strong>.  Choose <strong>core SQL</strong> for the API.</p>
-<p><img loading="lazy" src="/Cloud-Native/assets/images/cosmosdbapiselection-573c0193332958da1c5090a29c6a7941.png" width="2976" height="1478" class="img_ev3q"></p>
+<p><img loading="lazy" alt="Azure Cosmos DB API selection screen showing Core SQL, MongoDB, Cassandra, Azure Table, and Gremlin options with &amp;quot;Create&amp;quot; buttons." src="/Cloud-Native/assets/images/cosmosdbapiselection-573c0193332958da1c5090a29c6a7941.png" width="2976" height="1478" class="img_ev3q"></p>
 <p>Select your subscription, then create a new resource group called <strong>CosmosWeather</strong>.  Enter an account name and choose a location, select provisioned throughput capacity mode and apply the free tier discount. From here you can select <strong>Review and Create</strong>, then <strong>Create</strong></p>
 <blockquote>
 <p>Azure Cosmos DB is available in two different capacity modes: provisioned throughput and <a href="https://docs.microsoft.com/azure/cosmos-db/throughput-serverless" target="_blank" rel="noopener noreferrer">serverless</a>. You can perform the same database operations in both modes, but the way you get billed for these operations is different. We wil be using provisioned throughput and the free tier for this example.</p>
