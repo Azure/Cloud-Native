@@ -61,7 +61,7 @@ function Feature({svgpath, title, linkTitle, description, link}) {
             <p>{description}</p>
           </div>
           <div className={styles.buttons}>
-            <Link className="button button--block button--secondary button--lg" to={link}>
+            <Link className="button button--block button--primary button--lg" to={link}>
               {linkTitle}
             </Link>
           </div>
