@@ -10,9 +10,9 @@
   --ifm-color-primary-lighter: #9f81d1;
   --ifm-color-primary-lightest: #b7a2dd;
   --ifm-navbar-background-color: #f5f6f7!important;
-  --ifm-link-color: #b638ba!important;
+  --ifm-link-color: #c03bc4!important;
   --ifm-footer-background-color: #ffffff!important;
-  --ifm-card-background-color: #f4f3f5!important;
+  --ifm-card-background-color: #ffffff!important;
   --font-color: #323130;
   --ifm-background-color: #ffffff!important;
 }
@@ -25,8 +25,8 @@
   --ifm-color-primary-light: #dcd2ee;
   --ifm-color-primary-lighter: #e7e0f4;
   --ifm-color-primary-lightest: #ffffff;
-  --ifm-background-color: #002948!important;
-  --ifm-card-background-color: #004277!important;
+  --ifm-background-color: #2a446f!important;
+  --ifm-card-background-color: #2a446f!important;
   --ifm-navbar-background-color: #0b1d4a!important;
   --ifm-footer-background-color: #0b1d4a!important;
   --ifm-dropdown-background-color: #0b1d4a!important;
@@ -87,9 +87,9 @@ a {
 }
 
 /* Underline all links within any header tag */
-h3 a, h4 a, h5 a, h6 a {
+/* h3 a, h4 a, h5 a, h6 a {
   text-decoration: underline;
-}
+} */
 
 
 .table-of-contents__link,
@@ -398,4 +398,5 @@ hr {
   .heroAzureHome {
     background-image: none!important;
   } */
+
 }

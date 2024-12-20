@@ -181,3 +181,21 @@ ul li input[type="checkbox"] {
   border-radius: .5rem;
   border: 1px solid gray;
 }
+
+.pageBg {
+  background: linear-gradient(
+    to bottom right,
+    #e3f3ff,
+    #f9f7ff,
+    #f9fcfe
+  );
+}
+
+[data-theme='dark'] .pageBg {
+  background: linear-gradient(
+    to bottom right,
+    #152338,
+    #1D2F4D,
+    #253C61
+  );
+}

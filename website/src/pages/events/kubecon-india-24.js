@@ -397,9 +397,9 @@ export default function KubeconIndia() {
     <AnnouncementBarProvider hide={true}>
     <Layout title={pageProps.title} description={pageProps.description}>
       <Head>
-      <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
       </Head>
-      <main>
+      <main className={styles.pageBg}>
       <CampaignHeader />
       <Sessions />
       <Demos />

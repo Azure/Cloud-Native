@@ -154,7 +154,7 @@ export default function BuildIA() {
       title={`Intelligent Apps`}
       description="Join us for a month-long celebration of intelligent apps. From AI to cloud-scale data and cloud-native technology, build differentiated digital experiences on Azure!"> 
       <CampaignHeader />
-      <main>
+      <main className={styles.pageBg}>
         <FeaturesSection />
       </main>
     </Layout>

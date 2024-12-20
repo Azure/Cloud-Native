@@ -193,7 +193,7 @@ export default function AskTheExperts() {
         <SectionHeader 
             title={pageProps.title}
             description={pageProps.description} />
-        <main>
+        <main className={styles.pageBg}>
             <SectionContent/>
         </main>
       </Layout>

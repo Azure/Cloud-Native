@@ -230,7 +230,7 @@ export default function FreeServices() {
           <Head>
           </Head>
             <CampaignHeader />
-            <main>
+            <main className={styles.pageBg}>
             <SectionContent />
             </main>
         </Layout>

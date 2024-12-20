@@ -106,7 +106,7 @@ export default function() {
       title={`Welcome to #CloudNativeNewYear`}
       description="Join us for a month-long celebration of Cloud-Native technologies go from core concept to code with #30DaysOfServerless />"> 
       <CampaignHeader/>
-      <main>
+      <main className={styles.pageBg}>
         <br/>
         <p className="container">
           Join us for a month-long celebration of Cloud-Native Computing - from core concepts and developer tools, to usage scenarios and best practices. Bookmark this page, then <b><a href="/Cloud-Native/cnny-2023">head over to the blog</a> every week day</b> as we kickstart multiple community-driven and self-guided learning initiatives for jumpstarting your Cloud-Native developer journey. 

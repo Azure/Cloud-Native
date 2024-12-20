@@ -147,7 +147,7 @@ export default function() {
       title={`Welcome to #ServerlessSeptember`}
       description="Join us for a month-long celebration of Cloud-Native technologies go from core concept to code with #30DaysOfServerless />"> 
       <CampaignHeader/>
-      <main>
+      <main className={styles.pageBg}>
         <FeaturesSection/>
       </main>
     </Layout>
