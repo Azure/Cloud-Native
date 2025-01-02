@@ -347,7 +347,7 @@ function ShowcaseCards() {
 export default function Showcase(): JSX.Element {
   return (
     <Layout title={TITLE} description={DESCRIPTION}>
-      <main>
+      <main className={styles.pageBg}>
         <ShowcaseHeader />
         <ShowcaseFilters />
         <ShowcaseCards />

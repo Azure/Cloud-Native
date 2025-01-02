@@ -154,7 +154,7 @@ function Sessions() {
               Add to your Schedule
                 </a>
           <h3 style={{textTransform:'uppercase'}} className='margin-top--lg'>Featured Breakout Sessions</h3>
-          <p>Microsoft engineers will be delivering sessions throughout the conference on a variety of projects and topics including <a className="link-blue" href="https://sched.co/1i7lA" target='_blank'>LLM Performance</a>, <a className="link-blue" href="https://kccncna2024.sched.com/event/1iW9K/eraser-cleaning-up-vulnerable-images-from-kubernetes-nodes-project-lightning-talk?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Eraser</a>, <a className="link-blue" href="https://sched.co/1hovU" target='_blank'>Notary</a>, <a className="link-blue" href="https://sched.co/1i7mf" target='_blank'>handling GPU Failures</a>, <a className="link-blue" href="https://sched.co/1i7rK" target='_blank'>OpenCost</a>, <a className="link-blue" href="https://sched.co/1i7ng" target='_blank'>Gateway API</a>, <a  className="link-blue"href="https://sched.co/1i7oH" target='_blank'>WebAssembly (Wasm)</a>, <a className="link-blue"href="https://sched.co/1how8" target='_blank'>CNI</a>, <a className="link-blue" href="https://sched.co/1i7n3" target='_blank'>Karpenter</a>, <a className="link-blue" href="https://sched.co/1izr8" target='_blank'>eBPF</a>, <a className="link-blue" href="https://sched.co/1izsX" target='_blank'>OpenTelemetry</a> and more!</p>
+          <p>Microsoft engineers will be delivering sessions throughout the conference on a variety of projects and topics including <a className={styles['card-link']} href="https://sched.co/1i7lA" target='_blank'>LLM Performance</a>, <a className={styles['card-link']} href="https://kccncna2024.sched.com/event/1iW9K/eraser-cleaning-up-vulnerable-images-from-kubernetes-nodes-project-lightning-talk?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Eraser</a>, <a className={styles['card-link']} href="https://sched.co/1hovU" target='_blank'>Notary</a>, <a className={styles['card-link']} href="https://sched.co/1i7mf" target='_blank'>handling GPU Failures</a>, <a className={styles['card-link']} href="https://sched.co/1i7rK" target='_blank'>OpenCost</a>, <a className={styles['card-link']} href="https://sched.co/1i7ng" target='_blank'>Gateway API</a>, <a  className={styles['card-link']} href="https://sched.co/1i7oH" target='_blank'>WebAssembly (Wasm)</a>, <a className={styles['card-link']} href="https://sched.co/1how8" target='_blank'>CNI</a>, <a className={styles['card-link']} href="https://sched.co/1i7n3" target='_blank'>Karpenter</a>, <a className={styles['card-link']} href="https://sched.co/1izr8" target='_blank'>eBPF</a>, <a className={styles['card-link']} href="https://sched.co/1izsX" target='_blank'>OpenTelemetry</a> and more!</p>
           <p>Some featured sessions include:</p>
           <div className="row" style={{ paddingBottom: '1rem' }}>
             {ContentItemsA.map((props, idx) => (
@@ -461,7 +461,7 @@ export default function KubeconNA() {
       <Head>
         <meta name="robots" content="index, follow" />
       </Head>
-      <main>
+      <main className={styles.pageBg}>
       <CampaignHeader />
       <BannerLearn />
       <Sessions />

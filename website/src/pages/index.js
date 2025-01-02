@@ -42,7 +42,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description={`${siteConfig.customFields.description}`} >
       <HomepageHeader />
-      <main>
+      <main className={styles.pageBg}>
         <HomepageFeatures />
       </main>
     </Layout>

@@ -5,17 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
- :root {
+ /* :root {
   --ifm-link-color: inherit!important;
 }
 
 [data-theme='dark'] {
   --ifm-link-color: #ffb3bb!important;
-}
+} */
 
-a {
+/* a {
   text-decoration: underline;
-}
+} */
  .showcaseCardImage {
     overflow: hidden;
     height: 150px;
