@@ -32,7 +32,7 @@ Visit the [Serverless September At The Reactor](https://aka.ms/ServerlessHacks) 
 
 She will host weekly office hours where they discuss Serverless topics, take questions and provide guidance to help you walk through the mini-challenges in this year's [What The Hack: Serverless Challenge](https://microsoft.github.io/WhatTheHack/015-Serverless/) described below. **Plus, she'll share her own solution** in a series of video walkthroughs that can guide you in your own challenge journey!
 
-![](../../../static/img/banners/serverless-hacks.png)
+![Event image with Gwyn Peña-Siguenza and Microsoft Reactor branding, highlighting a session on creating a serverless tollbooth app for Serverless September](../../../static/img/banners/serverless-hacks.png)
 
 ---
 
@@ -40,7 +40,7 @@ She will host weekly office hours where they discuss Serverless topics, take que
 
 Your challenge this year comes from [What The Hack](https://microsoft.github.io/WhatTheHack/), part of a collection of challenge-based hackathons that you can complete - or in a team of 3-5 people as a  **collaborative learning** experience in-person or online. The goal is to learn from each other and share your insights with the broader community in a way that helps you build and retain expertise, while also contributing back.
 
-![](https://microsoft.github.io/WhatTheHack/015-Serverless/images/preferred-solution.png)
+![Diagram showing Azure serverless architecture for processing tollbooth vehicle photos using Azure Functions, Event Grid, Cosmos DB, and other services](https://microsoft.github.io/WhatTheHack/015-Serverless/images/preferred-solution.png)
 
 The figure above shows the specific challenge you will work on: [Azure Serverless](https://microsoft.github.io/WhatTheHack/015-Serverless/) in the category of **Application Modernization**. In this challenge, you will build a Tollbooth application using a serverless architecture involving multiple Azure services. 
  * Understand the [Solution Architecture](https://microsoft.github.io/WhatTheHack/015-Serverless/#solution-architecture) proposed.
