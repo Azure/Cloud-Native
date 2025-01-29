@@ -199,3 +199,48 @@ ul li input[type="checkbox"] {
     #253C61
   );
 }
+
+.cardHeader {
+  width: 100%;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #f0f0f0; /* Fallback color */
+}
+
+/* Specific Background Images for Each Card */
+.cardHeader-1 {
+  background-image: url('/img/campaign_banner.png');
+}
+
+.cardHeader-2 {
+  background-image: url('/img/campaign_banner.png');
+}
+
+.cardHeader-3 {
+  background-image: url('/img/campaign_banner.png');
+}
+
+.cardHeader-4 {
+  background-image: url('/img/campaign_banner.png');
+}
+
+.cardHeader-5 {
+  background-image: url('/img/campaign_banner.png');
+}
+
+.cardHeader-6 {
+  background-image: url('/img/campaign_banner.png');
+}
+
+.cardHeader-7 {
+  background-image: url('/img/campaign_banner.png');
+}
+
+.cardHeader-8 {
+  background-image: url('/img/campaign_banner.png');
+}
+
