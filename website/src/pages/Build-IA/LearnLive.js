@@ -19,8 +19,8 @@ function SectionHeader({title, description}) {
                     </h1>
                     <p>{description}</p>
                     <div className={styles.buttonsFFIA}>
-                    <Link className="button button--primary button--lg" to="https://aka.ms/bia/events?ocid=biafy25h1_learnlive_webpage_azuremktg" data-bi-area="Hero" data-bi-name="#LearnLive">
-                    Register for the series
+                    <Link className="button button--primary button--lg" to="https://aka.ms/BIA/LearnLive/OnDemand" data-bi-area="Hero" data-bi-name="#LearnLive">
+                    Watch on demand
                     </Link>
                     </div>
                 </div>

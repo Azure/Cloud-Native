@@ -6,6 +6,17 @@ import styles from './../index.module.css';
 
 const CampaignFeatures = [
   {
+    title: "Meetups ",
+    linkTitle: "Meetups",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-community-gallery.svg",
+    link: "/Cloud-Native/Build-IA/meetups",
+    description: (
+      <>
+        Join us for an interactive workshop to explore and implement architectural best practices to build AI-powered applications.
+      </>
+    ),
+  },
+  {
     title: "#30Days Of IA",
     linkTitle: "#30DaysOfIA",
     svgpath: "../img/svg/60-days-of-IA-azure-icon-blog.svg",
@@ -13,6 +24,28 @@ const CampaignFeatures = [
     description: (
       <>
         Join us on a #30Day journey that starts by demystifying Intelligent Apps and ends with you building on Azure OpenAI.
+      </>
+    ),
+  },
+  {
+    title: "AI Skills Challenge",
+    linkTitle: "AI Skills Challenge",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-cloud-skills.svg",
+    link: "/Cloud-Native/Build-IA/CloudSkills",
+    description: (
+      <>
+        Join us on a learning journey to skill up on your core skills for developing intelligent apps and earn a badge in your Microsoft Learn profile.
+      </>
+    ),
+  },
+  {
+    title: "Free Services for AI apps ",
+    linkTitle: "Free Services for AI apps ",
+    svgpath: "../img/svg/60-days-of-IA-azure-icon-free-services.svg",
+    link: "/Cloud-Native/Build-IA/Free-Services",
+    description: (
+      <>
+        Get started with free amounts of Azure app, data, and AI services*
       </>
     ),
   },
@@ -37,40 +70,7 @@ const CampaignFeatures = [
         Join us for Snackable AI Demos with the SMEs on building intelligent app architectures - ask your questions live.
       </>
     ),
-  },
-  {
-    title: "Free Services for AI apps ",
-    linkTitle: "Free Services for AI apps ",
-    svgpath: "../img/svg/60-days-of-IA-azure-icon-free-services.svg",
-    link: "/Cloud-Native/Build-IA/Free-Services",
-    description: (
-      <>
-        Get started with free amounts of Azure app, data, and AI services*
-      </>
-    ),
-  },
-  {
-    title: "AI Skills Challenge",
-    linkTitle: "AI Skills Challenge",
-    svgpath: "../img/svg/60-days-of-IA-azure-icon-cloud-skills.svg",
-    link: "/Cloud-Native/Build-IA/CloudSkills",
-    description: (
-      <>
-        Join us on a learning journey to skill up on your core skills for developing intelligent apps and earn a badge in your Microsoft Learn profile.
-      </>
-    ),
-  },
-  {
-    title: "Community Gallery",
-    linkTitle: "Community Gallery",
-    svgpath: "../img/svg/60-days-of-IA-azure-icon-community-gallery.svg",
-    link: "/Cloud-Native/Build-IA/CommunityGallery",
-    description: (
-      <>
-        Explore the Community Showcase for videos, blog posts and open-source projects for the community.
-      </>
-    ),
-  },
+  }
 ];
 
 function Feature({ svgpath, title, linkTitle, description, link, className }) {
@@ -101,12 +101,15 @@ function CampaignHeader() {
           <div className="col col--6">
             <h1 className="hero__title">Build Intelligent Apps!</h1>
             <p>
-              Join us on a learning journey to explore building intelligent apps. Combine the power of AI, cloud-scale data, and modern app development to create highly differentiated digital experiences. Develop adaptive, responsive, and personalized experiences by building and modernizing intelligent applications with Azure for your users.
+            Join us on a learning journey to build intelligent apps using architecture recipes for AI-powered applications. Harness the synergy of apps, data, and AI to build and deploy scalable solutions, seamlessly integrating AI models, data pipelines, and cloud services for robust and efficient outcomes.
             </p>
-            <div className={styles.buttonsFFIA}>
-              <Link className="button button--primary button--lg" to="/30-days-of-ia-2024" data-bi-area="Hero" data-bi-name="#IntelligentApps">
-                Get Started
+            <div className='hero-buttons'>
+              <Link className="button button--primary button--lg" to="/Cloud-Native/Build-IA/meetups" data-bi-area="Hero" data-bi-name="meetups">
+              Register now
               </Link>
+              {/* <Link className="button button--secondary button--lg" to="https://www.youtube.com/playlist?list=PLmsFUfdnGr3xYBEmLI7AqtWtBc31D20er" data-bi-area="Hero" data-bi-name="#DemoBytes" target="_blank">
+              Learn more
+              </Link> */}
             </div>
           </div>
           <div className="col col--1 hide-on-mobile"></div>
