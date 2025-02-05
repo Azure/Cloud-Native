@@ -7,11 +7,21 @@ import styles from './styles.module.css';
 import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+<Head>
+  <link
+    rel="preload"
+    as="image"
+    href="/Cloud-Native/img/cloud-native-hero-bg.webp"
+    type="image/webp"
+  />
+</Head>
+
+
 function CampaignHeader() {
   return (
     <header
       className={clsx("hero hero--primary heroAzureHome")}
-      style={{ backgroundImage: 'url(/Cloud-Native/img/hero-bg.png)', padding: '8rem 0rem' }}
+      style={{ backgroundImage: 'url(/Cloud-Native/img/cloud-native-hero-bg.webp)', padding: '8rem 0rem' }}
     >
       <div className="container">
         <div className="row" style={{ alignItems: 'center' }}>
@@ -162,55 +172,55 @@ function ContentItemB({ resource, description, link, cta}) {
 const meetups = [
   {
     city: 'São Paulo',
-    cardHeader: '/img/meetup-card-header-1.png',
+    cardHeader: '/img/meetup-card-header-1.webp',
     link: 'https://aka.ms/bia/reactorsp?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 17, 2025',
   },
   {
     city: 'LATAM, online',
-    cardHeader: '/img/meetup-card-header-2.png',
+    cardHeader: '/img/meetup-card-header-2.webp',
     link: 'https://developer.microsoft.com/en-us/reactor/series/S-1465/',
     date: 'Coming soon',
   },
   {
     city: 'Redmond',
-    cardHeader: '/img/meetup-card-header-3.png',
+    cardHeader: '/img/meetup-card-header-3.webp',
     link: 'https://aka.ms/BIA/Redmond?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg ',
     date: 'March 19, 2025',
   },
   {
     city: 'Sydney',
-    cardHeader: '/img/meetup-card-header-4.png',
+    cardHeader: '/img/meetup-card-header-4.webp',
     link: 'https://aka.ms/BIA/Sydney?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 19, 2025',
   },
   {
     city: 'London',
-    cardHeader: '/img/meetup-card-header-5.png',
+    cardHeader: '/img/meetup-card-header-5.webp',
     link: 'https://aka.ms/BIA/London?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 20, 2025',
   },
   {
     city: 'Toronto',
-    cardHeader: '/img/meetup-card-header-6.png',
+    cardHeader: '/img/meetup-card-header-6.webp',
     link: 'https://aka.ms/BIA/Toronto?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 20, 2025',
   },
   {
     city: 'New York City',
-    cardHeader: '/img/meetup-card-header-8.png',
+    cardHeader: '/img/meetup-card-header-8.webp',
     link: 'https://aka.ms/BIA/NYC?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 20, 2025',
   },
   {
     city: 'Bengaluru',
-    cardHeader: '/img/meetup-card-header-7.png',
+    cardHeader: '/img/meetup-card-header-7.webp',
     link: 'https://aka.ms/BIA/Bengaluru?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 21, 2025',
   },
   {
     city: 'Shanghai ',
-    cardHeader: '/img/meetup-card-header-1.png',
+    cardHeader: '/img/meetup-card-header-1.webp',
     link: 'https://developer.microsoft.com/en-us/reactor/series/S-1465/',
     date: 'Coming Soon',
   },

@@ -1,5 +1,5 @@
 :root {
-    --link: #002948!important;
+    --link: #004275!important;
     --ifm-card-background-color: #f4f3f5;
   }
   [data-theme='dark'] {
@@ -74,6 +74,19 @@
     cursor: pointer;
     color: var(--link) !important;
     text-decoration: underline!important;
+}
+
+.blue-link {
+  align-self: flex-start; /* Aligns the link at the bottom left */
+  margin-top: auto; /* Pushes the link to the bottom of the container */
+  color: var(--link)!important;
+  font-size: 1rem;
+}
+
+a.blue-link {
+  cursor: pointer;
+  color: var(--link) !important;
+  text-decoration: underline!important;
 }
 
 .pageBg {

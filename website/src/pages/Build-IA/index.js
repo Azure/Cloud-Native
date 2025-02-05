@@ -95,7 +95,7 @@ function Feature({ svgpath, title, linkTitle, description, link, className }) {
 
 function CampaignHeader() {
   return (
-    <header className={clsx("hero hero--primary heroAzure")} style={{ backgroundImage: 'url(/Cloud-Native/img/hero-bg.png)' }}>
+    <header className={clsx("hero hero--primary heroAzure")} style={{ backgroundImage: 'url(/Cloud-Native/img/cloud-native-hero-bg.webp)' }}>
       <div className="container">
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6">
@@ -116,7 +116,7 @@ function CampaignHeader() {
           <div className="col col--5">
             <img
               className="hide-on-mobile"
-              src="../img/30-days-of-ia/30-days-of-ia-2024-hero-image.png"
+              src="../img/30-days-of-ia/30-days-of-ia-2024-hero-image.webp"
               alt=""
               role="presentation"
               width="100%"
