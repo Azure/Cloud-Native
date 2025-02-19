@@ -179,8 +179,8 @@ const meetups = [
   {
     city: 'LATAM, online',
     cardHeader: '/img/meetup-card-header-2.webp',
-    link: 'https://developer.microsoft.com/en-us/reactor/series/S-1465/',
-    date: 'Coming soon',
+    link: 'https://aka.ms/BIA/Espanol?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    date: 'March 18, 2025',
   },
   {
     city: 'Redmond',
@@ -213,16 +213,16 @@ const meetups = [
     date: 'March 20, 2025',
   },
   {
-    city: 'Bengaluru',
-    cardHeader: '/img/meetup-card-header-7.webp',
-    link: 'https://aka.ms/BIA/Bengaluru?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
-    date: 'March 21, 2025',
-  },
-  {
     city: 'Shanghai ',
     cardHeader: '/img/meetup-card-header-1.webp',
-    link: 'https://developer.microsoft.com/en-us/reactor/series/S-1465/',
-    date: 'Coming Soon',
+    link: 'https://aka.ms/BIA/Shanghai?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    date: 'March 20, 2021',
+  },
+  {
+    city: 'Bengaluru',
+    cardHeader: '/img/meetup-card-header-7.webp',
+    link: 'https://aka.ms/BIA/Bengaluru?ocid=bihttps://aka.ms/BIA/Bengaluru​?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    date: 'March 21, 2025',
   },
 ];
 
