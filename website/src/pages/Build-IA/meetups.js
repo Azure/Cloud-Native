@@ -216,7 +216,7 @@ const meetups = [
     city: 'Shanghai ',
     cardHeader: '/img/meetup-card-header-1.webp',
     link: 'https://aka.ms/BIA/Shanghai?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
-    date: 'March 20, 2021',
+    date: 'March 20, 2025',
   },
   {
     city: 'Bengaluru',
