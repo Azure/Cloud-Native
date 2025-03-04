@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://azure.github.io/Cloud-Native/blog</id>
-    <title>Build Intelligent Apps On Azure Blog</title>
+    <title>AI Apps and Agents - Microsoft Azure Blog</title>
     <updated>2022-10-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://azure.github.io/Cloud-Native/blog"/>
-    <subtitle>Build Intelligent Apps On Azure Blog</subtitle>
+    <subtitle>AI Apps and Agents - Microsoft Azure Blog</subtitle>
     <icon>https://azure.github.io/Cloud-Native/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Oct | `awesome-azd` Templates]]></title>

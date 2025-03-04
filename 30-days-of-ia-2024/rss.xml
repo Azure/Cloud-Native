@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Build Intelligent Apps On Azure Blog</title>
+        <title>AI Apps and Agents - Microsoft Azure Blog</title>
         <link>https://azure.github.io/Cloud-Native/30-days-of-ia-2024</link>
-        <description>Build Intelligent Apps On Azure Blog</description>
+        <description>AI Apps and Agents - Microsoft Azure Blog</description>
         <lastBuildDate>Tue, 10 Sep 2024 09:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
