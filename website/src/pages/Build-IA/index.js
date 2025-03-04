@@ -99,9 +99,10 @@ function CampaignHeader() {
       <div className="container">
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6">
-            <h1 className="hero__title">Build Intelligent Apps!</h1>
+            <h1 className="hero__title">Build AI Apps and Agents!</h1>
+            <p style={{ fontWeight: '600', fontSize: '1.25rem' }}>March 17-21, 2025</p>
             <p>
-            Join us on a learning journey to build intelligent apps using architecture recipes for AI-powered applications. Harness the synergy of apps, data, and AI to build and deploy scalable solutions, seamlessly integrating AI models, data pipelines, and cloud services for robust and efficient outcomes.
+            Join us on a learning journey to build AI apps and agents using architecture recipes for AI-powered applications. Harness the synergy of apps, data, and AI to build and deploy scalable solutions, seamlessly integrating AI models, data pipelines, and cloud services for robust and efficient outcomes.
             </p>
             <div className='hero-buttons'>
               <Link className="button button--primary button--lg" to="/Cloud-Native/Build-IA/meetups" data-bi-area="Hero" data-bi-name="meetups">
@@ -154,7 +155,7 @@ function FeaturesSection() {
 export default function BuildIA() {
   return (
     <Layout
-      title={`Intelligent Apps`}
+      title={`Home`}
       description="Join us for a month-long celebration of intelligent apps. From AI to cloud-scale data and cloud-native technology, build differentiated digital experiences on Azure!"> 
       <CampaignHeader />
       <main className={styles.pageBg}>

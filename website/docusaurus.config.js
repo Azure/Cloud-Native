@@ -14,7 +14,7 @@ const config = {
   },
 
   // --- CONFIG-30DAYS #2: Config Landing Pages metadata
-  title: "Build Intelligent Apps On Azure",
+  title: "AI Apps and Agents - Microsoft Azure",
   tagline: "Cloud-native Apps, Cloud-scale Data, and AI",
 
   // --- CONFIG-30DAYS #3: Config GitHub Pages
@@ -93,7 +93,7 @@ const config = {
       metadata: [
         {
           name: "og:title",
-          content: "#IntelligentApps start today | Microsoft Azure",
+          content: "AI Apps and Agents | Microsoft Azure",
         },
         {
           name: "og:description",
@@ -110,7 +110,7 @@ const config = {
         },
         {
           name: "twitter:title",
-          content: "#IntelligentApps start today | Microsoft Azure",
+          content: "AI Apps and Agents | Microsoft Azure",
         },
         {
           name: "twitter:description",

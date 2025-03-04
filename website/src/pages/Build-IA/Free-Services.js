@@ -18,7 +18,7 @@ function CampaignHeader() {
               <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
               Learn which services offer free monthly amounts <a href="#disclaimer" style={{color:"white"}}>*</a>
               </p>
-              <p>Are you ready to experiment with cutting-edge technologies? You can start building intelligent apps with free Azure app, data, and AI services to minimize upfront costs.</p>
+              <p>Are you ready to experiment with cutting-edge technologies? You can start building AI apps and agents with free Azure app, data, and AI services to minimize upfront costs.</p>
               <div className={`${styles.buttonsFFIA} hero-buttons`}>
                     <Link className="button button--primary button--lg" to="https://azure.microsoft.com/pricing/purchase-options/azure-account?ocid=cmm2sprg51l" data-bi-area="Hero" data-bi-name="#FreeServices">
                     Get started

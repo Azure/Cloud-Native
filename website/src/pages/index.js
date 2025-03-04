@@ -15,7 +15,7 @@ function HomepageHeader() {
       <div className="container">
       <div className="row" style={{ alignItems: 'center' }}>
       <div className="col col--6 text--left">
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <h1 className="hero__title">AI Apps and Agents</h1>
         <p>{siteConfig.customFields.description}</p>
         <div className={styles.buttons}>
           <Link
@@ -39,7 +39,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title={`AI Apps and Agents`}
       description={`${siteConfig.customFields.description}`} >
       <HomepageHeader />
       <main className={styles.pageBg}>

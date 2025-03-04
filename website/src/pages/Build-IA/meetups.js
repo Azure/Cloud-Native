@@ -43,7 +43,7 @@ function CampaignHeader() {
                 data-bi-area="Hero"
                 data-bi-name="#Meetups"
               >
-                Register for the series
+                Register for the workshop
               </a>
             </div>
           </div>
