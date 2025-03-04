@@ -16,7 +16,7 @@ function CampaignHeader() {
             <div className="col col--6">
               <h1 className="hero__title">Events</h1>
               <p style={{ marginBottom: '1rem' }}>
-              Build Intelligent Apps kicks off in March with a series of engaging in-person, hands-on meetups where developers will delve into architectural best practices for AI-powered applications using your favorite tools. Collaborate with fellow tech enthusiasts as you learn to build and deploy scalable AI solutions, integrating AI models, data pipelines, and cloud services to create robust and efficient architectures.
+              Build AI Apps and Agents kicks off in March with a series of engaging in-person, hands-on meetups where developers will delve into architectural best practices for AI-powered applications using your favorite tools. Collaborate with fellow tech enthusiasts as you learn to build and deploy scalable AI solutions, integrating AI models, data pipelines, and cloud services to create robust and efficient architectures.
               </p>
               <p>Check out the calendar below for upcoming meetups and previous installments of the Build Intelligent Apps initiative.</p>
               {/* <div className={`${styles.buttonsFFIA} hero-buttons`}>
@@ -105,10 +105,10 @@ const ContentItemsB = [
   },
   {
     logoLight: '/img/Azure-Illcon-Light-Calendar-512.png',
-    eventDate: 'Coming soon',
+    eventDate: 'March 18, 2025',
     // category: 'Event',
     title: 'LATAM, online | Architecture Recipes for AI-Powered Applications',
-    link: 'https://developer.microsoft.com/en-us/reactor/series/S-1465/',
+    link: 'https://aka.ms/BIA/Espanol?ocid=buildia24_website',
   },
   {
     logoLight: '/img/Azure-Illcon-Light-Calendar-512.png',
@@ -147,17 +147,17 @@ const ContentItemsB = [
   },
   {
     logoLight: '/img/Azure-Illcon-Light-Calendar-512.png',
+    eventDate: 'March 20, 2025',
+    // category: 'Event',
+    title: 'Shanghai | Architecture Recipes for AI-Powered Applications',
+    link: 'https://aka.ms/BIA/Shanghai?ocid=buildia24_website',
+  },
+  {
+    logoLight: '/img/Azure-Illcon-Light-Calendar-512.png',
     eventDate: 'March 21, 2025',
     // category: 'Event',
     title: 'Bengaluru | Architecture Recipes for AI-Powered Applications',
     link: 'https://aka.ms/BIA/Bengaluru?ocid=buildia24_website',
-  },
-  {
-    logoLight: '/img/Azure-Illcon-Light-Calendar-512.png',
-    eventDate: 'Coming soon',
-    // category: 'Event',
-    title: 'Shanghai | Architecture Recipes for AI-Powered Applications',
-    link: 'https://developer.microsoft.com/en-us/reactor/series/S-1465/',
   },
 ];
 

@@ -2,7 +2,7 @@
 title: AI Skills Challenge
 ---
 
-# Build Intelligent Apps with the Microsoft Learn AI Skills Challenge
+# Build AI Apps and Agents with the Microsoft Learn AI Skills Challenge
 
 ---
 
