@@ -1,38 +1,27 @@
 :root {
-    --link: #004275!important;
-    --ifm-card-background-color: #f4f3f5;
-  }
-  [data-theme='dark'] {
-    --link: #b3daf0!important;
-  }
-  
+  --link: #004275!important;
+  --ifm-card-background-color: #f4f3f5;
+}
+[data-theme='dark'] {
+  --link: #b3daf0!important;
+}
+
 
 .page-background {
-    background-color: var(--bg)!important;
+  background-color: var(--bg)!important;
 }
 
 .link-blue {
-    color: var(--link)!important;
-    text-decoration: underline;
+  color: var(--link)!important;
+  text-decoration: underline;
 }
 
 .banner-background {
-    background: linear-gradient(to bottom, #002948, #2A446F);
-    color: white;
+  background: linear-gradient(to bottom, #002948, #2A446F);
+  color: white;
 }
 
 .banner-background h2 {
-    background: linear-gradient(135deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent; /* Fallback for older browsers */
-    
-    /* Ensure gradient only covers the text width */
-    display: inline-block;
-}
-
-.gradient-header {
   background: linear-gradient(135deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -43,79 +32,156 @@
   display: inline-block;
 }
 
+.banner-background-eu {
+background: linear-gradient(to bottom, #002948, #2A446F);
+color: white;
+}
+
+.banner-background-eu h2 {
+background: linear-gradient(90deg, #3783EE, #C850DC, #EC4855);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent; /* Fallback for older browsers */
+
+/* Ensure gradient only covers the text width */
+display: inline-block;
+}
+
+.gradient-header {
+background: linear-gradient(135deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent; /* Fallback for older browsers */
+
+/* Ensure gradient only covers the text width */
+display: inline-block;
+}
+
+.gradient-header-eu {
+background: linear-gradient(90deg, #3783EE, #C850DC, #EC4855);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent; /* Fallback for older browsers */
+
+/* Ensure gradient only covers the text width */
+display: inline-block;
+}
+
+.gradient-header-wave {
+background: linear-gradient(135deg, #FFE399 0%, #FFA38B 33%, #8DC8E8 66%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent; /* Fallback for older browsers */
+
+/* Ensure gradient only covers the text width */
+display: inline-block;
+}
+
 .card {
-  height:100%;
-  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
-  transition: box-shadow 200ms ease-in-out;
-  font-weight: 400;
-  border-radius: 1.5rem;
-  background-color: var(--ifm-card-background-color);
+height:100%;
+box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
+transition: box-shadow 200ms ease-in-out;
+font-weight: 400;
+border-radius: 1.5rem;
+background-color: var(--ifm-card-background-color);
+}
+
+.session {
+height:100%;
+box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
+transition: box-shadow 200ms ease-in-out;
+font-weight: 400;
+border-radius: 0rem;
+background-color: var(--ifm-card-background-color);
+border-left: .5rem #8dc8e8 solid;
 }
 
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .card-content {
-    flex-grow: 1; /* Takes up all the remaining space */
-  }
-  
-  .card-link {
-    align-self: flex-start; /* Aligns the link at the bottom left */
-    margin-top: auto; /* Pushes the link to the bottom of the container */
-    color: var(--link)!important;
-    font-size: .875rem;
-  }
-
-  a.card-link {
-    cursor: pointer;
-    color: var(--link) !important;
-    text-decoration: underline!important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.blue-link {
+.card-content {
+  flex-grow: 1; /* Takes up all the remaining space */
+}
+
+.card-link {
   align-self: flex-start; /* Aligns the link at the bottom left */
   margin-top: auto; /* Pushes the link to the bottom of the container */
   color: var(--link)!important;
-  font-size: 1rem;
+  font-size: .875rem;
 }
 
-a.blue-link {
+a.card-link {
   cursor: pointer;
   color: var(--link) !important;
   text-decoration: underline!important;
 }
 
+.blue-link {
+align-self: flex-start; /* Aligns the link at the bottom left */
+margin-top: auto; /* Pushes the link to the bottom of the container */
+color: var(--link)!important;
+font-size: 1rem;
+}
+
+a.blue-link {
+cursor: pointer;
+color: var(--link) !important;
+text-decoration: underline!important;
+}
+
 .pageBg {
-  background: linear-gradient(
-    to bottom right,
-    #e3f3ff,
-    #f9f7ff,
-    #f9fcfe
-  );
+background: linear-gradient(
+  to bottom right,
+  #e3f3ff,
+  #f9f7ff,
+  #f9fcfe
+);
+}
+
+.pageBgEu {
+background: linear-gradient(
+  to bottom right,
+  #e3f3ff,
+  #f9f7ff,
+  #f9fcfe
+);
+}
+
+[data-theme='dark'] .pageBgEu {
+background: linear-gradient(
+  to bottom right,
+  #0A131F,
+  #121B2E,
+  #192537
+);
+
 }
 
 [data-theme='dark'] .pageBg {
-  background: linear-gradient(
-    to bottom right,
-    #152338,
-    #1D2F4D,
-    #253C61
-  );
+background: linear-gradient(
+  to bottom right,
+  #152338,
+  #1D2F4D,
+  #253C61
+);
+
 }
 
 
 @media (min-width: 996px) {
-    /* Styles for screens 996px or less */
-  .banner-cta{
-    justify-content: flex-end;
-    display: flex;
-    align-items: center;
-    }
-  
+  /* Styles for screens 996px or less */
+.banner-cta{
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
   }
 
-  
+}
