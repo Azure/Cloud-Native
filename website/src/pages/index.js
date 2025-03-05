@@ -24,7 +24,7 @@ function HomepageHeader() {
             data-bi-area="Hero"
             data-bi-name="Build Intelligent Apps"
           >
-            Build Intelligent Apps
+            Start now
           </Link>
         </div>
         </div>

@@ -18,7 +18,7 @@ function CampaignHeader() {
               <p style={{ marginBottom: '1rem' }}>
               Build AI Apps and Agents kicks off in March with a series of engaging in-person, hands-on meetups where developers will delve into architectural best practices for AI-powered applications using your favorite tools. Collaborate with fellow tech enthusiasts as you learn to build and deploy scalable AI solutions, integrating AI models, data pipelines, and cloud services to create robust and efficient architectures.
               </p>
-              <p>Check out the calendar below for upcoming meetups and previous installments of the Build Intelligent Apps initiative.</p>
+              <p>Check out the calendar below for upcoming meetups and previous installments of the Build AI Apps and Agents initiative.</p>
               {/* <div className={`${styles.buttonsFFIA} hero-buttons`}>
                     <Link className="button button--primary button--lg" to="https://azure.microsoft.com/pricing/purchase-options/azure-account?ocid=cmm2sprg51l" data-bi-area="Hero" data-bi-name="#FreeServices">
                     Get started
@@ -45,7 +45,7 @@ function SectionContent() {
             <ContentItem key={idx} {...props} />
           ))}
         </div>
-        <h2 className='margin-top--md'>Previously on Build Intelligent Apps</h2>
+        <h2 className='margin-top--md'>Previously on Build AI Apps and Agents</h2>
         <div className="row" style={{ paddingBottom: '1rem' }}>
           {ContentItemsC.map((props, idx) => (
             <ContentItem key={idx} {...props} />
@@ -401,7 +401,7 @@ export default function FreeServices() {
   const { siteConfig } = useDocusaurusContext();
   const pageProps = {
     title: "Events calendar",
-    description: "Check out the calendar for upcoming meetups and previous installments of the Build Intelligent Apps initiative"
+    description: "Check out the calendar for upcoming meetups and previous installments of the Build AI Apps and Agents initiative"
   }
 
     return (
