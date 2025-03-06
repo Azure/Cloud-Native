@@ -25,6 +25,7 @@ function CampaignHeader() {
     left: 0,
     width: '100%',
     height: '100%',
+    borderRadius: '1.5rem'
   };
 
   return (
@@ -46,7 +47,7 @@ function CampaignHeader() {
             <div style={videoResponsiveStyle}>
               <iframe
                 style={iframeStyle}
-                src="https://www.youtube.com/embed/d6jDYa3y_Xk?si=_Vid1YrimIm7d8dm"
+                src="https://www.youtube.com/embed/d6jDYa3y_Xk?playlist=d6jDYa3y_Xk&rel=0"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
