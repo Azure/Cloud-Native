@@ -70,7 +70,7 @@ function CampaignHeader() {
           <div style={videoResponsiveStyle}>
               <iframe
                 style={iframeStyle}
-                src="https://www.youtube.com/embed/CMTv1vHr1-o?si=fzlXNOAjnFrrsNCu&autoplay=1&loop=1&playlist=CMTv1vHr1-o&rel=0"
+                src="https://www.youtube.com/embed/CMTv1vHr1-o?si=fzlXNOAjnFrrsNCu&loop=1&playlist=CMTv1vHr1-o&rel=0"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
