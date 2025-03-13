@@ -172,6 +172,7 @@ ACR_NAME=<YOUR_ACR_NAME>
 
 az aks enable-addons \
   --addons azure-keyvault-secrets-provider \
+  --enable-secret-rotation \
   --name $AKS_NAME \
   --resource-group $RG_NAME
 ```
