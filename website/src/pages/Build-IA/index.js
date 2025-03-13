@@ -20,7 +20,7 @@ const CampaignFeatures = [
     title: "#30Days Of IA",
     linkTitle: "#30DaysOfIA",
     svgpath: "../img/svg/60-days-of-IA-azure-icon-blog.svg",
-    link: "/Cloud-Native/30-days-of-ia-2024",
+    link: "/Cloud-Native/Build-IA/30-days-of-ia-2024",
     description: (
       <>
         Join us on a #30Day journey that starts by demystifying Intelligent Apps and ends with you building on Azure OpenAI.
