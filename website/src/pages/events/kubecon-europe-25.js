@@ -68,42 +68,61 @@ function Sessions() {
         <div className="container margin-top--lg">
           <div className="row margin-top--lg">
             <div className="col col--8 col--offset-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <h2 className={styles['gradient-header-eu']}>Learn from Microsoft Experts </h2>
+              <h2 className={styles['gradient-header-eu']}>Learn from Microsoft Experts </h2>
             </div>
           </div>
           <div className="row">
-          <div className="col col--12">
-          <h3 style={{ textTransform: "uppercase" }}>Keynote</h3>
+            <div className="col col--12">
+            <h3 style={{ fontSize:"2rem", letterSpacing:"-0.03em" }}>Keynote</h3>
           </div>
-
           <div className={clsx('col col--12 card-col')}>
-
           <div className="card">
             <div className="card-body" >
-            
-            <h4 style={{ fontSize: "1.25rem" }} className="margin-bottom--xs">
-            Kubernetes for everyone: a user-friendly approach with Kubernetes Desktop
-            </h4>
-            <p className="margin-bottom--xs" style={{ fontWeight: '600' }}>Andrew Randall, Principal Product Manager, Microsoft</p>
-            <p>Wednesday April 2, 2025 at 10:04 AM </p>
-            <p>
-            Kubernetes is known for being challenging; getting started with such a complex distributed system can be intimidating. For both new and experienced users, it's hard getting started from scratch, handling multi-cluster deployments, and integrating various tools and projects required in a modern Kubernetes environment. Enter Kubernetes Desktop.
-            </p>
-            <p>
-            Based on the CNCF Headlamp project, Kubernetes Desktop offers an intuitive, out-of-the-box experience that simplifies the setup and management of local Kubernetes environments. Headlamp's adaptability allows it to offer a great day-one experience for end users and serve as a foundation for vendors to build upon and integrate with other CNCF projects. Bringing Headlamp's capabilities to Kubernetes Desktop provides a modern, feature-rich user interface that works to streamline the user experience and make Kubernetes more accessible to all.
-            </p>
-            <a className="button button--primary button--lg" href="https://kccnceu2025.sched.com/event/1txBv" target="_blank">
-            Add to your schedule
-            </a>
+              <div class="row">
+                <div className='col col--6'>
+                    <div className="glass-border-eu" style={{}}>
+                      <img src="/Cloud-Native/img/event-kubecon-eu-2025-keynote.webp" alt="" role="presentation" style={{borderRadius: "1.5rem", filter: "hue-rotate(20deg)", boxShadow: "0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13)"}}/>
+                    </div>
+                </div>
+                <div className='col col--6'>
+                  <h4 style={{ fontSize: "1.25rem", paddingTop: "1rem" }} className="margin-bottom--xs">
+                  Evolving the Kubernetes User Experience
+                  </h4>
+                  <p className="" style={{ fontWeight: '600' }}>Andrew Randall, Principal Product Manager, Microsoft</p>
+                  <p><em>Wednesday April 2, 2025 at 9:49 BST</em></p>
+                  <p>
+                  Kubernetes is known for being challenging; getting started with such a complex distributed system can be intimidating. For both new and experienced users, it's hard getting started from scratch, handling multi-cluster deployments, and integrating various tools and projects required in a modern Kubernetes environment.
+                  </p>
+                  <p>
+                  So how do we address this? With an intuitive, out-of-the-box experience that simplifies the setup and management of local Kubernetes environments. CNCF project Headlamp's adaptability allows it to offer a great day-one experience for end users and serve as a foundation for vendors to build upon and integrate with other CNCF projects. Bringing Headlamp's capabilities to a desktop experience provides a modern, feature-rich user interface that works to streamline the user experience and make Kubernetes more accessible to all.
+                  </p>
+                  <a className="button button--primary button--lg margin-bottom--md" href="https://kccnceu2025.sched.com/event/1txBv" target="_blank">
+                  Add to your schedule
+                  </a>
+                </div>
+              </div>   
           </div>
-          </div>
-          </div>
-
         </div>
+      </div>
+      </div>
+      <div className='row margin-top--lg'>
+        <div className="col col--12">
+          <h3 style={{ fontSize:"2rem", letterSpacing:"-0.03em" }}>Demo Theatre Session</h3>
+          <h4 style={{ fontSize: "1.25rem" }} className="margin-bottom--xs">
+          KubeFleet: The Future of Multi-Cluster Kubernetes Application Management
+          </h4>
+          <p className="margin-bottom--xs">Thursday April 3, 2025 13:15 - 13:35 BST</p>
+          <p><a className={styles['blue-link']} href="https://kccnceu2025.sched.com/venue/Level+1+%7C+Solutions+Showcase+%7C+Hall+Entrances+S8+-+S9+%7C+Demo+Theater?iframe=no&w=100%25&sidebar=yes&bg=no" target='_blank'>Level 1 | Solutions Showcase | Hall Entrances S8 - S9 | Demo Theater</a></p>
+          <a className="button button--primary button--lg margin-bottom--md" href="https://sched.co/1x0HK" target="_blank">
+                  Add to your schedule
+            </a>
+        </div>
+      </div>
+      
 
         <div className='row margin-top--lg'>
           <div className='col'>
-            <h3 style={{ textTransform: 'uppercase' }}>Breakouts</h3>
+            <h3 style={{ fontSize: "2rem", letterSpacing: "-0.03em" }}>Breakouts</h3>
             <p>Microsoft engineers will be delivering sessions throughout the conference on a variety of topics including <a className={styles['blue-link']} href="https://sched.co/1u5ht" target='_blank'>sidecarless Service Mesh</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1tcvu/project-lightning-talk-project-copacetic-ashna-mehrotra-maintainer?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Copacetic</a>, <a className={styles['blue-link']} href="https://maintainersummiteu2025.sched.com/event/1uSNk/towards-a-standardized-identity-based-authorization-in-kubernetes-keith-mattix-microsoft-lior-lieberman-google" target='_blank'>Identity-based Authorization</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1tcv8/project-lightning-talk-protect-your-kubernetes-clusters-with-ratify-and-attestations-yi-zha-maintainer?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>Ratify</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1txGl/building-webassembly-like-its-2011-david-justice-microsoft" target='_blank'>Web Assembly</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1td0k/containerd-project-update-and-deep-dive-maksym-pavlenko-databricks-akihiro-suda-ntt-laura-brehm-docker-samuel-karp-google-jiaxiao-zhou-microsoft?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>containerd</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1td1W/notary-project-the-key-to-secure-software-supply-chain-yi-zha-microsoft-guillaume-gill-orangelogic" target='_blank'>Notary</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1td0n/contribfest-make-your-own-ui-for-kubernetes-with-headlamp" target='_blank'>Headlamp</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1tcxD/opentelemetry-project-update-daniel-gomez-blanco-skyscanner-severin-neumann-cisco-alolita-sharma-apple-trask-stalnaker-microsoft-pablo-baeyens-datadog?iframe=yes&w=100%25&sidebar=yes&bg=no" target='_blank'>OpenTelemetry</a>, <a className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1txCP/trust-no-one-secure-storage-with-confidential-containers-aurelien-bombo-microsoft" target='_blank'>confidential containers</a>, <a  className={styles['blue-link']} href="https://kccnceu2025.sched.com/event/1tczR?iframe=no" target='_blank'>Inspektor Gadget</a>,  and more!</p>
             <p>Some featured sessions include:</p>
             </div>
@@ -114,7 +133,7 @@ function Sessions() {
             ))}
           </div>
           <div className="row margin-top--lg">
-            <div className='col'>
+            <div className='col text--center'>
               <a className="button button--primary button--lg button-mobile-padding" href="https://aka.ms/KubeCon-MSFT-sessions" target="_blank">
               See all sessions
               </a>
@@ -282,8 +301,12 @@ function Sessions() {
       <section>
         <div className="container margin-top--lg margin-bottom--lg">
           <div className="row">
-            <div className="col margin-top--md text--center">
+            <div className="col col--8 col--offset-2 margin-top--md text--center">
               <h2 className={styles['gradient-header-eu']}>Booth Theatre & Demos</h2>
+              <p>
+                Visit our booth #N150 to engage with our experts and attend a variety of theatre sessions, 
+                technical demos, and participate in fun trivia games. Some topics that will be covered include:
+              </p>
             </div>
           </div>
   
@@ -303,7 +326,14 @@ function Sessions() {
                   <div className="text--left">
                     <h3>Wednesday, April 2, 2025</h3>
                     <ul>
-                      <li>Coming soon!</li>
+                      <li>How to keep your applications running even when your clusters are not working</li>
+                      <li>To Mesh or not To Mesh?</li>
+                      <li>Best Practices to Manage your AKS Platform with AI-powered observability</li>
+                      <li>Building a Kubernetes Desktop Experience with Headlamp</li>
+                      <li>GitHub Copilot + Kubernetes</li>
+                      <li>eBPF-Powered Observability Beyond Azure: A Multi-Cloud Perspective with Retina</li>
+                      <li>Hyperlight: Hardware-Protect your Serverless Anywhere At Scale</li>
+                      <li>Cloud native security made easy</li>
                     </ul>
                   </div>
                 </div>
@@ -321,15 +351,22 @@ function Sessions() {
                 }}
               >
                 <div className="card-body" style={{ flexGrow: 1 }}>
-                <div className="text--left">
+                  <div className="text--left">
                     <h3>Thursday, April 3, 2025</h3>
                     <ul>
-                      <li>Coming soon!</li>
+                      <li>GenAI workload scheduling & Orchestration in K8S utilizing latest GPUs and 3P scheduler integration on K8S</li>
+                      <li>Unlocking the Full Potential of AKS with Traefik: Architecture, Implementation, and Innovation</li>
+                      <li>DNS Issues? Here’s how you can use open source tools to debug failed DNS requests in your AKS Cluster</li>
+                      <li>Application deployment (the easy way) using AKS Automatic</li>
+                      <li>Optimizing for Workload reliability</li>
+                      <li>Platform engineering with Radius to abstract applications from infrastructure</li>
+                      <li>Using Karpenter for Resiliency</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+  
             <div className="col col--4 card-col">
               <div
                 className="card"
@@ -341,10 +378,12 @@ function Sessions() {
                 }}
               >
                 <div className="card-body" style={{ flexGrow: 1 }}>
-                <div className="text--left">
+                  <div className="text--left">
                     <h3>Friday, April 4, 2025</h3>
                     <ul>
-                      <li>Coming soon!</li>
+                      <li>Upgrade & Maintenance on Karpenter</li>
+                      <li>Next-Generation Persistent Storage for Kubernetes with Azure Container Storage</li>
+                      <li>Image assurance from Build to runtime</li>
                     </ul>
                   </div>
                 </div>
@@ -355,6 +394,7 @@ function Sessions() {
       </section>
     );
   }
+  
 
   
   function Community() {
