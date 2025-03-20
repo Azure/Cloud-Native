@@ -36,12 +36,12 @@ function CampaignHeader() {
       <div className="container">
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6">
-            <h1 className="hero__title">Join Microsoft Azure at KubeCon India 2024</h1>
+            <h1 className="hero__title">Microsoft Azure at KubeCon India 2024</h1>
             <p style={{ fontSize: '1.125rem', fontWeight:'600' }}>11-12 December 2024 | Delhi, India </p>
             <p>
-            Join us at the inaugural KubeCon India 2024 in Delhi, from 11-12 December, where Microsoft Azure will be a Gold Sponsor. Discover how Azure is leading the way in Kubernetes and intelligent applications.
+            Thank you for joining us at the inaugural KubeCon India 2024 in Delhi and engaging with our team to learn how Azure is leading the way in Kubernetes and intelligent applications.
             </p>
-            <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth G1</p>
+            {/* <p className='button button--secondary button--lg' style={{ cursor: 'default' }}>Find us at Booth G1</p> */}
           </div>
           <div className="col col--6">
             <div style={videoResponsiveStyle}>
@@ -62,19 +62,49 @@ function CampaignHeader() {
   );
 }
 
+function BannerLearn() {
+    return (
+      <section className={styles['banner-background']}>
+        <div className="container">
+          <div className="row padding-top--lg">
+            <div className="col col--auto text--center">
+              <h2 className="margin-bottom--sm">Azure Day with Kubernetes</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col col--8 col--offset-2">
+              <p className='margin-bottom--md text--center'>
+              Azure Days with Kubernetes are in-person events tailored for developers, IT professionals, and decision-makers eager to harness the power of AKS for their cloud-native and intelligent applications. Whether you're starting with Kubernetes or seeking to refine your AKS deployments, we have sessions to provide valuable insights and actionable knowledge for your cloud journey.
+              </p>
+            </div>
+          </div>
+          <div className="row padding-bottom--lg">
+            <div className='col col--6 text--center col--offset-3'>
+              <a className="button button--secondary button--lg button-mobile-padding" href="https://www.youtube.com/@theakscommunity" target="_blank">
+              See content from previous events
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
 // Section Content
 function Sessions() {
     return (
       <section>
         <div className="container margin-top--lg">
-          <div className="row margin-top--lg">
+          {/* <div className="row margin-top--lg">
             <div className="col col--8 col--offset-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <h2 className={styles['gradient-header']}>Azure Days with Kubernetes</h2>
               <p style={{textAlign: 'center'}}>Azure Days with Kubernetes are in-person events tailored for developers, IT professionals, and decision-makers eager to harness the power of AKS for their cloud-native and intelligent applications. Whether you're starting with Kubernetes or seeking to refine your AKS deployments, we have sessions to provide valuable insights and actionable knowledge for your cloud journey.</p>
-              <p>Three distinct events are planned over two days:</p>
+              <a className="button button--secondary button--lg button-mobile-padding" href="https://www.youtube.com/watch?v=lt8NjNinuEE&list=PLc3Ep462vVYtXDK54LBlhNNV5a1IUOxQu" target="_blank">
+              Watch the recordings
+              </a>
             </div>
-          </div>
-          <div className="row">
+          </div> */}
+          {/* <div className="row">
           <div className={clsx('col col--4 card-col')}>
 
             <div className="card">
@@ -159,11 +189,11 @@ function Sessions() {
 
           </div>
   
-          </div>
+          </div> */}
           <div className='text--center margin-top--lg'>
-            <h2 className={styles['gradient-header']}>Learn from Microsoft Experts</h2>
+            <h2>Learn from Microsoft Experts</h2>
                 <p>
-                Microsoft engineers will be delivering sessions and technical demos at KubeCon and at our booth on the show floor.
+                Microsoft engineers delivered sessions and technical demos at KubeCon.
                 </p>
           </div>
           <div className="row">
@@ -195,7 +225,7 @@ function Sessions() {
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-                    Add to Schedule
+                    Watch the recording
                 </a>
               </div>
             </div>
@@ -210,13 +240,13 @@ function Sessions() {
       session: 'Effortless Clustering: Rethinking ClusterAPI with Systemd-Systext',
       description: 'Through the years, ClusterAPI has evolved into an indispensable tool, streamlining the lifecycle management of Kubernetes clusters across multiple infrastructure providers. The current approach adds a layer of complexity at the image-building stage, presenting users with a multitude of options. But what if we challenge this conventional approach? This presentation introduces a paradigm shift in ClusterAPI image building, leveraging systemd-sysext and image composability. Join me in this talk as we explore how this innovative approach could help cope with the never-ending matrix of Kubernetes versions and Distro images, significantly enhancing usability for users managing their workloads.',
       presenter: 'Sayan Chowdury',
-      link: 'https://sched.co/1mVRz',
+      link: 'https://youtu.be/TAOMgIx1-AM?si=eYB-p2vFGqhLjKxN',
     },
     {
       session: 'Flatcar Container Linux Deep Dive: Deploying, Managing and Automating Workloads Securely',
-      description: 'Flatcar is an operating system purpose-built for securely running container workloads. It ensures security by providing essential tools, reducing the OS size with minimal packages, and making the /usr directory immutable. This tutorial is designed for ops and DevOps professionals, offering step-by-step guidance on getting started with Flatcar. You&#39;ll explore how to deploy it using Terraform, configure it with Ignition, and automate OS updates via Nebraska, enabling you to "set it and forget it.',
+      description: 'Flatcar is an operating system purpose-built for securely running container workloads. It ensures security by providing essential tools, reducing the OS size with minimal packages, and making the /usr directory immutable. This tutorial is designed for ops and DevOps professionals, offering step-by-step guidance on getting started with Flatcar. You will explore how to deploy it using Terraform, configure it with Ignition, and automate OS updates via Nebraska, enabling you to "set it and forget it."',
       presenter: 'Sayan Chowdury',
-      link: 'https://sched.co/1i7oH',
+      link: 'https://youtu.be/ta-xOOJaqDY?si=F4RWSZanSXa7GF1o',
     }
   
   ];
@@ -301,7 +331,7 @@ function Sessions() {
         <div className="container margin-top--lg margin-bottom--lg">
           <div className="row">
             <div className="col margin-top--md text--center">
-              <h2 className={styles['gradient-header']}>Find your Community</h2>
+              <h2>Find your Community</h2>
             </div>
           </div>
   
@@ -400,10 +430,11 @@ export default function KubeconIndia() {
       <Head>
         <meta name="robots" content="index, follow" />
       </Head>
-      <main className={styles.pageBg}>
+      <main  className={styles['pageBgEu']}>
       <CampaignHeader />
+      <BannerLearn />
       <Sessions />
-      <Demos />
+      {/* <Demos /> */}
       <Community />
       </main>
     </Layout>
