@@ -28,8 +28,8 @@ const CampaignFeatures = [
     ),
   },
   {
-    title: "AI Skills Challenge",
-    linkTitle: "AI Skills Challenge",
+    title: "AI Skills Fest",
+    linkTitle: "AI Skills Fest",
     svgpath: "../img/svg/60-days-of-IA-azure-icon-cloud-skills.svg",
     link: "/Cloud-Native/Build-IA/CloudSkills",
     description: (
