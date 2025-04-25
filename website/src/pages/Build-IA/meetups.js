@@ -45,7 +45,6 @@ function CampaignHeader() {
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6">
             <h1 className="hero__title">Meetups</h1>
-            <p style={{ fontSize: '1.125rem', fontWeight:'600' }}>March 17-21, 2025</p>
             <p>
               Join us for an engaging in-person, hands-on meetup where developers will delve into
               architectural best practices for AI-powered applications using your favorite tools.
@@ -56,13 +55,13 @@ function CampaignHeader() {
             <div className={`${styles.buttonsFFIA} hero-buttons margin-bottom--md`}>
               <a
                 className="button button--primary button--lg"
-                href="https://aka.ms/bia/reactor?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg"
+                href="https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-bi-area="Hero"
                 data-bi-name="#Meetups"
               >
-                Register now
+                Watch on demand
               </a>
             </div>
           </div>
@@ -156,7 +155,7 @@ function ContentItemA({ city, cardHeader, link, date }) {
               data-bi-name={city}
               // className="text--secondary"
             >
-              Register to attend
+              Watch on demand
             </a>
           </div>
         </div>
@@ -204,55 +203,55 @@ const meetups = [
   {
     city: 'São Paulo',
     cardHeader: '/img/meetup-card-header-1.webp',
-    link: 'https://aka.ms/bia/reactorsp?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 17, 2025',
   },
   {
     city: 'LATAM, online',
     cardHeader: '/img/meetup-card-header-2.webp',
-    link: 'https://aka.ms/BIA/Espanol?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 18, 2025',
   },
   {
     city: 'Redmond',
     cardHeader: '/img/meetup-card-header-3.webp',
-    link: 'https://aka.ms/BIA/Redmond?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg ',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 19, 2025',
   },
   {
     city: 'Sydney',
     cardHeader: '/img/meetup-card-header-4.webp',
-    link: 'https://aka.ms/BIA/Sydney?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 19, 2025',
   },
   {
     city: 'London',
     cardHeader: '/img/meetup-card-header-5.webp',
-    link: 'https://aka.ms/BIA/London?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 20, 2025',
   },
   {
     city: 'Toronto',
     cardHeader: '/img/meetup-card-header-6.webp',
-    link: 'https://aka.ms/BIA/Toronto?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 20, 2025',
   },
   {
     city: 'New York City',
     cardHeader: '/img/meetup-card-header-8.webp',
-    link: 'https://aka.ms/BIA/NYC?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 20, 2025',
   },
   {
     city: 'Shanghai ',
     cardHeader: '/img/meetup-card-header-1.webp',
-    link: 'https://aka.ms/BIA/Shanghai?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 20, 2025',
   },
   {
     city: 'Bengaluru',
     cardHeader: '/img/meetup-card-header-7.webp',
-    link: 'https://aka.ms/BIA/Bengaluru?ocid=bihttps://aka.ms/BIA/Bengaluru​?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
+    link: 'https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg',
     date: 'March 21, 2025',
   },
 ];

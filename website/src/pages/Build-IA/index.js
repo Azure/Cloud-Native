@@ -100,14 +100,20 @@ function CampaignHeader() {
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--6">
             <h1 className="hero__title">Build AI Apps and Agents!</h1>
-            <p style={{ fontWeight: '600', fontSize: '1.25rem' }}>March 17-21, 2025</p>
             <p>
             Join us on a learning journey to build AI apps and agents using architecture recipes for AI-powered applications. Harness the synergy of apps, data, and AI to build and deploy scalable solutions, seamlessly integrating AI models, data pipelines, and cloud services for robust and efficient outcomes.
             </p>
             <div className='hero-buttons'>
-              <Link className="button button--primary button--lg" to="/Cloud-Native/Build-IA/meetups" data-bi-area="Hero" data-bi-name="meetups">
-              Register now
-              </Link>
+              <a
+                className="button button--primary button--lg"
+                href="https://youtube.com/playlist?list=PLmsFUfdnGr3zLCIUeO_R_m-W7ASuxrNtm&si=1ubePI5iKK-vs2I9?ocid=biafy25h2_aipoweredapplications_webpage_azuremktg"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-bi-area="Hero"
+                data-bi-name="#Build-IA"
+              >
+                Watch on demand
+              </a>
               {/* <Link className="button button--secondary button--lg" to="https://www.youtube.com/playlist?list=PLmsFUfdnGr3xYBEmLI7AqtWtBc31D20er" data-bi-area="Hero" data-bi-name="#DemoBytes" target="_blank">
               Learn more
               </Link> */}
